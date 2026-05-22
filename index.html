@@ -9,6 +9,7 @@
     <title>IrigoyenDev | Full-Stack Developer for E-commerce & High-Converting Web Products</title>
     <meta name="description" content="I build e-commerce, landing pages, and business platforms that turn traffic into revenue. See real client results and request your project plan.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile-card.css">
 
     <meta property="og:title" content="IrigoyenDev | Web Products Built to Convert">
     <meta property="og:description" content="E-commerce, platforms, and landing pages engineered for real business growth. Request your project plan.">
@@ -68,6 +69,10 @@
             <div class="hero-content fade-in">
                 <h1 data-i18n="hero.title">I build web products that turn visitors into paying customers.</h1>
                 <p data-i18n="hero.desc">Full-stack partner for brands that need e-commerce, high-converting landing pages, and business platforms—delivered fast, scalable, and ready to generate revenue.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary" data-i18n="nav.contact">Contact</a>
+                    <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-i18n="cta.calendly">Book a quick call (15m) 🗓️</a>
+                </div>
             </div>
         </div>
     </header>
@@ -78,6 +83,33 @@
         <div class="section-header">
             <h2 class="split-text" data-split-type="chars" data-i18n="about.title">Why businesses hire me</h2>
             <p class="split-text" data-split-type="words" data-split-delay="35" data-i18n="about.desc">I don't just ship code—I deliver digital products tied to your goals: more sales, smoother operations, and a brand experience that builds trust.</p>
+        </div>
+        <div class="about-content fade-in">
+            <div class="about-profile">
+                <!-- ProfileCard React-Bits Port -->
+                <div class="pc-card-wrapper">
+                    <div class="pc-behind"></div>
+                    <div class="pc-card-shell">
+                        <section class="pc-card">
+                            <img class="pc-bg-avatar" src="images/profile.jpg" alt="Andrés Irigoyen avatar" loading="lazy">
+                            <div class="pc-inside">
+                                <div class="pc-shine"></div>
+                                <div class="pc-glare"></div>
+                                <div class="pc-content">
+                                    <div class="pc-details">
+                                        <h3 data-i18n="about.card.name">Andrés Irigoyen</h3>
+                                        <p data-i18n="about.card.title">Full-Stack Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="about-bio">
+                <h3 data-i18n="about.title2">Meet the Developer</h3>
+                <p data-i18n="about.bio">I'm Andrés Irigoyen, a full-stack developer specialized in transforming traditional businesses into digital powerhouses. With experience building e-commerce, admin platforms, and high-converting landings, my goal is to deliver code that directly increases your sales and reduces operational costs.</p>
+            </div>
         </div>
     </section>
 
@@ -201,6 +233,33 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section container">
+        <div class="section-header">
+            <h2 class="split-text" data-split-type="chars" data-i18n="testimonials.title">What my clients say</h2>
+        </div>
+        <div class="testimonials-grid fade-in">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p data-i18n="testimonials.1.text">"Andrés delivered the e-commerce in record time. Sales increased by 30% in the first month thanks to the new checkout."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">ML</div>
+                    <strong data-i18n="testimonials.1.author">María López, CEO - Thebeebaby</strong>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p data-i18n="testimonials.2.text">"We needed a secure and fast admin dashboard. The result exceeded our expectations, cutting our management time in half."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">CR</div>
+                    <strong data-i18n="testimonials.2.author">Carlos Ramírez, Operations - Dahuss</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section container fade-in">
         <div class="content-block">
@@ -215,6 +274,15 @@
                 <div class="form-group">
                     <label for="email" data-i18n="form.email">Email</label>
                     <input type="email" id="email" name="email" required data-i18n-placeholder="form.emailPh" placeholder="you@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="budget" data-i18n="contact.budget">Investment Range (Optional)</label>
+                    <select id="budget" name="budget" class="form-select">
+                        <option value="" disabled selected data-i18n="contact.budget.opt1">Exploring options / Startup</option>
+                        <option value="1500-3000" data-i18n="contact.budget.opt2">$1,500 - $3,000 USD</option>
+                        <option value="3000-10000" data-i18n="contact.budget.opt3">$3,000 - $10,000 USD</option>
+                        <option value="10000+" data-i18n="contact.budget.opt4">More than $10,000 USD</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="message" data-i18n="form.message">Tell me about your project</label>
@@ -237,7 +305,7 @@
     <script src="script.js"></script>
     <script type="module" src="split-text.js"></script>
     <script type="module" src="orb-hero.js"></script>
-
+    <script src="profile-card.js"></script>
     <!-- WhatsApp Floating Widget -->
     <a href="https://https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor">

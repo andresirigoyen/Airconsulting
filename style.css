@@ -1046,7 +1046,7 @@ html.dark-theme .tool-badge {
     font-size: 0.95rem;
     color: var(--text-primary);
 }
-.form-group input, .form-group textarea {
+.form-group input, .form-group textarea, .form-group select {
     padding: 14px 16px;
     border: 1px solid var(--input-border);
     border-radius: 12px;
@@ -1056,7 +1056,7 @@ html.dark-theme .tool-badge {
     font-size: 1rem;
     transition: var(--transition);
 }
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
     outline: none;
     border-color: var(--accent-color);
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
@@ -1102,7 +1102,8 @@ html.dark-theme .tool-badge {
   }
 
   .section {
-    padding: var(--spacing-xl) 0;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
   }
 
   .menu-toggle {
@@ -1409,4 +1410,140 @@ html.dark-theme .tool-badge {
         width: 26px;
         height: 26px;
     }
+    }
+}
+
+/* ==========================================================================
+   CRO & Business Additions
+   ========================================================================== */
+
+/* Hero Actions */
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 16px 36px;
+    background: transparent;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* About Profile Section */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+}
+
+.about-profile {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-bio {
+    flex: 1;
+}
+
+.about-bio h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.about-bio p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+@media (min-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.testimonial-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    font-style: italic;
+    margin-bottom: var(--spacing-xl);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.testimonial-author strong {
+    font-size: 0.95rem;
+    color: var(--text-primary);
 }
