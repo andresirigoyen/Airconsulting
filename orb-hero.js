@@ -231,7 +231,7 @@ function hexToVec3(color) {
 
 /** Canvas alpha blends with the hero background (white in light mode, dark in dark mode). */
 function getOrbBackgroundColor() {
-  return document.body.classList.contains('dark-theme') ? '#121212' : '#ffffff';
+  return document.documentElement.classList.contains('dark-theme') ? '#121212' : '#ffffff';
 }
 
 function initHeroOrb(container, options = {}) {
@@ -348,7 +348,7 @@ function initHeroOrb(container, options = {}) {
   const themeObserver = new MutationObserver(() => {
     program.uniforms.backgroundColor.value = hexToVec3(getOrbBackgroundColor());
   });
-  themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
   container.classList.add('hero-orb--ready');
 

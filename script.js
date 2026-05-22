@@ -170,22 +170,33 @@ if (menuToggle && navLinks) {
     });
 }
 
-// Dark Mode Theme
+// Dark Mode Theme (class on <html> so mobile viewport/overscroll use the correct background)
 const themeToggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
 
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-theme');
+function updateThemeColorMeta(isDark) {
+    let meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'theme-color';
+        document.head.appendChild(meta);
+    }
+    meta.content = isDark ? '#121212' : '#f8f9fa';
 }
 
-if(themeToggle) {
+function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.documentElement.classList.toggle('dark-theme', isDark);
+    localStorage.setItem('theme', theme);
+    updateThemeColorMeta(isDark);
+}
+
+const savedTheme = localStorage.getItem('theme');
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+
+if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        let theme = 'light';
-        if (document.body.classList.contains('dark-theme')) {
-            theme = 'dark';
-        }
-        localStorage.setItem('theme', theme);
+        const nextTheme = document.documentElement.classList.contains('dark-theme') ? 'light' : 'dark';
+        applyTheme(nextTheme);
     });
 }
 
