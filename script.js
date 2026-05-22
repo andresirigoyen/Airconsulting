@@ -87,6 +87,10 @@ async function loadLanguage(lang) {
     // Update radio button
     const radio = document.querySelector(`.lang-radio[value="${lang}"]`);
     if (radio) radio.checked = true;
+
+    if (typeof window.refreshSplitTextAnimations === 'function') {
+      window.refreshSplitTextAnimations();
+    }
     
   } catch (error) {
     console.error('Error loading language file:', error);
@@ -124,10 +128,10 @@ if (langMenuBtn && langDropdown) {
   });
 }
 
-// Initialize language on load
-document.addEventListener("DOMContentLoaded", () => {
+// Initialize language on load (split-text runs after translations apply)
+document.addEventListener("DOMContentLoaded", async () => {
     const savedLang = localStorage.getItem('preferredLang') || 'en';
-    loadLanguage(savedLang);
+    await loadLanguage(savedLang);
 });
 
 // Mobile Menu

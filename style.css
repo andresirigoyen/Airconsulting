@@ -821,6 +821,30 @@ body.dark-theme .project-image {
   margin: var(--spacing-md) 0;
 }
 
+/* Split text (GSAP) */
+.split-text {
+  overflow-wrap: break-word;
+}
+
+.split-text__inner {
+  display: inline;
+}
+
+.split-text__unit {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.split-text__word {
+  white-space: pre-wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split-text__unit {
+    will-change: auto;
+  }
+}
+
 /* Utilities */
 .fade-in {
   opacity: 0;
