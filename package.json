@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "irigoyendev-portfolio",
   "version": "1.0.0",
-  "description": "Minimal Modern Portfolio",
+  "description": "IrigoyenDev — personal portfolio site",
   "private": true,
   "scripts": {
     "dev": "serve .",

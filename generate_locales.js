@@ -17,7 +17,7 @@ const translations = {
     "project.view": "View Case Study",
     "contact.title": "Let's build something great.",
     "contact.desc": "I'm currently available for freelance opportunities and full-time roles.",
-    "footer": "© 2026 DevPortfolio. All rights reserved.",
+    "footer": "© 2026 IrigoyenDev. All rights reserved.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "A beautifully crafted e-commerce and catalog web application with a custom dashboard and authentication portal.",
@@ -47,7 +47,7 @@ const translations = {
     "project.view": "Ver Caso de Estudio",
     "contact.title": "Construyamos algo increíble.",
     "contact.desc": "Actualmente disponible para proyectos freelance y roles a tiempo completo.",
-    "footer": "© 2026 DevPortfolio. Todos los derechos reservados.",
+    "footer": "© 2026 IrigoyenDev. Todos los derechos reservados.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "Una aplicación web de comercio electrónico y catálogo bellamente diseñada con un panel personalizado y portal de autenticación.",
@@ -77,7 +77,7 @@ const translations = {
     "project.view": "Fallstudie ansehen",
     "contact.title": "Lass uns etwas Großartiges aufbauen.",
     "contact.desc": "Derzeit verfügbar für freiberufliche Möglichkeiten und Vollzeitstellen.",
-    "footer": "© 2026 DevPortfolio. Alle Rechte vorbehalten.",
+    "footer": "© 2026 IrigoyenDev. Alle Rechte vorbehalten.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "Eine wunderschön gestaltete E-Commerce- und Katalog-Webanwendung mit einem benutzerdefinierten Dashboard.",
@@ -107,7 +107,7 @@ const translations = {
     "project.view": "Se Casestudie",
     "contact.title": "Lad os bygge noget fantastisk.",
     "contact.desc": "I øjeblikket tilgængelig for freelance muligheder og fuldtidsroller.",
-    "footer": "© 2026 DevPortfolio. Alle rettigheder forbeholdes.",
+    "footer": "© 2026 IrigoyenDev. Alle rettigheder forbeholdes.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "En smukt udformet e-handels- og katalog-webapplikation med et brugerdefineret dashboard.",
@@ -137,7 +137,7 @@ const translations = {
     "project.view": "Se Casestudie",
     "contact.title": "La oss bygge noe fantastisk.",
     "contact.desc": "For tiden tilgjengelig for frilansmuligheter og heltidsroller.",
-    "footer": "© 2026 DevPortfolio. Med enerett.",
+    "footer": "© 2026 IrigoyenDev. Med enerett.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "En vakkert utformet e-handels- og katalog-webapplikasjon med et tilpasset dashbord.",
@@ -167,7 +167,7 @@ const translations = {
     "project.view": "Se Fallstudie",
     "contact.title": "Låt oss bygga något fantastiskt.",
     "contact.desc": "För närvarande tillgänglig för frilansmöjligheter och heltidsroller.",
-    "footer": "© 2026 DevPortfolio. Alla rättigheter förbehållna.",
+    "footer": "© 2026 IrigoyenDev. Alla rättigheter förbehållna.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "En vackert utformad e-handels- och katalog-webbapplikation med en anpassad instrumentpanel.",
@@ -197,7 +197,7 @@ const translations = {
     "project.view": "Vedi Caso Studio",
     "contact.title": "Costruiamo qualcosa di fantastico.",
     "contact.desc": "Attualmente disponibile per opportunità freelance e ruoli a tempo pieno.",
-    "footer": "© 2026 DevPortfolio. Tutti i diritti riservati.",
+    "footer": "© 2026 IrigoyenDev. Tutti i diritti riservati.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "Un'applicazione web di e-commerce e catalogo splendidamente realizzata con una dashboard personalizzata.",
@@ -227,7 +227,7 @@ const translations = {
     "project.view": "Voir l'étude de cas",
     "contact.title": "Construisons quelque chose de grand.",
     "contact.desc": "Actuellement disponible pour des opportunités en freelance et des postes à temps plein.",
-    "footer": "© 2026 DevPortfolio. Tous droits réservés.",
+    "footer": "© 2026 IrigoyenDev. Tous droits réservés.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "Une application web de commerce électronique et de catalogue magnifiquement conçue avec un tableau de bord personnalisé.",
@@ -257,7 +257,7 @@ const translations = {
     "project.view": "Ver Estudo de Caso",
     "contact.title": "Vamos construir algo incrível.",
     "contact.desc": "Atualmente disponível para oportunidades freelance e funções de tempo integral.",
-    "footer": "© 2026 DevPortfolio. Todos os direitos reservados.",
+    "footer": "© 2026 IrigoyenDev. Todos os direitos reservados.",
     
     "proj.thebeebaby.title": "Thebeebaby",
     "proj.thebeebaby.desc": "Uma aplicação web de e-commerce e catálogo lindamente criada com um painel personalizado.",

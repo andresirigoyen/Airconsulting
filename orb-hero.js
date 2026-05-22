@@ -229,9 +229,9 @@ function hexToVec3(color) {
   return new Vec3(0, 0, 0);
 }
 
-/** Dark bg makes orb colors vivid; canvas alpha blends over the page. */
+/** Canvas alpha blends with the hero background (white in light mode, dark in dark mode). */
 function getOrbBackgroundColor() {
-  return document.body.classList.contains('dark-theme') ? '#121212' : '#000000';
+  return document.body.classList.contains('dark-theme') ? '#121212' : '#ffffff';
 }
 
 function initHeroOrb(container, options = {}) {

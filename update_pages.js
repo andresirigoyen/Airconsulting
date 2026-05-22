@@ -42,7 +42,7 @@ for(let f of files) {
   content = content.replace(/<h2>3\. Technical Implementation<\/h2>/g, '<h2 data-i18n="common.tech">3. Technical Implementation</h2>');
   content = content.replace(/<h2>4\. Results and Deliverables<\/h2>/g, '<h2 data-i18n="common.results">4. Results and Deliverables</h2>');
   content = content.replace(/Back to Projects/g, '<span data-i18n="common.back">Back to Projects</span>');
-  content = content.replace(/<p>&copy; 2026 DevPortfolio\. All rights reserved\.<\/p>/g, '<p data-i18n="footer">&copy; 2026 DevPortfolio. All rights reserved.</p>');
+  content = content.replace(/<p>&copy; 2026 IrigoyenDev\. All rights reserved\.<\/p>/g, '<p data-i18n="footer">&copy; 2026 IrigoyenDev. All rights reserved.</p>');
 
   fs.writeFileSync(f, content);
 }

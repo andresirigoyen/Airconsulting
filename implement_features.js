@@ -6,7 +6,7 @@ const files = ['index.html', 'thebeebaby.html', 'dahuss.html', 'floreria.html', 
 const navReplacement = `
     <nav class="navbar" id="navbar">
         <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-            <a href="index.html" class="logo">DevPortfolio.</a>
+            <a href="index.html" class="logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
             
             <div class="nav-actions">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -47,12 +47,13 @@ const navReplacement = `
 `;
 
 const metaTags = `
-    <meta property="og:title" content="DevPortfolio | Full-Stack Developer">
+    <meta property="og:title" content="IrigoyenDev | Full-Stack Developer">
     <meta property="og:description" content="Explore my high-performance technical solutions and case studies.">
     <meta property="og:image" content="https://example.com/og-image.jpg">
     <meta property="og:url" content="https://example.com">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
 `;
 
 files.forEach(file => {
