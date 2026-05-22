@@ -377,7 +377,7 @@ function startHeroOrb() {
   try {
     initHeroOrb(heroOrbEl, {
       hue: 0,
-      hoverIntensity: 2,
+      hoverIntensity: 1.4,
       rotateOnHover: true,
       forceHoverState: false
     });
