@@ -6,21 +6,20 @@
     <script>
       try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme'); } catch (_) {}
     </script>
-    <title>Thebeebaby Case Study | IrigoyenDev</title>
-    <meta name="description" content="Technical case study for the Thebeebaby project.">
+    <title>TheBeeBaby Case Study | IrigoyenDev</title>
+    <meta name="description" content="Case study: TheBeeBaby baby gear rental marketplace—geo catalog, provider tools, secure payments, and a production-ready platform built by IrigoyenDev.">
     <link rel="stylesheet" href="style.css">
 
-    <meta property="og:title" content="IrigoyenDev | Full-Stack Developer">
-    <meta property="og:description" content="Explore my high-performance technical solutions and case studies.">
+    <meta property="og:title" content="TheBeeBaby — Family Travel Marketplace | IrigoyenDev">
+    <meta property="og:description" content="Case study: full-stack marketplace connecting traveling families with verified local baby-gear providers.">
     <meta property="og:image" content="https://example.com/og-image.jpg">
-    <meta property="og:url" content="https://example.com">
+    <meta property="og:url" content="https://example.com/thebeebaby.html">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon.svg">
 
 </head>
 <body class="page-project">
-    <!-- Sticky Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
@@ -32,7 +31,6 @@
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
-
                 <div class="lang-selector-container">
                     <button id="lang-menu-btn" class="lang-btn" aria-label="Select Language">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -53,7 +51,6 @@
                         <label class="lang-option"><span class="lang-name">Português</span><input type="radio" name="lang" value="pt" class="lang-radio"><div class="toggle-switch"></div></label>
                     </div>
                 </div>
-
                 <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false" aria-controls="nav-links">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
@@ -61,112 +58,157 @@
         </div>
     </nav>
 
-    <!-- Project Header -->
     <header class="project-header container fade-in">
-        <h1 data-i18n="proj.thebeebaby.h1">Custom E-commerce Development: Thebeebaby</h1>
+        <p class="project-eyebrow" data-i18n="proj.thebeebaby.eyebrow">Case study · Live product</p>
+        <h1 data-i18n="proj.thebeebaby.h1">TheBeeBaby: Digital marketplace for baby gear rental</h1>
+        <p class="project-lead" data-i18n="proj.thebeebaby.subtitle">A web platform connecting families traveling with babies to local providers—book strollers, car seats, cribs, high chairs and more by city, dates, and real availability.</p>
         <div class="project-meta">
-            <span data-i18n="common.role">Role: Full-stack Developer</span>
-            <span data-i18n="proj.thebeebaby.techStack">Tech: React, Node.js, Custom Dashboard</span>
-            <span data-i18n="common.timeline">Timeline: 2 Months</span>
+            <span data-i18n="proj.thebeebaby.role">Role: Full-Stack Developer</span>
+            <span data-i18n="proj.thebeebaby.scope">Scope: Product design, UX, bookings, payments & multi-sided operations</span>
         </div>
-        <a href="index.html#contact" class="project-cta-inline" data-i18n="cta.inline">Need similar results for your business? Get a quote →</a>
+        <p class="project-stack-label" data-i18n="proj.thebeebaby.stackLabel">Stack</p>
+        <ul class="project-stack-list">
+            <li>Next.js · React · TypeScript</li>
+            <li>Cloud database · Payment gateway</li>
+            <li>Modern UI · Multi-language</li>
+            <li>Cloud hosting</li>
+        </ul>
+        <div class="project-header__actions">
+            <a href="https://www.thebeebaby.com" target="_blank" rel="noopener noreferrer" class="btn-cta-primary" data-i18n="proj.thebeebaby.liveBtn">Visit thebeebaby.com →</a>
+            <a href="index.html#contact" class="project-cta-inline" data-i18n="cta.inline">Need similar results for your business? Get a quote →</a>
+        </div>
     </header>
 
     <main class="container">
-        
-        <!-- 1. Project Overview and Objectives -->
+
         <section class="project-section fade-in">
             <div class="content-block">
-                <h2 data-i18n="common.overview">1. Project Overview and Objectives</h2>
-                <p data-i18n="proj.thebeebaby.overviewDesc">Thebeebaby is a beautifully crafted e-commerce and catalog web application designed to provide a seamless shopping experience. It features a custom dashboard for administrative control and a secure authentication portal for users.</p>
-                <p><strong data-i18n="common.objectives">Key Objectives:</strong></p>
-                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: var(--text-secondary);">
-                    <li data-i18n="proj.thebeebaby.obj1">Deliver a high-quality, visually appealing catalog.</li>
-                    <li data-i18n="proj.thebeebaby.obj2">Implement a robust user login and authentication flow.</li>
-                    <li data-i18n="proj.thebeebaby.obj3">Develop an intuitive dashboard for managing products and orders.</li>
-                </ul>
+                <h2 data-i18n="proj.thebeebaby.valueTitle">Business value</h2>
+                <p data-i18n="proj.thebeebaby.valueDesc">TheBeeBaby lets traveling families rent safe baby gear at their destination instead of hauling bulky items on every trip—while local providers monetize inventory through a single transactional marketplace with real calendars, payments, and role-based operations.</p>
             </div>
         </section>
 
-        <!-- 2. Mockups Section -->
+        <section class="project-section project-section--disclosure fade-in">
+            <details class="project-disclosure">
+                <summary class="project-disclosure__trigger">
+                    <h2 data-i18n="proj.thebeebaby.problemTitle">The problem</h2>
+                    <span class="project-disclosure__chevron" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <div class="project-disclosure__panel content-block">
+                    <p data-i18n="proj.thebeebaby.problemDesc">Families with babies need to travel without carrying heavy gear—while still accessing safe, available products at their destination. The platform had to unify inventory, cities, providers, calendars, and payments in one reliable product experience.</p>
+                    <p><strong data-i18n="proj.thebeebaby.capabilitiesLabel">Beyond a catalog, the marketplace includes:</strong></p>
+                    <ul class="project-results-list">
+                        <li data-i18n="proj.thebeebaby.cap1">Separate experiences for travelers, providers, and the operations team</li>
+                        <li data-i18n="proj.thebeebaby.cap2">Visual catalog with availability, pricing, cities, and delivery areas</li>
+                        <li data-i18n="proj.thebeebaby.cap3">Bookings, secure payments, and operational reporting</li>
+                        <li data-i18n="proj.thebeebaby.cap4">User notifications and international SEO</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <section class="project-section project-section--disclosure fade-in">
+            <details class="project-disclosure">
+                <summary class="project-disclosure__trigger">
+                    <h2 data-i18n="proj.thebeebaby.processTitle">Development methodology</h2>
+                    <span class="project-disclosure__chevron" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <div class="project-disclosure__panel content-block">
+                    <p data-i18n="proj.thebeebaby.processIntro">I owned the product end to end—from structure to a production-ready marketplace. Here is how it was built:</p>
+                    <ol class="process-steps">
+                        <li class="process-step">
+                            <h3 data-i18n="proj.thebeebaby.step1Title">1 — Product architecture</h3>
+                            <p data-i18n="proj.thebeebaby.step1Desc">Public discovery, private dashboards, and modular services for catalog, bookings, and payments—organized for scale and a clear separation between public and operational areas.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.thebeebaby.step2Title">2 — Catalog & locations</h3>
+                            <p data-i18n="proj.thebeebaby.step2Desc">Structured inventory by city and calendar availability, with consistent location data so families and providers always see accurate listings and coverage.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.thebeebaby.step3Title">3 — User experience</h3>
+                            <p data-i18n="proj.thebeebaby.step3Desc">Responsive interfaces for search, booking, account access, and provider management—with fast catalog browsing and conversion-focused flows on mobile and desktop.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.thebeebaby.step4Title">4 — Bookings & payments</h3>
+                            <p data-i18n="proj.thebeebaby.step4Desc">End-to-end reservation flow integrated with a trusted payment provider, with business rules enforced on the server and inventory updated only after confirmed bookings.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.thebeebaby.step5Title">5 — Access control</h3>
+                            <p data-i18n="proj.thebeebaby.step5Desc">Secure sign-in and permission levels so each user type only accesses what they need—protecting accounts, provider data, and day-to-day operations.</p>
+                        </li>
+                    </ol>
+                </div>
+            </details>
+        </section>
+
         <section class="project-section fade-in">
             <div class="content-block">
-                <h2 data-i18n="common.mockups">2. Interface & Galleries</h2>
-                <p data-i18n="proj.thebeebaby.mockupsDesc">Here is an in-depth look at the various platforms and interfaces developed for Thebeebaby, including the hero page, the catalog, the user login portal, and the administrative dashboard.</p>
+                <h2 data-i18n="proj.thebeebaby.mockupsTitle">Interface & product screens</h2>
+                <p data-i18n="proj.thebeebaby.mockupsDesc">Hero, catalog, provider dashboard, and secure login—designed for trust, speed, and conversion on every device.</p>
             </div>
-            
             <div class="mockup-grid">
-                
                 <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
                     <h3 class="mockup-caption">Homepage / Hero</h3>
-                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabyheroe.png" alt="Thebeebaby Hero View" id="thebeebaby-heroe-img">
+                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabyheroe.png" alt="TheBeeBaby hero — family travel marketplace" id="thebeebaby-heroe-img">
                 </div>
-                
                 <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
                     <h3 class="mockup-caption">Product Catalog</h3>
-                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabycatalog.png" alt="Thebeebaby Catalog" id="thebeebaby-catalog-img">
+                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabycatalog.png" alt="TheBeeBaby catalog with geo filters" id="thebeebaby-catalog-img">
                 </div>
-
                 <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
-                    <h3 class="mockup-caption">Administrative Dashboard</h3>
-                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabydashboard.png" alt="Thebeebaby Dashboard" id="thebeebaby-dashboard-img">
+                    <h3 class="mockup-caption">Provider Dashboard</h3>
+                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabydashboard.png" alt="TheBeeBaby provider dashboard" id="thebeebaby-dashboard-img">
                 </div>
-
                 <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
                     <h3 class="mockup-caption">Login Portal</h3>
-                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabylogin.png" alt="Thebeebaby Login" id="thebeebaby-login-img">
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- 3. Technical Implementation and Step-by-Step Code -->
-        <section class="project-section fade-in">
-            <div class="content-block">
-                <h2 data-i18n="common.tech">3. Technical Implementation</h2>
-                <p data-i18n="proj.thebeebaby.techDesc">The frontend architecture prioritizes component reusability and fast load times. We utilized modern CSS grids for the catalog layout to ensure responsiveness across all devices.</p>
-                
-                <h3 class="project-subheading" data-i18n="proj.thebeebaby.techSubheading">Authentication Flow</h3>
-                <p data-i18n="proj.thebeebaby.techSubDesc">Secure token-based authentication was implemented to protect user routes and the dashboard.</p>
-                <div class="code-block">
-<pre><code>// AuthContext.js
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-
-  const login = async (credentials) => {
-    const response = await api.post('/login', credentials);
-    setUser(response.data.user);
-    localStorage.setItem('token', response.data.token);
-  };
-
-  return (
-    &lt;AuthContext.Provider value={{ user, login }}&gt;
-      {children}
-    &lt;/AuthContext.Provider&gt;
-  );
-};</code></pre>
+                    <img loading="lazy" decoding="async" src="images/Thebeebaby/thebeebabylogin.png" alt="TheBeeBaby secure login" id="thebeebaby-login-img">
                 </div>
             </div>
         </section>
 
-        <!-- 4. Results and Deliverables -->
         <section class="project-section fade-in">
             <div class="content-block">
-                <h2 data-i18n="common.results">4. Results and Deliverables</h2>
-                <p data-i18n="proj.thebeebaby.resultsDesc">The launch of Thebeebaby resulted in a highly engaging platform that perfectly captures the brand's aesthetic while providing all the necessary e-commerce tools.</p>
-                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: var(--text-secondary);">
-                    <li><strong data-i18n="proj.thebeebaby.res1">Achieved a 100% modern, fully responsive interface.</strong></li>
-                    <li><strong data-i18n="proj.thebeebaby.res2">Integrated a fully operational dashboard for business management.</strong></li>
+                <h2 data-i18n="proj.thebeebaby.techTitle">Technical challenges solved</h2>
+                <p data-i18n="proj.thebeebaby.techIntro">Built for real traffic and payments—reliable, fast, and trustworthy for families and providers.</p>
+            </div>
+            <div class="project-features-grid">
+                <article class="feature-card">
+                    <h3 data-i18n="proj.thebeebaby.feat1Title">Performance at scale</h3>
+                    <p data-i18n="proj.thebeebaby.feat1Desc">Optimized delivery for high traffic: efficient asset loading, paginated data handling, and smart caching so the platform stays responsive during peak travel seasons.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-i18n="proj.thebeebaby.feat2Title">Trustworthy bookings</h3>
+                    <p data-i18n="proj.thebeebaby.feat2Desc">Consistent product and location data across the marketplace, with server-enforced business rules before any booking or payment is confirmed.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-i18n="proj.thebeebaby.feat3Title">Protected operations</h3>
+                    <p data-i18n="proj.thebeebaby.feat3Desc">Access controls for private areas and operational tools, following security best practices without exposing how internal systems are wired.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.thebeebaby.resultsTitle">Results & impact</h2>
+                <p data-i18n="proj.thebeebaby.resultsDesc">TheBeeBaby turns a real family mobility problem into a polished digital experience: geolocated catalog, bookings, payments, operational dashboards, international SEO, and day-to-day reliability. Families find gear at destination; providers manage inventory and orders; the brand gains a scalable channel for growth.</p>
+                <ul class="project-results-list">
+                    <li data-i18n="proj.thebeebaby.res1">Live transactional marketplace across international cities</li>
+                    <li data-i18n="proj.thebeebaby.res2">Multi-sided product: families, providers & operations</li>
+                    <li data-i18n="proj.thebeebaby.res3">Secure bookings, payments & reliable day-to-day operations</li>
                 </ul>
             </div>
         </section>
-        
+
         <section class="project-cta fade-in">
             <div class="content-block project-cta__inner">
-                <h2 data-i18n="cta.thebeebaby.title">Need an e-commerce store that actually sells?</h2>
-                <p data-i18n="cta.thebeebaby.desc">Let's build your catalog, checkout, and admin panel with the same conversion-focused approach used in Thebeebaby.</p>
+                <h2 data-i18n="cta.thebeebaby.title">Building a marketplace or booking platform?</h2>
+                <p data-i18n="cta.thebeebaby.desc">I design and ship full-stack products like TheBeeBaby—from UX and geo-search to payments and admin dashboards. Let's scope your MVP or scale your existing product.</p>
                 <div class="project-cta__actions">
-                    <a href="index.html#contact" class="btn-cta-primary" data-i18n="cta.thebeebaby.btn">Get my e-commerce quote</a>
+                    <a href="index.html#contact" class="btn-cta-primary" data-i18n="cta.thebeebaby.btn">Request a project plan</a>
                     <a href="index.html#projects" class="btn-cta-secondary" data-i18n="cta.more">View more client results</a>
                 </div>
             </div>
@@ -183,7 +225,6 @@ export const AuthProvider = ({ children }) => {
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script src="script.js"></script>
 
-    <!-- WhatsApp Floating Widget -->
     <a href="https://https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>

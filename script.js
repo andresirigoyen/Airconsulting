@@ -60,38 +60,65 @@ const langDropdown = document.getElementById('lang-dropdown');
 const langRadios = document.querySelectorAll('.lang-radio');
 
 let currentTranslations = {};
+let englishTranslations = {};
+
+async function fetchLocale(lang) {
+  const response = await fetch(`locales/${lang}.json`);
+  if (!response.ok) throw new Error(`Locale ${lang} not found`);
+  return response.json();
+}
+
+function applyTranslations(translations) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[key]) el.textContent = translations[key];
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[key]) el.placeholder = translations[key];
+  });
+
+  document.querySelectorAll('option[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[key]) el.textContent = translations[key];
+  });
+
+  const titleKey = document.documentElement.getAttribute('data-i18n-title');
+  if (titleKey && translations[titleKey]) {
+    document.title = translations[titleKey];
+  }
+
+  const metaDesc = document.querySelector('meta[name="description"][data-i18n-content]');
+  if (metaDesc) {
+    const key = metaDesc.getAttribute('data-i18n-content');
+    if (translations[key]) metaDesc.setAttribute('content', translations[key]);
+  }
+}
 
 async function loadLanguage(lang) {
   try {
-    const response = await fetch(`locales/${lang}.json`);
-    if (!response.ok) throw new Error('Network response was not ok');
-    const translations = await response.json();
+    if (!Object.keys(englishTranslations).length) {
+      englishTranslations = await fetchLocale('en');
+    }
+
+    let translations = { ...englishTranslations };
+    if (lang !== 'en') {
+      const localized = await fetchLocale(lang);
+      translations = { ...translations, ...localized };
+    }
+
     currentTranslations = translations;
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (translations[key]) {
-        el.textContent = translations[key];
-      }
-    });
-
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      if (translations[key]) {
-        el.placeholder = translations[key];
-      }
-    });
-
+    document.documentElement.lang = lang;
+    applyTranslations(translations);
     localStorage.setItem('preferredLang', lang);
-    
-    // Update radio button
+
     const radio = document.querySelector(`.lang-radio[value="${lang}"]`);
     if (radio) radio.checked = true;
 
     if (typeof window.refreshSplitTextAnimations === 'function') {
       window.refreshSplitTextAnimations();
     }
-    
   } catch (error) {
     console.error('Error loading language file:', error);
   }
