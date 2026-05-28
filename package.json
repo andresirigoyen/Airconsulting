@@ -8,6 +8,7 @@
     "start": "serve ."
   },
   "devDependencies": {
+    "puppeteer-core": "^25.1.0",
     "serve": "^14.2.0"
   },
   "dependencies": {
