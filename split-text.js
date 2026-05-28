@@ -82,20 +82,41 @@ function splitElement(el, splitType) {
       units.push(word);
     });
   } else {
-    [...sourceText].forEach((char) => {
-      if (char === ' ') {
-        inner.appendChild(document.createTextNode(' '));
+    const parts = sourceText.split(/(\s+)/);
+    parts.forEach((part) => {
+      if (!part) return;
+      if (/^\s+$/.test(part)) {
+        // Handle newlines and spaces within white space
+        if (part.includes('\n')) {
+          const subparts = part.split(/(\n)/);
+          subparts.forEach((sub) => {
+            if (sub === '\n') {
+              inner.appendChild(document.createElement('br'));
+            } else if (sub) {
+              inner.appendChild(document.createTextNode(sub));
+            }
+          });
+        } else {
+          inner.appendChild(document.createTextNode(part));
+        }
         return;
       }
-      if (char === '\n') {
-        inner.appendChild(document.createElement('br'));
-        return;
-      }
-      const unit = document.createElement('span');
-      unit.className = 'split-text__unit split-text__char';
-      unit.textContent = char;
-      inner.appendChild(unit);
-      units.push(unit);
+
+      // Wrap each word in a non-breaking inline-block span
+      const wordWrap = document.createElement('span');
+      wordWrap.className = 'split-text__word-wrap';
+      wordWrap.style.display = 'inline-block';
+      wordWrap.style.whiteSpace = 'nowrap';
+
+      [...part].forEach((char) => {
+        const unit = document.createElement('span');
+        unit.className = 'split-text__unit split-text__char';
+        unit.textContent = char;
+        wordWrap.appendChild(unit);
+        units.push(unit);
+      });
+
+      inner.appendChild(wordWrap);
     });
   }
 
