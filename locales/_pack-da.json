@@ -229,9 +229,9 @@
   "about.title2": "Mød udvikleren",
   "about.bio": "Jeg er Andres Irigoyen, Full-Stack-udvikler. Jeg er specialiseret i at transformere traditionelle virksomheder til profitable digitale platforme. Jeg kombinerer teknisk stringens med en direkte kommerciel vision: Jeg omsætter dine forretningsbehov til effektiv, skalerbar software, der forbedrer dine fortjenstmargener og løser reelle driftsproblemer.",
   "testimonials.title": "Hvad mine kunder siger",
-  "testimonials.1.text": "Andrés leverede e-handlen på rekordtid. Salget steg med 30 % i den første måned takket være den nye kasse.",
+  "testimonials.1.text": "Andrés byggede e-handlen utroligt hurtigt, og den nye betaling er super glat. Vores salg steg med 30% i den første måned.",
   "testimonials.1.author": "María López, CEO - Thebeebaby",
-  "testimonials.2.text": "Vi havde brug for et sikkert og hurtigt admin-dashboard. Resultatet oversteg vores forventninger og halverede vores ledelsestid.",
+  "testimonials.2.text": "Vi havde brug for at digitalisere vores flow med Asien og automatiser tilbud. Systemet sparer os for mange timers manuelt arbejde hver dag.",
   "testimonials.2.author": "Carlos Ramírez, Operations - Dahuss",
   "contact.budget": "Investeringsinterval (valgfrit)",
   "contact.budget.opt1": "Udforsker muligheder / Opstart",
@@ -243,5 +243,6 @@
   "about.card.title": "Fuld-Stack-udvikler",
   "about.card.handle": "⟦HÅNDTAG⟧",
   "about.card.status": "Tilgængelig til arbejde",
-  "about.card.btn": "Kontakt mig"
+  "about.card.btn": "Kontakt mig",
+  "testimonials.3.text": "Han leverede butikken helt klar til salg. Han sørgede for, at siden var lynhurtig og nem at finde på Google. En kæmpe lettelse."
 }

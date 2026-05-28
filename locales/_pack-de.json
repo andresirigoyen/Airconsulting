@@ -229,9 +229,9 @@
   "about.title2": "Treffen Sie den Entwickler",
   "about.bio": "Ich bin Andres Irigoyen, Full-Stack Entwickler. Ich bin darauf spezialisiert, traditionelle Unternehmen in profitable digitale Plattformen umzuwandeln. Ich verbinde technische Präzision mit einer direkten kommerziellen Vision: Ich übersetze Ihre Geschäftsanforderungen in effiziente, skalierbare Software, die Ihre Gewinnmargen verbessert und echte betriebliche Probleme löst.",
   "testimonials.title": "Was meine Kunden sagen",
-  "testimonials.1.text": "Andrés lieferte den E-Commerce in Rekordzeit. Durch den neuen Checkout stieg der Umsatz im ersten Monat um 30 %.",
+  "testimonials.1.text": "Andrés hat den E-Commerce unglaublich schnell aufgebaut und der neue Checkout läuft super flüssig. Die Verkäufe stiegen im ersten Monat um 30%.",
   "testimonials.1.author": "María López, CEO – Thebeebaby",
-  "testimonials.2.text": "Wir brauchten ein sicheres und schnelles Admin-Dashboard. Das Ergebnis hat unsere Erwartungen übertroffen und unsere Verwaltungszeit halbiert.",
+  "testimonials.2.text": "Wir mussten den gesamten Fluss mit Asien digitalisieren und Angebote automatisieren. Das System spart uns jeden Tag Stunden an manueller Arbeit.",
   "testimonials.2.author": "Carlos Ramírez, Operationen – Dahuss",
   "contact.budget": "Anlagebereich (optional)",
   "contact.budget.opt1": "Optionen erkunden / Start",
@@ -243,5 +243,6 @@
   "about.card.title": "Vollständiger Stack-Entwickler",
   "about.card.handle": "⟦HANDHABEN⟧",
   "about.card.status": "Verfügbar für Projekte",
-  "about.card.btn": "Kontakt aufnehmen"
+  "about.card.btn": "Kontakt aufnehmen",
+  "testimonials.3.text": "Er hat uns den Shop verkaufsfertig übergeben. Er hat dafür gesorgt, dass die Seite super schnell lädt und bei Google gelistet wird. Eine echte Erleichterung."
 }
