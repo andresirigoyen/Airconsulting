@@ -184,15 +184,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const unmuteVideo = () => {
       video.muted = false;
       video.play().catch(() => {});
+      shell.classList.add('is-playing');
     };
 
     const muteVideo = () => {
       video.muted = true;
+      shell.classList.remove('is-playing');
     };
 
-    // Unmute when user hovers or clicks the card
-    shell.addEventListener('pointerenter', unmuteVideo);
-    shell.addEventListener('click', unmuteVideo);
+    // Toggle play/unmute state when clicking the card (ignoring standard action buttons)
+    shell.addEventListener('click', (e) => {
+      if (e.target.closest('.pc-contact-btn')) return;
+      if (video.muted) {
+        unmuteVideo();
+      } else {
+        muteVideo();
+      }
+    });
 
     // Intersection Observer to manage playback and audio based on viewport
     const aboutSection = document.getElementById('about');
@@ -200,10 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Play the video and attempt to unmute when scrolled into view
-            video.play().then(() => {
-              unmuteVideo();
-            }).catch(() => {});
+            // Play the video automatically (muted by default) when scrolled into view
+            video.play().catch(() => {});
+            muteVideo(); // Keep it muted and show play overlay until user clicks
           } else {
             // Pause the video and mute when scrolled away
             video.pause();

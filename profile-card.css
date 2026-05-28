@@ -155,3 +155,55 @@
   font-weight: 500;
   text-shadow: 0 2px 15px rgba(0,0,0,0.8);
 }
+
+/* Play Overlay styling */
+.pc-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none; /* Let events pass to the card shell for tilt engine */
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pc-play-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+
+/* Visually center the play triangle by offsetting it to the right */
+.pc-play-icon svg {
+  margin-left: 3px;
+}
+
+/* Hover scales and brightens the play icon */
+.pc-card-shell:hover .pc-play-icon {
+  transform: scale(1.08);
+  background: rgba(0, 0, 0, 0.85);
+  border-color: #ffffff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+/* Hide the overlay when the video is active and unmuted */
+.pc-card-shell.is-playing .pc-play-overlay {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
