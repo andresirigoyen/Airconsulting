@@ -194,16 +194,19 @@ document.addEventListener('DOMContentLoaded', () => {
     shell.addEventListener('pointerenter', unmuteVideo);
     shell.addEventListener('click', unmuteVideo);
 
-    // Intersection Observer to manage audio based on viewport
+    // Intersection Observer to manage playback and audio based on viewport
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Attempts to unmute (succeeds if user already clicked anywhere on page)
-            unmuteVideo();
+            // Play the video and attempt to unmute when scrolled into view
+            video.play().then(() => {
+              unmuteVideo();
+            }).catch(() => {});
           } else {
-            // Automatically mute when the user scrolls away
+            // Pause the video and mute when scrolled away
+            video.pause();
             muteVideo();
           }
         });
