@@ -177,4 +177,39 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
     });
   }
+
+  // Presentation Video Audio Control
+  const video = shell.querySelector('video.pc-bg-avatar');
+  if (video) {
+    const unmuteVideo = () => {
+      video.muted = false;
+      video.play().catch(() => {});
+    };
+
+    const muteVideo = () => {
+      video.muted = true;
+    };
+
+    // Unmute when user hovers or clicks the card
+    shell.addEventListener('pointerenter', unmuteVideo);
+    shell.addEventListener('click', unmuteVideo);
+
+    // Intersection Observer to manage audio based on viewport
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Attempts to unmute (succeeds if user already clicked anywhere on page)
+            unmuteVideo();
+          } else {
+            // Automatically mute when the user scrolls away
+            muteVideo();
+          }
+        });
+      }, { threshold: 0.15 });
+
+      observer.observe(aboutSection);
+    }
+  }
 });
