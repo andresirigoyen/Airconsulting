@@ -181,13 +181,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Presentation Video Audio Control
   const video = shell.querySelector('video.pc-bg-avatar');
   if (video) {
-    const unmuteVideo = () => {
+    const unmuteAndPlayVideo = () => {
       video.muted = false;
       video.play().catch(() => {});
       shell.classList.add('is-playing');
     };
 
-    const muteVideo = () => {
+    const pauseAndMuteVideo = () => {
+      video.pause();
       video.muted = true;
       shell.classList.remove('is-playing');
     };
@@ -195,10 +196,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle play/unmute state when clicking the card (ignoring standard action buttons)
     shell.addEventListener('click', (e) => {
       if (e.target.closest('.pc-contact-btn')) return;
-      if (video.muted) {
-        unmuteVideo();
+      if (video.paused) {
+        unmuteAndPlayVideo();
       } else {
-        muteVideo();
+        pauseAndMuteVideo();
       }
     });
 
@@ -207,14 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (aboutSection) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Play the video automatically (muted by default) when scrolled into view
-            video.play().catch(() => {});
-            muteVideo(); // Keep it muted and show play overlay until user clicks
-          } else {
+          if (!entry.isIntersecting) {
             // Pause the video and mute when scrolled away
-            video.pause();
-            muteVideo();
+            pauseAndMuteVideo();
           }
         });
       }, { threshold: 0.15 });
