@@ -1709,7 +1709,7 @@ html.dark-theme .tool-badge {
 @media (min-width: 768px) {
     .about-content {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         gap: 60px;
     }
 }
