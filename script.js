@@ -63,7 +63,7 @@ let currentTranslations = {};
 let englishTranslations = {};
 
 async function fetchLocale(lang) {
-  const response = await fetch(`locales/${lang}.json`);
+  const response = await fetch(`locales/${lang}.json`, { cache: 'no-cache' });
   if (!response.ok) throw new Error(`Locale ${lang} not found`);
   return response.json();
 }
