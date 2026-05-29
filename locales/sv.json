@@ -341,5 +341,6 @@
   "proj.radiochicureo.res5": "Grundläggande teknisk arkitektur förberedd för framtida skalning",
   "cta.radiochicureo.title": "Bygga en onlinemedia eller dynamisk CMS-plattform?",
   "cta.radiochicureo.desc": "Jag designar full-stack ljudplattformar, innehållshanterare och säkra admin-hubbar byggda för trafik. Låt oss prata om ditt nästa projekt.",
-  "cta.radiochicureo.btn": "Begär en offert för mediaplattform"
+  "cta.radiochicureo.btn": "Begär en offert för mediaplattform",
+  "about.card.play": "Klicka för att spela presentationen"
 }

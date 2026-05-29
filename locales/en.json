@@ -341,5 +341,6 @@
   "proj.radiochicureo.res5": "Base technical architecture prepared for future scaling",
   "cta.radiochicureo.title": "Building an online media or dynamic CMS platform?",
   "cta.radiochicureo.desc": "I design full-stack audio platforms, content managers, and secure admin hubs built for traffic. Let's talk about your next project.",
-  "cta.radiochicureo.btn": "Request a media platform quote"
+  "cta.radiochicureo.btn": "Request a media platform quote",
+  "about.card.play": "Click to play presentation"
 }

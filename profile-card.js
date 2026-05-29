@@ -178,49 +178,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Presentation Video Autoplay Control
+  // Presentation Video Play Button & Audio Control
   const video = shell.querySelector('video.pc-bg-avatar');
   if (video) {
-    let hasInteracted = false;
-    let inView = false;
-
-    // Synchronize play state and muted state based on scroll and interaction status
-    const syncVideoState = () => {
-      if (inView) {
-        if (hasInteracted) {
-          video.muted = false;
-        } else {
+    const playVideo = () => {
+      // Unmute and play
+      video.muted = false;
+      video.play()
+        .then(() => {
+          wrap.classList.add('is-playing');
+        })
+        .catch((err) => {
+          console.warn("Unmuted play blocked by browser, trying muted play fallback:", err);
           video.muted = true;
-        }
-        video.play().catch(() => {});
+          video.play()
+            .then(() => {
+              wrap.classList.add('is-playing');
+            })
+            .catch((playErr) => {
+              console.error("Video playback failed completely:", playErr);
+            });
+        });
+    };
+
+    const pauseVideo = () => {
+      video.pause();
+      video.muted = true;
+      wrap.classList.remove('is-playing');
+    };
+
+    // Bind click event to the outer wrapper (flat container) to avoid 3D transform Z-offset blocking
+    wrap.addEventListener('click', (e) => {
+      if (e.target.closest('.pc-contact-btn')) return;
+      
+      if (video.paused) {
+        playVideo();
       } else {
-        video.pause();
-        video.muted = true;
+        pauseVideo();
       }
-    };
+    });
 
-    // Flag interaction on the first click/touch on the document
-    const handleFirstInteraction = () => {
-      hasInteracted = true;
-      // Remove listeners once captured
-      document.removeEventListener('click', handleFirstInteraction);
-      document.removeEventListener('touchstart', handleFirstInteraction);
-      document.removeEventListener('pointerdown', handleFirstInteraction);
-      // Update audio status if currently in viewport
-      syncVideoState();
-    };
-
-    document.addEventListener('click', handleFirstInteraction);
-    document.addEventListener('touchstart', handleFirstInteraction);
-    document.addEventListener('pointerdown', handleFirstInteraction);
-
-    // Intersection Observer to manage playback based on viewport visibility
+    // Intersection Observer to pause the video when scrolled away
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          inView = entry.isIntersecting;
-          syncVideoState();
+          if (!entry.isIntersecting) {
+            pauseVideo();
+          }
         });
       }, { threshold: 0.15 });
 
