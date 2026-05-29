@@ -181,27 +181,61 @@ document.addEventListener('DOMContentLoaded', () => {
   // Presentation Video Audio Control
   const video = shell.querySelector('video.pc-bg-avatar');
   if (video) {
+    console.log("Interactive video found on presentation card.");
+
     const unmuteAndPlayVideo = () => {
-      video.muted = false;
-      video.play().catch(() => {});
-      shell.classList.add('is-playing');
+      console.log("Attempting to play video unmuted...");
+      // Play first, then unmute to satisfy browser policies
+      video.play()
+        .then(() => {
+          video.muted = false;
+          shell.classList.add('is-playing');
+          console.log("Video playing unmuted successfully.");
+        })
+        .catch((err) => {
+          console.warn("Unmuted playback blocked by browser, playing muted as fallback:", err);
+          video.muted = true;
+          video.play()
+            .then(() => {
+              shell.classList.add('is-playing');
+            })
+            .catch((playErr) => {
+              console.error("Muted playback also failed:", playErr);
+            });
+        });
     };
 
     const pauseAndMuteVideo = () => {
+      console.log("Pausing and muting video.");
       video.pause();
       video.muted = true;
       shell.classList.remove('is-playing');
     };
 
-    // Toggle play/unmute state when clicking the card (ignoring standard action buttons)
-    shell.addEventListener('click', (e) => {
-      if (e.target.closest('.pc-contact-btn')) return;
+    const handleCardClick = (e) => {
+      console.log("Card clicked!", e.target);
+      if (e.target.closest('.pc-contact-btn')) {
+        console.log("Contact button clicked, ignoring video toggle.");
+        return;
+      }
+      
       if (video.paused) {
         unmuteAndPlayVideo();
       } else {
         pauseAndMuteVideo();
       }
-    });
+    };
+
+    // Bind click events to both the shell and the overlay wrapper for maximum compatibility
+    shell.addEventListener('click', handleCardClick);
+    
+    const playOverlay = shell.querySelector('.pc-play-overlay');
+    if (playOverlay) {
+      // Ensure clicks on the overlay itself also trigger playback
+      playOverlay.style.pointerEvents = 'auto';
+      playOverlay.style.cursor = 'pointer';
+      playOverlay.addEventListener('click', handleCardClick);
+    }
 
     // Intersection Observer to manage playback and audio based on viewport
     const aboutSection = document.getElementById('about');
