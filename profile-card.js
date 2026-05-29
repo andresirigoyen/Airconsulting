@@ -181,19 +181,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Presentation Video Autoplay Control
   const video = shell.querySelector('video.pc-bg-avatar');
   if (video) {
+    let hasInteracted = false;
+    let inView = false;
+
+    // Synchronize play state and muted state based on scroll and interaction status
+    const syncVideoState = () => {
+      if (inView) {
+        if (hasInteracted) {
+          video.muted = false;
+        } else {
+          video.muted = true;
+        }
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        video.muted = true;
+      }
+    };
+
+    // Flag interaction on the first click/touch on the document
+    const handleFirstInteraction = () => {
+      hasInteracted = true;
+      // Remove listeners once captured
+      document.removeEventListener('click', handleFirstInteraction);
+      document.removeEventListener('touchstart', handleFirstInteraction);
+      document.removeEventListener('pointerdown', handleFirstInteraction);
+      // Update audio status if currently in viewport
+      syncVideoState();
+    };
+
+    document.addEventListener('click', handleFirstInteraction);
+    document.addEventListener('touchstart', handleFirstInteraction);
+    document.addEventListener('pointerdown', handleFirstInteraction);
+
     // Intersection Observer to manage playback based on viewport visibility
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Automatically play the video (muted for browser compatibility)
-            video.muted = true;
-            video.play().catch(() => {});
-          } else {
-            // Pause the video when out of viewport to save system resources
-            video.pause();
-          }
+          inView = entry.isIntersecting;
+          syncVideoState();
         });
       }, { threshold: 0.15 });
 
