@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme'); } catch (_) {}
+    </script>
+    <title>Calafate Propiedades Case Study | IrigoyenDev</title>
+    <meta name="description" content="Case study: Calafate Propiedades real estate platform—property catalog, lead capture, admin tools, and production-ready experience.">
+    <link rel="stylesheet" href="style.css">
+
+    <meta property="og:title" content="Calafate Propiedades — Real Estate Platform | IrigoyenDev">
+    <meta property="og:description" content="Case study: Calafate Propiedades real estate platform—property catalog, lead capture, admin tools, and production-ready experience.">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta property="og:url" content="https://example.com/calafate.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
+
+</head>
+<body class="page-project">
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+                <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="lang-selector-container">
+                    <button id="lang-menu-btn" class="lang-btn" aria-label="Select Language">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div id="lang-dropdown" class="lang-dropdown">
+                        <label class="lang-option"><span class="lang-name">English</span><input type="radio" name="lang" value="en" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Español</span><input type="radio" name="lang" value="es" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Deutsch</span><input type="radio" name="lang" value="de" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Dansk</span><input type="radio" name="lang" value="da" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Norsk</span><input type="radio" name="lang" value="no" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Svenska</span><input type="radio" name="lang" value="sv" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Italiano</span><input type="radio" name="lang" value="it" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Français</span><input type="radio" name="lang" value="fr" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Português</span><input type="radio" name="lang" value="pt" class="lang-radio"><div class="toggle-switch"></div></label>
+                    </div>
+                </div>
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header container fade-in">
+        <p class="project-eyebrow" data-i18n="proj.calafate.eyebrow">Case study · Real Estate & Admin Platform</p>
+        <h1 data-i18n="proj.calafate.h1">Calafate Propiedades: Integrated real estate ecosystem in Next.js</h1>
+        <p class="project-lead" data-i18n="proj.calafate.subtitle">A complete project that unifies the public property catalog, lead capture via transactional emails, and inventory management in a single Next.js environment.</p>
+        
+        <div class="project-meta">
+            <span data-i18n="proj.calafate.role">Role: Full-Stack Developer</span>
+            <span data-i18n="proj.calafate.scope">Scope: Frontend, backend, admin panel, database integration, image optimization, and caching</span>
+        </div>
+        <p class="project-stack-label" data-i18n="proj.calafate.stackLabel">Stack</p>
+        <ul class="project-stack-list">
+            <li>Next.js App Router</li>
+            <li>Prisma ORM & Zod</li>
+            <li>Auth.js</li>
+            <li>Cloudinary (WebP/JPEG)</li>
+        </ul>
+        <div class="project-header__actions">
+            <a href="https://calafatepropiedades.cl" target="_blank" rel="noopener noreferrer" class="btn-cta-primary" data-i18n="proj.calafate.liveBtn">Visit calafatepropiedades.cl →</a>
+            <a href="index.html#contact" class="project-cta-inline" data-i18n="cta.inline">Need similar results for your business? Get a quote →</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.calafate.valueTitle">Value proposition</h2>
+                <p data-i18n="proj.calafate.valueDesc">Calafate Propiedades unites the public catalog, transactional emails (leads), and property management in a single Next.js environment, achieving perfect synergy between performance, data consistency, and operability.</p>
+            </div>
+        </section>
+
+        <section class="project-section project-section--disclosure fade-in">
+            <details class="project-disclosure">
+                <summary class="project-disclosure__trigger">
+                    <h2 data-i18n="proj.calafate.problemTitle">The problem</h2>
+                    <span class="project-disclosure__chevron" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <div class="project-disclosure__panel content-block">
+                    <p data-i18n="proj.calafate.problemDesc">A modern technological solution was required to centrally manage the property inventory, while providing an extremely fast catalog for users and a reliable flow for capturing potential clients (leads).</p>
+                    <p><strong data-i18n="proj.calafate.capabilitiesLabel">The platform enables:</strong></p>
+                    <ul class="project-results-list">
+                        <li data-i18n="proj.calafate.cap1">High-speed property catalog</li>
+                        <li data-i18n="proj.calafate.cap2">Contact forms integrated with transactional emails</li>
+                        <li data-i18n="proj.calafate.cap3">Administrative panel for full inventory management</li>
+                        <li data-i18n="proj.calafate.cap4">Centralized property and lead management</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <section class="project-section project-section--disclosure fade-in">
+            <details class="project-disclosure">
+                <summary class="project-disclosure__trigger">
+                    <h2 data-i18n="proj.calafate.processTitle">Methodology and development</h2>
+                    <span class="project-disclosure__chevron" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <div class="project-disclosure__panel content-block">
+                    <p data-i18n="proj.calafate.processIntro">Development focused on leveraging the latest Next.js capabilities to deliver a fast and secure platform:</p>
+                    <ol class="process-steps">
+                        <li class="process-step">
+                            <h3 data-i18n="proj.calafate.step1Title">1 — Architecture with Next.js App Router</h3>
+                            <p data-i18n="proj.calafate.step1Desc">Project structuring using the Next.js App Router to maximize performance and clearly organize public and administrative routes.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.calafate.step2Title">2 — Database and validation</h3>
+                            <p data-i18n="proj.calafate.step2Desc">Implementation of Prisma ORM along with strict validation using Zod, ensuring consistent data between the public web and the admin.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.calafate.step3Title">3 — Media optimization</h3>
+                            <p data-i18n="proj.calafate.step3Desc">Integration with Cloudinary for image uploading, including automatic conversion to modern formats like WebP/JPEG for a fast catalog.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.calafate.step4Title">4 — Security and administrative flows</h3>
+                            <p data-i18n="proj.calafate.step4Desc">Configuration of Auth.js and Next.js Middlewares to protect operational routes and administrative flows of the control panel.</p>
+                        </li>
+                    </ol>
+                </div>
+            </details>
+        </section>
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.calafate.mockupsTitle">Interface & product screens</h2>
+                <p data-i18n="proj.calafate.mockupsDesc">Optimized design for both public customer navigation and internal operational management.</p>
+            </div>
+            <div class="mockup-grid">
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg); background: transparent; box-shadow: none;">
+                    <h3 class="mockup-caption">Inicio y buscador de propiedades</h3>
+                    <div style="width: 100%; background: #222; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <div style="height: 24px; background: #333; display: flex; align-items: center; padding: 0 10px; gap: 6px; border-bottom: 1px solid #222;">
+                            <span style="width: 8px; height: 8px; background: #ff5f56; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #ffbd2e; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #27c93f; border-radius: 50%;"></span>
+                        </div>
+                        <img loading="lazy" decoding="async" src="images/calafate-screenshot.png" alt="Calafate Inicio" style="width: 100%; display: block;" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\'><rect width=\'100%\' height=\'100%\' fill=\'%231a1a1a\'/><text x=\'50%\' y=\'50%\' fill=\'%23666\' font-family=\'sans-serif\' font-size=\'16\' text-anchor=\'middle\' dominant-baseline=\'middle\'>(Guarda tu captura como images/calafate-screenshot.png)</text></svg>'">
+                    </div>
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg); background: transparent; box-shadow: none;">
+                    <h3 class="mockup-caption">Catálogo público de propiedades</h3>
+                    <div style="width: 100%; background: #222; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <div style="height: 24px; background: #333; display: flex; align-items: center; padding: 0 10px; gap: 6px; border-bottom: 1px solid #222;">
+                            <span style="width: 8px; height: 8px; background: #ff5f56; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #ffbd2e; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #27c93f; border-radius: 50%;"></span>
+                        </div>
+                        <img loading="lazy" decoding="async" src="images/catalogocalafate.png" alt="Calafate Catálogo" style="width: 100%; display: block;" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\'><rect width=\'100%\' height=\'100%\' fill=\'%231a1a1a\'/><text x=\'50%\' y=\'50%\' fill=\'%23666\' font-family=\'sans-serif\' font-size=\'16\' text-anchor=\'middle\' dominant-baseline=\'middle\'>(Guarda tu captura como images/catalogocalafate.png)</text></svg>'">
+                    </div>
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg); background: transparent; box-shadow: none;">
+                    <h3 class="mockup-caption">Ficha de propiedad y formulario de captura de leads</h3>
+                    <div style="width: 100%; background: #222; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <div style="height: 24px; background: #333; display: flex; align-items: center; padding: 0 10px; gap: 6px; border-bottom: 1px solid #222;">
+                            <span style="width: 8px; height: 8px; background: #ff5f56; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #ffbd2e; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #27c93f; border-radius: 50%;"></span>
+                        </div>
+                        <img loading="lazy" decoding="async" src="images/propiedadcalafate.png" alt="Calafate Ficha Propiedad" style="width: 100%; display: block;" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\'><rect width=\'100%\' height=\'100%\' fill=\'%231a1a1a\'/><text x=\'50%\' y=\'50%\' fill=\'%23666\' font-family=\'sans-serif\' font-size=\'16\' text-anchor=\'middle\' dominant-baseline=\'middle\'>(Guarda tu captura como images/propiedadcalafate.png)</text></svg>'">
+                    </div>
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg); background: transparent; box-shadow: none;">
+                    <h3 class="mockup-caption" data-i18n="proj.calafate.adminShowcaseTitle">Panel de Administración</h3>
+                    <div style="width: 100%; background: #222; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <div style="height: 24px; background: #333; display: flex; align-items: center; padding: 0 10px; gap: 6px; border-bottom: 1px solid #222;">
+                            <span style="width: 8px; height: 8px; background: #ff5f56; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #ffbd2e; border-radius: 50%;"></span>
+                            <span style="width: 8px; height: 8px; background: #27c93f; border-radius: 50%;"></span>
+                        </div>
+                        <img loading="lazy" decoding="async" src="images/propiedadcalafate2.png" alt="Calafate Admin Panel" style="width: 100%; display: block;" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\'><rect width=\'100%\' height=\'100%\' fill=\'%231a1a1a\'/><text x=\'50%\' y=\'50%\' fill=\'%23666\' font-family=\'sans-serif\' font-size=\'16\' text-anchor=\'middle\' dominant-baseline=\'middle\'>(Guarda tu captura como images/propiedadcalafate2.png)</text></svg>'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.calafate.techTitle">Technical challenges solved</h2>
+                <p data-i18n="proj.calafate.techIntro">The implementation required solving performance, data consistency, and security challenges.</p>
+            </div>
+            <div class="project-features-grid">
+                <article class="feature-card">
+                    <h3 data-i18n="proj.calafate.feat1Title">Catalog performance</h3>
+                    <p data-i18n="proj.calafate.feat1Desc">Integration with Cloudinary and conversion to WebP/JPEG, plus an Incremental Static Regeneration (ISR) configuration of Next.js App Router to keep the catalog fast.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-i18n="proj.calafate.feat2Title">Consistent data</h3>
+                    <p data-i18n="proj.calafate.feat2Desc">Total synergy between Prisma ORM and strict validation with Zod between the public web and the admin panel, preventing inconsistencies in properties.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-i18n="proj.calafate.feat3Title">Secure operation</h3>
+                    <p data-i18n="proj.calafate.feat3Desc">Advanced configuration of Auth.js and Next.js Middlewares to ensure that administrative flows and property management are fully protected.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.calafate.resultsTitle">Conclusion & results</h2>
+                <p data-i18n="proj.calafate.resultsDesc">Calafate Propiedades demonstrates how it's possible to unite a fast catalog, transactional email (leads) management, and complete property management in a single Next.js environment. The result is a highly efficient, easy-to-maintain platform that scales alongside the real estate business.</p>
+                <ul class="project-results-list">
+                    <li data-i18n="proj.calafate.res1">Ultra-fast public catalog powered by ISR and Cloudinary.</li>
+                    <li data-i18n="proj.calafate.res2">Consistent database and types thanks to Prisma and Zod.</li>
+                    <li data-i18n="proj.calafate.res3">Secure and integrated administration with Auth.js and Middlewares.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="project-cta fade-in">
+            <div class="content-block project-cta__inner">
+                <h2 data-i18n="cta.calafate.title">Looking to centralize your real estate operation?</h2>
+                <p data-i18n="cta.calafate.desc">I build platforms like Calafate Propiedades that unify your catalog, administration, and lead capture in a fast and modern ecosystem.</p>
+                <div class="project-cta__actions">
+                    <a href="index.html#contact" class="btn-cta-primary" data-i18n="cta.calafate.btn">Request platform plan</a>
+                    <a href="index.html#projects" class="btn-cta-secondary" data-i18n="cta.more">View more client results</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer">&copy; 2026 IrigoyenDev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+
+    <a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+</body>
+</html>

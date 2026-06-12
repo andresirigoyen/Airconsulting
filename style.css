@@ -551,6 +551,127 @@ html.dark-theme .project-image {
   background-color: var(--surface-color);
 }
 
+.project-filters-wrapper {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-filters-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.scroll-fade-wrapper {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+}
+
+.scroll-fade-wrapper::before,
+.scroll-fade-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 100px;
+}
+
+.scroll-fade-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-color), transparent);
+}
+
+.scroll-fade-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-color), transparent);
+}
+
+.scroll-fade-wrapper.can-scroll-left::before {
+  opacity: 1;
+}
+
+.scroll-fade-wrapper.can-scroll-right::after {
+  opacity: 1;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  justify-content: flex-start;
+  overflow-x: auto;
+  max-width: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+html.dark-theme .project-filters {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-filters::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: inherit;
+  white-space: nowrap;
+  position: relative;
+}
+
+.filter-btn:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--text-primary);
+  color: var(--bg-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+
+
+.project-card {
+  transition: opacity 0.4s ease, transform 0.4s ease, display 0.4s ease allow-discrete;
+}
+
+.project-card.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
 .project-content {
   padding: var(--spacing-lg);
   display: flex;

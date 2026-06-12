@@ -308,3 +308,62 @@ if (typeof Lenis !== 'undefined') {
         });
     });
 }
+
+// Category Filter for Projects
+document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (filterBtns.length > 0 && projectCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        if (card.getAttribute('data-category') === filterValue) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    }
+
+    // Scroll indicators for filter bar
+    const scrollWrapper = document.querySelector('.scroll-fade-wrapper');
+    const filtersContainer = document.querySelector('.project-filters');
+
+    if (scrollWrapper && filtersContainer) {
+        const updateScrollIndicators = () => {
+            const { scrollLeft, scrollWidth, clientWidth } = filtersContainer;
+            
+            if (scrollLeft > 5) {
+                scrollWrapper.classList.add('can-scroll-left');
+            } else {
+                scrollWrapper.classList.remove('can-scroll-left');
+            }
+
+            if (scrollLeft + clientWidth < scrollWidth - 5) {
+                scrollWrapper.classList.add('can-scroll-right');
+            } else {
+                scrollWrapper.classList.remove('can-scroll-right');
+            }
+        };
+
+        filtersContainer.addEventListener('scroll', updateScrollIndicators);
+        window.addEventListener('resize', updateScrollIndicators);
+        
+        // Initial check
+        setTimeout(updateScrollIndicators, 100);
+    }
+});

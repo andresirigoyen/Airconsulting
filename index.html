@@ -174,10 +174,41 @@
             <h2 class="split-text" data-split-type="chars" data-i18n="projects.title">Real projects. Real business outcomes.</h2>
             <p class="split-text section-subtitle" data-split-type="words" data-split-delay="35" data-i18n="projects.subtitle">E-commerce, platforms, and landing pages engineered to grow revenue and capture leads.</p>
         </div>
+        <div class="project-filters-wrapper fade-in">
+            <p class="project-filters-desc" data-i18n="filter.desc">Explora por industria o necesidad de negocio:</p>
+            <div class="scroll-fade-wrapper">
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Todos</button>
+                    <button class="filter-btn" data-filter="local" data-i18n="filter.local">Comercio Local</button>
+                    <button class="filter-btn" data-filter="b2b" data-i18n="filter.b2b">Corporativo B2B</button>
+                    <button class="filter-btn" data-filter="legal" data-i18n="filter.legal">Legal</button>
+                    <button class="filter-btn" data-filter="events" data-i18n="filter.events">Eventos</button>
+                    <button class="filter-btn" data-filter="realestate" data-i18n="filter.realestate">Inmobiliaria</button>
+                    <button class="filter-btn" data-filter="marketplaces" data-i18n="filter.marketplaces">Marketplaces</button>
+                    <button class="filter-btn" data-filter="media" data-i18n="filter.media">Medios</button>
+                </div>
+            </div>
+        </div>
         <div class="projects-grid">
             
+            <!-- Project Card: Calafate -->
+            <article class="project-card fade-in" data-category="realestate">
+                <img loading="lazy" decoding="async" src="images/calafate-mockup.png" alt="Calafate Propiedades Platform thumbnail" class="project-image" id="thumb-calafate">
+                <div class="project-content">
+                    <h3 data-i18n="proj.calafate.title">Calafate Propiedades</h3>
+                    <p data-i18n="proj.calafate.desc">Plataforma inmobiliaria integral con Next.js App Router: catálogo ultrarrápido, gestión de leads (correos transaccionales) y panel de administración.</p>
+                    <a href="calafate.html" class="project-link">
+                        <span data-i18n="project.view">View Case Study</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
             <!-- Project Card 1 -->
-            <article class="project-card fade-in">
+            <article class="project-card fade-in" data-category="marketplaces">
                 <img loading="lazy" decoding="async" src="images/thebeebaby-mockup.png" alt="Thebeebaby Application thumbnail" class="project-image" id="thumb-1">
                 <div class="project-content">
                     <h3 data-i18n="proj.thebeebaby.title">Thebeebaby</h3>
@@ -192,8 +223,24 @@
                 </div>
             </article>
 
+            <!-- Project Card: RLU Abogados -->
+            <article class="project-card fade-in" data-category="legal">
+                <img loading="lazy" decoding="async" src="images/rluabogados-mockup.png" alt="RLU Abogados Corporate Platform" class="project-image" id="thumb-rluabogados">
+                <div class="project-content">
+                    <h3 data-i18n="proj.rluabogados.name">Ruiz Leiva Abogados</h3>
+                    <p data-i18n="proj.rluabogados.descCard">Plataforma legal corporativa con Next.js App Router, captación de leads y panel de administración seguro.</p>
+                    <a href="rluabogados.html" class="project-link">
+                        <span data-i18n="project.view">View Case Study</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
             <!-- Project Card 0: DragonMart -->
-            <article class="project-card fade-in">
+            <article class="project-card fade-in" data-category="b2b">
                 <img loading="lazy" decoding="async" src="images/dragonmart-mockup.png" alt="DragonMart Corporate Platform" class="project-image" id="thumb-dragonmart">
                 <div class="project-content">
                     <h3 data-i18n="proj.dragonmart.name">Dragonmart</h3>
@@ -209,7 +256,7 @@
             </article>
 
             <!-- Project Card 2 -->
-            <article class="project-card fade-in">
+            <article class="project-card fade-in" data-category="realestate">
                 <img loading="lazy" decoding="async" src="images/dahuss-mockup.png" alt="Dahuss Platform thumbnail" class="project-image" id="thumb-2">
                 <div class="project-content">
                     <h3 data-i18n="proj.dahuss.title">Dahuss</h3>
@@ -225,7 +272,7 @@
             </article>
 
             <!-- Project Card 3 -->
-            <article class="project-card fade-in">
+            <article class="project-card fade-in" data-category="events">
                 <img loading="lazy" decoding="async" src="images/retorica-mockup.png" alt="Retorica Platform thumbnail" class="project-image" id="thumb-3">
                 <div class="project-content">
                     <h3 data-i18n="proj.retorica.title">Retorica</h3>
@@ -241,7 +288,7 @@
             </article>
 
             <!-- Project Card 4 -->
-            <article class="project-card fade-in">
+            <article class="project-card fade-in" data-category="local">
                 <img loading="lazy" decoding="async" src="images/floreria-mockup.png" alt="Floreria Platform thumbnail" class="project-image" id="thumb-4">
                 <div class="project-content">
                     <h3 data-i18n="proj.floreria.title">Floreria El Nuevo Pensamiento</h3>
@@ -257,7 +304,7 @@
             </article>
 
             <!-- Project Card 5: Radio Chicureo -->
-            <article class="project-card fade-in">
+            <article class="project-card fade-in" data-category="media">
                 <img loading="lazy" decoding="async" src="images/radiochicureo-mockup.png" alt="Radio Chicureo Platform" class="project-image" id="thumb-radiochicureo">
                 <div class="project-content">
                     <h3 data-i18n="proj.radiochicureo.title">Radio Chicureo</h3>

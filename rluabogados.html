@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme'); } catch (_) {}
+    </script>
+    <title>RLU Abogados | Plataforma Corporativa Legal</title>
+    <meta name="description" content="Case study: RLU Abogados Legal Platform">
+    <link rel="stylesheet" href="style.css">
+
+    <meta property="og:title" content="RLU Abogados — Plataforma Legal Corporativa | IrigoyenDev">
+    <meta property="og:description" content="Case study: full-stack corporate legal platform.">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta property="og:url" content="https://example.com/rluabogados.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
+
+</head>
+<body class="page-project">
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+                <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="lang-selector-container">
+                    <button id="lang-menu-btn" class="lang-btn" aria-label="Select Language">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div id="lang-dropdown" class="lang-dropdown">
+                        <label class="lang-option"><span class="lang-name">English</span><input type="radio" name="lang" value="en" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Español</span><input type="radio" name="lang" value="es" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Deutsch</span><input type="radio" name="lang" value="de" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Dansk</span><input type="radio" name="lang" value="da" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Norsk</span><input type="radio" name="lang" value="no" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Svenska</span><input type="radio" name="lang" value="sv" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Italiano</span><input type="radio" name="lang" value="it" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Français</span><input type="radio" name="lang" value="fr" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Português</span><input type="radio" name="lang" value="pt" class="lang-radio"><div class="toggle-switch"></div></label>
+                    </div>
+                </div>
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header container fade-in">
+        <p class="project-eyebrow" data-i18n="proj.rluabogados.eyebrow">Case study · Legal Corporate Platform</p>
+        <h1 data-i18n="proj.rluabogados.h1">Ruiz Leiva Abogados: Plataforma Legal Corporativa</h1>
+        <p class="project-lead" data-i18n="proj.rluabogados.subtitle">Una plataforma para captar leads calificados, gestionar un blog jurídico y exhibir servicios con una experiencia pública optimizada y un panel de administración seguro.</p>
+        <div class="project-meta">
+            <span data-i18n="proj.rluabogados.role">Rol: Desarrollador Full-Stack</span>
+            <br><span data-i18n="proj.rluabogados.scope">Alcance: Diseño de producto, sitio público, panel admin, captación de leads y optimización SEO</span>
+        </div>
+        <p class="project-stack-label" data-i18n="proj.rluabogados.stackLabel">Stack Tecnológico</p>
+        <ul class="project-stack-list">
+            <li>Next.js App Router</li>
+            <li>NextAuth</li>
+            <li>Tailwind CSS</li>
+            <li>SMTP Integration</li>
+        </ul>
+        <div class="project-header__actions">
+            <a href="https://rluabogados.cl" target="_blank" rel="noopener noreferrer" class="btn-cta-primary" data-i18n="proj.rluabogados.liveBtn">Visit rluabogados.cl →</a>
+            <a href="index.html#contact" class="project-cta-inline" data-i18n="cta.inline">Need similar results for your business? Get a quote →</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.rluabogados.problemTitle">El problema</h2>
+                <p data-i18n="proj.rluabogados.problemDesc">Un estudio de abogados corporativo necesita presentar sus servicios con autoridad y captar prospectos de forma segura. Antes de este desarrollo, su presencia digital carecía de un sistema unificado para gestión de contenido y seguimiento de leads.</p>
+            </div>
+        </section>
+
+        <section class="project-section project-section--disclosure fade-in">
+            <details class="project-disclosure">
+                <summary class="project-disclosure__trigger">
+                    <h2 data-i18n="proj.rluabogados.valueTitle">Valor para el negocio</h2>
+                    <span class="project-disclosure__chevron" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <div class="project-disclosure__panel content-block">
+                    <p data-i18n="proj.rluabogados.valueDesc">Ruiz Leiva Abogados centraliza su catálogo de servicios, publica perspectivas legales y capta prospectos calificados directamente en un panel privado, eliminando fricciones operativas.</p>
+                    <h3 data-i18n="proj.rluabogados.capabilitiesLabel">La plataforma permite:</h3>
+                    <ul>
+                        <li data-i18n="proj.rluabogados.cap1">Publicar y gestionar artículos en el blog jurídico</li>
+                        <li data-i18n="proj.rluabogados.cap2">Captar leads con notificaciones automatizadas</li>
+                        <li data-i18n="proj.rluabogados.cap3">Gestionar un catálogo de servicios legales</li>
+                        <li data-i18n="proj.rluabogados.cap4">Configurar metadata SEO desde el panel</li>
+                        <li data-i18n="proj.rluabogados.cap5">Acceso seguro para el equipo de abogados</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <section class="project-section project-section--disclosure fade-in">
+            <details class="project-disclosure">
+                <summary class="project-disclosure__trigger">
+                    <h2 data-i18n="proj.rluabogados.processTitle">Metodología de desarrollo</h2>
+                    <span class="project-disclosure__chevron" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </summary>
+                <div class="project-disclosure__panel content-block">
+                    <p data-i18n="proj.rluabogados.processIntro">Diseñé el producto de principio a fin, desde la arquitectura hasta el despliegue. Así se construyó:</p>
+                    <ol class="process-steps">
+                        <li class="process-step">
+                            <h3 data-i18n="proj.rluabogados.step1Title">1 — Arquitectura de producto</h3>
+                            <p data-i18n="proj.rluabogados.step1Desc">Descubrimiento público, áreas privadas de administración y servicios modulares para blog, leads y SEO, organizados para escalar con flujos de trabajo claros.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.rluabogados.step2Title">2 — Captación de leads</h3>
+                            <p data-i18n="proj.rluabogados.step2Desc">Flujos integrados de 'Evalúa tu caso' con notificaciones SMTP y captura directa de prospectos hacia un panel centralizado.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.rluabogados.step3Title">3 — Experiencia pública</h3>
+                            <p data-i18n="proj.rluabogados.step3Desc">Inicio, catálogo de servicios, perspectivas legales y formularios de evaluación con animaciones fluidas y metadata dinámica.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.rluabogados.step4Title">4 — Operaciones administrativas</h3>
+                            <p data-i18n="proj.rluabogados.step4Desc">Acceso seguro con NextAuth que permite al equipo legal publicar artículos, actualizar servicios y gestionar SEO sin depender de desarrolladores.</p>
+                        </li>
+                        <li class="process-step">
+                            <h3 data-i18n="proj.rluabogados.step5Title">5 — Optimización SEO</h3>
+                            <p data-i18n="proj.rluabogados.step5Desc">Implementación con Next.js App Router, metadata dinámica, sitemaps y JSON-LD para posicionamiento orgánico competitivo.</p>
+                        </li>
+                    </ol>
+                </div>
+            </details>
+        </section>
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.rluabogados.mockupsTitle">Interfaz y pantallas del producto</h2>
+                <p data-i18n="proj.rluabogados.mockupsDesc">Sitio web institucional, captación de prospectos estructurada, blog jurídico y paneles de administración.</p>
+            </div>
+            
+            <div class="mockup-grid">
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
+                    <h3 class="mockup-caption">Ruiz Leiva Abogados</h3>
+                    <img loading="lazy" decoding="async" src="images/rlu.png" alt="RLU Abogados Platform" id="rluabogados-hero-img">
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
+                    <img loading="lazy" decoding="async" src="images/rluheader.png" alt="RLU Abogados Header">
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
+                    <img loading="lazy" decoding="async" src="images/rlubody1.png" alt="RLU Abogados Body 1">
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
+                    <img loading="lazy" decoding="async" src="images/rlubody2.png" alt="RLU Abogados Body 2">
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
+                    <img loading="lazy" decoding="async" src="images/rlubody3.png" alt="RLU Abogados Body 3">
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
+                    <img loading="lazy" decoding="async" src="images/rlubody4.png" alt="RLU Abogados Body 4">
+                </div>
+                <div class="mockup-desktop" style="margin-bottom: var(--spacing-lg);">
+                    <img loading="lazy" decoding="async" src="images/rlufooter.png" alt="RLU Abogados Footer">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.rluabogados.techTitle">Retos técnicos resueltos</h2>
+                <p data-i18n="proj.rluabogados.techIntro">Pensado para captar clientes de alto estándar—rendimiento fluido, gestión de contenido dinámica y operación protegida.</p>
+            </div>
+            <div class="project-features-grid">
+                <article class="feature-card">
+                    <h3 data-i18n="proj.rluabogados.feat1Title">Rendimiento y SEO avanzado</h3>
+                    <p data-i18n="proj.rluabogados.feat1Desc">Implementación con Next.js App Router, metadata dinámica, JSON-LD, sitemaps y optimización de assets para asegurar un posicionamiento orgánico competitivo en el sector legal.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-i18n="proj.rluabogados.feat2Title">Captación de leads cualificados</h3>
+                    <p data-i18n="proj.rluabogados.feat2Desc">Flujo integrado de "Evalúa tu caso" con notificaciones automatizadas vía SMTP y captura de prospectos directo hacia un panel administrativo centralizado, facilitando el seguimiento comercial.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-i18n="proj.rluabogados.feat3Title">Operación protegida y autogestión</h3>
+                    <p data-i18n="proj.rluabogados.feat3Desc">Acceso seguro a los módulos administrativos con NextAuth, permitiendo al equipo legal publicar artículos en el blog, actualizar servicios, editar testimonios y configurar metadatos SEO sin exponer el sistema interno ni depender de desarrolladores.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2 data-i18n="proj.rluabogados.resultsTitle">Conclusión y resultados</h2>
+                <p data-i18n="proj.rluabogados.resultsDesc">Ruiz Leiva Abogados es una plataforma legal corporativa completa, moderna y lista para producción—experiencia pública optimizada que transmite autoridad, más un panel administrativo funcional y seguro.</p>
+                <ul class="project-results-list">
+                    <li data-i18n="proj.rluabogados.res1">Sitio institucional, captación de leads y admin unificados en un solo producto</li>
+                    <li data-i18n="proj.rluabogados.res2">Blog jurídico autogestionable y optimización SEO integral</li>
+                    <li data-i18n="proj.rluabogados.res3">Operación segura, gestión de contenido y uso diario confiable</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="project-cta fade-in">
+            <div class="content-block project-cta__inner">
+                <h2 data-i18n="cta.rluabogados.title">¿Construyendo un sitio corporativo o plataforma interna?</h2>
+                <p data-i18n="cta.rluabogados.desc">Desarrollo productos full-stack como Ruiz Leiva Abogados—catálogos de servicios, captación de leads y áreas privadas de administración. Coticemos tu MVP o la actualización de tu sistema actual.</p>
+                <div class="project-cta__actions">
+                    <a href="index.html#contact" class="btn-cta-primary" data-i18n="cta.rluabogados.btn">Solicitar cotización de plataforma</a>
+                    <a href="index.html#projects" class="btn-cta-secondary" data-i18n="cta.more">View more client results</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer">&copy; 2026 IrigoyenDev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+
+    <a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+</body>
+</html>
