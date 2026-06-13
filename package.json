@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "serve .",
-    "start": "serve ."
+    "start": "serve .",
+    "i18n:complete": "node scripts/complete-locales.mjs",
+    "i18n:audit": "node scripts/audit-i18n.mjs"
   },
   "devDependencies": {
     "puppeteer-core": "^25.1.0",
