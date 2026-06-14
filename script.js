@@ -157,7 +157,7 @@ if (langMenuBtn && langDropdown) {
 
 // Initialize language on load (split-text runs after translations apply)
 document.addEventListener("DOMContentLoaded", async () => {
-    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    const savedLang = localStorage.getItem('preferredLang') || 'es';
     await loadLanguage(savedLang);
 });
 
