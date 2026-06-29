@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    initProjectVideos();
     // 1. Sticky Navbar shadow on scroll
     const navbar = document.getElementById('navbar');
     
@@ -53,6 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function initProjectVideos() {
+    const tryPlay = (video) => video.play().catch(() => {});
+
+    document.querySelectorAll('.project-video-wrapper video, .project-showcase-video video').forEach((video) => {
+        video.addEventListener('loadeddata', () => tryPlay(video), { once: true });
+        tryPlay(video);
+        document.addEventListener('click', () => tryPlay(video), { once: true });
+        document.addEventListener('touchstart', () => tryPlay(video), { once: true, passive: true });
+    });
+}
 
 // i18n Engine
 const langMenuBtn = document.getElementById('lang-menu-btn');

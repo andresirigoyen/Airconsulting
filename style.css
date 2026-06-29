@@ -747,6 +747,24 @@ body.page-project .footer {
   margin: 0 0 var(--spacing-md);
 }
 
+.project-video-wrapper,
+.project-showcase-video {
+  margin: 0 0 var(--spacing-lg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.project-video-wrapper video,
+.project-showcase-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;
