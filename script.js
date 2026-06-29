@@ -1,5 +1,70 @@
+function initMobileNav() {
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    if (page === 'cotizacion.html') return;
+
+    const isIndex = page === '' || page === 'index.html';
+    const homeHref = isIndex ? 'index.html' : 'index.html';
+    const projectsHref = isIndex ? 'index.html#projects' : 'index.html#projects';
+    const contactHref = isIndex ? 'index.html#contact' : 'index.html#contact';
+    const whatsappHref = 'https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto.';
+
+    let active = 'projects';
+    if (isIndex) {
+        const hash = window.location.hash;
+        if (hash === '#projects') active = 'projects';
+        else if (hash === '#contact') active = 'contact';
+        else active = 'home';
+    }
+
+    const nav = document.createElement('nav');
+    nav.className = 'mobile-tab-bar';
+    nav.setAttribute('aria-label', 'Mobile navigation');
+    nav.innerHTML = `
+      <div class="mobile-tab-bar__inner">
+        <a href="${homeHref}" class="mobile-tab-bar__item${active === 'home' ? ' is-active' : ''}" data-nav="home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5H15v-6h-6v6H4.5A1.5 1.5 0 0 1 3 20v-9.5z"/></svg>
+          <span data-i18n="nav.mobile.home">Home</span>
+        </a>
+        <a href="${projectsHref}" class="mobile-tab-bar__item${active === 'projects' ? ' is-active' : ''}" data-nav="projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <span data-i18n="nav.mobile.projects">Projects</span>
+        </a>
+        <a href="${contactHref}" class="mobile-tab-bar__item${active === 'contact' ? ' is-active' : ''}" data-nav="contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+          <span data-i18n="nav.mobile.quote">Get a Quote</span>
+        </a>
+        <a href="${whatsappHref}" class="mobile-tab-bar__item" data-nav="whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          <span data-i18n="nav.mobile.whatsapp">WhatsApp</span>
+        </a>
+      </div>
+    `;
+
+    document.body.appendChild(nav);
+    document.body.classList.add('has-mobile-tab-bar');
+
+    if (Object.keys(currentTranslations).length) {
+        nav.querySelectorAll('[data-i18n]').forEach((el) => {
+            const key = el.getAttribute('data-i18n');
+            if (currentTranslations[key]) el.textContent = currentTranslations[key];
+        });
+    }
+
+    window.addEventListener('hashchange', () => {
+        if (!isIndex) return;
+        const hash = window.location.hash;
+        let next = 'home';
+        if (hash === '#projects') next = 'projects';
+        else if (hash === '#contact') next = 'contact';
+        nav.querySelectorAll('.mobile-tab-bar__item').forEach((item) => {
+            item.classList.toggle('is-active', item.getAttribute('data-nav') === next);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initProjectVideos();
+    initMobileNav();
     // 1. Sticky Navbar shadow on scroll
     const navbar = document.getElementById('navbar');
     
@@ -82,6 +147,11 @@ async function fetchLocale(lang) {
 
 function applyTranslations(translations) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[key]) el.textContent = translations[key];
+  });
+
+  document.querySelectorAll('.mobile-tab-bar [data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[key]) el.textContent = translations[key];
   });

@@ -1,6 +1,10 @@
 {
   "nav.projects": "Client Results",
   "nav.contact": "Get a Quote",
+  "nav.mobile.home": "Home",
+  "nav.mobile.projects": "Projects",
+  "nav.mobile.quote": "Get a Quote",
+  "nav.mobile.whatsapp": "WhatsApp",
   "hero.title": "I build web products that turn visitors into paying customers.",
   "hero.desc": "Full-stack partner for brands that need e-commerce, high-converting landing pages, and business platforms—delivered fast, scalable, and ready to generate revenue. Explore real projects and measurable outcomes below.",
   "about.title": "Why businesses hire me",

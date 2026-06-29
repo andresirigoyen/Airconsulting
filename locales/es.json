@@ -1,6 +1,10 @@
 {
   "nav.projects": "Resultados",
   "nav.contact": "Cotizar",
+  "nav.mobile.home": "Inicio",
+  "nav.mobile.projects": "Proyectos",
+  "nav.mobile.quote": "Cotizar",
+  "nav.mobile.whatsapp": "WhatsApp",
   "hero.title": "Desarrollo productos web que convierten visitas en clientes.",
   "hero.desc": "Socio full-stack para marcas que necesitan e-commerce, landings que venden y plataformas de negocio—rápidas, escalables y listas para generar ingresos. Descubre proyectos reales y resultados medibles abajo.",
   "about.title": "Por qué contratarme",
