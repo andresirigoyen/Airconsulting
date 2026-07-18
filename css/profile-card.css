@@ -233,18 +233,68 @@
 
 @media (max-width: 767px) {
   .pc-card-wrapper {
-    width: min(100%, 280px);
-    height: 350px;
-    margin-inline: 0;
+    width: min(100%, 300px);
+    height: 380px;
+    min-height: 380px;
+    margin-inline: auto;
+    perspective: none;
+    transform-style: flat;
   }
 
   .about-profile .pc-card-wrapper {
+    width: min(100%, 300px);
+    height: 380px;
+    min-height: 380px;
     margin-inline: auto;
   }
 
   .pc-card-wrapper,
   .pc-card-shell {
     transform: none !important;
+  }
+
+  .pc-card-shell {
+    transform-style: flat;
+    height: 100%;
+  }
+
+  /* Absolute + 3D stacking collapses on some mobile browsers — use flow layout */
+  .pc-card {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+  }
+
+  .pc-bg-avatar {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100% !important;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  .pc-behind {
+    inset: -6%;
+    filter: blur(28px);
+    opacity: 0.35;
+  }
+
+  .pc-inside {
+    position: absolute;
+    inset: 0;
+    transform: none;
+  }
+
+  .pc-play-overlay {
+    z-index: 12;
+  }
+
+  .pc-play-icon {
+    width: 56px;
+    height: 56px;
   }
 }
 

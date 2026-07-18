@@ -1,0 +1,7 @@
+# Market images (Unsplash License — free for commercial use)
+# https://unsplash.com/license
+
+chile.jpg   — Torres del Paine, Chile — https://unsplash.com/photos/pWXBQn5WZQ4
+spain.jpg   — Sagrada Familia, Barcelona — https://unsplash.com/photos/j4eJ3gXlVQ0
+denmark.jpg — Nyhavn, Copenhagen — https://unsplash.com/photos/iC2FHfd3TuM
+norway.jpg  — Northern Lights / aurora (Nordic) — Unsplash

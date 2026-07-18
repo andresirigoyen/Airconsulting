@@ -331,7 +331,7 @@ const pages = [
     slug: 'dahuss',
     title: 'Dahuss Homes — Plataforma inmobiliaria | Caso IrigoyenDev',
     description:
-      'Caso real: plataforma inmobiliaria Dahuss Homes — catálogo, captación de leads y panel admin para listados premium en España y Latinoamérica.',
+      'Caso real: plataforma inmobiliaria Dahuss Homes — catálogo, captación de leads y panel admin para listados premium en Chile y Latinoamérica.',
     ogTitle: 'Dahuss Homes — Plataforma inmobiliaria | IrigoyenDev',
     ogDescription:
       'Plataforma inmobiliaria con catálogo, leads y herramientas de administración.',

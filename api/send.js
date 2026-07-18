@@ -1,4 +1,10 @@
 const { Resend } = require('resend');
+const {
+  buildLeadEmailHtml,
+  serviceLabel,
+  budgetLabel,
+  parseUserAgent,
+} = require('./lead-email');
 
 /**
  * Domain irigoyendev.com must be verified in Resend.
@@ -18,15 +24,6 @@ function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
 }
 
-function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
 function readBody(req) {
   if (req.body == null) return {};
   if (typeof req.body === 'string') {
@@ -37,6 +34,17 @@ function readBody(req) {
     }
   }
   return req.body;
+}
+
+function clientIp(req) {
+  const xf = req.headers['x-forwarded-for'];
+  if (typeof xf === 'string' && xf.trim()) return xf.split(',')[0].trim().slice(0, 64);
+  if (Array.isArray(xf) && xf[0]) return String(xf[0]).slice(0, 64);
+  return sanitize(req.headers['x-real-ip'] || '', 64);
+}
+
+function submissionId() {
+  return `ld_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
 }
 
 module.exports = async function handler(req, res) {
@@ -68,32 +76,77 @@ module.exports = async function handler(req, res) {
   const message = sanitize(body.message, 2000);
   const budget = sanitize(body.budget || '', 32);
   const service = sanitize(body.service || '', 64);
+  const phone = sanitize(body.phone || '', 40);
+  const company = sanitize(body.company || '', 120);
+  const country = sanitize(body.country || '', 80);
+  const clientWebsite = sanitize(body.clientWebsite || body.site || '', 200);
+  const timeline = sanitize(body.timeline || '', 80);
 
   if (!name || !email || !message || !service || !isValidEmail(email)) {
     return res.status(400).json({ error: 'Invalid payload' });
   }
 
+  const id = submissionId();
+  const timestamp = new Date().toISOString();
+  const referrer = sanitize(body.referrer || req.headers.referer || '', 300);
+  const landingPage = sanitize(
+    body.landingPage || req.headers.referer || 'https://www.irigoyendev.com/#contact',
+    300
+  );
+  const source = sanitize(body.utm_source || body.source || '', 80);
+  const medium = sanitize(body.utm_medium || body.medium || '', 80);
+  const campaign = sanitize(body.utm_campaign || body.campaign || '', 80);
+  const { device, browser } = parseUserAgent(req.headers['user-agent']);
+  const ipAddress = clientIp(req);
+
+  const lead = {
+    name,
+    email,
+    phone,
+    company,
+    country,
+    website: clientWebsite,
+    service,
+    budget,
+    timeline,
+    currentWebsite: clientWebsite,
+    message,
+    landingPage,
+    source,
+    medium,
+    campaign,
+    referrer,
+    device,
+    browser,
+    submissionId: id,
+    timestamp,
+    ipAddress,
+    utm: {
+      source,
+      medium,
+      campaign,
+      term: sanitize(body.utm_term || '', 80),
+      content: sanitize(body.utm_content || '', 80),
+    },
+  };
+
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const subject = `Nuevo lead · ${service} · ${name}`;
+  const subject = `🚀 New Lead · ${serviceLabel(service)} · ${name}`;
   const text = [
-    `Nombre: ${name}`,
-    `Email: ${email}`,
-    `Servicio: ${service}`,
-    `Presupuesto: ${budget || '—'}`,
+    'NEW LEAD — IrigoyenDev',
     '',
-    'Mensaje:',
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Service: ${serviceLabel(service)}`,
+    `Budget: ${budgetLabel(budget)}`,
+    `Submission ID: ${id}`,
+    `Timestamp: ${timestamp}`,
+    '',
+    'Message:',
     message,
   ].join('\n');
 
-  const html = `
-    <h2>Nuevo lead desde irigoyendev.com</h2>
-    <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
-    <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-    <p><strong>Servicio:</strong> ${escapeHtml(service)}</p>
-    <p><strong>Presupuesto:</strong> ${escapeHtml(budget || '—')}</p>
-    <p><strong>Mensaje:</strong></p>
-    <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
-  `;
+  const html = buildLeadEmailHtml(lead);
 
   try {
     const { data, error } = await resend.emails.send({
@@ -113,7 +166,7 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    return res.status(200).json({ ok: true, id: data?.id || null });
+    return res.status(200).json({ ok: true, id: data?.id || null, submissionId: id });
   } catch (err) {
     console.error('Send failed:', err);
     return res.status(500).json({ error: 'Failed to send email' });
