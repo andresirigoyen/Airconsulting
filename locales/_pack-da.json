@@ -1,10 +1,10 @@
 {
   "nav.projects": "Kunderesultater",
   "nav.contact": "Få et tilbud",
-  "hero.title": "Jeg bygger webprodukter, der gør besøgende til betalende kunder.",
-  "hero.desc": "Full-stack-partner for brands, der har brug for e-handel, landingssider med høj konverteringsgrad og forretningsplatforme – leveret hurtigt, skalerbart og klar til at generere omsætning. Udforsk rigtige projekter og målbare resultater nedenfor.",
-  "about.title": "Hvorfor virksomheder ansætter mig",
-  "about.desc": "Jeg bygger digitale produkter, der fungerer som vækstmotorer. Jeg leverer ikke kun kode; Jeg bygger teknologi med fokus på målbare resultater. Fra onlinebutikker til komplekse ledelsessystemer er enhver udvikling designet med tre klare mål: øge dit salg, automatisere din daglige drift og reducere omkostningerne.",
+  "hero.title": "Full-stack udvikling: e-commerce, landings og platforme der konverterer.",
+  "hero.desc": "Full-stack team til brands i Chile, Spanien, Danmark og remote der har brug for webshop, konverterende landings og forretningsplatforme.",
+  "about.title": "Hvorfor virksomheder vælger os",
+  "about.desc": "Hos IrigoyenDev bygger vi digitale produkter, der fungerer som vækstmotorer. Vi leverer ikke bare kode — vi bygger teknologi med fokus på målbare resultater. Fra onlinebutikker til komplekse systemer er hvert projekt designet med tre klare mål: øge salg, automatisere driften og reducere omkostninger.",
   "tools.title": "Enterprise-grade stak. Starthastighed til markedet.",
   "projects.title": "Rigtige projekter. Virkelige forretningsresultater.",
   "projects.subtitle": "E-handel, platforme og landingssider udviklet til at øge omsætningen og fange kundeemner.",
@@ -226,8 +226,8 @@
   "proj.floreria.res1": "Statisk arkitektur med lavt ressourceforbrug og hurtige belastninger",
   "proj.floreria.res2": "Strukturerede lokale SEO og konsistente NAP data",
   "proj.floreria.res3": "WhatsApp-første konvertering og mobilvenligt katalog",
-  "about.title2": "Mød udvikleren",
-  "about.bio": "Jeg er Andres Irigoyen, Full-Stack-udvikler. Jeg er specialiseret i at transformere traditionelle virksomheder til profitable digitale platforme. Jeg kombinerer teknisk stringens med en direkte kommerciel vision: Jeg omsætter dine forretningsbehov til effektiv, skalerbar software, der forbedrer dine fortjenstmargener og løser reelle driftsproblemer.",
+  "about.title2": "Hvem vi er",
+  "about.bio": "IrigoyenDev er et produkt- og kommercielt team: full-stack udvikling, SEO og kundepartnerskab. Vi forvandler traditionelle virksomheder til profitable digitale platforme.",
   "testimonials.title": "Hvad mine kunder siger",
   "testimonials.1.text": "Andrés byggede e-handlen utroligt hurtigt, og den nye betaling er super glat. Vores salg steg med 30% i den første måned.",
   "testimonials.1.author": "María López, CEO - Thebeebaby",
@@ -244,5 +244,6 @@
   "about.card.handle": "⟦HÅNDTAG⟧",
   "about.card.status": "Tilgængelig til arbejde",
   "about.card.btn": "Kontakt mig",
-  "testimonials.3.text": "Han leverede butikken helt klar til salg. Han sørgede for, at siden var lynhurtig og nem at finde på Google. En kæmpe lettelse."
+  "testimonials.3.text": "Han leverede butikken helt klar til salg. Han sørgede for, at siden var lynhurtig og nem at finde på Google. En kæmpe lettelse.",
+  "nav.pricing": "Priser"
 }

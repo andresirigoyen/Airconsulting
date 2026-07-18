@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Andrés Irigoyen
+Site: https://www.irigoyendev.com
+Contact: andres@irigoyendev.com
+Contact form: https://www.irigoyendev.com/#contact
+WhatsApp: https://wa.me/+4550249855
+Location: Available internationally (EU / LATAM clients)
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Languages: es, en, de, da, no, sv, it, fr, pt
+Doctype: HTML5
+Software: VS Code, Git, Vercel

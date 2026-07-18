@@ -1,0 +1,18 @@
+{
+  "name": "IrigoyenDev",
+  "short_name": "IrigoyenDev",
+  "description": "Desarrollo full stack para e-commerce, landing pages y plataformas de negocio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

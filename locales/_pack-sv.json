@@ -1,10 +1,10 @@
 {
   "nav.projects": "Klientresultat",
   "nav.contact": "Få en offert",
-  "hero.title": "Jag bygger webbprodukter som gör besökare till betalande kunder.",
-  "hero.desc": "Full-stack partner för varumärken som behöver e-handel, högkonverterande målsidor och affärsplattformar – levereras snabbt, skalbart och redo att generera intäkter. Utforska verkliga projekt och mätbara resultat nedan.",
-  "about.title": "Varför företag anlitar mig",
-  "about.desc": "Jag bygger digitala produkter som fungerar som tillväxtmotorer. Jag levererar inte bara kod; Jag bygger teknik fokuserad på mätbara resultat. Från onlinebutiker till komplexa ledningssystem är varje utveckling utformad med tre tydliga mål: öka din försäljning, automatisera din dagliga verksamhet och minska kostnaderna.",
+  "hero.title": "Fullstack-utveckling: e-handel, landings och plattformar som konverterar.",
+  "hero.desc": "Fullstack-team för varumärken i Chile, Spanien, Danmark och remote som behöver webbshop, landings och affärsplattformar.",
+  "about.title": "Varför företag anlitar oss",
+  "about.desc": "På IrigoyenDev bygger vi digitala produkter som fungerar som tillväxtmotorer. Vi levererar inte bara kod — vi bygger teknik med fokus på mätbara resultat. Från onlinebutiker till komplexa system har varje projekt tre tydliga mål: öka försäljning, automatisera drift och sänka kostnader.",
   "tools.title": "Företagsklassig stack. Starthastighet till marknaden.",
   "projects.title": "Riktiga projekt. Verkliga affärsresultat.",
   "projects.subtitle": "E-handel, plattformar och målsidor konstruerade för att öka intäkterna och fånga potentiella kunder.",
@@ -226,8 +226,8 @@
   "proj.floreria.res1": "Statisk arkitektur med låg resursanvändning och snabba belastningar",
   "proj.floreria.res2": "Strukturerad lokal SEO och konsekvent NAP-data",
   "proj.floreria.res3": "WhatsApp-första konvertering och mobilvänlig katalog",
-  "about.title2": "Möt utvecklaren",
-  "about.bio": "Jag är Andres Irigoyen, Full-Stack-utvecklare. Jag är specialiserad på att omvandla traditionella företag till lönsamma digitala plattformar. Jag kombinerar teknisk stringens med en direkt kommersiell vision: Jag översätter dina affärsbehov till effektiv, skalbar programvara som förbättrar dina vinstmarginaler och löser verkliga driftsproblem.",
+  "about.title2": "Vilka vi är",
+  "about.bio": "IrigoyenDev är ett produkt- och kommersiellt team: fullstack-utveckling, SEO och kundpartnerskap. Vi förvandlar traditionella företag till lönsamma digitala plattformar.",
   "testimonials.title": "Vad mina kunder säger",
   "testimonials.1.text": "Andrés byggde e-handeln otroligt snabbt, och den nya kassan är superenkel. Vår försäljning ökade med 30% under första månaden.",
   "testimonials.1.author": "María López, VD - Thebeebaby",
@@ -244,5 +244,6 @@
   "about.card.handle": "⟦HANTERA⟧",
   "about.card.status": "Tillgänglig för arbete",
   "about.card.btn": "Kontakta mig",
-  "testimonials.3.text": "Han levererade butiken helt klar för försäljning. Han såg till att sajten laddade blixtsnabbt och dök upp på Google. En enorm lättnad."
+  "testimonials.3.text": "Han levererade butiken helt klar för försäljning. Han såg till att sajten laddade blixtsnabbt och dök upp på Google. En enorm lättnad.",
+  "nav.pricing": "Priser"
 }

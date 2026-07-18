@@ -2,20 +2,22 @@
   "name": "irigoyendev-portfolio",
   "version": "1.0.0",
   "description": "IrigoyenDev — personal portfolio site",
+  "homepage": "https://www.irigoyendev.com",
   "private": true,
   "scripts": {
     "dev": "serve .",
     "start": "serve .",
+    "seo:apply": "node scripts/apply-seo.mjs",
+    "seo:pages": "node scripts/build-lead-pages.mjs && node scripts/apply-seo.mjs && node scripts/inject-seo-nav.mjs",
     "i18n:complete": "node scripts/complete-locales.mjs",
-    "i18n:audit": "node scripts/audit-i18n.mjs"
-  },
-  "devDependencies": {
-    "puppeteer-core": "^25.1.0",
-    "serve": "^14.2.0"
+    "i18n:audit": "node scripts/audit-i18n.mjs",
+    "audit:routes": "node scripts/audit-routes.mjs",
+    "audit": "npm audit && npm run audit:routes"
   },
   "dependencies": {
-    "gsap": "^3.15.0",
-    "ogl": "^1.0.11",
-    "puppeteer": "^25.1.0"
+    "resend": "^4.8.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
   }
 }

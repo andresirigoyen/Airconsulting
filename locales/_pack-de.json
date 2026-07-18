@@ -1,10 +1,10 @@
 {
   "nav.projects": "Kundenergebnisse",
   "nav.contact": "Angebot anfordern",
-  "hero.title": "Ich entwickle Webprodukte, die Besucher zu zahlenden Kunden machen.",
-  "hero.desc": "Full-Stack-Partner für Marken, die E-Commerce, verkaufsstarke Landing Pages und Business-Plattformen brauchen—schnell geliefert, skalierbar und umsatzbereit. Entdecken Sie unten echte Projekte und messbare Ergebnisse.",
-  "about.title": "Warum Unternehmen mich beauftragen",
-  "about.desc": "Ich entwickle digitale Produkte, die als Wachstumsmotoren funktionieren. Ich liefere nicht nur Code—ich baue Technologie mit Fokus auf messbare Ergebnisse. Von Online-Shops bis zu komplexen Managementsystemen—jedes Projekt verfolgt drei klare Ziele: mehr Umsatz, automatisierte Abläufe und geringere Kosten.",
+  "hero.title": "Full-Stack-Entwicklung: E-Commerce, Landings und Plattformen, die konvertieren.",
+  "hero.desc": "Full-Stack-Team für Marken in Chile, Spanien, Dänemark und remote, die Online-Shops, Conversion-Landings und Business-Plattformen brauchen.",
+  "about.title": "Warum Unternehmen uns beauftragen",
+  "about.desc": "Bei IrigoyenDev entwickeln wir digitale Produkte, die als Wachstumsmotoren funktionieren. Wir liefern nicht nur Code — wir bauen Technologie mit Fokus auf messbare Ergebnisse. Von Online-Shops bis zu komplexen Systemen verfolgt jedes Projekt drei klare Ziele: mehr Umsatz, automatisierte Abläufe und geringere Kosten.",
   "tools.title": "Enterprise-Stack. Startup-Geschwindigkeit am Markt.",
   "projects.title": "Echte Projekte. Echte Geschäftsergebnisse.",
   "projects.subtitle": "E-Commerce, Plattformen und Landing Pages—entwickelt für Umsatzwachstum und Lead-Generierung.",
@@ -226,8 +226,8 @@
   "proj.floreria.res1": "Statische Architektur mit geringem Ressourcenverbrauch und schnellen Ladevorgängen",
   "proj.floreria.res2": "Strukturierte lokale SEO und konsistente NAP-Daten",
   "proj.floreria.res3": "WhatsApp – erste Konvertierung und mobilfreundlicher Katalog",
-  "about.title2": "Treffen Sie den Entwickler",
-  "about.bio": "Ich bin Andres Irigoyen, Full-Stack Entwickler. Ich bin darauf spezialisiert, traditionelle Unternehmen in profitable digitale Plattformen umzuwandeln. Ich verbinde technische Präzision mit einer direkten kommerziellen Vision: Ich übersetze Ihre Geschäftsanforderungen in effiziente, skalierbare Software, die Ihre Gewinnmargen verbessert und echte betriebliche Probleme löst.",
+  "about.title2": "Wer wir sind",
+  "about.bio": "IrigoyenDev ist ein Produkt- und Commercial-Team: Full-Stack-Entwicklung, SEO und Kundenbegleitung. Wir verwandeln traditionelle Unternehmen in profitable digitale Plattformen.",
   "testimonials.title": "Was meine Kunden sagen",
   "testimonials.1.text": "Andrés hat den E-Commerce unglaublich schnell aufgebaut und der neue Checkout läuft super flüssig. Die Verkäufe stiegen im ersten Monat um 30%.",
   "testimonials.1.author": "María López, CEO – Thebeebaby",
@@ -244,5 +244,6 @@
   "about.card.handle": "⟦HANDHABEN⟧",
   "about.card.status": "Verfügbar für Projekte",
   "about.card.btn": "Kontakt aufnehmen",
-  "testimonials.3.text": "Er hat uns den Shop verkaufsfertig übergeben. Er hat dafür gesorgt, dass die Seite super schnell lädt und bei Google gelistet wird. Eine echte Erleichterung."
+  "testimonials.3.text": "Er hat uns den Shop verkaufsfertig übergeben. Er hat dafür gesorgt, dass die Seite super schnell lädt und bei Google gelistet wird. Eine echte Erleichterung.",
+  "nav.pricing": "Preise"
 }

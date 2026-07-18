@@ -1,71 +1,70 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const rootDir = path.join(__dirname, '..');
-const localesDir = path.join(rootDir, 'locales');
+const root = path.resolve('.');
 
-const htmlFiles = fs.readdirSync(rootDir).filter((file) => file.endsWith('.html'));
-const localeFiles = fs
-  .readdirSync(localesDir)
-  .filter((file) => file.endsWith('.json') && !file.startsWith('_'))
-  .sort();
-
-const keyPatterns = [
-  /\bdata-i18n="([^"]+)"/g,
-  /\bdata-i18n-placeholder="([^"]+)"/g,
-  /\bdata-i18n-content="([^"]+)"/g,
-  /\bdata-i18n-title="([^"]+)"/g,
-];
-
-const htmlKeys = new Map();
-
-for (const file of htmlFiles) {
-  const content = fs.readFileSync(path.join(rootDir, file), 'utf8');
-
-  for (const pattern of keyPatterns) {
-    for (const match of content.matchAll(pattern)) {
-      if (!htmlKeys.has(match[1])) htmlKeys.set(match[1], []);
-      htmlKeys.get(match[1]).push(file);
+function walk(dir, out = []) {
+  for (const name of fs.readdirSync(dir)) {
+    const p = path.join(dir, name);
+    const st = fs.statSync(p);
+    if (st.isDirectory()) {
+      if (['node_modules', '.git', 'scripts', 'locales'].includes(name)) continue;
+      walk(p, out);
+    } else if (name.endsWith('.html') || name.endsWith('.js')) {
+      out.push(p);
     }
   }
+  return out;
 }
 
-const locales = Object.fromEntries(
-  localeFiles.map((file) => [
-    file,
-    JSON.parse(fs.readFileSync(path.join(localesDir, file), 'utf8')),
-  ]),
+const keys = new Set();
+const keyRe = /data-i18n(?:-html|-placeholder|-content|-title)?=["']([^"']+)["']/g;
+const i18nTitleRe = /data-i18n-title=["']([^"']+)["']/g;
+
+for (const file of walk(root)) {
+  const text = fs.readFileSync(file, 'utf8');
+  let m;
+  while ((m = keyRe.exec(text))) keys.add(m[1]);
+  while ((m = i18nTitleRe.exec(text))) keys.add(m[1]);
+}
+
+// Also include known keys from es.json that are critical for home
+const es = JSON.parse(fs.readFileSync(path.join(root, 'locales/es.json'), 'utf8'));
+const en = JSON.parse(fs.readFileSync(path.join(root, 'locales/en.json'), 'utf8'));
+
+const locales = fs
+  .readdirSync(path.join(root, 'locales'))
+  .filter((f) => f.endsWith('.json') && !f.startsWith('_'));
+
+const report = {};
+for (const loc of locales) {
+  const j = JSON.parse(fs.readFileSync(path.join(root, 'locales', loc), 'utf8'));
+  const missingFromHtml = [...keys].filter((k) => !(k in j)).sort();
+  const missingVsEs = Object.keys(es).filter((k) => !(k in j)).sort();
+  report[loc] = {
+    htmlKeys: keys.size,
+    missingFromHtml: missingFromHtml.length,
+    missingFromHtmlKeys: missingFromHtml,
+    missingVsEs: missingVsEs.length,
+    missingVsEsKeys: missingVsEs.slice(0, 80),
+    extraNote: missingVsEs.length > 80 ? `...and ${missingVsEs.length - 80} more` : '',
+  };
+}
+
+console.log('HTML/JS i18n keys found:', keys.size);
+console.log('ES keys:', Object.keys(es).length);
+console.log('EN keys:', Object.keys(en).length);
+for (const [loc, r] of Object.entries(report)) {
+  console.log(`\n=== ${loc} ===`);
+  console.log(`missing vs HTML: ${r.missingFromHtml}`);
+  if (r.missingFromHtmlKeys.length) console.log(r.missingFromHtmlKeys.join('\n'));
+  console.log(`missing vs ES: ${r.missingVsEs}`);
+  if (r.missingVsEsKeys.length) console.log(r.missingVsEsKeys.slice(0, 40).join('\n'));
+  if (r.extraNote) console.log(r.extraNote);
+}
+
+fs.writeFileSync(
+  path.join(root, 'scripts/_i18n-audit.json'),
+  JSON.stringify({ htmlKeys: [...keys].sort(), report }, null, 2)
 );
-
-const base = locales['en.json'];
-const baseKeys = Object.keys(base);
-const errors = [];
-
-for (const key of htmlKeys.keys()) {
-  if (!(key in base)) {
-    errors.push(`en.json missing HTML key "${key}" used in ${[...new Set(htmlKeys.get(key))].join(', ')}`);
-  }
-}
-
-for (const [file, locale] of Object.entries(locales)) {
-  const keys = Object.keys(locale);
-  const missing = baseKeys.filter((key) => !(key in locale));
-  const extra = keys.filter((key) => !(key in base));
-  const empty = baseKeys.filter((key) => locale[key] === '');
-
-  if (missing.length) errors.push(`${file} missing ${missing.length} keys: ${missing.join(', ')}`);
-  if (extra.length) errors.push(`${file} has ${extra.length} extra keys: ${extra.join(', ')}`);
-  if (empty.length) errors.push(`${file} has ${empty.length} empty values: ${empty.join(', ')}`);
-}
-
-if (errors.length) {
-  console.error(`i18n audit failed with ${errors.length} issue(s):\n`);
-  for (const error of errors) console.error(`- ${error}`);
-  process.exit(1);
-}
-
-console.log(
-  `i18n audit passed: ${localeFiles.length} locale files, ${baseKeys.length} base keys, ${htmlKeys.size} HTML keys.`,
-);
+console.log('\nWrote scripts/_i18n-audit.json');

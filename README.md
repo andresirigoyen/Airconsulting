@@ -85,9 +85,20 @@ La primera vez, GitHub puede pedirte iniciar sesión (navegador o token personal
 
 El archivo `vercel.json` ya define URLs limpias (`/floreria` en lugar de `/floreria.html`) y caché para los archivos de idioma en `locales/`.
 
-### 2.3 Dominio
+### 2.3 Dominio de producción
 
-Tras el deploy, Vercel te dará una URL tipo `https://portafolio-xxx.vercel.app`. Puedes cambiar el nombre del proyecto en **Settings → Domains** o conectar un dominio propio más adelante.
+**Canonical:** [https://www.irigoyendev.com](https://www.irigoyendev.com)
+
+1. En Vercel → **Settings → Domains**, añade `www.irigoyendev.com` y `irigoyendev.com`.
+2. `vercel.json` redirige apex → `www` (301).
+3. SEO/GEO incluidos: `robots.txt`, `sitemap.xml`, `llms.txt`, `ai.txt`, canonicals, Open Graph, Twitter cards y JSON-LD.
+4. Tras el DNS, envía el sitemap en [Google Search Console](https://search.google.com/search-console): `https://www.irigoyendev.com/sitemap.xml`.
+
+Para regenerar meta/schema en todas las páginas HTML:
+
+```powershell
+npm run seo:apply
+```
 
 ---
 
@@ -110,8 +121,19 @@ Vercel **vuelve a desplegar automáticamente** en cada push a `main` (si conecta
 | Archivo / carpeta | Uso |
 |-------------------|-----|
 | `index.html` | Página principal |
-| `*.html` | Páginas de proyectos (case studies) |
+| `404.html` | Página de error (debe estar en la raíz para Vercel) |
+| `favicon.svg` | Icono del sitio |
+| `robots.txt` | Directivas de crawlers + AI bots |
+| `sitemap.xml` | Mapa del sitio (Search Console) |
+| `llms.txt` / `ai.txt` / `humans.txt` | Guía GEO + créditos |
+| `site.webmanifest` | Manifest PWA / instalación |
+| `css/` | Estilos globales (`style.css`, `profile-card.css`) |
+| `js/` | JavaScript del sitio |
+| `images/` | Imágenes y videos (`og-image.png` para redes) |
 | `locales/` | Traducciones (i18n) |
+| `projects/` | Case studies |
+| `pages/` | Páginas auxiliares (p. ej. cotización) |
+| `scripts/` | Herramientas de desarrollo (Node) |
 | `vercel.json` | Configuración de despliegue en Vercel |
 | `.gitignore` | Archivos que no deben ir a GitHub |
 | `.env.example` | Plantilla para variables secretas (futuro formulario) |
