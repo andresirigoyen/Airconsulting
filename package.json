@@ -7,12 +7,24 @@
   "scripts": {
     "dev": "serve .",
     "start": "serve .",
+    "build": "npm run build:seo && npm run audit:geo",
     "seo:apply": "node scripts/apply-seo.mjs",
     "seo:pages": "node scripts/build-lead-pages.mjs && node scripts/apply-seo.mjs && node scripts/inject-seo-nav.mjs",
+    "sync:geo": "node scripts/sync-geo-config.mjs",
+    "enrich:geo": "node scripts/enrich-geo-entities.mjs",
+    "build:geo": "node scripts/build-geo-pages.mjs",
+    "build:locations": "npm run build:geo",
+    "build:regions": "npm run build:geo",
+    "build:blog": "node scripts/build-blog.mjs",
+    "build:sitemap": "node scripts/build-sitemap.mjs",
+    "build:seo": "npm run seo:pages && npm run build:blog && npm run build:geo",
+    "build:geo:from-legacy": "npm run sync:geo && npm run build:geo",
+    "audit:locations": "node scripts/audit-location-sitemap.mjs",
+    "audit:geo": "node scripts/audit-location-sitemap.mjs",
     "i18n:complete": "node scripts/complete-locales.mjs",
     "i18n:audit": "node scripts/audit-i18n.mjs",
     "audit:routes": "node scripts/audit-routes.mjs",
-    "audit": "npm audit && npm run audit:routes"
+    "audit": "npm audit && npm run audit:routes && npm run audit:geo"
   },
   "dependencies": {
     "resend": "^4.8.0"

@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-07-19T23:11:00.602Z",
+  "paths": [
+    "chile",
+    "diseno-desarrollo-web-valparaiso",
+    "desarrollo-web-concepcion",
+    "desarrollo-web-antofagasta",
+    "santiago",
+    "santiago/las-condes",
+    "santiago/providencia",
+    "santiago/vitacura",
+    "santiago/nunoa",
+    "santiago/santiago-centro",
+    "santiago/la-reina",
+    "santiago/lo-barnechea",
+    "santiago/maipu",
+    "santiago/penalolen"
+  ],
+  "note": "Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build."
+}

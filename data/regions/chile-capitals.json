@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "hub": {
+    "path": "chile",
+    "seo": {
+      "metaTitle": "Desarrollo web en Chile por regiones | IrigoyenDev",
+      "metaDescription": "Desarrollo web, e-commerce y plataformas a medida para empresas en Santiago, Valparaíso, Concepción, Antofagasta y todo Chile. Atención remota con foco regional.",
+      "ogTitle": "Desarrollo web en Chile | IrigoyenDev",
+      "ogDescription": "Landings regionales para Valparaíso, Concepción, Antofagasta y comunas de Santiago."
+    },
+    "content": {
+      "eyebrow": "Chile · Cobertura nacional",
+      "h1": "Desarrollo web para empresas en todo Chile",
+      "lead": "No competimos solo por “desarrollo web Chile”: publicamos páginas regionales con copy e industria local. En Santiago priorizamos startups, tecnología y servicios de la capital — sin excluir comercio, industria ni pymes — y en regiones el tono sigue la economía local (Valparaíso, Concepción, Antofagasta).",
+      "intro": [
+        "Trabajamos 100 % remoto con clientes en regiones, con comunicación en español, plazos claros y entrega en la nube.",
+        "Elige tu región o revisa Santiago (tech, servicios y comunas) para un enfoque alineado a tu mercado."
+      ],
+      "ctaPrimary": "Cotizar proyecto en Chile →",
+      "ctaSecondary": "Ver servicios →"
+    },
+    "faq": [
+      {
+        "q": "¿Atienden fuera de Santiago?",
+        "a": "Sí. Desarrollamos de forma remota para Valparaíso, Viña del Mar, Concepción, Antofagasta, Puerto Montt y el resto de Chile, además de clientes internacionales."
+      },
+      {
+        "q": "¿Tienen oficina física en cada región?",
+        "a": "No. Operamos como área de servicio remota. La calidad del producto y la comunicación importan más que una dirección local inventada."
+      }
+    ]
+  },
+  "regions": [
+    {
+      "path": "diseno-desarrollo-web-valparaiso",
+      "name": "Valparaíso",
+      "regionName": "Región de Valparaíso",
+      "regionWiki": "https://es.wikipedia.org/wiki/Regi%C3%B3n_de_Valpara%C3%ADso",
+      "covers": ["Valparaíso", "Viña del Mar", "Concón", "Quilpué", "Villa Alemana"],
+      "geo": { "latitude": -33.0472, "longitude": -71.6127 },
+      "industries": ["Turismo", "Comercio local", "Inmobiliaria", "Pymes creativas", "Gastronomía"],
+      "relatedCaseStudies": [
+        {
+          "slug": "floreria",
+          "title": "Florería El Nuevo Pensamiento (Valparaíso)",
+          "note": "Caso real en la Quinta Región: SEO local, catálogo visual y conversión por WhatsApp."
+        }
+      ],
+      "seo": {
+        "metaTitle": "Diseño y desarrollo web en Valparaíso y Viña del Mar | IrigoyenDev",
+        "metaDescription": "Desarrollo web y e-commerce para Valparaíso y Viña del Mar: turismo, comercio local, inmobiliaria y pymes creativas. Caso real en la Quinta Región. Cotiza con IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Valparaíso y Viña del Mar | IrigoyenDev",
+        "ogDescription": "E-commerce, landings y webs locales para la Región de Valparaíso — con caso de estudio real en Valparaíso."
+      },
+      "content": {
+        "eyebrow": "Chile · Valparaíso & Viña del Mar",
+        "h1": "Diseño y desarrollo web para Valparaíso y Viña del Mar",
+        "lead": "Para comercios, turismo, inmobiliarias y pymes creativas de la Quinta Región que necesitan vender o captar leads online sin depender solo de Instagram.",
+        "economicContext": "Valparaíso y Viña concentran turismo, arriendos, retail de barrio y servicios creativos. El visitante llega desde el móvil: la web debe cargar rápido, mostrar oferta clara y convertir a WhatsApp o formulario en segundos.",
+        "localAngle": "Ya entregamos un caso real en Valparaíso (Florería El Nuevo Pensamiento): sitio estático con SEO local, catálogo y embudo a WhatsApp. Ese mismo patrón —velocidad, NAP consistente y conversión local— aplica a hoteles boutique, arriendos, talleres y retail de la costa.",
+        "painPoints": [
+          "Depender de redes sociales sin una web indexable en Google",
+          "Sitios lentos o hechos con constructores que no posicionan en búsquedas locales",
+          "Catálogos o fichas de propiedades difíciles de actualizar",
+          "Poca medición de leads desde campañas o Google"
+        ],
+        "focusServices": [
+          {
+            "title": "E-commerce de comercio local",
+            "desc": "Catálogo, pagos en Chile y canal propio para no pagar comisiones eternas a marketplaces.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "title": "Landings para turismo e inmobiliaria",
+            "desc": "Oferta clara, galería, mapa y CTA a WhatsApp o reserva — pensadas para móvil.",
+            "href": "/landing-pages"
+          },
+          {
+            "title": "Web + SEO local",
+            "desc": "Metadatos, schema LocalBusiness y estructura para aparecer en búsquedas de la Quinta Región.",
+            "href": "/servicios#seo-basico"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Valparaíso / Viña →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Valparaíso"
+      },
+      "faq": [
+        {
+          "q": "¿Hacen desarrollo web en Valparaíso de forma remota?",
+          "a": "Sí. Diseñamos, desarrollamos y lanzamos en remoto con reuniones por videollamada. El caso Florería El Nuevo Pensamiento en Valparaíso se entregó así."
+        },
+        {
+          "q": "¿Sirve para Viña del Mar y Concón también?",
+          "a": "Sí. La página cubre la conurbación Valparaíso–Viña y comunas cercanas de la Región de Valparaíso."
+        }
+      ]
+    },
+    {
+      "path": "desarrollo-web-concepcion",
+      "name": "Concepción",
+      "regionName": "Región del Biobío",
+      "regionWiki": "https://es.wikipedia.org/wiki/Regi%C3%B3n_del_B%C3%ADob%C3%ADo",
+      "covers": ["Concepción", "Talcahuano", "San Pedro de la Paz", "Chiguayante", "Los Ángeles"],
+      "geo": { "latitude": -36.8201, "longitude": -73.0444 },
+      "industries": ["Manufactura", "Forestal", "Educación", "Logística B2B", "Servicios corporativos"],
+      "relatedCaseStudies": [],
+      "seo": {
+        "metaTitle": "Desarrollo web en Concepción y Biobío | IrigoyenDev",
+        "metaDescription": "Desarrollo web y plataformas para Concepción y la Región del Biobío: catálogos B2B, sistemas corporativos y soluciones para manufactura, forestal y educación.",
+        "ogTitle": "Desarrollo web en Concepción | IrigoyenDev",
+        "ogDescription": "Soluciones corporativas, B2B y logísticas para empresas del Biobío."
+      },
+      "content": {
+        "eyebrow": "Chile · Concepción & Biobío",
+        "h1": "Desarrollo web y plataformas para Concepción y el Biobío",
+        "lead": "Para empresas de manufactura, forestal, educación y servicios B2B que necesitan catálogos, paneles internos o sitios corporativos serios — no solo una web de brochure.",
+        "economicContext": "Concepción es polo industrial y universitario del sur. Las búsquedas suelen ser de intención comercial B2B: proveedores, cotizaciones, logística y captación de alumnos o clientes corporativos.",
+        "localAngle": "Priorizamos productos con roles, listados y flujos (cotizar, descargar ficha, agendar demo). Ideal para pymes industriales que hoy operan con Excel, PDFs o sitios desactualizados.",
+        "painPoints": [
+          "Sitio corporativo que no genera leads cualificados",
+          "Catálogos B2B en PDF difíciles de mantener",
+          "Falta de panel para equipos comerciales o sucursales",
+          "Integraciones pendientes (ERP, email, CRM)"
+        ],
+        "focusServices": [
+          {
+            "title": "Plataformas y productos a medida",
+            "desc": "Admin, roles y lógica de negocio para operar en línea.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Catálogos y portales B2B",
+            "desc": "Listados, fichas técnicas y captura de cotizaciones.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Web corporativa + SEO",
+            "desc": "Presencia clara para marca regional con base técnica sólida.",
+            "href": "/landing-pages"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Concepción →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Concepción"
+      },
+      "faq": [
+        {
+          "q": "¿Desarrollan sistemas web a medida en Concepción?",
+          "a": "Sí. Trabajamos remoto con empresas del Biobío en plataformas, catálogos B2B y sitios corporativos con foco en operación y leads."
+        },
+        {
+          "q": "¿Pueden integrarse con herramientas internas?",
+          "a": "Sí, según alcance: APIs, email, CRM o flujos de cotización. Se define en el plan de proyecto."
+        }
+      ]
+    },
+    {
+      "path": "desarrollo-web-antofagasta",
+      "name": "Antofagasta",
+      "regionName": "Región de Antofagasta",
+      "regionWiki": "https://es.wikipedia.org/wiki/Regi%C3%B3n_de_Antofagasta",
+      "covers": ["Antofagasta", "Calama", "Mejillones", "Tocopilla"],
+      "geo": { "latitude": -23.6509, "longitude": -70.3975 },
+      "industries": ["Minería", "Proveedores industriales", "Logística", "B2B", "Servicios a faena"],
+      "relatedCaseStudies": [],
+      "seo": {
+        "metaTitle": "Desarrollo web en Antofagasta y Norte Grande | IrigoyenDev",
+        "metaDescription": "Plataformas a medida, portales de proveedores y sistemas B2B para minería e industria en Antofagasta y Calama. Desarrollo remoto con IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Antofagasta | IrigoyenDev",
+        "ogDescription": "Sistemas de gestión, portales B2B y webs industriales para el Norte Grande."
+      },
+      "content": {
+        "eyebrow": "Chile · Antofagasta & Norte Grande",
+        "h1": "Desarrollo web y plataformas B2B para Antofagasta y el Norte Grande",
+        "lead": "Para proveedores mineros, contratistas y empresas de servicios industriales que necesitan portales internos, gestión de proveedores o presencia digital confiable ante clientes exigentes.",
+        "economicContext": "Antofagasta y Calama giran en torno a minería e industria pesada. Las decisiones de compra son B2B: credenciales, fichas técnicas, cumplimiento y seguimiento de solicitudes importan más que un sitio “bonito”.",
+        "localAngle": "Diseñamos plataformas con autenticación, roles, carga de documentos y flujos de solicitud — o landings corporativas sobrias que proyecten seriedad ante procurement. Menos marketing genérico, más utilidad operativa.",
+        "painPoints": [
+          "Procesos de proveedores aún por correo y planillas",
+          "Web desactualizada que no refleja certificaciones ni capacidad",
+          "Falta de portal para cotizaciones o seguimiento",
+          "Necesidad de multi-usuario (comercial, operaciones, admin)"
+        ],
+        "focusServices": [
+          {
+            "title": "Plataformas a medida / admin",
+            "desc": "Sistemas internos, roles y flujos para operación B2B.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Portales de proveedores",
+            "desc": "Registro, documentos y solicitudes en un solo lugar.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Web corporativa industrial",
+            "desc": "Presencia clara, rápida y orientada a credibilidad comercial.",
+            "href": "/landing-pages"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Antofagasta →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Antofagasta"
+      },
+      "faq": [
+        {
+          "q": "¿Pueden desarrollar un sistema web a medida para una empresa en Antofagasta?",
+          "a": "Sí. Trabajamos remoto con equipos en el Norte Grande: plataformas B2B, paneles y sitios corporativos con requisitos de acceso y documentación."
+        },
+        {
+          "q": "¿También cubren Calama?",
+          "a": "Sí. La cobertura incluye Antofagasta, Calama y comunas del Norte Grande asociadas a minería y servicios industriales."
+        }
+      ]
+    }
+  ]
+}

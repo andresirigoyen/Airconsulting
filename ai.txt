@@ -10,7 +10,15 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Brand: IrigoyenDev
 Person: Andrés Irigoyen
 URL: https://www.irigoyendev.com
-Summary: Full-stack developer specializing in e-commerce, landing pages, and business platforms that convert traffic into revenue.
+Summary: Full-stack developer specializing in e-commerce, landing pages, and business platforms that convert traffic into revenue. Serves clients across Chile including Valparaíso, Concepción, Antofagasta, Santiago, and remote clients internationally.
+
+# Geographic expertise (Chile)
+- Valparaíso / Viña del Mar: https://www.irigoyendev.com/diseno-desarrollo-web-valparaiso
+- Concepción / Biobío: https://www.irigoyendev.com/desarrollo-web-concepcion
+- Antofagasta / Norte Grande: https://www.irigoyendev.com/desarrollo-web-antofagasta
+- Santiago comunas: https://www.irigoyendev.com/santiago (startups, tech, professional services — also commerce, industry & local SMEs)
+- Chile hub: https://www.irigoyendev.com/chile
+- Proven regional case study: Florería El Nuevo Pensamiento in Valparaíso — https://www.irigoyendev.com/projects/floreria
 
 # Canonical facts source
 llms-txt: https://www.irigoyendev.com/llms.txt

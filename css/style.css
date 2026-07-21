@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+/* Montserrat: load via <link> in HTML (preconnect + stylesheet). Avoid CSS @import — it delays LCP. */
 
 :root {
   --bg-color: #f8f9fa;
   --surface-color: #ffffff;
   --text-primary: #1a1a1a;
-  --text-secondary: #5a5a5a;
+  --text-secondary: #4b5563;
   --accent-color: #2563eb; /* Modern vibrant blue */
   --accent-hover: #1d4ed8;
   --border-color: #e5e7eb;
@@ -149,6 +149,10 @@ a {
 }
 
 /* Navigation */
+.site-header {
+  display: contents;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -389,7 +393,7 @@ html.dark-theme {
   color-scheme: dark;
   --bg-color: #121212;
   --text-primary: #f5f5f5;
-  --text-secondary: #a0a0a0;
+  --text-secondary: #c4c4c4;
   --surface-color: #1e1e1e;
   --border-color: #333333;
   --nav-bg: rgba(18, 18, 18, 0.8);
@@ -1542,6 +1546,7 @@ body.page-project main {
 .page-home .faq-more,
 .page-home .services-pricing-link,
 .page-home .service-grid,
+.page-home .pricing-grid,
 .page-home .team-grid,
 .page-home .team-cards {
   margin-left: 0;
@@ -1558,6 +1563,7 @@ body.page-project main {
 .page-home .gbp-reviews__grid,
 .page-home .markets__grid,
 .page-home .service-grid,
+.page-home .pricing-grid,
 .page-home .projects-grid {
   width: 100%;
   max-width: none;
@@ -1872,12 +1878,46 @@ body.page-project main {
 
 /* Tools Banner */
 .tools-banner {
+  position: relative;
+  isolation: isolate;
   text-align: left;
-  padding: var(--spacing-lg) 0;
+  min-height: clamp(220px, 32vw, 340px);
+  display: flex;
+  align-items: center;
+  padding: clamp(2.5rem, 5vw, 3.75rem) 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  background-color: var(--tools-bg);
+  background-color: #0b1220;
   margin-top: 2rem;
+  overflow: hidden;
+}
+
+.tools-banner__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tools-banner__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+}
+
+.tools-banner__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 18, 32, 0.15) 0%, transparent 40%, rgba(11, 18, 32, 0.2) 100%);
+  pointer-events: none;
+}
+
+.tools-banner__content {
+  position: relative;
+  z-index: 1;
 }
 
 .tools-banner p {
@@ -1886,7 +1926,7 @@ body.page-project main {
   letter-spacing: 0.1em;
   font-weight: 600;
   margin-bottom: var(--spacing-md);
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .marquee-wrapper {
@@ -1929,15 +1969,17 @@ body.page-project main {
   align-items: center;
   gap: 8px;
   padding: 8px 18px;
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-secondary);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  color: #0f172a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   transition: var(--transition);
   cursor: default;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .tool-badge img {
@@ -1948,13 +1990,34 @@ body.page-project main {
 
 .tool-badge:hover {
   transform: translateY(-3px);
-  border-color: var(--accent-color);
+  border-color: rgba(37, 99, 235, 0.55);
   color: var(--accent-color);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.22);
+}
+
+html.dark-theme .tools-banner {
+  background-color: #070b14;
 }
 
 html.dark-theme .tool-badge {
-  border-color: var(--border-color);
+  background: rgba(15, 23, 42, 0.88);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: rgba(248, 250, 252, 0.92);
+}
+
+html.dark-theme .tool-badge:hover {
+  color: #93c5fd;
+  border-color: rgba(147, 197, 253, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-banner__video {
+    display: none;
+  }
+
+  .tools-banner__scrim {
+    background: #0b1220;
+  }
 }
 
 /* Footer */
@@ -2640,13 +2703,16 @@ body.page-home .site-footer {
   color: var(--accent-color);
 }
 
-.lead-assist__panel h2 {
+.lead-assist__panel h2,
+.lead-assist__title {
   margin: 0 0 0.65rem;
   padding-right: 2rem;
   font-size: clamp(1.45rem, 3.2vw, 1.85rem);
   line-height: 1.2;
   letter-spacing: -0.03em;
   max-width: 16ch;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .lead-assist__desc {
@@ -3517,6 +3583,70 @@ body.page-marketing .project-header {
   margin-top: var(--spacing-lg);
 }
 
+/* Pricing packages: 3 columns × 2 rows on desktop, 1 column on mobile */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+pricing-card,
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 6rem;
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+  border-top: 3px solid var(--accent-color);
+  background: transparent;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+
+pricing-card:hover,
+.pricing-card:hover {
+  border-top-color: color-mix(in srgb, var(--accent-color) 75%, #000);
+  opacity: 0.96;
+}
+
+.pricing-card__title {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  font-weight: 650;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.pricing-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pricing-card__title a:hover {
+  color: var(--accent-color);
+}
+
+.pricing-card__price,
+.pricing-card__price.price-range {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.pricing-card__desc {
+  margin: 0 0 var(--spacing-md);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.pricing-card .project-link {
+  margin-top: auto;
+}
+
 .service-card {
   scroll-margin-top: 6rem;
   padding: var(--spacing-lg);
@@ -3627,15 +3757,31 @@ body.page-marketing .project-header {
   margin-bottom: 0;
 }
 
+.pricing-grid--care {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: none;
+}
+
 @media (max-width: 992px) {
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
   }
 }
 
 @media (max-width: 768px) {
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-grid,
+  .pricing-grid--care {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
   }
 }
 
@@ -3654,4 +3800,207 @@ body.page-marketing .project-header {
 .services-pricing-link a:hover {
   color: var(--accent-hover);
 }
+
+/* —— Location / comuna pages (build-time from data/locations/*.json) —— */
+.geo-breadcrumb {
+  margin: 0.35rem 0 0.75rem;
+}
+
+.geo-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.geo-breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  opacity: 0.45;
+}
+
+.geo-breadcrumb a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.geo-breadcrumb a:hover {
+  color: var(--accent-color);
+}
+
+.geo-breadcrumb [aria-current="page"] {
+  color: var(--text-primary);
+  font-weight: 550;
+}
+
+.faq-item--plain {
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.85rem 0 1rem;
+}
+
+.faq-item--plain h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.faq-item--plain p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.location-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding: 0.25rem 0 1.25rem;
+  margin: 0 0 var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.location-nav__link {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 550;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.location-nav__link:hover {
+  color: var(--text-primary);
+}
+
+.location-nav__link.is-active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.location-card {
+  padding: var(--spacing-md) 0;
+  border-top: 3px solid var(--accent-color);
+}
+
+.location-card__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.location-card__tags {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.75rem !important;
+}
+
+.blog-article h2 {
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+}
+
+.blog-article p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+  max-width: 68ch;
+}
+
+.location-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.location-card h3 a:hover {
+  color: var(--accent-color);
+}
+
+.location-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0 0 0.75rem;
+}
+
+.location-intro {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 62ch;
+  margin-bottom: var(--spacing-md);
+}
+
+.location-subheading {
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  font-size: 1.05rem;
+}
+
+.location-neighborhoods {
+  columns: 2;
+  max-width: 36rem;
+}
+
+.location-related__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.location-related__link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.location-related__link:hover {
+  color: var(--accent-hover);
+}
+
+.location-outro {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.location-outro a {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-neighborhoods {
+    columns: 1;
+  }
+}
+
 

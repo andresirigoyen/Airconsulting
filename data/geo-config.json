@@ -1,0 +1,1373 @@
+{
+  "version": 1,
+  "$comment": "MASTER geo config. Template reads only this file at BUILD time. To add Norway: push objects with countryCode NO and path like \"norge/oslo\". Do not hardcode city copy in JS templates.",
+  "markets": [
+    {
+      "code": "CL",
+      "name": "Chile",
+      "hreflang": "es-CL",
+      "htmlLang": "es-CL",
+      "ogLocale": "es_CL",
+      "hubPath": "chile"
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "hreflang": "nb-NO",
+      "htmlLang": "nb-NO",
+      "ogLocale": "nb_NO",
+      "hubPath": "norge",
+      "note": "Add entries with countryCode NO. Build uses markets[] for lang/nav."
+    }
+  ],
+  "entries": [
+    {
+      "slug": "chile",
+      "path": "chile",
+      "type": "hub",
+      "city": "Chile",
+      "region": "Nacional",
+      "countryCode": "CL",
+      "metaTitle": "Desarrollo web en Chile por regiones | IrigoyenDev",
+      "metaDescription": "Desarrollo web, e-commerce y plataformas a medida para empresas en Santiago, Valparaíso, Concepción, Antofagasta y todo Chile. Atención remota con foco regional.",
+      "h1Title": "Desarrollo web para empresas en todo Chile",
+      "contentSummary": "No competimos solo por “desarrollo web Chile”: publicamos páginas regionales con copy e industria local. En Santiago priorizamos startups, tecnología y servicios de la capital — sin excluir comercio, industria ni pymes — y en regiones el tono sigue la economía local (Valparaíso, Concepción, Antofagasta).",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Chile",
+        "description": "Desarrollo web, e-commerce y plataformas a medida para empresas en Santiago, Valparaíso, Concepción, Antofagasta y todo Chile. Atención remota con foco regional.",
+        "addressLocality": "Chile",
+        "addressRegion": "Chile",
+        "serviceType": [
+          "Desarrollo web",
+          "E-commerce",
+          "Plataformas"
+        ]
+      },
+      "content": {
+        "eyebrow": "Chile · Cobertura nacional",
+        "intro": [
+          "Trabajamos 100 % remoto con clientes en regiones, con comunicación en español, plazos claros y entrega en la nube.",
+          "Elige tu región o revisa Santiago (tech, servicios y comunas) para un enfoque alineado a tu mercado."
+        ],
+        "ctaPrimary": "Cotizar proyecto en Chile →",
+        "ctaSecondary": "Ver servicios →",
+        "faq": [
+          {
+            "q": "¿Atienden fuera de Santiago?",
+            "a": "Sí. Desarrollamos de forma remota para Valparaíso, Viña del Mar, Concepción, Antofagasta, Puerto Montt y el resto de Chile, además de clientes internacionales."
+          },
+          {
+            "q": "¿Tienen oficina física en cada región?",
+            "a": "No. Operamos como área de servicio remota. La calidad del producto y la comunicación importan más que una dirección local inventada."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Chile | IrigoyenDev",
+        "ogDescription": "Landings regionales para Valparaíso, Concepción, Antofagasta y comunas de Santiago."
+      }
+    },
+    {
+      "slug": "diseno-desarrollo-web-valparaiso",
+      "path": "diseno-desarrollo-web-valparaiso",
+      "type": "region",
+      "city": "Valparaíso",
+      "region": "Región de Valparaíso",
+      "countryCode": "CL",
+      "parentSlug": "chile",
+      "metaTitle": "Diseño y desarrollo web en Valparaíso y Viña del Mar | IrigoyenDev",
+      "metaDescription": "Desarrollo web y e-commerce para Valparaíso y Viña del Mar: turismo, comercio local, inmobiliaria y pymes creativas. Caso real en la Quinta Región. Cotiza con IrigoyenDev.",
+      "h1Title": "Diseño y desarrollo web para Valparaíso y Viña del Mar",
+      "contentSummary": "Para comercios, turismo, inmobiliarias y pymes creativas de la Quinta Región que necesitan vender o captar leads online sin depender solo de Instagram.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Valparaíso",
+        "description": "Desarrollo web y e-commerce para Valparaíso y Viña del Mar: turismo, comercio local, inmobiliaria y pymes creativas. Caso real en la Quinta Región. Cotiza con IrigoyenDev.",
+        "latitude": -33.0472,
+        "longitude": -71.6127,
+        "addressLocality": "Valparaíso",
+        "addressRegion": "Región de Valparaíso",
+        "regionWiki": "https://es.wikipedia.org/wiki/Regi%C3%B3n_de_Valpara%C3%ADso",
+        "serviceType": [
+          "Turismo",
+          "Comercio local",
+          "Inmobiliaria",
+          "Pymes creativas",
+          "Gastronomía"
+        ]
+      },
+      "content": {
+        "eyebrow": "Chile · Valparaíso & Viña del Mar",
+        "h1": "Diseño y desarrollo web para Valparaíso y Viña del Mar",
+        "economicContext": "Valparaíso y Viña concentran turismo, arriendos, retail de barrio y servicios creativos. El visitante llega desde el móvil: la web debe cargar rápido, mostrar oferta clara y convertir a WhatsApp o formulario en segundos.",
+        "localAngle": "Ya entregamos un caso real en Valparaíso (Florería El Nuevo Pensamiento): sitio estático con SEO local, catálogo y embudo a WhatsApp. Ese mismo patrón —velocidad, NAP consistente y conversión local— aplica a hoteles boutique, arriendos, talleres y retail de la costa.",
+        "painPoints": [
+          "Depender de redes sociales sin una web indexable en Google",
+          "Sitios lentos o hechos con constructores que no posicionan en búsquedas locales",
+          "Catálogos o fichas de propiedades difíciles de actualizar",
+          "Poca medición de leads desde campañas o Google"
+        ],
+        "focusServices": [
+          {
+            "title": "E-commerce de comercio local",
+            "desc": "Catálogo, pagos en Chile y canal propio para no pagar comisiones eternas a marketplaces.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "title": "Landings para turismo e inmobiliaria",
+            "desc": "Oferta clara, galería, mapa y CTA a WhatsApp o reserva — pensadas para móvil.",
+            "href": "/landing-pages"
+          },
+          {
+            "title": "Web + SEO local",
+            "desc": "Metadatos, schema LocalBusiness y estructura para aparecer en búsquedas de la Quinta Región.",
+            "href": "/servicios#seo-basico"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Valparaíso / Viña →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Valparaíso",
+        "covers": [
+          "Valparaíso",
+          "Viña del Mar",
+          "Concón",
+          "Quilpué",
+          "Villa Alemana"
+        ],
+        "industries": [
+          "Turismo",
+          "Comercio local",
+          "Inmobiliaria",
+          "Pymes creativas",
+          "Gastronomía"
+        ],
+        "relatedCaseStudies": [
+          {
+            "slug": "floreria",
+            "title": "Florería El Nuevo Pensamiento (Valparaíso)",
+            "note": "Caso real en la Quinta Región: SEO local, catálogo visual y conversión por WhatsApp."
+          }
+        ],
+        "faq": [
+          {
+            "q": "¿Hacen desarrollo web para negocios en Valparaíso y Viña del Mar?",
+            "a": "Sí. IrigoyenDev trabaja con comercios y servicios de la Quinta Región: catálogos, reservas y SEO local. Contacto andres@irigoyendev.com / +45 50 24 98 55."
+          },
+          {
+            "q": "¿Cuánto cuesta una landing para un local en Valparaíso?",
+            "a": "Las landings orientativas parten desde ~USD 600. Detalle en https://www.irigoyendev.com/precios."
+          },
+          {
+            "q": "¿Tienen caso real en la región?",
+            "a": "Sí: el caso Florería (Quinta Región) muestra catálogo, pedidos y foco en conversión móvil — útil como referencia de comercio local."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Valparaíso y Viña del Mar | IrigoyenDev",
+        "ogDescription": "E-commerce, landings y webs locales para la Región de Valparaíso — con caso de estudio real en Valparaíso.",
+        "geo": {
+          "latitude": -33.0472,
+          "longitude": -71.6127
+        },
+        "semanticTopics": [
+          "e-commerce floral y catálogos de temporada",
+          "reservas y WhatsApp para comercio local",
+          "SEO para Quinta Región",
+          "performance en redes móviles costeras"
+        ]
+      }
+    },
+    {
+      "slug": "desarrollo-web-concepcion",
+      "path": "desarrollo-web-concepcion",
+      "type": "region",
+      "city": "Concepción",
+      "region": "Región del Biobío",
+      "countryCode": "CL",
+      "parentSlug": "chile",
+      "metaTitle": "Desarrollo web en Concepción y Biobío | IrigoyenDev",
+      "metaDescription": "Desarrollo web y plataformas para Concepción y la Región del Biobío: catálogos B2B, sistemas corporativos y soluciones para manufactura, forestal y educación.",
+      "h1Title": "Desarrollo web y plataformas para Concepción y el Biobío",
+      "contentSummary": "Para empresas de manufactura, forestal, educación y servicios B2B que necesitan catálogos, paneles internos o sitios corporativos serios — no solo una web de brochure.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Concepción",
+        "description": "Desarrollo web y plataformas para Concepción y la Región del Biobío: catálogos B2B, sistemas corporativos y soluciones para manufactura, forestal y educación.",
+        "latitude": -36.8201,
+        "longitude": -73.0444,
+        "addressLocality": "Concepción",
+        "addressRegion": "Región del Biobío",
+        "regionWiki": "https://es.wikipedia.org/wiki/Regi%C3%B3n_del_B%C3%ADob%C3%ADo",
+        "serviceType": [
+          "Manufactura",
+          "Forestal",
+          "Educación",
+          "Logística B2B",
+          "Servicios corporativos"
+        ]
+      },
+      "content": {
+        "eyebrow": "Chile · Concepción & Biobío",
+        "h1": "Desarrollo web y plataformas para Concepción y el Biobío",
+        "economicContext": "Concepción es polo industrial y universitario del sur. Las búsquedas suelen ser de intención comercial B2B: proveedores, cotizaciones, logística y captación de alumnos o clientes corporativos.",
+        "localAngle": "Priorizamos productos con roles, listados y flujos (cotizar, descargar ficha, agendar demo). Ideal para pymes industriales que hoy operan con Excel, PDFs o sitios desactualizados.",
+        "painPoints": [
+          "Sitio corporativo que no genera leads cualificados",
+          "Catálogos B2B en PDF difíciles de mantener",
+          "Falta de panel para equipos comerciales o sucursales",
+          "Integraciones pendientes (ERP, email, CRM)"
+        ],
+        "focusServices": [
+          {
+            "title": "Plataformas y productos a medida",
+            "desc": "Admin, roles y lógica de negocio para operar en línea.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Catálogos y portales B2B",
+            "desc": "Listados, fichas técnicas y captura de cotizaciones.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Web corporativa + SEO",
+            "desc": "Presencia clara para marca regional con base técnica sólida.",
+            "href": "/landing-pages"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Concepción →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Concepción",
+        "covers": [
+          "Concepción",
+          "Talcahuano",
+          "San Pedro de la Paz",
+          "Chiguayante",
+          "Los Ángeles"
+        ],
+        "industries": [
+          "Manufactura",
+          "Forestal",
+          "Educación",
+          "Logística B2B",
+          "Servicios corporativos"
+        ],
+        "relatedCaseStudies": [],
+        "faq": [
+          {
+            "q": "¿Atienden proyectos web en Concepción y el Gran Concepción?",
+            "a": "Sí. Operamos remoto con el mismo stack que en Santiago: HTML estático o producto a medida, NAP coherente (+45 50 24 98 55) y precios transparentes."
+          },
+          {
+            "q": "¿Qué entrega tiene más sentido para una PyME en Concepción?",
+            "a": "Suele ser una landing o sitio de servicios desde ~USD 600, con CTA a WhatsApp o formulario y base SEO."
+          },
+          {
+            "q": "¿Incluyen mantenimiento después del lanzamiento?",
+            "a": "Plan Care desde ~USD 200/mes. Ver https://www.irigoyendev.com/precios#care."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Concepción | IrigoyenDev",
+        "ogDescription": "Soluciones corporativas, B2B y logísticas para empresas del Biobío.",
+        "geo": {
+          "latitude": -36.8201,
+          "longitude": -73.0444
+        },
+        "semanticTopics": [
+          "sitios para PyMEs del Biobío",
+          "captación de leads B2B",
+          "SEO on-page regional",
+          "mantenimiento Care remoto"
+        ]
+      }
+    },
+    {
+      "slug": "desarrollo-web-antofagasta",
+      "path": "desarrollo-web-antofagasta",
+      "type": "region",
+      "city": "Antofagasta",
+      "region": "Región de Antofagasta",
+      "countryCode": "CL",
+      "parentSlug": "chile",
+      "metaTitle": "Desarrollo web en Antofagasta y Norte Grande | IrigoyenDev",
+      "metaDescription": "Plataformas a medida, portales de proveedores y sistemas B2B para minería e industria en Antofagasta y Calama. Desarrollo remoto con IrigoyenDev.",
+      "h1Title": "Desarrollo web y plataformas B2B para Antofagasta y el Norte Grande",
+      "contentSummary": "Para proveedores mineros, contratistas y empresas de servicios industriales que necesitan portales internos, gestión de proveedores o presencia digital confiable ante clientes exigentes.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Antofagasta",
+        "description": "Plataformas a medida, portales de proveedores y sistemas B2B para minería e industria en Antofagasta y Calama. Desarrollo remoto con IrigoyenDev.",
+        "latitude": -23.6509,
+        "longitude": -70.3975,
+        "addressLocality": "Antofagasta",
+        "addressRegion": "Región de Antofagasta",
+        "regionWiki": "https://es.wikipedia.org/wiki/Regi%C3%B3n_de_Antofagasta",
+        "serviceType": [
+          "Minería",
+          "Proveedores industriales",
+          "Logística",
+          "B2B",
+          "Servicios a faena"
+        ]
+      },
+      "content": {
+        "eyebrow": "Chile · Antofagasta & Norte Grande",
+        "h1": "Desarrollo web y plataformas B2B para Antofagasta y el Norte Grande",
+        "economicContext": "Antofagasta y Calama giran en torno a minería e industria pesada. Las decisiones de compra son B2B: credenciales, fichas técnicas, cumplimiento y seguimiento de solicitudes importan más que un sitio “bonito”.",
+        "localAngle": "Diseñamos plataformas con autenticación, roles, carga de documentos y flujos de solicitud — o landings corporativas sobrias que proyecten seriedad ante procurement. Menos marketing genérico, más utilidad operativa.",
+        "painPoints": [
+          "Procesos de proveedores aún por correo y planillas",
+          "Web desactualizada que no refleja certificaciones ni capacidad",
+          "Falta de portal para cotizaciones o seguimiento",
+          "Necesidad de multi-usuario (comercial, operaciones, admin)"
+        ],
+        "focusServices": [
+          {
+            "title": "Plataformas a medida / admin",
+            "desc": "Sistemas internos, roles y flujos para operación B2B.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Portales de proveedores",
+            "desc": "Registro, documentos y solicitudes en un solo lugar.",
+            "href": "/servicios"
+          },
+          {
+            "title": "Web corporativa industrial",
+            "desc": "Presencia clara, rápida y orientada a credibilidad comercial.",
+            "href": "/landing-pages"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Antofagasta →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Antofagasta",
+        "covers": [
+          "Antofagasta",
+          "Calama",
+          "Mejillones",
+          "Tocopilla"
+        ],
+        "industries": [
+          "Minería",
+          "Proveedores industriales",
+          "Logística",
+          "B2B",
+          "Servicios a faena"
+        ],
+        "relatedCaseStudies": [],
+        "faq": [
+          {
+            "q": "¿Desarrollan sitios para empresas en Antofagasta?",
+            "a": "Sí. IrigoyenDev (Andrés Irigoyen) construye sitios B2B y de servicios para el norte: claridad, velocidad y medición de leads."
+          },
+          {
+            "q": "¿Cuál es el rango de un producto web comercial?",
+            "a": "Orientativo USD 3.000–10.000. Cotización en https://www.irigoyendev.com/#contact."
+          },
+          {
+            "q": "¿Cómo verifican la entidad del negocio para Google e IA?",
+            "a": "Con NAP idéntico: nombre IrigoyenDev, teléfono +45 50 24 98 55, email andres@irigoyendev.com, schema LocalBusiness y Google Business Profile alineados."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Antofagasta | IrigoyenDev",
+        "ogDescription": "Sistemas de gestión, portales B2B y webs industriales para el Norte Grande.",
+        "geo": {
+          "latitude": -23.6509,
+          "longitude": -70.3975
+        },
+        "semanticTopics": [
+          "webs para proveedores mineros y servicios",
+          "confianza B2B en el primer viewport",
+          "SEO técnico en zona norte",
+          "formularios y tracking de leads"
+        ]
+      }
+    },
+    {
+      "slug": "santiago",
+      "path": "santiago",
+      "type": "hub",
+      "city": "Santiago",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "metaTitle": "Desarrollo web en Santiago: startups, tech y servicios | IrigoyenDev",
+      "metaDescription": "Producto digital para startups, empresas de tecnología y servicios en Santiago. También e-commerce y webs para comercio, industria y pymes de la capital. Cotiza con IrigoyenDev.",
+      "h1Title": "Desarrollo web para startups, tecnología y servicios en Santiago",
+      "contentSummary": "La capital concentra el ecosistema de startups, software, SaaS y servicios profesionales de Chile. Construimos landings, plataformas y e-commerce que convierten — con el mismo rigor para comercio, industria y pymes locales de la RM.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Santiago",
+        "description": "Producto digital para startups, empresas de tecnología y servicios en Santiago. También e-commerce y webs para comercio, industria y pymes de la capital. Cotiza con IrigoyenDev.",
+        "latitude": -33.4489,
+        "longitude": -70.6693,
+        "addressLocality": "Santiago",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Startups",
+          "Tecnología",
+          "Servicios",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Chile · Santiago · Capital digital",
+        "h1": "Desarrollo web para startups, tecnología y servicios en Santiago",
+        "intro": [
+          "Prioridad: equipos que necesitan velocidad de lanzamiento, SEO técnico y un producto medible (signups, demos, ventas). Trabajamos remoto, en español, con plazos claros.",
+          "No excluimos otros perfiles: retail, proveedores B2B, talleres y servicios de barrio también caben — adaptamos el tono y el alcance a cada comuna."
+        ],
+        "audiences": [
+          {
+            "title": "Startups y scale-ups",
+            "desc": "MVP web, landings de captación, waitlists y paneles ligeros para validar o escalar sin deuda técnica innecesaria."
+          },
+          {
+            "title": "Empresas de tecnología",
+            "desc": "Sitios de producto, docs comerciales, demos y plataformas con admin para equipos que ya viven en software."
+          },
+          {
+            "title": "Servicios profesionales",
+            "desc": "Consultoras, legales, salud, agencias y B2B de la capital: credibilidad, agenda de reuniones y leads cualificados."
+          },
+          {
+            "title": "Comercio, industria y pymes",
+            "desc": "Tiendas online, catálogos y webs locales para retail, proveedores e industrias que operan en Santiago."
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Santiago →",
+        "ctaSecondary": "Ver todos los servicios →",
+        "faq": [
+          {
+            "q": "¿Se especializan en startups y tech en Santiago?",
+            "a": "Sí. Ese es el foco principal en la capital: producto digital, landings de crecimiento y plataformas. También atendemos comercio, industria y pymes locales con el mismo estándar técnico."
+          },
+          {
+            "q": "¿Atienden proyectos en Santiago de forma remota?",
+            "a": "Sí. Diseñamos, desarrollamos y lanzamos en remoto (videollamada / WhatsApp). La entrega es digital; no hace falta oficina en cada comuna."
+          },
+          {
+            "q": "¿Qué comunas de Santiago cubren?",
+            "a": "Publicamos páginas para Las Condes, Providencia, Vitacura, Ñuñoa, Santiago Centro, La Reina, Lo Barnechea, Maipú y Peñalolén. Si tu comuna no aparece, escríbenos igual."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Santiago — startups, tech y servicios | IrigoyenDev",
+        "ogDescription": "Landings, plataformas y e-commerce para el ecosistema tech de Santiago — sin dejar fuera comercio, industria ni pymes locales.",
+        "geo": {
+          "latitude": -33.4489,
+          "longitude": -70.6693
+        },
+        "hreflang": "es-CL"
+      }
+    },
+    {
+      "slug": "las-condes",
+      "path": "santiago/las-condes",
+      "type": "comuna",
+      "city": "Las Condes",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Las Condes: tech, scale-ups y B2B | IrigoyenDev",
+      "metaDescription": "Plataformas, landings y e-commerce para empresas de tecnología, scale-ups y servicios B2B en Las Condes. También retail y marcas del oriente de Santiago.",
+      "h1Title": "Desarrollo web para tecnología, scale-ups y servicios en Las Condes",
+      "contentSummary": "Para equipos con sede en el oriente de Santiago que necesitan un canal digital a la altura: sitio de producto, landing de demos o plataforma con panel — también e-commerce y marcas comerciales del sector.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Las Condes",
+        "description": "Plataformas, landings y e-commerce para empresas de tecnología, scale-ups y servicios B2B en Las Condes. También retail y marcas del oriente de Santiago.",
+        "latitude": -33.4153,
+        "longitude": -70.5833,
+        "addressLocality": "Las Condes",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Las Condes · Tech & B2B",
+        "h1": "Desarrollo web para tecnología, scale-ups y servicios en Las Condes",
+        "localAngle": "Las Condes concentra oficinas corporativas, software, consultoras y retail premium. Priorizamos Core Web Vitals, mensaje B2B claro y captura de leads (demo, reunión, WhatsApp) sin sacrificar la presencia de marcas comerciales que también operan aquí.",
+        "painPoints": [
+          "Sitio corporativo lento que no genera demos ni reuniones",
+          "Producto tech sin landing alineada a la propuesta de valor",
+          "Campañas Ads/Meta sin página de destino medible",
+          "Tienda o catálogo desactualizado frente a la competencia del sector"
+        ],
+        "services": [
+          {
+            "titleKey": "fullstack",
+            "title": "Plataforma / producto web",
+            "desc": "Admin, roles y flujos para operar el negocio o el SaaS.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings de captación",
+            "desc": "Demos, waitlists y ofertas B2B con CTA claro.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce comercial",
+            "desc": "Canal propio para marcas y retail del oriente.",
+            "href": "/crear-tienda-online"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Las Condes →",
+        "ctaWhatsApp": "WhatsApp: proyecto tech/servicios en Las Condes",
+        "neighborhoods": [
+          "El Golf",
+          "Alto Las Condes",
+          "San Carlos de Apoquindo",
+          "Los Dominicos"
+        ],
+        "relatedSlugs": [
+          "providencia",
+          "vitacura",
+          "la-reina"
+        ],
+        "faq": [
+          {
+            "q": "¿Cuánto cuesta una landing de captación para un equipo en Las Condes?",
+            "a": "Las landings orientativas parten desde ~USD 600. Un producto comercial suele situarse en USD 3.000–10.000. Cotizamos alcance exacto en https://www.irigoyendev.com/precios y el formulario de contacto."
+          },
+          {
+            "q": "¿Pueden mejorar la velocidad de un sitio corporativo lento en el oriente de Santiago?",
+            "a": "Sí. Auditamos LCP/CLS, imágenes, fuentes y JS; priorizamos Core Web Vitals porque afectan ranking y la percepción de marca en oficinas y scale-ups de Las Condes."
+          },
+          {
+            "q": "¿Trabajan con SaaS que necesitan una página de demos?",
+            "a": "Es un caso habitual: mensaje claro, prueba social, CTA a demo o calendario, y tracking. El mismo stack sirve para servicios B2B premium del sector."
+          }
+        ],
+        "ogTitle": "Desarrollo web tech y B2B en Las Condes | IrigoyenDev",
+        "ogDescription": "Producto digital para oficinas, software y servicios premium en Las Condes.",
+        "geo": {
+          "latitude": -33.4153,
+          "longitude": -70.5833
+        },
+        "semanticTopics": [
+          "optimización de performance (Core Web Vitals)",
+          "landings de demo para SaaS y B2B",
+          "paneles admin y flujos de onboarding",
+          "medición de conversiones (analytics / eventos)"
+        ],
+        "semanticIntro": "En Las Condes trabajamos conceptos como: optimización de performance (Core Web Vitals); landings de demo para SaaS y B2B; paneles admin y flujos de onboarding."
+      }
+    },
+    {
+      "slug": "providencia",
+      "path": "santiago/providencia",
+      "type": "comuna",
+      "city": "Providencia",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Providencia: startups y servicios | IrigoyenDev",
+      "metaDescription": "Landings, webs de producto y SEO para startups, agencias y servicios profesionales en Providencia. También clínicas, retail y pymes del barrio.",
+      "h1Title": "Desarrollo web para startups y servicios en Providencia",
+      "contentSummary": "Ideal para startups early/growth, SaaS, agencias y profesionales que necesitan lanzar o rediseñar rápido — sin dejar fuera clínicas, retail y pymes con demanda local fuerte.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Providencia",
+        "description": "Landings, webs de producto y SEO para startups, agencias y servicios profesionales en Providencia. También clínicas, retail y pymes del barrio.",
+        "latitude": -33.431,
+        "longitude": -70.6093,
+        "addressLocality": "Providencia",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Providencia · Startups & servicios",
+        "h1": "Desarrollo web para startups y servicios en Providencia",
+        "localAngle": "Providencia mezcla coworks, oficinas creativas y comercio de calle. Diseñamos páginas escaneables, CTAs de demo o agenda, y base SEO; para negocios de barrio priorizamos WhatsApp, móvil y claridad de oferta.",
+        "painPoints": [
+          "MVP o marca sin web indexable ni tracking",
+          "Landing genérica que no explica el producto",
+          "Web de servicios desactualizada que no agenda clientes",
+          "Dependencia total de Instagram sin canal propio"
+        ],
+        "services": [
+          {
+            "titleKey": "landing",
+            "title": "Landing de startup / oferta",
+            "desc": "Mensaje, prueba social y CTA a demo o waitlist.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO técnico",
+            "desc": "Base on-page y schema para aparecer en Google.",
+            "href": "/servicios#seo-basico"
+          },
+          {
+            "titleKey": "care",
+            "title": "Plan Care",
+            "desc": "Iterar contenido y mantener el producto mes a mes.",
+            "href": "/precios#care"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Providencia →",
+        "ctaWhatsApp": "WhatsApp: startup o servicios en Providencia",
+        "neighborhoods": [
+          "Los Leones",
+          "Manuel Montt",
+          "Pedro de Valdivia",
+          "Inés de Suárez"
+        ],
+        "relatedSlugs": [
+          "las-condes",
+          "nunoa",
+          "santiago-centro"
+        ],
+        "faq": [
+          {
+            "q": "¿Sirve una web para una clínica o centro médico en Providencia?",
+            "a": "Sí. Diseñamos UX clara (servicios, equipo, ubicación), CTA de reserva o WhatsApp, y base SEO local — sin relleno genérico de “desarrollo web”."
+          },
+          {
+            "q": "¿Qué necesitan las startups early-stage en Providencia como primer entregable?",
+            "a": "Suele bastar una landing de validación desde ~USD 600: propuesta de valor, CTA y analytics. Luego escalamos a panel o e-commerce si convierte."
+          },
+          {
+            "q": "¿Cómo evitan el copy-paste entre comunas?",
+            "a": "Cada página tiene ángulo y FAQs propias (salud, startups, retail). La estructura es compartida; el contenido no."
+          }
+        ],
+        "ogTitle": "Startups y servicios digitales en Providencia | IrigoyenDev",
+        "ogDescription": "Producto web ágil para el ecosistema emprendedor y de servicios en Providencia.",
+        "geo": {
+          "latitude": -33.431,
+          "longitude": -70.6093
+        },
+        "semanticTopics": [
+          "UX para clínicas y agenda de citas",
+          "waitlists y validación de startups",
+          "SEO on-page para servicios profesionales",
+          "integración WhatsApp Business + formularios"
+        ],
+        "semanticIntro": "En Providencia trabajamos conceptos como: UX para clínicas y agenda de citas; waitlists y validación de startups; SEO on-page para servicios profesionales."
+      }
+    },
+    {
+      "slug": "vitacura",
+      "path": "santiago/vitacura",
+      "type": "comuna",
+      "city": "Vitacura",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Vitacura: producto premium y tech | IrigoyenDev",
+      "metaDescription": "Sitios y plataformas de alto rendimiento para marcas, fintech-adjacent y servicios premium en Vitacura. Performance, marca y conversión.",
+      "h1Title": "Desarrollo web premium para marcas y tecnología en Vitacura",
+      "contentSummary": "Para empresas y equipos que venden a audiencias exigentes: producto digital limpio, velocidad y confianza visual — también e-commerce selecto y servicios profesionales del sector.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Vitacura",
+        "description": "Sitios y plataformas de alto rendimiento para marcas, fintech-adjacent y servicios premium en Vitacura. Performance, marca y conversión.",
+        "latitude": -33.39,
+        "longitude": -70.575,
+        "addressLocality": "Vitacura",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Vitacura · Premium & producto",
+        "h1": "Desarrollo web premium para marcas y tecnología en Vitacura",
+        "localAngle": "En Vitacura la percepción importa tanto como la métrica. Trabajamos tipografía, jerarquía y Core Web Vitals; el tono sirve igual a un SaaS B2B que a una marca de servicios o retail premium.",
+        "painPoints": [
+          "Diseño genérico que resta credibilidad",
+          "Flujos de contacto o demo poco confiables",
+          "Sin eventos de conversión ni analytics claros",
+          "Checkout o reservas que no transmiten seguridad"
+        ],
+        "services": [
+          {
+            "titleKey": "fullstack",
+            "title": "Producto / plataforma",
+            "desc": "Web corporativa o admin a la altura de la marca.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings de campaña",
+            "desc": "Mensaje preciso para growth o lanzamientos.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce selecto",
+            "desc": "Tienda propia con UX cuidada y SEO.",
+            "href": "/crear-tienda-online"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Vitacura →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Vitacura",
+        "neighborhoods": [
+          "Santa María de Manquehue",
+          "Lo Curro",
+          "Garden Lower"
+        ],
+        "relatedSlugs": [
+          "las-condes",
+          "lo-barnechea",
+          "la-reina"
+        ],
+        "faq": [
+          {
+            "q": "¿Qué diferencia un sitio “premium” en Vitacura de una plantilla?",
+            "a": "Jerarquía tipográfica, performance y mensajes precisos. Evitamos plantillas genéricas: el visitante debe percibir solidez en los primeros segundos."
+          },
+          {
+            "q": "¿Incluyen medición de conversiones?",
+            "a": "Sí. Definimos eventos (demo, lead, compra) para que el equipo comercial sepa qué funciona — dato que las IA y los equipos de growth usan como señal de seriedad."
+          },
+          {
+            "q": "¿Cuál es el rango para una plataforma o producto web?",
+            "a": "Productos comerciales orientativos: USD 3.000–10.000; plataformas a medida desde ~USD 10000. Detalle en https://www.irigoyendev.com/precios."
+          }
+        ],
+        "ogTitle": "Producto web premium en Vitacura | IrigoyenDev",
+        "ogDescription": "Experiencia digital exigente para tech y servicios en Vitacura.",
+        "geo": {
+          "latitude": -33.39,
+          "longitude": -70.575
+        },
+        "semanticTopics": [
+          "experiencia de marca y tipografía",
+          "confianza visual en el primer viewport",
+          "analytics de conversión",
+          "e-commerce selecto con checkout confiable"
+        ],
+        "semanticIntro": "En Vitacura trabajamos conceptos como: experiencia de marca y tipografía; confianza visual en el primer viewport; analytics de conversión."
+      }
+    },
+    {
+      "slug": "nunoa",
+      "path": "santiago/nunoa",
+      "type": "comuna",
+      "city": "Ñuñoa",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Ñuñoa: startups early y pymes | IrigoyenDev",
+      "metaDescription": "Landings y webs ágiles para emprendedores tech, servicios y comercio en Ñuñoa. Validar oferta, vender online y aparecer en Google.",
+      "h1Title": "Desarrollo web para emprendedores tech y pymes en Ñuñoa",
+      "contentSummary": "Para founders early-stage y freelancers de producto que necesitan validar — y para comercio y servicios de barrio que quieren canal propio sin complejidad.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Ñuñoa",
+        "description": "Landings y webs ágiles para emprendedores tech, servicios y comercio en Ñuñoa. Validar oferta, vender online y aparecer en Google.",
+        "latitude": -33.4569,
+        "longitude": -70.5975,
+        "addressLocality": "Ñuñoa",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Ñuñoa · Early-stage & barrio",
+        "h1": "Desarrollo web para emprendedores tech y pymes en Ñuñoa",
+        "localAngle": "Ñuñoa une universidad, emprendimiento y comercio local. Priorizamos sitios livianos: landing de validación para tech; WhatsApp + catálogo + SEO local para pymes.",
+        "painPoints": [
+          "Idea o servicio sin página que explique el valor",
+          "Plantillas lentas difíciles de iterar",
+          "Vender solo por redes sin web indexable",
+          "Precios y oferta poco claros en móvil"
+        ],
+        "services": [
+          {
+            "titleKey": "landing",
+            "title": "Landing de validación",
+            "desc": "Ideal para MVP, cursos o servicios nuevos.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "Tienda / catálogo",
+            "desc": "Canal propio para comercio local.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO básico",
+            "desc": "Indexación limpia desde el día uno.",
+            "href": "/servicios#seo-basico"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Ñuñoa →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Ñuñoa",
+        "neighborhoods": [
+          "Plaza Ñuñoa",
+          "Villa Frei",
+          "Juan Gómez Millas"
+        ],
+        "relatedSlugs": [
+          "providencia",
+          "santiago-centro",
+          "la-reina"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo validar un producto digital en Ñuñoa sin construir una app completa?",
+            "a": "Sí. Una landing con CTA y medición suele ser el primer paso correcto: menos deuda técnica, más aprendizaje real."
+          },
+          {
+            "q": "¿Sirve para un negocio de barrio que hoy solo vende por Instagram?",
+            "a": "Sí. Canal propio indexable + WhatsApp reduce dependencia de algoritmos ajenos y mejora descubrimiento local."
+          },
+          {
+            "q": "¿Cuánto cuesta el SEO básico de arranque?",
+            "a": "El paquete de SEO básico orientativo parte desde ~USD 199 (títulos, meta, sitemap, velocidad, estructura). Ver https://www.irigoyendev.com/precios."
+          }
+        ],
+        "ogTitle": "Webs ágiles para Ñuñoa | IrigoyenDev",
+        "ogDescription": "Del MVP al negocio local: producto digital práctico en Ñuñoa.",
+        "geo": {
+          "latitude": -33.4569,
+          "longitude": -70.5975
+        },
+        "semanticTopics": [
+          "validación de MVP con landing",
+          "catálogos móviles para comercio local",
+          "embudos a WhatsApp",
+          "indexación limpia desde el día uno"
+        ],
+        "semanticIntro": "En Ñuñoa trabajamos conceptos como: validación de MVP con landing; catálogos móviles para comercio local; embudos a WhatsApp."
+      }
+    },
+    {
+      "slug": "santiago-centro",
+      "path": "santiago/santiago-centro",
+      "type": "comuna",
+      "city": "Santiago Centro",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Santiago Centro: servicios y comercio | IrigoyenDev",
+      "metaDescription": "Webs y plataformas para oficinas, servicios y retail del centro de Santiago. También equipos tech y B2B con sede céntrica.",
+      "h1Title": "Desarrollo web para servicios, comercio y equipos en Santiago Centro",
+      "contentSummary": "Para oficinas, retail e instituciones que necesitan un sitio confiable — y para equipos de producto o B2B con base céntrica que buscan landings y paneles serios.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Santiago Centro",
+        "description": "Webs y plataformas para oficinas, servicios y retail del centro de Santiago. También equipos tech y B2B con sede céntrica.",
+        "latitude": -33.4372,
+        "longitude": -70.6506,
+        "addressLocality": "Santiago Centro",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Centro · Servicios & comercio",
+        "h1": "Desarrollo web para servicios, comercio y equipos en Santiago Centro",
+        "localAngle": "El centro mezcla comercio tradicional, servicios y sedes administrativas. Construimos información clara (NAP, CTA, móvil) y, cuando el cliente es tech/B2B, priorizamos demos, formularios y medición.",
+        "painPoints": [
+          "Sitios difíciles de usar en móvil",
+          "Formularios sin tracking ni respuesta",
+          "Contenido institucional desactualizado",
+          "Equipo comercial sin landing de campaña"
+        ],
+        "services": [
+          {
+            "titleKey": "fullstack",
+            "title": "Web / plataforma",
+            "desc": "Estructura, CMS o admin según operación.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings de campaña",
+            "desc": "Captación de leads con mensaje único.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "care",
+            "title": "Mantenimiento Care",
+            "desc": "Soporte continuo post-lanzamiento.",
+            "href": "/precios#care"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Santiago Centro →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Santiago Centro",
+        "neighborhoods": [
+          "Barrio Lastarria",
+          "Plaza de Armas",
+          "Barrio Civico",
+          "Brasil"
+        ],
+        "relatedSlugs": [
+          "providencia",
+          "nunoa",
+          "maipu"
+        ],
+        "faq": [
+          {
+            "q": "¿Por qué importa el NAP en Santiago Centro?",
+            "a": "Nombre, teléfono (+45 50 24 98 55) y datos de contacto idénticos en web y Google Business Profile ayudan a Google y a las IA a verificar la entidad IrigoyenDev."
+          },
+          {
+            "q": "¿Modernizan sitios institucionales difíciles de usar en el celular?",
+            "a": "Sí. Priorizamos tipografía legible, menús simples y formularios con tracking — el centro concentra visitas móviles reales."
+          },
+          {
+            "q": "¿Ofrecen mantenimiento mensual?",
+            "a": "Plan Care desde ~USD 200/mes (updates, seguridad, contenido). Detalle en https://www.irigoyendev.com/precios#care."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Santiago Centro | IrigoyenDev",
+        "ogDescription": "Leads, operación y presencia clara para el corazón comercial de la capital.",
+        "geo": {
+          "latitude": -33.4372,
+          "longitude": -70.6506
+        },
+        "semanticTopics": [
+          "NAP consistente (nombre, teléfono, ubicación)",
+          "sitios institucionales usables en móvil",
+          "landings de campaña para equipos comerciales",
+          "mantenimiento continuo (Care)"
+        ],
+        "semanticIntro": "En Santiago Centro trabajamos conceptos como: NAP consistente (nombre, teléfono, ubicación); sitios institucionales usables en móvil; landings de campaña para equipos comerciales."
+      }
+    },
+    {
+      "slug": "la-reina",
+      "path": "santiago/la-reina",
+      "type": "comuna",
+      "city": "La Reina",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en La Reina: servicios profesionales y pymes | IrigoyenDev",
+      "metaDescription": "Webs y landings para profesionales, consultores y pymes en La Reina. Clara, rápida y fácil de mantener — también perfiles tech remotos del sector.",
+      "h1Title": "Desarrollo web para profesionales y pymes en La Reina",
+      "contentSummary": "Para consultores, estudios y negocios de barrio que necesitan presencia seria — y para freelancers o equipos tech del sector oriente que trabajan remoto desde la comuna.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — La Reina",
+        "description": "Webs y landings para profesionales, consultores y pymes en La Reina. Clara, rápida y fácil de mantener — también perfiles tech remotos del sector.",
+        "latitude": -33.45,
+        "longitude": -70.54,
+        "addressLocality": "La Reina",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · La Reina · Servicios & pymes",
+        "h1": "Desarrollo web para profesionales y pymes en La Reina",
+        "localAngle": "La Reina es residencial con fuerte tejido de servicios. Apostamos por sitios móviles, contacto directo y copy sin relleno; si el cliente es tech, el mismo esqueleto sirve para portafolio o landing de producto.",
+        "painPoints": [
+          "Web antigua sin móvil usable",
+          "Difícil actualizar textos o fotos",
+          "Poca visibilidad en búsquedas locales",
+          "Freelance/tech sin página de servicios clara"
+        ],
+        "services": [
+          {
+            "titleKey": "landing",
+            "title": "Landing / web de servicios",
+            "desc": "Mensaje + CTA + base SEO.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO on-page",
+            "desc": "Títulos, meta, velocidad y estructura.",
+            "href": "/servicios#seo-basico"
+          },
+          {
+            "titleKey": "care",
+            "title": "Plan Care",
+            "desc": "Mantenimiento mensual.",
+            "href": "/precios#care"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en La Reina →",
+        "ctaWhatsApp": "WhatsApp: proyecto en La Reina",
+        "neighborhoods": [
+          "La Reina Alta",
+          "Carlos Ossandón",
+          "Trimilenio"
+        ],
+        "relatedSlugs": [
+          "las-condes",
+          "nunoa",
+          "penalolen"
+        ],
+        "faq": [
+          {
+            "q": "¿Qué necesita un consultor o estudio en La Reina?",
+            "a": "Una página que explique el servicio en 30 segundos, CTA claro y SEO básico. Evitamos repetir la misma keyword: hablamos de agenda, confianza y claridad."
+          },
+          {
+            "q": "¿Puedo contratar solo mantenimiento de una web existente?",
+            "a": "Sí. Care cubre actualizaciones, backups y cambios de contenido desde ~USD 200/mes."
+          },
+          {
+            "q": "¿Trabajan remoto con profesionales del oriente de Santiago?",
+            "a": "Sí. IrigoyenDev opera remoto; contacto andres@irigoyendev.com / WhatsApp +45 50 24 98 55."
+          }
+        ],
+        "ogTitle": "Desarrollo web en La Reina | IrigoyenDev",
+        "ogDescription": "Presencia digital sobria para servicios y negocios en La Reina.",
+        "geo": {
+          "latitude": -33.45,
+          "longitude": -70.54
+        },
+        "semanticTopics": [
+          "webs de servicios profesionales",
+          "contenido escaneable sin relleno",
+          "SEO on-page local",
+          "soporte Care para freelancers y estudios"
+        ],
+        "semanticIntro": "En La Reina trabajamos conceptos como: webs de servicios profesionales; contenido escaneable sin relleno; SEO on-page local."
+      }
+    },
+    {
+      "slug": "lo-barnechea",
+      "path": "santiago/lo-barnechea",
+      "type": "comuna",
+      "city": "Lo Barnechea",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Lo Barnechea: marcas y servicios | IrigoyenDev",
+      "metaDescription": "Producto digital cuidado para empresas, servicios premium y e-commerce en Lo Barnechea / La Dehesa. También equipos con estándares altos de marca.",
+      "h1Title": "Desarrollo web para empresas y servicios en Lo Barnechea",
+      "contentSummary": "Para marcas y servicios que exigen presentación impecable — incluyendo equipos de producto o comerciales que venden a ese mismo público.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Lo Barnechea",
+        "description": "Producto digital cuidado para empresas, servicios premium y e-commerce en Lo Barnechea / La Dehesa. También equipos con estándares altos de marca.",
+        "latitude": -33.35,
+        "longitude": -70.5167,
+        "addressLocality": "Lo Barnechea",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Lo Barnechea · Marca & servicio",
+        "h1": "Desarrollo web para empresas y servicios en Lo Barnechea",
+        "localAngle": "La Dehesa y Lo Barnechea demandan experiencias digitales cuidadas. Evitamos plantillas genéricas: jerarquía, tipografía y velocidad al servicio de la marca, sea e-commerce, web de servicios o landing de producto.",
+        "painPoints": [
+          "Sitio que no refleja el nivel del negocio offline",
+          "Checkout o reservas poco confiables",
+          "Buen tráfico de marca sin SEO técnico",
+          "Landing de campaña improvisada"
+        ],
+        "services": [
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce",
+            "desc": "Tienda propia con pagos y catálogo.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "titleKey": "fullstack",
+            "title": "Web / plataforma",
+            "desc": "Producto a medida con admin.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings",
+            "desc": "Lanzamientos y captación.",
+            "href": "/landing-pages"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Lo Barnechea →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Lo Barnechea",
+        "neighborhoods": [
+          "La Dehesa",
+          "El Arrayán",
+          "Los Trapenses"
+        ],
+        "relatedSlugs": [
+          "vitacura",
+          "las-condes"
+        ],
+        "faq": [
+          {
+            "q": "¿Cómo evitan que un e-commerce se sienta “barato” en La Dehesa?",
+            "a": "UX de checkout, tipografía, velocidad y microcopys claros. La confianza se diseña; no se improvisa con plantillas genéricas."
+          },
+          {
+            "q": "¿Tiene sentido SEO si ya tengo marca conocida?",
+            "a": "Sí. El tráfico de marca también necesita titles, schema y velocidad; evita canibalización y mejora rich results."
+          },
+          {
+            "q": "¿Cuál es el rango para una tienda online?",
+            "a": "Un producto comercial/e-commerce orientativo está en USD 3.000–10.000. Cotización en https://www.irigoyendev.com/#contact."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Lo Barnechea | IrigoyenDev",
+        "ogDescription": "Experiencias digitales exigentes en el oriente alto de Santiago.",
+        "geo": {
+          "latitude": -33.35,
+          "longitude": -70.5167
+        },
+        "semanticTopics": [
+          "checkout y reservas confiables",
+          "branding digital exigente",
+          "SEO técnico pese a tráfico de marca",
+          "lanzamientos con landing de campaña"
+        ],
+        "semanticIntro": "En Lo Barnechea trabajamos conceptos como: checkout y reservas confiables; branding digital exigente; SEO técnico pese a tráfico de marca."
+      }
+    },
+    {
+      "slug": "maipu",
+      "path": "santiago/maipu",
+      "type": "comuna",
+      "city": "Maipú",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Maipú: comercio, pymes y servicios | IrigoyenDev",
+      "metaDescription": "Tiendas online, landings y SEO local para retail, servicios y emprendedores en Maipú. Canal digital propio sin complejidad innecesaria.",
+      "h1Title": "Desarrollo web y e-commerce para comercio y servicios en Maipú",
+      "contentSummary": "Foco en retail, servicios y emprendedores de alto volumen local. Si además tienes un producto digital o servicio B2B desde Maipú, adaptamos el mismo stack a landings de captación.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Maipú",
+        "description": "Tiendas online, landings y SEO local para retail, servicios y emprendedores en Maipú. Canal digital propio sin complejidad innecesaria.",
+        "latitude": -33.511,
+        "longitude": -70.7581,
+        "addressLocality": "Maipú",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Maipú · Comercio & pymes",
+        "h1": "Desarrollo web y e-commerce para comercio y servicios en Maipú",
+        "localAngle": "Maipú es polo comercial de la RM. Priorizamos móvil, velocidad y CTAs (WhatsApp / compra). El tono es directo y operativo — sin jerga startup innecesaria, salvo que el cliente sea tech.",
+        "painPoints": [
+          "Vender solo por Instagram sin catálogo web",
+          "Sitios lentos en conexiones móviles",
+          "Poca diferenciación frente a competencia local",
+          "Sin medición de leads o ventas"
+        ],
+        "services": [
+          {
+            "titleKey": "ecommerce",
+            "title": "Tienda online",
+            "desc": "Catálogo y checkout para vender online.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landing de oferta",
+            "desc": "Captura leads de Ads o redes.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO local",
+            "desc": "Base técnica para aparecer en Google.",
+            "href": "/servicios#seo-basico"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Maipú →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Maipú",
+        "neighborhoods": [
+          "Ciudad Satélite",
+          "Plaza de Maipú",
+          "Rinconada"
+        ],
+        "relatedSlugs": [
+          "santiago-centro",
+          "nunoa"
+        ],
+        "faq": [
+          {
+            "q": "¿Integran Mercado Pago u otras pasarelas para tiendas en Maipú?",
+            "a": "Sí. Elegimos pasarela según giro y volumen (Mercado Pago, Transbank, Getnet, etc.) y la dejamos documentada en la cotización."
+          },
+          {
+            "q": "¿Qué priorizan en un retail de alto tráfico peatonal/digital?",
+            "a": "Móvil primero, velocidad y CTA obvio (comprar / WhatsApp). Menos jerga startup; más conversión operativa."
+          },
+          {
+            "q": "¿Cuánto cuesta empezar con una landing de oferta?",
+            "a": "Desde ~USD 600 orientativos. Ideal para campañas Ads o lanzamientos de catálogo."
+          }
+        ],
+        "ogTitle": "E-commerce y webs en Maipú | IrigoyenDev",
+        "ogDescription": "Conversión práctica para el polo comercial de Maipú.",
+        "geo": {
+          "latitude": -33.511,
+          "longitude": -70.7581
+        },
+        "semanticTopics": [
+          "pasarelas de pago en Chile",
+          "catálogo móvil de alto volumen",
+          "CTAs de compra y WhatsApp",
+          "SEO local para retail"
+        ],
+        "semanticIntro": "En Maipú trabajamos conceptos como: pasarelas de pago en Chile; catálogo móvil de alto volumen; CTAs de compra y WhatsApp."
+      }
+    },
+    {
+      "slug": "penalolen",
+      "path": "santiago/penalolen",
+      "type": "comuna",
+      "city": "Peñalolén",
+      "region": "Región Metropolitana",
+      "countryCode": "CL",
+      "parentSlug": "santiago",
+      "metaTitle": "Desarrollo web en Peñalolén: servicios y negocios locales | IrigoyenDev",
+      "metaDescription": "Webs, landings y e-commerce para servicios y empresas en Peñalolén. SEO local y conversión — también emprendedores digitales de la comuna.",
+      "h1Title": "Desarrollo web para servicios y negocios en Peñalolén",
+      "contentSummary": "Para empresas de servicios y comercio que necesitan aparecer en Google y captar contacto — incluyendo emprendedores digitales que operan desde la comuna.",
+      "localBusinessSchema": {
+        "telephone": "+45-5024-9855",
+        "email": "andres@irigoyendev.com",
+        "priceRange": "$$-$$$",
+        "addressCountry": "CL",
+        "name": "IrigoyenDev — Peñalolén",
+        "description": "Webs, landings y e-commerce para servicios y empresas en Peñalolén. SEO local y conversión — también emprendedores digitales de la comuna.",
+        "latitude": -33.4861,
+        "longitude": -70.5444,
+        "addressLocality": "Peñalolén",
+        "addressRegion": "Región Metropolitana",
+        "serviceType": [
+          "Desarrollo web",
+          "SEO",
+          "E-commerce"
+        ]
+      },
+      "content": {
+        "eyebrow": "Santiago · Peñalolén · Servicios locales",
+        "h1": "Desarrollo web para servicios y negocios en Peñalolén",
+        "localAngle": "Peñalolén crece en servicios y comercio. Sitios claros, prueba social y CTA inmediato; si el perfil es más tech, usamos el mismo esqueleto para landing de producto o captación.",
+        "painPoints": [
+          "No aparecer en búsquedas servicio + comuna",
+          "Constructor lento y poco flexible",
+          "Sin medición de conversiones",
+          "Oferta digital sin página propia"
+        ],
+        "services": [
+          {
+            "titleKey": "landing",
+            "title": "Landing / web de servicios",
+            "desc": "Estructura clara + CTA.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO & GEO",
+            "desc": "Schema y contenido citables.",
+            "href": "/servicios#seo-geo"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce",
+            "desc": "Venta online con canal propio.",
+            "href": "/crear-tienda-online"
+          }
+        ],
+        "ctaPrimary": "Cotizar proyecto en Peñalolén →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Peñalolén",
+        "neighborhoods": [
+          "Consistorial",
+          "Lo Hermida",
+          "Peñalolén Alto"
+        ],
+        "relatedSlugs": [
+          "la-reina",
+          "nunoa",
+          "las-condes"
+        ],
+        "faq": [
+          {
+            "q": "¿Cómo aparecen en búsquedas del tipo servicio + Peñalolén?",
+            "a": "Con títulos honestos, NAP coherente, schema y contenido que responde la duda del vecino — no con repetir la misma frase 20 veces."
+          },
+          {
+            "q": "¿Qué es GEO además del SEO clásico?",
+            "a": "Preparar el sitio para que motores generativos (y Google) puedan citar hechos claros: servicios, zonas, precios orientativos y FAQs únicas."
+          },
+          {
+            "q": "¿Quién es IrigoyenDev y cómo contacto?",
+            "a": "IrigoyenDev (Andrés Irigoyen). Email andres@irigoyendev.com, WhatsApp +45 50 24 98 55, web https://www.irigoyendev.com. Operamos remoto para clientes en Chile."
+          }
+        ],
+        "ogTitle": "Desarrollo web en Peñalolén | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios y comercio en Peñalolén.",
+        "geo": {
+          "latitude": -33.4861,
+          "longitude": -70.5444
+        },
+        "semanticTopics": [
+          "SEO local y GEO (contenido citables)",
+          "schema para servicios de barrio",
+          "captación de leads de servicios",
+          "e-commerce ligero"
+        ],
+        "semanticIntro": "En Peñalolén trabajamos conceptos como: SEO local y GEO (contenido citables); schema para servicios de barrio; captación de leads de servicios."
+      }
+    }
+  ]
+}

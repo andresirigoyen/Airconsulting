@@ -204,11 +204,10 @@ function applyTranslations(translations) {
     document.title = translations[titleKey];
   }
 
-  const metaDesc = document.querySelector('meta[name="description"][data-i18n-content]');
-  if (metaDesc) {
-    const key = metaDesc.getAttribute('data-i18n-content');
-    if (translations[key]) metaDesc.setAttribute('content', translations[key]);
-  }
+  document.querySelectorAll('[data-i18n-content]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-content');
+    if (key && translations[key]) el.setAttribute('content', translations[key]);
+  });
 }
 
 /* —— Currency selector (USD base → EUR, CLP, DKK, NOK) —— */

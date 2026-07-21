@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { chileMultiregionAreaServed } from './lib/chile-geo.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -66,6 +67,29 @@ const pages = [
       },
       {
         '@context': 'https://schema.org',
+        '@type': ['ProfessionalService', 'LocalBusiness'],
+        '@id': `${SITE}/#business`,
+        name: 'IrigoyenDev',
+        alternateName: 'Irigoyen Dev',
+        url: `${SITE}/`,
+        image: OG_DEFAULT,
+        logo: `${SITE}/favicon.svg`,
+        description:
+          'Desarrollo web full stack: e-commerce, landings y plataformas. Atención remota para Chile, Noruega y clientes internacionales.',
+        telephone: '+45-5024-9855',
+        email: 'andres@irigoyendev.com',
+        priceRange: '$$-$$$',
+        founder: { '@id': `${SITE}/#person` },
+        areaServed: [
+          { '@type': 'Country', name: 'Chile' },
+          { '@type': 'Country', name: 'Norway' },
+          { '@type': 'Country', name: 'Denmark' },
+          { '@type': 'Country', name: 'Spain' },
+        ],
+        sameAs: [`${SITE}/`, 'https://github.com/andresirigoyen'],
+      },
+      {
+        '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         '@id': `${SITE}/#service`,
         name: 'IrigoyenDev',
@@ -74,13 +98,9 @@ const pages = [
         description:
           'Desarrollo web full stack freelance: tiendas online, landing pages y plataformas de negocio.',
         provider: { '@id': `${SITE}/#person` },
+        parentOrganization: { '@id': `${SITE}/#business` },
         telephone: '+45-5024-9855',
-        areaServed: [
-          { '@type': 'Country', name: 'Denmark' },
-          { '@type': 'Country', name: 'Chile' },
-          { '@type': 'Country', name: 'Spain' },
-          'Worldwide',
-        ],
+        areaServed: chileMultiregionAreaServed(),
         serviceType: [
           'Desarrollo web full stack',
           'E-commerce',
@@ -397,12 +417,12 @@ const pages = [
   }),
   project({
     slug: 'floreria',
-    title: 'Florería El Nuevo Pensamiento — Web local SEO | Caso IrigoyenDev',
+    title: 'Florería en Valparaíso — Caso de éxito Quinta Región | IrigoyenDev',
     description:
-      'Caso real: web comercial para florería en Valparaíso — SEO local, catálogo visual, WhatsApp y despliegue en Vercel.',
-    ogTitle: 'Florería El Nuevo Pensamiento — Web local | IrigoyenDev',
+      'Caso real en Valparaíso (Región de Valparaíso): web comercial con SEO local, catálogo visual y conversión por WhatsApp para Florería El Nuevo Pensamiento.',
+    ogTitle: 'Florería El Nuevo Pensamiento — Valparaíso | IrigoyenDev',
     ogDescription:
-      'Sitio estático rápido con SEO local, catálogo y conversión por WhatsApp.',
+      'Éxito comercial digital en la Quinta Región: sitio estático rápido, SEO local y embudo a WhatsApp.',
     ogImage: `${SITE}/images/Elnuevopensamiento/Captura%20de%20pantalla%202026-05-22%20171418.png`,
   }),
 ];
@@ -437,7 +457,7 @@ function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescrip
         description,
         url,
         provider: { '@id': `${SITE}/#person` },
-        areaServed: ['Denmark', 'Chile', 'Spain', 'Worldwide'],
+        areaServed: chileMultiregionAreaServed(),
       },
     ],
   };

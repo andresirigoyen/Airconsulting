@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "hub": {
+    "seo": {
+      "metaTitle": "Blog IrigoyenDev | E-commerce, leads y desarrollo web en Chile",
+      "metaDescription": "Artículos prácticos sobre e-commerce en Chile, captación de leads, pasarelas de pago y desarrollo web para empresas en regiones.",
+      "ogTitle": "Blog IrigoyenDev",
+      "ogDescription": "Guías técnicas para empresas chilenas que quieren vender y captar clientes online."
+    },
+    "content": {
+      "eyebrow": "Recursos · Chile",
+      "h1": "Blog: desarrollo web, e-commerce y leads en Chile",
+      "lead": "Contenido informacional para empresas que investigan cómo digitalizarse — antes de contratar. Enfoque práctico, sin relleno."
+    }
+  },
+  "posts": [
+    {
+      "slug": "automatizar-captacion-leads-norte-chile",
+      "date": "2026-07-18",
+      "seo": {
+        "metaTitle": "Cómo automatizar la captación de leads en el norte de Chile | IrigoyenDev",
+        "metaDescription": "Guía para empresas de servicios en Antofagasta y el Norte Grande: landings, WhatsApp, formularios y seguimiento sin perder oportunidades B2B.",
+        "ogTitle": "Automatizar captación de leads en el norte de Chile",
+        "ogDescription": "Landings, formularios y flujos para proveedores e industria en Antofagasta y Calama."
+      },
+      "content": {
+        "title": "Cómo automatizar la captación de leads en empresas de servicios en el norte de Chile",
+        "excerpt": "En minería y servicios industriales, el lead llega tarde o se pierde en el correo. Esta guía resume un stack simple: landing + formulario + WhatsApp + seguimiento.",
+        "regions": ["Antofagasta", "Calama", "Norte Grande"],
+        "body": [
+          {
+            "type": "p",
+            "text": "En Antofagasta y Calama muchas empresas de servicios aún reciben solicitudes por correo, WhatsApp personal o referidos. Funciona… hasta que el volumen sube o el comercial está en faena."
+          },
+          {
+            "type": "h2",
+            "text": "1. Una landing con una sola oferta"
+          },
+          {
+            "type": "p",
+            "text": "No hace falta un sitio de 20 páginas para empezar. Una landing que explique el servicio, credenciales y un CTA claro (cotizar / hablar) convierte mejor que un brochure genérico. En el norte, el visitante B2B busca seriedad y velocidad de respuesta."
+          },
+          {
+            "type": "h2",
+            "text": "2. Formulario corto + WhatsApp Business"
+          },
+          {
+            "type": "p",
+            "text": "Campos mínimos: nombre, empresa, necesidad, teléfono. Duplica el canal con un botón a WhatsApp con mensaje prellenado (“Hola, vi su web y necesito…”). Así no dependes de que abran el correo el mismo día."
+          },
+          {
+            "type": "h2",
+            "text": "3. Notificación y registro"
+          },
+          {
+            "type": "p",
+            "text": "Cada lead debe generar un email interno (o fila en un CRM liviano) con fecha y origen UTM. Sin eso, no hay automatización real: solo mensajes sueltos."
+          },
+          {
+            "type": "h2",
+            "text": "4. Siguiente paso: portal o panel"
+          },
+          {
+            "type": "p",
+            "text": "Cuando el flujo se estabiliza, un panel de solicitudes o portal de proveedores evita que todo viva en planillas. Eso es especialmente útil para contratistas que atienden varias faenas."
+          },
+          {
+            "type": "p",
+            "text": "Si quieres aterrizar esto en Antofagasta o Calama, revisa nuestra landing regional de desarrollo web en el Norte Grande o pide un plan de proyecto."
+          }
+        ],
+        "ctaHref": "/desarrollo-web-antofagasta",
+        "ctaLabel": "Ver servicios en Antofagasta →"
+      }
+    },
+    {
+      "slug": "pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet",
+      "date": "2026-07-18",
+      "seo": {
+        "metaTitle": "Pasarelas de pago en Chile: Transbank vs Mercado Pago vs Getnet | IrigoyenDev",
+        "metaDescription": "Comparativa práctica de pasarelas para e-commerce en Chile: Transbank, Mercado Pago y Getnet. Qué evaluar antes de integrar tu tienda online.",
+        "ogTitle": "Pasarelas de pago para e-commerce en Chile",
+        "ogDescription": "Transbank, Mercado Pago y Getnet: criterios técnicos y de negocio para tu tienda."
+      },
+      "content": {
+        "title": "Pasarelas de pago que mejor funcionan en Chile para e-commerce (Transbank vs Mercado Pago vs Getnet)",
+        "excerpt": "Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack.",
+        "regions": ["Chile"],
+        "body": [
+          {
+            "type": "p",
+            "text": "Si vendes online en Chile, la pasarela define cuántos checkouts se completan. Aquí un marco práctico —no una tabla de comisiones que cambia cada trimestre— para decidir con criterio técnico."
+          },
+          {
+            "type": "h2",
+            "text": "Qué evaluar (más allá de la comisión)"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tiempo y requisitos de alta (empresa, giro, historial)",
+              "Medios: débito, crédito, cuotas, prepago",
+              "UX móvil y redirecciones vs embebido",
+              "Webhooks / confirmación de pago confiable",
+              "Contracargos, soporte y liquidaciones",
+              "Encaje con tu tienda (custom, Shopify, etc.)"
+            ]
+          },
+          {
+            "type": "h2",
+            "text": "Transbank"
+          },
+          {
+            "type": "p",
+            "text": "Referente histórico en Chile. Suele ser opción fuerte cuando el negocio necesita percepción de “banco tradicional” y un flujo ampliamente reconocido por el usuario local. La integración y el onboarding deben planificarse con tiempo."
+          },
+          {
+            "type": "h2",
+            "text": "Mercado Pago"
+          },
+          {
+            "type": "p",
+            "text": "Muy usado por pymes y e-commerce que ya viven en el ecosistema Mercado Libre. Onboarding a menudo más ágil; útil para validar ventas rápido. Revisa comisiones, liquidaciones y si tu marca quiere depender de ese ecosistema."
+          },
+          {
+            "type": "h2",
+            "text": "Getnet (y otras adquirentes)"
+          },
+          {
+            "type": "p",
+            "text": "Alternativas adquirentes entran fuerte en retail y omnichannel. Evalúa documentación API, ambiente sandbox y soporte cuando el checkout falle en producción — el costo real aparece en los bordes."
+          },
+          {
+            "type": "h2",
+            "text": "Recomendación de arquitectura"
+          },
+          {
+            "type": "p",
+            "text": "Diseña el checkout para poder cambiar de proveedor (capa de abstracción / webhooks propios). No acoples la lógica de stock y pedidos solo al SDK de una pasarela."
+          },
+          {
+            "type": "p",
+            "text": "¿Estás armando tienda en Valparaíso, Santiago u otra región? Podemos cotizar e-commerce con la pasarela que mejor calce a tu giro."
+          }
+        ],
+        "ctaHref": "/crear-tienda-online",
+        "ctaLabel": "Ver servicio de tienda online →"
+      }
+    }
+  ]
+}

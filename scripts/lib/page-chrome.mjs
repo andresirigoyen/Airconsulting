@@ -1,0 +1,232 @@
+/**
+ * Shared HTML chrome for generated marketing / location pages.
+ * Locale / market labels come from the caller (geo-markets) — no Chile hardcoding.
+ */
+export const SITE = 'https://www.irigoyendev.com';
+export const OG_DEFAULT = `${SITE}/images/og-image.png`;
+
+export const WA_BASE = 'https://wa.me/+4550249855?text=';
+
+/** @param {string} message */
+export function waLink(message) {
+  return `${WA_BASE}${encodeURIComponent(message)}`;
+}
+
+/** @param {string} s */
+export function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/** @param {string} s */
+export function escapeAttr(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+/**
+ * @typedef {object} HeadOptions
+ * @property {string} title
+ * @property {string} description
+ * @property {string} canonicalPath
+ * @property {string} [ogTitle]
+ * @property {string} [ogDescription]
+ * @property {string} [ogImage]
+ * @property {string} [robots]
+ * @property {string} [geoRegion]
+ * @property {string} [geoPlacename]
+ * @property {string} [icbm]
+ * @property {string} [hreflang]
+ * @property {string} [ogLocale]
+ * @property {string} [ogLocaleAlternate]
+ * @property {object[]} [jsonLd]
+ */
+
+/**
+ * Build <head> SEO block. Canonical is always absolute SITE + path.
+ * @param {HeadOptions} opts
+ */
+export function buildHead(opts) {
+  const rawPath = opts.canonicalPath || '/';
+  const path = rawPath.startsWith('/') ? rawPath : `/${rawPath}`;
+  const canonical = `${SITE}${path === '/' ? '/' : path}`;
+  const ogTitle = opts.ogTitle || opts.title;
+  const ogDescription = opts.ogDescription || opts.description;
+  const ogImage = opts.ogImage || OG_DEFAULT;
+  const robots =
+    opts.robots ||
+    'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  const hreflang = opts.hreflang || 'es-CL';
+  const ogLocale = opts.ogLocale || 'es_CL';
+  const ogLocaleAlt = opts.ogLocaleAlternate || 'es_ES';
+
+  const jsonLd =
+    opts.jsonLd && opts.jsonLd.length
+      ? opts.jsonLd
+          .map((block) => {
+            const body = JSON.stringify(block, null, 2)
+              .split('\n')
+              .map((l) => `    ${l}`)
+              .join('\n');
+            return `    <script type="application/ld+json">\n${body}\n    </script>`;
+          })
+          .join('\n')
+      : '';
+
+  return `    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme'); } catch (_) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <title>${escapeHtml(opts.title)}</title>
+    <meta name="description" content="${escapeAttr(opts.description)}">
+    <meta name="author" content="Andrés Irigoyen">
+    <meta name="robots" content="${robots}">
+    <meta name="googlebot" content="${robots}">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="${canonical}">
+    <link rel="alternate" hreflang="${escapeAttr(hreflang)}" href="${canonical}">
+    <link rel="alternate" hreflang="x-default" href="${canonical}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="alternate" type="text/plain" title="LLM content guide" href="${SITE}/llms.txt">
+    <link rel="author" href="${SITE}/">
+    ${opts.geoRegion ? `<meta name="geo.region" content="${escapeAttr(opts.geoRegion)}">` : ''}
+    ${opts.geoPlacename ? `<meta name="geo.placename" content="${escapeAttr(opts.geoPlacename)}">` : ''}
+    ${opts.icbm ? `<meta name="ICBM" content="${escapeAttr(opts.icbm)}">` : ''}
+    <meta name="ai-content-declaration" content="human-authored">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IrigoyenDev">
+    <meta property="og:locale" content="${escapeAttr(ogLocale)}">
+    <meta property="og:locale:alternate" content="${escapeAttr(ogLocaleAlt)}">
+    <meta property="og:title" content="${escapeAttr(ogTitle)}">
+    <meta property="og:description" content="${escapeAttr(ogDescription)}">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:image" content="${ogImage}">
+    <meta property="og:image:secure_url" content="${ogImage}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="${escapeAttr(ogTitle)}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeAttr(ogTitle)}">
+    <meta name="twitter:description" content="${escapeAttr(ogDescription)}">
+    <meta name="twitter:image" content="${ogImage}">
+    <meta name="twitter:image:alt" content="${escapeAttr(ogTitle)}">
+${jsonLd ? `\n${jsonLd}\n` : ''}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css">`;
+}
+
+/**
+ * @param {object} opts
+ * @param {string} opts.headHtml
+ * @param {string} [opts.bodyClass]
+ * @param {string} opts.mainHtml
+ * @param {string} [opts.footerExtra]
+ * @param {string} [opts.htmlLang]
+ * @param {string} [opts.skipLink]
+ * @param {string} [opts.footerGeo]
+ * @param {{href:string,label:string}[]} [opts.footerMarketLinks]
+ */
+export function renderPage({
+  headHtml,
+  bodyClass = 'page-marketing page-location',
+  mainHtml,
+  footerExtra = '',
+  htmlLang = 'es-CL',
+  skipLink = 'Saltar al contenido',
+  footerGeo = 'Remote · WhatsApp',
+  footerMarketLinks = [],
+}) {
+  const wa = waLink(
+    '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.'
+  );
+  const marketNav = footerMarketLinks
+    .map((l) => `<a href="${escapeAttr(l.href)}">${escapeHtml(l.label)}</a>`)
+    .join('\n                ');
+
+  return `<!DOCTYPE html>
+<html lang="${escapeAttr(htmlLang)}">
+<head>
+${headHtml}
+</head>
+<body class="${bodyClass}">
+    <a class="skip-link" href="#main-content">${escapeHtml(skipLink)}</a>
+    <header class="site-header">
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
+        <div class="container navbar-inner">
+            <a href="/" class="logo" aria-label="IrigoyenDev — Inicio"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="/servicios" data-i18n="nav.services">Servicios</a>
+                <a href="/#projects" data-i18n="nav.projects">Resultados</a>
+                <a href="/precios" data-i18n="nav.pricing">Precios</a>
+                <a href="/#contact" class="nav-cta" data-i18n="nav.contact">Cotizar</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="lang-selector-container">
+                    <button id="lang-menu-btn" class="lang-btn" type="button" aria-label="Seleccionar idioma" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div id="lang-dropdown" class="lang-dropdown" role="listbox" aria-label="Idiomas">
+                        <label class="lang-option"><span class="lang-name">English</span><input type="radio" name="lang" value="en" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Español</span><input type="radio" name="lang" value="es" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Deutsch</span><input type="radio" name="lang" value="de" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Dansk</span><input type="radio" name="lang" value="da" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Norsk</span><input type="radio" name="lang" value="no" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Svenska</span><input type="radio" name="lang" value="sv" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Italiano</span><input type="radio" name="lang" value="it" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Français</span><input type="radio" name="lang" value="fr" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Português</span><input type="radio" name="lang" value="pt" class="lang-radio"><div class="toggle-switch"></div></label>
+                    </div>
+                </div>
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+${mainHtml}
+
+    <footer class="footer site-footer">
+        <div class="container footer-seo">
+            <p>&copy; 2026 IrigoyenDev. Productos web hechos para vender y convertir.</p>
+            <nav class="footer-links" aria-label="Enlaces">
+                <a href="/servicios">Servicios</a>
+                ${marketNav}
+                <a href="/blog">Blog</a>
+                <a href="/crear-tienda-online">Tienda online</a>
+                <a href="/landing-pages">Landing pages</a>
+                <a href="/precios">Precios</a>
+                <a href="/#contact">Contacto</a>
+            </nav>
+            ${footerExtra}
+            <p class="footer-geo">${escapeHtml(footerGeo)} · WhatsApp <a href="${wa}">+45 50 24 98 55</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+    <a href="${wa}" target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chatear por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+</body>
+</html>
+`;
+}
