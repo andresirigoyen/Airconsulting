@@ -21,6 +21,7 @@
     "build:geo:from-legacy": "npm run sync:geo && npm run build:geo",
     "audit:locations": "node scripts/audit-location-sitemap.mjs",
     "audit:geo": "node scripts/audit-location-sitemap.mjs",
+    "indexnow": "node scripts/ping-indexnow.mjs",
     "i18n:complete": "node scripts/complete-locales.mjs",
     "i18n:audit": "node scripts/audit-i18n.mjs",
     "audit:routes": "node scripts/audit-routes.mjs",

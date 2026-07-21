@@ -41,7 +41,7 @@
       ]
     },
     {
-      "source": "/(robots\\.txt|sitemap\\.xml|llms\\.txt|ai\\.txt|humans\\.txt|site\\.webmanifest)",
+      "source": "/(robots\\.txt|sitemap\\.xml|llms\\.txt|ai\\.txt|humans\\.txt|site\\.webmanifest|6pdb2ygto7mkl9ize03fhvc1x5ajrn8q\\.txt)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" },
         { "key": "X-Content-Type-Options", "value": "nosniff" }
