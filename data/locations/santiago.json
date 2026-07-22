@@ -6,7 +6,10 @@
     "region": "Región Metropolitana",
     "countryCode": "CL",
     "countryName": "Chile",
-    "geo": { "latitude": -33.4489, "longitude": -70.6693 },
+    "geo": {
+      "latitude": -33.4489,
+      "longitude": -70.6693
+    },
     "hreflang": "es-CL",
     "hub": {
       "seo": {
@@ -54,8 +57,8 @@
           "a": "Sí. Diseñamos, desarrollamos y lanzamos en remoto (videollamada / WhatsApp). La entrega es digital; no hace falta oficina en cada comuna."
         },
         {
-          "q": "¿Qué comunas de Santiago cubren?",
-          "a": "Publicamos páginas para Las Condes, Providencia, Vitacura, Ñuñoa, Santiago Centro, La Reina, Lo Barnechea, Maipú y Peñalolén. Si tu comuna no aparece, escríbenos igual."
+          "q": "¿Qué comunas de la Región Metropolitana cubren?",
+          "a": "Publicamos páginas para las 52 comunas de la Región Metropolitana: Alhué, Buin, Calera de Tango, Cerrillos, Cerro Navia, Colina, Conchalí, Curacaví, El Bosque, El Monte, Estación Central, Huechuraba, Independencia, Isla de Maipo, La Cisterna, La Florida, La Granja, La Pintana, La Reina, Lampa, Las Condes, Lo Barnechea, Lo Espejo, Lo Prado, Macul, Maipú, María Pinto, Melipilla, Ñuñoa, Padre Hurtado, Paine, Pedro Aguirre Cerda, Peñaflor, Peñalolén, Pirque, Providencia, Pudahuel, Puente Alto, Quilicura, Quinta Normal, Recoleta, Renca, San Bernardo, San Joaquín, San José de Maipo, San Miguel, San Pedro, San Ramón, Santiago Centro, Talagante, Tiltil, Vitacura."
         }
       ]
     }
@@ -64,9 +67,21 @@
     {
       "slug": "las-condes",
       "name": "Las Condes",
-      "geo": { "latitude": -33.4153, "longitude": -70.5833 },
-      "neighborhoods": ["El Golf", "Alto Las Condes", "San Carlos de Apoquindo", "Los Dominicos"],
-      "relatedSlugs": ["providencia", "vitacura", "la-reina"],
+      "geo": {
+        "latitude": -33.4153,
+        "longitude": -70.5833
+      },
+      "neighborhoods": [
+        "El Golf",
+        "Alto Las Condes",
+        "San Carlos de Apoquindo",
+        "Los Dominicos"
+      ],
+      "relatedSlugs": [
+        "providencia",
+        "vitacura",
+        "la-reina"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Las Condes: tech, scale-ups y B2B | IrigoyenDev",
         "metaDescription": "Plataformas, landings y e-commerce para empresas de tecnología, scale-ups y servicios B2B en Las Condes. También retail y marcas del oriente de Santiago.",
@@ -85,9 +100,24 @@
           "Tienda o catálogo desactualizado frente a la competencia del sector"
         ],
         "services": [
-          { "titleKey": "fullstack", "title": "Plataforma / producto web", "desc": "Admin, roles y flujos para operar el negocio o el SaaS.", "href": "/servicios" },
-          { "titleKey": "landing", "title": "Landings de captación", "desc": "Demos, waitlists y ofertas B2B con CTA claro.", "href": "/landing-pages" },
-          { "titleKey": "ecommerce", "title": "E-commerce comercial", "desc": "Canal propio para marcas y retail del oriente.", "href": "/crear-tienda-online" }
+          {
+            "titleKey": "fullstack",
+            "title": "Plataforma / producto web",
+            "desc": "Admin, roles y flujos para operar el negocio o el SaaS.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings de captación",
+            "desc": "Demos, waitlists y ofertas B2B con CTA claro.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce comercial",
+            "desc": "Canal propio para marcas y retail del oriente.",
+            "href": "/crear-tienda-online"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Las Condes →",
         "ctaWhatsApp": "WhatsApp: proyecto tech/servicios en Las Condes"
@@ -106,9 +136,21 @@
     {
       "slug": "providencia",
       "name": "Providencia",
-      "geo": { "latitude": -33.4310, "longitude": -70.6093 },
-      "neighborhoods": ["Los Leones", "Manuel Montt", "Pedro de Valdivia", "Inés de Suárez"],
-      "relatedSlugs": ["las-condes", "nunoa", "santiago-centro"],
+      "geo": {
+        "latitude": -33.431,
+        "longitude": -70.6093
+      },
+      "neighborhoods": [
+        "Los Leones",
+        "Manuel Montt",
+        "Pedro de Valdivia",
+        "Inés de Suárez"
+      ],
+      "relatedSlugs": [
+        "las-condes",
+        "nunoa",
+        "santiago-centro"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Providencia: startups y servicios | IrigoyenDev",
         "metaDescription": "Landings, webs de producto y SEO para startups, agencias y servicios profesionales en Providencia. También clínicas, retail y pymes del barrio.",
@@ -127,9 +169,24 @@
           "Dependencia total de Instagram sin canal propio"
         ],
         "services": [
-          { "titleKey": "landing", "title": "Landing de startup / oferta", "desc": "Mensaje, prueba social y CTA a demo o waitlist.", "href": "/landing-pages" },
-          { "titleKey": "seo", "title": "SEO técnico", "desc": "Base on-page y schema para aparecer en Google.", "href": "/servicios#seo-basico" },
-          { "titleKey": "care", "title": "Plan Care", "desc": "Iterar contenido y mantener el producto mes a mes.", "href": "/precios#care" }
+          {
+            "titleKey": "landing",
+            "title": "Landing de startup / oferta",
+            "desc": "Mensaje, prueba social y CTA a demo o waitlist.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO técnico",
+            "desc": "Base on-page y schema para aparecer en Google.",
+            "href": "/servicios#seo-basico"
+          },
+          {
+            "titleKey": "care",
+            "title": "Plan Care",
+            "desc": "Iterar contenido y mantener el producto mes a mes.",
+            "href": "/precios#care"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Providencia →",
         "ctaWhatsApp": "WhatsApp: startup o servicios en Providencia"
@@ -148,9 +205,20 @@
     {
       "slug": "vitacura",
       "name": "Vitacura",
-      "geo": { "latitude": -33.3900, "longitude": -70.5750 },
-      "neighborhoods": ["Santa María de Manquehue", "Lo Curro", "Garden Lower"],
-      "relatedSlugs": ["las-condes", "lo-barnechea", "la-reina"],
+      "geo": {
+        "latitude": -33.39,
+        "longitude": -70.575
+      },
+      "neighborhoods": [
+        "Santa María de Manquehue",
+        "Lo Curro",
+        "Garden Lower"
+      ],
+      "relatedSlugs": [
+        "las-condes",
+        "lo-barnechea",
+        "la-reina"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Vitacura: producto premium y tech | IrigoyenDev",
         "metaDescription": "Sitios y plataformas de alto rendimiento para marcas, fintech-adjacent y servicios premium en Vitacura. Performance, marca y conversión.",
@@ -169,9 +237,24 @@
           "Checkout o reservas que no transmiten seguridad"
         ],
         "services": [
-          { "titleKey": "fullstack", "title": "Producto / plataforma", "desc": "Web corporativa o admin a la altura de la marca.", "href": "/servicios" },
-          { "titleKey": "landing", "title": "Landings de campaña", "desc": "Mensaje preciso para growth o lanzamientos.", "href": "/landing-pages" },
-          { "titleKey": "ecommerce", "title": "E-commerce selecto", "desc": "Tienda propia con UX cuidada y SEO.", "href": "/crear-tienda-online" }
+          {
+            "titleKey": "fullstack",
+            "title": "Producto / plataforma",
+            "desc": "Web corporativa o admin a la altura de la marca.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings de campaña",
+            "desc": "Mensaje preciso para growth o lanzamientos.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce selecto",
+            "desc": "Tienda propia con UX cuidada y SEO.",
+            "href": "/crear-tienda-online"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Vitacura →",
         "ctaWhatsApp": "WhatsApp: proyecto en Vitacura"
@@ -186,9 +269,20 @@
     {
       "slug": "nunoa",
       "name": "Ñuñoa",
-      "geo": { "latitude": -33.4569, "longitude": -70.5975 },
-      "neighborhoods": ["Plaza Ñuñoa", "Villa Frei", "Juan Gómez Millas"],
-      "relatedSlugs": ["providencia", "santiago-centro", "la-reina"],
+      "geo": {
+        "latitude": -33.4569,
+        "longitude": -70.5975
+      },
+      "neighborhoods": [
+        "Plaza Ñuñoa",
+        "Villa Frei",
+        "Juan Gómez Millas"
+      ],
+      "relatedSlugs": [
+        "providencia",
+        "santiago-centro",
+        "la-reina"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Ñuñoa: startups early y pymes | IrigoyenDev",
         "metaDescription": "Landings y webs ágiles para emprendedores tech, servicios y comercio en Ñuñoa. Validar oferta, vender online y aparecer en Google.",
@@ -207,9 +301,24 @@
           "Precios y oferta poco claros en móvil"
         ],
         "services": [
-          { "titleKey": "landing", "title": "Landing de validación", "desc": "Ideal para MVP, cursos o servicios nuevos.", "href": "/landing-pages" },
-          { "titleKey": "ecommerce", "title": "Tienda / catálogo", "desc": "Canal propio para comercio local.", "href": "/crear-tienda-online" },
-          { "titleKey": "seo", "title": "SEO básico", "desc": "Indexación limpia desde el día uno.", "href": "/servicios#seo-basico" }
+          {
+            "titleKey": "landing",
+            "title": "Landing de validación",
+            "desc": "Ideal para MVP, cursos o servicios nuevos.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "Tienda / catálogo",
+            "desc": "Canal propio para comercio local.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO básico",
+            "desc": "Indexación limpia desde el día uno.",
+            "href": "/servicios#seo-basico"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Ñuñoa →",
         "ctaWhatsApp": "WhatsApp: proyecto en Ñuñoa"
@@ -224,9 +333,21 @@
     {
       "slug": "santiago-centro",
       "name": "Santiago Centro",
-      "geo": { "latitude": -33.4372, "longitude": -70.6506 },
-      "neighborhoods": ["Barrio Lastarria", "Plaza de Armas", "Barrio Civico", "Brasil"],
-      "relatedSlugs": ["providencia", "nunoa", "maipu"],
+      "geo": {
+        "latitude": -33.4372,
+        "longitude": -70.6506
+      },
+      "neighborhoods": [
+        "Barrio Lastarria",
+        "Plaza de Armas",
+        "Barrio Civico",
+        "Brasil"
+      ],
+      "relatedSlugs": [
+        "providencia",
+        "nunoa",
+        "maipu"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Santiago Centro: servicios y comercio | IrigoyenDev",
         "metaDescription": "Webs y plataformas para oficinas, servicios y retail del centro de Santiago. También equipos tech y B2B con sede céntrica.",
@@ -245,9 +366,24 @@
           "Equipo comercial sin landing de campaña"
         ],
         "services": [
-          { "titleKey": "fullstack", "title": "Web / plataforma", "desc": "Estructura, CMS o admin según operación.", "href": "/servicios" },
-          { "titleKey": "landing", "title": "Landings de campaña", "desc": "Captación de leads con mensaje único.", "href": "/landing-pages" },
-          { "titleKey": "care", "title": "Mantenimiento Care", "desc": "Soporte continuo post-lanzamiento.", "href": "/precios#care" }
+          {
+            "titleKey": "fullstack",
+            "title": "Web / plataforma",
+            "desc": "Estructura, CMS o admin según operación.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings de campaña",
+            "desc": "Captación de leads con mensaje único.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "care",
+            "title": "Mantenimiento Care",
+            "desc": "Soporte continuo post-lanzamiento.",
+            "href": "/precios#care"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Santiago Centro →",
         "ctaWhatsApp": "WhatsApp: proyecto en Santiago Centro"
@@ -262,9 +398,20 @@
     {
       "slug": "la-reina",
       "name": "La Reina",
-      "geo": { "latitude": -33.4500, "longitude": -70.5400 },
-      "neighborhoods": ["La Reina Alta", "Carlos Ossandón", "Trimilenio"],
-      "relatedSlugs": ["las-condes", "nunoa", "penalolen"],
+      "geo": {
+        "latitude": -33.45,
+        "longitude": -70.54
+      },
+      "neighborhoods": [
+        "La Reina Alta",
+        "Carlos Ossandón",
+        "Trimilenio"
+      ],
+      "relatedSlugs": [
+        "las-condes",
+        "nunoa",
+        "penalolen"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en La Reina: servicios profesionales y pymes | IrigoyenDev",
         "metaDescription": "Webs y landings para profesionales, consultores y pymes en La Reina. Clara, rápida y fácil de mantener — también perfiles tech remotos del sector.",
@@ -283,9 +430,24 @@
           "Freelance/tech sin página de servicios clara"
         ],
         "services": [
-          { "titleKey": "landing", "title": "Landing / web de servicios", "desc": "Mensaje + CTA + base SEO.", "href": "/landing-pages" },
-          { "titleKey": "seo", "title": "SEO on-page", "desc": "Títulos, meta, velocidad y estructura.", "href": "/servicios#seo-basico" },
-          { "titleKey": "care", "title": "Plan Care", "desc": "Mantenimiento mensual.", "href": "/precios#care" }
+          {
+            "titleKey": "landing",
+            "title": "Landing / web de servicios",
+            "desc": "Mensaje + CTA + base SEO.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO on-page",
+            "desc": "Títulos, meta, velocidad y estructura.",
+            "href": "/servicios#seo-basico"
+          },
+          {
+            "titleKey": "care",
+            "title": "Plan Care",
+            "desc": "Mantenimiento mensual.",
+            "href": "/precios#care"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en La Reina →",
         "ctaWhatsApp": "WhatsApp: proyecto en La Reina"
@@ -300,9 +462,19 @@
     {
       "slug": "lo-barnechea",
       "name": "Lo Barnechea",
-      "geo": { "latitude": -33.3500, "longitude": -70.5167 },
-      "neighborhoods": ["La Dehesa", "El Arrayán", "Los Trapenses"],
-      "relatedSlugs": ["vitacura", "las-condes"],
+      "geo": {
+        "latitude": -33.35,
+        "longitude": -70.5167
+      },
+      "neighborhoods": [
+        "La Dehesa",
+        "El Arrayán",
+        "Los Trapenses"
+      ],
+      "relatedSlugs": [
+        "vitacura",
+        "las-condes"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Lo Barnechea: marcas y servicios | IrigoyenDev",
         "metaDescription": "Producto digital cuidado para empresas, servicios premium y e-commerce en Lo Barnechea / La Dehesa. También equipos con estándares altos de marca.",
@@ -321,9 +493,24 @@
           "Landing de campaña improvisada"
         ],
         "services": [
-          { "titleKey": "ecommerce", "title": "E-commerce", "desc": "Tienda propia con pagos y catálogo.", "href": "/crear-tienda-online" },
-          { "titleKey": "fullstack", "title": "Web / plataforma", "desc": "Producto a medida con admin.", "href": "/servicios" },
-          { "titleKey": "landing", "title": "Landings", "desc": "Lanzamientos y captación.", "href": "/landing-pages" }
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce",
+            "desc": "Tienda propia con pagos y catálogo.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "titleKey": "fullstack",
+            "title": "Web / plataforma",
+            "desc": "Producto a medida con admin.",
+            "href": "/servicios"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landings",
+            "desc": "Lanzamientos y captación.",
+            "href": "/landing-pages"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Lo Barnechea →",
         "ctaWhatsApp": "WhatsApp: proyecto en Lo Barnechea"
@@ -338,9 +525,19 @@
     {
       "slug": "maipu",
       "name": "Maipú",
-      "geo": { "latitude": -33.5110, "longitude": -70.7581 },
-      "neighborhoods": ["Ciudad Satélite", "Plaza de Maipú", "Rinconada"],
-      "relatedSlugs": ["santiago-centro", "nunoa"],
+      "geo": {
+        "latitude": -33.511,
+        "longitude": -70.7581
+      },
+      "neighborhoods": [
+        "Ciudad Satélite",
+        "Plaza de Maipú",
+        "Rinconada"
+      ],
+      "relatedSlugs": [
+        "santiago-centro",
+        "nunoa"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Maipú: comercio, pymes y servicios | IrigoyenDev",
         "metaDescription": "Tiendas online, landings y SEO local para retail, servicios y emprendedores en Maipú. Canal digital propio sin complejidad innecesaria.",
@@ -359,9 +556,24 @@
           "Sin medición de leads o ventas"
         ],
         "services": [
-          { "titleKey": "ecommerce", "title": "Tienda online", "desc": "Catálogo y checkout para vender online.", "href": "/crear-tienda-online" },
-          { "titleKey": "landing", "title": "Landing de oferta", "desc": "Captura leads de Ads o redes.", "href": "/landing-pages" },
-          { "titleKey": "seo", "title": "SEO local", "desc": "Base técnica para aparecer en Google.", "href": "/servicios#seo-basico" }
+          {
+            "titleKey": "ecommerce",
+            "title": "Tienda online",
+            "desc": "Catálogo y checkout para vender online.",
+            "href": "/crear-tienda-online"
+          },
+          {
+            "titleKey": "landing",
+            "title": "Landing de oferta",
+            "desc": "Captura leads de Ads o redes.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO local",
+            "desc": "Base técnica para aparecer en Google.",
+            "href": "/servicios#seo-basico"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Maipú →",
         "ctaWhatsApp": "WhatsApp: proyecto en Maipú"
@@ -376,9 +588,20 @@
     {
       "slug": "penalolen",
       "name": "Peñalolén",
-      "geo": { "latitude": -33.4861, "longitude": -70.5444 },
-      "neighborhoods": ["Consistorial", "Lo Hermida", "Peñalolén Alto"],
-      "relatedSlugs": ["la-reina", "nunoa", "las-condes"],
+      "geo": {
+        "latitude": -33.4861,
+        "longitude": -70.5444
+      },
+      "neighborhoods": [
+        "Consistorial",
+        "Lo Hermida",
+        "Peñalolén Alto"
+      ],
+      "relatedSlugs": [
+        "la-reina",
+        "nunoa",
+        "las-condes"
+      ],
       "seo": {
         "metaTitle": "Desarrollo web en Peñalolén: servicios y negocios locales | IrigoyenDev",
         "metaDescription": "Webs, landings y e-commerce para servicios y empresas en Peñalolén. SEO local y conversión — también emprendedores digitales de la comuna.",
@@ -397,9 +620,24 @@
           "Oferta digital sin página propia"
         ],
         "services": [
-          { "titleKey": "landing", "title": "Landing / web de servicios", "desc": "Estructura clara + CTA.", "href": "/landing-pages" },
-          { "titleKey": "seo", "title": "SEO & GEO", "desc": "Schema y contenido citables.", "href": "/servicios#seo-geo" },
-          { "titleKey": "ecommerce", "title": "E-commerce", "desc": "Venta online con canal propio.", "href": "/crear-tienda-online" }
+          {
+            "titleKey": "landing",
+            "title": "Landing / web de servicios",
+            "desc": "Estructura clara + CTA.",
+            "href": "/landing-pages"
+          },
+          {
+            "titleKey": "seo",
+            "title": "SEO & GEO",
+            "desc": "Schema y contenido citables.",
+            "href": "/servicios#seo-geo"
+          },
+          {
+            "titleKey": "ecommerce",
+            "title": "E-commerce",
+            "desc": "Venta online con canal propio.",
+            "href": "/crear-tienda-online"
+          }
         ],
         "ctaPrimary": "Cotizar proyecto en Peñalolén →",
         "ctaWhatsApp": "WhatsApp: proyecto en Peñalolén"
@@ -408,6 +646,2244 @@
         {
           "q": "¿Cuánto tarda un proyecto típico?",
           "a": "Una landing suele tomar días/semanas según contenido. E-commerce o plataforma se cotiza con hitos en el plan de proyecto."
+        }
+      ]
+    },
+    {
+      "slug": "cerrillos",
+      "name": "Cerrillos",
+      "geo": {
+        "latitude": -33.4975,
+        "longitude": -70.7128
+      },
+      "neighborhoods": [
+        "Lo Errázuriz",
+        "Villa Francia",
+        "Cerrillos Centro"
+      ],
+      "relatedSlugs": [
+        "maipu",
+        "estacion-central",
+        "pedro-aguirre-cerda"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Cerrillos: industria, logística y pymes | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para industria, logística y pymes en Cerrillos. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Cerrillos | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para industria, logística y pymes en Cerrillos."
+      },
+      "content": {
+        "eyebrow": "Santiago · Cerrillos",
+        "h1": "Desarrollo web para industria, logística y pymes en Cerrillos",
+        "lead": "Para negocios y equipos en Cerrillos que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Cerrillos concentra bodegas, talleres y empresas de servicios industriales. Priorizamos webs claras para proveedores B2B, catálogos y captación de leads operativos — móvil primero, sin relleno.",
+        "painPoints": [
+          "Catálogo PDF o WhatsApp sin canal web indexable",
+          "Sitio lento que no convierte consultas B2B",
+          "Poca claridad de zonas de despacho o cobertura",
+          "Sin tracking de formularios o llamadas"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Cerrillos →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Cerrillos"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para un proveedor industrial en Cerrillos?",
+          "a": "Sí. Priorizamos catálogo claro, zonas de atención, CTA de cotización y velocidad — el comprador B2B necesita datos, no marketing genérico."
+        },
+        {
+          "q": "¿Pueden integrar un formulario de cotización con notificación WhatsApp?",
+          "a": "Sí. Dejamos el lead medible (evento analytics) y aviso al equipo comercial. Ideal para talleres y distribuidores de Cerrillos."
+        },
+        {
+          "q": "¿Cuál es un primer entregable razonable en Cerrillos?",
+          "a": "Landing o web de servicios desde ~USD 600 orientativos; catálogo/e-commerce ligero si ya vendés online. Cotizamos en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "cerro-navia",
+      "name": "Cerro Navia",
+      "geo": {
+        "latitude": -33.425,
+        "longitude": -70.735
+      },
+      "neighborhoods": [
+        "Cerro Navia Centro",
+        "Villa Francia Norte",
+        "Lo Ruiz"
+      ],
+      "relatedSlugs": [
+        "lo-prado",
+        "quinta-normal",
+        "renca"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Cerro Navia: comercio local y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio local y servicios en Cerro Navia. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Cerro Navia | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio local y servicios en Cerro Navia."
+      },
+      "content": {
+        "eyebrow": "Santiago · Cerro Navia",
+        "h1": "Desarrollo web para comercio local y servicios en Cerro Navia",
+        "lead": "Para negocios y equipos en Cerro Navia que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "En Cerro Navia el canal digital debe ser práctico: WhatsApp, horarios, mapa y oferta clara. Construimos landings y webs locales que captan vecinos y clientes de comunas aledañas.",
+        "painPoints": [
+          "Solo presencia en redes sin web propia",
+          "Constructor lento y difícil de actualizar",
+          "No aparecen en búsquedas servicio + comuna",
+          "Sin medición de contactos"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Cerro Navia →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Cerro Navia"
+      },
+      "faq": [
+        {
+          "q": "¿Una pyme de Cerro Navia necesita web si ya tiene Instagram?",
+          "a": "Sí, como canal propio indexable. Instagram cambia reglas; la web concentra horarios, servicios y CTA estable con SEO local."
+        },
+        {
+          "q": "¿Priorizan móvil para clientes en Cerro Navia?",
+          "a": "Siempre. Tipografía legible, botones grandes y WhatsApp visible — la mayoría llega desde el celular."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de servicios locales?",
+          "a": "Desde ~USD 600 orientativos. Incluye estructura clara, CTA y base SEO. Detalle en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "conchali",
+      "name": "Conchalí",
+      "geo": {
+        "latitude": -33.385,
+        "longitude": -70.675
+      },
+      "neighborhoods": [
+        "Conchalí Centro",
+        "El Cortijo",
+        "Vivaceta"
+      ],
+      "relatedSlugs": [
+        "recoleta",
+        "independencia",
+        "huechuraba"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Conchalí: servicios, retail y pymes | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios, retail y pymes en Conchalí. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Conchalí | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios, retail y pymes en Conchalí."
+      },
+      "content": {
+        "eyebrow": "Santiago · Conchalí",
+        "h1": "Desarrollo web para servicios, retail y pymes en Conchalí",
+        "lead": "Para negocios y equipos en Conchalí que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Conchalí mezcla comercio de calle y servicios de barrio. Diseñamos sitios escaneables, SEO local y embudos a contacto — útiles también para talleres y proveedores del norte de Santiago.",
+        "painPoints": [
+          "Web desactualizada que no genera llamadas",
+          "Competencia local con mejor presencia Google",
+          "Sin página de ofertas o campañas",
+          "Datos de contacto inconsistentes"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Conchalí →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Conchalí"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo aparecen en Google con búsquedas de servicios en Conchalí?",
+          "a": "Con titles honestos, NAP idéntico, schema LocalBusiness y contenido que responde la duda real del cliente — sin keyword stuffing."
+        },
+        {
+          "q": "¿Modernizan una web antigua de un negocio en Conchalí?",
+          "a": "Sí. Migración a stack rápido, tipografía legible y CTA claro; mantenemos lo que ya ranquea si tiene valor."
+        },
+        {
+          "q": "¿Ofrecen plan de mantenimiento?",
+          "a": "Plan Care desde ~USD 50/mes orientativos (updates, seguridad, contenido). Ver https://www.irigoyendev.com/precios#care."
+        }
+      ]
+    },
+    {
+      "slug": "el-bosque",
+      "name": "El Bosque",
+      "geo": {
+        "latitude": -33.562,
+        "longitude": -70.676
+      },
+      "neighborhoods": [
+        "El Bosque Centro",
+        "Observatorio",
+        "La Bandera"
+      ],
+      "relatedSlugs": [
+        "la-cisterna",
+        "san-ramon",
+        "la-pintana"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en El Bosque: comercio y servicios del sur | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio y servicios del sur en El Bosque. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en El Bosque | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio y servicios del sur en El Bosque."
+      },
+      "content": {
+        "eyebrow": "Santiago · El Bosque",
+        "h1": "Desarrollo web para comercio y servicios del sur en El Bosque",
+        "lead": "Para negocios y equipos en El Bosque que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "El Bosque es comuna de alto volumen residencial y comercio cotidiano. Priorizamos conversión móvil, SEO local y tiendas ligeras para retail y servicios que hoy dependen de redes.",
+        "painPoints": [
+          "Vender solo por redes sin catálogo web",
+          "Sitios lentos en 4G",
+          "Poca diferenciación frente a competencia del sur",
+          "Sin eventos de conversión"
+        ],
+        "ctaPrimary": "Cotizar proyecto en El Bosque →",
+        "ctaWhatsApp": "WhatsApp: proyecto en El Bosque"
+      },
+      "faq": [
+        {
+          "q": "¿Pueden armar una tienda online para un retail en El Bosque?",
+          "a": "Sí. Catálogo, pasarela (Mercado Pago / Transbank según giro) y checkout móvil. Rango orientativo de producto comercial en https://www.irigoyendev.com/precios."
+        },
+        {
+          "q": "¿Qué priorizan si el negocio atiende mucho por WhatsApp?",
+          "a": "Botón sticky, horarios, catálogo o lista de servicios indexable, y medición de clics a WhatsApp."
+        },
+        {
+          "q": "¿Sirve SEO local en El Bosque?",
+          "a": "Sí. Páginas de servicios + comuna, schema y velocidad ayudan a aparecer frente a vecinos que buscan en Google, no solo en Instagram."
+        }
+      ]
+    },
+    {
+      "slug": "estacion-central",
+      "name": "Estación Central",
+      "geo": {
+        "latitude": -33.4515,
+        "longitude": -70.679
+      },
+      "neighborhoods": [
+        "Alameda",
+        "Universidad de Santiago",
+        "Estación Central Centro"
+      ],
+      "relatedSlugs": [
+        "santiago-centro",
+        "quinta-normal",
+        "cerrillos"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Estación Central: comercio, transporte y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, transporte y servicios en Estación Central. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Estación Central | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, transporte y servicios en Estación Central."
+      },
+      "content": {
+        "eyebrow": "Santiago · Estación Central",
+        "h1": "Desarrollo web para comercio, transporte y servicios en Estación Central",
+        "lead": "Para negocios y equipos en Estación Central que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Estación Central concentra flujo peatonal, retail y oficinas cerca del intermodal. Diseñamos landings y webs rápidas para captar clientes en tránsito — horarios, mapa, oferta y CTA inmediato.",
+        "painPoints": [
+          "Sitio que no carga bien en móvil en la calle",
+          "Oferta confusa frente a competencia del sector",
+          "Sin landing para campañas Ads cerca del hub",
+          "Datos de ubicación desactualizados"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Estación Central →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Estación Central"
+      },
+      "faq": [
+        {
+          "q": "¿Tiene sentido una landing si mi local está en Estación Central?",
+          "a": "Sí. El flujo es alto pero la atención es corta: mensaje en 5 segundos, mapa, horarios y CTA (WhatsApp / visita / compra)."
+        },
+        {
+          "q": "¿Optimizan sitios para búsquedas cerca del intermodal?",
+          "a": "Trabajamos SEO local, schema y claridad de dirección. No prometemos magia de “cerca de mí”; sí presencia técnica sólida."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de campaña en Estación Central?",
+          "a": "Desde ~USD 600 orientativos. Ideal para Ads o lanzamientos de temporada. Cotización en https://www.irigoyendev.com/#contact."
+        }
+      ]
+    },
+    {
+      "slug": "huechuraba",
+      "name": "Huechuraba",
+      "geo": {
+        "latitude": -33.368,
+        "longitude": -70.634
+      },
+      "neighborhoods": [
+        "Ciudad Empresarial",
+        "Pedro Fontova",
+        "El Carmen"
+      ],
+      "relatedSlugs": [
+        "recoleta",
+        "vitacura",
+        "quilicura"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Huechuraba: parques empresariales, tech y B2B | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para parques empresariales, tech y B2B en Huechuraba. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Huechuraba | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para parques empresariales, tech y B2B en Huechuraba."
+      },
+      "content": {
+        "eyebrow": "Santiago · Huechuraba",
+        "h1": "Desarrollo web para parques empresariales, tech y B2B en Huechuraba",
+        "lead": "Para negocios y equipos en Huechuraba que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Huechuraba aloja Ciudad Empresarial y oficinas corporativas. Priorizamos producto digital B2B: landings de demos, sitios de empresa y performance — el mismo rigor sirve a proveedores y servicios del parque.",
+        "painPoints": [
+          "Sitio corporativo lento que no genera demos",
+          "Mensaje B2B genérico sin propuesta clara",
+          "Sin tracking de reuniones o formularios",
+          "Presencia débil frente a vecinos del parque empresarial"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Huechuraba →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Huechuraba"
+      },
+      "faq": [
+        {
+          "q": "¿Trabajan con empresas de Ciudad Empresarial en Huechuraba?",
+          "a": "Sí. Es un caso habitual: sitio de producto o corporate con CTA a demo/reunión, analytics y velocidad a la altura de un parque de oficinas."
+        },
+        {
+          "q": "¿Qué rango tiene un producto web comercial para un equipo en Huechuraba?",
+          "a": "Orientativo USD 3.000–10.000; landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios."
+        },
+        {
+          "q": "¿Pueden mejorar un sitio corporativo lento del norte de Santiago?",
+          "a": "Sí. Auditamos LCP/CLS, imágenes y JS. En Huechuraba la percepción de marca importa tanto como el ranking."
+        }
+      ]
+    },
+    {
+      "slug": "independencia",
+      "name": "Independencia",
+      "geo": {
+        "latitude": -33.415,
+        "longitude": -70.665
+      },
+      "neighborhoods": [
+        "Hospitales",
+        "Independencia Centro",
+        "Dávila"
+      ],
+      "relatedSlugs": [
+        "recoleta",
+        "santiago-centro",
+        "conchali"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Independencia: salud, educación y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para salud, educación y servicios en Independencia. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Independencia | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para salud, educación y servicios en Independencia."
+      },
+      "content": {
+        "eyebrow": "Santiago · Independencia",
+        "h1": "Desarrollo web para salud, educación y servicios en Independencia",
+        "lead": "Para negocios y equipos en Independencia que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Independencia concentra salud, educación y comercio cercano al centro. Diseñamos UX clara para clínicas, centros y servicios: agenda, confianza y SEO local sin jerga innecesaria.",
+        "painPoints": [
+          "Web de clínica o centro difícil de usar en móvil",
+          "Sin CTA de reserva o WhatsApp",
+          "Contenido genérico que no genera confianza",
+          "Datos de contacto inconsistentes entre canales"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Independencia →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Independencia"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para una clínica o centro en Independencia?",
+          "a": "Sí. Servicios, equipo, ubicación, CTA de reserva/WhatsApp y base SEO. Evitamos plantillas genéricas de “salud”."
+        },
+        {
+          "q": "¿Ayudan con consistencia de datos de contacto (NAP)?",
+          "a": "Sí. Alineamos nombre, teléfono y dirección en web y recomendaciones de Google Business Profile para que Google e IA verifiquen la entidad."
+        },
+        {
+          "q": "¿Trabajan remoto con profesionales de Independencia?",
+          "a": "Sí. IrigoyenDev opera remoto; contacto andres@irigoyendev.com / WhatsApp +45 50 24 98 55."
+        }
+      ]
+    },
+    {
+      "slug": "la-cisterna",
+      "name": "La Cisterna",
+      "geo": {
+        "latitude": -33.528,
+        "longitude": -70.664
+      },
+      "neighborhoods": [
+        "La Cisterna Centro",
+        "Lo Ovalle",
+        "El Parrón"
+      ],
+      "relatedSlugs": [
+        "san-miguel",
+        "el-bosque",
+        "san-joaquin"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en La Cisterna: comercio y servicios del sur | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio y servicios del sur en La Cisterna. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en La Cisterna | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio y servicios del sur en La Cisterna."
+      },
+      "content": {
+        "eyebrow": "Santiago · La Cisterna",
+        "h1": "Desarrollo web para comercio y servicios del sur en La Cisterna",
+        "lead": "Para negocios y equipos en La Cisterna que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "La Cisterna es nodo comercial del sur de Santiago. Priorizamos e-commerce ligero, landings de oferta y SEO local para retail y servicios con alto tráfico de barrio.",
+        "painPoints": [
+          "Dependencia total de Instagram",
+          "Sitio desactualizado o inexistente",
+          "Campañas Ads sin página de destino",
+          "Sin medición de ventas o leads"
+        ],
+        "ctaPrimary": "Cotizar proyecto en La Cisterna →",
+        "ctaWhatsApp": "WhatsApp: proyecto en La Cisterna"
+      },
+      "faq": [
+        {
+          "q": "¿Pueden crear una landing para campañas Ads en La Cisterna?",
+          "a": "Sí. Mensaje único, CTA y eventos de conversión. Evitamos mandar tráfico pagado a un home genérico."
+        },
+        {
+          "q": "¿Integran Mercado Pago para comercios del sur?",
+          "a": "Sí, u otras pasarelas según giro. Queda documentado en la cotización."
+        },
+        {
+          "q": "¿Cuánto cuesta empezar con e-commerce ligero?",
+          "a": "Producto comercial orientativo USD 3.000–10.000. Cotización en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "la-florida",
+      "name": "La Florida",
+      "geo": {
+        "latitude": -33.5225,
+        "longitude": -70.598
+      },
+      "neighborhoods": [
+        "Plaza Vespucio",
+        "La Florida Centro",
+        "Los Copihues",
+        "Trinidad"
+      ],
+      "relatedSlugs": [
+        "macul",
+        "penalolen",
+        "la-granja"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en La Florida: retail, servicios y alto volumen residencial | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para retail, servicios y alto volumen residencial en La Florida. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en La Florida | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para retail, servicios y alto volumen residencial en La Florida."
+      },
+      "content": {
+        "eyebrow": "Santiago · La Florida",
+        "h1": "Desarrollo web para retail, servicios y alto volumen residencial en La Florida",
+        "lead": "Para negocios y equipos en La Florida que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "La Florida es una de las comunas más pobladas de la RM: malls, strip centers y servicios. Priorizamos móvil, velocidad y CTAs claros — también landings para equipos que operan servicios o producto desde la comuna.",
+        "painPoints": [
+          "Competencia digital fuerte en retail y servicios",
+          "Sitios lentos en conexiones móviles",
+          "Sin diferenciación frente a cadenas",
+          "Poca medición de leads locales"
+        ],
+        "ctaPrimary": "Cotizar proyecto en La Florida →",
+        "ctaWhatsApp": "WhatsApp: proyecto en La Florida"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo compite un negocio local en La Florida frente a cadenas?",
+          "a": "Con claridad de oferta, prueba social, velocidad y SEO local honesto. No imitamos el look de mall: destacamos cercanía y servicio."
+        },
+        {
+          "q": "¿Sirve una web si mi local está cerca de Plaza Vespucio?",
+          "a": "Sí. El tráfico peatonal no reemplaza descubrimiento en Google ni campañas con landing propia."
+        },
+        {
+          "q": "¿Qué entregable recomiendan para un servicio en La Florida?",
+          "a": "Landing o web de servicios con CTA y base SEO desde ~USD 600 orientativos; escalamos a tienda o panel si convierte."
+        }
+      ]
+    },
+    {
+      "slug": "la-granja",
+      "name": "La Granja",
+      "geo": {
+        "latitude": -33.54,
+        "longitude": -70.622
+      },
+      "neighborhoods": [
+        "La Granja Centro",
+        "San Gregorio",
+        "La Granja Norte"
+      ],
+      "relatedSlugs": [
+        "la-florida",
+        "san-ramon",
+        "la-pintana"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en La Granja: servicios y comercio local | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios y comercio local en La Granja. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en La Granja | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios y comercio local en La Granja."
+      },
+      "content": {
+        "eyebrow": "Santiago · La Granja",
+        "h1": "Desarrollo web para servicios y comercio local en La Granja",
+        "lead": "Para negocios y equipos en La Granja que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "En La Granja construimos presencia digital directa: servicios, horarios, mapa y conversión a contacto. Ideal para pymes y profesionales que necesitan aparecer en búsquedas locales del sur-oriente.",
+        "painPoints": [
+          "No aparecen en búsquedas servicio + La Granja",
+          "Web hecha con constructor lento",
+          "Sin prueba social ni casos",
+          "Contacto solo por redes"
+        ],
+        "ctaPrimary": "Cotizar proyecto en La Granja →",
+        "ctaWhatsApp": "WhatsApp: proyecto en La Granja"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo aparecen en búsquedas del tipo servicio + La Granja?",
+          "a": "Titles honestos, NAP coherente, schema y FAQs útiles. Sin repetir la misma frase veinte veces."
+        },
+        {
+          "q": "¿Puedo migrar desde Wix o similar?",
+          "a": "Sí. Rehacemos en stack rápido, redirigimos lo necesario y dejamos analytics desde el día uno."
+        },
+        {
+          "q": "¿Quién es IrigoyenDev y cómo contacto desde La Granja?",
+          "a": "IrigoyenDev (Andrés Irigoyen). Email andres@irigoyendev.com, WhatsApp +45 50 24 98 55, web https://www.irigoyendev.com. Operamos remoto."
+        }
+      ]
+    },
+    {
+      "slug": "la-pintana",
+      "name": "La Pintana",
+      "geo": {
+        "latitude": -33.583,
+        "longitude": -70.634
+      },
+      "neighborhoods": [
+        "La Pintana Centro",
+        "El Castillo",
+        "Santo Tomás"
+      ],
+      "relatedSlugs": [
+        "el-bosque",
+        "la-granja",
+        "san-ramon"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en La Pintana: servicios, comercio y emprendimiento local | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios, comercio y emprendimiento local en La Pintana. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en La Pintana | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios, comercio y emprendimiento local en La Pintana."
+      },
+      "content": {
+        "eyebrow": "Santiago · La Pintana",
+        "h1": "Desarrollo web para servicios, comercio y emprendimiento local en La Pintana",
+        "lead": "Para negocios y equipos en La Pintana que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "La Pintana necesita canales digitales simples y confiables. Priorizamos WhatsApp, claridad de oferta y SEO local para emprendimientos y servicios que quieren dejar de depender solo de redes.",
+        "painPoints": [
+          "Solo redes sociales sin web indexable",
+          "Sitios difíciles de actualizar",
+          "Poca confianza visual del canal digital",
+          "Sin medición de contactos"
+        ],
+        "ctaPrimary": "Cotizar proyecto en La Pintana →",
+        "ctaWhatsApp": "WhatsApp: proyecto en La Pintana"
+      },
+      "faq": [
+        {
+          "q": "¿Una web ayuda si mi negocio en La Pintana vive de WhatsApp?",
+          "a": "Sí. La web valida la oferta en Google y concentra horarios/servicios; WhatsApp sigue siendo el CTA principal."
+        },
+        {
+          "q": "¿Priorizan sitios fáciles de mantener?",
+          "a": "Sí. Estructura clara y plan Care opcional para cambios de contenido sin depender de un desarrollador cada vez."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de servicios en La Pintana?",
+          "a": "Desde ~USD 600 orientativos. Cotización en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "lo-espejo",
+      "name": "Lo Espejo",
+      "geo": {
+        "latitude": -33.522,
+        "longitude": -70.696
+      },
+      "neighborhoods": [
+        "Lo Espejo Centro",
+        "Santa Adriana",
+        "Las Turbinas"
+      ],
+      "relatedSlugs": [
+        "pedro-aguirre-cerda",
+        "cerrillos",
+        "el-bosque"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Lo Espejo: industria ligera, talleres y pymes | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para industria ligera, talleres y pymes en Lo Espejo. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Lo Espejo | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para industria ligera, talleres y pymes en Lo Espejo."
+      },
+      "content": {
+        "eyebrow": "Santiago · Lo Espejo",
+        "h1": "Desarrollo web para industria ligera, talleres y pymes en Lo Espejo",
+        "lead": "Para negocios y equipos en Lo Espejo que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Lo Espejo concentra talleres, comercio y actividad productiva. Diseñamos webs B2B/B2C prácticas: servicios, cobertura, cotización y velocidad — sin jerga startup innecesaria.",
+        "painPoints": [
+          "Presencia digital improvisada",
+          "Cotizaciones solo por teléfono sin registro",
+          "Sitio lento o inexistente",
+          "Poca claridad de giros y zonas"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Lo Espejo →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Lo Espejo"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para un taller o proveedor en Lo Espejo?",
+          "a": "Sí. Listamos servicios, zonas, CTA de cotización y tracking. El comprador necesita datos concretos."
+        },
+        {
+          "q": "¿Pueden dejar un formulario que avise al WhatsApp del negocio?",
+          "a": "Sí. Combinamos formulario + aviso y evento analytics para no perder leads."
+        },
+        {
+          "q": "¿Cuál es un rango inicial razonable?",
+          "a": "Landing/web de servicios desde ~USD 600 orientativos. Ver https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "lo-prado",
+      "name": "Lo Prado",
+      "geo": {
+        "latitude": -33.444,
+        "longitude": -70.726
+      },
+      "neighborhoods": [
+        "Lo Prado Centro",
+        "San Pablo",
+        "Neptuno"
+      ],
+      "relatedSlugs": [
+        "quinta-normal",
+        "cerro-navia",
+        "estacion-central"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Lo Prado: comercio, servicios y pymes del poniente | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, servicios y pymes del poniente en Lo Prado. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Lo Prado | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, servicios y pymes del poniente en Lo Prado."
+      },
+      "content": {
+        "eyebrow": "Santiago · Lo Prado",
+        "h1": "Desarrollo web para comercio, servicios y pymes del poniente en Lo Prado",
+        "lead": "Para negocios y equipos en Lo Prado que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Lo Prado conecta el poniente con el eje Alameda. Priorizamos sitios locales claros, SEO y conversión a contacto para comercio y servicios que compiten con comunas vecinas.",
+        "painPoints": [
+          "Web desactualizada",
+          "No aparecen en búsquedas locales",
+          "Sin landing para ofertas",
+          "Contacto disperso entre redes"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Lo Prado →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Lo Prado"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo mejoran la aparición en Google para un negocio en Lo Prado?",
+          "a": "On-page técnico, titles locales honestos, schema y velocidad. Complementamos con recomendaciones de perfil de negocio en Google."
+        },
+        {
+          "q": "¿Pueden unificar Instagram y web en un solo CTA?",
+          "a": "Sí. Misma oferta, mismo WhatsApp/formulario, menos fricción para el cliente."
+        },
+        {
+          "q": "¿Ofrecen mantenimiento mensual en Lo Prado?",
+          "a": "Plan Care desde ~USD 50/mes orientativos. Detalle en https://www.irigoyendev.com/precios#care."
+        }
+      ]
+    },
+    {
+      "slug": "macul",
+      "name": "Macul",
+      "geo": {
+        "latitude": -33.485,
+        "longitude": -70.6
+      },
+      "neighborhoods": [
+        "Macul Centro",
+        "Las Torres",
+        "Santa Julia",
+        "Jardín Botánico"
+      ],
+      "relatedSlugs": [
+        "nunoa",
+        "penalolen",
+        "la-florida"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Macul: educación, servicios y emprendimiento | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para educación, servicios y emprendimiento en Macul. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Macul | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para educación, servicios y emprendimiento en Macul."
+      },
+      "content": {
+        "eyebrow": "Santiago · Macul",
+        "h1": "Desarrollo web para educación, servicios y emprendimiento en Macul",
+        "lead": "Para negocios y equipos en Macul que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Macul mezcla campus universitarios, servicios profesionales y comercio. Diseñamos landings y webs ágiles para emprendedores, clínicas y estudios — con SEO local y tono cercano al oriente-sur.",
+        "painPoints": [
+          "MVP o servicio sin web indexable",
+          "Sitio genérico sin ángulo local",
+          "Sin agenda o CTA claro",
+          "Competencia de comunas vecinas mejor posicionada"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Macul →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Macul"
+      },
+      "faq": [
+        {
+          "q": "¿Puedo validar un servicio o producto desde Macul con una landing?",
+          "a": "Sí. Propuesta de valor, CTA y medición desde ~USD 600 orientativos. Luego escalamos si convierte."
+        },
+        {
+          "q": "¿Sirve para clínicas o centros cerca de universidades en Macul?",
+          "a": "Sí. UX clara, reserva/WhatsApp y base SEO local — sin copy genérico de salud."
+        },
+        {
+          "q": "¿Cómo evitan contenido duplicado con Ñuñoa o Peñalolén?",
+          "a": "Cada comuna tiene ángulo, barrios y FAQs propias. La plantilla es compartida; el texto no."
+        }
+      ]
+    },
+    {
+      "slug": "pedro-aguirre-cerda",
+      "name": "Pedro Aguirre Cerda",
+      "geo": {
+        "latitude": -33.492,
+        "longitude": -70.676
+      },
+      "neighborhoods": [
+        "PAC Centro",
+        "Lo Valledor",
+        "José María Caro"
+      ],
+      "relatedSlugs": [
+        "lo-espejo",
+        "san-miguel",
+        "cerrillos"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Pedro Aguirre Cerda: industria, talleres y comercio | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para industria, talleres y comercio en Pedro Aguirre Cerda. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Pedro Aguirre Cerda | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para industria, talleres y comercio en Pedro Aguirre Cerda."
+      },
+      "content": {
+        "eyebrow": "Santiago · Pedro Aguirre Cerda",
+        "h1": "Desarrollo web para industria, talleres y comercio en Pedro Aguirre Cerda",
+        "lead": "Para negocios y equipos en Pedro Aguirre Cerda que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Pedro Aguirre Cerda (PAC) concentra actividad productiva y comercio. Construimos canales digitales operativos: cotización, catálogo y SEO para proveedores y pymes del sur-poniente.",
+        "painPoints": [
+          "Sin web profesional frente a clientes B2B",
+          "Cotizaciones desordenadas",
+          "Sitio lento o en Flash/legado",
+          "Poca visibilidad en Google"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Pedro Aguirre Cerda →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Pedro Aguirre Cerda"
+      },
+      "faq": [
+        {
+          "q": "¿Desarrollan sitios para empresas cerca de Lo Valledor en PAC?",
+          "a": "Sí. Enfoque B2B: claridad de giro, cobertura, CTA de cotización y tracking."
+        },
+        {
+          "q": "¿Migran sitios antiguos que ya no cargan bien?",
+          "a": "Sí. Rehacemos en stack moderno, conservamos URLs útiles con redirects y medimos desde el lanzamiento."
+        },
+        {
+          "q": "¿Cuál es el rango de una web de servicios B2B en PAC?",
+          "a": "Landings desde ~USD 600; productos comerciales USD 3.000–10.000 orientativos. https://www.irigoyendev.com/precios"
+        }
+      ]
+    },
+    {
+      "slug": "pudahuel",
+      "name": "Pudahuel",
+      "geo": {
+        "latitude": -33.445,
+        "longitude": -70.78
+      },
+      "neighborhoods": [
+        "Pudahuel Centro",
+        "Ciudad de Los Valles",
+        "Aeropuerto",
+        "La Farfana"
+      ],
+      "relatedSlugs": [
+        "maipu",
+        "cerro-navia",
+        "quilicura"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Pudahuel: logística, aeropuerto y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para logística, aeropuerto y servicios en Pudahuel. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Pudahuel | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para logística, aeropuerto y servicios en Pudahuel."
+      },
+      "content": {
+        "eyebrow": "Santiago · Pudahuel",
+        "h1": "Desarrollo web para logística, aeropuerto y servicios en Pudahuel",
+        "lead": "Para negocios y equipos en Pudahuel que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Pudahuel conecta logística, aeropuerto y barrios residenciales. Priorizamos webs para operadores, servicios y retail: claridad de cobertura, velocidad y captación de leads B2B/B2C.",
+        "painPoints": [
+          "Sitio que no explica cobertura ni horarios",
+          "Leads B2B sin tracking",
+          "Presencia débil frente a competencia logística",
+          "Móvil lento para clientes en terreno"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Pudahuel →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Pudahuel"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para una empresa de logística en Pudahuel?",
+          "a": "Sí. Cobertura, servicios, CTA de cotización y schema. El comprador B2B necesita hechos, no eslóganes."
+        },
+        {
+          "q": "¿Trabajan con negocios cerca del aeropuerto?",
+          "a": "Sí. Mismo estándar remoto: claridad, velocidad y medición — útil para servicios y retail del sector."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de captación B2B en Pudahuel?",
+          "a": "Desde ~USD 600 orientativos. Cotización en https://www.irigoyendev.com/#contact."
+        }
+      ]
+    },
+    {
+      "slug": "quilicura",
+      "name": "Quilicura",
+      "geo": {
+        "latitude": -33.355,
+        "longitude": -70.729
+      },
+      "neighborhoods": [
+        "Quilicura Centro",
+        "Lo Marcoleta",
+        "Valle Grande"
+      ],
+      "relatedSlugs": [
+        "huechuraba",
+        "renca",
+        "pudahuel"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Quilicura: industria, logística y parques empresariales | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para industria, logística y parques empresariales en Quilicura. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Quilicura | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para industria, logística y parques empresariales en Quilicura."
+      },
+      "content": {
+        "eyebrow": "Santiago · Quilicura",
+        "h1": "Desarrollo web para industria, logística y parques empresariales en Quilicura",
+        "lead": "Para negocios y equipos en Quilicura que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Quilicura es polo industrial-logístico del norte. Diseñamos sitios B2B serios: proveedores, bodegas y servicios a empresas — con SEO técnico y formularios que el equipo comercial pueda seguir.",
+        "painPoints": [
+          "Corporate genérico que no genera cotizaciones",
+          "Sin diferenciación frente a vecinos del parque industrial",
+          "Formularios sin notificación ni CRM",
+          "Sitio pesado en móvil"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Quilicura →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Quilicura"
+      },
+      "faq": [
+        {
+          "q": "¿Desarrollan webs para empresas industriales en Quilicura?",
+          "a": "Sí. Catálogo de servicios, certificaciones si aplica, CTA de cotización y velocidad. Tono B2B directo."
+        },
+        {
+          "q": "¿Pueden conectar el formulario con email y WhatsApp del equipo?",
+          "a": "Sí. Dejamos el flujo documentado y eventos de analytics para medir leads reales."
+        },
+        {
+          "q": "¿Qué rango tiene un sitio corporativo B2B?",
+          "a": "Producto comercial orientativo USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "quinta-normal",
+      "name": "Quinta Normal",
+      "geo": {
+        "latitude": -33.442,
+        "longitude": -70.7
+      },
+      "neighborhoods": [
+        "Quinta Normal Centro",
+        "Blanqueado",
+        "Gruta de Lourdes"
+      ],
+      "relatedSlugs": [
+        "santiago-centro",
+        "lo-prado",
+        "estacion-central"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Quinta Normal: cultura, servicios y comercio | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para cultura, servicios y comercio en Quinta Normal. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Quinta Normal | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para cultura, servicios y comercio en Quinta Normal."
+      },
+      "content": {
+        "eyebrow": "Santiago · Quinta Normal",
+        "h1": "Desarrollo web para cultura, servicios y comercio en Quinta Normal",
+        "lead": "Para negocios y equipos en Quinta Normal que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Quinta Normal combina museos, educación y comercio de barrio. Diseñamos webs con buena tipografía y UX para servicios, retail y proyectos culturales — SEO local incluido.",
+        "painPoints": [
+          "Sitio visualmente pobre frente a la oferta cultural/comercial",
+          "Sin agenda o CTA claro",
+          "Contenido desactualizado",
+          "Poca base SEO"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Quinta Normal →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Quinta Normal"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web moderna para un servicio cerca de Quinta Normal?",
+          "a": "Sí. Credibilidad visual, horarios, mapa y CTA. Evitamos plantillas genéricas que restan confianza."
+        },
+        {
+          "q": "¿Pueden mantener el contenido mes a mes?",
+          "a": "Plan Care cubre updates y cambios de contenido desde ~USD 50/mes orientativos."
+        },
+        {
+          "q": "¿Incluyen SEO básico al lanzar?",
+          "a": "Sí: titles, meta, sitemap, velocidad y estructura. Paquete SEO orientativo desde ~USD 400 en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "recoleta",
+      "name": "Recoleta",
+      "geo": {
+        "latitude": -33.406,
+        "longitude": -70.64
+      },
+      "neighborhoods": [
+        "Bellavista",
+        "Patronato",
+        "Recoleta Centro",
+        "Cerro Blanco"
+      ],
+      "relatedSlugs": [
+        "providencia",
+        "independencia",
+        "santiago-centro"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Recoleta: comercio, gastronomía y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, gastronomía y servicios en Recoleta. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Recoleta | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, gastronomía y servicios en Recoleta."
+      },
+      "content": {
+        "eyebrow": "Santiago · Recoleta",
+        "h1": "Desarrollo web para comercio, gastronomía y servicios en Recoleta",
+        "lead": "Para negocios y equipos en Recoleta que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Recoleta mezcla Bellavista, comercio y barrios residenciales. Priorizamos landings y webs con personalidad: gastronomía, servicios y retail — móvil, mapa y conversión a reserva o WhatsApp.",
+        "painPoints": [
+          "Marca con buena calle pero web débil",
+          "Reservas solo por Instagram",
+          "SEO local pobre frente a Providencia/Centro",
+          "Fotos pesadas que matan la velocidad"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Recoleta →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Recoleta"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para un restaurant o local en Bellavista (Recoleta)?",
+          "a": "Sí. Menú/servicios, mapa, horarios, CTA de reserva/WhatsApp y performance — Instagram no reemplaza descubrimiento en Google."
+        },
+        {
+          "q": "¿Optimizan sitios lentos por fotos grandes?",
+          "a": "Sí. Imágenes modernas, tamaños correctos y lazy-load cuidadoso para no romper LCP."
+        },
+        {
+          "q": "¿Cómo se diferencian de una página genérica de Providencia?",
+          "a": "Ángulo, barrios y FAQs de Recoleta (Bellavista, Patronato). Misma calidad técnica; contenido distinto."
+        }
+      ]
+    },
+    {
+      "slug": "renca",
+      "name": "Renca",
+      "geo": {
+        "latitude": -33.398,
+        "longitude": -70.723
+      },
+      "neighborhoods": [
+        "Renca Centro",
+        "Lo Ruiz",
+        "Cerro Renca"
+      ],
+      "relatedSlugs": [
+        "quilicura",
+        "cerro-navia",
+        "conchali"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Renca: industria, servicios y desarrollo local | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para industria, servicios y desarrollo local en Renca. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Renca | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para industria, servicios y desarrollo local en Renca."
+      },
+      "content": {
+        "eyebrow": "Santiago · Renca",
+        "h1": "Desarrollo web para industria, servicios y desarrollo local en Renca",
+        "lead": "Para negocios y equipos en Renca que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "Renca crece en industria, servicios y proyectos urbanos. Construimos webs claras para pymes y proveedores: oferta, cobertura y leads medibles — alineado al ritmo del norponiente.",
+        "painPoints": [
+          "Presencia digital atrasada respecto al crecimiento comunal",
+          "Leads sin seguimiento",
+          "Sitio poco confiable en móvil",
+          "Mensaje genérico sin ancla local"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Renca →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Renca"
+      },
+      "faq": [
+        {
+          "q": "¿Atienden proyectos de pymes en Renca de forma remota?",
+          "a": "Sí. Diseño, desarrollo y lanzamiento por videollamada/WhatsApp. La entrega es digital."
+        },
+        {
+          "q": "¿Qué priorizan para un negocio que está formalizando su canal web en Renca?",
+          "a": "Oferta clara, CTA, NAP coherente y base SEO. Luego iteramos con Care si hace falta contenido mes a mes."
+        },
+        {
+          "q": "¿Cuánto cuesta una web de servicios inicial?",
+          "a": "Desde ~USD 600 orientativos (landing/web simple). https://www.irigoyendev.com/precios"
+        }
+      ]
+    },
+    {
+      "slug": "san-joaquin",
+      "name": "San Joaquín",
+      "geo": {
+        "latitude": -33.496,
+        "longitude": -70.628
+      },
+      "neighborhoods": [
+        "San Joaquín Centro",
+        "La Legua",
+        "San Joaquín Norte"
+      ],
+      "relatedSlugs": [
+        "macul",
+        "san-miguel",
+        "nunoa"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en San Joaquín: educación, industria y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para educación, industria y servicios en San Joaquín. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en San Joaquín | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para educación, industria y servicios en San Joaquín."
+      },
+      "content": {
+        "eyebrow": "Santiago · San Joaquín",
+        "h1": "Desarrollo web para educación, industria y servicios en San Joaquín",
+        "lead": "Para negocios y equipos en San Joaquín que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "San Joaquín combina campus, industria y vivienda. Diseñamos sitios para servicios, proveedores y emprendimientos: claridad B2B/B2C y SEO local del sur-oriente cercano al centro.",
+        "painPoints": [
+          "Web institucional o de pyme difícil de usar",
+          "Sin captación digital de alumnos/clientes",
+          "Poca velocidad móvil",
+          "Contenido duplicado o vacío"
+        ],
+        "ctaPrimary": "Cotizar proyecto en San Joaquín →",
+        "ctaWhatsApp": "WhatsApp: proyecto en San Joaquín"
+      },
+      "faq": [
+        {
+          "q": "¿Pueden modernizar un sitio de servicios en San Joaquín?",
+          "a": "Sí. Tipografía legible, menús simples, CTA y tracking — sin rediseño cosmético vacío."
+        },
+        {
+          "q": "¿Sirve para proveedores industriales de la comuna?",
+          "a": "Sí. Enfoque B2B: giro, cobertura, cotización y schema."
+        },
+        {
+          "q": "¿Incluyen medición de conversiones?",
+          "a": "Sí. Eventos de formulario, WhatsApp o agenda según el caso."
+        }
+      ]
+    },
+    {
+      "slug": "san-miguel",
+      "name": "San Miguel",
+      "geo": {
+        "latitude": -33.499,
+        "longitude": -70.652
+      },
+      "neighborhoods": [
+        "San Miguel Centro",
+        "El Llano",
+        "Gran Avenida"
+      ],
+      "relatedSlugs": [
+        "la-cisterna",
+        "pedro-aguirre-cerda",
+        "santiago-centro"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en San Miguel: comercio, salud y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, salud y servicios en San Miguel. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en San Miguel | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, salud y servicios en San Miguel."
+      },
+      "content": {
+        "eyebrow": "Santiago · San Miguel",
+        "h1": "Desarrollo web para comercio, salud y servicios en San Miguel",
+        "lead": "Para negocios y equipos en San Miguel que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "San Miguel es eje comercial y de servicios del sur cercano. Priorizamos landings, SEO local y e-commerce ligero para retail, clínicas y profesionales con competencia intensa en Gran Avenida.",
+        "painPoints": [
+          "Competencia fuerte en retail y salud",
+          "Sitio lento frente a cadenas",
+          "Sin landing de campañas",
+          "Reservas solo por teléfono"
+        ],
+        "ctaPrimary": "Cotizar proyecto en San Miguel →",
+        "ctaWhatsApp": "WhatsApp: proyecto en San Miguel"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo destaca un negocio local en San Miguel frente a cadenas?",
+          "a": "Cercanía, prueba social, velocidad y mensaje claro. SEO local honesto + CTA de WhatsApp/reserva."
+        },
+        {
+          "q": "¿Sirve una web para centros de salud en San Miguel?",
+          "a": "Sí. Servicios, equipo, ubicación y reserva — con base SEO y móvil primero."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de campaña en San Miguel?",
+          "a": "Desde ~USD 600 orientativos. Ideal para Ads o promociones de temporada."
+        }
+      ]
+    },
+    {
+      "slug": "san-ramon",
+      "name": "San Ramón",
+      "geo": {
+        "latitude": -33.535,
+        "longitude": -70.643
+      },
+      "neighborhoods": [
+        "San Ramón Centro",
+        "La Bandera Sur",
+        "San Ramón Norte"
+      ],
+      "relatedSlugs": [
+        "la-granja",
+        "el-bosque",
+        "la-cisterna"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en San Ramón: servicios y comercio local | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios y comercio local en San Ramón. SEO local, velocidad y conversión — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en San Ramón | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios y comercio local en San Ramón."
+      },
+      "content": {
+        "eyebrow": "Santiago · San Ramón",
+        "h1": "Desarrollo web para servicios y comercio local en San Ramón",
+        "lead": "Para negocios y equipos en San Ramón que necesitan canal digital propio: sitio claro, SEO local y CTA medible.",
+        "localAngle": "En San Ramón priorizamos canales digitales simples y efectivos: oferta, contacto y SEO local para pymes y servicios del sur que quieren aparecer en Google con seriedad.",
+        "painPoints": [
+          "Sin web o con perfil incompleto",
+          "Dependencia de redes",
+          "Poca claridad de servicios",
+          "Sin analytics"
+        ],
+        "ctaPrimary": "Cotizar proyecto en San Ramón →",
+        "ctaWhatsApp": "WhatsApp: proyecto en San Ramón"
+      },
+      "faq": [
+        {
+          "q": "¿Una pyme de San Ramón necesita web propia?",
+          "a": "Si querés aparecer en Google y no depender solo de algoritmos de redes, sí. Empezamos simple: servicios, CTA y base SEO."
+        },
+        {
+          "q": "¿Pueden dejar todo listo para WhatsApp Business?",
+          "a": "Sí. Botón visible, mensaje prearmado opcional y medición de clics."
+        },
+        {
+          "q": "¿Cuál es el costo de entrada?",
+          "a": "Landing/web de servicios desde ~USD 600 orientativos. https://www.irigoyendev.com/precios"
+        }
+      ]
+    },
+    {
+      "slug": "puente-alto",
+      "name": "Puente Alto",
+      "geo": {
+        "latitude": -33.6117,
+        "longitude": -70.5758
+      },
+      "neighborhoods": [
+        "Puente Alto Centro",
+        "El Volcán",
+        "Bajos de Mena",
+        "Los Quillayes"
+      ],
+      "relatedSlugs": [
+        "la-florida",
+        "la-pintana",
+        "pirque"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Puente Alto: comercio, servicios y alto volumen residencial | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, servicios y alto volumen residencial en Puente Alto. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Puente Alto | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, servicios y alto volumen residencial en Puente Alto."
+      },
+      "content": {
+        "eyebrow": "RM · Cordillera · Puente Alto",
+        "h1": "Desarrollo web para comercio, servicios y alto volumen residencial en Puente Alto",
+        "lead": "Para negocios en Puente Alto que necesitan canal digital propio.",
+        "localAngle": "Puente Alto es la comuna más poblada de Chile: retail, servicios y emprendedores con demanda local enorme. Priorizamos móvil, velocidad y CTAs claros (WhatsApp / compra) — sin jerga innecesaria.",
+        "painPoints": [
+          "Competencia digital intensa en retail y servicios",
+          "Sitios lentos en conexiones móviles",
+          "Dependencia total de Instagram",
+          "Sin medición de leads locales"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Puente Alto →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Puente Alto"
+      },
+      "faq": [
+        {
+          "q": "¿Desarrollan webs para negocios en Puente Alto?",
+          "a": "Sí. Foco en conversión móvil, SEO local y CTAs claros para retail y servicios de la comuna más poblada del país."
+        },
+        {
+          "q": "¿Pueden armar una tienda online para un comercio en Puente Alto?",
+          "a": "Sí. Catálogo, pasarela (Mercado Pago / Transbank según giro) y checkout móvil. Rangos en https://www.irigoyendev.com/precios."
+        },
+        {
+          "q": "¿Qué priorizan si el negocio vive de WhatsApp en Puente Alto?",
+          "a": "Botón sticky, horarios, oferta indexable y medición de clics — la web valida; WhatsApp cierra."
+        }
+      ]
+    },
+    {
+      "slug": "pirque",
+      "name": "Pirque",
+      "geo": {
+        "latitude": -33.635,
+        "longitude": -70.555
+      },
+      "neighborhoods": [
+        "Pirque Centro",
+        "El Principal",
+        "Lo Arcaya"
+      ],
+      "relatedSlugs": [
+        "puente-alto",
+        "san-jose-de-maipo",
+        "la-florida"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Pirque: turismo, viñas y servicios locales | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para turismo, viñas y servicios locales en Pirque. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Pirque | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para turismo, viñas y servicios locales en Pirque."
+      },
+      "content": {
+        "eyebrow": "RM · Cordillera · Pirque",
+        "h1": "Desarrollo web para turismo, viñas y servicios locales en Pirque",
+        "lead": "Para negocios en Pirque que necesitan canal digital propio.",
+        "localAngle": "Pirque combina viñas, turismo y vida residencial. Diseñamos sitios con buena tipografía y conversión a reserva o visita — útil para hospitajes, experiencias y servicios del valle.",
+        "painPoints": [
+          "Marca con buena experiencia offline pero web débil",
+          "Reservas solo por Instagram o teléfono",
+          "Fotos pesadas que matan la velocidad",
+          "Poco SEO frente a destinos vecinos"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Pirque →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Pirque"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para un viñedo o experiencia turística en Pirque?",
+          "a": "Sí. Galería liviana, horarios, mapa, CTA de reserva/WhatsApp y base SEO — Instagram no reemplaza descubrimiento en Google."
+        },
+        {
+          "q": "¿Optimizan sitios lentos por fotos de paisaje?",
+          "a": "Sí. Formatos modernos, tamaños correctos y lazy-load cuidadoso para no romper LCP."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de reservas en Pirque?",
+          "a": "Desde ~USD 600 orientativos. Cotización en https://www.irigoyendev.com/#contact."
+        }
+      ]
+    },
+    {
+      "slug": "san-jose-de-maipo",
+      "name": "San José de Maipo",
+      "geo": {
+        "latitude": -33.643,
+        "longitude": -70.353
+      },
+      "neighborhoods": [
+        "San José Centro",
+        "El Toyo",
+        "San Alfonso",
+        "El Volcán"
+      ],
+      "relatedSlugs": [
+        "pirque",
+        "puente-alto",
+        "la-florida"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en San José de Maipo: turismo de montaña y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para turismo de montaña y servicios en San José de Maipo. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en San José de Maipo | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para turismo de montaña y servicios en San José de Maipo."
+      },
+      "content": {
+        "eyebrow": "RM · Cordillera · San José de Maipo",
+        "h1": "Desarrollo web para turismo de montaña y servicios en San José de Maipo",
+        "lead": "Para negocios en San José de Maipo que necesitan canal digital propio.",
+        "localAngle": "San José de Maipo es puerta al Cajón del Maipo. Priorizamos webs para turismo, lodges y servicios: reservas, mapa, temporada y velocidad en móvil — incluso con señal irregular.",
+        "painPoints": [
+          "Reservas desordenadas entre WhatsApp y redes",
+          "Sitio desactualizado fuera de temporada",
+          "Poca claridad de cómo llegar / horarios",
+          "SEO débil frente a búsquedas de Cajón del Maipo"
+        ],
+        "ctaPrimary": "Cotizar proyecto en San José de Maipo →",
+        "ctaWhatsApp": "WhatsApp: proyecto en San José de Maipo"
+      },
+      "faq": [
+        {
+          "q": "¿Hacen webs para lodges o turismo en San José de Maipo?",
+          "a": "Sí. Enfoque en reserva/WhatsApp, temporada, cómo llegar y fotos optimizadas — tono claro, sin plantilla genérica de “turismo”."
+        },
+        {
+          "q": "¿Pueden mantener el sitio entre temporadas?",
+          "a": "Plan Care cubre updates de contenido y precios desde ~USD 50/mes orientativos. Ver https://www.irigoyendev.com/precios#care."
+        },
+        {
+          "q": "¿Ayuda el SEO para búsquedas del Cajón del Maipo?",
+          "a": "Sí, con titles honestos, schema y contenido útil (servicios, zona, FAQs). No prometemos ranking mágico; sí base técnica sólida."
+        }
+      ]
+    },
+    {
+      "slug": "colina",
+      "name": "Colina",
+      "geo": {
+        "latitude": -33.202,
+        "longitude": -70.675
+      },
+      "neighborhoods": [
+        "Colina Centro",
+        "Chicureo",
+        "Las Canteras",
+        "Lo Pinto"
+      ],
+      "relatedSlugs": [
+        "lampa",
+        "huechuraba",
+        "quilicura"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Colina: condominios, servicios y crecimiento norte | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para condominios, servicios y crecimiento norte en Colina. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Colina | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para condominios, servicios y crecimiento norte en Colina."
+      },
+      "content": {
+        "eyebrow": "RM · Chacabuco · Colina",
+        "h1": "Desarrollo web para condominios, servicios y crecimiento norte en Colina",
+        "lead": "Para negocios en Colina que necesitan canal digital propio.",
+        "localAngle": "Colina crece con condominios, retail y servicios al norte de Santiago. Diseñamos landings y webs locales claras para captar vecinos y clientes del eje Chacabuco — móvil primero.",
+        "painPoints": [
+          "Presencia digital atrasada respecto al crecimiento urbano",
+          "Sin landing para proyectos o servicios nuevos",
+          "Competencia de comunas vecinas mejor posicionada",
+          "Leads sin tracking"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Colina →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Colina"
+      },
+      "faq": [
+        {
+          "q": "¿Atienden proyectos web en Colina y Chicureo?",
+          "a": "Sí. Operamos remoto con foco en servicios, retail y captación local del crecimiento norte de la RM."
+        },
+        {
+          "q": "¿Qué entregable recomiendan para un servicio en Colina?",
+          "a": "Landing o web de servicios con CTA y base SEO desde ~USD 600 orientativos; escalamos si convierte."
+        },
+        {
+          "q": "¿Miden formularios y WhatsApp para negocios en Colina?",
+          "a": "Sí. Eventos de analytics para saber qué canal convierte de verdad."
+        }
+      ]
+    },
+    {
+      "slug": "lampa",
+      "name": "Lampa",
+      "geo": {
+        "latitude": -33.286,
+        "longitude": -70.876
+      },
+      "neighborhoods": [
+        "Lampa Centro",
+        "Batuco",
+        "Larapinto"
+      ],
+      "relatedSlugs": [
+        "colina",
+        "tiltil",
+        "quilicura"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Lampa: industria, logística y pymes | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para industria, logística y pymes en Lampa. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Lampa | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para industria, logística y pymes en Lampa."
+      },
+      "content": {
+        "eyebrow": "RM · Chacabuco · Lampa",
+        "h1": "Desarrollo web para industria, logística y pymes en Lampa",
+        "lead": "Para negocios en Lampa que necesitan canal digital propio.",
+        "localAngle": "Lampa concentra actividad industrial-logística y poblados en expansión. Priorizamos sitios B2B prácticos: cobertura, cotización y velocidad — también webs simples para servicios locales.",
+        "painPoints": [
+          "Corporate genérico que no genera cotizaciones",
+          "Sitio lento para clientes en terreno",
+          "Poca claridad de zonas de despacho",
+          "Sin tracking de leads B2B"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Lampa →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Lampa"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para un proveedor industrial en Lampa?",
+          "a": "Sí. Catálogo de servicios, cobertura, CTA de cotización y schema — tono B2B directo."
+        },
+        {
+          "q": "¿Pueden conectar el formulario con el WhatsApp del equipo comercial?",
+          "a": "Sí. Aviso al equipo + evento analytics para no perder leads."
+        },
+        {
+          "q": "¿Cuál es el rango de un sitio corporativo B2B en Lampa?",
+          "a": "Producto comercial orientativo USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "tiltil",
+      "name": "Tiltil",
+      "geo": {
+        "latitude": -33.085,
+        "longitude": -70.928
+      },
+      "neighborhoods": [
+        "Tiltil Centro",
+        "Rungue",
+        "Polpaico"
+      ],
+      "relatedSlugs": [
+        "lampa",
+        "colina",
+        "curacavi"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Tiltil: servicios locales y pymes rurales | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios locales y pymes rurales en Tiltil. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Tiltil | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios locales y pymes rurales en Tiltil."
+      },
+      "content": {
+        "eyebrow": "RM · Chacabuco · Tiltil",
+        "h1": "Desarrollo web para servicios locales y pymes rurales en Tiltil",
+        "lead": "Para negocios en Tiltil que necesitan canal digital propio.",
+        "localAngle": "Tiltil necesita canales digitales simples y confiables. Construimos webs claras para servicios y pymes: oferta, contacto y SEO local sin complejidad innecesaria.",
+        "painPoints": [
+          "Solo redes o WhatsApp sin web indexable",
+          "Sitio difícil de actualizar",
+          "Poca presencia en Google local",
+          "Sin medición de contactos"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Tiltil →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Tiltil"
+      },
+      "faq": [
+        {
+          "q": "¿Una pyme de Tiltil necesita web propia?",
+          "a": "Si querés aparecer en Google y no depender solo de redes, sí. Empezamos simple: servicios, CTA y base SEO."
+        },
+        {
+          "q": "¿Trabajan remoto con negocios de Tiltil?",
+          "a": "Sí. IrigoyenDev opera remoto; contacto andres@irigoyendev.com / WhatsApp +45 50 24 98 55."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de servicios en Tiltil?",
+          "a": "Desde ~USD 600 orientativos. https://www.irigoyendev.com/precios"
+        }
+      ]
+    },
+    {
+      "slug": "san-bernardo",
+      "name": "San Bernardo",
+      "geo": {
+        "latitude": -33.592,
+        "longitude": -70.699
+      },
+      "neighborhoods": [
+        "San Bernardo Centro",
+        "Lo Herrera",
+        "Nos",
+        "El Manzano"
+      ],
+      "relatedSlugs": [
+        "el-bosque",
+        "la-pintana",
+        "calera-de-tango"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en San Bernardo: comercio, industria y servicios del sur | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, industria y servicios del sur en San Bernardo. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en San Bernardo | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, industria y servicios del sur en San Bernardo."
+      },
+      "content": {
+        "eyebrow": "RM · Maipo · San Bernardo",
+        "h1": "Desarrollo web para comercio, industria y servicios del sur en San Bernardo",
+        "lead": "Para negocios en San Bernardo que necesitan canal digital propio.",
+        "localAngle": "San Bernardo es polo urbano-industrial del sur de la RM. Priorizamos e-commerce ligero, landings de oferta y SEO local para retail, talleres y servicios con alto tráfico.",
+        "painPoints": [
+          "Dependencia de redes sin canal propio",
+          "Sitios lentos o desactualizados",
+          "Campañas Ads sin landing",
+          "Poca diferenciación frente a competencia local"
+        ],
+        "ctaPrimary": "Cotizar proyecto en San Bernardo →",
+        "ctaWhatsApp": "WhatsApp: proyecto en San Bernardo"
+      },
+      "faq": [
+        {
+          "q": "¿Desarrollan e-commerce para comercios en San Bernardo?",
+          "a": "Sí. Catálogo móvil, pasarela según giro y checkout claro. Rangos en https://www.irigoyendev.com/precios."
+        },
+        {
+          "q": "¿Sirve una landing para Ads si tengo local en San Bernardo?",
+          "a": "Sí. Mensaje único, CTA y eventos — evitamos mandar tráfico pagado a un home genérico."
+        },
+        {
+          "q": "¿Atienden también proveedores industriales del sector Nos?",
+          "a": "Sí. Enfoque B2B: giro, cobertura, cotización y tracking."
+        }
+      ]
+    },
+    {
+      "slug": "buin",
+      "name": "Buin",
+      "geo": {
+        "latitude": -33.732,
+        "longitude": -70.739
+      },
+      "neighborhoods": [
+        "Buin Centro",
+        "Maipo",
+        "Valdivia de Paine"
+      ],
+      "relatedSlugs": [
+        "paine",
+        "san-bernardo",
+        "isla-de-maipo"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Buin: agro, comercio y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para agro, comercio y servicios en Buin. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Buin | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para agro, comercio y servicios en Buin."
+      },
+      "content": {
+        "eyebrow": "RM · Maipo · Buin",
+        "h1": "Desarrollo web para agro, comercio y servicios en Buin",
+        "lead": "Para negocios en Buin que necesitan canal digital propio.",
+        "localAngle": "Buin mezcla agro, comercio y servicios del valle del Maipo. Diseñamos webs prácticas para pymes y productores: catálogo, contacto y SEO local — tono directo.",
+        "painPoints": [
+          "Catálogo PDF o WhatsApp sin web",
+          "Poca presencia en Google local",
+          "Sitio lento en móvil",
+          "Sin medición de consultas"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Buin →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Buin"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para un productor o pyme agro en Buin?",
+          "a": "Sí. Oferta clara, zonas, CTA de cotización y base SEO — el comprador necesita datos, no eslóganes."
+        },
+        {
+          "q": "¿Pueden integrar un formulario de cotización con aviso WhatsApp?",
+          "a": "Sí. Lead medible + notificación al equipo comercial."
+        },
+        {
+          "q": "¿Cuál es un primer entregable razonable en Buin?",
+          "a": "Landing/web de servicios desde ~USD 600 orientativos. Cotizamos en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "paine",
+      "name": "Paine",
+      "geo": {
+        "latitude": -33.812,
+        "longitude": -70.741
+      },
+      "neighborhoods": [
+        "Paine Centro",
+        "Hospital",
+        "Champa"
+      ],
+      "relatedSlugs": [
+        "buin",
+        "san-bernardo",
+        "melipilla"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Paine: agroindustria, comercio y servicios | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para agroindustria, comercio y servicios en Paine. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Paine | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para agroindustria, comercio y servicios en Paine."
+      },
+      "content": {
+        "eyebrow": "RM · Maipo · Paine",
+        "h1": "Desarrollo web para agroindustria, comercio y servicios en Paine",
+        "lead": "Para negocios en Paine que necesitan canal digital propio.",
+        "localAngle": "Paine concentra agroindustria y comercio del sur de la RM. Priorizamos sitios B2B/B2C claros: cobertura, catálogo y captación de leads — sin relleno.",
+        "painPoints": [
+          "Presencia digital improvisada",
+          "Cotizaciones solo por teléfono",
+          "Web inexistente o lenta",
+          "Poca claridad de giros y zonas"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Paine →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Paine"
+      },
+      "faq": [
+        {
+          "q": "¿Desarrollan sitios para empresas agroindustriales en Paine?",
+          "a": "Sí. Claridad de giro, cobertura, CTA de cotización y tracking — tono B2B operativo."
+        },
+        {
+          "q": "¿Migran sitios antiguos de empresas en Paine que ya no cargan bien?",
+          "a": "Sí. Rehacemos en stack moderno, conservamos URLs útiles con redirects y medimos desde el lanzamiento."
+        },
+        {
+          "q": "¿Qué rango tiene una web de servicios B2B en Paine?",
+          "a": "Landings desde ~USD 600; productos comerciales USD 3.000–10.000 orientativos."
+        }
+      ]
+    },
+    {
+      "slug": "calera-de-tango",
+      "name": "Calera de Tango",
+      "geo": {
+        "latitude": -33.631,
+        "longitude": -70.782
+      },
+      "neighborhoods": [
+        "Calera de Tango Centro",
+        "Lonquén",
+        "Calera de Tango Sur"
+      ],
+      "relatedSlugs": [
+        "san-bernardo",
+        "padre-hurtado",
+        "maipu"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Calera de Tango: servicios locales y pymes residenciales | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios locales y pymes residenciales en Calera de Tango. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Calera de Tango | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios locales y pymes residenciales en Calera de Tango."
+      },
+      "content": {
+        "eyebrow": "RM · Maipo · Calera de Tango",
+        "h1": "Desarrollo web para servicios locales y pymes residenciales en Calera de Tango",
+        "lead": "Para negocios en Calera de Tango que necesitan canal digital propio.",
+        "localAngle": "Calera de Tango crece con condominios y servicios de barrio. Diseñamos landings claras para captar vecinos: oferta, mapa, WhatsApp y SEO local.",
+        "painPoints": [
+          "Solo Instagram sin web propia",
+          "No aparecen en búsquedas servicio + comuna",
+          "Sin medición de contactos",
+          "Constructor lento"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Calera de Tango →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Calera de Tango"
+      },
+      "faq": [
+        {
+          "q": "¿Una pyme de Calera de Tango necesita web si ya tiene Instagram?",
+          "a": "Sí, como canal indexable. Instagram cambia reglas; la web concentra horarios, servicios y CTA estable."
+        },
+        {
+          "q": "¿Priorizan móvil para clientes en Calera de Tango?",
+          "a": "Siempre. Tipografía legible, botones grandes y WhatsApp visible."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de servicios locales aquí?",
+          "a": "Desde ~USD 600 orientativos. Detalle en https://www.irigoyendev.com/precios."
+        }
+      ]
+    },
+    {
+      "slug": "melipilla",
+      "name": "Melipilla",
+      "geo": {
+        "latitude": -33.688,
+        "longitude": -71.214
+      },
+      "neighborhoods": [
+        "Melipilla Centro",
+        "Pomaire",
+        "San José"
+      ],
+      "relatedSlugs": [
+        "curacavi",
+        "maria-pinto",
+        "padre-hurtado"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Melipilla: comercio, agro y servicios del poniente | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, agro y servicios del poniente en Melipilla. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Melipilla | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, agro y servicios del poniente en Melipilla."
+      },
+      "content": {
+        "eyebrow": "RM · Melipilla · Melipilla",
+        "h1": "Desarrollo web para comercio, agro y servicios del poniente en Melipilla",
+        "lead": "Para negocios en Melipilla que necesitan canal digital propio.",
+        "localAngle": "Melipilla es cabecera del poniente RM: comercio, agro y servicios. Priorizamos webs prácticas, SEO local y conversión a contacto — útil también para proveedores del valle.",
+        "painPoints": [
+          "Web desactualizada o inexistente",
+          "Poca visibilidad en Google local",
+          "Dependencia de redes",
+          "Sin landing para campañas"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Melipilla →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Melipilla"
+      },
+      "faq": [
+        {
+          "q": "¿Hacen desarrollo web para negocios en Melipilla?",
+          "a": "Sí. Comercio, agro y servicios: sitio claro, SEO local y CTA medible. Operamos remoto."
+        },
+        {
+          "q": "¿Sirve para un local en Pomaire u otra zona de Melipilla?",
+          "a": "Sí. Mismo estándar: mapa, horarios, oferta y velocidad — con ángulo local, no plantilla genérica."
+        },
+        {
+          "q": "¿Ofrecen mantenimiento mensual para sitios en Melipilla?",
+          "a": "Plan Care desde ~USD 50/mes orientativos (updates, seguridad, contenido). Ver https://www.irigoyendev.com/precios#care."
+        }
+      ]
+    },
+    {
+      "slug": "curacavi",
+      "name": "Curacaví",
+      "geo": {
+        "latitude": -33.401,
+        "longitude": -71.133
+      },
+      "neighborhoods": [
+        "Curacaví Centro",
+        "Lo Castro",
+        "Zapata"
+      ],
+      "relatedSlugs": [
+        "melipilla",
+        "maria-pinto",
+        "tiltil"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Curacaví: servicios, turismo de paso y pymes | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios, turismo de paso y pymes en Curacaví. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Curacaví | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios, turismo de paso y pymes en Curacaví."
+      },
+      "content": {
+        "eyebrow": "RM · Melipilla · Curacaví",
+        "h1": "Desarrollo web para servicios, turismo de paso y pymes en Curacaví",
+        "lead": "Para negocios en Curacaví que necesitan canal digital propio.",
+        "localAngle": "Curacaví conecta Santiago con el litoral: servicios, comercio de paso y pymes. Diseñamos landings rápidas con mapa, horarios y CTA — pensadas en tráfico móvil de ruta.",
+        "painPoints": [
+          "Sitio que no carga bien en la ruta",
+          "Oferta confusa para clientes de paso",
+          "Sin SEO local",
+          "Datos de ubicación desactualizados"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Curacaví →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Curacaví"
+      },
+      "faq": [
+        {
+          "q": "¿Tiene sentido una landing si mi negocio está en Curacaví (ruta)?",
+          "a": "Sí. Atención corta: mensaje en segundos, mapa, horarios y CTA (WhatsApp / visita)."
+        },
+        {
+          "q": "¿Optimizan para búsquedas locales cerca de la Ruta 68?",
+          "a": "Trabajamos SEO local, schema y claridad de dirección. Base técnica sólida, sin promesas mágicas."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de campaña en Curacaví?",
+          "a": "Desde ~USD 600 orientativos. https://www.irigoyendev.com/#contact"
+        }
+      ]
+    },
+    {
+      "slug": "maria-pinto",
+      "name": "María Pinto",
+      "geo": {
+        "latitude": -33.515,
+        "longitude": -71.119
+      },
+      "neighborhoods": [
+        "María Pinto Centro",
+        "Lonquén Poniente"
+      ],
+      "relatedSlugs": [
+        "melipilla",
+        "curacavi",
+        "padre-hurtado"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en María Pinto: agro, servicios y pymes rurales | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para agro, servicios y pymes rurales en María Pinto. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en María Pinto | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para agro, servicios y pymes rurales en María Pinto."
+      },
+      "content": {
+        "eyebrow": "RM · Melipilla · María Pinto",
+        "h1": "Desarrollo web para agro, servicios y pymes rurales en María Pinto",
+        "lead": "Para negocios en María Pinto que necesitan canal digital propio.",
+        "localAngle": "En María Pinto priorizamos canales simples: oferta agro/servicios, contacto y SEO local. Ideal para pymes que quieren dejar de depender solo de WhatsApp.",
+        "painPoints": [
+          "Sin web indexable",
+          "Cotizaciones desordenadas",
+          "Poca confianza visual del canal digital",
+          "Sin analytics"
+        ],
+        "ctaPrimary": "Cotizar proyecto en María Pinto →",
+        "ctaWhatsApp": "WhatsApp: proyecto en María Pinto"
+      },
+      "faq": [
+        {
+          "q": "¿Una web ayuda si mi negocio en María Pinto vive de WhatsApp?",
+          "a": "Sí. Valida la oferta en Google y concentra horarios/servicios; WhatsApp sigue siendo el CTA principal."
+        },
+        {
+          "q": "¿Priorizan sitios fáciles de mantener en María Pinto?",
+          "a": "Sí. Estructura clara y plan Care opcional para cambios de contenido sin depender de un desarrollador cada vez."
+        },
+        {
+          "q": "¿Cuánto cuesta empezar en María Pinto?",
+          "a": "Landing/web de servicios desde ~USD 600 orientativos."
+        }
+      ]
+    },
+    {
+      "slug": "alhue",
+      "name": "Alhué",
+      "geo": {
+        "latitude": -34.035,
+        "longitude": -71.1
+      },
+      "neighborhoods": [
+        "Alhué Centro",
+        "Villa Alhué"
+      ],
+      "relatedSlugs": [
+        "melipilla",
+        "san-pedro",
+        "paine"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Alhué: servicios locales y turismo rural | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios locales y turismo rural en Alhué. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Alhué | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios locales y turismo rural en Alhué."
+      },
+      "content": {
+        "eyebrow": "RM · Melipilla · Alhué",
+        "h1": "Desarrollo web para servicios locales y turismo rural en Alhué",
+        "lead": "Para negocios en Alhué que necesitan canal digital propio.",
+        "localAngle": "Alhué es comuna rural del suroeste RM. Construimos presencia digital mínima-viable: servicios, mapa, contacto y SEO — sin complejidad de más.",
+        "painPoints": [
+          "Casi nula presencia web",
+          "Dependencia total de WhatsApp",
+          "Difícil de encontrar en Google",
+          "Sitios genéricos de plantilla"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Alhué →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Alhué"
+      },
+      "faq": [
+        {
+          "q": "¿Vale la pena una web para un servicio en Alhué?",
+          "a": "Si querés aparecer en Google y proyectar seriedad, sí. Empezamos liviano: oferta, mapa y CTA."
+        },
+        {
+          "q": "¿Trabajan remoto con comunas rurales de la RM?",
+          "a": "Sí. Todo el ciclo es remoto; la entrega es digital."
+        },
+        {
+          "q": "¿Cuál es el costo de entrada para Alhué?",
+          "a": "Desde ~USD 600 orientativos por landing/web simple."
+        }
+      ]
+    },
+    {
+      "slug": "san-pedro",
+      "name": "San Pedro",
+      "geo": {
+        "latitude": -33.9,
+        "longitude": -71.45
+      },
+      "neighborhoods": [
+        "San Pedro Centro"
+      ],
+      "relatedSlugs": [
+        "melipilla",
+        "alhue",
+        "paine"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en San Pedro: agro y servicios rurales | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para agro y servicios rurales en San Pedro. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en San Pedro | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para agro y servicios rurales en San Pedro."
+      },
+      "content": {
+        "eyebrow": "RM · Melipilla · San Pedro",
+        "h1": "Desarrollo web para agro y servicios rurales en San Pedro",
+        "lead": "Para negocios en San Pedro que necesitan canal digital propio.",
+        "localAngle": "San Pedro (Melipilla) necesita canal digital práctico para agro y servicios. Priorizamos claridad, WhatsApp y SEO local — sin jerga startup.",
+        "painPoints": [
+          "Sin web profesional",
+          "Leads solo por teléfono",
+          "Poca claridad de cobertura",
+          "Sin medición"
+        ],
+        "ctaPrimary": "Cotizar proyecto en San Pedro →",
+        "ctaWhatsApp": "WhatsApp: proyecto en San Pedro"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para un productor o servicio en San Pedro (RM)?",
+          "a": "Sí. Oferta, zona, CTA de cotización y base SEO — tono directo y operativo."
+        },
+        {
+          "q": "¿Pueden dejar formulario + WhatsApp juntos?",
+          "a": "Sí. Combinamos ambos y medimos clics/envíos."
+        },
+        {
+          "q": "¿Quién es IrigoyenDev y cómo contacto desde San Pedro?",
+          "a": "IrigoyenDev (Andrés Irigoyen). Email andres@irigoyendev.com, WhatsApp +45 50 24 98 55, web https://www.irigoyendev.com."
+        }
+      ]
+    },
+    {
+      "slug": "talagante",
+      "name": "Talagante",
+      "geo": {
+        "latitude": -33.664,
+        "longitude": -70.929
+      },
+      "neighborhoods": [
+        "Talagante Centro",
+        "El Monte límite",
+        "Lonquén"
+      ],
+      "relatedSlugs": [
+        "penaflor",
+        "el-monte",
+        "padre-hurtado"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Talagante: comercio, servicios y cabecera provincial | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, servicios y cabecera provincial en Talagante. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Talagante | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, servicios y cabecera provincial en Talagante."
+      },
+      "content": {
+        "eyebrow": "RM · Talagante · Talagante",
+        "h1": "Desarrollo web para comercio, servicios y cabecera provincial en Talagante",
+        "lead": "Para negocios en Talagante que necesitan canal digital propio.",
+        "localAngle": "Talagante es cabecera provincial del suroeste RM. Priorizamos sitios locales claros, SEO y conversión a contacto para comercio y servicios que compiten con comunas vecinas.",
+        "painPoints": [
+          "Web desactualizada",
+          "No aparecen en búsquedas locales",
+          "Sin landing de ofertas",
+          "Contacto disperso entre redes"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Talagante →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Talagante"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo mejoran la aparición en Google para un negocio en Talagante?",
+          "a": "On-page técnico, titles locales honestos, schema y velocidad — más recomendaciones de perfil de negocio en Google."
+        },
+        {
+          "q": "¿Pueden unificar Instagram y web en un solo CTA en Talagante?",
+          "a": "Sí. Misma oferta, mismo WhatsApp/formulario, menos fricción para el cliente del suroeste RM."
+        },
+        {
+          "q": "¿Ofrecen Care mensual en Talagante?",
+          "a": "Sí, desde ~USD 50/mes orientativos. https://www.irigoyendev.com/precios#care"
+        }
+      ]
+    },
+    {
+      "slug": "penaflor",
+      "name": "Peñaflor",
+      "geo": {
+        "latitude": -33.606,
+        "longitude": -70.876
+      },
+      "neighborhoods": [
+        "Peñaflor Centro",
+        "Malloco",
+        "El Recurso"
+      ],
+      "relatedSlugs": [
+        "talagante",
+        "padre-hurtado",
+        "calera-de-tango"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Peñaflor: comercio, servicios y alto tránsito residencial | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, servicios y alto tránsito residencial en Peñaflor. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Peñaflor | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, servicios y alto tránsito residencial en Peñaflor."
+      },
+      "content": {
+        "eyebrow": "RM · Talagante · Peñaflor",
+        "h1": "Desarrollo web para comercio, servicios y alto tránsito residencial en Peñaflor",
+        "lead": "Para negocios en Peñaflor que necesitan canal digital propio.",
+        "localAngle": "Peñaflor concentra vivienda y comercio del eje Talagante. Diseñamos landings y e-commerce ligero para retail y servicios con demanda local fuerte.",
+        "painPoints": [
+          "Vender solo por redes",
+          "Sitios lentos en 4G",
+          "Poca diferenciación local",
+          "Sin eventos de conversión"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Peñaflor →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Peñaflor"
+      },
+      "faq": [
+        {
+          "q": "¿Pueden armar una tienda online para un retail en Peñaflor?",
+          "a": "Sí. Catálogo, pasarela según giro y checkout móvil. Rangos en https://www.irigoyendev.com/precios."
+        },
+        {
+          "q": "¿Qué priorizan si el negocio atiende mucho por WhatsApp en Peñaflor?",
+          "a": "Botón sticky, horarios, oferta indexable y medición de clics a WhatsApp."
+        },
+        {
+          "q": "¿Sirve SEO local en Peñaflor?",
+          "a": "Sí. Páginas de servicios + comuna, schema y velocidad ayudan frente a vecinos que buscan en Google."
+        }
+      ]
+    },
+    {
+      "slug": "el-monte",
+      "name": "El Monte",
+      "geo": {
+        "latitude": -33.68,
+        "longitude": -70.984
+      },
+      "neighborhoods": [
+        "El Monte Centro",
+        "Los Fabus"
+      ],
+      "relatedSlugs": [
+        "talagante",
+        "isla-de-maipo",
+        "penaflor"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en El Monte: servicios y comercio local | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para servicios y comercio local en El Monte. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en El Monte | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para servicios y comercio local en El Monte."
+      },
+      "content": {
+        "eyebrow": "RM · Talagante · El Monte",
+        "h1": "Desarrollo web para servicios y comercio local en El Monte",
+        "lead": "Para negocios en El Monte que necesitan canal digital propio.",
+        "localAngle": "En El Monte construimos presencia digital directa: servicios, horarios, mapa y conversión a contacto. Ideal para pymes que necesitan aparecer en búsquedas del suroeste RM.",
+        "painPoints": [
+          "No aparecen en búsquedas servicio + El Monte",
+          "Constructor lento",
+          "Sin prueba social",
+          "Contacto solo por redes"
+        ],
+        "ctaPrimary": "Cotizar proyecto en El Monte →",
+        "ctaWhatsApp": "WhatsApp: proyecto en El Monte"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo aparecen en búsquedas del tipo servicio + El Monte?",
+          "a": "Titles honestos, NAP coherente, schema y FAQs útiles — sin keyword stuffing."
+        },
+        {
+          "q": "¿Puedo migrar desde Wix o similar en El Monte?",
+          "a": "Sí. Stack rápido, redirects necesarios y analytics desde el día uno."
+        },
+        {
+          "q": "¿Quién es IrigoyenDev para proyectos en El Monte?",
+          "a": "IrigoyenDev (Andrés Irigoyen). Email andres@irigoyendev.com, WhatsApp +45 50 24 98 55."
+        }
+      ]
+    },
+    {
+      "slug": "isla-de-maipo",
+      "name": "Isla de Maipo",
+      "geo": {
+        "latitude": -33.752,
+        "longitude": -70.903
+      },
+      "neighborhoods": [
+        "Isla de Maipo Centro",
+        "La Islita"
+      ],
+      "relatedSlugs": [
+        "talagante",
+        "buin",
+        "el-monte"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Isla de Maipo: viñas, agro y turismo local | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para viñas, agro y turismo local en Isla de Maipo. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Isla de Maipo | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para viñas, agro y turismo local en Isla de Maipo."
+      },
+      "content": {
+        "eyebrow": "RM · Talagante · Isla de Maipo",
+        "h1": "Desarrollo web para viñas, agro y turismo local en Isla de Maipo",
+        "lead": "Para negocios en Isla de Maipo que necesitan canal digital propio.",
+        "localAngle": "Isla de Maipo es conocida por viñas y agro del valle. Diseñamos sitios con tipografía cuidada y CTA de visita/reserva — también webs simples para servicios locales.",
+        "painPoints": [
+          "Buena experiencia offline, web débil",
+          "Reservas desordenadas",
+          "Fotos pesadas",
+          "SEO débil frente a destinos del Maipo"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Isla de Maipo →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Isla de Maipo"
+      },
+      "faq": [
+        {
+          "q": "¿Sirve una web para una viña o turismo en Isla de Maipo?",
+          "a": "Sí. Visitas, horarios, mapa, CTA de reserva y performance — sin plantilla genérica de turismo."
+        },
+        {
+          "q": "¿Optimizan galerías de fotos de viñedos?",
+          "a": "Sí. Formatos modernos y tamaños correctos para no matar LCP."
+        },
+        {
+          "q": "¿Cuánto cuesta una landing de visitas en Isla de Maipo?",
+          "a": "Desde ~USD 600 orientativos. Cotización en https://www.irigoyendev.com/#contact."
+        }
+      ]
+    },
+    {
+      "slug": "padre-hurtado",
+      "name": "Padre Hurtado",
+      "geo": {
+        "latitude": -33.566,
+        "longitude": -70.814
+      },
+      "neighborhoods": [
+        "Padre Hurtado Centro",
+        "El Abrazo",
+        "Santa Rosa de Chena"
+      ],
+      "relatedSlugs": [
+        "maipu",
+        "penaflor",
+        "calera-de-tango"
+      ],
+      "seo": {
+        "metaTitle": "Desarrollo web en Padre Hurtado: comercio, servicios y crecimiento urbano | IrigoyenDev",
+        "metaDescription": "Webs, landings y e-commerce para comercio, servicios y crecimiento urbano en Padre Hurtado. SEO local — IrigoyenDev.",
+        "ogTitle": "Desarrollo web en Padre Hurtado | IrigoyenDev",
+        "ogDescription": "Presencia digital efectiva para comercio, servicios y crecimiento urbano en Padre Hurtado."
+      },
+      "content": {
+        "eyebrow": "RM · Talagante · Padre Hurtado",
+        "h1": "Desarrollo web para comercio, servicios y crecimiento urbano en Padre Hurtado",
+        "lead": "Para negocios en Padre Hurtado que necesitan canal digital propio.",
+        "localAngle": "Padre Hurtado crece entre Maipú y el eje Talagante. Priorizamos landings y SEO local para retail y servicios que captan vecinos de comunas aledañas.",
+        "painPoints": [
+          "Presencia digital atrasada al crecimiento",
+          "Competencia de Maipú/Peñaflor mejor posicionada",
+          "Sin medición de leads",
+          "Sitio genérico sin ángulo local"
+        ],
+        "ctaPrimary": "Cotizar proyecto en Padre Hurtado →",
+        "ctaWhatsApp": "WhatsApp: proyecto en Padre Hurtado"
+      },
+      "faq": [
+        {
+          "q": "¿Atienden proyectos web en Padre Hurtado?",
+          "a": "Sí. Retail y servicios con foco en SEO local y conversión móvil — remoto."
+        },
+        {
+          "q": "¿Cómo compiten con negocios de Maipú cercanos?",
+          "a": "Con claridad de oferta, cercanía, velocidad y titles locales honestos — no copiando el tono de otra comuna."
+        },
+        {
+          "q": "¿Qué entregable inicial recomiendan en Padre Hurtado?",
+          "a": "Landing/web de servicios desde ~USD 600 orientativos; tienda si ya hay catálogo listo."
         }
       ]
     }
