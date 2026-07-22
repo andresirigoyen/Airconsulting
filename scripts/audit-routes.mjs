@@ -31,6 +31,30 @@ function extractRefs(html) {
   return refs;
 }
 
+function localExists(ref) {
+  if (!ref.startsWith('/')) return true;
+  let clean = ref.split('#')[0].split('?')[0];
+  try {
+    clean = decodeURIComponent(clean);
+  } catch {
+    /* keep */
+  }
+  if (clean === '/') return fs.existsSync(path.join(ROOT, 'index.html'));
+  const noSlash = clean.replace(/^\//, '');
+  const abs = path.join(ROOT, noSlash.replace(/\//g, path.sep));
+  if (path.extname(noSlash)) return fs.existsSync(abs);
+  const parts = noSlash.split('/');
+  const htmlPath =
+    parts.length === 1
+      ? path.join(ROOT, `${parts[0]}.html`)
+      : path.join(ROOT, ...parts.slice(0, -1), `${parts[parts.length - 1]}.html`);
+  return (
+    fs.existsSync(htmlPath) ||
+    fs.existsSync(path.join(ROOT, noSlash, 'index.html')) ||
+    fs.existsSync(abs)
+  );
+}
+
 const htmlFiles = walkHtmlFiles(ROOT);
 const missing = [];
 const stale = [];
@@ -52,8 +76,7 @@ for (const file of htmlFiles) {
   }
   for (const ref of extractRefs(html)) {
     if (!ref.startsWith('/')) continue;
-    const local = path.join(ROOT, decodeRef(ref.replace(/^\//, '')).replace(/\//g, path.sep));
-    if (!fs.existsSync(local)) missing.push({ rel, ref });
+    if (!localExists(ref)) missing.push({ rel, ref });
   }
 }
 

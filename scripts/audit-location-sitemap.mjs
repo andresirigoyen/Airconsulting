@@ -8,10 +8,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGeoConfig, listGeoPaths } from './lib/geo-config.mjs';
+import {
+  buildKeywordRewrites,
+  keywordAliasPathsFor,
+} from './lib/geo-keyword-aliases.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 const sitemapPath = path.join(root, 'sitemap.xml');
+const vercelPath = path.join(root, 'vercel.json');
 const SITE = 'https://www.irigoyendev.com';
 
 /** @type {string[]} */
@@ -129,10 +134,55 @@ function main() {
     'index.html must define @id #business (parentOrganization target)'
   );
 
+  // Keyword aliases (rewrites → silo). Must NOT appear as duplicate sitemap locs.
+  assert(fs.existsSync(vercelPath), 'vercel.json missing');
+  const vercel = JSON.parse(fs.readFileSync(vercelPath, 'utf8'));
+  const rewrites = Array.isArray(vercel.rewrites) ? vercel.rewrites : [];
+  const rewriteBySource = new Map(rewrites.map((r) => [r.source, r.destination]));
+  const expectedAliases = buildKeywordRewrites(config.entries);
+  assert(expectedAliases.length > 0, 'Expected CL keyword aliases for Santiago comunas');
+  for (const r of expectedAliases) {
+    assert(
+      rewriteBySource.get(r.source) === r.destination,
+      `vercel rewrite missing or wrong: ${r.source} → ${r.destination}`
+    );
+    // Aliases are not canonical — must not be listed as <loc>
+    assert(
+      !locSet.has(`${SITE}${r.source}`),
+      `sitemap must not list keyword alias ${r.source} (canonical is silo path)`
+    );
+  }
+  // Spot-check Las Condes competitive pattern
+  const lasCondes = config.entries.find((e) => e.slug === 'las-condes');
+  if (lasCondes) {
+    const aliases = keywordAliasPathsFor(lasCondes);
+    assert(
+      aliases.includes('agencia-web-en-las-condes'),
+      'las-condes must expose /agencia-web-en-las-condes alias'
+    );
+    assert(
+      aliases.includes('desarrollo-web-en-las-condes'),
+      'las-condes must expose /desarrollo-web-en-las-condes alias'
+    );
+  }
+  const santiagoHub = config.entries.find((e) => e.slug === 'santiago' && e.type === 'hub');
+  if (santiagoHub) {
+    const hubAliases = keywordAliasPathsFor(santiagoHub);
+    assert(
+      hubAliases.includes('desarrollo-web-santiago'),
+      'santiago hub must expose /desarrollo-web-santiago'
+    );
+    assert(
+      hubAliases.includes('tienda-online-santiago'),
+      'santiago hub must expose /tienda-online-santiago'
+    );
+  }
+
   console.log('=== Geo / sitemap audit ===');
   console.log(`geo-config entries: ${config.entries.length}`);
   console.log(`paths: ${listGeoPaths().length}`);
   console.log(`Sitemap URLs: ${locs.length}`);
+  console.log(`Keyword alias rewrites: ${expectedAliases.length}`);
 
   if (warnings.length) {
     console.log('\nWarnings:');
@@ -152,9 +202,10 @@ function main() {
 function printChecklist() {
   console.log(`Manual production checklist:
   [ ] Only edit data/geo-config.json for new cities (NO template changes)
-  [ ] npm run build:geo  (validates + HTML + prune orphans + atomic sitemap)
+  [ ] npm run build:geo  (validates + HTML + prune orphans + atomic sitemap + keyword aliases)
   [ ] npm run audit:geo
   [ ] Unknown URL e.g. /santiago/fake → 404.html (no blank page)
+  [ ] Keyword aliases e.g. /desarrollo-web-en-las-condes and /agencia-web-en-las-condes rewrite to /santiago/las-condes (canonical stays silo)
   [ ] Canonical absolute; LocalBusiness + addressCountry match countryCode
   [ ] Norway: add hub norge + city entries (countryCode NO) then build:geo
   [ ] Search Console → resubmit sitemap

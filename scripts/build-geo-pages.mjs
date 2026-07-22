@@ -28,6 +28,10 @@ import { CHILE_ADMIN_AREAS } from './lib/chile-geo.mjs';
 import { ENTITY } from './lib/entity-nap.mjs';
 import { marketUi, countryDisplayName, requireMarket } from './lib/geo-markets.mjs';
 import { writeSitemap } from './build-sitemap.mjs';
+import {
+  keywordAliasPathsFor,
+  syncVercelKeywordRewrites,
+} from './lib/geo-keyword-aliases.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -737,18 +741,28 @@ function main() {
   const nextPaths = listGeoPaths();
   pruneOrphanHtml(previousPaths, nextPaths, markets);
 
+  const aliasMap = {};
+  for (const entry of entries) {
+    const aliases = keywordAliasPathsFor(entry);
+    if (aliases.length) aliasMap[publicPath(entry)] = aliases;
+  }
+
   fs.writeFileSync(
     SLUGS_INDEX,
     JSON.stringify(
       {
         generatedAt: new Date().toISOString(),
         paths: nextPaths,
-        note: 'Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build.',
+        keywordAliases: aliasMap,
+        note: 'Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build. Keyword aliases rewrite in vercel.json to silo paths (canonical stays /santiago/...).',
       },
       null,
       2
     ) + '\n'
   );
+
+  const aliasCount = syncVercelKeywordRewrites(entries);
+  console.log(`Synced ${aliasCount} keyword alias rewrites → vercel.json`);
 
   // —— Atomic sitemap (only after successful geo HTML write) ——
   const sitemapCount = writeSitemap();

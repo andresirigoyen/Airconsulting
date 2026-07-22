@@ -102,6 +102,13 @@ Para **comuna** y **región**: `latitude`/`longitude`, `telephone`, `priceRange`
 
 También validados: `type`, `countryCode` ∈ `markets[]`, `parentSlug` mismo país, hubPath del market si hay páginas.
 
+**Keyword aliases (CL comunas):** `build:geo` escribe rewrites en `vercel.json` para:
+
+- `/desarrollo-web-en-{slug}` → `/santiago/{slug}`
+- `/agencia-web-en-{slug}` → `/santiago/{slug}`
+
+La canónica y el sitemap siguen siendo el silo `/santiago/...`. No dupliques HTML a mano.
+
 ## Comandos
 
 ```bash

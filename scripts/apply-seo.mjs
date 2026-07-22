@@ -16,12 +16,12 @@ const pages = [
   {
     file: 'index.html',
     path: '/',
-    title: 'Desarrollador Full Stack Freelance | E-commerce y Landings — IrigoyenDev',
+    title: 'Desarrollador web freelance Chile | Full stack, tiendas y landings — IrigoyenDev',
     description:
-      'Andrés Irigoyen (IrigoyenDev): desarrollador full stack freelance para crear tienda online, landing pages de conversión y plataformas de negocio. Clientes en Chile, España, Dinamarca y remoto.',
-    ogTitle: 'IrigoyenDev | Desarrollador full stack para e-commerce y landings',
+      'Desarrollador web freelance en Chile: desarrollo web full stack, crear tienda online Chile y landings de conversión. IrigoyenDev — también España, Dinamarca y remoto.',
+    ogTitle: 'Desarrollador web freelance Chile | IrigoyenDev',
     ogDescription:
-      'E-commerce, plataformas y landing pages diseñadas para convertir tráfico en ingresos. Pide tu plan de proyecto.',
+      'Desarrollo web full stack: e-commerce, landings y plataformas. Crea tu tienda online en Chile o cotiza tu proyecto.',
     ogImage: OG_DEFAULT,
     ogType: 'website',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
@@ -226,46 +226,46 @@ const pages = [
   leadPage({
     file: 'servicios.html',
     path: '/servicios',
-    title: 'Servicios de desarrollo web full stack freelance | IrigoyenDev',
+    title: 'Desarrollo web a medida, tiendas online y landings | IrigoyenDev',
     description:
-      'Servicios de desarrollador full stack freelance: crear tienda online, landing pages de conversión y plataformas de negocio. Chile, España, Dinamarca y remoto.',
-    ogTitle: 'Servicios full stack — e-commerce, landings y plataformas | IrigoyenDev',
+      'Servicios: desarrollo de tiendas online, landing page de conversión, plataforma inmobiliaria digital, desarrollo web a medida y SEO técnico para e-commerce. Chile y remoto.',
+    ogTitle: 'Servicios de desarrollo web a medida | IrigoyenDev',
     ogDescription:
-      'E-commerce, landings y plataformas a medida para convertir visitas en clientes. Pide tu plan de proyecto.',
-    serviceName: 'Servicios de desarrollo web full stack',
+      'Tiendas online, landings de conversión, plataformas y SEO técnico. Cotiza tu plan de proyecto.',
+    serviceName: 'Desarrollo web a medida y servicios digitales',
   }),
   leadPage({
     file: 'crear-tienda-online.html',
     path: '/crear-tienda-online',
-    title: 'Crear tienda online | E-commerce freelance | IrigoyenDev',
+    title: 'Crear tienda online Chile | Shopify, WooCommerce y a medida | IrigoyenDev',
     description:
-      'Crear tienda online a medida: catálogo, checkout, panel admin y SEO. Desarrollador e-commerce freelance para Chile, España, Dinamarca y remoto.',
-    ogTitle: 'Crear tienda online que venda | IrigoyenDev',
+      'Crear tienda online Chile: e-commerce para pymes, desarrollo tienda online Santiago, Shopify o WooCommerce, y tienda online que venda con checkout y SEO.',
+    ogTitle: 'Crear tienda online Chile que venda | IrigoyenDev',
     ogDescription:
-      'E-commerce y marketplaces listos para vender, con rendimiento y SEO técnico incluidos.',
-    serviceName: 'Crear tienda online / e-commerce',
+      'E-commerce para pymes en Chile: catálogo, pagos, panel admin y SEO. Cotiza tu tienda online.',
+    serviceName: 'Crear tienda online / e-commerce Chile',
   }),
   leadPage({
     file: 'landing-pages.html',
     path: '/landing-pages',
-    title: 'Landing pages de conversión | Desarrollador freelance | IrigoyenDev',
+    title: 'Landing page de conversión | Diseño landing page Chile | IrigoyenDev',
     description:
-      'Landing pages profesionales orientadas a conversión: mensaje claro, CTA y SEO. Ideal para campañas, lanzamientos y negocios locales.',
-    ogTitle: 'Landing pages de conversión | IrigoyenDev',
+      'Landing page de conversión y diseño landing page Chile: páginas para campañas publicitarias con CTA claro, velocidad y tracking. Landings que convierten.',
+    ogTitle: 'Landing page de conversión en Chile | IrigoyenDev',
     ogDescription:
-      'Landings rápidas y persuasivas para captar leads o ventas. Cotiza tu página.',
-    serviceName: 'Landing pages de conversión',
+      'Diseño de landing page para campañas publicitarias: mensaje, prueba social y CTA. Desde ~USD 600.',
+    serviceName: 'Landing page de conversión',
   }),
   leadPage({
     file: 'precios.html',
     path: '/precios',
-    title: 'Precios desarrollo web y e-commerce | IrigoyenDev',
+    title: 'Cuánto cuesta una tienda online | Precios desarrollo web Chile | IrigoyenDev',
     description:
-      'Precios orientativos: landings desde ~USD 600, SEO desde ~USD 199, e-commerce y plataformas. Planes Care desde ~USD 200/mes.',
-    ogTitle: 'Precios de desarrollo web freelance | IrigoyenDev',
+      'Cuánto cuesta una tienda online, precio desarrollo web Chile, presupuesto web e-commerce y tarifas de desarrollador web freelance. Rangos claros en USD.',
+    ogTitle: 'Precios y tarifas desarrollador web freelance | IrigoyenDev',
     ogDescription:
-      'Landings desde ~USD 600, SEO desde ~USD 199 y rangos claros para e-commerce y plataformas. Cotización en 48h.',
-    serviceName: 'Desarrollo web freelance — precios',
+      'Presupuesto web e-commerce y precios de desarrollo web en Chile: landings desde ~USD 600, productos comerciales USD 3.000–10.000.',
+    serviceName: 'Precios desarrollo web y e-commerce',
   }),
   {
     file: 'faq.html',
@@ -339,39 +339,39 @@ const pages = [
   },
   project({
     slug: 'thebeebaby',
-    title: 'TheBeeBaby — Marketplace e-commerce | Caso IrigoyenDev',
+    title: 'Proyecto tienda online TheBeeBaby | Caso e-commerce IrigoyenDev',
     description:
-      'Caso real: marketplace e-commerce TheBeeBaby — catálogo geo, proveedores, pagos seguros y plataforma lista para producción, desarrollada por IrigoyenDev.',
-    ogTitle: 'TheBeeBaby — Marketplace familiar | IrigoyenDev',
+      'Caso de éxito e-commerce Chile/internacional: proyecto tienda online TheBeeBaby — marketplace con catálogo, pagos y panel listo para producción.',
+    ogTitle: 'TheBeeBaby — Proyecto tienda online | IrigoyenDev',
     ogDescription:
-      'Marketplace full stack que conecta familias viajeras con proveedores locales de artículos para bebés.',
+      'Marketplace e-commerce full stack: catálogo geo, proveedores y pagos seguros.',
     ogImage: `${SITE}/images/Thebeebaby/thebeebabyheroe.png`,
   }),
   project({
     slug: 'dahuss',
-    title: 'Dahuss Homes — Plataforma inmobiliaria | Caso IrigoyenDev',
+    title: 'Dahuss Homes — Plataforma inmobiliaria digital | Caso IrigoyenDev',
     description:
-      'Caso real: plataforma inmobiliaria Dahuss Homes — catálogo, captación de leads y panel admin para listados premium en Chile y Latinoamérica.',
-    ogTitle: 'Dahuss Homes — Plataforma inmobiliaria | IrigoyenDev',
+      'Plataforma inmobiliaria digital Dahuss Homes: catálogo, captación de leads y panel admin para listados premium.',
+    ogTitle: 'Dahuss Homes — Plataforma inmobiliaria digital | IrigoyenDev',
     ogDescription:
       'Plataforma inmobiliaria con catálogo, leads y herramientas de administración.',
     ogImage: `${SITE}/images/Dahuss/dahussheroe.png`,
   }),
   project({
     slug: 'calafate',
-    title: 'Calafate Propiedades — Plataforma inmobiliaria | Caso IrigoyenDev',
+    title: 'Plataforma inmobiliaria Calafate Propiedades | Caso IrigoyenDev',
     description:
-      'Caso real: Calafate Propiedades — catálogo inmobiliario, leads y panel admin en Next.js, desarrollado por IrigoyenDev.',
-    ogTitle: 'Calafate Propiedades — Real Estate | IrigoyenDev',
+      'Plataforma inmobiliaria digital Calafate Propiedades: catálogo, leads y admin en Next.js — desarrollo web para negocios B2B e inmobiliarios.',
+    ogTitle: 'Calafate Propiedades — Plataforma inmobiliaria | IrigoyenDev',
     ogDescription:
       'Plataforma inmobiliaria completa: catálogo rápido, leads y administración.',
     ogImage: `${SITE}/images/calafate-mockup.png`,
   }),
   project({
     slug: 'dragonmart',
-    title: 'Dragonmart — Plataforma B2B de sourcing | Caso IrigoyenDev',
+    title: 'Dragonmart — Desarrollo web para negocios B2B | Caso IrigoyenDev',
     description:
-      'Caso real: Dragonmart — plataforma corporativa de sourcing B2B con flujos de catálogo y herramientas para proveedores.',
+      'Caso de desarrollo web para negocios B2B: Dragonmart — plataforma de sourcing con catálogo y herramientas para proveedores.',
     ogTitle: 'Dragonmart — Sourcing corporativo | IrigoyenDev',
     ogDescription:
       'Plataforma B2B de sourcing con catálogo y tooling para proveedores.',

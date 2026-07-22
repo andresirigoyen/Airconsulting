@@ -7,33 +7,102 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "irigoyendev.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "irigoyendev.com"
+        }
+      ],
       "destination": "https://www.irigoyendev.com/:path*",
       "permanent": true
     },
-    { "source": "/cotizacion", "destination": "/pages/cotizacion", "permanent": true },
-    { "source": "/calafate", "destination": "/projects/calafate", "permanent": true },
-    { "source": "/dahuss", "destination": "/projects/dahuss", "permanent": true },
-    { "source": "/dragonmart", "destination": "/projects/dragonmart", "permanent": true },
-    { "source": "/familiainternacional", "destination": "/projects/familiainternacional", "permanent": true },
-    { "source": "/floreria", "destination": "/projects/floreria", "permanent": true },
-    { "source": "/radiochicureo", "destination": "/projects/radiochicureo", "permanent": true },
-    { "source": "/retorica", "destination": "/projects/retorica", "permanent": true },
-    { "source": "/rluabogados", "destination": "/projects/rluabogados", "permanent": true },
-    { "source": "/thebeebaby", "destination": "/projects/thebeebaby", "permanent": true }
+    {
+      "source": "/cotizacion",
+      "destination": "/pages/cotizacion",
+      "permanent": true
+    },
+    {
+      "source": "/calafate",
+      "destination": "/projects/calafate",
+      "permanent": true
+    },
+    {
+      "source": "/dahuss",
+      "destination": "/projects/dahuss",
+      "permanent": true
+    },
+    {
+      "source": "/dragonmart",
+      "destination": "/projects/dragonmart",
+      "permanent": true
+    },
+    {
+      "source": "/familiainternacional",
+      "destination": "/projects/familiainternacional",
+      "permanent": true
+    },
+    {
+      "source": "/floreria",
+      "destination": "/projects/floreria",
+      "permanent": true
+    },
+    {
+      "source": "/radiochicureo",
+      "destination": "/projects/radiochicureo",
+      "permanent": true
+    },
+    {
+      "source": "/retorica",
+      "destination": "/projects/retorica",
+      "permanent": true
+    },
+    {
+      "source": "/rluabogados",
+      "destination": "/projects/rluabogados",
+      "permanent": true
+    },
+    {
+      "source": "/thebeebaby",
+      "destination": "/projects/thebeebaby",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" },
-        { "key": "X-DNS-Prefetch-Control", "value": "off" },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Resource-Policy", "value": "same-site" },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "off"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Cross-Origin-Resource-Policy",
+          "value": "same-site"
+        },
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://wa.me; script-src 'self' https://cdn.jsdelivr.net https://esm.sh 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://esm.sh; upgrade-insecure-requests"
@@ -43,22 +112,53 @@
     {
       "source": "/(robots\\.txt|sitemap\\.xml|llms\\.txt|ai\\.txt|humans\\.txt|site\\.webmanifest|6pdb2ygto7mkl9ize03fhvc1x5ajrn8q\\.txt)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
       ]
     },
     {
       "source": "/santiago/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    },
+    {
+      "source": "/(desarrollo-web-en|agencia-web-en)-(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
       ]
     },
     {
       "source": "/norge/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
       ]
     },
     {
@@ -73,6 +173,444 @@
           "value": "nosniff"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/agencia-web-en-alhue",
+      "destination": "/santiago/alhue"
+    },
+    {
+      "source": "/agencia-web-en-buin",
+      "destination": "/santiago/buin"
+    },
+    {
+      "source": "/agencia-web-en-calera-de-tango",
+      "destination": "/santiago/calera-de-tango"
+    },
+    {
+      "source": "/agencia-web-en-cerrillos",
+      "destination": "/santiago/cerrillos"
+    },
+    {
+      "source": "/agencia-web-en-cerro-navia",
+      "destination": "/santiago/cerro-navia"
+    },
+    {
+      "source": "/agencia-web-en-colina",
+      "destination": "/santiago/colina"
+    },
+    {
+      "source": "/agencia-web-en-conchali",
+      "destination": "/santiago/conchali"
+    },
+    {
+      "source": "/agencia-web-en-curacavi",
+      "destination": "/santiago/curacavi"
+    },
+    {
+      "source": "/agencia-web-en-el-bosque",
+      "destination": "/santiago/el-bosque"
+    },
+    {
+      "source": "/agencia-web-en-el-monte",
+      "destination": "/santiago/el-monte"
+    },
+    {
+      "source": "/agencia-web-en-estacion-central",
+      "destination": "/santiago/estacion-central"
+    },
+    {
+      "source": "/agencia-web-en-huechuraba",
+      "destination": "/santiago/huechuraba"
+    },
+    {
+      "source": "/agencia-web-en-independencia",
+      "destination": "/santiago/independencia"
+    },
+    {
+      "source": "/agencia-web-en-isla-de-maipo",
+      "destination": "/santiago/isla-de-maipo"
+    },
+    {
+      "source": "/agencia-web-en-la-cisterna",
+      "destination": "/santiago/la-cisterna"
+    },
+    {
+      "source": "/agencia-web-en-la-florida",
+      "destination": "/santiago/la-florida"
+    },
+    {
+      "source": "/agencia-web-en-la-granja",
+      "destination": "/santiago/la-granja"
+    },
+    {
+      "source": "/agencia-web-en-la-pintana",
+      "destination": "/santiago/la-pintana"
+    },
+    {
+      "source": "/agencia-web-en-la-reina",
+      "destination": "/santiago/la-reina"
+    },
+    {
+      "source": "/agencia-web-en-lampa",
+      "destination": "/santiago/lampa"
+    },
+    {
+      "source": "/agencia-web-en-las-condes",
+      "destination": "/santiago/las-condes"
+    },
+    {
+      "source": "/agencia-web-en-lo-barnechea",
+      "destination": "/santiago/lo-barnechea"
+    },
+    {
+      "source": "/agencia-web-en-lo-espejo",
+      "destination": "/santiago/lo-espejo"
+    },
+    {
+      "source": "/agencia-web-en-lo-prado",
+      "destination": "/santiago/lo-prado"
+    },
+    {
+      "source": "/agencia-web-en-macul",
+      "destination": "/santiago/macul"
+    },
+    {
+      "source": "/agencia-web-en-maipu",
+      "destination": "/santiago/maipu"
+    },
+    {
+      "source": "/agencia-web-en-maria-pinto",
+      "destination": "/santiago/maria-pinto"
+    },
+    {
+      "source": "/agencia-web-en-melipilla",
+      "destination": "/santiago/melipilla"
+    },
+    {
+      "source": "/agencia-web-en-nunoa",
+      "destination": "/santiago/nunoa"
+    },
+    {
+      "source": "/agencia-web-en-padre-hurtado",
+      "destination": "/santiago/padre-hurtado"
+    },
+    {
+      "source": "/agencia-web-en-paine",
+      "destination": "/santiago/paine"
+    },
+    {
+      "source": "/agencia-web-en-pedro-aguirre-cerda",
+      "destination": "/santiago/pedro-aguirre-cerda"
+    },
+    {
+      "source": "/agencia-web-en-penaflor",
+      "destination": "/santiago/penaflor"
+    },
+    {
+      "source": "/agencia-web-en-penalolen",
+      "destination": "/santiago/penalolen"
+    },
+    {
+      "source": "/agencia-web-en-pirque",
+      "destination": "/santiago/pirque"
+    },
+    {
+      "source": "/agencia-web-en-providencia",
+      "destination": "/santiago/providencia"
+    },
+    {
+      "source": "/agencia-web-en-pudahuel",
+      "destination": "/santiago/pudahuel"
+    },
+    {
+      "source": "/agencia-web-en-puente-alto",
+      "destination": "/santiago/puente-alto"
+    },
+    {
+      "source": "/agencia-web-en-quilicura",
+      "destination": "/santiago/quilicura"
+    },
+    {
+      "source": "/agencia-web-en-quinta-normal",
+      "destination": "/santiago/quinta-normal"
+    },
+    {
+      "source": "/agencia-web-en-recoleta",
+      "destination": "/santiago/recoleta"
+    },
+    {
+      "source": "/agencia-web-en-renca",
+      "destination": "/santiago/renca"
+    },
+    {
+      "source": "/agencia-web-en-san-bernardo",
+      "destination": "/santiago/san-bernardo"
+    },
+    {
+      "source": "/agencia-web-en-san-joaquin",
+      "destination": "/santiago/san-joaquin"
+    },
+    {
+      "source": "/agencia-web-en-san-jose-de-maipo",
+      "destination": "/santiago/san-jose-de-maipo"
+    },
+    {
+      "source": "/agencia-web-en-san-miguel",
+      "destination": "/santiago/san-miguel"
+    },
+    {
+      "source": "/agencia-web-en-san-pedro",
+      "destination": "/santiago/san-pedro"
+    },
+    {
+      "source": "/agencia-web-en-san-ramon",
+      "destination": "/santiago/san-ramon"
+    },
+    {
+      "source": "/agencia-web-en-santiago",
+      "destination": "/santiago"
+    },
+    {
+      "source": "/agencia-web-en-santiago-centro",
+      "destination": "/santiago/santiago-centro"
+    },
+    {
+      "source": "/agencia-web-en-talagante",
+      "destination": "/santiago/talagante"
+    },
+    {
+      "source": "/agencia-web-en-tiltil",
+      "destination": "/santiago/tiltil"
+    },
+    {
+      "source": "/agencia-web-en-vitacura",
+      "destination": "/santiago/vitacura"
+    },
+    {
+      "source": "/agencia-web-santiago",
+      "destination": "/santiago"
+    },
+    {
+      "source": "/desarrollo-web-en-alhue",
+      "destination": "/santiago/alhue"
+    },
+    {
+      "source": "/desarrollo-web-en-buin",
+      "destination": "/santiago/buin"
+    },
+    {
+      "source": "/desarrollo-web-en-calera-de-tango",
+      "destination": "/santiago/calera-de-tango"
+    },
+    {
+      "source": "/desarrollo-web-en-cerrillos",
+      "destination": "/santiago/cerrillos"
+    },
+    {
+      "source": "/desarrollo-web-en-cerro-navia",
+      "destination": "/santiago/cerro-navia"
+    },
+    {
+      "source": "/desarrollo-web-en-colina",
+      "destination": "/santiago/colina"
+    },
+    {
+      "source": "/desarrollo-web-en-conchali",
+      "destination": "/santiago/conchali"
+    },
+    {
+      "source": "/desarrollo-web-en-curacavi",
+      "destination": "/santiago/curacavi"
+    },
+    {
+      "source": "/desarrollo-web-en-el-bosque",
+      "destination": "/santiago/el-bosque"
+    },
+    {
+      "source": "/desarrollo-web-en-el-monte",
+      "destination": "/santiago/el-monte"
+    },
+    {
+      "source": "/desarrollo-web-en-estacion-central",
+      "destination": "/santiago/estacion-central"
+    },
+    {
+      "source": "/desarrollo-web-en-huechuraba",
+      "destination": "/santiago/huechuraba"
+    },
+    {
+      "source": "/desarrollo-web-en-independencia",
+      "destination": "/santiago/independencia"
+    },
+    {
+      "source": "/desarrollo-web-en-isla-de-maipo",
+      "destination": "/santiago/isla-de-maipo"
+    },
+    {
+      "source": "/desarrollo-web-en-la-cisterna",
+      "destination": "/santiago/la-cisterna"
+    },
+    {
+      "source": "/desarrollo-web-en-la-florida",
+      "destination": "/santiago/la-florida"
+    },
+    {
+      "source": "/desarrollo-web-en-la-granja",
+      "destination": "/santiago/la-granja"
+    },
+    {
+      "source": "/desarrollo-web-en-la-pintana",
+      "destination": "/santiago/la-pintana"
+    },
+    {
+      "source": "/desarrollo-web-en-la-reina",
+      "destination": "/santiago/la-reina"
+    },
+    {
+      "source": "/desarrollo-web-en-lampa",
+      "destination": "/santiago/lampa"
+    },
+    {
+      "source": "/desarrollo-web-en-las-condes",
+      "destination": "/santiago/las-condes"
+    },
+    {
+      "source": "/desarrollo-web-en-lo-barnechea",
+      "destination": "/santiago/lo-barnechea"
+    },
+    {
+      "source": "/desarrollo-web-en-lo-espejo",
+      "destination": "/santiago/lo-espejo"
+    },
+    {
+      "source": "/desarrollo-web-en-lo-prado",
+      "destination": "/santiago/lo-prado"
+    },
+    {
+      "source": "/desarrollo-web-en-macul",
+      "destination": "/santiago/macul"
+    },
+    {
+      "source": "/desarrollo-web-en-maipu",
+      "destination": "/santiago/maipu"
+    },
+    {
+      "source": "/desarrollo-web-en-maria-pinto",
+      "destination": "/santiago/maria-pinto"
+    },
+    {
+      "source": "/desarrollo-web-en-melipilla",
+      "destination": "/santiago/melipilla"
+    },
+    {
+      "source": "/desarrollo-web-en-nunoa",
+      "destination": "/santiago/nunoa"
+    },
+    {
+      "source": "/desarrollo-web-en-padre-hurtado",
+      "destination": "/santiago/padre-hurtado"
+    },
+    {
+      "source": "/desarrollo-web-en-paine",
+      "destination": "/santiago/paine"
+    },
+    {
+      "source": "/desarrollo-web-en-pedro-aguirre-cerda",
+      "destination": "/santiago/pedro-aguirre-cerda"
+    },
+    {
+      "source": "/desarrollo-web-en-penaflor",
+      "destination": "/santiago/penaflor"
+    },
+    {
+      "source": "/desarrollo-web-en-penalolen",
+      "destination": "/santiago/penalolen"
+    },
+    {
+      "source": "/desarrollo-web-en-pirque",
+      "destination": "/santiago/pirque"
+    },
+    {
+      "source": "/desarrollo-web-en-providencia",
+      "destination": "/santiago/providencia"
+    },
+    {
+      "source": "/desarrollo-web-en-pudahuel",
+      "destination": "/santiago/pudahuel"
+    },
+    {
+      "source": "/desarrollo-web-en-puente-alto",
+      "destination": "/santiago/puente-alto"
+    },
+    {
+      "source": "/desarrollo-web-en-quilicura",
+      "destination": "/santiago/quilicura"
+    },
+    {
+      "source": "/desarrollo-web-en-quinta-normal",
+      "destination": "/santiago/quinta-normal"
+    },
+    {
+      "source": "/desarrollo-web-en-recoleta",
+      "destination": "/santiago/recoleta"
+    },
+    {
+      "source": "/desarrollo-web-en-renca",
+      "destination": "/santiago/renca"
+    },
+    {
+      "source": "/desarrollo-web-en-san-bernardo",
+      "destination": "/santiago/san-bernardo"
+    },
+    {
+      "source": "/desarrollo-web-en-san-joaquin",
+      "destination": "/santiago/san-joaquin"
+    },
+    {
+      "source": "/desarrollo-web-en-san-jose-de-maipo",
+      "destination": "/santiago/san-jose-de-maipo"
+    },
+    {
+      "source": "/desarrollo-web-en-san-miguel",
+      "destination": "/santiago/san-miguel"
+    },
+    {
+      "source": "/desarrollo-web-en-san-pedro",
+      "destination": "/santiago/san-pedro"
+    },
+    {
+      "source": "/desarrollo-web-en-san-ramon",
+      "destination": "/santiago/san-ramon"
+    },
+    {
+      "source": "/desarrollo-web-en-santiago",
+      "destination": "/santiago"
+    },
+    {
+      "source": "/desarrollo-web-en-santiago-centro",
+      "destination": "/santiago/santiago-centro"
+    },
+    {
+      "source": "/desarrollo-web-en-talagante",
+      "destination": "/santiago/talagante"
+    },
+    {
+      "source": "/desarrollo-web-en-tiltil",
+      "destination": "/santiago/tiltil"
+    },
+    {
+      "source": "/desarrollo-web-en-vitacura",
+      "destination": "/santiago/vitacura"
+    },
+    {
+      "source": "/desarrollo-web-santiago",
+      "destination": "/santiago"
+    },
+    {
+      "source": "/tienda-online-santiago",
+      "destination": "/santiago"
     }
   ]
 }

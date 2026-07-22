@@ -25,7 +25,8 @@
     "i18n:complete": "node scripts/complete-locales.mjs",
     "i18n:audit": "node scripts/audit-i18n.mjs",
     "audit:routes": "node scripts/audit-routes.mjs",
-    "audit": "npm audit && npm run audit:routes && npm run audit:geo"
+    "audit:health": "node scripts/audit-site-health.mjs",
+    "audit": "npm audit && npm run audit:routes && npm run audit:geo && npm run audit:health"
   },
   "dependencies": {
     "resend": "^4.8.0"

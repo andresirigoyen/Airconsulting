@@ -94,7 +94,7 @@ ${mainHtml}
 
 const pages = {
   'servicios.html': {
-    title: 'Servicios de desarrollo web full stack | IrigoyenDev',
+    title: 'Desarrollo web a medida, tiendas online y landings | IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/" class="back-link">
@@ -102,8 +102,8 @@ const pages = {
             <span>Volver al inicio</span>
         </a>
         <p class="project-eyebrow">Servicios · IrigoyenDev</p>
-        <h1>Desarrollador full stack freelance para e-commerce, landings y plataformas</h1>
-        <p class="project-lead">Ayudo a negocios en Chile, España, Dinamarca y remoto a convertir visitas en clientes con productos web rápidos, medibles y listos para vender.</p>
+        <h1>Desarrollo web a medida: tiendas online, landings y plataformas</h1>
+        <p class="project-lead">Desarrollo de tiendas online, landing page de conversión, plataforma inmobiliaria digital y SEO técnico para e-commerce. Clientes en Chile, España, Dinamarca y remoto.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary">Pedir plan de proyecto →</a>
             <a href="${WA}" class="project-cta-inline" target="_blank" rel="noopener noreferrer">WhatsApp directo →</a>
@@ -117,23 +117,23 @@ const pages = {
             </div>
             <div class="service-grid">
                 <article class="service-card">
-                    <h3><a href="/crear-tienda-online">Crear tienda online / e-commerce</a></h3>
-                    <p>Catálogo, checkout, pagos, panel admin y SEO técnico para vender online con claridad y velocidad.</p>
+                    <h3><a href="/crear-tienda-online">Desarrollo de tiendas online</a></h3>
+                    <p>Crear tienda online Chile: catálogo, checkout, pagos, panel admin y SEO técnico para e-commerce que venda.</p>
                     <a href="/crear-tienda-online" class="project-link"><span>Ver servicio</span></a>
                 </article>
                 <article class="service-card">
-                    <h3><a href="/landing-pages">Landing pages de conversión</a></h3>
-                    <p>Páginas enfocadas en una oferta, con mensaje claro, prueba social y llamadas a la acción que generan leads.</p>
+                    <h3><a href="/landing-pages">Landing page de conversión</a></h3>
+                    <p>Diseño de landing page Chile para campañas publicitarias: oferta clara, prueba social y CTA que genera leads.</p>
                     <a href="/landing-pages" class="project-link"><span>Ver servicio</span></a>
                 </article>
                 <article class="service-card">
-                    <h3>Plataformas de negocio y admin</h3>
-                    <p>Sistemas a medida: catálogos B2B, paneles, CMS, captación de leads y automatización operativa.</p>
-                    <a href="/projects/dragonmart" class="project-link"><span>Ver caso Dragonmart</span></a>
+                    <h3>Plataforma inmobiliaria digital</h3>
+                    <p>Desarrollo web a medida para inmobiliarias: catálogo, leads y admin. Ver <a href="/projects/calafate">Calafate Propiedades</a>.</p>
+                    <a href="/projects/calafate" class="project-link"><span>Ver caso Calafate</span></a>
                 </article>
                 <article class="service-card">
-                    <h3>SEO técnico y despliegue</h3>
-                    <p>Canonicals, schema, rendimiento, sitemap y publicación en Vercel/cloud para que Google te encuentre.</p>
+                    <h3>SEO técnico para e-commerce</h3>
+                    <p>Canonicals, schema, rendimiento, sitemap y publicación para que Google indexe tu tienda y landings.</p>
                     <a href="/faq" class="project-link"><span>Preguntas frecuentes</span></a>
                 </article>
             </div>
@@ -142,10 +142,10 @@ const pages = {
             <div class="content-block">
                 <h2>Prueba con proyectos reales</h2>
                 <ul class="project-results-list">
-                    <li><a href="/projects/thebeebaby">TheBeeBaby</a> — marketplace e-commerce</li>
-                    <li><a href="/projects/calafate">Calafate Propiedades</a> — plataforma inmobiliaria</li>
+                    <li><a href="/projects/thebeebaby">TheBeeBaby</a> — caso de éxito e-commerce / proyecto tienda online</li>
+                    <li><a href="/projects/calafate">Calafate Propiedades</a> — plataforma inmobiliaria digital</li>
+                    <li><a href="/projects/dragonmart">Dragonmart</a> — desarrollo web para negocios B2B</li>
                     <li><a href="/projects/retorica">Retórica</a> — web corporativa de conversión</li>
-                    <li><a href="/projects/floreria">Florería El Nuevo Pensamiento</a> — negocio local + SEO</li>
                 </ul>
                 <p>¿Quieres un alcance y presupuesto claros? Revisa <a href="/precios">rangos de inversión</a> o escribe en el <a href="/#contact">formulario de contacto</a>.</p>
             </div>
@@ -153,7 +153,7 @@ const pages = {
     </main>`,
   },
   'crear-tienda-online.html': {
-    title: 'Crear tienda online | E-commerce freelance | IrigoyenDev',
+    title: 'Crear tienda online Chile | Shopify, WooCommerce y a medida | IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/servicios" class="back-link">
@@ -161,8 +161,8 @@ const pages = {
             <span>Volver a servicios</span>
         </a>
         <p class="project-eyebrow">E-commerce · Servicio</p>
-        <h1>Crear tienda online que venda: e-commerce a medida</h1>
-        <p class="project-lead">Diseño y desarrollo tiendas online y marketplaces listos para vender: catálogo claro, checkout fluido, panel de administración y base técnica para aparecer en Google.</p>
+        <h1>Crear tienda online Chile que venda</h1>
+        <p class="project-lead">E-commerce para pymes Chile y desarrollo de tienda online en Santiago: a medida, Shopify o WooCommerce — catálogo, checkout, panel admin y SEO para que tu tienda online venda de verdad.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary">Cotizar mi tienda online →</a>
             <a href="/projects/thebeebaby" class="project-cta-inline">Ver caso TheBeeBaby →</a>
@@ -180,7 +180,13 @@ const pages = {
                     <li>Despliegue en producción y handoff documentado</li>
                 </ul>
                 <h2>Ideal si buscas</h2>
-                <p>Crear tienda online desde cero, migrar de Instagram/WhatsApp a un canal propio, o digitalizar un catálogo B2B. Trabajo con clientes en Chile, España, Dinamarca y de forma remota.</p>
+                <p>Crear tienda online Chile desde cero, migrar de Instagram/WhatsApp a un canal propio, o digitalizar un catálogo B2B. Trabajo tienda online Shopify Chile, WooCommerce o desarrollo a medida en Santiago y remoto.</p>
+                <h2>Shopify, WooCommerce o a medida</h2>
+                <ul class="project-results-list">
+                    <li><strong>Tienda online Shopify Chile</strong> — ideal para lanzar rápido con ecosistema de apps</li>
+                    <li><strong>Tienda online WooCommerce</strong> — control total sobre WordPress y plugins</li>
+                    <li><strong>E-commerce a medida</strong> — cuando necesitas flujos, roles o B2B que no caben en plantilla</li>
+                </ul>
                 <h2>Casos relacionados</h2>
                 <ul class="project-results-list">
                     <li><a href="/projects/thebeebaby">TheBeeBaby</a> — marketplace con catálogo geo y pagos</li>
@@ -193,7 +199,7 @@ const pages = {
     </main>`,
   },
   'landing-pages.html': {
-    title: 'Landing pages de conversión | IrigoyenDev',
+    title: 'Landing page de conversión | Diseño landing page Chile | IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/servicios" class="back-link">
@@ -201,8 +207,8 @@ const pages = {
             <span>Volver a servicios</span>
         </a>
         <p class="project-eyebrow">Landings · Servicio</p>
-        <h1>Landing pages profesionales orientadas a conversión</h1>
-        <p class="project-lead">Construyo landing pages claras, rápidas y persuasivas para captar leads o ventas: una oferta, un mensaje, una acción. Desde ~USD 600. Ideales para campañas, lanzamientos y negocios locales.</p>
+        <h1>Landing page de conversión en Chile</h1>
+        <p class="project-lead">Diseño de landing page Chile para campañas publicitarias: una oferta, un mensaje, un CTA. Landings que convierten leads o ventas — desde ~USD 600.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary">Pedir propuesta de landing →</a>
             <a href="/projects/retorica" class="project-cta-inline">Ver caso Retórica →</a>
@@ -211,12 +217,12 @@ const pages = {
     <main class="container">
         <section class="project-section fade-in">
             <div class="content-block">
-                <h2>Qué hace que una landing convierta</h2>
+                <h2>Qué hace que una landing page convierta</h2>
                 <ul class="project-results-list">
                     <li>Propuesta de valor visible en el primer viewport</li>
                     <li>Prueba social, beneficios y objeciones resueltas</li>
                     <li>CTA a WhatsApp, formulario o agenda</li>
-                    <li>SEO on-page, velocidad móvil y tracking listo</li>
+                    <li>SEO on-page, velocidad móvil y tracking listo para campañas publicitarias</li>
                 </ul>
                 <h2>Casos relacionados</h2>
                 <ul class="project-results-list">
@@ -230,7 +236,7 @@ const pages = {
     </main>`,
   },
   'precios.html': {
-    title: 'Precios desarrollo web y e-commerce | IrigoyenDev',
+    title: 'Cuánto cuesta una tienda online | Precios desarrollo web Chile | IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/servicios" class="back-link">
@@ -238,8 +244,8 @@ const pages = {
             <span>Volver a servicios</span>
         </a>
         <p class="project-eyebrow">Inversión · Transparencia</p>
-        <h1>Precios orientativos de desarrollo web y e-commerce</h1>
-        <p class="project-lead">Cada proyecto se cotiza según alcance, plazos e integraciones. Estos rangos te dan una referencia clara antes de escribirme.</p>
+        <h1>Cuánto cuesta una tienda online y el desarrollo web en Chile</h1>
+        <p class="project-lead">Tarifas de desarrollador web freelance y presupuesto web e-commerce con rangos claros. Cada proyecto se cotiza según alcance; estos precios de desarrollo web Chile son tu referencia.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary">Solicitar cotización personalizada →</a>
         </div>
@@ -299,6 +305,8 @@ const pages = {
                     <li>SEO, i18n, paneles admin y migración de datos</li>
                     <li>Plazo y nivel de soporte post-lanzamiento (Care / Care + Growth)</li>
                 </ul>
+                <h2>¿Cuánto cuesta una tienda online?</h2>
+                <p>El presupuesto web e-commerce suele situarse en el rango de <strong>producto comercial (USD 3.000–10.000)</strong> según catálogo, pagos y panel. Una landing de campaña parte desde ~USD 600. Las tarifas de desarrollador web freelance se confirman con alcance en la <a href="/#contact">cotización</a>.</p>
                 <p>Respuesta típica en 48 horas con plan, plazos y estimación. <a href="/faq">Más respuestas en el FAQ</a> · <a href="/servicios#care">Detalle de planes Care</a>.</p>
             </div>
         </section>
@@ -324,7 +332,7 @@ const pages = {
                     <p>Desarrollo full stack: tiendas online, landings, plataformas con admin, SEO/GEO, marketing digital y <a href="/servicios#care">planes Care</a> de mantenimiento mensual.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>¿Cuánto cuesta una web o tienda online?</summary>
+                    <summary>¿Cuánto cuesta una tienda online?</summary>
                     <p>Los rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~USD 3.000–10.000 y plataformas a medida desde ~USD 10.000. Detalle en <a href="/precios">precios</a>.</p>
                 </details>
                 <details class="faq-item">
