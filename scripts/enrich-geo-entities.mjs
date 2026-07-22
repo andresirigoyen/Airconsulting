@@ -11,6 +11,32 @@ import { ENTITY } from './lib/entity-nap.mjs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const configPath = path.join(__dirname, '..', 'data', 'geo-config.json');
 
+/** Hub packs (Santiago RM directory) — keyed by geo-config hub slug */
+const HUB_PACKS = {
+  santiago: {
+    semanticTopics: [
+      'desarrollo web full stack en Santiago',
+      'e-commerce y tiendas online para pymes',
+      'landing pages de conversión',
+      'SEO técnico y GEO para negocios locales',
+    ],
+    faq: [
+      {
+        q: '¿Hacen desarrollo web para empresas en Santiago?',
+        a: `Sí. ${ENTITY.legalName} (${ENTITY.founder}) opera desde Santiago con alcance nacional e internacional: tiendas online, landings y plataformas a medida.`,
+      },
+      {
+        q: '¿Cuánto cuesta una tienda online en Santiago?',
+        a: `Producto comercial/e-commerce orientativo USD ${ENTITY.indicativePricing.productRangeUsd}. Landings desde ~USD ${ENTITY.indicativePricing.landingFromUsd}. Detalle en ${ENTITY.url}${ENTITY.pricingPath}.`,
+      },
+      {
+        q: '¿Atienden todo Santiago o solo comunas específicas?',
+        a: 'Operamos remoto para toda la RM y Chile. También tenemos presencia en España y Dinamarca.',
+      },
+    ],
+  },
+};
+
 /** Unique topical + FAQ packs per region landing slug */
 const REGION_PACKS = {
   'diseno-desarrollo-web-valparaiso': {
@@ -1233,6 +1259,7 @@ function main() {
   const raw = JSON.parse(fs.readFileSync(configPath, 'utf8'));
   let n = 0;
   let nRegion = 0;
+  let nHub = 0;
 
   for (const entry of raw.entries) {
     // Normalize NAP on every entry
@@ -1243,6 +1270,17 @@ function main() {
       priceRange: ENTITY.priceRange,
       name: entry.localBusinessSchema?.name || `${ENTITY.legalName} — ${entry.city}`,
     };
+
+    if (entry.type === 'hub') {
+      const pack = HUB_PACKS[entry.slug];
+      if (pack) {
+        entry.content = entry.content || {};
+        entry.content.faq = pack.faq;
+        entry.content.semanticTopics = pack.semanticTopics;
+        nHub++;
+      }
+      continue;
+    }
 
     if (entry.type === 'region') {
       const pack = REGION_PACKS[entry.slug];
@@ -1284,7 +1322,9 @@ function main() {
   }
 
   fs.writeFileSync(configPath, JSON.stringify(raw, null, 2) + '\n');
-  console.log(`Enriched ${n} comunas + ${nRegion} regions + NAP normalize on all entries`);
+  console.log(
+    `Enriched ${n} comunas + ${nRegion} regions + ${nHub} hubs + NAP normalize on all entries`
+  );
 }
 
 main();

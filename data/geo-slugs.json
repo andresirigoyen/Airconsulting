@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T14:01:12.235Z",
+  "generatedAt": "2026-07-22T14:23:57.876Z",
   "paths": [
     "chile",
     "diseno-desarrollo-web-valparaiso",
@@ -69,211 +69,263 @@
     ],
     "santiago/las-condes": [
       "desarrollo-web-en-las-condes",
-      "agencia-web-en-las-condes"
+      "agencia-web-en-las-condes",
+      "desarrollo-web-las-condes"
     ],
     "santiago/providencia": [
       "desarrollo-web-en-providencia",
-      "agencia-web-en-providencia"
+      "agencia-web-en-providencia",
+      "desarrollo-web-providencia"
     ],
     "santiago/vitacura": [
       "desarrollo-web-en-vitacura",
-      "agencia-web-en-vitacura"
+      "agencia-web-en-vitacura",
+      "desarrollo-web-vitacura"
     ],
     "santiago/nunoa": [
       "desarrollo-web-en-nunoa",
-      "agencia-web-en-nunoa"
+      "agencia-web-en-nunoa",
+      "desarrollo-web-nunoa"
     ],
     "santiago/santiago-centro": [
       "desarrollo-web-en-santiago-centro",
-      "agencia-web-en-santiago-centro"
+      "agencia-web-en-santiago-centro",
+      "desarrollo-web-santiago-centro"
     ],
     "santiago/la-reina": [
       "desarrollo-web-en-la-reina",
-      "agencia-web-en-la-reina"
+      "agencia-web-en-la-reina",
+      "desarrollo-web-la-reina"
     ],
     "santiago/lo-barnechea": [
       "desarrollo-web-en-lo-barnechea",
-      "agencia-web-en-lo-barnechea"
+      "agencia-web-en-lo-barnechea",
+      "desarrollo-web-lo-barnechea"
     ],
     "santiago/maipu": [
       "desarrollo-web-en-maipu",
-      "agencia-web-en-maipu"
+      "agencia-web-en-maipu",
+      "desarrollo-web-maipu"
     ],
     "santiago/penalolen": [
       "desarrollo-web-en-penalolen",
-      "agencia-web-en-penalolen"
+      "agencia-web-en-penalolen",
+      "desarrollo-web-penalolen"
     ],
     "santiago/cerrillos": [
       "desarrollo-web-en-cerrillos",
-      "agencia-web-en-cerrillos"
+      "agencia-web-en-cerrillos",
+      "desarrollo-web-cerrillos"
     ],
     "santiago/cerro-navia": [
       "desarrollo-web-en-cerro-navia",
-      "agencia-web-en-cerro-navia"
+      "agencia-web-en-cerro-navia",
+      "desarrollo-web-cerro-navia"
     ],
     "santiago/conchali": [
       "desarrollo-web-en-conchali",
-      "agencia-web-en-conchali"
+      "agencia-web-en-conchali",
+      "desarrollo-web-conchali"
     ],
     "santiago/el-bosque": [
       "desarrollo-web-en-el-bosque",
-      "agencia-web-en-el-bosque"
+      "agencia-web-en-el-bosque",
+      "desarrollo-web-el-bosque"
     ],
     "santiago/estacion-central": [
       "desarrollo-web-en-estacion-central",
-      "agencia-web-en-estacion-central"
+      "agencia-web-en-estacion-central",
+      "desarrollo-web-estacion-central"
     ],
     "santiago/huechuraba": [
       "desarrollo-web-en-huechuraba",
-      "agencia-web-en-huechuraba"
+      "agencia-web-en-huechuraba",
+      "desarrollo-web-huechuraba"
     ],
     "santiago/independencia": [
       "desarrollo-web-en-independencia",
-      "agencia-web-en-independencia"
+      "agencia-web-en-independencia",
+      "desarrollo-web-independencia"
     ],
     "santiago/la-cisterna": [
       "desarrollo-web-en-la-cisterna",
-      "agencia-web-en-la-cisterna"
+      "agencia-web-en-la-cisterna",
+      "desarrollo-web-la-cisterna"
     ],
     "santiago/la-florida": [
       "desarrollo-web-en-la-florida",
-      "agencia-web-en-la-florida"
+      "agencia-web-en-la-florida",
+      "desarrollo-web-la-florida"
     ],
     "santiago/la-granja": [
       "desarrollo-web-en-la-granja",
-      "agencia-web-en-la-granja"
+      "agencia-web-en-la-granja",
+      "desarrollo-web-la-granja"
     ],
     "santiago/la-pintana": [
       "desarrollo-web-en-la-pintana",
-      "agencia-web-en-la-pintana"
+      "agencia-web-en-la-pintana",
+      "desarrollo-web-la-pintana"
     ],
     "santiago/lo-espejo": [
       "desarrollo-web-en-lo-espejo",
-      "agencia-web-en-lo-espejo"
+      "agencia-web-en-lo-espejo",
+      "desarrollo-web-lo-espejo"
     ],
     "santiago/lo-prado": [
       "desarrollo-web-en-lo-prado",
-      "agencia-web-en-lo-prado"
+      "agencia-web-en-lo-prado",
+      "desarrollo-web-lo-prado"
     ],
     "santiago/macul": [
       "desarrollo-web-en-macul",
-      "agencia-web-en-macul"
+      "agencia-web-en-macul",
+      "desarrollo-web-macul"
     ],
     "santiago/pedro-aguirre-cerda": [
       "desarrollo-web-en-pedro-aguirre-cerda",
-      "agencia-web-en-pedro-aguirre-cerda"
+      "agencia-web-en-pedro-aguirre-cerda",
+      "desarrollo-web-pedro-aguirre-cerda"
     ],
     "santiago/pudahuel": [
       "desarrollo-web-en-pudahuel",
-      "agencia-web-en-pudahuel"
+      "agencia-web-en-pudahuel",
+      "desarrollo-web-pudahuel"
     ],
     "santiago/quilicura": [
       "desarrollo-web-en-quilicura",
-      "agencia-web-en-quilicura"
+      "agencia-web-en-quilicura",
+      "desarrollo-web-quilicura"
     ],
     "santiago/quinta-normal": [
       "desarrollo-web-en-quinta-normal",
-      "agencia-web-en-quinta-normal"
+      "agencia-web-en-quinta-normal",
+      "desarrollo-web-quinta-normal"
     ],
     "santiago/recoleta": [
       "desarrollo-web-en-recoleta",
-      "agencia-web-en-recoleta"
+      "agencia-web-en-recoleta",
+      "desarrollo-web-recoleta"
     ],
     "santiago/renca": [
       "desarrollo-web-en-renca",
-      "agencia-web-en-renca"
+      "agencia-web-en-renca",
+      "desarrollo-web-renca"
     ],
     "santiago/san-joaquin": [
       "desarrollo-web-en-san-joaquin",
-      "agencia-web-en-san-joaquin"
+      "agencia-web-en-san-joaquin",
+      "desarrollo-web-san-joaquin"
     ],
     "santiago/san-miguel": [
       "desarrollo-web-en-san-miguel",
-      "agencia-web-en-san-miguel"
+      "agencia-web-en-san-miguel",
+      "desarrollo-web-san-miguel"
     ],
     "santiago/san-ramon": [
       "desarrollo-web-en-san-ramon",
-      "agencia-web-en-san-ramon"
+      "agencia-web-en-san-ramon",
+      "desarrollo-web-san-ramon"
     ],
     "santiago/puente-alto": [
       "desarrollo-web-en-puente-alto",
-      "agencia-web-en-puente-alto"
+      "agencia-web-en-puente-alto",
+      "desarrollo-web-puente-alto"
     ],
     "santiago/pirque": [
       "desarrollo-web-en-pirque",
-      "agencia-web-en-pirque"
+      "agencia-web-en-pirque",
+      "desarrollo-web-pirque"
     ],
     "santiago/san-jose-de-maipo": [
       "desarrollo-web-en-san-jose-de-maipo",
-      "agencia-web-en-san-jose-de-maipo"
+      "agencia-web-en-san-jose-de-maipo",
+      "desarrollo-web-san-jose-de-maipo"
     ],
     "santiago/colina": [
       "desarrollo-web-en-colina",
-      "agencia-web-en-colina"
+      "agencia-web-en-colina",
+      "desarrollo-web-colina"
     ],
     "santiago/lampa": [
       "desarrollo-web-en-lampa",
-      "agencia-web-en-lampa"
+      "agencia-web-en-lampa",
+      "desarrollo-web-lampa"
     ],
     "santiago/tiltil": [
       "desarrollo-web-en-tiltil",
-      "agencia-web-en-tiltil"
+      "agencia-web-en-tiltil",
+      "desarrollo-web-tiltil"
     ],
     "santiago/san-bernardo": [
       "desarrollo-web-en-san-bernardo",
-      "agencia-web-en-san-bernardo"
+      "agencia-web-en-san-bernardo",
+      "desarrollo-web-san-bernardo"
     ],
     "santiago/buin": [
       "desarrollo-web-en-buin",
-      "agencia-web-en-buin"
+      "agencia-web-en-buin",
+      "desarrollo-web-buin"
     ],
     "santiago/paine": [
       "desarrollo-web-en-paine",
-      "agencia-web-en-paine"
+      "agencia-web-en-paine",
+      "desarrollo-web-paine"
     ],
     "santiago/calera-de-tango": [
       "desarrollo-web-en-calera-de-tango",
-      "agencia-web-en-calera-de-tango"
+      "agencia-web-en-calera-de-tango",
+      "desarrollo-web-calera-de-tango"
     ],
     "santiago/melipilla": [
       "desarrollo-web-en-melipilla",
-      "agencia-web-en-melipilla"
+      "agencia-web-en-melipilla",
+      "desarrollo-web-melipilla"
     ],
     "santiago/curacavi": [
       "desarrollo-web-en-curacavi",
-      "agencia-web-en-curacavi"
+      "agencia-web-en-curacavi",
+      "desarrollo-web-curacavi"
     ],
     "santiago/maria-pinto": [
       "desarrollo-web-en-maria-pinto",
-      "agencia-web-en-maria-pinto"
+      "agencia-web-en-maria-pinto",
+      "desarrollo-web-maria-pinto"
     ],
     "santiago/alhue": [
       "desarrollo-web-en-alhue",
-      "agencia-web-en-alhue"
+      "agencia-web-en-alhue",
+      "desarrollo-web-alhue"
     ],
     "santiago/san-pedro": [
       "desarrollo-web-en-san-pedro",
-      "agencia-web-en-san-pedro"
+      "agencia-web-en-san-pedro",
+      "desarrollo-web-san-pedro"
     ],
     "santiago/talagante": [
       "desarrollo-web-en-talagante",
-      "agencia-web-en-talagante"
+      "agencia-web-en-talagante",
+      "desarrollo-web-talagante"
     ],
     "santiago/penaflor": [
       "desarrollo-web-en-penaflor",
-      "agencia-web-en-penaflor"
+      "agencia-web-en-penaflor",
+      "desarrollo-web-penaflor"
     ],
     "santiago/el-monte": [
       "desarrollo-web-en-el-monte",
-      "agencia-web-en-el-monte"
+      "agencia-web-en-el-monte",
+      "desarrollo-web-el-monte"
     ],
     "santiago/isla-de-maipo": [
       "desarrollo-web-en-isla-de-maipo",
-      "agencia-web-en-isla-de-maipo"
+      "agencia-web-en-isla-de-maipo",
+      "desarrollo-web-isla-de-maipo"
     ],
     "santiago/padre-hurtado": [
       "desarrollo-web-en-padre-hurtado",
-      "agencia-web-en-padre-hurtado"
+      "agencia-web-en-padre-hurtado",
+      "desarrollo-web-padre-hurtado"
     ]
   },
   "note": "Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build. Keyword aliases rewrite in vercel.json to silo paths (canonical stays /santiago/...)."

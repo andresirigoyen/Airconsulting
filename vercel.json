@@ -393,6 +393,46 @@
       "destination": "/santiago"
     },
     {
+      "source": "/desarrollo-web-alhue",
+      "destination": "/santiago/alhue"
+    },
+    {
+      "source": "/desarrollo-web-buin",
+      "destination": "/santiago/buin"
+    },
+    {
+      "source": "/desarrollo-web-calera-de-tango",
+      "destination": "/santiago/calera-de-tango"
+    },
+    {
+      "source": "/desarrollo-web-cerrillos",
+      "destination": "/santiago/cerrillos"
+    },
+    {
+      "source": "/desarrollo-web-cerro-navia",
+      "destination": "/santiago/cerro-navia"
+    },
+    {
+      "source": "/desarrollo-web-colina",
+      "destination": "/santiago/colina"
+    },
+    {
+      "source": "/desarrollo-web-conchali",
+      "destination": "/santiago/conchali"
+    },
+    {
+      "source": "/desarrollo-web-curacavi",
+      "destination": "/santiago/curacavi"
+    },
+    {
+      "source": "/desarrollo-web-el-bosque",
+      "destination": "/santiago/el-bosque"
+    },
+    {
+      "source": "/desarrollo-web-el-monte",
+      "destination": "/santiago/el-monte"
+    },
+    {
       "source": "/desarrollo-web-en-alhue",
       "destination": "/santiago/alhue"
     },
@@ -605,8 +645,180 @@
       "destination": "/santiago/vitacura"
     },
     {
+      "source": "/desarrollo-web-estacion-central",
+      "destination": "/santiago/estacion-central"
+    },
+    {
+      "source": "/desarrollo-web-huechuraba",
+      "destination": "/santiago/huechuraba"
+    },
+    {
+      "source": "/desarrollo-web-independencia",
+      "destination": "/santiago/independencia"
+    },
+    {
+      "source": "/desarrollo-web-isla-de-maipo",
+      "destination": "/santiago/isla-de-maipo"
+    },
+    {
+      "source": "/desarrollo-web-la-cisterna",
+      "destination": "/santiago/la-cisterna"
+    },
+    {
+      "source": "/desarrollo-web-la-florida",
+      "destination": "/santiago/la-florida"
+    },
+    {
+      "source": "/desarrollo-web-la-granja",
+      "destination": "/santiago/la-granja"
+    },
+    {
+      "source": "/desarrollo-web-la-pintana",
+      "destination": "/santiago/la-pintana"
+    },
+    {
+      "source": "/desarrollo-web-la-reina",
+      "destination": "/santiago/la-reina"
+    },
+    {
+      "source": "/desarrollo-web-lampa",
+      "destination": "/santiago/lampa"
+    },
+    {
+      "source": "/desarrollo-web-las-condes",
+      "destination": "/santiago/las-condes"
+    },
+    {
+      "source": "/desarrollo-web-lo-barnechea",
+      "destination": "/santiago/lo-barnechea"
+    },
+    {
+      "source": "/desarrollo-web-lo-espejo",
+      "destination": "/santiago/lo-espejo"
+    },
+    {
+      "source": "/desarrollo-web-lo-prado",
+      "destination": "/santiago/lo-prado"
+    },
+    {
+      "source": "/desarrollo-web-macul",
+      "destination": "/santiago/macul"
+    },
+    {
+      "source": "/desarrollo-web-maipu",
+      "destination": "/santiago/maipu"
+    },
+    {
+      "source": "/desarrollo-web-maria-pinto",
+      "destination": "/santiago/maria-pinto"
+    },
+    {
+      "source": "/desarrollo-web-melipilla",
+      "destination": "/santiago/melipilla"
+    },
+    {
+      "source": "/desarrollo-web-nunoa",
+      "destination": "/santiago/nunoa"
+    },
+    {
+      "source": "/desarrollo-web-padre-hurtado",
+      "destination": "/santiago/padre-hurtado"
+    },
+    {
+      "source": "/desarrollo-web-paine",
+      "destination": "/santiago/paine"
+    },
+    {
+      "source": "/desarrollo-web-pedro-aguirre-cerda",
+      "destination": "/santiago/pedro-aguirre-cerda"
+    },
+    {
+      "source": "/desarrollo-web-penaflor",
+      "destination": "/santiago/penaflor"
+    },
+    {
+      "source": "/desarrollo-web-penalolen",
+      "destination": "/santiago/penalolen"
+    },
+    {
+      "source": "/desarrollo-web-pirque",
+      "destination": "/santiago/pirque"
+    },
+    {
+      "source": "/desarrollo-web-providencia",
+      "destination": "/santiago/providencia"
+    },
+    {
+      "source": "/desarrollo-web-pudahuel",
+      "destination": "/santiago/pudahuel"
+    },
+    {
+      "source": "/desarrollo-web-puente-alto",
+      "destination": "/santiago/puente-alto"
+    },
+    {
+      "source": "/desarrollo-web-quilicura",
+      "destination": "/santiago/quilicura"
+    },
+    {
+      "source": "/desarrollo-web-quinta-normal",
+      "destination": "/santiago/quinta-normal"
+    },
+    {
+      "source": "/desarrollo-web-recoleta",
+      "destination": "/santiago/recoleta"
+    },
+    {
+      "source": "/desarrollo-web-renca",
+      "destination": "/santiago/renca"
+    },
+    {
+      "source": "/desarrollo-web-san-bernardo",
+      "destination": "/santiago/san-bernardo"
+    },
+    {
+      "source": "/desarrollo-web-san-joaquin",
+      "destination": "/santiago/san-joaquin"
+    },
+    {
+      "source": "/desarrollo-web-san-jose-de-maipo",
+      "destination": "/santiago/san-jose-de-maipo"
+    },
+    {
+      "source": "/desarrollo-web-san-miguel",
+      "destination": "/santiago/san-miguel"
+    },
+    {
+      "source": "/desarrollo-web-san-pedro",
+      "destination": "/santiago/san-pedro"
+    },
+    {
+      "source": "/desarrollo-web-san-ramon",
+      "destination": "/santiago/san-ramon"
+    },
+    {
       "source": "/desarrollo-web-santiago",
       "destination": "/santiago"
+    },
+    {
+      "source": "/desarrollo-web-santiago-centro",
+      "destination": "/santiago/santiago-centro"
+    },
+    {
+      "source": "/desarrollo-web-talagante",
+      "destination": "/santiago/talagante"
+    },
+    {
+      "source": "/desarrollo-web-tiltil",
+      "destination": "/santiago/tiltil"
+    },
+    {
+      "source": "/desarrollo-web-valparaiso",
+      "destination": "/diseno-desarrollo-web-valparaiso"
+    },
+    {
+      "source": "/desarrollo-web-vitacura",
+      "destination": "/santiago/vitacura"
     },
     {
       "source": "/tienda-online-santiago",

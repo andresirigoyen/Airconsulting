@@ -117,13 +117,30 @@ function main() {
   console.log(`sitemap.xml written (${n} URLs)`);
 }
 
+function loadPresenceUrls() {
+  const file = path.join(root, 'data', 'presence-pages.json');
+  if (!fs.existsSync(file)) return [];
+  const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+  return (data.pages || []).map((p) => ({
+    loc: p.path,
+    changefreq: 'monthly',
+    priority: '0.8',
+  }));
+}
+
 /**
  * Write sitemap.xml atomically (tmp + rename). Returns URL count.
  * Called by build-geo-pages after a successful HTML emit.
  * @returns {number}
  */
 export function writeSitemap() {
-  const urls = [...CORE, ...PROJECTS, ...loadGeoConfigUrls(), ...loadBlogUrls()];
+  const urls = [
+    ...CORE,
+    ...PROJECTS,
+    ...loadGeoConfigUrls(),
+    ...loadBlogUrls(),
+    ...loadPresenceUrls(),
+  ];
   const seen = new Set();
   const unique = urls.filter((u) => {
     if (seen.has(u.loc)) return false;

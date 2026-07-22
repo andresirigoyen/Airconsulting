@@ -1,10 +1,8 @@
 /**
- * Keyword URL aliases for CL geo comunas (competitive SEO).
- * Public aliases rewrite to the silo canonical /santiago/{slug} (or hub).
- *
- * Patterns:
- * - /desarrollo-web-en-{slug}, /agencia-web-en-{slug}
- * - Extra hub aliases: /desarrollo-web-santiago, /tienda-online-santiago, /agencia-web-santiago
+ * Keyword URL aliases for geo SEO.
+ * - /desarrollo-web-en-{slug}, /agencia-web-en-{slug} → /santiago/{slug}
+ * - /desarrollo-web-{slug} (short, competitor-style) → /santiago/{slug}
+ * - Hub extras + regional short aliases
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,55 +12,90 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..', '..');
 const VERCEL_PATH = path.join(root, 'vercel.json');
 
-export const ALIAS_PREFIXES = ['desarrollo-web-en', 'agencia-web-en'];
+export const ALIAS_PREFIXES = ['desarrollo-web-en', 'agencia-web-en', 'desarrollo-web'];
 
-/** Extra service×city aliases (no "en") → Santiago hub */
 export const EXTRA_HUB_ALIASES = [
   'desarrollo-web-santiago',
   'tienda-online-santiago',
   'agencia-web-santiago',
 ];
 
+/** Static rewrites not derived from geo comunas (real HTML elsewhere). */
+export const STATIC_REWRITES = [
+  { source: '/desarrollo-web-valparaiso', destination: '/diseno-desarrollo-web-valparaiso' },
+];
+
+/**
+ * Paths that are real root HTML pages — never treat as managed alias wipe targets alone.
+ * (desarrollo-web-concepcion.html etc.)
+ */
+const RESERVED_SHORT_PATHS = new Set([
+  'desarrollo-web-concepcion',
+  'desarrollo-web-antofagasta',
+  'desarrollo-web-temuco',
+  'desarrollo-web-madrid',
+  'desarrollo-web-barcelona',
+  'desarrollo-web-valencia',
+  'web-developer-copenhagen',
+  'web-developer-aarhus',
+]);
+
 /**
  * @param {import('./geo-config.mjs').GeoEntry} entry
- * @returns {string[]} public alias paths without leading slash
+ * @returns {string[]}
  */
 export function keywordAliasPathsFor(entry) {
   if (entry.countryCode !== 'CL') return [];
   if (entry.type === 'comuna' && entry.parentSlug === 'santiago') {
-    return ALIAS_PREFIXES.map((p) => `${p}-${entry.slug}`);
+    return ALIAS_PREFIXES.map((p) => `${p}-${entry.slug}`).filter(
+      (a) => !RESERVED_SHORT_PATHS.has(a)
+    );
   }
   if (entry.type === 'hub' && entry.slug === 'santiago') {
-    return [...ALIAS_PREFIXES.map((p) => `${p}-santiago`), ...EXTRA_HUB_ALIASES];
+    return [
+      ...ALIAS_PREFIXES.map((p) => `${p}-santiago`),
+      ...EXTRA_HUB_ALIASES,
+    ].filter((a, i, arr) => arr.indexOf(a) === i);
   }
   return [];
 }
 
 /**
  * @param {import('./geo-config.mjs').GeoEntry[]} entries
- * @returns {{ source: string, destination: string }[]}
  */
 export function buildKeywordRewrites(entries) {
   /** @type {{ source: string, destination: string }[]} */
-  const out = [];
+  const out = [...STATIC_REWRITES];
   for (const entry of entries) {
     const dest = `/${entry.path || entry.slug}`;
     for (const alias of keywordAliasPathsFor(entry)) {
       out.push({ source: `/${alias}`, destination: dest });
     }
   }
-  out.sort((a, b) => a.source.localeCompare(b.source));
-  return out;
+  // Dedupe by source
+  const seen = new Set();
+  const deduped = [];
+  for (const r of out) {
+    if (seen.has(r.source)) continue;
+    seen.add(r.source);
+    deduped.push(r);
+  }
+  deduped.sort((a, b) => a.source.localeCompare(b.source));
+  return deduped;
 }
 
 function isManagedAliasSource(src) {
-  if (ALIAS_PREFIXES.some((p) => src.startsWith(`/${p}-`))) return true;
+  if (STATIC_REWRITES.some((r) => r.source === src)) return true;
   if (EXTRA_HUB_ALIASES.some((a) => src === `/${a}`)) return true;
+  if (ALIAS_PREFIXES.some((p) => src.startsWith(`/${p}-`))) {
+    const bare = src.slice(1);
+    if (RESERVED_SHORT_PATHS.has(bare)) return false;
+    return true;
+  }
   return false;
 }
 
 /**
- * Merge keyword rewrites into vercel.json (replace previous geo-alias block).
  * @param {import('./geo-config.mjs').GeoEntry[]} entries
  */
 export function syncVercelKeywordRewrites(entries) {

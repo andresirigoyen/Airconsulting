@@ -27,6 +27,9 @@ function existsHtml(pub) {
   );
 }
 
+const vercel = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));
+const rewriteSources = new Set((vercel.rewrites || []).map((r) => r.source));
+
 function resolveLocal(ref) {
   let clean = ref.split('#')[0].split('?')[0];
   try {
@@ -36,6 +39,8 @@ function resolveLocal(ref) {
   }
   if (!clean.startsWith('/')) return { ok: true };
   if (clean === '/') return { ok: fs.existsSync(path.join(ROOT, 'index.html')) };
+  // Vercel rewrites (keyword aliases) are valid production routes
+  if (rewriteSources.has(clean)) return { ok: true, rewrite: true };
   const noSlash = clean.slice(1);
   const abs = path.join(ROOT, noSlash);
   if (path.extname(noSlash)) return { ok: fs.existsSync(abs) };
@@ -82,7 +87,6 @@ for (const [ref, o] of [...missing.entries()].sort((a, b) => b[1].count - a[1].c
   errors.push(`Broken link ${ref} (${o.count} refs)`);
 }
 
-const vercel = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));
 const badAlias = [];
 for (const r of vercel.rewrites || []) {
   if (!resolveLocal(r.destination).ok) badAlias.push(r);

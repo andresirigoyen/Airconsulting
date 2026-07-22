@@ -3290,6 +3290,117 @@ body.has-lead-sticky .whatsapp-widget {
   color: var(--text-secondary);
 }
 
+.presence {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr) minmax(0, 0.9fr);
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  margin-top: var(--spacing-lg);
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--text-primary) 12%, transparent);
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--accent-color) 6%, transparent),
+      transparent 55%
+    );
+}
+
+.presence__country {
+  margin: 0 0 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.presence__country--spaced {
+  margin-top: 1.75rem;
+}
+
+.presence__label {
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text-muted, #64748b) 90%, transparent);
+}
+
+.presence__label--spaced {
+  margin-top: 1.15rem;
+}
+
+.presence__cities {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.presence__cities--scroll {
+  max-height: 16.5rem;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+  gap: 0.28rem;
+  scrollbar-gutter: stable;
+}
+
+.presence__cities--scroll a {
+  font-size: 0.92rem;
+  font-weight: 550;
+  min-height: 1.45rem;
+}
+
+.presence__cities a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.presence__cities a:hover,
+.presence__cities a:focus-visible {
+  color: var(--accent-color);
+  border-bottom-color: color-mix(in srgb, var(--accent-color) 55%, transparent);
+}
+
+.presence__note {
+  margin: 0 0 1.25rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.presence__cta {
+  display: inline-flex;
+  margin-bottom: 1rem;
+}
+
+.presence__secondary {
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .presence {
+    grid-template-columns: 1fr 1fr;
+  }
+  .presence__col--cta {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .presence {
+    grid-template-columns: 1fr;
+  }
+}
+
 .markets__grid {
   margin-top: var(--spacing-lg);
 }
