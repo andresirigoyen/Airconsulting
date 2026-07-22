@@ -250,7 +250,7 @@ const CURRENCY_LOCALES = {
   NOK: 'nb-NO',
 };
 
-let currentCurrency = 'USD';
+let currentCurrency = 'CLP';
 
 function parseUsdAmount(raw) {
   const s = String(raw).replace(/\s/g, '');
@@ -279,7 +279,7 @@ function rewriteUsdInString(str, currency) {
 
   // $2,000 - $10,000 USD | More than $10,000 USD
   let out = str.replace(
-    /\$\s*([\d.,]+)\s*[–—-]\s*\$\s*([\d.,]+)\s*USD/gi,
+    /\$\s*([\d.,]*\d)\s*[–—-]\s*\$\s*([\d.,]*\d)\s*USD/gi,
     (_, a, b) => {
       const lo = parseUsdAmount(a);
       const hi = parseUsdAmount(b);
@@ -287,14 +287,14 @@ function rewriteUsdInString(str, currency) {
       return `${formatConvertedAmount(lo, currency)} – ${formatConvertedAmount(hi, currency)}`;
     }
   );
-  out = out.replace(/\$\s*([\d.,]+)\s*USD/gi, (match, a) => {
+  out = out.replace(/\$\s*([\d.,]*\d)\s*USD/gi, (match, a) => {
     const n = parseUsdAmount(a);
     return Number.isFinite(n) ? formatConvertedAmount(n, currency) : match;
   });
 
   // ~USD 200 – 350 | USD 3.000–10.000 | from ~USD 600
   out = out.replace(
-    /(~?)USD\s*([\d.,]+)\s*[–—-]\s*(?:USD\s*)?([\d.,]+)/gi,
+    /(~?)USD\s*([\d.,]*\d)\s*[–—-]\s*(?:USD\s*)?([\d.,]*\d)/gi,
     (match, approx, a, b) => {
       const lo = parseUsdAmount(a);
       const hi = parseUsdAmount(b);
@@ -302,7 +302,7 @@ function rewriteUsdInString(str, currency) {
       return `${approx}${formatConvertedAmount(lo, currency)} – ${formatConvertedAmount(hi, currency)}`;
     }
   );
-  out = out.replace(/(~?)USD\s*([\d.,]+)/gi, (match, approx, a) => {
+  out = out.replace(/(~?)USD\s*([\d.,]*\d)/gi, (match, approx, a) => {
     const n = parseUsdAmount(a);
     if (!Number.isFinite(n)) return match;
     return `${approx}${formatConvertedAmount(n, currency)}`;
@@ -312,7 +312,7 @@ function rewriteUsdInString(str, currency) {
 }
 
 function applyCurrency(currency) {
-  if (!ALLOWED_CURRENCIES.has(currency)) currency = 'USD';
+  if (!ALLOWED_CURRENCIES.has(currency)) currency = 'CLP';
   currentCurrency = currency;
   localStorage.setItem('preferredCurrency', currency);
   document.documentElement.setAttribute('data-currency', currency);
@@ -337,11 +337,17 @@ function applyCurrency(currency) {
     el.innerHTML = rewriteUsdInString(currentTranslations[key], currency);
   });
 
-  document.querySelectorAll('.price-range').forEach((el) => {
-    if (el.hasAttribute('data-i18n')) return;
-    if (!el.dataset.moneySource) el.dataset.moneySource = el.textContent.trim();
-    el.textContent = rewriteUsdInString(el.dataset.moneySource, currency);
-  });
+  // Visible copy authored in USD: pricing cards, FAQ answers, marketing prose
+  document
+    .querySelectorAll(
+      '.price-range, .money-copy, .faq-list p, details.faq-item p, article.faq-item p'
+    )
+    .forEach((el) => {
+      if (el.hasAttribute('data-i18n') || el.hasAttribute('data-i18n-html')) return;
+      if (el.hasAttribute('data-money')) return;
+      if (!el.dataset.moneySource) el.dataset.moneySource = el.innerHTML.trim();
+      el.innerHTML = rewriteUsdInString(el.dataset.moneySource, currency);
+    });
 
   document.querySelectorAll('[data-money]').forEach((el) => {
     const min = parseFloat(el.getAttribute('data-money'));
@@ -363,8 +369,8 @@ function initCurrencySelector() {
   const actions = document.querySelector('.nav-actions');
   if (!actions || document.getElementById('currency-menu-btn')) return;
 
-  const saved = localStorage.getItem('preferredCurrency') || 'USD';
-  currentCurrency = ALLOWED_CURRENCIES.has(saved) ? saved : 'USD';
+  const saved = localStorage.getItem('preferredCurrency') || 'CLP';
+  currentCurrency = ALLOWED_CURRENCIES.has(saved) ? saved : 'CLP';
 
   const wrap = document.createElement('div');
   wrap.className = 'currency-selector-container';
@@ -373,7 +379,7 @@ function initCurrencySelector() {
       <span class="currency-btn__code">${currentCurrency}</span>
     </button>
     <div id="currency-dropdown" class="lang-dropdown currency-dropdown" role="listbox" aria-label="Currency">
-      ${['USD', 'EUR', 'CLP', 'DKK', 'NOK']
+      ${['CLP', 'USD', 'EUR', 'DKK', 'NOK']
         .map(
           (code) => `
         <label class="lang-option">
@@ -439,7 +445,7 @@ async function loadLanguage(lang) {
     currentTranslations = translations;
     document.documentElement.lang = lang;
     applyTranslations(translations);
-    applyCurrency(localStorage.getItem('preferredCurrency') || currentCurrency || 'USD');
+    applyCurrency(localStorage.getItem('preferredCurrency') || currentCurrency || 'CLP');
     localStorage.setItem('preferredLang', lang);
 
     const radio = document.querySelector(`.lang-radio[value="${lang}"]`);

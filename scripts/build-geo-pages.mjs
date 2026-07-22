@@ -400,7 +400,7 @@ function renderFaqSection(faq, ui) {
       (item) => `
             <article class="faq-item faq-item--plain">
                 <h3>${escapeHtml(item.q)}</h3>
-                <p>${escapeHtml(item.a)}</p>
+                <p class="money-copy">${escapeHtml(item.a)}</p>
             </article>`
     )
     .join('');

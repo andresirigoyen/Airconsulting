@@ -378,7 +378,7 @@ function buildHtml(p) {
                   .map(
                     (f) => `<details class="faq-item">
                     <summary>${escapeHtml(f.q)}</summary>
-                    <p>${escapeHtml(f.a)}</p>
+                    <p class="money-copy">${escapeHtml(f.a)}</p>
                 </details>`
                   )
                   .join('\n                ')}

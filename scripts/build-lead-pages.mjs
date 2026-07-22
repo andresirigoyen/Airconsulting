@@ -218,7 +218,7 @@ const pages = {
         </nav>
         <p class="project-eyebrow">Landings · Servicio</p>
         <h1>Landing page de conversión en Chile</h1>
-        <p class="project-lead">Diseño de landing page Chile para campañas publicitarias: una oferta, un mensaje, un CTA. Landings que convierten leads o ventas — desde ~USD 600.</p>
+        <p class="project-lead money-copy">Diseño de landing page Chile para campañas publicitarias: una oferta, un mensaje, un CTA. Landings que convierten leads o ventas — desde ~USD 600.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary">Pedir propuesta de landing →</a>
             <a href="/projects/retorica" class="project-cta-inline">Ver caso Retórica →</a>
@@ -277,7 +277,7 @@ const pages = {
                 </ul>
 
                 <h2>Inversión</h2>
-                <p>Landing page de conversión desde <strong>~USD 600</strong>. El alcance (copy, secciones, idiomas, integraciones) define el presupuesto final. Ver <a href="/precios">precios de desarrollo web</a>.</p>
+                <p class="money-copy">Landing page de conversión desde <strong>~USD 600</strong>. El alcance (copy, secciones, idiomas, integraciones) define el presupuesto final. Ver <a href="/precios">precios de desarrollo web</a>.</p>
 
                 <h2>Preguntas frecuentes sobre landing pages</h2>
                 <div class="faq-list">
@@ -379,7 +379,7 @@ const pages = {
                     <li>Plazo y nivel de soporte post-lanzamiento (Care / Care + Growth)</li>
                 </ul>
                 <h2>¿Cuánto cuesta una tienda online?</h2>
-                <p>El presupuesto web e-commerce suele situarse en el rango de <strong>producto comercial (USD 3.000–10.000)</strong> según catálogo, pagos y panel. Una landing de campaña parte desde ~USD 600. Las tarifas de desarrollador web freelance se confirman con alcance en la <a href="/#contact">cotización</a>.</p>
+                <p class="money-copy">El presupuesto web e-commerce suele situarse en el rango de <strong>producto comercial (USD 3.000–10.000)</strong> según catálogo, pagos y panel. Una landing de campaña parte desde ~USD 600. Las tarifas de desarrollador web freelance se confirman con alcance en la <a href="/#contact">cotización</a>.</p>
                 <p>Respuesta típica en 48 horas con plan, plazos y estimación. <a href="/faq">Más respuestas en el FAQ</a> · <a href="/servicios#care">Detalle de planes Care</a>.</p>
             </div>
         </section>
