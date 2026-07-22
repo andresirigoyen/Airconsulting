@@ -1,16 +1,22 @@
 /**
- * Build lightweight presence / city landing stubs (ES + DK cities not yet in geo-config).
+ * Build presence / city landing pages (ES + DK cities not yet in geo-config).
+ * Uses shared page-chrome (full nav + brand footer).
  * Run: node scripts/build-presence-pages.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  SITE,
+  escapeHtml,
+  escapeAttr,
+  buildHead,
+  renderPage,
+  waLink,
+} from './lib/page-chrome.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
-const SITE = 'https://www.irigoyendev.com';
-const WA =
-  'https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto.';
 
 /** @type {Array<object>} */
 const PAGES = [
@@ -18,6 +24,8 @@ const PAGES = [
     file: 'desarrollo-web-temuco.html',
     path: '/desarrollo-web-temuco',
     lang: 'es',
+    hreflang: 'es-CL',
+    ogLocale: 'es_CL',
     city: 'Temuco',
     region: 'Araucanía',
     country: 'Chile',
@@ -29,11 +37,30 @@ const PAGES = [
       'Desarrollo web en Temuco: tiendas online, landings y plataformas para pymes de la Araucanía. Atención remota con IrigoyenDev.',
     h1: 'Desarrollo web profesional en Temuco',
     lead: 'Construimos canales digitales para negocios en Temuco y la Araucanía: e-commerce, landings de conversión y SEO técnico — con entrega remota y plazos claros.',
+    body: 'Trabajamos remoto con pymes y equipos de Temuco que necesitan una web que genere consultas o ventas, no solo presencia. Stack moderno, medición de conversiones y copy alineado al mercado local.',
+    semanticTopics: [
+      'desarrollo web para pymes de la Araucanía',
+      'tiendas online con envíos a regiones',
+      'landings de captación de leads',
+      'SEO técnico para búsquedas locales',
+    ],
+    faq: [
+      {
+        q: '¿Hacen desarrollo web para empresas en Temuco?',
+        a: 'Sí. Atendemos proyectos en Temuco y la Araucanía de forma remota: tiendas online, landings y plataformas con SEO técnico.',
+      },
+      {
+        q: '¿Cuánto cuesta un proyecto web?',
+        a: 'Landings desde ~USD 600; productos comerciales desde ~USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios.',
+      },
+    ],
   },
   {
     file: 'desarrollo-web-madrid.html',
     path: '/desarrollo-web-madrid',
     lang: 'es',
+    hreflang: 'es',
+    ogLocale: 'es_ES',
     city: 'Madrid',
     region: 'Comunidad de Madrid',
     country: 'España',
@@ -45,6 +72,7 @@ const PAGES = [
       'Desarrollador web en Madrid: crear tienda online España, landings de conversión y plataformas full stack. IrigoyenDev — remoto con clientes en España.',
     h1: 'Desarrollo web profesional en Madrid',
     lead: 'Ayudamos a marcas y pymes en Madrid a lanzar tiendas online, landings y productos digitales medibles. Trabajamos remoto desde Dinamarca, en español.',
+    body: 'Misma calidad técnica que en Chile y Dinamarca, adaptada a pasarelas europeas (Stripe, Redsys) y a un mercado donde la velocidad y el SEO técnico marcan la diferencia.',
     semanticTopics: [
       'desarrollo web para empresas españolas',
       'e-commerce internacional',
@@ -70,6 +98,8 @@ const PAGES = [
     file: 'desarrollo-web-barcelona.html',
     path: '/desarrollo-web-barcelona',
     lang: 'es',
+    hreflang: 'es',
+    ogLocale: 'es_ES',
     city: 'Barcelona',
     region: 'Cataluña',
     country: 'España',
@@ -81,11 +111,30 @@ const PAGES = [
       'Desarrollo web en Barcelona: e-commerce, landing pages y plataformas a medida. Caso TheBeeBaby y atención remota en español.',
     h1: 'Desarrollo web profesional en Barcelona',
     lead: 'Desde landings de captación hasta marketplaces: construimos producto digital para equipos en Barcelona. Referencia: TheBeeBaby.',
+    body: 'Barcelona concentra marcas de producto y e-commerce. Diseñamos y desarrollamos sitios rápidos, medibles y listos para escalar ventas o leads.',
+    semanticTopics: [
+      'desarrollo web para marcas en Barcelona',
+      'e-commerce y marketplaces',
+      'landings de conversión',
+      'producto digital full stack',
+    ],
+    faq: [
+      {
+        q: '¿Trabajan con empresas en Barcelona?',
+        a: 'Sí. Entregamos remoto en español: tiendas online, landings y plataformas. Referencia de e-commerce: TheBeeBaby.',
+      },
+      {
+        q: '¿Incluyen SEO técnico?',
+        a: 'Sí. Canonical, schema, rendimiento y estructura indexable forman parte del entregable estándar.',
+      },
+    ],
   },
   {
     file: 'desarrollo-web-valencia.html',
     path: '/desarrollo-web-valencia',
     lang: 'es',
+    hreflang: 'es',
+    ogLocale: 'es_ES',
     city: 'Valencia',
     region: 'Comunidad Valenciana',
     country: 'España',
@@ -97,11 +146,30 @@ const PAGES = [
       'Desarrollo web en Valencia: tienda online, landings de conversión y SEO técnico para pymes. IrigoyenDev — remoto en español.',
     h1: 'Desarrollo web profesional en Valencia',
     lead: 'Producto web claro y rápido para negocios en Valencia: e-commerce, landings y plataformas con medición de conversiones.',
+    body: 'Para pymes del levante que necesitan un canal digital serio: plazos claros, stack moderno y foco en conversión, no en plantillas genéricas.',
+    semanticTopics: [
+      'desarrollo web para pymes en Valencia',
+      'tienda online y pasarelas europeas',
+      'landings de captación',
+      'SEO técnico local',
+    ],
+    faq: [
+      {
+        q: '¿Hacen webs para empresas en Valencia?',
+        a: 'Sí. Trabajamos remoto en español con e-commerce, landings y plataformas a medida.',
+      },
+      {
+        q: '¿Cómo empezamos?',
+        a: 'Escríbenos por el formulario o WhatsApp con el objetivo del proyecto; respondemos con un plan y rango de inversión.',
+      },
+    ],
   },
   {
     file: 'web-developer-copenhagen.html',
     path: '/web-developer-copenhagen',
     lang: 'en',
+    hreflang: 'en',
+    ogLocale: 'en_US',
     city: 'Copenhagen',
     region: 'Capital Region',
     country: 'Denmark',
@@ -113,6 +181,7 @@ const PAGES = [
       'Full-stack web developer in Copenhagen: e-commerce Denmark, conversion landings and custom platforms. IrigoyenDev — based in Denmark.',
     h1: 'Full-stack web development in Copenhagen',
     lead: 'We build online stores, conversion landings and business platforms for teams in Copenhagen and across Denmark — remote-friendly, English or Spanish.',
+    body: 'Based in Denmark with international delivery experience. Clear scopes, modern stack, and technical SEO built into every launch.',
     semanticTopics: [
       'web development for Danish businesses',
       'e-commerce with international shipping',
@@ -138,6 +207,8 @@ const PAGES = [
     file: 'web-developer-aarhus.html',
     path: '/web-developer-aarhus',
     lang: 'en',
+    hreflang: 'en',
+    ogLocale: 'en_US',
     city: 'Aarhus',
     region: 'Central Denmark',
     country: 'Denmark',
@@ -149,154 +220,235 @@ const PAGES = [
       'Web developer in Aarhus: e-commerce, landing pages and full-stack products for Danish SMEs. IrigoyenDev — Denmark-based.',
     h1: 'Full-stack web development in Aarhus',
     lead: 'Custom web products for Aarhus businesses: e-commerce, lead-gen landings and admin platforms with clear delivery.',
+    body: 'Same Copenhagen-based team, remote delivery for Jutland companies that need a measurable digital channel — stores, landings or internal tools.',
+    semanticTopics: [
+      'web developer for Aarhus SMEs',
+      'e-commerce Denmark',
+      'conversion landing pages',
+      'custom business platforms',
+    ],
+    faq: [
+      {
+        q: 'Do you take projects in Aarhus?',
+        a: 'Yes. We deliver remotely from Denmark: e-commerce, landings and custom platforms for Aarhus and Jutland teams.',
+      },
+      {
+        q: 'How do we start?',
+        a: 'Send a short brief via the contact form or WhatsApp. We reply with a plan and investment range.',
+      },
+    ],
   },
 ];
-
-function escapeHtml(s) {
-  return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
 
 function buildHtml(p) {
   const isEn = p.lang === 'en';
   const back = isEn ? 'Back to home' : 'Volver al inicio';
   const cta = isEn ? 'Request a project plan →' : 'Pedir plan de proyecto →';
-  const services = isEn ? 'Services' : 'Servicios';
-  const pricing = isEn ? 'Pricing' : 'Precios';
-  const related = isEn ? 'Related' : 'También te puede interesar';
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': ['ProfessionalService', 'LocalBusiness'],
-    '@id': `${SITE}${p.path}#localbusiness`,
-    name: `IrigoyenDev — ${p.city}`,
-    url: `${SITE}${p.path}`,
-    description: p.description,
-    telephone: '+45-5024-9855',
-    email: 'andres@irigoyendev.com',
-    priceRange: '$$-$$$',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: p.city,
-      addressRegion: p.region,
-      addressCountry: p.countryCode,
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: p.lat,
-      longitude: p.lng,
-    },
-    areaServed: { '@type': 'City', name: p.city },
-  };
-
+  const related = isEn ? 'Related services' : 'Servicios relacionados';
+  const focusTitle = isEn ? 'What we focus on' : 'Enfoque local';
   const faqTitle = isEn ? 'FAQ' : 'Preguntas frecuentes';
-  const topicsTitle = isEn ? 'What we focus on' : 'Enfoque local';
+  const aboutTitle = isEn ? `Working with ${p.city}` : `Trabajar con ${p.city}`;
+  const crumbLabel = isEn ? 'Breadcrumb' : 'Miga de pan';
+  const homeLabel = isEn ? 'Home' : 'Inicio';
+  const skipLink = isEn ? 'Skip to content' : 'Saltar al contenido';
+
+  const marketHub =
+    p.countryCode === 'ES' ? '/es' : p.countryCode === 'DK' ? '/da' : '/chile';
+  const marketLabel =
+    p.countryCode === 'ES' ? 'España' : p.countryCode === 'DK' ? 'Danmark' : 'Chile';
+
+  const services = [
+    {
+      href: '/crear-tienda-online',
+      name: isEn ? 'Online store' : 'Tienda online',
+      blurb: isEn
+        ? 'E-commerce ready to sell and measure'
+        : 'E-commerce listo para vender y medir',
+    },
+    {
+      href: '/landing-pages',
+      name: isEn ? 'Landing pages' : 'Landing pages',
+      blurb: isEn
+        ? 'Conversion pages for campaigns and ads'
+        : 'Páginas de conversión para campañas',
+    },
+    {
+      href: '/servicios',
+      name: isEn ? 'All services' : 'Todos los servicios',
+      blurb: isEn
+        ? 'Full-stack, SEO, GEO and Care plans'
+        : 'Full stack, SEO, GEO y planes Care',
+    },
+    {
+      href: '/precios',
+      name: isEn ? 'Pricing' : 'Precios',
+      blurb: isEn
+        ? 'Clear ranges before you commit'
+        : 'Rangos claros antes de comprometerte',
+    },
+  ];
+
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: homeLabel, item: `${SITE}/` },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: p.country,
+          item: `${SITE}${marketHub}`,
+        },
+        { '@type': 'ListItem', position: 3, name: p.city, item: `${SITE}${p.path}` },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': ['ProfessionalService', 'LocalBusiness'],
+      '@id': `${SITE}${p.path}#localbusiness`,
+      name: `IrigoyenDev — ${p.city}`,
+      url: `${SITE}${p.path}`,
+      description: p.description,
+      telephone: '+45-5024-9855',
+      email: 'andres@irigoyendev.com',
+      priceRange: '$$-$$$',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: p.city,
+        addressRegion: p.region,
+        addressCountry: p.countryCode,
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: p.lat,
+        longitude: p.lng,
+      },
+      areaServed: { '@type': 'City', name: p.city },
+    },
+  ];
+
+  if (Array.isArray(p.faq) && p.faq.length) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: p.faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
 
   const topicsHtml =
     Array.isArray(p.semanticTopics) && p.semanticTopics.length
       ? `<section class="project-section fade-in">
-            <div class="content-block">
-                <h2>${topicsTitle}</h2>
-                <ul class="project-results-list">
-                    ${p.semanticTopics.map((t) => `<li>${escapeHtml(t)}</li>`).join('\n                    ')}
-                </ul>
-            </div>
+            <h2>${focusTitle}</h2>
+            <p class="location-intro">${escapeHtml(p.body || p.lead)}</p>
+            <ul class="project-results-list location-neighborhoods">
+                ${p.semanticTopics.map((t) => `<li>${escapeHtml(t)}</li>`).join('\n                ')}
+            </ul>
         </section>`
-      : '';
+      : `<section class="project-section fade-in">
+            <h2>${aboutTitle}</h2>
+            <p class="location-intro">${escapeHtml(p.body || p.lead)}</p>
+        </section>`;
+
+  const servicesHtml = `<section class="project-section fade-in">
+            <h2>${related}</h2>
+            <div class="location-grid location-grid--services">
+                ${services
+                  .map(
+                    (s) => `<article class="location-card">
+                    <h3><a href="${escapeAttr(s.href)}">${escapeHtml(s.name)}</a></h3>
+                    <p>${escapeHtml(s.blurb)}</p>
+                    <a href="${escapeAttr(s.href)}" class="project-link">${isEn ? 'View' : 'Ver'} →</a>
+                </article>`
+                  )
+                  .join('\n                ')}
+            </div>
+        </section>`;
 
   const faqHtml =
     Array.isArray(p.faq) && p.faq.length
-      ? `<section class="project-section fade-in" aria-labelledby="faq-title">
-            <div class="content-block">
-                <h2 id="faq-title">${faqTitle}</h2>
-                <div class="faq-list">
-                    ${p.faq
-                      .map(
-                        (f) => `<details class="faq-item">
-                        <summary>${escapeHtml(f.q)}</summary>
-                        <p>${escapeHtml(f.a)}</p>
-                    </details>`
-                      )
-                      .join('\n                    ')}
-                </div>
+      ? `<section class="project-section fade-in" aria-labelledby="faq-title" id="faq">
+            <h2 id="faq-title">${faqTitle}</h2>
+            <div class="faq-list">
+                ${p.faq
+                  .map(
+                    (f) => `<details class="faq-item">
+                    <summary>${escapeHtml(f.q)}</summary>
+                    <p>${escapeHtml(f.a)}</p>
+                </details>`
+                  )
+                  .join('\n                ')}
             </div>
         </section>`
       : '';
 
-  return `<!DOCTYPE html>
-<html lang="${p.lang}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escapeHtml(p.title)}</title>
-    <meta name="description" content="${escapeHtml(p.description)}">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="${SITE}${p.path}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="${SITE}${p.path}">
-    <meta property="og:title" content="${escapeHtml(p.title)}">
-    <meta property="og:description" content="${escapeHtml(p.description)}">
-    <meta property="og:image" content="${SITE}/images/og-image.png">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
-</head>
-<body class="page-marketing">
-    <nav class="navbar" id="navbar">
-        <div class="container navbar-inner">
-            <a href="/" class="logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
-            <div class="nav-links" id="nav-links">
-                <a href="/servicios">${services}</a>
-                <a href="/#projects">Projects</a>
-                <a href="/precios">${pricing}</a>
-                <a href="/#contact" class="nav-cta">${isEn ? 'Quote' : 'Cotizar'}</a>
-            </div>
-        </div>
-    </nav>
+  const headHtml = buildHead({
+    title: p.title,
+    description: p.description,
+    canonicalPath: p.path,
+    ogTitle: p.title,
+    ogDescription: p.description,
+    hreflang: p.hreflang || p.lang,
+    ogLocale: p.ogLocale,
+    geoRegion: p.countryCode,
+    geoPlacename: `${p.city}, ${p.region}`,
+    icbm: `${p.lat}, ${p.lng}`,
+    jsonLd,
+  });
 
+  const mainHtml = `
+    <main id="main-content">
     <header class="project-header container fade-in">
         <a href="/" class="back-link"><span>← ${back}</span></a>
+        <nav class="geo-breadcrumb" aria-label="${crumbLabel}">
+          <ol>
+            <li><a href="/">${homeLabel}</a></li>
+            <li><a href="${marketHub}">${escapeHtml(p.country)}</a></li>
+            <li aria-current="page">${escapeHtml(p.city)}</li>
+          </ol>
+        </nav>
         <p class="project-eyebrow">${escapeHtml(p.country)} · ${escapeHtml(p.city)}</p>
         <h1>${escapeHtml(p.h1)}</h1>
         <p class="project-lead">${escapeHtml(p.lead)}</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary">${cta}</a>
-            <a href="${WA}" class="project-cta-inline" target="_blank" rel="noopener noreferrer">WhatsApp →</a>
+            <a href="${waLink(isEn ? 'Hi! I saw your portfolio and would like to discuss a project.' : '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.')}" class="project-cta-inline" target="_blank" rel="noopener noreferrer">WhatsApp →</a>
         </div>
     </header>
-    <main class="container">
+    <div class="container">
         ${topicsHtml}
+        ${servicesHtml}
         ${faqHtml}
         <section class="project-section fade-in">
-            <div class="content-block">
-                <h2>${related}</h2>
-                <ul class="project-results-list">
-                    <li><a href="/crear-tienda-online">${isEn ? 'Online store / e-commerce' : 'Crear tienda online'}</a></li>
-                    <li><a href="/landing-pages">${isEn ? 'Conversion landing pages' : 'Landing pages de conversión'}</a></li>
-                    <li><a href="/servicios">${isEn ? 'All services' : 'Todos los servicios'}</a></li>
-                    <li><a href="/#markets">${isEn ? 'Where we work' : 'Dónde trabajamos'}</a></li>
-                </ul>
-            </div>
+            <p class="location-outro">
+                <a href="${marketHub}">${isEn ? 'Market hub' : 'Hub de mercado'} (${escapeHtml(marketLabel)})</a>
+                · <a href="/precios">${isEn ? 'Pricing' : 'Precios'}</a>
+                · <a href="/#contact">${isEn ? 'Contact' : 'Contacto'}</a>
+            </p>
         </section>
-    </main>
+    </div>
+    </main>`;
 
-    <footer class="footer">
-        <div class="container footer-seo">
-            <p>&copy; 2026 IrigoyenDev</p>
-            <nav class="footer-links" aria-label="SEO">
-                <a href="/servicios">${services}</a>
-                <a href="/precios">${pricing}</a>
-                <a href="/#contact">${isEn ? 'Contact' : 'Contacto'}</a>
-            </nav>
-        </div>
-    </footer>
-    <script src="/js/script.js"></script>
-</body>
-</html>
-`;
+  const footerMarketLinks = [
+    { href: '/chile', label: 'Chile' },
+    { href: '/es', label: 'España' },
+    { href: '/da', label: 'Danmark' },
+    { href: '/en', label: 'English' },
+  ].filter((l, i, arr) => arr.findIndex((x) => x.href === l.href) === i);
+
+  return renderPage({
+    headHtml,
+    mainHtml,
+    htmlLang: p.lang,
+    bodyClass: 'page-marketing page-location page-presence',
+    skipLink,
+    footerGeo: `${p.country} · ${p.city} · Remoto`,
+    footerMarketLinks,
+  });
 }
 
 for (const p of PAGES) {
@@ -304,13 +456,17 @@ for (const p of PAGES) {
   console.log('Wrote', p.path);
 }
 
-// Index for sitemap merge helper
 fs.writeFileSync(
   path.join(root, 'data', 'presence-pages.json'),
   JSON.stringify(
     {
       generatedAt: new Date().toISOString(),
-      pages: PAGES.map((p) => ({ path: p.path, file: p.file, city: p.city, countryCode: p.countryCode })),
+      pages: PAGES.map((p) => ({
+        path: p.path,
+        file: p.file,
+        city: p.city,
+        countryCode: p.countryCode,
+      })),
     },
     null,
     2

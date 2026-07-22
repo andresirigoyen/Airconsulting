@@ -24,6 +24,10 @@ const CORE = [
   { loc: '/landing-pages', changefreq: 'monthly', priority: '0.9' },
   { loc: '/precios', changefreq: 'monthly', priority: '0.85' },
   { loc: '/faq', changefreq: 'monthly', priority: '0.8' },
+  { loc: '/santiago/comunas', changefreq: 'weekly', priority: '0.88' },
+  { loc: '/es', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/en', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/da', changefreq: 'weekly', priority: '0.9' },
 ];
 
 const PROJECTS = [

@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15
+        rootMargin: '80px 0px',
+        threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -116,9 +116,22 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Hero text: visible on load (orb is not inside fade-in)
-    document.querySelectorAll('.hero-content.fade-in').forEach(el => {
+    // Above-the-fold: visible on load (home hero + marketing/project headers)
+    document.querySelectorAll('.hero-content.fade-in, .project-header.fade-in').forEach(el => {
         el.classList.add('visible');
+    });
+
+    // Reveal anything already in the viewport (covers SEO/marketing sections)
+    requestAnimationFrame(() => {
+        fadeElements.forEach(el => {
+            if (el.classList.contains('visible')) return;
+            const rect = el.getBoundingClientRect();
+            const vh = window.innerHeight || document.documentElement.clientHeight;
+            if (rect.top < vh && rect.bottom > 0) {
+                el.classList.add('visible');
+                observer.unobserve(el);
+            }
+        });
     });
 
     // 3. Smooth scrolling for anchor links

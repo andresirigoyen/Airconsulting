@@ -126,6 +126,77 @@ ${jsonLd ? `\n${jsonLd}\n` : ''}
 }
 
 /**
+ * Full brand footer (matches home / projects / 404).
+ * @param {object} [opts]
+ * @param {string} [opts.areas]
+ * @param {{href:string,label:string}[]} [opts.marketLinks]
+ * @param {string} [opts.extra]
+ * @param {string} [opts.copyright]
+ */
+export function buildFooter({
+  areas = 'Dinamarca · Chile · España · Remoto',
+  marketLinks = [],
+  extra = '',
+  copyright = '© 2026 IrigoyenDev. All rights reserved.',
+} = {}) {
+  const wa = waLink(
+    '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.'
+  );
+  const marketItems = marketLinks
+    .map(
+      (l) =>
+        `<li><a href="${escapeAttr(l.href)}">${escapeHtml(l.label)}</a></li>`
+    )
+    .join('\n                    ');
+
+  return `<footer class="footer site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <a href="/" class="site-footer__logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+                <p class="site-footer__tagline" data-i18n="footer.tagline">Desarrollo web full stack, SEO, GEO y marketing digital para conseguir clientes online.</p>
+                <p class="site-footer__areas" data-i18n="footer.areas">${escapeHtml(areas)}</p>
+                <h3 class="site-footer__heading" data-i18n="footer.contactHeading">Contacto general</h3>
+                <ul class="site-footer__contact">
+                    <li><a href="${wa}" target="_blank" rel="noopener noreferrer">WhatsApp +45 50 24 98 55</a></li>
+                    <li><a href="/#contact" data-i18n="footer.contactForm">Formulario de contacto</a></li>
+                </ul>
+            </div>
+            <nav class="site-footer__col" aria-label="Servicios">
+                <h3 class="site-footer__heading" data-i18n="footer.servicesHeading">Servicios</h3>
+                <ul class="site-footer__links">
+                    <li><a href="/servicios" data-i18n="footer.linkServices">Todos los servicios</a></li>
+                    <li><a href="/crear-tienda-online" data-i18n="footer.linkShop">Crear tienda online</a></li>
+                    <li><a href="/landing-pages" data-i18n="footer.linkLandings">Landing pages</a></li>
+                    <li><a href="/servicios#seo-basico" data-i18n="footer.linkSeo">SEO básico</a></li>
+                    <li><a href="/servicios#seo-geo" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
+                    <li><a href="/servicios#marketing" data-i18n="footer.linkMkt">Marketing digital</a></li>
+                    <li><a href="/servicios#care" data-i18n="footer.linkWm">Planes Care / mantenimiento</a></li>
+                    <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Sitio">
+                <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
+                <ul class="site-footer__links">
+                    <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
+                    <li><a href="/#projects" data-i18n="footer.linkProjects">Proyectos</a></li>
+                    <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
+                    <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
+                    ${marketItems}
+                    <li><a href="/llms.txt">llms.txt</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </nav>
+        </div>
+        ${extra}
+        <div class="container site-footer__bottom">
+            <p data-i18n="footer">${escapeHtml(copyright)}</p>
+        </div>
+    </footer>`;
+}
+
+/**
  * @param {object} opts
  * @param {string} opts.headHtml
  * @param {string} [opts.bodyClass]
@@ -143,15 +214,12 @@ export function renderPage({
   footerExtra = '',
   htmlLang = 'es-CL',
   skipLink = 'Saltar al contenido',
-  footerGeo = 'Remote · WhatsApp',
+  footerGeo = 'Dinamarca · Chile · España · Remoto',
   footerMarketLinks = [],
 }) {
   const wa = waLink(
     '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.'
   );
-  const marketNav = footerMarketLinks
-    .map((l) => `<a href="${escapeAttr(l.href)}">${escapeHtml(l.label)}</a>`)
-    .join('\n                ');
 
   return `<!DOCTYPE html>
 <html lang="${escapeAttr(htmlLang)}">
@@ -204,22 +272,11 @@ ${headHtml}
 
 ${mainHtml}
 
-    <footer class="footer site-footer">
-        <div class="container footer-seo">
-            <p>&copy; 2026 IrigoyenDev. Productos web hechos para vender y convertir.</p>
-            <nav class="footer-links" aria-label="Enlaces">
-                <a href="/servicios">Servicios</a>
-                ${marketNav}
-                <a href="/blog">Blog</a>
-                <a href="/crear-tienda-online">Tienda online</a>
-                <a href="/landing-pages">Landing pages</a>
-                <a href="/precios">Precios</a>
-                <a href="/#contact">Contacto</a>
-            </nav>
-            ${footerExtra}
-            <p class="footer-geo">${escapeHtml(footerGeo)} · WhatsApp <a href="${wa}">+45 50 24 98 55</a></p>
-        </div>
-    </footer>
+${buildFooter({
+  areas: footerGeo,
+  marketLinks: footerMarketLinks,
+  extra: footerExtra,
+})}
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>

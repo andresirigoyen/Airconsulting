@@ -803,9 +803,9 @@
   "contact.formEyebrow": "Demander un plan de projet",
   "contact.personRole": "Fondateur · Développement full stack",
   "contact.privacy": "Vos informations sont confidentielles et ne seront jamais partagées.",
-  "markets.eyebrow": "Présence internationale",
-  "markets.title": "Où nous avons livré — et d’où nous opérons",
-  "markets.desc": "Portefeuille concentré au Chili et en Espagne. Base opérationnelle au Danemark ; Norvège ouverte aux projets à distance.",
+  "markets.eyebrow": "Présents à",
+  "markets.title": "Où nous travaillons",
+  "markets.desc": "Développement web, e-commerce et landings pour le Chili, l’Espagne et le Danemark — pages locales et livraison à distance.",
   "markets.cta": "Voir les projets →",
   "markets.cl.name": "Chili",
   "markets.cl.proof": "Calafate · Dragonmart · Dahuss · Radio Chicureo · et plus",
@@ -835,5 +835,6 @@
   "home.ogDesc": "Boutiques, plateformes et landings conçues pour convertir le trafic en revenus. Demandez un plan de projet à IrigoyenDev.",
   "a11y.navMain": "Navigation principale",
   "markets.cl.santiagoCta": "Startups, tech et services a Santiago",
-  "markets.cl.chileCta": "Developpement web par region au Chili"
+  "markets.cl.chileCta": "Developpement web par region au Chili",
+  "markets.cl.comunasCta": "Voir toutes les communes de Santiago"
 }

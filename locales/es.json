@@ -836,10 +836,9 @@
   "shortcuts.full.desc": "Plataformas y productos a medida",
   "shortcuts.price.title": "Precios",
   "shortcuts.price.desc": "Rangos claros y cotización en 48h",
-  "home.metaTitle": "Desarrollador web freelance Chile | Full stack — IrigoyenDev",
-  "home.metaDesc": "Desarrollador web freelance Chile: desarrollo web full stack, crear tienda online Chile y landings de conversión. IrigoyenDev — España, Dinamarca y remoto.",
   "home.ogDesc": "Tiendas online, plataformas y landing pages diseñadas para convertir tráfico en ingresos. Pide un plan de proyecto a IrigoyenDev.",
   "a11y.navMain": "Navegación principal",
   "markets.cl.santiagoCta": "Ver hub Santiago y comunas",
-  "markets.cl.chileCta": "Desarrollo web por regiones en Chile"
+  "markets.cl.chileCta": "Desarrollo web por regiones en Chile",
+  "markets.cl.comunasCta": "Ver todas las comunas de Santiago"
 }

@@ -803,9 +803,9 @@
   "contact.formEyebrow": "Anmod om projektplan",
   "contact.personRole": "Stifter · Full-stack udvikling",
   "contact.privacy": "Dine oplysninger er fortrolige og deles ikke med tredjeparter.",
-  "markets.eyebrow": "International tilstedeværelse",
-  "markets.title": "Hvor vi har leveret — og hvorfra vi opererer",
-  "markets.desc": "Portefølje koncentreret i Chile og Spanien. Driftsbase i Danmark; Norge åben for fjernprojekter.",
+  "markets.eyebrow": "Til stede i",
+  "markets.title": "Hvor vi arbejder",
+  "markets.desc": "Webudvikling, e-commerce og landingsider til Chile, Spanien og Danmark — lokale sider plus remote levering.",
   "markets.cta": "Se projekter →",
   "markets.cl.name": "Chile",
   "markets.cl.proof": "Calafate · Dragonmart · Dahuss · Radio Chicureo · m.fl.",
@@ -835,5 +835,6 @@
   "home.ogDesc": "Webshops, platforme og landingsider designet til at omsætte trafik til omsætning. Bed om en projektplan fra IrigoyenDev.",
   "a11y.navMain": "Hovednavigation",
   "markets.cl.santiagoCta": "Startups, tech og services i Santiago",
-  "markets.cl.chileCta": "Webudvikling efter region i Chile"
+  "markets.cl.chileCta": "Webudvikling efter region i Chile",
+  "markets.cl.comunasCta": "Se alle kommuner i Santiago"
 }

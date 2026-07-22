@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme'); } catch (_) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <title>Comunas de Santiago | Desarrollo web por comuna — IrigoyenDev</title>
+    <meta name="description" content="Índice de desarrollo web en las 52 comunas de la Región Metropolitana: Las Condes, Providencia, Ñuñoa, Maipú y más. Landings, tiendas online y plataformas.">
+    <meta name="author" content="Andrés Irigoyen">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://www.irigoyendev.com/santiago/comunas">
+    <link rel="alternate" hreflang="es-CL" href="https://www.irigoyendev.com/santiago/comunas">
+    <link rel="alternate" hreflang="x-default" href="https://www.irigoyendev.com/santiago/comunas">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="alternate" type="text/plain" title="LLM content guide" href="https://www.irigoyendev.com/llms.txt">
+    <link rel="author" href="https://www.irigoyendev.com/">
+    <meta name="geo.region" content="CL">
+    <meta name="geo.placename" content="Santiago, Región Metropolitana">
+    <meta name="ICBM" content="-33.4489, -70.6693">
+    <meta name="ai-content-declaration" content="human-authored">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IrigoyenDev">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:title" content="Comunas de Santiago | Desarrollo web por comuna — IrigoyenDev">
+    <meta property="og:description" content="Índice de desarrollo web en las 52 comunas de la Región Metropolitana: Las Condes, Providencia, Ñuñoa, Maipú y más. Landings, tiendas online y plataformas.">
+    <meta property="og:url" content="https://www.irigoyendev.com/santiago/comunas">
+    <meta property="og:image" content="https://www.irigoyendev.com/images/og-image.png">
+    <meta property="og:image:secure_url" content="https://www.irigoyendev.com/images/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Comunas de Santiago | Desarrollo web por comuna — IrigoyenDev">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Comunas de Santiago | Desarrollo web por comuna — IrigoyenDev">
+    <meta name="twitter:description" content="Índice de desarrollo web en las 52 comunas de la Región Metropolitana: Las Condes, Providencia, Ñuñoa, Maipú y más. Landings, tiendas online y plataformas.">
+    <meta name="twitter:image" content="https://www.irigoyendev.com/images/og-image.png">
+    <meta name="twitter:image:alt" content="Comunas de Santiago | Desarrollo web por comuna — IrigoyenDev">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.irigoyendev.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chile",
+          "item": "https://www.irigoyendev.com/chile"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Santiago",
+          "item": "https://www.irigoyendev.com/santiago"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Comunas",
+          "item": "https://www.irigoyendev.com/santiago/comunas"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "@id": "https://www.irigoyendev.com/santiago/comunas#list",
+      "name": "Comunas de Santiago — desarrollo web",
+      "numberOfItems": 52,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Alhué",
+          "url": "https://www.irigoyendev.com/santiago/alhue"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Buin",
+          "url": "https://www.irigoyendev.com/santiago/buin"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calera de Tango",
+          "url": "https://www.irigoyendev.com/santiago/calera-de-tango"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Cerrillos",
+          "url": "https://www.irigoyendev.com/santiago/cerrillos"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Cerro Navia",
+          "url": "https://www.irigoyendev.com/santiago/cerro-navia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Colina",
+          "url": "https://www.irigoyendev.com/santiago/colina"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Conchalí",
+          "url": "https://www.irigoyendev.com/santiago/conchali"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Curacaví",
+          "url": "https://www.irigoyendev.com/santiago/curacavi"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "El Bosque",
+          "url": "https://www.irigoyendev.com/santiago/el-bosque"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "El Monte",
+          "url": "https://www.irigoyendev.com/santiago/el-monte"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Estación Central",
+          "url": "https://www.irigoyendev.com/santiago/estacion-central"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Huechuraba",
+          "url": "https://www.irigoyendev.com/santiago/huechuraba"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Independencia",
+          "url": "https://www.irigoyendev.com/santiago/independencia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Isla de Maipo",
+          "url": "https://www.irigoyendev.com/santiago/isla-de-maipo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "La Cisterna",
+          "url": "https://www.irigoyendev.com/santiago/la-cisterna"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "La Florida",
+          "url": "https://www.irigoyendev.com/santiago/la-florida"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "La Granja",
+          "url": "https://www.irigoyendev.com/santiago/la-granja"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "La Pintana",
+          "url": "https://www.irigoyendev.com/santiago/la-pintana"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "La Reina",
+          "url": "https://www.irigoyendev.com/santiago/la-reina"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Lampa",
+          "url": "https://www.irigoyendev.com/santiago/lampa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Las Condes",
+          "url": "https://www.irigoyendev.com/santiago/las-condes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Lo Barnechea",
+          "url": "https://www.irigoyendev.com/santiago/lo-barnechea"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Lo Espejo",
+          "url": "https://www.irigoyendev.com/santiago/lo-espejo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Lo Prado",
+          "url": "https://www.irigoyendev.com/santiago/lo-prado"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Macul",
+          "url": "https://www.irigoyendev.com/santiago/macul"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Maipú",
+          "url": "https://www.irigoyendev.com/santiago/maipu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "María Pinto",
+          "url": "https://www.irigoyendev.com/santiago/maria-pinto"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Melipilla",
+          "url": "https://www.irigoyendev.com/santiago/melipilla"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Ñuñoa",
+          "url": "https://www.irigoyendev.com/santiago/nunoa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Padre Hurtado",
+          "url": "https://www.irigoyendev.com/santiago/padre-hurtado"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Paine",
+          "url": "https://www.irigoyendev.com/santiago/paine"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Pedro Aguirre Cerda",
+          "url": "https://www.irigoyendev.com/santiago/pedro-aguirre-cerda"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Peñaflor",
+          "url": "https://www.irigoyendev.com/santiago/penaflor"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Peñalolén",
+          "url": "https://www.irigoyendev.com/santiago/penalolen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Pirque",
+          "url": "https://www.irigoyendev.com/santiago/pirque"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Providencia",
+          "url": "https://www.irigoyendev.com/santiago/providencia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Pudahuel",
+          "url": "https://www.irigoyendev.com/santiago/pudahuel"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Puente Alto",
+          "url": "https://www.irigoyendev.com/santiago/puente-alto"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Quilicura",
+          "url": "https://www.irigoyendev.com/santiago/quilicura"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Quinta Normal",
+          "url": "https://www.irigoyendev.com/santiago/quinta-normal"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Recoleta",
+          "url": "https://www.irigoyendev.com/santiago/recoleta"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Renca",
+          "url": "https://www.irigoyendev.com/santiago/renca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "San Bernardo",
+          "url": "https://www.irigoyendev.com/santiago/san-bernardo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "San Joaquín",
+          "url": "https://www.irigoyendev.com/santiago/san-joaquin"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "San José de Maipo",
+          "url": "https://www.irigoyendev.com/santiago/san-jose-de-maipo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "San Miguel",
+          "url": "https://www.irigoyendev.com/santiago/san-miguel"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "San Pedro",
+          "url": "https://www.irigoyendev.com/santiago/san-pedro"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "San Ramón",
+          "url": "https://www.irigoyendev.com/santiago/san-ramon"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Santiago Centro",
+          "url": "https://www.irigoyendev.com/santiago/santiago-centro"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Talagante",
+          "url": "https://www.irigoyendev.com/santiago/talagante"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Tiltil",
+          "url": "https://www.irigoyendev.com/santiago/tiltil"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Vitacura",
+          "url": "https://www.irigoyendev.com/santiago/vitacura"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="page-marketing page-location">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <header class="site-header">
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
+        <div class="container navbar-inner">
+            <a href="/" class="logo" aria-label="IrigoyenDev — Inicio"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="/servicios" data-i18n="nav.services">Servicios</a>
+                <a href="/#projects" data-i18n="nav.projects">Resultados</a>
+                <a href="/precios" data-i18n="nav.pricing">Precios</a>
+                <a href="/#contact" class="nav-cta" data-i18n="nav.contact">Cotizar</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="lang-selector-container">
+                    <button id="lang-menu-btn" class="lang-btn" type="button" aria-label="Seleccionar idioma" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div id="lang-dropdown" class="lang-dropdown" role="listbox" aria-label="Idiomas">
+                        <label class="lang-option"><span class="lang-name">English</span><input type="radio" name="lang" value="en" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Español</span><input type="radio" name="lang" value="es" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Deutsch</span><input type="radio" name="lang" value="de" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Dansk</span><input type="radio" name="lang" value="da" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Norsk</span><input type="radio" name="lang" value="no" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Svenska</span><input type="radio" name="lang" value="sv" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Italiano</span><input type="radio" name="lang" value="it" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Français</span><input type="radio" name="lang" value="fr" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">Português</span><input type="radio" name="lang" value="pt" class="lang-radio"><div class="toggle-switch"></div></label>
+                    </div>
+                </div>
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+
+    <main id="main-content">
+    <header class="project-header container fade-in">
+        <a href="/santiago" class="back-link"><span>← Santiago</span></a>
+        <nav class="geo-breadcrumb" aria-label="Miga de pan">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/chile">Chile</a></li>
+            <li><a href="/santiago">Santiago</a></li>
+            <li aria-current="page">Comunas</li>
+          </ol>
+        </nav>
+        <p class="project-eyebrow">Chile · Santiago · Índice geo</p>
+        <h1>Desarrollo web por comuna en Santiago</h1>
+        <p class="project-lead">Páginas locales para las 52 comunas de la Región Metropolitana. Elige tu comuna para ver enfoque, servicios y CTA de cotización.</p>
+        <div class="project-header__actions">
+            <a href="/#contact" class="btn-cta-primary">Cotizar proyecto en Santiago →</a>
+            <a href="/santiago" class="project-cta-inline">Hub Santiago →</a>
+        </div>
+    </header>
+    <div class="container">
+        <section class="project-section fade-in">
+            <h2 class="location-subheading">Todas las comunas</h2>
+            <div class="location-grid">
+
+            <article class="location-card">
+                <h3><a href="/santiago/alhue">Alhué</a></h3>
+                <p>Para negocios en Alhué que necesitan canal digital propio.</p>
+                <a href="/santiago/alhue" class="project-link">Ver Alhué →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/buin">Buin</a></h3>
+                <p>Para negocios en Buin que necesitan canal digital propio.</p>
+                <a href="/santiago/buin" class="project-link">Ver Buin →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/calera-de-tango">Calera de Tango</a></h3>
+                <p>Para negocios en Calera de Tango que necesitan canal digital propio.</p>
+                <a href="/santiago/calera-de-tango" class="project-link">Ver Calera de Tango →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/cerrillos">Cerrillos</a></h3>
+                <p>Para negocios y equipos en Cerrillos que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/cerrillos" class="project-link">Ver Cerrillos →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/cerro-navia">Cerro Navia</a></h3>
+                <p>Para negocios y equipos en Cerro Navia que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/cerro-navia" class="project-link">Ver Cerro Navia →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/colina">Colina</a></h3>
+                <p>Para negocios en Colina que necesitan canal digital propio.</p>
+                <a href="/santiago/colina" class="project-link">Ver Colina →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/conchali">Conchalí</a></h3>
+                <p>Para negocios y equipos en Conchalí que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/conchali" class="project-link">Ver Conchalí →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/curacavi">Curacaví</a></h3>
+                <p>Para negocios en Curacaví que necesitan canal digital propio.</p>
+                <a href="/santiago/curacavi" class="project-link">Ver Curacaví →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/el-bosque">El Bosque</a></h3>
+                <p>Para negocios y equipos en El Bosque que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/el-bosque" class="project-link">Ver El Bosque →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/el-monte">El Monte</a></h3>
+                <p>Para negocios en El Monte que necesitan canal digital propio.</p>
+                <a href="/santiago/el-monte" class="project-link">Ver El Monte →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/estacion-central">Estación Central</a></h3>
+                <p>Para negocios y equipos en Estación Central que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/estacion-central" class="project-link">Ver Estación Central →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/huechuraba">Huechuraba</a></h3>
+                <p>Para negocios y equipos en Huechuraba que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/huechuraba" class="project-link">Ver Huechuraba →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/independencia">Independencia</a></h3>
+                <p>Para negocios y equipos en Independencia que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/independencia" class="project-link">Ver Independencia →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/isla-de-maipo">Isla de Maipo</a></h3>
+                <p>Para negocios en Isla de Maipo que necesitan canal digital propio.</p>
+                <a href="/santiago/isla-de-maipo" class="project-link">Ver Isla de Maipo →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/la-cisterna">La Cisterna</a></h3>
+                <p>Para negocios y equipos en La Cisterna que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/la-cisterna" class="project-link">Ver La Cisterna →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/la-florida">La Florida</a></h3>
+                <p>Para negocios y equipos en La Florida que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/la-florida" class="project-link">Ver La Florida →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/la-granja">La Granja</a></h3>
+                <p>Para negocios y equipos en La Granja que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/la-granja" class="project-link">Ver La Granja →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/la-pintana">La Pintana</a></h3>
+                <p>Para negocios y equipos en La Pintana que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/la-pintana" class="project-link">Ver La Pintana →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/la-reina">La Reina</a></h3>
+                <p>Para consultores, estudios y negocios de barrio que necesitan presencia seria — y para freelancers o equipos tech del sector oriente que trabajan remoto desde la comuna.</p>
+                <a href="/santiago/la-reina" class="project-link">Ver La Reina →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/lampa">Lampa</a></h3>
+                <p>Para negocios en Lampa que necesitan canal digital propio.</p>
+                <a href="/santiago/lampa" class="project-link">Ver Lampa →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/las-condes">Las Condes</a></h3>
+                <p>Para equipos con sede en el oriente de Santiago que necesitan un canal digital a la altura: sitio de producto, landing de demos o plataforma con panel — también e-commerce y marcas comerciales del sector.</p>
+                <a href="/santiago/las-condes" class="project-link">Ver Las Condes →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/lo-barnechea">Lo Barnechea</a></h3>
+                <p>Para marcas y servicios que exigen presentación impecable — incluyendo equipos de producto o comerciales que venden a ese mismo público.</p>
+                <a href="/santiago/lo-barnechea" class="project-link">Ver Lo Barnechea →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/lo-espejo">Lo Espejo</a></h3>
+                <p>Para negocios y equipos en Lo Espejo que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/lo-espejo" class="project-link">Ver Lo Espejo →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/lo-prado">Lo Prado</a></h3>
+                <p>Para negocios y equipos en Lo Prado que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/lo-prado" class="project-link">Ver Lo Prado →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/macul">Macul</a></h3>
+                <p>Para negocios y equipos en Macul que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/macul" class="project-link">Ver Macul →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/maipu">Maipú</a></h3>
+                <p>Foco en retail, servicios y emprendedores de alto volumen local. Si además tienes un producto digital o servicio B2B desde Maipú, adaptamos el mismo stack a landings de captación.</p>
+                <a href="/santiago/maipu" class="project-link">Ver Maipú →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/maria-pinto">María Pinto</a></h3>
+                <p>Para negocios en María Pinto que necesitan canal digital propio.</p>
+                <a href="/santiago/maria-pinto" class="project-link">Ver María Pinto →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/melipilla">Melipilla</a></h3>
+                <p>Para negocios en Melipilla que necesitan canal digital propio.</p>
+                <a href="/santiago/melipilla" class="project-link">Ver Melipilla →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/nunoa">Ñuñoa</a></h3>
+                <p>Para founders early-stage y freelancers de producto que necesitan validar — y para comercio y servicios de barrio que quieren canal propio sin complejidad.</p>
+                <a href="/santiago/nunoa" class="project-link">Ver Ñuñoa →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/padre-hurtado">Padre Hurtado</a></h3>
+                <p>Para negocios en Padre Hurtado que necesitan canal digital propio.</p>
+                <a href="/santiago/padre-hurtado" class="project-link">Ver Padre Hurtado →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/paine">Paine</a></h3>
+                <p>Para negocios en Paine que necesitan canal digital propio.</p>
+                <a href="/santiago/paine" class="project-link">Ver Paine →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/pedro-aguirre-cerda">Pedro Aguirre Cerda</a></h3>
+                <p>Para negocios y equipos en Pedro Aguirre Cerda que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/pedro-aguirre-cerda" class="project-link">Ver Pedro Aguirre Cerda →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/penaflor">Peñaflor</a></h3>
+                <p>Para negocios en Peñaflor que necesitan canal digital propio.</p>
+                <a href="/santiago/penaflor" class="project-link">Ver Peñaflor →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/penalolen">Peñalolén</a></h3>
+                <p>Para empresas de servicios y comercio que necesitan aparecer en Google y captar contacto — incluyendo emprendedores digitales que operan desde la comuna.</p>
+                <a href="/santiago/penalolen" class="project-link">Ver Peñalolén →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/pirque">Pirque</a></h3>
+                <p>Para negocios en Pirque que necesitan canal digital propio.</p>
+                <a href="/santiago/pirque" class="project-link">Ver Pirque →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/providencia">Providencia</a></h3>
+                <p>Ideal para startups early/growth, SaaS, agencias y profesionales que necesitan lanzar o rediseñar rápido — sin dejar fuera clínicas, retail y pymes con demanda local fuerte.</p>
+                <a href="/santiago/providencia" class="project-link">Ver Providencia →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/pudahuel">Pudahuel</a></h3>
+                <p>Para negocios y equipos en Pudahuel que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/pudahuel" class="project-link">Ver Pudahuel →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/puente-alto">Puente Alto</a></h3>
+                <p>Para negocios en Puente Alto que necesitan canal digital propio.</p>
+                <a href="/santiago/puente-alto" class="project-link">Ver Puente Alto →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/quilicura">Quilicura</a></h3>
+                <p>Para negocios y equipos en Quilicura que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/quilicura" class="project-link">Ver Quilicura →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/quinta-normal">Quinta Normal</a></h3>
+                <p>Para negocios y equipos en Quinta Normal que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/quinta-normal" class="project-link">Ver Quinta Normal →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/recoleta">Recoleta</a></h3>
+                <p>Para negocios y equipos en Recoleta que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/recoleta" class="project-link">Ver Recoleta →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/renca">Renca</a></h3>
+                <p>Para negocios y equipos en Renca que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/renca" class="project-link">Ver Renca →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/san-bernardo">San Bernardo</a></h3>
+                <p>Para negocios en San Bernardo que necesitan canal digital propio.</p>
+                <a href="/santiago/san-bernardo" class="project-link">Ver San Bernardo →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/san-joaquin">San Joaquín</a></h3>
+                <p>Para negocios y equipos en San Joaquín que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/san-joaquin" class="project-link">Ver San Joaquín →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/san-jose-de-maipo">San José de Maipo</a></h3>
+                <p>Para negocios en San José de Maipo que necesitan canal digital propio.</p>
+                <a href="/santiago/san-jose-de-maipo" class="project-link">Ver San José de Maipo →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/san-miguel">San Miguel</a></h3>
+                <p>Para negocios y equipos en San Miguel que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/san-miguel" class="project-link">Ver San Miguel →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/san-pedro">San Pedro</a></h3>
+                <p>Para negocios en San Pedro que necesitan canal digital propio.</p>
+                <a href="/santiago/san-pedro" class="project-link">Ver San Pedro →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/san-ramon">San Ramón</a></h3>
+                <p>Para negocios y equipos en San Ramón que necesitan canal digital propio: sitio claro, SEO local y CTA medible.</p>
+                <a href="/santiago/san-ramon" class="project-link">Ver San Ramón →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/santiago-centro">Santiago Centro</a></h3>
+                <p>Para oficinas, retail e instituciones que necesitan un sitio confiable — y para equipos de producto o B2B con base céntrica que buscan landings y paneles serios.</p>
+                <a href="/santiago/santiago-centro" class="project-link">Ver Santiago Centro →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/talagante">Talagante</a></h3>
+                <p>Para negocios en Talagante que necesitan canal digital propio.</p>
+                <a href="/santiago/talagante" class="project-link">Ver Talagante →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/tiltil">Tiltil</a></h3>
+                <p>Para negocios en Tiltil que necesitan canal digital propio.</p>
+                <a href="/santiago/tiltil" class="project-link">Ver Tiltil →</a>
+            </article>
+
+            <article class="location-card">
+                <h3><a href="/santiago/vitacura">Vitacura</a></h3>
+                <p>Para empresas y equipos que venden a audiencias exigentes: producto digital limpio, velocidad y confianza visual — también e-commerce selecto y servicios profesionales del sector.</p>
+                <a href="/santiago/vitacura" class="project-link">Ver Vitacura →</a>
+            </article>
+            </div>
+            <p class="location-outro" style="margin-top:2rem">
+                También: <a href="/chile">regiones de Chile</a>
+                · <a href="/landing-pages">landing pages</a>
+                · <a href="/crear-tienda-online">tienda online</a>
+            </p>
+        </section>
+    </div>
+    </main>
+
+<footer class="footer site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <a href="/" class="site-footer__logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+                <p class="site-footer__tagline" data-i18n="footer.tagline">Desarrollo web full stack, SEO, GEO y marketing digital para conseguir clientes online.</p>
+                <p class="site-footer__areas" data-i18n="footer.areas">Chile · Santiago · WhatsApp</p>
+                <h3 class="site-footer__heading" data-i18n="footer.contactHeading">Contacto general</h3>
+                <ul class="site-footer__contact">
+                    <li><a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer">WhatsApp +45 50 24 98 55</a></li>
+                    <li><a href="/#contact" data-i18n="footer.contactForm">Formulario de contacto</a></li>
+                </ul>
+            </div>
+            <nav class="site-footer__col" aria-label="Servicios">
+                <h3 class="site-footer__heading" data-i18n="footer.servicesHeading">Servicios</h3>
+                <ul class="site-footer__links">
+                    <li><a href="/servicios" data-i18n="footer.linkServices">Todos los servicios</a></li>
+                    <li><a href="/crear-tienda-online" data-i18n="footer.linkShop">Crear tienda online</a></li>
+                    <li><a href="/landing-pages" data-i18n="footer.linkLandings">Landing pages</a></li>
+                    <li><a href="/servicios#seo-basico" data-i18n="footer.linkSeo">SEO básico</a></li>
+                    <li><a href="/servicios#seo-geo" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
+                    <li><a href="/servicios#marketing" data-i18n="footer.linkMkt">Marketing digital</a></li>
+                    <li><a href="/servicios#care" data-i18n="footer.linkWm">Planes Care / mantenimiento</a></li>
+                    <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Sitio">
+                <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
+                <ul class="site-footer__links">
+                    <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
+                    <li><a href="/#projects" data-i18n="footer.linkProjects">Proyectos</a></li>
+                    <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
+                    <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
+                    <li><a href="/chile">Chile</a></li>
+                    <li><a href="/santiago">Santiago</a></li>
+                    <li><a href="/santiago/comunas">Comunas</a></li>
+                    <li><a href="/llms.txt">llms.txt</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="container site-footer__bottom">
+            <p data-i18n="footer">© 2026 IrigoyenDev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+    <a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chatear por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+</body>
+</html>

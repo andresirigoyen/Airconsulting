@@ -248,13 +248,35 @@ const pages = [
   leadPage({
     file: 'landing-pages.html',
     path: '/landing-pages',
-    title: 'Landing page de conversión | Diseño landing page Chile | IrigoyenDev',
+    title: 'Landing Page de Conversión Chile | Diseño que Vende — IrigoyenDev',
     description:
-      'Landing page de conversión y diseño landing page Chile: páginas para campañas publicitarias con CTA claro, velocidad y tracking. Landings que convierten.',
-    ogTitle: 'Landing page de conversión en Chile | IrigoyenDev',
+      'Landing page de conversión Chile: diseño que vende para Ads y Meta, con metodología, casos reales, FAQ y CTA medible. Desde ~USD 600 — IrigoyenDev.',
+    ogTitle: 'Landing Page de Conversión Chile | Diseño que Vende — IrigoyenDev',
     ogDescription:
-      'Diseño de landing page para campañas publicitarias: mensaje, prueba social y CTA. Desde ~USD 600.',
+      'Metodología, casos y FAQ de landing pages que convierten. Tracking listo para campañas. Desde ~USD 600.',
     serviceName: 'Landing page de conversión',
+    faq: [
+      {
+        q: '¿Cuánto cuesta una landing page de conversión en Chile?',
+        a: 'Desde ~USD 600 para una página enfocada en un CTA. Variantes A/B, i18n o CRM se cotizan según alcance.',
+      },
+      {
+        q: '¿Landing page o sitio web completo?',
+        a: 'Si el objetivo es una campaña u oferta concreta, landing. Si necesitas catálogo, blog y múltiples servicios, un sitio o tienda. Se pueden combinar.',
+      },
+      {
+        q: '¿Incluyen SEO y velocidad?',
+        a: 'Sí: títulos, meta description, canonical, estructura semántica, imágenes optimizadas y Core Web Vitals.',
+      },
+      {
+        q: '¿Puedo usarla con Google Ads y Meta Ads?',
+        a: 'Sí. URL limpia, eventos de conversión y mensaje alineado al anuncio, lista para medir con pixel o Google Ads.',
+      },
+      {
+        q: '¿Cuánto tarda?',
+        a: 'Una landing enfocada suele salir en días cuando el mensaje y los activos (logo, fotos, oferta) están claros.',
+      },
+    ],
   }),
   leadPage({
     file: 'precios.html',
@@ -341,7 +363,7 @@ const pages = [
     slug: 'thebeebaby',
     title: 'Proyecto tienda online TheBeeBaby | Caso e-commerce IrigoyenDev',
     description:
-      'Caso de éxito e-commerce Chile/internacional: proyecto tienda online TheBeeBaby — marketplace con catálogo, pagos y panel listo para producción.',
+      'Caso TheBeeBaby: marketplace e-commerce con catálogo geolocalizado, pagos seguros y panel admin — proyecto tienda online entregado por IrigoyenDev.',
     ogTitle: 'TheBeeBaby — Proyecto tienda online | IrigoyenDev',
     ogDescription:
       'Marketplace e-commerce full stack: catálogo geo, proveedores y pagos seguros.',
@@ -351,7 +373,7 @@ const pages = [
     slug: 'dahuss',
     title: 'Dahuss Homes — Plataforma inmobiliaria digital | Caso IrigoyenDev',
     description:
-      'Plataforma inmobiliaria digital Dahuss Homes: catálogo, captación de leads y panel admin para listados premium.',
+      'Caso Dahuss Homes: plataforma inmobiliaria digital con catálogo premium, captación de leads y panel admin — desarrollo web inmobiliario IrigoyenDev.',
     ogTitle: 'Dahuss Homes — Plataforma inmobiliaria digital | IrigoyenDev',
     ogDescription:
       'Plataforma inmobiliaria con catálogo, leads y herramientas de administración.',
@@ -361,7 +383,7 @@ const pages = [
     slug: 'calafate',
     title: 'Plataforma inmobiliaria Calafate Propiedades | Caso IrigoyenDev',
     description:
-      'Plataforma inmobiliaria digital Calafate Propiedades: catálogo, leads y admin en Next.js — desarrollo web para negocios B2B e inmobiliarios.',
+      'Caso Calafate Propiedades: plataforma inmobiliaria en Next.js con catálogo rápido, leads y admin — desarrollo web B2B e inmobiliario IrigoyenDev.',
     ogTitle: 'Calafate Propiedades — Plataforma inmobiliaria | IrigoyenDev',
     ogDescription:
       'Plataforma inmobiliaria completa: catálogo rápido, leads y administración.',
@@ -371,7 +393,7 @@ const pages = [
     slug: 'dragonmart',
     title: 'Dragonmart — Desarrollo web para negocios B2B | Caso IrigoyenDev',
     description:
-      'Caso de desarrollo web para negocios B2B: Dragonmart — plataforma de sourcing con catálogo y herramientas para proveedores.',
+      'Caso Dragonmart: plataforma B2B de sourcing con catálogo y tooling para proveedores — desarrollo web para negocios corporativos IrigoyenDev.',
     ogTitle: 'Dragonmart — Sourcing corporativo | IrigoyenDev',
     ogDescription:
       'Plataforma B2B de sourcing con catálogo y tooling para proveedores.',
@@ -381,7 +403,7 @@ const pages = [
     slug: 'rluabogados',
     title: 'RLU Abogados — Plataforma legal corporativa | Caso IrigoyenDev',
     description:
-      'Caso real: RLU Abogados — sitio institucional, captación de prospectos, blog jurídico y paneles admin.',
+      'Caso RLU Abogados: sitio legal corporativo con captación de prospectos, blog jurídico y paneles admin — plataforma full stack IrigoyenDev.',
     ogTitle: 'RLU Abogados — Plataforma legal | IrigoyenDev',
     ogDescription: 'Plataforma legal corporativa full stack para Ruiz Leiva Abogados.',
     ogImage: `${SITE}/images/rluabogados-mockup.png`,
@@ -390,7 +412,7 @@ const pages = [
     slug: 'familiainternacional',
     title: 'Familia Internacional — Web estudio jurídico | Caso IrigoyenDev',
     description:
-      'Caso real: web para estudio de derecho de familia internacional en Chile — presencia bilingüe, autoridad y conversión de contactos.',
+      'Caso Familia Internacional: web bilingüe para estudio de derecho de familia internacional en Chile — autoridad, SEO y conversión de contactos.',
     ogTitle: 'Familia Internacional — Estudio jurídico | IrigoyenDev',
     ogDescription: 'Sitio web para estudio de derecho de familia internacional.',
     ogImage: `${SITE}/images/familiainternacional-mockup.png`,
@@ -399,7 +421,7 @@ const pages = [
     slug: 'radiochicureo',
     title: 'Radio Chicureo — Plataforma de radio online | Caso IrigoyenDev',
     description:
-      'Caso real: Radio Chicureo — player en vivo, CMS, banners publicitarios y panel admin en la nube.',
+      'Caso Radio Chicureo: player en vivo, CMS editorial, banners publicitarios y panel admin en la nube — plataforma de radio online IrigoyenDev.',
     ogTitle: 'Radio Chicureo — Radio online + CMS | IrigoyenDev',
     ogDescription:
       'Plataforma de radio online con contenido editable y panel seguro.',
@@ -409,7 +431,7 @@ const pages = [
     slug: 'retorica',
     title: 'Retórica Company — Web de eventos y marketing | Caso IrigoyenDev',
     description:
-      'Caso real: Retórica Company — plataforma de eventos y marketing experiencial en Astro, con captación de leads y SEO bilingüe.',
+      'Caso Retórica Company: plataforma de eventos y marketing experiencial en Astro, con captación de leads y SEO bilingüe — IrigoyenDev.',
     ogTitle: 'Retórica — Eventos y marketing web | IrigoyenDev',
     ogDescription:
       'Sitio de marca inmersivo con contenido estructurado y captación de leads.',
@@ -419,7 +441,7 @@ const pages = [
     slug: 'floreria',
     title: 'Florería en Valparaíso — Caso de éxito Quinta Región | IrigoyenDev',
     description:
-      'Caso real en Valparaíso (Región de Valparaíso): web comercial con SEO local, catálogo visual y conversión por WhatsApp para Florería El Nuevo Pensamiento.',
+      'Caso Florería El Nuevo Pensamiento (Valparaíso): web comercial con SEO local, catálogo visual y conversión por WhatsApp — Quinta Región.',
     ogTitle: 'Florería El Nuevo Pensamiento — Valparaíso | IrigoyenDev',
     ogDescription:
       'Éxito comercial digital en la Quinta Región: sitio estático rápido, SEO local y embudo a WhatsApp.',
@@ -427,8 +449,42 @@ const pages = [
   }),
 ];
 
-function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescription, serviceName }) {
+function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescription, serviceName, faq }) {
   const url = `${SITE}${pagePath}`;
+  /** @type {object[]} */
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Servicios', item: `${SITE}/servicios` },
+        { '@type': 'ListItem', position: 3, name: serviceName, item: url },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name: serviceName,
+      description,
+      url,
+      provider: { '@id': `${SITE}/#person` },
+      areaServed: chileMultiregionAreaServed(),
+    },
+  ];
+  if (Array.isArray(faq) && faq.length) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    });
+  }
   return {
     file,
     path: pagePath,
@@ -439,32 +495,13 @@ function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescrip
     ogImage: OG_DEFAULT,
     ogType: 'website',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-    jsonLd: [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
-          { '@type': 'ListItem', position: 2, name: 'Servicios', item: `${SITE}/servicios` },
-          { '@type': 'ListItem', position: 3, name: serviceName, item: url },
-        ],
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        '@id': `${url}#service`,
-        name: serviceName,
-        description,
-        url,
-        provider: { '@id': `${SITE}/#person` },
-        areaServed: chileMultiregionAreaServed(),
-      },
-    ],
+    jsonLd,
   };
 }
 
-function project({ slug, title, description, ogTitle, ogDescription, ogImage }) {
+function project({ slug, title, description, ogTitle, ogDescription, ogImage, crumbName }) {
   const url = `${SITE}/projects/${slug}`;
+  const name = crumbName || ogTitle.split(' — ')[0] || title;
   return {
     file: `projects/${slug}.html`,
     path: `/projects/${slug}`,
@@ -480,9 +517,9 @@ function project({ slug, title, description, ogTitle, ogDescription, ogImage }) 
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-          { '@type': 'ListItem', position: 2, name: 'Projects', item: `${SITE}/#projects` },
-          { '@type': 'ListItem', position: 3, name: ogTitle.split(' — ')[0] || title, item: url },
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Proyectos', item: `${SITE}/#projects` },
+          { '@type': 'ListItem', position: 3, name, item: url },
         ],
       },
       {
@@ -588,6 +625,14 @@ function escapeAttr(s) {
   return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 }
 
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function patchFile(page) {
   const abs = path.join(root, page.file);
   if (!fs.existsSync(abs)) {
@@ -634,6 +679,42 @@ ${styles.map((s) => `    ${s}`).join('\n')}
 `;
 
   html = html.replace(headMatch[0], () => `<head>${newHead}\n</head>`);
+
+  // Visible breadcrumb nav for Google sitelinks / UX (schema alone is not enough).
+  if (page.path?.startsWith('/projects/') && !/geo-breadcrumb/.test(html)) {
+    const crumbName =
+      (page.ogTitle || page.title || '').split(' — ')[0].split(' | ')[0].trim() || 'Proyecto';
+    const crumbNav = `
+        <nav class="geo-breadcrumb" aria-label="Miga de pan">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#projects">Proyectos</a></li>
+            <li aria-current="page">${escapeHtml(crumbName)}</li>
+          </ol>
+        </nav>`;
+    if (/<header class="project-header[^"]*"[^>]*>/.test(html)) {
+      html = html.replace(
+        /(<header class="project-header[^"]*"[^>]*>)/,
+        `$1${crumbNav}`
+      );
+    }
+  }
+
+  if (page.path === '/landing-pages' && !/geo-breadcrumb/.test(html)) {
+    const crumbNav = `
+        <nav class="geo-breadcrumb" aria-label="Miga de pan">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/servicios">Servicios</a></li>
+            <li aria-current="page">Landing pages</li>
+          </ol>
+        </nav>`;
+    html = html.replace(
+      /(<header class="project-header[^"]*"[^>]*>)/,
+      `$1${crumbNav}`
+    );
+  }
+
   fs.writeFileSync(abs, html);
   console.log('Updated', page.file);
 }

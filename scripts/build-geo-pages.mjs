@@ -93,6 +93,14 @@ function breadcrumbTrail(entry, all) {
   for (const c of chain) {
     if (c.countryCode !== entry.countryCode) continue;
     items.push({ name: c.city, href: `/${publicPath(c)}` });
+    // Index page between Santiago hub and individual communes
+    if (
+      entry.type === 'comuna' &&
+      c.slug === 'santiago' &&
+      entry.parentSlug === 'santiago'
+    ) {
+      items.push({ name: 'Comunas', href: '/santiago/comunas' });
+    }
   }
   items.push({ name: entry.city, href: `/${publicPath(entry)}` });
   return items.filter((it, i, arr) => i === 0 || it.href !== arr[i - 1].href);
@@ -475,6 +483,11 @@ function renderMain(entry, all) {
             ${(c.intro || []).map((p) => `<p class="location-intro">${escapeHtml(p)}</p>`).join('\n')}
             ${audiences ? `<h2 class="location-subheading">${escapeHtml(ui.audiences)}</h2><div class="pricing-grid">${audiences}</div>` : ''}
             <h2 class="location-subheading" style="margin-top:2rem">${escapeHtml(isNationalHub ? ui.regions : ui.locations)}</h2>
+            ${
+              entry.slug === 'santiago'
+                ? `<p class="location-intro"><a href="/santiago/comunas"><strong>Índice completo de comunas</strong></a> — las ${children.filter((e) => e.type === 'comuna').length || children.length} comunas de la RM en una sola página para rastreo e indexación.</p>`
+                : ''
+            }
             <div class="location-grid">${cards}</div>
         </section>
         ${renderSemanticTopics(c.semanticTopics, entry.city, ui)}
@@ -617,8 +630,10 @@ function pruneOrphanHtml(previousPaths, nextPaths, markets) {
   }
 
   let n = 0;
+  /** Static SEO hubs that live under geo dirs but are not geo-config entries */
+  const keepExtra = new Set(['santiago/comunas']);
   for (const pub of candidates) {
-    if (keep.has(pub)) continue;
+    if (keep.has(pub) || keepExtra.has(pub)) continue;
     const file = htmlPathFor(pub);
     if (!fs.existsSync(file)) continue;
     fs.unlinkSync(file);
