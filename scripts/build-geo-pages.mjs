@@ -220,9 +220,13 @@ function renderBreadcrumbNav(entry, all) {
   const lis = items
     .map((it, i) => {
       const last = i === items.length - 1;
+      const i18n =
+        i === 0 && it.href === '/'
+          ? ' data-i18n="footer.linkHome"'
+          : '';
       return last
         ? `<li aria-current="page">${escapeHtml(it.name)}</li>`
-        : `<li><a href="${escapeAttr(it.href)}">${escapeHtml(it.name)}</a></li>`;
+        : `<li><a href="${escapeAttr(it.href)}"${i18n}>${escapeHtml(it.name)}</a></li>`;
     })
     .join('\n            ');
 
@@ -467,7 +471,7 @@ function renderMain(entry, all) {
     return `
     <main id="main-content">
     <header class="project-header container fade-in">
-        <a href="/servicios" class="back-link"><span>${escapeHtml(ui.servicesBack)}</span></a>
+        <a href="/servicios" class="back-link"><span data-i18n="mkt.backServices">${escapeHtml(ui.servicesBack)}</span></a>
         ${renderBreadcrumbNav(entry, all)}
         <p class="project-eyebrow">${escapeHtml(c.eyebrow || entry.region)}</p>
         <h1>${escapeHtml(entry.h1Title)}</h1>

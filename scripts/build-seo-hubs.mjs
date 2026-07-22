@@ -92,7 +92,7 @@ function writeComunasIndex() {
         <a href="/santiago" class="back-link"><span>← Santiago</span></a>
         <nav class="geo-breadcrumb" aria-label="Miga de pan">
           <ol>
-            <li><a href="/">Inicio</a></li>
+            <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
             <li><a href="/chile">Chile</a></li>
             <li><a href="/santiago">Santiago</a></li>
             <li aria-current="page">Comunas</li>
@@ -209,10 +209,10 @@ function writeLocaleHub(hub) {
   const mainHtml = `
     <main id="main-content">
     <header class="project-header container fade-in">
-        <a href="/" class="back-link"><span>← ${escapeHtml(hub.homeLabel)}</span></a>
+        <a href="/" class="back-link"><span data-i18n="mkt.backHome">← ${escapeHtml(hub.homeLabel)}</span></a>
         <nav class="geo-breadcrumb" aria-label="${escapeAttr(hub.breadcrumbLabel)}">
           <ol>
-            <li><a href="/">${escapeHtml(hub.homeLabel)}</a></li>
+            <li><a href="/" data-i18n="footer.linkHome">${escapeHtml(hub.homeLabel)}</a></li>
             <li aria-current="page">${escapeHtml(hub.crumbLabel)}</li>
           </ol>
         </nav>

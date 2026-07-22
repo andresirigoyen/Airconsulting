@@ -124,11 +124,11 @@
 
 </head>
 <body class="page-marketing">
-    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
     <header class="site-header">
     <nav class="navbar" id="navbar" aria-label="Navegación principal">
         <div class="container navbar-inner">
-            <a href="/" class="logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+            <a href="/" class="logo" data-i18n-aria="a11y.home" aria-label="IrigoyenDev — Inicio"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
             <div class="nav-links" id="nav-links">
                 <a href="/servicios" data-i18n="nav.services">Servicios</a>
                 <a href="/#projects" data-i18n="nav.projects">Resultados</a>
@@ -136,11 +136,11 @@
                 <a href="/#contact" class="nav-cta" data-i18n="nav.contact">Cotizar</a>
             </div>
             <div class="nav-actions">
-                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema">
+                <button id="theme-toggle" class="theme-toggle" type="button" data-i18n-aria="a11y.theme" aria-label="Cambiar tema">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
                 <div class="lang-selector-container">
-                    <button id="lang-menu-btn" class="lang-btn" type="button" aria-label="Seleccionar idioma" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown">
+                    <button id="lang-menu-btn" class="lang-btn" type="button" data-i18n-aria="a11y.lang" aria-label="Seleccionar idioma" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -159,7 +159,7 @@
                         <label class="lang-option"><span class="lang-name">Português</span><input type="radio" name="lang" value="pt" class="lang-radio"><div class="toggle-switch"></div></label>
                     </div>
                 </div>
-                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                <button id="menu-toggle" class="menu-toggle" type="button" data-i18n-aria="a11y.menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
             </div>
@@ -171,52 +171,52 @@
     <header class="project-header container fade-in">
         <a href="/" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            <span>Volver al inicio</span>
+            <span data-i18n="mkt.backHome">Volver al inicio</span>
         </a>
-        <p class="project-eyebrow">Preguntas frecuentes</p>
-        <h1>FAQ: contratar un desarrollador full stack freelance</h1>
-        <p class="project-lead">Respuestas directas sobre plazos, precios, stack y cómo trabajamos juntos.</p>
+        <p class="project-eyebrow" data-i18n="faqPage.eyebrow">Preguntas frecuentes</p>
+        <h1 data-i18n="faqPage.h1">FAQ: contratar desarrollo full stack con IrigoyenDev</h1>
+        <p class="project-lead" data-i18n="faqPage.lead">Respuestas directas sobre plazos, precios, stack y cómo trabajamos juntos.</p>
     </header>
     <main id="main-content" class="container">
         <section class="project-section fade-in">
             <div class="faq-list">
                 <details class="faq-item" open>
-                    <summary>¿Qué servicios ofrece IrigoyenDev?</summary>
-                    <p>Desarrollo full stack: tiendas online, landings, plataformas con admin, SEO/GEO, marketing digital y <a href="/servicios#care">planes Care</a> de mantenimiento mensual.</p>
+                    <summary data-i18n="faqPage.q1">¿Qué servicios ofrece IrigoyenDev?</summary>
+                    <p data-i18n-html="faqPage.a1Html">Desarrollo full stack: tiendas online, landings, plataformas con admin, SEO/GEO, marketing digital y <a href="/servicios#care">planes Care</a> de mantenimiento mensual.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>¿Cuánto cuesta una tienda online?</summary>
-                    <p>Los rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~USD 3.000–10.000 y plataformas a medida desde ~USD 10.000. Detalle en <a href="/precios">precios</a>.</p>
+                    <summary data-i18n="faqPage.q2">¿Cuánto cuesta una web o tienda online?</summary>
+                    <p class="money-copy" data-i18n-html="faqPage.a2Html">Rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~USD 3.000–10.000 y plataformas a medida desde ~USD 10.000. Detalle en <a href="/precios">precios</a>.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>¿Ofreces suscripción o mantenimiento mensual?</summary>
-                    <p>Sí. <strong>Plan Care</strong> (webmaster/mantenimiento) desde ~USD 200–350/mes y <strong>Care + Growth</strong> (Care + SEO o ads) desde ~USD 450–800/mes, con mínimo 3 meses. Ideal después de lanzar. Ver <a href="/precios#care">precios Care</a>.</p>
+                    <summary data-i18n="faqPage.q3">¿Ofrecen suscripción o mantenimiento mensual?</summary>
+                    <p class="money-copy" data-i18n-html="faqPage.a3Html">Sí. <strong>Plan Care</strong> (webmaster/mantenimiento) desde ~USD 200–350/mes y <strong>Care + Growth</strong> (Care + SEO o ads) desde ~USD 450–800/mes, con mínimo 3 meses. Ideal después de lanzar. Ver <a href="/precios#care">precios Care</a>.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>¿Trabajas con clientes en Chile, España o Dinamarca?</summary>
-                    <p>Sí. Atiendo clientes en Dinamarca (WhatsApp +45), Chile, España y proyectos remotos internacionales. La comunicación puede ser en español o inglés.</p>
+                    <summary data-i18n="faqPage.q4">¿Trabajan con clientes en Chile, España o Dinamarca?</summary>
+                    <p data-i18n="faqPage.a4">Sí. Atendemos clientes en Dinamarca (WhatsApp +45), Chile, España y proyectos remotos internacionales. La comunicación puede ser en español o inglés.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>¿En cuánto tiempo entregas?</summary>
-                    <p>Depende del alcance. Una landing acotada puede salir en pocas semanas; un e-commerce o plataforma con admin suele requerir un plan por fases. Tras el contacto inicial recibes plazos estimados en ~48 horas.</p>
+                    <summary data-i18n="faqPage.q5">¿En cuánto tiempo entregan?</summary>
+                    <p data-i18n="faqPage.a5">Depende del alcance. Una landing acotada puede salir en pocas semanas; un e-commerce o plataforma con admin suele requerir un plan por fases. Tras el contacto inicial recibes plazos estimados en ~48 horas.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>¿Qué tecnologías usas?</summary>
-                    <p>Stack moderno según el caso: Next.js, Astro, HTML/CSS/JS de alto rendimiento, bases de datos, auth, cloud (Vercel, AWS, Azure) y buenas prácticas de SEO/GEO.</p>
+                    <summary data-i18n="faqPage.q6">¿Qué tecnologías usan?</summary>
+                    <p data-i18n="faqPage.a6">Stack moderno según el caso: Next.js, Astro, HTML/CSS/JS de alto rendimiento, bases de datos, auth, cloud (Vercel, AWS, Azure) y buenas prácticas de SEO/GEO.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>¿Cómo empiezo?</summary>
-                    <p>Usa el <a href="/#contact">formulario de contacto</a> o escribe por <a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer">WhatsApp</a>. Cuéntame el objetivo de negocio, plazo y presupuesto aproximado.</p>
+                    <summary data-i18n="faqPage.q7">¿Cómo empezamos?</summary>
+                    <p data-i18n-html="faqPage.a7Html">Usa el <a href="/#contact">formulario de contacto</a> o escribe por WhatsApp. Cuéntanos el objetivo de negocio, plazo y presupuesto aproximado.</p>
                 </details>
             </div>
-            <p style="margin-top: var(--spacing-xl);"><a href="/servicios">Ver todos los servicios →</a></p>
+            <p style="margin-top: var(--spacing-xl);"><a href="/servicios" data-i18n="faqPage.more">Ver todos los servicios →</a></p>
         </section>
     </main>
 
 <footer class="footer site-footer">
         <div class="container site-footer__grid">
             <div class="site-footer__brand">
-                <a href="/" class="site-footer__logo" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
+                <a href="/" class="site-footer__logo" data-i18n-aria="a11y.home" aria-label="IrigoyenDev — Home"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
                 <p class="site-footer__tagline" data-i18n="footer.tagline">Desarrollo web full stack, SEO, GEO y marketing digital para conseguir clientes online.</p>
                 <p class="site-footer__areas" data-i18n="footer.areas">Dinamarca · Chile · España · Remoto</p>
                 <h3 class="site-footer__heading" data-i18n="footer.contactHeading">Contacto general</h3>
@@ -263,7 +263,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
-    <a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chatear por WhatsApp">
+    <a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" data-i18n-aria="a11y.whatsapp" aria-label="Chatear por WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
     </a>
 </body>

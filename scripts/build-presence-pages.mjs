@@ -261,20 +261,25 @@ function buildHtml(p) {
     {
       href: '/crear-tienda-online',
       name: isEn ? 'Online store' : 'Tienda online',
+      nameKey: 'svc.shopTitle',
       blurb: isEn
         ? 'E-commerce ready to sell and measure'
         : 'E-commerce listo para vender y medir',
+      blurbKey: 'svc.shopDesc',
     },
     {
       href: '/landing-pages',
       name: isEn ? 'Landing pages' : 'Landing pages',
+      nameKey: 'svc.landingTitle',
       blurb: isEn
         ? 'Conversion pages for campaigns and ads'
         : 'Páginas de conversión para campañas',
+      blurbKey: 'svc.landingDesc',
     },
     {
       href: '/servicios',
       name: isEn ? 'All services' : 'Todos los servicios',
+      nameKey: 'footer.linkServices',
       blurb: isEn
         ? 'Full-stack, SEO, GEO and Care plans'
         : 'Full stack, SEO, GEO y planes Care',
@@ -282,6 +287,7 @@ function buildHtml(p) {
     {
       href: '/precios',
       name: isEn ? 'Pricing' : 'Precios',
+      nameKey: 'nav.pricing',
       blurb: isEn
         ? 'Clear ranges before you commit'
         : 'Rangos claros antes de comprometerte',
@@ -360,9 +366,9 @@ function buildHtml(p) {
                 ${services
                   .map(
                     (s) => `<article class="location-card">
-                    <h3><a href="${escapeAttr(s.href)}">${escapeHtml(s.name)}</a></h3>
-                    <p>${escapeHtml(s.blurb)}</p>
-                    <a href="${escapeAttr(s.href)}" class="project-link">${isEn ? 'View' : 'Ver'} →</a>
+                    <h3><a href="${escapeAttr(s.href)}"${s.nameKey ? ` data-i18n="${s.nameKey}"` : ''}>${escapeHtml(s.name)}</a></h3>
+                    <p${s.blurbKey ? ` data-i18n="${s.blurbKey}"` : ''}>${escapeHtml(s.blurb)}</p>
+                    <a href="${escapeAttr(s.href)}" class="project-link"><span data-i18n="mkt.seeService">${isEn ? 'View service' : 'Ver servicio'}</span></a>
                 </article>`
                   )
                   .join('\n                ')}
@@ -403,10 +409,10 @@ function buildHtml(p) {
   const mainHtml = `
     <main id="main-content">
     <header class="project-header container fade-in">
-        <a href="/" class="back-link"><span>← ${back}</span></a>
+        <a href="/" class="back-link"><span data-i18n="mkt.backHome">← ${back}</span></a>
         <nav class="geo-breadcrumb" aria-label="${crumbLabel}">
           <ol>
-            <li><a href="/">${homeLabel}</a></li>
+            <li><a href="/" data-i18n="footer.linkHome">${homeLabel}</a></li>
             <li><a href="${marketHub}">${escapeHtml(p.country)}</a></li>
             <li aria-current="page">${escapeHtml(p.city)}</li>
           </ol>
@@ -415,8 +421,8 @@ function buildHtml(p) {
         <h1>${escapeHtml(p.h1)}</h1>
         <p class="project-lead">${escapeHtml(p.lead)}</p>
         <div class="project-header__actions">
-            <a href="/#contact" class="btn-cta-primary">${cta}</a>
-            <a href="${waLink(isEn ? 'Hi! I saw your portfolio and would like to discuss a project.' : '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.')}" class="project-cta-inline" target="_blank" rel="noopener noreferrer">WhatsApp →</a>
+            <a href="/#contact" class="btn-cta-primary" data-i18n="svc.ctaPlan">${cta}</a>
+            <a href="${waLink(isEn ? 'Hi! I saw your portfolio and would like to discuss a project.' : '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.')}" class="project-cta-inline" target="_blank" rel="noopener noreferrer" data-i18n="mkt.ctaWhatsApp">WhatsApp →</a>
         </div>
     </header>
     <div class="container">
@@ -426,8 +432,8 @@ function buildHtml(p) {
         <section class="project-section fade-in">
             <p class="location-outro">
                 <a href="${marketHub}">${isEn ? 'Market hub' : 'Hub de mercado'} (${escapeHtml(marketLabel)})</a>
-                · <a href="/precios">${isEn ? 'Pricing' : 'Precios'}</a>
-                · <a href="/#contact">${isEn ? 'Contact' : 'Contacto'}</a>
+                · <a href="/precios" data-i18n="nav.pricing">${isEn ? 'Pricing' : 'Precios'}</a>
+                · <a href="/#contact" data-i18n="nav.contact">${isEn ? 'Contact' : 'Contacto'}</a>
             </p>
         </section>
     </div>

@@ -685,10 +685,10 @@ ${styles.map((s) => `    ${s}`).join('\n')}
     const crumbName =
       (page.ogTitle || page.title || '').split(' — ')[0].split(' | ')[0].trim() || 'Proyecto';
     const crumbNav = `
-        <nav class="geo-breadcrumb" aria-label="Miga de pan">
+        <nav class="geo-breadcrumb" aria-label="Breadcrumb">
           <ol>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/#projects">Proyectos</a></li>
+            <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
+            <li><a href="/#projects" data-i18n="nav.projects">Proyectos</a></li>
             <li aria-current="page">${escapeHtml(crumbName)}</li>
           </ol>
         </nav>`;
@@ -702,11 +702,11 @@ ${styles.map((s) => `    ${s}`).join('\n')}
 
   if (page.path === '/landing-pages' && !/geo-breadcrumb/.test(html)) {
     const crumbNav = `
-        <nav class="geo-breadcrumb" aria-label="Miga de pan">
+        <nav class="geo-breadcrumb" aria-label="Breadcrumb">
           <ol>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/servicios">Servicios</a></li>
-            <li aria-current="page">Landing pages</li>
+            <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
+            <li><a href="/servicios" data-i18n="nav.services">Servicios</a></li>
+            <li aria-current="page" data-i18n="svc.landingTitle">Landing pages</li>
           </ol>
         </nav>`;
     html = html.replace(

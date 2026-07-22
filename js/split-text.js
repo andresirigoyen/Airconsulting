@@ -52,7 +52,8 @@ function destroyInstance(el) {
 
   ctx.scrollTrigger?.kill();
   ctx.tween?.kill();
-  el.textContent = ctx.sourceText;
+  // Keep live text (e.g. after i18n) — do not restore the cached source language
+  el.textContent = el.textContent;
   el.removeAttribute('aria-label');
   instances.delete(el);
 }
