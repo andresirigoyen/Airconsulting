@@ -15,9 +15,9 @@ const configPath = path.join(__dirname, '..', 'data', 'geo-config.json');
 const HUB_PACKS = {
   santiago: {
     semanticTopics: [
-      'desarrollo web full stack en Santiago',
-      'e-commerce y tiendas online para pymes',
-      'landing pages de conversión',
+      'Desarrollo web full stack en Santiago',
+      'E-commerce y tiendas online para pymes',
+      'Landing pages de conversión',
       'SEO técnico y GEO para negocios locales',
     ],
     faq: [

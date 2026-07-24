@@ -37,6 +37,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 const SLUGS_INDEX = path.join(root, 'data', 'geo-slugs.json');
 
+/** @param {string} text */
+function capitalizeSentence(text) {
+  if (!text || typeof text !== 'string') return text;
+  return text.charAt(0).toLocaleUpperCase('es') + text.slice(1);
+}
+
 /** @param {import('./lib/geo-config.mjs').GeoEntry} entry */
 function publicPath(entry) {
   return entry.path || entry.slug;
@@ -166,7 +172,12 @@ function buildLocalBusinessLd(entry) {
     },
     areaServed,
     serviceType: lb.serviceType || ui.serviceDefaults,
-    knowsAbout: entry.content?.semanticTopics || lb.serviceType || ui.serviceDefaults,
+    knowsAbout: (
+      entry.content?.semanticTopics ||
+      lb.serviceType ||
+      ui.serviceDefaults ||
+      []
+    ).map(capitalizeSentence),
     sameAs: ENTITY.sameAs,
     founder: {
       '@type': 'Person',
@@ -418,7 +429,9 @@ function renderFaqSection(faq, ui) {
  */
 function renderSemanticTopics(topics, city, ui) {
   if (!Array.isArray(topics) || !topics.length) return '';
-  const lis = topics.map((t) => `<li>${escapeHtml(t)}</li>`).join('');
+  const lis = topics
+    .map((t) => `<li>${escapeHtml(capitalizeSentence(t))}</li>`)
+    .join('');
   return `<section class="project-section fade-in" id="expertise"><h2>${escapeHtml(ui.expertiseTitle(city))}</h2><p class="location-intro">${escapeHtml(ui.expertiseIntro)}</p><ul class="project-results-list location-neighborhoods">${lis}</ul></section>`;
 }
 
