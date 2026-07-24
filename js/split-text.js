@@ -52,15 +52,22 @@ function destroyInstance(el) {
 
   ctx.scrollTrigger?.kill();
   ctx.tween?.kill();
-  // Keep live text (e.g. after i18n) — do not restore the cached source language
-  el.textContent = el.textContent;
+  // Prefer the accessible copy when still split; otherwise keep live DOM text
+  // (e.g. after i18n replaced children with the new language string).
+  const a11y = el.querySelector('.split-text__a11y');
+  el.textContent = a11y ? a11y.textContent : el.textContent;
   el.removeAttribute('aria-label');
   instances.delete(el);
 }
 
 function splitElement(el, splitType) {
   const sourceText = el.textContent;
-  el.setAttribute('aria-label', sourceText);
+
+  // Do not use aria-label here: roles like paragraph do not allow naming attrs.
+  // Keep a visually-hidden full string for AT and hide the animated markup.
+  const accessible = document.createElement('span');
+  accessible.className = 'split-text__a11y visually-hidden';
+  accessible.textContent = sourceText;
 
   const inner = document.createElement('span');
   inner.className = 'split-text__inner';
@@ -121,7 +128,7 @@ function splitElement(el, splitType) {
     });
   }
 
-  el.replaceChildren(inner);
+  el.replaceChildren(accessible, inner);
   return { units, sourceText };
 }
 

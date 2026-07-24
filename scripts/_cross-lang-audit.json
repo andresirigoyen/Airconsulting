@@ -1,0 +1,179 @@
+{
+  "keys": 172,
+  "report": {
+    "en": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 0,
+      "identicalToEsKeys": [],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 17,
+      "spanishResidueKeys": [
+        {
+          "k": "hero.desc",
+          "v": "Full-stack team for brands in Chile, Spain, Denmark and remote markets that need online stores, high"
+        },
+        {
+          "k": "about.desc",
+          "v": "At IrigoyenDev we build digital products that function as growth engines. We don't just deliver code"
+        },
+        {
+          "k": "team.desc",
+          "v": "Product and commercial side together: we build, close, and support the growth of your online busines"
+        },
+        {
+          "k": "services.homeTitle",
+          "v": "Services to win clients online"
+        },
+        {
+          "k": "services.homeDesc",
+          "v": "Web development, SEO, GEO, and digital marketing — so Google can find you and visitors convert."
+        },
+        {
+          "k": "services.card2Title",
+          "v": "Build an online store"
+        },
+        {
+          "k": "services.cardMktTitle",
+          "v": "Digital marketing campaigns"
+        },
+        {
+          "k": "projects.subtitle",
+          "v": "E-commerce, platforms, and landing pages engineered to grow revenue and capture leads."
+        },
+        {
+          "k": "gbp.title",
+          "v": "Real results from businesses that grew their digital presence"
+        },
+        {
+          "k": "faq.a1",
+          "v": "Online stores, landings, platforms, SEO/GEO, marketing, and monthly Care maintenance plans. Details "
+        },
+        {
+          "k": "contact.title",
+          "v": "Ready to grow your business online?"
+        },
+        {
+          "k": "form.service.ecommerce",
+          "v": "Build an online store / e-commerce"
+        },
+        {
+          "k": "form.service.landing",
+          "v": "Conversion landing page"
+        },
+        {
+          "k": "form.service.marketing",
+          "v": "Digital marketing campaigns"
+        },
+        {
+          "k": "contact.budget.opt3",
+          "v": "Landing from ~USD 600"
+        },
+        {
+          "k": "footer.tagline",
+          "v": "Full-stack web development, SEO, GEO, and digital marketing to win clients online."
+        },
+        {
+          "k": "footer.linkShop",
+          "v": "Build an online store"
+        }
+      ],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    },
+    "da": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 0,
+      "identicalToEsKeys": [],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 0,
+      "spanishResidueKeys": [],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    },
+    "de": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 0,
+      "identicalToEsKeys": [],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 0,
+      "spanishResidueKeys": [],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    },
+    "fr": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 0,
+      "identicalToEsKeys": [],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 0,
+      "spanishResidueKeys": [],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    },
+    "it": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 0,
+      "identicalToEsKeys": [],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 0,
+      "spanishResidueKeys": [],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    },
+    "no": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 0,
+      "identicalToEsKeys": [],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 0,
+      "spanishResidueKeys": [],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    },
+    "pt": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 2,
+      "identicalToEsKeys": [
+        {
+          "k": "gbp.r3.role",
+          "v": "Fundadora · Florería ENP"
+        },
+        {
+          "k": "contact.budget.opt3",
+          "v": "Landing desde ~USD 600"
+        }
+      ],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 0,
+      "spanishResidueKeys": [],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    },
+    "sv": {
+      "missing": 0,
+      "missingKeys": [],
+      "identicalToEs": 0,
+      "identicalToEsKeys": [],
+      "identicalToEn": 0,
+      "identicalToEnKeys": [],
+      "spanishResidue": 0,
+      "spanishResidueKeys": [],
+      "englishResidue": 0,
+      "englishResidueKeys": []
+    }
+  }
+}

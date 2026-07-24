@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chileMultiregionAreaServed } from './lib/chile-geo.mjs';
+import { GTM_HEAD, GTM_NOSCRIPT } from './lib/page-chrome.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -671,6 +672,7 @@ function patchFile(page) {
   const styles = [...head.matchAll(/<link rel="stylesheet"[^>]*>/gi)].map((m) => m[0]);
 
   const newHead = `
+${GTM_HEAD}
     ${charset}
     ${viewport}
     ${themeScript}
@@ -680,6 +682,10 @@ ${styles.map((s) => `    ${s}`).join('\n')}
 
   html = html.replace(headMatch[0], () => `<head>${newHead}\n</head>`);
 
+  // Ensure GTM noscript is present right after <body>
+  if (!html.includes('googletagmanager.com/ns.html')) {
+    html = html.replace(/<body([^>]*)>/i, `<body$1>\n${GTM_NOSCRIPT}`);
+  }
   // Visible breadcrumb nav for Google sitelinks / UX (schema alone is not enough).
   if (page.path?.startsWith('/projects/') && !/geo-breadcrumb/.test(html)) {
     const crumbName =

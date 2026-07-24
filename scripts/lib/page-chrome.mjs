@@ -7,6 +7,24 @@ export const OG_DEFAULT = `${SITE}/images/og-image.png`;
 
 export const WA_BASE = 'https://wa.me/+4550249855?text=';
 
+/** Google Tag Manager container ID */
+export const GTM_ID = 'GTM-KD3BBZ78';
+
+/** Paste as high as possible in <head> on every public page. */
+export const GTM_HEAD = `<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');</script>
+<!-- End Google Tag Manager -->`;
+
+/** Paste immediately after the opening <body> tag. */
+export const GTM_NOSCRIPT = `<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->`;
+
 /** @param {string} message */
 export function waLink(message) {
   return `${WA_BASE}${encodeURIComponent(message)}`;
@@ -75,7 +93,8 @@ export function buildHead(opts) {
           .join('\n')
       : '';
 
-  return `    <meta charset="UTF-8">
+  return `    ${GTM_HEAD}
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme'); } catch (_) {}
@@ -227,6 +246,7 @@ export function renderPage({
 ${headHtml}
 </head>
 <body class="${bodyClass}">
+${GTM_NOSCRIPT}
     <a class="skip-link" href="#main-content" data-i18n="a11y.skip">${escapeHtml(skipLink)}</a>
     <header class="site-header">
     <nav class="navbar" id="navbar" aria-label="Navegación principal">

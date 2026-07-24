@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildFooter, waLink } from './lib/page-chrome.mjs';
+import { buildFooter, waLink, GTM_HEAD, GTM_NOSCRIPT } from './lib/page-chrome.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -21,6 +21,7 @@ function chrome({ title, bodyClass = 'page-marketing', mainHtml }) {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_HEAD}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
@@ -34,6 +35,7 @@ function chrome({ title, bodyClass = 'page-marketing', mainHtml }) {
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="${bodyClass}">
+${GTM_NOSCRIPT}
     <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
     <header class="site-header">
     <nav class="navbar" id="navbar" aria-label="Navegación principal">

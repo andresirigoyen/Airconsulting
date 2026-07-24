@@ -1,0 +1,732 @@
+﻿
+################ DA ################
+
+---- nav ----
+nav.services
+  Tjenester
+nav.projects
+  Resultater
+nav.pricing
+  Priser
+nav.contact
+  F├Ñ tilbud
+
+---- hero ----
+hero.title
+  Full-stack udvikling: e-commerce, landings og platforme der konverterer.
+hero.desc
+  Full-stack team til brands i Chile, Spanien, Danmark og remote markeder, der har brug for onlinebutikker, konverterende landing pages og for
+
+---- cta ----
+cta.calendly
+  Book et hurtigt opkald (15m) ­ƒùô´©Å
+
+---- about ----
+about.title
+  Hvorfor virksomheder v├ªlger os
+about.desc
+  Hos IrigoyenDev bygger vi digitale produkter, der fungerer som v├ªkstmotorer. Vi leverer ikke bare kode ÔÇö vi bygger teknologi med fokus p├Ñ m├Ñ
+about.card.play
+  Klik for at afspille pr├ªsentationen
+about.card.name [EN]
+  Andr├®s Irigoyen
+about.card.title
+  Full-Stack-udvikler
+about.title2
+  Hvem vi er
+about.bio
+  IrigoyenDev er et produkt- og kommercielt team: full-stack udvikling, SEO og kundepartnerskab. Vi forvandler traditionelle virksomheder til 
+
+---- team ----
+team.title [EN]
+  Team
+team.desc
+  Produkt og kommerciel side sammen: vi bygger, lukker og st├©tter v├ªksten af din online forretning.
+team.andres.name [EN]
+  Andr├®s Irigoyen
+team.andres.role
+  Stifter ┬À Full-Stack Developer
+team.esteban.name [EN]
+  Esteban Morote
+team.esteban.role [EN]
+  Commercial Manager
+
+---- tools ----
+tools.title
+  Enterprise-stack i topklasse. Startup-hastighed til markedet.
+
+---- services ----
+services.homeTitle
+  Tjenester til at vinde kunder online
+services.homeDesc
+  Webudvikling, SEO, GEO og digital marketing ÔÇö s├Ñ Google finder dig, og bes├©gende konverterer.
+services.card1Title
+  Full-stack udvikling
+services.card1Desc
+  E-commerce, landings og skr├ªddersyede platforme med fokus p├Ñ salg og drift.
+services.ctaQuote
+  F├Ñ tilbud p├Ñ denne tjeneste
+services.card2Title
+  Byg en online butik
+services.card2Desc
+  Katalog, checkout, admin og SEO-fundament for din egen salgskanal.
+services.card3Title [EN]
+  Landing pages
+services.card3Desc
+  Konverteringssider til kampagner, lanceringer og lokale virksomheder.
+services.cardSeoTitle
+  Basis-SEO
+services.cardSeoDesc
+  Titler, meta, sitemap, hastighed, canonicals og on-page struktur, s├Ñ du indekseres rent fra dag ├®t.
+services.cardGeoTitle
+  Avanceret SEO & GEO
+services.cardGeoDesc
+  Schema, entiteter, llms.txt, citerbart indhold og optimering til Google plus generative motorer.
+services.cardMktTitle
+  Digitale marketingkampagner
+services.cardMktDesc
+  Google Ads, Meta Ads, tracking og landings til leads og salg med kontrolleret budget.
+services.cardWmTitle
+  Care-planer (abonnement)
+services.cardWmDesc
+  M├Ñnedlig vedligeholdelse: sikkerhed, backups, opdateringer og support. Valgfri Care + Growth med SEO eller ads.
+services.ctaCare
+  Aktiv├®r vedligeholdelse
+services.ctaPrice
+  Se vejledende priser ÔåÆ
+
+---- mkt ----
+mkt.priceFrom600
+  fra ~USD 600
+mkt.priceFrom199
+  fra ~USD 199
+mkt.priceFrom499
+  fra ~USD 499
+
+---- projects ----
+projects.title
+  Virkelige projekter. Virkelige resultater.
+projects.subtitle
+  E-commerce, platforme og landing pages bygget til v├ªkst og lead-generering.
+
+---- filter ----
+filter.desc
+  Udforsk efter branche eller forretningsbehov:
+filter.all [EN]
+  All
+filter.local [EN]
+  Local Business
+filter.b2b [EN]
+  Corporate B2B
+filter.legal [EN]
+  Legal
+filter.events [EN]
+  Events
+filter.realestate [EN]
+  Real Estate
+filter.marketplaces [EN]
+  Marketplaces
+filter.media [EN]
+  Media
+
+---- proj ----
+proj.calafate.title [EN]
+  Calafate Propiedades
+proj.calafate.desc
+  Ejendomsekosystem designet til at s├ªlge: ultrahurtigt katalog, der fastholder bes├©gende, automatiserede funnels til lead-generering og et pr
+proj.thebeebaby.title
+  Thebeebaby
+proj.thebeebaby.desc
+  E-commerce til online salg: katalog, sikker checkout og admin-dashboard til ordrer og brandv├ªkst.
+proj.rluabogados.name [EN]
+  Ruiz Leiva Abogados
+proj.rluabogados.descCard
+  Corporate juridisk platform med Next.js App Router, lead-generering og sikkert adminpanel.
+proj.familiainternacional.name [EN]
+  Familia Internacional
+proj.familiainternacional.descCard
+  Institutionel hjemmeside til et advokatfirma specialiseret i International Family Law, med premium design og tosproget support.
+proj.dragonmart.name [EN]
+  Dragonmart
+proj.dragonmart.desc
+  Virksomhedsplatform for international sourcing fra Asien.
+proj.dahuss.title
+  Dahuss
+proj.dahuss.desc
+  Driftsplatform der str├©mliner brugerstyring og daglige workflowsÔÇömindre friktion, mere kontrol.
+proj.retorica.title [EN]
+  Ret├│rica
+proj.retorica.desc
+  Konverteringsfokuseret brandsite i Astro: hurtige sider, storytelling og klare veje til leads og henvendelser.
+proj.floreria.title [EN]
+  Florer├¡a El Nuevo Pensamiento
+proj.floreria.desc
+  Online blomsterbutik optimeret til k├©b: elegant shop og gnidningsfri checkout for flere ordrer.
+proj.radiochicureo.title [EN]
+  Radio Chicureo
+proj.radiochicureo.desc
+  Kommerciel online radioplatform til webstreaming, nyhedsudgivelse og sektionsbaseret annoncepladsstyring.
+
+---- project ----
+project.view
+  Se forretningsimpact
+
+---- gbp ----
+gbp.eyebrow
+  Google-anmeldelser
+gbp.title
+  Hvad kunder siger om IrigoyenDev
+gbp.score
+  5,0 ┬À Baseret p├Ñ kundeanmeldelser
+gbp.profileCta
+  Se Google-profil ÔåÆ
+gbp.r1.name [EN]
+  Mar├¡a L├│pez
+gbp.r1.role
+  Drift ┬À TheBeeBaby
+gbp.r1.text
+  Andr├®s byggede e-commercen utroligt hurtigt, og checkouten er meget glat. Salget steg 30% den f├©rste m├Ñned.
+gbp.r2.name [EN]
+  Carlos Ram├¡rez
+gbp.r2.role
+  Direkt├©r ┬À Dragonmart
+gbp.r2.text
+  Han digitaliserede vores B2B-sourcing og automatiserede tilbud. Mindre manuelt arbejde og en platform klar til at skalere.
+gbp.r3.name [EN]
+  Elena Mart├¡nez
+gbp.r3.role
+  Stifter ┬À Florer├¡a ENP
+gbp.r3.text
+  En hurtig lokal side, klart katalog og WhatsApp til salg. Han hjalp ogs├Ñ med SEO, s├Ñ vi synes bedre p├Ñ Google.
+gbp.allCta
+  Se alle anmeldelser p├Ñ Google ÔåÆ
+
+---- faq ----
+faq.homeTitle
+  Ofte stillede sp├©rgsm├Ñl
+faq.homeDesc
+  Det folk sp├©rger om, f├©r de hyrer IrigoyenDev.
+faq.q1
+  Hvilke tjenester tilbyder I?
+faq.a1
+  Online butikker, landings, platforme, SEO/GEO, marketing og m├Ñnedlige Care-planer. Detaljer p├Ñ tjenestesiden.
+faq.q2
+  Hvad koster et projekt?
+faq.a2
+  Landings fra ~USD 600, SEO fra ~USD 199, kommercielle produkter ~USD 3.000ÔÇô10.000 og skr├ªddersyede platforme fra ~USD 10.000. Care-planer fr
+faq.q3
+  Arbejder I med Chile, Spanien og Danmark?
+faq.a3
+  Ja. Vi betjener kunder i Danmark, Chile, Spanien og remote projekter, p├Ñ spansk eller engelsk.
+faq.q4
+  Tilbyder I abonnement eller m├Ñnedlig vedligeholdelse?
+faq.a4
+  Ja. Care fra ~USD 200/md og Care + Growth fra ~USD 450/md, minimum 3 m├Ñneder. Ideelt efter lancering.
+faq.q5
+  Hvordan kommer vi i gang?
+faq.a5
+  Brug kontaktformularen eller WhatsApp med dit m├Ñl, tidslinje og omtrentligt budget. Du f├Ñr svar inden for ~48 timer.
+faq.more
+  Se alle sp├©rgsm├Ñl ÔåÆ
+
+---- contact ----
+contact.title
+  Klar til at v├ªkste din forretning online?
+contact.desc
+  Fort├ªl os om dit projekt og f├Ñ svar inden for 48 timer med plan, tidslinje og investeringsestimat. ├àbne for nye kunder.
+contact.budget
+  Investeringsinterval (valgfrit)
+contact.budget.opt1
+  Udforsker muligheder / Opstart
+contact.budget.opt2
+  SEO / setup fra ~USD 199
+contact.budget.opt3
+  Landing fra ~USD 600
+contact.budget.opt4
+  USD 2.000 ÔÇô 10.000
+contact.budget.opt5
+  Mere end USD 10.000
+contact.budget.opt6
+  Care-plan ~USD 200ÔÇô350 / md
+contact.budget.opt7
+  Care + Growth ~USD 450ÔÇô800 / md
+
+---- form ----
+form.service
+  Hvilken tjeneste har du brug for?
+form.service.placeholder
+  V├ªlg en tjeneste
+form.service.fullstack
+  Full-stack udvikling / platform
+form.service.ecommerce
+  Byg en online butik / e-commerce
+form.service.landing
+  Konverterende landing page
+form.service.seo
+  Basis-SEO
+form.service.geo
+  Avanceret SEO & GEO
+form.service.marketing
+  Digitale marketingkampagner
+form.service.care
+  Care-plan ÔÇö m├Ñnedlig vedligeholdelse
+form.service.careGrowth
+  Care + Growth ÔÇö vedligeholdelse + SEO/ads
+form.service.other
+  Andet / usikker
+form.name
+  Navn
+form.namePh
+  Dit navn
+form.email
+  E-mail
+form.emailPh
+  dig@virksomhed.dk
+form.message
+  Fort├ªl os om dit projekt
+form.messagePh
+  Hvad vil du bygge? M├Ñl, tidslinje, budget...
+form.submit [EN]
+  Request a project plan
+
+---- lead ----
+lead.eyebrow [EN]
+  How can we help?
+lead.title
+  V├ªlg en tjeneste, s├Ñ forbereder vi en plan
+lead.desc
+  Uforpligtende. Svar inden ~48 timer med scope, tidslinje og estimeret investering.
+lead.hint.ecommerce
+  Katalog, checkout og egen salgskanal
+lead.hint.landing
+  ├ët klart tilbud bygget til at fange leads
+lead.hint.seo
+  Ren indeksering og teknisk fundament i Google
+lead.hint.geo
+  Schema, entiteter og synlighed i s├©gning + AI
+lead.hint.marketing
+  Google Ads, Meta Ads og konverteringssporing
+lead.hint.care
+  Backups, sikkerhed, opdateringer og m├Ñnedlig support
+lead.hint.careGrowth
+  Care + SEO eller ads for fortsat v├ªkst
+lead.hint.fullstack
+  Skr├ªddersyet produkt med admin og forretningslogik
+lead.skip
+  G├Ñ til formularen ÔåÆ
+lead.stickyText
+  Klar til at f├Ñ tilbud p├Ñ web, SEO eller vedligeholdelse?
+lead.stickyCta
+  V├ªlg tjeneste
+lead.stickyContact
+  Kontakt
+
+---- footer ----
+footer.tagline
+  Full-stack webudvikling, SEO, GEO og digital marketing til at vinde kunder online.
+footer.areas
+  Danmark ┬À Chile ┬À Spanien ┬À Remote
+footer.contactHeading
+  Generel kontakt
+footer.contactForm
+  Kontaktformular
+footer.servicesHeading
+  Tjenester
+footer.linkServices
+  Alle tjenester
+footer.linkShop
+  Byg en online butik
+footer.linkLandings [EN]
+  Landing pages
+footer.linkSeo
+  Basis-SEO
+footer.linkGeo
+  Avanceret SEO & GEO
+footer.linkMkt [EN]
+  Digital marketing
+footer.linkWm
+  Care-planer / vedligeholdelse
+footer.linkPricing
+  Priser
+footer.siteHeading [EN]
+  Site
+footer.linkHome
+  Hjem
+footer.linkTeam [EN]
+  Team
+footer.linkProjects
+  Projekter
+footer.linkReviews
+  Anmeldelser
+footer.linkFaq [EN]
+  FAQ
+footer.linkContact
+  Kontakt
+footer
+  ┬® 2026 IrigoyenDev. Webprodukter bygget til at performe og konvertere.
+
+################ NO ################
+
+---- nav ----
+nav.services
+  Tjenester
+nav.projects
+  Resultater
+nav.pricing
+  Priser
+nav.contact
+  F├Ñ tilbud
+
+---- hero ----
+hero.title
+  Fullstack-utvikling: e-handel, landings og plattformer som konverterer.
+hero.desc
+  Fullstack-team for merkevarer i Chile, Spania, Danmark og remote markeder som trenger nettbutikker, konverterende landingssider og forretnin
+
+---- cta ----
+cta.calendly
+  Bestill en rask samtale (15m) ­ƒùô´©Å
+
+---- about ----
+about.title
+  Hvorfor bedrifter velger oss
+about.desc
+  Hos IrigoyenDev bygger vi digitale produkter som fungerer som vekstmotorer. Vi leverer ikke bare kode ÔÇö vi bygger teknologi med fokus p├Ñ m├Ñl
+about.card.play
+  Klikk for ├Ñ spille av presentasjonen
+about.card.name [EN]
+  Andr├®s Irigoyen
+about.card.title
+  Fullstack-utvikler
+about.title2
+  Hvem vi er
+about.bio
+  IrigoyenDev er et produkt- og kommersielt team: fullstack-utvikling, SEO og kundepartnerskap. Vi forvandler tradisjonelle virksomheter til l
+
+---- team ----
+team.title [EN]
+  Team
+team.desc
+  Produkt og kommersielt side ved side: vi bygger, lukker og st├©tter veksten av din online virksomhet.
+team.andres.name [EN]
+  Andr├®s Irigoyen
+team.andres.role
+  Grunnlegger ┬À Full-Stack Developer
+team.esteban.name [EN]
+  Esteban Morote
+team.esteban.role [EN]
+  Commercial Manager
+
+---- tools ----
+tools.title
+  Enterprise-stack. Startup-hastighet til markedet.
+
+---- services ----
+services.homeTitle
+  Tjenester for ├Ñ vinne kunder online
+services.homeDesc
+  Webutvikling, SEO, GEO og digital markedsf├©ring ÔÇö slik at Google finner deg og bes├©kende konverterer.
+services.card1Title
+  Fullstack-utvikling
+services.card1Desc
+  E-handel, landings og skreddersydde plattformer med fokus p├Ñ salg og drift.
+services.ctaQuote
+  Be om tilbud p├Ñ denne tjenesten
+services.card2Title
+  Bygg en nettbutikk
+services.card2Desc
+  Katalog, checkout, admin og SEO-grunnlag for din egen salgskanal.
+services.card3Title [EN]
+  Landing pages
+services.card3Desc
+  Konverteringssider for kampanjer, lanseringer og lokale bedrifter.
+services.cardSeoTitle
+  Grunnleggende SEO
+services.cardSeoDesc
+  Titler, meta, sitemap, hastighet, canonicals og on-page struktur for ren indeksering fra dag ├®n.
+services.cardGeoTitle
+  Avansert SEO & GEO
+services.cardGeoDesc
+  Schema, entiteter, llms.txt, siterbart innhold og optimalisering for Google og generative motorer.
+services.cardMktTitle
+  Digitale markedskampanjer
+services.cardMktDesc
+  Google Ads, Meta Ads, tracking og landings for leads og salg med kontrollert budsjett.
+services.cardWmTitle
+  Care-planer (abonnement)
+services.cardWmDesc
+  M├Ñnedlig vedlikehold: sikkerhet, backups, oppdateringer og support. Valgfri Care + Growth med SEO eller ads.
+services.ctaCare
+  Aktiver vedlikehold
+services.ctaPrice
+  Se veiledende priser ÔåÆ
+
+---- mkt ----
+mkt.priceFrom600
+  fra ~USD 600
+mkt.priceFrom199
+  fra ~USD 199
+mkt.priceFrom499
+  fra ~USD 499
+
+---- projects ----
+projects.title
+  Ekte prosjekter. Ekte resultater.
+projects.subtitle
+  E-handel, plattformer og landingssider bygget for vekst og lead-generering.
+
+---- filter ----
+filter.desc
+  Utforsk etter bransje eller forretningsbehov:
+filter.all [EN]
+  All
+filter.local [EN]
+  Local Business
+filter.b2b [EN]
+  Corporate B2B
+filter.legal [EN]
+  Legal
+filter.events [EN]
+  Events
+filter.realestate [EN]
+  Real Estate
+filter.marketplaces [EN]
+  Marketplaces
+filter.media [EN]
+  Media
+
+---- proj ----
+proj.calafate.title [EN]
+  Calafate Propiedades
+proj.calafate.desc
+  Eiendomsekosystem designet for ├Ñ selge: ultraraskt katalog som beholder bes├©kende, automatiserte funnels for lead-innsamling og et privat da
+proj.thebeebaby.title
+  Thebeebaby
+proj.thebeebaby.desc
+  E-handel for online salg: katalog, sikker checkout og admin-dashboard for ordrer og merkevekst.
+proj.rluabogados.name [EN]
+  Ruiz Leiva Abogados
+proj.rluabogados.descCard
+  Corporate juridisk plattform med Next.js App Router, lead-innsamling og sikkert adminpanel.
+proj.familiainternacional.name [EN]
+  Familia Internacional
+proj.familiainternacional.descCard
+  Institusjonell nettside for et advokatfirma spesialisert i International Family Law, med premiumdesign og tospr├Ñklig st├©tte.
+proj.dragonmart.name [EN]
+  Dragonmart
+proj.dragonmart.desc
+  Bedriftsplattform for internasjonal sourcing fra Asia.
+proj.dahuss.title
+  Dahuss
+proj.dahuss.desc
+  Driftsplattform som effektiviserer brukerstyring og daglige arbeidsflyterÔÇömindre friksjon, mer kontroll.
+proj.retorica.title [EN]
+  Ret├│rica
+proj.retorica.desc
+  Konverteringsfokusert merkeside i Astro: raske sider, storytelling og tydelige veier til leads og henvendelser.
+proj.floreria.title [EN]
+  Florer├¡a El Nuevo Pensamiento
+proj.floreria.desc
+  Online blomsterbutikk optimalisert for kj├©p: elegant butikk og smidig checkout for flere bestillinger.
+proj.radiochicureo.title [EN]
+  Radio Chicureo
+proj.radiochicureo.desc
+  Kommersiell nettradioplattform for nettstr├©mming, nyhetspublisering og seksjonsbasert annonseplassadministrasjon.
+
+---- project ----
+project.view
+  Se forretningsimpact
+
+---- gbp ----
+gbp.eyebrow
+  Google-anmeldelser
+gbp.title
+  Hva kundene sier om IrigoyenDev
+gbp.score
+  5,0 ┬À Basert p├Ñ kundeanmeldelser
+gbp.profileCta
+  Se Google-profil ÔåÆ
+gbp.r1.name [EN]
+  Mar├¡a L├│pez
+gbp.r1.role
+  Drift ┬À TheBeeBaby
+gbp.r1.text
+  Andr├®s bygde e-handelen utrolig raskt, og checkouten er veldig smidig. Salget ├©kte 30 % den f├©rste m├Ñneden.
+gbp.r2.name [EN]
+  Carlos Ram├¡rez
+gbp.r2.role
+  Direkt├©r ┬À Dragonmart
+gbp.r2.text
+  Han digitaliserte B2B-sourcingen v├Ñr og automatiserte tilbud. Mindre manuelt arbeid og en plattform klar til ├Ñ skalere.
+gbp.r3.name [EN]
+  Elena Mart├¡nez
+gbp.r3.role
+  Grunnlegger ┬À Florer├¡a ENP
+gbp.r3.text
+  Et raskt lokalt nettsted, klart katalog og WhatsApp for salg. Han hjalp ogs├Ñ med SEO, s├Ñ vi synes bedre p├Ñ Google.
+gbp.allCta
+  Se alle anmeldelser p├Ñ Google ÔåÆ
+
+---- faq ----
+faq.homeTitle
+  Ofte stilte sp├©rsm├Ñl
+faq.homeDesc
+  Det folk sp├©r om f├©r de ansetter IrigoyenDev.
+faq.q1
+  Hvilke tjenester tilbyr dere?
+faq.a1
+  Nettbutikker, landings, plattformer, SEO/GEO, markedsf├©ring og m├Ñnedlige Care-planer. Detaljer p├Ñ tjenestesiden.
+faq.q2
+  Hva koster et prosjekt?
+faq.a2
+  Landings fra ~USD 600, SEO fra ~USD 199, kommersielle produkter ~USD 3 000ÔÇô10 000 og skreddersydde plattformer fra ~USD 10 000. Care-planer 
+faq.q3
+  Jobber dere med Chile, Spania og Danmark?
+faq.a3
+  Ja. Vi betjener kunder i Danmark, Chile, Spania og remote prosjekter, p├Ñ spansk eller engelsk.
+faq.q4
+  Tilbyr dere abonnement eller m├Ñnedlig vedlikehold?
+faq.a4
+  Ja. Care fra ~USD 200/mnd og Care + Growth fra ~USD 450/mnd, minimum 3 m├Ñneder. Ideelt etter lansering.
+faq.q5
+  Hvordan kommer vi i gang?
+faq.a5
+  Bruk kontaktskjemaet eller WhatsApp med m├Ñl, tidslinje og omtrentlig budsjett. Du f├Ñr svar innen ~48 timer.
+faq.more
+  Se alle sp├©rsm├Ñl ÔåÆ
+
+---- contact ----
+contact.title
+  Klar for ├Ñ vokse virksomheten din p├Ñ nett?
+contact.desc
+  Fortell oss om prosjektet ditt og f├Ñ svar innen 48 timer med plan, tidslinje og investeringsestimat. ├àpne for nye kunder.
+contact.budget
+  Investeringsomr├Ñde (valgfritt)
+contact.budget.opt1
+  Utforsker alternativer / Oppstart
+contact.budget.opt2
+  SEO / oppsett fra ~USD 199
+contact.budget.opt3
+  Landing fra ~USD 600
+contact.budget.opt4
+  USD 2.000 ÔÇô 10.000
+contact.budget.opt5
+  Mer enn USD 10.000
+contact.budget.opt6
+  Care-plan ~USD 200ÔÇô350 / mnd
+contact.budget.opt7
+  Care + Growth ~USD 450ÔÇô800 / mnd
+
+---- form ----
+form.service
+  Hvilken tjeneste trenger du?
+form.service.placeholder
+  Velg en tjeneste
+form.service.fullstack
+  Fullstack-utvikling / plattform
+form.service.ecommerce
+  Bygg en nettbutikk / e-handel
+form.service.landing
+  Konverterende landing page
+form.service.seo
+  Grunnleggende SEO
+form.service.geo
+  Avansert SEO & GEO
+form.service.marketing
+  Digitale markedskampanjer
+form.service.care
+  Care-plan ÔÇö m├Ñnedlig vedlikehold
+form.service.careGrowth
+  Care + Growth ÔÇö vedlikehold + SEO/ads
+form.service.other
+  Annet / usikker
+form.name
+  Navn
+form.namePh
+  Ditt navn
+form.email
+  E-post
+form.emailPh
+  deg@bedrift.no
+form.message
+  Fortell oss om prosjektet ditt
+form.messagePh
+  Hva vil du bygge? M├Ñl, tidslinje, budsjett...
+form.submit [EN]
+  Request a project plan
+
+---- lead ----
+lead.eyebrow [EN]
+  How can we help?
+lead.title
+  Velg en tjeneste, s├Ñ lager vi en plan
+lead.desc
+  Uforpliktende. Svar innen ~48 timer med scope, tidslinje og estimat.
+lead.hint.ecommerce
+  Katalog, checkout og egen salgskanal
+lead.hint.landing
+  Ett tydelig tilbud bygget for ├Ñ fange leads
+lead.hint.seo
+  Ren indeksering og teknisk fundament i Google
+lead.hint.geo
+  Schema, entiteter og synlighet i s├©k + AI
+lead.hint.marketing
+  Google Ads, Meta Ads og konverteringssporing
+lead.hint.care
+  Backups, sikkerhet, oppdateringer og m├Ñnedlig support
+lead.hint.careGrowth
+  Care + SEO eller ads for videre vekst
+lead.hint.fullstack
+  Skreddersydd produkt med admin og forretningslogikk
+lead.skip
+  G├Ñ til skjemaet ÔåÆ
+lead.stickyText
+  Klar for tilbud p├Ñ web, SEO eller vedlikehold?
+lead.stickyCta
+  Velg tjeneste
+lead.stickyContact
+  Kontakt
+
+---- footer ----
+footer.tagline
+  Fullstack webutvikling, SEO, GEO og digital markedsf├©ring for ├Ñ vinne kunder online.
+footer.areas
+  Danmark ┬À Chile ┬À Spania ┬À Remote
+footer.contactHeading
+  Generell kontakt
+footer.contactForm
+  Kontaktskjema
+footer.servicesHeading
+  Tjenester
+footer.linkServices
+  Alle tjenester
+footer.linkShop
+  Bygg en nettbutikk
+footer.linkLandings [EN]
+  Landing pages
+footer.linkSeo
+  Grunnleggende SEO
+footer.linkGeo
+  Avansert SEO & GEO
+footer.linkMkt
+  Digital markedsf├©ring
+footer.linkWm
+  Care-planer / vedlikehold
+footer.linkPricing
+  Priser
+footer.siteHeading
+  Nettsted
+footer.linkHome
+  Hjem
+footer.linkTeam [EN]
+  Team
+footer.linkProjects
+  Prosjekter
+footer.linkReviews
+  Anmeldelser
+footer.linkFaq [EN]
+  FAQ
+footer.linkContact
+  Kontakt
+footer
+  ┬® 2026 IrigoyenDev. Webprodukter bygget for ├Ñ prestere og konvertere.

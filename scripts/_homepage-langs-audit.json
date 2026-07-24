@@ -1,0 +1,94 @@
+{
+  "keys": 165,
+  "report": {
+    "da": {
+      "missing": 0,
+      "stillSpanish": 5,
+      "stillSpanishKeys": [
+        "about.card.name",
+        "team.andres.name",
+        "proj.floreria.title",
+        "gbp.r2.name",
+        "gbp.r3.name"
+      ],
+      "identicalToEn": 21
+    },
+    "de": {
+      "missing": 0,
+      "stillSpanish": 5,
+      "stillSpanishKeys": [
+        "about.card.name",
+        "team.andres.name",
+        "proj.floreria.title",
+        "gbp.r2.name",
+        "gbp.r3.name"
+      ],
+      "identicalToEn": 19
+    },
+    "fr": {
+      "missing": 0,
+      "stillSpanish": 5,
+      "stillSpanishKeys": [
+        "about.card.name",
+        "team.andres.name",
+        "proj.floreria.title",
+        "gbp.r2.name",
+        "gbp.r3.name"
+      ],
+      "identicalToEn": 23
+    },
+    "it": {
+      "missing": 0,
+      "stillSpanish": 5,
+      "stillSpanishKeys": [
+        "about.card.name",
+        "team.andres.name",
+        "proj.floreria.title",
+        "gbp.r2.name",
+        "gbp.r3.name"
+      ],
+      "identicalToEn": 22
+    },
+    "no": {
+      "missing": 0,
+      "stillSpanish": 5,
+      "stillSpanishKeys": [
+        "about.card.name",
+        "team.andres.name",
+        "proj.floreria.title",
+        "gbp.r2.name",
+        "gbp.r3.name"
+      ],
+      "identicalToEn": 20
+    },
+    "pt": {
+      "missing": 0,
+      "stillSpanish": 10,
+      "stillSpanishKeys": [
+        "about.card.name",
+        "team.andres.name",
+        "mkt.priceFrom600",
+        "mkt.priceFrom199",
+        "mkt.priceFrom499",
+        "gbp.r2.name",
+        "gbp.r3.name",
+        "gbp.r3.role",
+        "contact.budget.opt2",
+        "contact.budget.opt3"
+      ],
+      "identicalToEn": 22
+    },
+    "sv": {
+      "missing": 0,
+      "stillSpanish": 5,
+      "stillSpanishKeys": [
+        "about.card.name",
+        "team.andres.name",
+        "proj.floreria.title",
+        "gbp.r2.name",
+        "gbp.r3.name"
+      ],
+      "identicalToEn": 21
+    }
+  }
+}

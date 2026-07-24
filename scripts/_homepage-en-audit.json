@@ -1,0 +1,896 @@
+{
+  "totalKeys": 164,
+  "missingEs": [],
+  "missingEn": [],
+  "sameAsEs": [
+    {
+      "k": "about.card.title",
+      "v": "Full-Stack Developer"
+    },
+    {
+      "k": "services.card3Title",
+      "v": "Landing pages"
+    },
+    {
+      "k": "filter.legal",
+      "v": "Legal"
+    },
+    {
+      "k": "filter.marketplaces",
+      "v": "Marketplaces"
+    },
+    {
+      "k": "gbp.r2.role",
+      "v": "Director · Dragonmart"
+    },
+    {
+      "k": "footer.linkLandings",
+      "v": "Landing pages"
+    },
+    {
+      "k": "footer.linkFaq",
+      "v": "FAQ"
+    }
+  ],
+  "stillSpanish": [
+    {
+      "k": "about.card.name",
+      "v": "Andrés Irigoyen"
+    },
+    {
+      "k": "team.andres.name",
+      "v": "Andrés Irigoyen"
+    },
+    {
+      "k": "proj.retorica.title",
+      "v": "Retórica"
+    },
+    {
+      "k": "proj.floreria.title",
+      "v": "Florería El Nuevo Pensamiento"
+    },
+    {
+      "k": "gbp.r1.name",
+      "v": "María López"
+    },
+    {
+      "k": "gbp.r1.text",
+      "v": "Andrés built the marketplace incredibly fast: smooth checkout, clear admin, and solid SEO. Bookings jumped in the first month."
+    },
+    {
+      "k": "gbp.r2.name",
+      "v": "Carlos Ramírez"
+    },
+    {
+      "k": "gbp.r3.name",
+      "v": "Elena Martínez"
+    },
+    {
+      "k": "gbp.r3.role",
+      "v": "Founder · Florería ENP"
+    }
+  ],
+  "firstPerson": [],
+  "pairs": [
+    {
+      "k": "nav.services",
+      "es": "Servicios",
+      "en": "Services"
+    },
+    {
+      "k": "nav.projects",
+      "es": "Resultados",
+      "en": "Client Results"
+    },
+    {
+      "k": "nav.pricing",
+      "es": "Precios",
+      "en": "Pricing"
+    },
+    {
+      "k": "nav.contact",
+      "es": "Cotizar",
+      "en": "Get a Quote"
+    },
+    {
+      "k": "hero.title",
+      "es": "Desarrollo full stack: e-commerce, landings y plataformas que convierten.",
+      "en": "Full-stack development: e-commerce, landings & platforms that convert."
+    },
+    {
+      "k": "hero.desc",
+      "es": "Equipo full stack para marcas en Chile, España, Dinamarca y mercados remotos que necesitan tienda online, landing pages de conversión y plataformas de negocio—rápidas, escalables y listas para generar ingresos.",
+      "en": "Full-stack team for brands in Chile, Spain, Denmark and remote markets that need online stores, high-converting landing pages, and business platforms—fast, scalable, and ready to generate revenue."
+    },
+    {
+      "k": "cta.calendly",
+      "es": "Escríbenos por WhatsApp",
+      "en": "Message us on WhatsApp"
+    },
+    {
+      "k": "about.title",
+      "es": "Por qué contratarnos",
+      "en": "Why businesses hire us"
+    },
+    {
+      "k": "about.desc",
+      "es": "En IrigoyenDev desarrollamos productos digitales que funcionan como motores de crecimiento. No nos limitamos a entregar código: construimos tecnología enfocada en resultados medibles. Desde tiendas online hasta sistemas de gestión complejos, cada proyecto está diseñado con tres objetivos claros: aumentar tus ventas, automatizar tu operativa diaria y reducir costos.",
+      "en": "At IrigoyenDev we build digital products that function as growth engines. We don't just deliver code — we build technology focused on measurable results. From online stores to complex management systems, every project is designed with three clear goals: increase your sales, automate your daily operations, and reduce costs."
+    },
+    {
+      "k": "about.card.play",
+      "es": "Click para reproducir presentación",
+      "en": "Click to play presentation"
+    },
+    {
+      "k": "about.card.name",
+      "es": "Andrés Irigoyen",
+      "en": "Andrés Irigoyen"
+    },
+    {
+      "k": "about.card.title",
+      "es": "Full-Stack Developer",
+      "en": "Full-Stack Developer"
+    },
+    {
+      "k": "about.title2",
+      "es": "Quiénes somos",
+      "en": "Who we are"
+    },
+    {
+      "k": "about.bio",
+      "es": "IrigoyenDev es un equipo de producto y comercialización: desarrollo full stack, SEO y acompañamiento comercial. Convertimos negocios tradicionales en plataformas digitales rentables, con rigor técnico y visión de negocio para software escalable que mejora márgenes y resuelve problemas operativos reales.",
+      "en": "IrigoyenDev is a product and commercial team: full-stack development, SEO, and client partnership. We turn traditional businesses into profitable digital platforms — technical rigor plus business vision, so you get scalable software that improves margins and solves real operational problems."
+    },
+    {
+      "k": "team.title",
+      "es": "Equipo",
+      "en": "Team"
+    },
+    {
+      "k": "team.desc",
+      "es": "Producto y comercialización juntos: construimos, cerramos y acompañamos el crecimiento de tu negocio online.",
+      "en": "Product and commercial side together: we build, close, and support the growth of your online business."
+    },
+    {
+      "k": "team.andres.name",
+      "es": "Andrés Irigoyen",
+      "en": "Andrés Irigoyen"
+    },
+    {
+      "k": "team.andres.role",
+      "es": "Fundador · Full-Stack Developer",
+      "en": "Founder · Full-Stack Developer"
+    },
+    {
+      "k": "team.esteban.name",
+      "es": "Esteban Morote",
+      "en": "Esteban Morote"
+    },
+    {
+      "k": "team.esteban.role",
+      "es": "Gerente Comercial",
+      "en": "Commercial Manager"
+    },
+    {
+      "k": "tools.title",
+      "es": "Stack de nivel enterprise. Velocidad de startup.",
+      "en": "Enterprise-grade stack. Startup speed to market."
+    },
+    {
+      "k": "services.homeTitle",
+      "es": "Servicios para conseguir clientes online",
+      "en": "Services to win clients online"
+    },
+    {
+      "k": "services.homeDesc",
+      "es": "Desarrollo web, SEO, GEO y marketing digital: para que Google te encuentre y tus visitantes conviertan.",
+      "en": "Web development, SEO, GEO, and digital marketing — so Google can find you and visitors convert."
+    },
+    {
+      "k": "services.card1Title",
+      "es": "Desarrollo full stack",
+      "en": "Full-stack development"
+    },
+    {
+      "k": "services.card1Desc",
+      "es": "E-commerce, landings y plataformas a medida con foco en ventas y operación.",
+      "en": "E-commerce, landings and custom platforms focused on sales and operations."
+    },
+    {
+      "k": "services.ctaQuote",
+      "es": "Cotizar este servicio",
+      "en": "Get a quote for this service"
+    },
+    {
+      "k": "services.card2Title",
+      "es": "Crear tienda online",
+      "en": "Build an online store"
+    },
+    {
+      "k": "services.card2Desc",
+      "es": "Catálogo, checkout, admin y base SEO para vender con un canal propio.",
+      "en": "Catalog, checkout, admin and SEO foundations for your own sales channel."
+    },
+    {
+      "k": "services.card3Title",
+      "es": "Landing pages",
+      "en": "Landing pages"
+    },
+    {
+      "k": "mkt.priceFrom600",
+      "es": "desde ~USD 600",
+      "en": "from ~USD 600"
+    },
+    {
+      "k": "services.card3Desc",
+      "es": "Páginas de conversión para campañas, lanzamientos y negocios locales.",
+      "en": "Conversion pages for campaigns, launches and local businesses."
+    },
+    {
+      "k": "services.cardSeoTitle",
+      "es": "SEO básico",
+      "en": "Basic SEO"
+    },
+    {
+      "k": "mkt.priceFrom199",
+      "es": "desde ~USD 199",
+      "en": "from ~USD 199"
+    },
+    {
+      "k": "services.cardSeoDesc",
+      "es": "Títulos, meta, sitemap, velocidad, canonicals y estructura on-page para indexar bien desde el día uno.",
+      "en": "Titles, meta, sitemap, speed, canonicals, and on-page structure so you index cleanly from day one."
+    },
+    {
+      "k": "services.cardGeoTitle",
+      "es": "SEO & GEO avanzado",
+      "en": "Advanced SEO & GEO"
+    },
+    {
+      "k": "mkt.priceFrom499",
+      "es": "desde ~USD 499",
+      "en": "from ~USD 499"
+    },
+    {
+      "k": "services.cardGeoDesc",
+      "es": "Schema, entidades, llms.txt, contenido citables y optimización para Google y motores generativos (ChatGPT, Perplexity, etc.).",
+      "en": "Schema, entities, llms.txt, citable content, and optimization for Google plus generative engines (ChatGPT, Perplexity, etc.)."
+    },
+    {
+      "k": "services.cardMktTitle",
+      "es": "Campañas de marketing digital",
+      "en": "Digital marketing campaigns"
+    },
+    {
+      "k": "services.cardMktDesc",
+      "es": "Google Ads, Meta Ads, tracking y landings alineadas para captar leads y ventas con presupuesto controlado.",
+      "en": "Google Ads, Meta Ads, tracking, and aligned landings to capture leads and sales with controlled spend."
+    },
+    {
+      "k": "services.cardWmTitle",
+      "es": "Planes Care (suscripción)",
+      "en": "Care plans (subscription)"
+    },
+    {
+      "k": "services.cardWmDesc",
+      "es": "Mantenimiento mensual: seguridad, backups, actualizaciones y soporte. Opcional Care + Growth con SEO o ads continuos.",
+      "en": "Monthly maintenance: security, backups, updates, and support. Optional Care + Growth with ongoing SEO or ads."
+    },
+    {
+      "k": "services.ctaCare",
+      "es": "Activar mantenimiento",
+      "en": "Activate maintenance"
+    },
+    {
+      "k": "services.ctaPrice",
+      "es": "Ver precios orientativos →",
+      "en": "View indicative pricing →"
+    },
+    {
+      "k": "projects.title",
+      "es": "Proyectos reales. Resultados de negocio.",
+      "en": "Real projects. Real business outcomes."
+    },
+    {
+      "k": "projects.subtitle",
+      "es": "E-commerce, plataformas y landings diseñados para crecer ventas y captar clientes.",
+      "en": "E-commerce, platforms, and landing pages engineered to grow revenue and capture leads."
+    },
+    {
+      "k": "filter.desc",
+      "es": "Explora por industria o necesidad de negocio:",
+      "en": "Explore by industry or business need:"
+    },
+    {
+      "k": "filter.all",
+      "es": "Todos",
+      "en": "All"
+    },
+    {
+      "k": "filter.local",
+      "es": "Comercio Local",
+      "en": "Local Business"
+    },
+    {
+      "k": "filter.b2b",
+      "es": "Corporativo B2B",
+      "en": "Corporate B2B"
+    },
+    {
+      "k": "filter.legal",
+      "es": "Legal",
+      "en": "Legal"
+    },
+    {
+      "k": "filter.events",
+      "es": "Eventos",
+      "en": "Events"
+    },
+    {
+      "k": "filter.realestate",
+      "es": "Inmobiliaria",
+      "en": "Real Estate"
+    },
+    {
+      "k": "filter.marketplaces",
+      "es": "Marketplaces",
+      "en": "Marketplaces"
+    },
+    {
+      "k": "filter.media",
+      "es": "Medios",
+      "en": "Media"
+    },
+    {
+      "k": "proj.calafate.title",
+      "es": "Calafate Propiedades",
+      "en": "Calafate Propiedades"
+    },
+    {
+      "k": "proj.calafate.desc",
+      "es": "Ecosistema inmobiliario diseñado para vender: catálogo ultrarrápido que retiene visitas, embudos automatizados para captar prospectos y un panel privado que centraliza tu operación diaria.",
+      "en": "Real estate ecosystem designed to sell: ultra-fast catalog that retains visitors, automated funnels to capture leads, and a private dashboard that centralizes daily operations."
+    },
+    {
+      "k": "project.view",
+      "es": "Ver el impacto comercial",
+      "en": "See the business impact"
+    },
+    {
+      "k": "proj.thebeebaby.title",
+      "es": "TheBeeBaby",
+      "en": "TheBeeBaby"
+    },
+    {
+      "k": "proj.thebeebaby.desc",
+      "es": "Marketplace internacional escalable. Digitaliza y automatiza la oferta y demanda con flujos geolocalizados, pagos seguros y herramientas autónomas para proveedores.",
+      "en": "Scalable international marketplace. Digitize and automate supply and demand with geolocated flows, secure payments, and autonomous tools for providers."
+    },
+    {
+      "k": "proj.rluabogados.name",
+      "es": "Ruiz Leiva Abogados",
+      "en": "Ruiz Leiva Abogados"
+    },
+    {
+      "k": "proj.rluabogados.descCard",
+      "es": "Plataforma legal corporativa con Next.js App Router, captación de leads y panel de administración seguro.",
+      "en": "Corporate legal platform with Next.js App Router, lead capture, and secure admin panel."
+    },
+    {
+      "k": "proj.familiainternacional.name",
+      "es": "Familia Internacional",
+      "en": "Familia Internacional"
+    },
+    {
+      "k": "proj.familiainternacional.descCard",
+      "es": "Sitio web institucional para estudio jurídico especializado en Derecho Internacional de Familia, con diseño premium y atención bilingüe.",
+      "en": "Institutional website for a law firm specialized in International Family Law, with a premium design and bilingual support."
+    },
+    {
+      "k": "proj.dragonmart.name",
+      "es": "Dragonmart",
+      "en": "Dragonmart"
+    },
+    {
+      "k": "proj.dragonmart.desc",
+      "es": "Portal B2B de importaciones que proyecta autoridad corporativa, cualifica solicitudes comerciales automáticamente y reduce drásticamente las horas de atención manual.",
+      "en": "B2B import portal that projects corporate authority, automatically qualifies commercial requests, and drastically reduces manual service hours."
+    },
+    {
+      "k": "proj.dahuss.title",
+      "es": "Dahuss Homes",
+      "en": "Dahuss Homes"
+    },
+    {
+      "k": "proj.dahuss.desc",
+      "es": "Solución PropTech integral que convierte tráfico en compradores de alto valor mediante búsquedas optimizadas y un sistema seguro para gestionar inventario sin fricciones.",
+      "en": "Comprehensive PropTech solution that converts traffic into high-value buyers through optimized searches and a secure system to manage inventory frictionlessly."
+    },
+    {
+      "k": "proj.retorica.title",
+      "es": "Retórica",
+      "en": "Retórica"
+    },
+    {
+      "k": "proj.retorica.desc",
+      "es": "Experiencia de marca inmersiva que consolida múltiples líneas de negocio en un solo canal de adquisición, transformando visitantes ocasionales en clientes corporativos calificados.",
+      "en": "Immersive brand experience that consolidates multiple business lines into a single acquisition channel, transforming casual visitors into qualified corporate clients."
+    },
+    {
+      "k": "proj.floreria.title",
+      "es": "Florería El Nuevo Pensamiento",
+      "en": "Florería El Nuevo Pensamiento"
+    },
+    {
+      "k": "proj.floreria.desc",
+      "es": "Motor de ventas locales 24/7. Dominio orgánico en Google (SEO local), catálogo de alta velocidad y un embudo directo a WhatsApp que multiplica pedidos sin pagar comisiones.",
+      "en": "24/7 local sales engine. Organic Google dominance (local SEO), high-speed catalog, and a direct WhatsApp funnel that multiplies orders without paying commissions."
+    },
+    {
+      "k": "proj.radiochicureo.title",
+      "es": "Radio Chicureo",
+      "en": "Radio Chicureo"
+    },
+    {
+      "k": "proj.radiochicureo.desc",
+      "es": "Portal de medios 100% monetizable: transmisión en vivo fluida, gestor de contenidos propio y espacios publicitarios dinámicos para maximizar el retorno de anunciantes.",
+      "en": "100% monetizable media portal: seamless live streaming, proprietary CMS, and dynamic advertising spaces to maximize advertiser ROI."
+    },
+    {
+      "k": "gbp.eyebrow",
+      "es": "Reseñas verificadas",
+      "en": "Verified reviews"
+    },
+    {
+      "k": "gbp.title",
+      "es": "Resultados reales de negocios que impulsaron su presencia digital",
+      "en": "Real results from businesses that grew their digital presence"
+    },
+    {
+      "k": "gbp.score",
+      "es": "5.0 · 12 reseñas en Google",
+      "en": "5.0 · 12 reviews on Google"
+    },
+    {
+      "k": "gbp.profileCta",
+      "es": "Ver perfil en Google",
+      "en": "View Google profile"
+    },
+    {
+      "k": "gbp.r1.name",
+      "es": "María López",
+      "en": "María López"
+    },
+    {
+      "k": "gbp.r1.role",
+      "es": "Operaciones · TheBeeBaby",
+      "en": "Operations · TheBeeBaby"
+    },
+    {
+      "k": "gbp.r1.text",
+      "es": "Andrés armó el marketplace rapidísimo: checkout fluido, panel claro y SEO bien planteado. En el primer mes las reservas subieron con fuerza.",
+      "en": "Andrés built the marketplace incredibly fast: smooth checkout, clear admin, and solid SEO. Bookings jumped in the first month."
+    },
+    {
+      "k": "gbp.r2.name",
+      "es": "Carlos Ramírez",
+      "en": "Carlos Ramírez"
+    },
+    {
+      "k": "gbp.r2.role",
+      "es": "Director · Dragonmart",
+      "en": "Director · Dragonmart"
+    },
+    {
+      "k": "gbp.r2.text",
+      "es": "Digitalizó nuestro sourcing B2B y automatizó cotizaciones. Menos trabajo manual, más claridad comercial y una plataforma lista para crecer.",
+      "en": "He digitized our B2B sourcing and automated quoting. Less manual work, clearer operations, and a platform ready to scale."
+    },
+    {
+      "k": "gbp.r3.name",
+      "es": "Elena Martínez",
+      "en": "Elena Martínez"
+    },
+    {
+      "k": "gbp.r3.role",
+      "es": "Fundadora · Florería ENP",
+      "en": "Founder · Florería ENP"
+    },
+    {
+      "k": "gbp.r3.text",
+      "es": "Web local rápida, catálogo claro y WhatsApp para vender. Además nos ayudó con SEO y a aparecer mejor en Google. Totalmente recomendable.",
+      "en": "A fast local site, clear catalog, and WhatsApp to sell. He also helped with SEO so we show up better on Google. Highly recommended."
+    },
+    {
+      "k": "gbp.allCta",
+      "es": "Ver página de reseñas",
+      "en": "View reviews page"
+    },
+    {
+      "k": "faq.homeTitle",
+      "es": "Preguntas frecuentes",
+      "en": "Frequently asked questions"
+    },
+    {
+      "k": "faq.homeDesc",
+      "es": "Lo que suelen preguntar antes de contratar a IrigoyenDev.",
+      "en": "What people ask before hiring IrigoyenDev."
+    },
+    {
+      "k": "faq.q1",
+      "es": "¿Qué servicios ofrecen?",
+      "en": "What services do you offer?"
+    },
+    {
+      "k": "faq.a1",
+      "es": "Tiendas online, landings, plataformas, SEO/GEO, marketing y planes Care de mantenimiento mensual. Detalle en la página de servicios.",
+      "en": "Online stores, landings, platforms, SEO/GEO, marketing, and monthly Care maintenance plans. Details on the services page."
+    },
+    {
+      "k": "faq.q2",
+      "es": "¿Cuánto cuesta un proyecto?",
+      "en": "How much does a project cost?"
+    },
+    {
+      "k": "faq.a2",
+      "es": "Landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~USD 3.000–10.000 y plataformas a medida desde ~USD 10.000. Planes Care mensuales desde ~USD 200.",
+      "en": "Landings from ~USD 600, SEO from ~USD 199, commercial products ~USD 3,000–10,000, and custom platforms from ~USD 10,000. Care plans are monthly from ~USD 200."
+    },
+    {
+      "k": "faq.q3",
+      "es": "¿Trabajan con Chile, España y Dinamarca?",
+      "en": "Do you work with Chile, Spain and Denmark?"
+    },
+    {
+      "k": "faq.a3",
+      "es": "Sí. Atendemos clientes en Dinamarca, Chile, España y proyectos remotos, en español o inglés.",
+      "en": "Yes. We serve clients in Denmark, Chile, Spain and remote projects, in Spanish or English."
+    },
+    {
+      "k": "faq.q4",
+      "es": "¿Ofrecen suscripción o mantenimiento mensual?",
+      "en": "Do you offer a subscription or monthly maintenance?"
+    },
+    {
+      "k": "faq.a4",
+      "es": "Sí. Plan Care (mantenimiento) desde ~USD 200/mes y Care + Growth (mantenimiento + SEO o ads) desde ~USD 450/mes, con mínimo 3 meses. Ideal tras lanzar tu web.",
+      "en": "Yes. Care (maintenance) from ~USD 200/mo and Care + Growth (maintenance + SEO or ads) from ~USD 450/mo, 3-month minimum. Ideal after launch."
+    },
+    {
+      "k": "faq.q5",
+      "es": "¿Cómo empezamos?",
+      "en": "How do we get started?"
+    },
+    {
+      "k": "faq.a5",
+      "es": "Usa el formulario de contacto o WhatsApp con tu objetivo, plazo y presupuesto aproximado. Recibirás respuesta en ~48 horas.",
+      "en": "Use the contact form or WhatsApp with your goal, timeline and approximate budget. You’ll get a reply within ~48 hours."
+    },
+    {
+      "k": "faq.more",
+      "es": "Ver todas las preguntas →",
+      "en": "See all questions →"
+    },
+    {
+      "k": "contact.title",
+      "es": "¿Listo para hacer crecer tu negocio online?",
+      "en": "Ready to grow your business online?"
+    },
+    {
+      "k": "contact.desc",
+      "es": "Cuéntanos tu proyecto y recibe respuesta en 48 horas con plan, plazos y estimación de inversión. Abiertos a nuevos clientes.",
+      "en": "Tell us about your project and get a reply within 48 hours with a plan, timeline and investment estimate. Open to new clients."
+    },
+    {
+      "k": "form.service",
+      "es": "¿Qué servicio necesitas?",
+      "en": "What service do you need?"
+    },
+    {
+      "k": "form.service.placeholder",
+      "es": "Selecciona un servicio",
+      "en": "Select a service"
+    },
+    {
+      "k": "form.service.fullstack",
+      "es": "Desarrollo full stack / plataforma",
+      "en": "Full-stack development / platform"
+    },
+    {
+      "k": "form.service.ecommerce",
+      "es": "Crear tienda online / e-commerce",
+      "en": "Build an online store / e-commerce"
+    },
+    {
+      "k": "form.service.landing",
+      "es": "Landing page de conversión",
+      "en": "Conversion landing page"
+    },
+    {
+      "k": "form.service.seo",
+      "es": "SEO básico",
+      "en": "Basic SEO"
+    },
+    {
+      "k": "form.service.geo",
+      "es": "SEO & GEO avanzado",
+      "en": "Advanced SEO & GEO"
+    },
+    {
+      "k": "form.service.marketing",
+      "es": "Campañas de marketing digital",
+      "en": "Digital marketing campaigns"
+    },
+    {
+      "k": "form.service.care",
+      "es": "Plan Care — mantenimiento mensual",
+      "en": "Care plan — monthly maintenance"
+    },
+    {
+      "k": "form.service.careGrowth",
+      "es": "Plan Care + Growth — mantenimiento + SEO/ads",
+      "en": "Care + Growth — maintenance + SEO/ads"
+    },
+    {
+      "k": "form.service.other",
+      "es": "Otro / no estoy seguro",
+      "en": "Other / not sure yet"
+    },
+    {
+      "k": "form.name",
+      "es": "Nombre",
+      "en": "Name"
+    },
+    {
+      "k": "form.namePh",
+      "es": "Tu nombre",
+      "en": "Your name"
+    },
+    {
+      "k": "form.email",
+      "es": "Correo",
+      "en": "Email"
+    },
+    {
+      "k": "form.emailPh",
+      "es": "tu@empresa.com",
+      "en": "you@company.com"
+    },
+    {
+      "k": "contact.budget",
+      "es": "Rango de Inversión (Opcional)",
+      "en": "Investment Range (Optional)"
+    },
+    {
+      "k": "contact.budget.opt1",
+      "es": "Explorando opciones / Startup",
+      "en": "Exploring options / Startup"
+    },
+    {
+      "k": "contact.budget.opt2",
+      "es": "SEO / setup desde ~USD 199",
+      "en": "SEO / setup from ~USD 199"
+    },
+    {
+      "k": "contact.budget.opt3",
+      "es": "Landing desde ~USD 600",
+      "en": "Landing from ~USD 600"
+    },
+    {
+      "k": "contact.budget.opt4",
+      "es": "USD 2.000 – 10.000",
+      "en": "USD 2,000 – 10,000"
+    },
+    {
+      "k": "contact.budget.opt5",
+      "es": "Más de USD 10.000",
+      "en": "More than USD 10,000"
+    },
+    {
+      "k": "contact.budget.opt6",
+      "es": "Plan Care ~USD 200–350 / mes",
+      "en": "Care plan ~USD 200–350 / mo"
+    },
+    {
+      "k": "contact.budget.opt7",
+      "es": "Care + Growth ~USD 450–800 / mes",
+      "en": "Care + Growth ~USD 450–800 / mo"
+    },
+    {
+      "k": "form.message",
+      "es": "Cuéntanos tu proyecto",
+      "en": "Tell us about your project"
+    },
+    {
+      "k": "form.messagePh",
+      "es": "¿Qué quieres construir? Objetivos, plazos, presupuesto aproximado...",
+      "en": "What do you want to build? Goals, timeline, budget range..."
+    },
+    {
+      "k": "form.submit",
+      "es": "Solicitar plan de proyecto",
+      "en": "Request a project plan"
+    },
+    {
+      "k": "lead.eyebrow",
+      "es": "¿Cómo podemos ayudarte?",
+      "en": "How can we help?"
+    },
+    {
+      "k": "lead.title",
+      "es": "Elige el servicio y te preparamos un plan",
+      "en": "Choose a service and we will prepare a plan"
+    },
+    {
+      "k": "lead.desc",
+      "es": "Sin compromiso. Respuesta en ~48 horas con alcance, plazos e inversión estimada.",
+      "en": "No commitment. Reply within ~48 hours with scope, timeline, and estimated investment."
+    },
+    {
+      "k": "lead.hint.ecommerce",
+      "es": "Catálogo, checkout y canal propio para vender",
+      "en": "Catalog, checkout, and your own sales channel"
+    },
+    {
+      "k": "lead.hint.landing",
+      "es": "Una oferta clara pensada para captar leads",
+      "en": "One clear offer built to capture leads"
+    },
+    {
+      "k": "lead.hint.seo",
+      "es": "Indexación limpia y base técnica en Google",
+      "en": "Clean indexing and technical foundations on Google"
+    },
+    {
+      "k": "lead.hint.geo",
+      "es": "Schema, entidades y visibilidad en buscadores e IA",
+      "en": "Schema, entities, and visibility in search + AI"
+    },
+    {
+      "k": "lead.hint.marketing",
+      "es": "Google Ads, Meta Ads y tracking de conversiones",
+      "en": "Google Ads, Meta Ads, and conversion tracking"
+    },
+    {
+      "k": "lead.hint.care",
+      "es": "Backups, seguridad, updates y soporte cada mes",
+      "en": "Backups, security, updates, and monthly support"
+    },
+    {
+      "k": "lead.hint.careGrowth",
+      "es": "Care + SEO o ads para seguir creciendo",
+      "en": "Care + SEO or ads to keep growing"
+    },
+    {
+      "k": "lead.hint.fullstack",
+      "es": "Producto a medida con panel y lógica de negocio",
+      "en": "Custom product with admin and business logic"
+    },
+    {
+      "k": "lead.skip",
+      "es": "Ir al formulario →",
+      "en": "Go to the form →"
+    },
+    {
+      "k": "lead.stickyText",
+      "es": "¿Listo para cotizar web, SEO o mantenimiento?",
+      "en": "Ready to quote a website, SEO, or maintenance?"
+    },
+    {
+      "k": "lead.stickyCta",
+      "es": "Elegir servicio",
+      "en": "Choose a service"
+    },
+    {
+      "k": "lead.stickyContact",
+      "es": "Contactar",
+      "en": "Contact"
+    },
+    {
+      "k": "footer.tagline",
+      "es": "Desarrollo web full stack, SEO, GEO y marketing digital para conseguir clientes online.",
+      "en": "Full-stack web development, SEO, GEO, and digital marketing to win clients online."
+    },
+    {
+      "k": "footer.areas",
+      "es": "Dinamarca · Chile · España · Remoto",
+      "en": "Denmark · Chile · Spain · Remote"
+    },
+    {
+      "k": "footer.contactHeading",
+      "es": "Contacto general",
+      "en": "General contact"
+    },
+    {
+      "k": "footer.contactForm",
+      "es": "Formulario de contacto",
+      "en": "Contact form"
+    },
+    {
+      "k": "footer.servicesHeading",
+      "es": "Servicios",
+      "en": "Services"
+    },
+    {
+      "k": "footer.linkServices",
+      "es": "Todos los servicios",
+      "en": "All services"
+    },
+    {
+      "k": "footer.linkShop",
+      "es": "Crear tienda online",
+      "en": "Build an online store"
+    },
+    {
+      "k": "footer.linkLandings",
+      "es": "Landing pages",
+      "en": "Landing pages"
+    },
+    {
+      "k": "footer.linkSeo",
+      "es": "SEO básico",
+      "en": "Basic SEO"
+    },
+    {
+      "k": "footer.linkGeo",
+      "es": "SEO & GEO avanzado",
+      "en": "Advanced SEO & GEO"
+    },
+    {
+      "k": "footer.linkMkt",
+      "es": "Marketing digital",
+      "en": "Digital marketing"
+    },
+    {
+      "k": "footer.linkWm",
+      "es": "Planes Care / mantenimiento",
+      "en": "Care plans / maintenance"
+    },
+    {
+      "k": "footer.linkPricing",
+      "es": "Precios",
+      "en": "Pricing"
+    },
+    {
+      "k": "footer.siteHeading",
+      "es": "Sitio",
+      "en": "Site"
+    },
+    {
+      "k": "footer.linkHome",
+      "es": "Inicio",
+      "en": "Home"
+    },
+    {
+      "k": "footer.linkTeam",
+      "es": "Equipo",
+      "en": "Team"
+    },
+    {
+      "k": "footer.linkProjects",
+      "es": "Proyectos",
+      "en": "Projects"
+    },
+    {
+      "k": "footer.linkReviews",
+      "es": "Reseñas",
+      "en": "Reviews"
+    },
+    {
+      "k": "footer.linkFaq",
+      "es": "FAQ",
+      "en": "FAQ"
+    },
+    {
+      "k": "footer.linkContact",
+      "es": "Contacto",
+      "en": "Contact"
+    },
+    {
+      "k": "footer",
+      "es": "© 2026 IrigoyenDev. Productos web hechos para vender y convertir.",
+      "en": "© 2026 IrigoyenDev. Web products built to perform and convert."
+    }
+  ]
+}
