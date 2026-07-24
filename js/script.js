@@ -152,14 +152,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initProjectVideos() {
-    const tryPlay = (video) => video.play().catch(() => {});
+    const isMobile = window.innerWidth <= 768;
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting) {
+                    if (video.getAttribute('preload') === 'none') {
+                        video.setAttribute('preload', 'metadata');
+                    }
+                    video.play().catch(() => {});
+                } else {
+                    if (!video.paused) {
+                        video.pause();
+                    }
+                }
+            });
+        }, { rootMargin: '150px 0px', threshold: 0.05 });
 
-    document.querySelectorAll('.project-video-wrapper video, .project-showcase-video video').forEach((video) => {
-        video.addEventListener('loadeddata', () => tryPlay(video), { once: true });
-        tryPlay(video);
-        document.addEventListener('click', () => tryPlay(video), { once: true });
-        document.addEventListener('touchstart', () => tryPlay(video), { once: true, passive: true });
-    });
+        document.querySelectorAll('video').forEach((video) => {
+            if (isMobile) {
+                video.setAttribute('preload', 'none');
+            }
+            observer.observe(video);
+        });
+    } else {
+        document.querySelectorAll('video').forEach((video) => {
+            video.play().catch(() => {});
+        });
+    }
 }
 
 // i18n Engine
@@ -655,8 +676,8 @@ if(contactForm) {
     });
 }
 
-// Lenis Smooth Scrolling Integration
-if (typeof Lenis !== 'undefined') {
+// Lenis Smooth Scrolling Integration (Desktop only to protect mobile TBT / battery)
+if (typeof Lenis !== 'undefined' && window.innerWidth > 768) {
     const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
