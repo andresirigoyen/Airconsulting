@@ -22,6 +22,11 @@
       "permanent": true
     },
     {
+      "source": "/ava7",
+      "destination": "/projects/ava7",
+      "permanent": true
+    },
+    {
       "source": "/calafate",
       "destination": "/projects/calafate",
       "permanent": true

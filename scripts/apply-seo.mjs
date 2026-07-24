@@ -146,15 +146,16 @@ const pages = [
         '@id': `${SITE}/#projects`,
         name: 'Casos de estudio IrigoyenDev',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, url: `${SITE}/projects/thebeebaby`, name: 'TheBeeBaby' },
-          { '@type': 'ListItem', position: 2, url: `${SITE}/projects/dahuss`, name: 'Dahuss Homes' },
-          { '@type': 'ListItem', position: 3, url: `${SITE}/projects/calafate`, name: 'Calafate Propiedades' },
-          { '@type': 'ListItem', position: 4, url: `${SITE}/projects/dragonmart`, name: 'Dragonmart' },
-          { '@type': 'ListItem', position: 5, url: `${SITE}/projects/rluabogados`, name: 'RLU Abogados' },
-          { '@type': 'ListItem', position: 6, url: `${SITE}/projects/familiainternacional`, name: 'Familia Internacional' },
-          { '@type': 'ListItem', position: 7, url: `${SITE}/projects/radiochicureo`, name: 'Radio Chicureo' },
-          { '@type': 'ListItem', position: 8, url: `${SITE}/projects/retorica`, name: 'Retórica Company' },
-          { '@type': 'ListItem', position: 9, url: `${SITE}/projects/floreria`, name: 'Florería El Nuevo Pensamiento' },
+          { '@type': 'ListItem', position: 1, url: `${SITE}/projects/ava7`, name: 'AVA7 Propiedades' },
+          { '@type': 'ListItem', position: 2, url: `${SITE}/projects/thebeebaby`, name: 'TheBeeBaby' },
+          { '@type': 'ListItem', position: 3, url: `${SITE}/projects/dahuss`, name: 'Dahuss Homes' },
+          { '@type': 'ListItem', position: 4, url: `${SITE}/projects/calafate`, name: 'Calafate Propiedades' },
+          { '@type': 'ListItem', position: 5, url: `${SITE}/projects/dragonmart`, name: 'Dragonmart' },
+          { '@type': 'ListItem', position: 6, url: `${SITE}/projects/rluabogados`, name: 'RLU Abogados' },
+          { '@type': 'ListItem', position: 7, url: `${SITE}/projects/familiainternacional`, name: 'Familia Internacional' },
+          { '@type': 'ListItem', position: 8, url: `${SITE}/projects/radiochicureo`, name: 'Radio Chicureo' },
+          { '@type': 'ListItem', position: 9, url: `${SITE}/projects/retorica`, name: 'Retórica Company' },
+          { '@type': 'ListItem', position: 10, url: `${SITE}/projects/floreria`, name: 'Florería El Nuevo Pensamiento' },
         ],
       },
       {
@@ -379,6 +380,16 @@ const pages = [
     ogDescription:
       'Plataforma inmobiliaria con catálogo, leads y herramientas de administración.',
     ogImage: `${SITE}/images/Dahuss/dahussheroe.png`,
+  }),
+  project({
+    slug: 'ava7',
+    title: 'AVA7 Propiedades — web inmobiliaria Viña del Mar | Caso IrigoyenDev',
+    description:
+      'Caso AVA7 Propiedades: sitio inmobiliario para venta y arriendo en Viña del Mar y Concón, con buscador de propiedades y captación de leads — IrigoyenDev.',
+    ogTitle: 'AVA7 Propiedades — Web inmobiliaria | IrigoyenDev',
+    ogDescription:
+      'Sitio inmobiliario para venta y arriendo en Viña del Mar y Concón, con buscador y captación de leads.',
+    ogImage: `${SITE}/images/ava7-mockuo.png`,
   }),
   project({
     slug: 'calafate',

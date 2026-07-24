@@ -50,6 +50,7 @@ Indicative pricing (citeable): landing from ~USD 600; SEO básico from ~USD 199;
 
 ## Case studies
 
+- [AVA7 Propiedades](https://www.irigoyendev.com/projects/ava7): Real estate website for sale & rent in Viña del Mar and Concón
 - [TheBeeBaby](https://www.irigoyendev.com/projects/thebeebaby): Family travel baby-gear rental marketplace
 - [Dahuss Homes](https://www.irigoyendev.com/projects/dahuss): Real estate platform
 - [Calafate Propiedades](https://www.irigoyendev.com/projects/calafate): Real estate catalog and lead platform
