@@ -129,7 +129,7 @@
         },
         {
           "q": "¿Cuánto cuesta un proyecto en Las Condes?",
-          "a": "Rangos en /precios (landings desde ~USD 600; productos comerciales ~USD 3.000–10.000). La cotización se ajusta al alcance."
+          "a": "Rangos en /precios (landings desde ~USD 600; productos comerciales ~desde ~USD 1.304). La cotización se ajusta al alcance."
         }
       ]
     },
@@ -953,7 +953,7 @@
         },
         {
           "q": "¿Qué rango tiene un producto web comercial para un equipo en Huechuraba?",
-          "a": "Orientativo USD 3.000–10.000; landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios."
+          "a": "Orientativo desde ~USD 1.304; landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios."
         },
         {
           "q": "¿Pueden mejorar un sitio corporativo lento del norte de Santiago?",
@@ -1061,7 +1061,7 @@
         },
         {
           "q": "¿Cuánto cuesta empezar con e-commerce ligero?",
-          "a": "Producto comercial orientativo USD 3.000–10.000. Cotización en https://www.irigoyendev.com/precios."
+          "a": "Producto comercial orientativo desde ~USD 1.304. Cotización en https://www.irigoyendev.com/precios."
         }
       ]
     },
@@ -1427,7 +1427,7 @@
         },
         {
           "q": "¿Cuál es el rango de una web de servicios B2B en PAC?",
-          "a": "Landings desde ~USD 600; productos comerciales USD 3.000–10.000 orientativos. https://www.irigoyendev.com/precios"
+          "a": "Landings desde ~USD 600; productos comerciales desde ~USD 1.304 orientativos. https://www.irigoyendev.com/precios"
         }
       ]
     },
@@ -1532,7 +1532,7 @@
         },
         {
           "q": "¿Qué rango tiene un sitio corporativo B2B?",
-          "a": "Producto comercial orientativo USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios."
+          "a": "Producto comercial orientativo desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios."
         }
       ]
     },
@@ -2108,7 +2108,7 @@
         },
         {
           "q": "¿Cuál es el rango de un sitio corporativo B2B en Lampa?",
-          "a": "Producto comercial orientativo USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios."
+          "a": "Producto comercial orientativo desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios."
         }
       ]
     },
@@ -2317,7 +2317,7 @@
         },
         {
           "q": "¿Qué rango tiene una web de servicios B2B en Paine?",
-          "a": "Landings desde ~USD 600; productos comerciales USD 3.000–10.000 orientativos."
+          "a": "Landings desde ~USD 600; productos comerciales desde ~USD 1.304 orientativos."
         }
       ]
     },

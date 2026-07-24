@@ -51,7 +51,7 @@ const PAGES = [
       },
       {
         q: '¿Cuánto cuesta un proyecto web?',
-        a: 'Landings desde ~USD 600; productos comerciales desde ~USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios.',
+        a: 'Landings desde ~USD 600; productos comerciales desde ~desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios.',
       },
     ],
   },
@@ -195,7 +195,7 @@ const PAGES = [
       },
       {
         q: 'What is your pricing for web development in Denmark?',
-        a: 'Commercial products from ~USD 3,000–10,000; landing pages from ~USD 600. Details at https://www.irigoyendev.com/precios.',
+        a: 'Commercial products from ~from ~USD 1,304; landing pages from ~USD 600. Details at https://www.irigoyendev.com/precios.',
       },
       {
         q: 'Do you speak Danish or English for local projects?',

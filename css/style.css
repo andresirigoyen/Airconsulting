@@ -155,15 +155,19 @@ a {
 
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0.75rem;
+  left: max(0.75rem, env(safe-area-inset-left));
+  right: max(0.75rem, env(safe-area-inset-right));
   z-index: 1000;
-  padding: var(--spacing-md) 0;
+  padding: 0.55rem 0;
   background: var(--nav-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  box-shadow:
+    0 4px 24px rgba(15, 23, 42, 0.06),
+    0 1px 2px rgba(15, 23, 42, 0.04);
   transition: var(--transition);
 }
 
@@ -524,19 +528,25 @@ html.dark-theme .hero {
   flex-direction: column;
   gap: 0.35rem;
   min-width: 0;
-  padding: 1.15rem 1.2rem;
+  padding: 1.25rem 1.3rem;
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   background: var(--surface-color);
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+  box-shadow:
+    0 4px 18px rgba(15, 23, 42, 0.04),
+    0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .service-shortcut:hover {
   border-color: color-mix(in srgb, var(--accent-color) 40%, var(--border-color));
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   color: inherit;
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.04);
 }
 
 .service-shortcut:focus-visible {
@@ -1881,15 +1891,21 @@ body.page-project main {
   position: relative;
   isolation: isolate;
   text-align: left;
-  min-height: clamp(220px, 32vw, 340px);
+  min-height: 0;
   display: flex;
   align-items: center;
-  padding: clamp(2.5rem, 5vw, 3.75rem) 0;
+  padding: clamp(2.25rem, 4.5vw, 3.5rem) 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   background-color: #0b1220;
   margin-top: 2rem;
   overflow: hidden;
+}
+
+/* Fade-in: opacity only — parent transform breaks/pauses child marquee in some browsers */
+.tools-banner.fade-in,
+.tools-banner.fade-in.visible {
+  transform: none;
 }
 
 .tools-banner__media {
@@ -1918,49 +1934,55 @@ body.page-project main {
 .tools-banner__content {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
-.tools-banner p {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  margin-bottom: var(--spacing-md);
-  color: rgba(255, 255, 255, 0.78);
+.tools-banner__title {
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  text-transform: none;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 1.25rem;
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.94);
 }
 
 .marquee-wrapper {
   overflow: hidden;
   width: 100%;
   position: relative;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  padding: 1rem 0;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  padding: 0.35rem 0;
 }
 
 .marquee {
   display: flex;
   width: max-content;
-  animation: scroll 25s linear infinite;
+  will-change: transform;
+  animation: tools-marquee 45s linear infinite;
+  animation-play-state: running;
 }
 
-.marquee:hover,
+.marquee-wrapper:hover .marquee,
 .marquee-wrapper:focus-within .marquee {
   animation-play-state: paused;
 }
 
 .tools-track {
   display: flex;
+  flex-shrink: 0;
   gap: var(--spacing-md);
   padding-right: var(--spacing-md);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+@keyframes tools-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -1968,6 +1990,7 @@ body.page-project main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
   padding: 8px 18px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -1975,6 +1998,7 @@ body.page-project main {
   font-size: 0.95rem;
   font-weight: 500;
   color: #0f172a;
+  white-space: nowrap;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   transition: var(--transition);
   cursor: default;
@@ -1986,6 +2010,7 @@ body.page-project main {
   width: 18px;
   height: 18px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .tool-badge:hover {
@@ -2017,6 +2042,25 @@ html.dark-theme .tool-badge:hover {
 
   .tools-banner__scrim {
     background: #0b1220;
+  }
+
+  .marquee {
+    animation: none !important;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    row-gap: 0.65rem;
+  }
+
+  .tools-track[aria-hidden="true"] {
+    display: none;
+  }
+
+  .marquee-wrapper {
+    mask-image: none;
+    -webkit-mask-image: none;
+    overflow: visible;
   }
 }
 
@@ -2183,17 +2227,20 @@ body.page-home .site-footer {
 
   .nav-links {
     position: absolute;
-    top: calc(100% + 1px);
+    top: calc(100% + 0.55rem);
     left: 0;
     right: 0;
     width: 100%;
     margin-left: 0;
-    background: var(--bg-color);
+    background: var(--nav-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     flex-direction: column;
     align-items: stretch;
     padding: var(--spacing-md) var(--spacing-lg);
     gap: var(--spacing-md);
-    border-top: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: calc(var(--radius-lg) + 4px);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.35s ease-in-out;
@@ -2434,14 +2481,31 @@ body.page-home .site-footer {
     text-align: center;
   }
 
-  .tools-banner p {
-    font-size: 0.75rem;
-    padding: 0 var(--spacing-sm);
+  .tools-banner {
+    padding: 1.75rem 0 1.5rem;
+  }
+
+  .tools-banner__title {
+    font-size: clamp(1.2rem, 5.2vw, 1.45rem);
+    line-height: 1.28;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+    max-width: none;
+  }
+
+  .marquee {
+    animation-duration: 55s;
   }
 
   .tool-badge {
-    font-size: 0.85rem;
-    padding: 6px 14px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    gap: 6px;
+  }
+
+  .tool-badge img {
+    width: 15px;
+    height: 15px;
   }
 
   .section-subtitle {
@@ -3768,16 +3832,23 @@ pricing-card,
   display: flex;
   flex-direction: column;
   scroll-margin-top: 6rem;
-  padding: var(--spacing-lg) 0 var(--spacing-md);
-  border-top: 3px solid var(--accent-color);
-  background: transparent;
-  transition: border-color 0.15s ease, opacity 0.15s ease;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface-color);
+  box-shadow:
+    0 4px 18px rgba(15, 23, 42, 0.04),
+    0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 pricing-card:hover,
 .pricing-card:hover {
-  border-top-color: color-mix(in srgb, var(--accent-color) 75%, #000);
-  opacity: 0.96;
+  border-color: color-mix(in srgb, var(--accent-color) 40%, var(--border-color));
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.04);
 }
 
 .pricing-card__title {
@@ -3819,10 +3890,25 @@ pricing-card:hover,
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
   scroll-margin-top: 6rem;
   padding: var(--spacing-lg);
-  border-top: 2px solid var(--accent-color);
-  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface-color);
+  box-shadow:
+    0 4px 18px rgba(15, 23, 42, 0.04),
+    0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  border-color: color-mix(in srgb, var(--accent-color) 40%, var(--border-color));
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.04);
 }
 
 .service-card__icon {
@@ -3865,6 +3951,10 @@ pricing-card:hover,
   font-weight: 600;
   color: var(--accent-color);
   margin-bottom: var(--spacing-sm);
+}
+
+.service-card .project-link {
+  margin-top: auto;
 }
 
 .service-card .project-results-list {

@@ -16,7 +16,9 @@ export const ENTITY = Object.freeze({
   indicativePricing: {
     landingFromUsd: 600,
     seoFromUsd: 199,
-    productRangeUsd: '3.000–10.000',
+    /** ~CLP 1.200.000 at FX_RATES.CLP (920) */
+    productFromUsd: 1304,
+    productRangeUsd: 'desde ~1.304',
     platformFromUsd: 10000,
     careFromUsd: 200,
   },

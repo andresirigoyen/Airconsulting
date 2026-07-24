@@ -375,7 +375,7 @@ const pages = {
                 </article>
                 <article class="service-card">
                     <h3 data-i18n="price.productTitle">Producto comercial</h3>
-                    <p class="price-range" data-i18n="mkt.priceProduct">USD 3.000 – 10.000</p>
+                    <p class="price-range" data-i18n="mkt.priceProduct">desde ~USD 1.304</p>
                     <p data-i18n="price.productDesc">Tienda online, plataforma con admin, o web corporativa con flujos de leads y contenido estructurado.</p>
                 </article>
                 <article class="service-card">
@@ -436,7 +436,7 @@ const pages = {
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q2">¿Cuánto cuesta una web o tienda online?</summary>
-                    <p class="money-copy" data-i18n-html="faqPage.a2Html">Rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~USD 3.000–10.000 y plataformas a medida desde ~USD 10.000. Detalle en <a href="/precios">precios</a>.</p>
+                    <p class="money-copy" data-i18n-html="faqPage.a2Html">Rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~desde ~USD 1.304 y plataformas a medida desde ~USD 10.000. Detalle en <a href="/precios">precios</a>.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q3">¿Ofrecen suscripción o mantenimiento mensual?</summary>

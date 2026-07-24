@@ -175,7 +175,7 @@ const pages = [
             name: '¿Cuánto cuesta un proyecto?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~USD 3.000–10.000 y plataformas a medida desde ~USD 10.000. Ver https://www.irigoyendev.com/precios',
+              text: 'Landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~desde ~USD 1.304 y plataformas a medida desde ~USD 10.000. Ver https://www.irigoyendev.com/precios',
             },
           },
           {
@@ -287,7 +287,7 @@ const pages = [
       'Cuánto cuesta una tienda online, precio desarrollo web Chile, presupuesto web e-commerce y tarifas de desarrollador web freelance. Rangos claros en USD.',
     ogTitle: 'Precios y tarifas desarrollador web freelance | IrigoyenDev',
     ogDescription:
-      'Presupuesto web e-commerce y precios de desarrollo web en Chile: landings desde ~USD 600, productos comerciales USD 3.000–10.000.',
+      'Presupuesto web e-commerce y precios de desarrollo web en Chile: landings desde ~USD 600, productos comerciales desde ~USD 1.304.',
     serviceName: 'Precios desarrollo web y e-commerce',
   }),
   {
@@ -329,7 +329,7 @@ const pages = [
             name: '¿Cuánto cuesta una web o tienda online?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~USD 3.000–10.000 y plataformas a medida desde ~USD 10.000. Detalle en https://www.irigoyendev.com/precios',
+              text: 'Rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~desde ~USD 1.304 y plataformas a medida desde ~USD 10.000. Detalle en https://www.irigoyendev.com/precios',
             },
           },
           {

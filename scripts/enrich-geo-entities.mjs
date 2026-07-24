@@ -27,7 +27,7 @@ const HUB_PACKS = {
       },
       {
         q: '¿Cuánto cuesta una tienda online en Santiago?',
-        a: `Producto comercial/e-commerce orientativo USD ${ENTITY.indicativePricing.productRangeUsd}. Landings desde ~USD ${ENTITY.indicativePricing.landingFromUsd}. Detalle en ${ENTITY.url}${ENTITY.pricingPath}.`,
+        a: `Producto comercial/e-commerce orientativo desde ~USD ${ENTITY.indicativePricing.productFromUsd}. Landings desde ~USD ${ENTITY.indicativePricing.landingFromUsd}. Detalle en ${ENTITY.url}${ENTITY.pricingPath}.`,
       },
       {
         q: '¿Atienden todo Santiago o solo comunas específicas?',
@@ -97,7 +97,7 @@ const REGION_PACKS = {
       },
       {
         q: '¿Cuál es el rango de un producto web comercial?',
-        a: `Orientativo USD ${ENTITY.indicativePricing.productRangeUsd}. Cotización en ${ENTITY.url}${ENTITY.contactPath}.`,
+        a: `Orientativo desde ~USD ${ENTITY.indicativePricing.productFromUsd}. Cotización en ${ENTITY.url}${ENTITY.contactPath}.`,
       },
       {
         q: '¿Cómo verifican la entidad del negocio para Google e IA?',
@@ -119,7 +119,7 @@ const COMUNA_PACKS = {
     faq: [
       {
         q: '¿Cuánto cuesta una landing de captación para un equipo en Las Condes?',
-        a: `Las landings orientativas parten desde ~USD ${ENTITY.indicativePricing.landingFromUsd}. Un producto comercial suele situarse en USD ${ENTITY.indicativePricing.productRangeUsd}. Cotizamos alcance exacto en ${ENTITY.url}${ENTITY.pricingPath} y el formulario de contacto.`,
+        a: `Las landings orientativas parten desde ~USD ${ENTITY.indicativePricing.landingFromUsd}. Un producto comercial parte desde ~USD ${ENTITY.indicativePricing.productFromUsd}. Cotizamos alcance exacto en ${ENTITY.url}${ENTITY.pricingPath} y el formulario de contacto.`,
       },
       {
         q: '¿Pueden mejorar la velocidad de un sitio corporativo lento en el oriente de Santiago?',
@@ -171,7 +171,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Cuál es el rango para una plataforma o producto web?',
-        a: `Productos comerciales orientativos: USD ${ENTITY.indicativePricing.productRangeUsd}; plataformas a medida desde ~USD ${ENTITY.indicativePricing.platformFromUsd}. Detalle en ${ENTITY.url}${ENTITY.pricingPath}.`,
+        a: `Productos comerciales orientativos desde ~USD ${ENTITY.indicativePricing.productFromUsd}; plataformas a medida desde ~USD ${ENTITY.indicativePricing.platformFromUsd}. Detalle en ${ENTITY.url}${ENTITY.pricingPath}.`,
       },
     ],
   },
@@ -259,7 +259,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Cuál es el rango para una tienda online?',
-        a: `Un producto comercial/e-commerce orientativo está en USD ${ENTITY.indicativePricing.productRangeUsd}. Cotización en ${ENTITY.url}${ENTITY.contactPath}.`,
+        a: `Un producto comercial/e-commerce orientativo parte desde ~USD ${ENTITY.indicativePricing.productFromUsd}. Cotización en ${ENTITY.url}${ENTITY.contactPath}.`,
       },
     ],
   },
@@ -431,7 +431,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Qué rango tiene un producto web comercial para un equipo en Huechuraba?',
-        a: 'Orientativo USD 3.000–10.000; landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios.',
+        a: 'Orientativo desde ~USD 1.304; landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios.',
       },
       {
         q: '¿Pueden mejorar un sitio corporativo lento del norte de Santiago?',
@@ -479,7 +479,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Cuánto cuesta empezar con e-commerce ligero?',
-        a: 'Producto comercial orientativo USD 3.000–10.000. Cotización en https://www.irigoyendev.com/precios.',
+        a: 'Producto comercial orientativo desde ~USD 1.304. Cotización en https://www.irigoyendev.com/precios.',
       },
     ],
   },
@@ -633,7 +633,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Cuál es el rango de una web de servicios B2B en PAC?',
-        a: 'Landings desde ~USD 600; productos comerciales USD 3.000–10.000 orientativos. https://www.irigoyendev.com/precios',
+        a: 'Landings desde ~USD 600; productos comerciales desde ~USD 1.304 orientativos. https://www.irigoyendev.com/precios',
       },
     ],
   },
@@ -677,7 +677,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Qué rango tiene un sitio corporativo B2B?',
-        a: 'Producto comercial orientativo USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios.',
+        a: 'Producto comercial orientativo desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios.',
       },
     ],
   },
@@ -919,7 +919,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Cuál es el rango de un sitio corporativo B2B en Lampa?',
-        a: 'Producto comercial orientativo USD 3.000–10.000. Detalle en https://www.irigoyendev.com/precios.',
+        a: 'Producto comercial orientativo desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios.',
       },
     ],
   },
@@ -1007,7 +1007,7 @@ const COMUNA_PACKS = {
       },
       {
         q: '¿Qué rango tiene una web de servicios B2B en Paine?',
-        a: 'Landings desde ~USD 600; productos comerciales USD 3.000–10.000 orientativos.',
+        a: 'Landings desde ~USD 600; productos comerciales desde ~USD 1.304 orientativos.',
       },
     ],
   },
