@@ -1931,6 +1931,16 @@ body.page-project main {
   opacity: 1;
 }
 
+.tools-banner__video.video--disabled {
+  display: none;
+}
+
+.tools-banner__media.media--static {
+  background:
+    linear-gradient(180deg, rgba(11, 18, 32, 0.35), rgba(11, 18, 32, 0.55)),
+    url('/images/video-fondo-poster.jpg') center / cover no-repeat;
+}
+
 .tools-banner__scrim {
   position: absolute;
   inset: 0;

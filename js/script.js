@@ -152,35 +152,64 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initProjectVideos() {
-    const isMobile = window.innerWidth <= 768;
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const video = entry.target;
-                if (entry.isIntersecting) {
-                    if (video.getAttribute('preload') === 'none') {
-                        video.setAttribute('preload', 'metadata');
-                    }
-                    video.play().catch(() => {});
-                } else {
-                    if (!video.paused) {
-                        video.pause();
-                    }
-                }
-            });
-        }, { rootMargin: '150px 0px', threshold: 0.05 });
+    const videos = document.querySelectorAll(
+        'video.tools-banner__video, video.pc-bg-avatar'
+    );
+    if (!videos.length) return;
 
-        document.querySelectorAll('video').forEach((video) => {
-            if (isMobile) {
-                video.setAttribute('preload', 'none');
-            }
-            observer.observe(video);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile =
+        window.matchMedia('(max-width: 768px)').matches ||
+        navigator.connection?.saveData === true;
+
+    // Mobile / save-data: never download multi-MB loops (huge PSI win).
+    if (isMobile || reduceMotion) {
+        videos.forEach((video) => {
+            video.pause();
+            video.removeAttribute('autoplay');
+            video.removeAttribute('src');
+            video.querySelectorAll('source').forEach((s) => s.remove());
+            video.load();
+            video.classList.add('video--disabled');
+            const host = video.closest('.tools-banner__media, .pc-bg') || video.parentElement;
+            if (host) host.classList.add('media--static');
         });
-    } else {
-        document.querySelectorAll('video').forEach((video) => {
+        return;
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        videos.forEach((video) => {
             video.play().catch(() => {});
         });
+        return;
     }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                const video = entry.target;
+                if (entry.isIntersecting) {
+                    if (video.dataset.lazyStarted !== '1') {
+                        video.dataset.lazyStarted = '1';
+                        if (video.dataset.src && !video.getAttribute('src')) {
+                            video.src = video.dataset.src;
+                            video.load();
+                        }
+                    }
+                    video.play().catch(() => {});
+                } else if (!video.paused) {
+                    video.pause();
+                }
+            });
+        },
+        { rootMargin: '120px 0px', threshold: 0.1 }
+    );
+
+    videos.forEach((video) => {
+        video.removeAttribute('autoplay');
+        video.setAttribute('preload', 'none');
+        observer.observe(video);
+    });
 }
 
 // i18n Engine
@@ -197,7 +226,7 @@ async function fetchLocale(lang) {
   if (!ALLOWED_LOCALES.has(lang)) {
     throw new Error(`Invalid locale: ${lang}`);
   }
-  const response = await fetch(`/locales/${lang}.json`, { cache: 'no-cache' });
+  const response = await fetch(`/locales/${lang}.json`, { cache: 'force-cache' });
   if (!response.ok) throw new Error(`Locale ${lang} not found`);
   return response.json();
 }
@@ -448,20 +477,37 @@ function initCurrencySelector() {
   });
 }
 
-async function loadLanguage(lang) {
+async function loadLanguage(lang, { force = false } = {}) {
   if (!ALLOWED_LOCALES.has(lang)) {
     lang = 'es';
   }
   try {
-    if (!Object.keys(englishTranslations).length) {
-      englishTranslations = await fetchLocale('en');
+    // HTML ships in Spanish — skip locale network on default first paint.
+    if (lang === 'es' && !force) {
+      currentTranslations = {};
+      document.documentElement.lang = 'es';
+      applyCurrency(localStorage.getItem('preferredCurrency') || currentCurrency || 'CLP');
+      localStorage.setItem('preferredLang', 'es');
+      const radio = document.querySelector('.lang-radio[value="es"]');
+      if (radio) radio.checked = true;
+      return;
     }
 
-    let translations = { ...englishTranslations };
-    if (lang !== 'en') {
-      const localized = await fetchLocale(lang);
-      translations = { ...translations, ...localized };
+    const locale = await fetchLocale(lang);
+    if (lang === 'en') {
+      englishTranslations = locale;
+    } else if (!Object.keys(englishTranslations).length) {
+      // Lazy English fallback only when needed for missing keys later.
+      fetchLocale('en')
+        .then((en) => {
+          englishTranslations = en;
+        })
+        .catch(() => {});
     }
+
+    const translations = Object.keys(englishTranslations).length
+      ? { ...englishTranslations, ...locale }
+      : locale;
 
     currentTranslations = translations;
     document.documentElement.lang = lang;
@@ -507,9 +553,7 @@ if (langMenuBtn && langDropdown) {
   langRadios.forEach(radio => {
     radio.addEventListener('change', (e) => {
       if(e.target.checked) {
-        loadLanguage(e.target.value);
-        // Optional: close dropdown on selection
-        // langDropdown.classList.remove('show');
+        loadLanguage(e.target.value, { force: true });
       }
     });
   });
@@ -761,49 +805,9 @@ function loadEnhancementModules() {
   });
 }
 
-function bindLazyVideos() {
-  const videos = document.querySelectorAll(
-    'video.tools-banner__video, video.pc-bg-avatar'
-  );
-  if (!videos.length) return;
-
-  const play = (video) => {
-    if (video.dataset.lazyStarted === '1') return;
-    video.dataset.lazyStarted = '1';
-    const p = video.play();
-    if (p && typeof p.catch === 'function') p.catch(() => {});
-  };
-
-  if (!('IntersectionObserver' in window)) {
-    videos.forEach(play);
-    return;
-  }
-
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const video = entry.target;
-        if (entry.isIntersecting) play(video);
-        else if (!video.paused) video.pause();
-      });
-    },
-    { rootMargin: '120px 0px', threshold: 0.15 }
-  );
-
-  videos.forEach((video) => {
-    video.removeAttribute('autoplay');
-    io.observe(video);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  bindLazyVideos();
-});
-
 window.addEventListener('load', () => {
   loadEnhancementModules();
 });
-
 // Category Filter for Projects
 document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');

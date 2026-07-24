@@ -117,6 +117,17 @@
   filter: contrast(1.1) brightness(0.9);
 }
 
+.pc-bg-avatar.video--disabled {
+  display: none;
+}
+
+.pc-card.media--static,
+.pc-card:has(.pc-bg-avatar.video--disabled) {
+  background:
+    linear-gradient(to top, rgba(15, 23, 42, 0.75) 0%, transparent 45%),
+    url('/images/Andres.jpeg') center top / cover no-repeat;
+}
+
 /* Effect Layer (Icon Pattern / Grain) */
 .pc-card::before {
   content: "";
