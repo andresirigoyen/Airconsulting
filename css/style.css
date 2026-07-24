@@ -664,20 +664,6 @@ html.dark-theme .hero-orb::after {
   padding-block: var(--spacing-lg);
 }
 
-.hero-brand {
-  font-size: clamp(1.75rem, 4vw, 2.35rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  margin: 0 0 var(--spacing-md);
-  color: var(--text-primary);
-}
-
-.hero-brand .logo__accent,
-.hero-brand .logo__dot {
-  color: var(--accent-color);
-}
-
 .hero-content h1 {
   margin-bottom: var(--spacing-lg);
   color: var(--text-primary);
@@ -694,7 +680,6 @@ html.dark-theme .hero-orb::after {
   text-shadow: none;
 }
 
-html.dark-theme .hero-brand,
 html.dark-theme .hero-content h1,
 html.dark-theme .hero p {
   color: #ffffff;
@@ -2007,6 +1992,8 @@ body.page-project main {
   background-color: #0b1220;
   margin-top: 2rem;
   overflow: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* Fade-in: opacity only — parent transform breaks/pauses child marquee in some browsers */
@@ -2052,6 +2039,7 @@ body.page-project main {
   position: relative;
   z-index: 1;
   width: 100%;
+  min-width: 0;
 }
 
 .tools-banner__title {
@@ -2068,6 +2056,8 @@ body.page-project main {
 .marquee-wrapper {
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   position: relative;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
@@ -2077,6 +2067,7 @@ body.page-project main {
 .marquee {
   display: flex;
   width: max-content;
+  max-width: none;
   will-change: transform;
   animation: tools-marquee 45s linear infinite;
   animation-play-state: running;
@@ -2163,10 +2154,17 @@ html.dark-theme .tool-badge:hover {
 
   .marquee {
     animation: none !important;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    will-change: auto;
+  }
+
+  .tools-track {
     flex-wrap: wrap;
     width: 100%;
     max-width: 100%;
-    justify-content: flex-start;
+    padding-right: 0;
     row-gap: 0.65rem;
   }
 
@@ -2177,7 +2175,7 @@ html.dark-theme .tool-badge:hover {
   .marquee-wrapper {
     mask-image: none;
     -webkit-mask-image: none;
-    overflow: visible;
+    overflow: hidden;
   }
 }
 
