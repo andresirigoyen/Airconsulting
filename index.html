@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html lang="es" data-i18n-title="home.metaTitle">
 <head>
-<!-- Google Tag Manager (deferred: idle / first interaction) -->
+<!-- Analytics consent (GTM loads only after accept) -->
 <script>
-window.dataLayer = window.dataLayer || [];
-(function () {
-  var loaded = false;
-  function loadGTM() {
-    if (loaded) return;
-    loaded = true;
-    var i = 'GTM-KD3BBZ78';
-    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-    var f = document.getElementsByTagName('script')[0];
-    var j = document.createElement('script');
-    j.async = true;
-    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
-    f.parentNode.insertBefore(j, f);
-    ['scroll', 'click', 'touchstart', 'keydown'].forEach(function (evt) {
-      window.removeEventListener(evt, loadGTM, { passive: true });
-    });
-  }
-  ['scroll', 'click', 'touchstart', 'keydown'].forEach(function (evt) {
-    window.addEventListener(evt, loadGTM, { once: true, passive: true });
-  });
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(loadGTM, { timeout: 4500 });
-  } else {
-    setTimeout(loadGTM, 4500);
-  }
-})();
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  analytics_storage:'denied',
+  functionality_storage:'granted',
+  security_storage:'granted',
+  wait_for_update:500
+});
 </script>
-<!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
+<script defer src="/js/consent-analytics.js"></script>
+<!-- End Analytics consent -->
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       try {
@@ -414,16 +400,13 @@ window.dataLayer = window.dataLayer || [];
     <link rel="apple-touch-icon" href="/favicon.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/consent.css">
     <link rel="preload" href="/css/profile-card.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/profile-card.css"></noscript>
 
 </head>
 <body class="page-home">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD3BBZ78"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
     <header class="site-header">
     <!-- Sticky Navigation -->
     <nav class="navbar" id="navbar" aria-label="Navegación principal" data-i18n-aria="a11y.navMain">
@@ -1444,6 +1427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="/#markets" data-i18n="footer.linkMarkets">Mercados</a></li>
                     <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
                     <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
+                    <li><a href="#" data-consent-open data-i18n="consent.settings">Cookies</a></li>
                     <li><a href="/llms.txt">llms.txt</a></li>
                     <li><a href="/sitemap.xml">Sitemap</a></li>
                 </ul>

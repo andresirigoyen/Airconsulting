@@ -883,5 +883,10 @@
   "proj.ava7.res3": "Contact channels (WhatsApp, phone, email) integrated into the experience.",
   "cta.ava7.title": "Want a real estate site that turns visits into inquiries?",
   "cta.ava7.desc": "We build sites like AVA7 Propiedades: clear branding, useful search, and direct capture for local agencies.",
-  "cta.ava7.btn": "Request project plan"
+  "cta.ava7.btn": "Request project plan",
+  "consent.title": "Cookies de analitica",
+  "consent.text": "Usamos Google Analytics (via GTM) apenas se aceitar, para compreender o uso do site. Sem publicidade de terceiros.",
+  "consent.accept": "Aceitar",
+  "consent.deny": "Recusar",
+  "consent.settings": "Cookies"
 }

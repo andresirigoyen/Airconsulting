@@ -887,5 +887,10 @@
   "proj.ava7.res3": "Canales de contacto (WhatsApp, teléfono, correo) integrados en la experiencia.",
   "cta.ava7.title": "¿Quieres una web inmobiliaria que convierta visitas en consultas?",
   "cta.ava7.desc": "Construimos sitios como AVA7 Propiedades: marca clara, buscador útil y captación directa para inmobiliarias locales.",
-  "cta.ava7.btn": "Solicitar plan de proyecto"
+  "cta.ava7.btn": "Solicitar plan de proyecto",
+  "consent.title": "Cookies de medición",
+  "consent.text": "Usamos Google Analytics (vía GTM) solo si lo aceptas, para entender el uso del sitio. Sin publicidad de terceros.",
+  "consent.accept": "Aceptar",
+  "consent.deny": "Rechazar",
+  "consent.settings": "Cookies"
 }

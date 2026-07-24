@@ -10,30 +10,42 @@ export const WA_BASE = 'https://wa.me/+4550249855?text=';
 /** Google Tag Manager container ID */
 export const GTM_ID = 'GTM-KD3BBZ78';
 
-/** Paste as high as possible in <head> on every public page. */
-export const GTM_HEAD = `<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');</script>
-<!-- End Google Tag Manager -->`;
+/** Consent Mode defaults + deferred consent UI (GTM loads only after accept). */
+export const GTM_HEAD = `<!-- Analytics consent (GTM loads only after accept) -->
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  analytics_storage:'denied',
+  functionality_storage:'granted',
+  security_storage:'granted',
+  wait_for_update:500
+});
+</script>
+<script defer src="/js/consent-analytics.js"></script>
+<!-- End Analytics consent -->`;
 
-/** Paste immediately after the opening <body> tag. */
-export const GTM_NOSCRIPT = `<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->`;
+/** No noscript GTM — analytics require consent. */
+export const GTM_NOSCRIPT = '';
 
 /**
- * Strip any existing GTM snippets so install stays idempotent.
+ * Strip any existing GTM / consent snippets so install stays idempotent.
  * @param {string} html
  */
 export function stripGtm(html) {
   return html
+    .replace(/<!-- Analytics consent[\s\S]*?<!-- End Analytics consent -->\s*/gi, '')
+    .replace(/<!-- Google Tag Manager \(deferred:[\s\S]*?<!-- End Google Tag Manager -->\s*/gi, '')
     .replace(/<!-- Google Tag Manager -->[\s\S]*?<!-- End Google Tag Manager -->\s*/gi, '')
     .replace(
       /<script>\s*\(function\(w,d,s,l,i\)\{w\[l\]=w\[l\]\|\|\[\];w\[l\]\.push\(\{'gtm\.start':[\s\S]*?googletagmanager\.com\/gtm\.js[\s\S]*?<\/script>\s*/gi,
+      ''
+    )
+    .replace(
+      /<script>\s*window\.dataLayer[\s\S]*?loadGTM[\s\S]*?<\/script>\s*<!-- End Google Tag Manager -->\s*/gi,
       ''
     )
     .replace(
@@ -43,7 +55,8 @@ export function stripGtm(html) {
     .replace(
       /<noscript>\s*<iframe[^>]*googletagmanager\.com\/ns\.html[^>]*>\s*<\/iframe>\s*<\/noscript>\s*/gi,
       ''
-    );
+    )
+    .replace(/<script[^>]*src="\/js\/consent-analytics\.js"[^>]*>\s*<\/script>\s*/gi, '');
 }
 
 /**
@@ -174,7 +187,8 @@ export function buildHead(opts) {
 ${jsonLd ? `\n${jsonLd}\n` : ''}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/favicon.svg">
-    <link rel="stylesheet" href="/css/style.css">`;
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/consent.css">`;
 }
 
 /**
@@ -236,6 +250,7 @@ export function buildFooter({
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
                     ${marketItems}
+                    <li><a href="#" data-consent-open data-i18n="consent.settings">Cookies</a></li>
                     <li><a href="/llms.txt">llms.txt</a></li>
                     <li><a href="/sitemap.xml">Sitemap</a></li>
                 </ul>
