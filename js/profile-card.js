@@ -61,15 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
       currentY += (targetY - currentY) * k;
       setVarsFromXY(currentX, currentY);
       const stillFar = Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05;
-      if (stillFar || document.hasFocus()) {
+      if (stillFar) {
         rafId = requestAnimationFrame(step);
       } else {
         running = false;
         lastTs = 0;
-        if (rafId) {
-          cancelAnimationFrame(rafId);
-          rafId = null;
-        }
+        rafId = null;
       }
     };
 
@@ -142,9 +139,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const initialX = (shell.clientWidth || 300) - ANIMATION_CONFIG.INITIAL_X_OFFSET;
     const initialY = ANIMATION_CONFIG.INITIAL_Y_OFFSET;
-    tiltEngine.setImmediate(initialX, initialY);
-    tiltEngine.toCenter();
-    tiltEngine.beginInitial(ANIMATION_CONFIG.INITIAL_DURATION);
+    tiltEngine.setImmediate(shell.clientWidth / 2, shell.clientHeight / 2);
+
+    // Defer intro tilt until the card is near viewport (avoids desktop TBT on load)
+    const kickoffIntro = () => {
+      tiltEngine.setImmediate(initialX, initialY);
+      tiltEngine.toCenter();
+      tiltEngine.beginInitial(ANIMATION_CONFIG.INITIAL_DURATION);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const introObserver = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((e) => e.isIntersecting)) return;
+          introObserver.disconnect();
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(kickoffIntro, { timeout: 2000 });
+          } else {
+            setTimeout(kickoffIntro, 400);
+          }
+        },
+        { rootMargin: '80px 0px', threshold: 0.15 }
+      );
+      introObserver.observe(wrap);
+    }
 
     initVideoControls(wrap, shell);
   }

@@ -616,6 +616,10 @@ html.dark-theme .hero {
   z-index: 0;
   pointer-events: none;
   opacity: 0.82;
+  /* CSS fallback until WebGL loads (or forever on mobile / reduced-motion) */
+  background:
+    radial-gradient(ellipse 70% 60% at 70% 40%, rgba(37, 99, 235, 0.22), transparent 60%),
+    radial-gradient(ellipse 50% 45% at 20% 70%, rgba(5, 25, 77, 0.12), transparent 55%);
 }
 
 html.dark-theme .hero-orb {

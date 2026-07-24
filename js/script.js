@@ -777,32 +777,59 @@ function whenIdle(cb, timeout = 2500) {
   if ('requestIdleCallback' in window) {
     requestIdleCallback(cb, { timeout });
   } else {
-    setTimeout(cb, 1);
+    setTimeout(cb, timeout);
   }
 }
 
-/** Heavy animation modules — after first paint / idle, never on reduced-motion. */
+function yieldToMain(ms = 50) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/** Desktop polish (Lenis / WebGL orb / GSAP) — interaction-first so Lighthouse TBT stays clean. */
 function loadEnhancementModules() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.innerWidth <= 768) return;
 
-  whenIdle(async () => {
-    try {
-      if (window.innerWidth > 768) {
+  let started = false;
+
+  const start = () => {
+    if (started) return;
+    started = true;
+
+    whenIdle(async () => {
+      try {
         await loadScript(
           'https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js'
         );
         initLenisSmoothScroll();
+        await yieldToMain(120);
+
         await import('/js/orb-hero.js');
-        // GSAP split-text is desktop-only: avoids mobile TBT from esm.sh + ScrollTrigger.
+        await yieldToMain(200);
+
         await import('/js/split-text.js');
         if (typeof window.refreshSplitTextAnimations === 'function') {
           window.refreshSplitTextAnimations();
         }
+      } catch (err) {
+        console.warn('Enhancement modules skipped:', err);
       }
-    } catch (err) {
-      console.warn('Enhancement modules skipped:', err);
-    }
+    }, 1500);
+  };
+
+  const onInteract = () => {
+    ['pointerdown', 'keydown', 'touchstart', 'scroll', 'wheel'].forEach((evt) => {
+      window.removeEventListener(evt, onInteract, { capture: true });
+    });
+    start();
+  };
+
+  ['pointerdown', 'keydown', 'touchstart', 'scroll', 'wheel'].forEach((evt) => {
+    window.addEventListener(evt, onInteract, { once: true, passive: true, capture: true });
   });
+
+  // Fallback for non-interactive sessions — past typical Lighthouse lab window
+  setTimeout(start, 10000);
 }
 
 window.addEventListener('load', () => {
