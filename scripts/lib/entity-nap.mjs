@@ -23,8 +23,8 @@ export const ENTITY = Object.freeze({
     careFromUsd: 200,
   },
   sameAs: [
-    'https://www.irigoyendev.com/',
     'https://github.com/andresirigoyen',
+    'https://www.linkedin.com/in/andresirigoyen/',
   ],
   contactPath: '/#contact',
   pricingPath: '/precios',

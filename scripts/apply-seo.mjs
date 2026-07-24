@@ -57,7 +57,10 @@ const pages = [
           'Marketplaces',
           'SEO',
         ],
-        sameAs: [],
+        sameAs: [
+          'https://github.com/andresirigoyen',
+          'https://www.linkedin.com/in/andresirigoyen/',
+        ],
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
@@ -87,7 +90,10 @@ const pages = [
           { '@type': 'Country', name: 'Denmark' },
           { '@type': 'Country', name: 'Spain' },
         ],
-        sameAs: [`${SITE}/`, 'https://github.com/andresirigoyen'],
+        sameAs: [
+          'https://github.com/andresirigoyen',
+          'https://www.linkedin.com/in/andresirigoyen/',
+        ],
       },
       {
         '@context': 'https://schema.org',
@@ -596,13 +602,23 @@ function buildHead(page) {
           .join('\n')
       : '';
 
+  const isGlobalPage = ['/', '/en', '/da', '/es'].includes(page.path);
+  const hreflangTags = isGlobalPage
+    ? `\n    <link rel="alternate" hreflang="es" href="${SITE}/">` +
+      `\n    <link rel="alternate" hreflang="en" href="${SITE}/en">` +
+      `\n    <link rel="alternate" hreflang="da" href="${SITE}/da">` +
+      `\n    <link rel="alternate" hreflang="x-default" href="${SITE}/">`
+    : '';
+
   return `    <title>${page.title}</title>
     <meta name="description" content="${escapeAttr(page.description)}"${descAttr}>
     <meta name="author" content="Andrés Irigoyen">
     <meta name="robots" content="${page.robots}">
     <meta name="googlebot" content="${page.robots}">
     <meta name="theme-color" content="#2563eb">
-    <link rel="canonical" href="${canonical}">
+    <link rel="canonical" href="${canonical}">${hreflangTags}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" type="text/plain" title="LLM content guide" href="${SITE}/llms.txt">
     <link rel="author" href="${SITE}/">
