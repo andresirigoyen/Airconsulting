@@ -790,6 +790,27 @@ html.hero-orb-static #hero-orb {
   display: block;
 }
 
+.project-card__media {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card__media:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: var(--radius-lg);
+}
+
+.project-card__media .project-image {
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.project-card__media:hover .project-image {
+  transform: scale(1.015);
+}
+
 html.dark-theme .project-image {
   background-color: var(--surface-color);
 }
@@ -927,6 +948,80 @@ html.dark-theme .project-filters {
   flex-grow: 1;
 }
 
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-card__header h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: clamp(1.25rem, 2.6vw, 1.65rem);
+  font-weight: 700;
+}
+
+.project-card__toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+  flex-shrink: 0;
+  border-radius: 999px;
+}
+
+.project-card__toggle:hover {
+  background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+}
+
+.project-card__toggle:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.project-card__chevron {
+  flex-shrink: 0;
+  color: var(--accent-color);
+  transition: transform 0.25s ease;
+}
+
+.project-card.is-open .project-card__chevron {
+  transform: rotate(180deg);
+}
+
+.project-card__details {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+}
+
+.project-card__details > p {
+  overflow: hidden;
+  margin: 0;
+  min-height: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease, margin 0.28s ease;
+}
+
+.project-card.is-open .project-card__details {
+  grid-template-rows: 1fr;
+}
+
+.project-card.is-open .project-card__details > p {
+  margin-top: var(--spacing-sm);
+  opacity: 1;
+}
+
 .project-content h3 {
   margin-bottom: var(--spacing-sm);
   font-size: clamp(1.5rem, 3vw, 2rem);
@@ -939,6 +1034,11 @@ html.dark-theme .project-filters {
   font-size: 1rem;
   line-height: 1.75;
   color: #3f3f46;
+}
+
+.project-card__details > p {
+  margin-bottom: 0;
+  flex-grow: 0;
 }
 
 html.dark-theme .project-content p {

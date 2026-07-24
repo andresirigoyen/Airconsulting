@@ -888,5 +888,7 @@
   "consent.text": "Vi anvander Google Analytics (via GTM) bara om du godkanner, for att forsta hur webbplatsen anvands. Ingen tredjepartsannonser.",
   "consent.accept": "Godkann",
   "consent.deny": "Avvisa",
-  "consent.settings": "Cookies"
+  "consent.settings": "Cookies",
+  "project.openCase": "Öppna fallstudie",
+  "project.toggleDesc": "Visa eller dölj beskrivning"
 }

@@ -892,5 +892,7 @@
   "consent.text": "We use Google Analytics (via GTM) only if you accept, to understand how the site is used. No third-party ads.",
   "consent.accept": "Accept",
   "consent.deny": "Reject",
-  "consent.settings": "Cookies"
+  "consent.settings": "Cookies",
+  "project.openCase": "Open case study",
+  "project.toggleDesc": "Show or hide description"
 }

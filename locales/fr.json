@@ -888,5 +888,7 @@
   "consent.text": "Nous utilisons Google Analytics (via GTM) uniquement si vous acceptez, pour comprendre l usage du site. Pas de publicite tierce.",
   "consent.accept": "Accepter",
   "consent.deny": "Refuser",
-  "consent.settings": "Cookies"
+  "consent.settings": "Cookies",
+  "project.openCase": "Ouvrir le cas client",
+  "project.toggleDesc": "Afficher ou masquer la description"
 }

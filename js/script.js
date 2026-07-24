@@ -838,6 +838,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Collapsible project descriptions (arrow toggle)
+    document.querySelectorAll('.project-card__toggle').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.project-card');
+            if (!card) return;
+            const open = !card.classList.contains('is-open');
+            card.classList.toggle('is-open', open);
+            btn.setAttribute('aria-expanded', String(open));
+        });
+    });
+
     // Scroll indicators for filter bar
     const scrollWrapper = document.querySelector('.scroll-fade-wrapper');
     const filtersContainer = document.querySelector('.project-filters');

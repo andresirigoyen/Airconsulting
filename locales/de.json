@@ -888,5 +888,7 @@
   "consent.text": "Wir nutzen Google Analytics (via GTM) nur nach Zustimmung, um die Nutzung der Website zu verstehen. Keine Drittanbieter-Werbung.",
   "consent.accept": "Akzeptieren",
   "consent.deny": "Ablehnen",
-  "consent.settings": "Cookies"
+  "consent.settings": "Cookies",
+  "project.openCase": "Fallstudie öffnen",
+  "project.toggleDesc": "Beschreibung ein- oder ausblenden"
 }
