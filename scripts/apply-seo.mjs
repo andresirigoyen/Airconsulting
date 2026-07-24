@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chileMultiregionAreaServed } from './lib/chile-geo.mjs';
-import { GTM_HEAD, GTM_NOSCRIPT } from './lib/page-chrome.mjs';
+import { GTM_HEAD, GTM_NOSCRIPT, stripGtm } from './lib/page-chrome.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -641,6 +641,7 @@ function patchFile(page) {
     return;
   }
   let html = fs.readFileSync(abs, 'utf8');
+  html = stripGtm(html);
 
   // Private quote doc: only inject robots noindex without rewriting the whole head.
   if (page.skipFullSeo) {

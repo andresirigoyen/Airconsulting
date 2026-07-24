@@ -25,6 +25,39 @@ export const GTM_NOSCRIPT = `<!-- Google Tag Manager (noscript) -->
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->`;
 
+/**
+ * Strip any existing GTM snippets so install stays idempotent.
+ * @param {string} html
+ */
+export function stripGtm(html) {
+  return html
+    .replace(/<!-- Google Tag Manager -->[\s\S]*?<!-- End Google Tag Manager -->\s*/gi, '')
+    .replace(
+      /<script>\s*\(function\(w,d,s,l,i\)\{w\[l\]=w\[l\]\|\|\[\];w\[l\]\.push\(\{'gtm\.start':[\s\S]*?googletagmanager\.com\/gtm\.js[\s\S]*?<\/script>\s*/gi,
+      ''
+    )
+    .replace(
+      /<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->\s*/gi,
+      ''
+    )
+    .replace(
+      /<noscript>\s*<iframe[^>]*googletagmanager\.com\/ns\.html[^>]*>\s*<\/iframe>\s*<\/noscript>\s*/gi,
+      ''
+    );
+}
+
+/**
+ * Ensure exactly one GTM head + body install.
+ * @param {string} html
+ */
+export function ensureGtm(html) {
+  let out = stripGtm(html);
+  if (!/<head>/i.test(out) || !/<body[^>]*>/i.test(out)) return html;
+  out = out.replace(/<head>/i, `<head>\n${GTM_HEAD}`);
+  out = out.replace(/<body([^>]*)>/i, `<body$1>\n${GTM_NOSCRIPT}`);
+  return out;
+}
+
 /** @param {string} message */
 export function waLink(message) {
   return `${WA_BASE}${encodeURIComponent(message)}`;

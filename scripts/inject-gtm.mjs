@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { GTM_HEAD, GTM_NOSCRIPT, GTM_ID } from './lib/page-chrome.mjs';
+import { ensureGtm } from './lib/page-chrome.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -27,31 +27,10 @@ let patched = 0;
 let skipped = 0;
 
 for (const file of walk(root)) {
-  let html = fs.readFileSync(file, 'utf8');
-  let changed = false;
-
-  if (!html.includes('googletagmanager.com/gtm.js')) {
-    if (!/<head>/i.test(html)) {
-      console.warn('No <head>:', path.relative(root, file));
-      skipped += 1;
-      continue;
-    }
-    html = html.replace(/<head>/i, `<head>\n${GTM_HEAD}`);
-    changed = true;
-  }
-
-  if (!html.includes('googletagmanager.com/ns.html')) {
-    if (!/<body[^>]*>/i.test(html)) {
-      console.warn('No <body>:', path.relative(root, file));
-      skipped += 1;
-      continue;
-    }
-    html = html.replace(/<body([^>]*)>/i, `<body$1>\n${GTM_NOSCRIPT}`);
-    changed = true;
-  }
-
-  if (changed) {
-    fs.writeFileSync(file, html);
+  const before = fs.readFileSync(file, 'utf8');
+  const after = ensureGtm(before);
+  if (after !== before) {
+    fs.writeFileSync(file, after);
     patched += 1;
     console.log('Patched', path.relative(root, file));
   } else {
