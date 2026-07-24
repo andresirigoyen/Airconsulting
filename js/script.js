@@ -676,40 +676,133 @@ if(contactForm) {
     });
 }
 
-// Lenis Smooth Scrolling Integration (Desktop only to protect mobile TBT / battery)
-if (typeof Lenis !== 'undefined' && window.innerWidth > 768) {
-    const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smooth: true,
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smoothTouch: false,
-        touchMultiplier: 2,
-        prevent: (node) => node.closest && !!node.closest('#lang-dropdown'),
-    });
+// Lenis: desktop-only, loaded after idle to keep mobile TBT clean
+function initLenisSmoothScroll() {
+  if (window.innerWidth <= 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+  if (typeof Lenis === 'undefined') return;
 
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smoothTouch: false,
+    touchMultiplier: 2,
+    prevent: (node) => node.closest && !!node.closest('#lang-dropdown'),
+  });
+
+  function raf(time) {
+    lenis.raf(time);
     requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 
-    // Update smooth scrolling for anchor links to use Lenis
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                e.preventDefault();
-                lenis.scrollTo(targetElement);
-            }
-        });
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        lenis.scrollTo(targetElement);
+      }
     });
+  });
 }
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const existing = document.querySelector(`script[src="${src}"]`);
+    if (existing) {
+      resolve();
+      return;
+    }
+    const s = document.createElement('script');
+    s.src = src;
+    s.async = true;
+    s.onload = () => resolve();
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+function whenIdle(cb, timeout = 2500) {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(cb, { timeout });
+  } else {
+    setTimeout(cb, 1);
+  }
+}
+
+/** Heavy animation modules — after first paint / idle, never on reduced-motion. */
+function loadEnhancementModules() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  whenIdle(async () => {
+    try {
+      if (window.innerWidth > 768) {
+        await loadScript(
+          'https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js'
+        );
+        initLenisSmoothScroll();
+        await import('/js/orb-hero.js');
+        // GSAP split-text is desktop-only: avoids mobile TBT from esm.sh + ScrollTrigger.
+        await import('/js/split-text.js');
+        if (typeof window.refreshSplitTextAnimations === 'function') {
+          window.refreshSplitTextAnimations();
+        }
+      }
+    } catch (err) {
+      console.warn('Enhancement modules skipped:', err);
+    }
+  });
+}
+
+function bindLazyVideos() {
+  const videos = document.querySelectorAll(
+    'video.tools-banner__video, video.pc-bg-avatar'
+  );
+  if (!videos.length) return;
+
+  const play = (video) => {
+    if (video.dataset.lazyStarted === '1') return;
+    video.dataset.lazyStarted = '1';
+    const p = video.play();
+    if (p && typeof p.catch === 'function') p.catch(() => {});
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    videos.forEach(play);
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) play(video);
+        else if (!video.paused) video.pause();
+      });
+    },
+    { rootMargin: '120px 0px', threshold: 0.15 }
+  );
+
+  videos.forEach((video) => {
+    video.removeAttribute('autoplay');
+    io.observe(video);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  bindLazyVideos();
+});
+
+window.addEventListener('load', () => {
+  loadEnhancementModules();
+});
 
 // Category Filter for Projects
 document.addEventListener('DOMContentLoaded', () => {

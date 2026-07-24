@@ -11,7 +11,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-      try { if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme'); } catch (_) {}
+      try {
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-theme');
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth <= 768) {
+          document.documentElement.classList.add('hero-orb-static');
+        }
+      } catch (_) {}
     </script>
     <title>Desarrollador web freelance Chile | Full stack, tiendas y landings — IrigoyenDev</title>
     <meta name="description" content="Desarrollador web freelance en Chile: desarrollo web full stack, crear tienda online Chile y landings de conversión. IrigoyenDev — también España, Dinamarca y remoto.">
@@ -386,7 +391,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="apple-touch-icon" href="/favicon.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/profile-card.css">
+    <link rel="preload" href="/css/profile-card.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/profile-card.css"></noscript>
 
 </head>
 <body class="page-home">
@@ -520,7 +526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card: AVA7 Propiedades -->
             <article class="project-card fade-in" data-category="realestate">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/ava7-mockuo.png" alt="AVA7 Propiedades — captura de la web inmobiliaria en Viña del Mar" class="project-image" id="thumb-ava7">
+                <picture><source type="image/webp" srcset="/images/ava7-mockuo.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/ava7-mockuo.png" alt="AVA7 Propiedades — captura de la web inmobiliaria en Viña del Mar" class="project-image" id="thumb-ava7"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.ava7.title">AVA7 Propiedades</h3>
                     <p data-i18n="proj.ava7.desc">Web inmobiliaria para venta y arriendo en Viña del Mar y Concón: buscador multi-filtro, marca local costera y captación directa por WhatsApp y contacto.</p>
@@ -536,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
             <!-- Project Card: Calafate -->
             <article class="project-card fade-in" data-category="realestate">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/calafate-mockup.png" alt="Calafate Propiedades — captura de la plataforma inmobiliaria" class="project-image" id="thumb-calafate">
+                <picture><source type="image/webp" srcset="/images/calafate-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/calafate-mockup.png" alt="Calafate Propiedades — captura de la plataforma inmobiliaria" class="project-image" id="thumb-calafate"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.calafate.title">Calafate Propiedades</h3>
                     <p data-i18n="proj.calafate.desc">Ecosistema inmobiliario diseñado para vender: catálogo ultrarrápido que retiene visitas, embudos automatizados para captar prospectos y un panel privado que centraliza tu operación diaria.</p>
@@ -552,7 +558,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card 1 -->
             <article class="project-card fade-in" data-category="marketplaces">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/thebeebaby-mockup.png" alt="TheBeeBaby — captura de la plataforma de alquiler para familias viajeras" class="project-image" id="thumb-1">
+                <picture><source type="image/webp" srcset="/images/thebeebaby-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/thebeebaby-mockup.png" alt="TheBeeBaby — captura de la plataforma de alquiler para familias viajeras" class="project-image" id="thumb-1"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.thebeebaby.title">TheBeeBaby</h3>
                     <p data-i18n="proj.thebeebaby.desc">Marketplace internacional escalable. Digitaliza y automatiza la oferta y demanda con flujos geolocalizados, pagos seguros y herramientas autónomas para proveedores.</p>
@@ -568,7 +574,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card: RLU Abogados -->
             <article class="project-card fade-in" data-category="legal">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/rluabogados-mockup.png" alt="Ruiz Leiva Abogados — captura de la web corporativa legal" class="project-image" id="thumb-rluabogados">
+                <picture><source type="image/webp" srcset="/images/rluabogados-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/rluabogados-mockup.png" alt="Ruiz Leiva Abogados — captura de la web corporativa legal" class="project-image" id="thumb-rluabogados"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.rluabogados.name">Ruiz Leiva Abogados</h3>
                     <p data-i18n="proj.rluabogados.descCard">Plataforma legal corporativa con Next.js App Router, captación de leads y panel de administración seguro.</p>
@@ -584,7 +590,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card: Familia Internacional -->
             <article class="project-card fade-in" data-category="legal">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/familiainternacional-mockup.png" alt="Familia Internacional — captura del sitio institucional" class="project-image" id="thumb-familiainternacional">
+                <picture><source type="image/webp" srcset="/images/familiainternacional-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/familiainternacional-mockup.png" alt="Familia Internacional — captura del sitio institucional" class="project-image" id="thumb-familiainternacional"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.familiainternacional.name">Familia Internacional</h3>
                     <p data-i18n="proj.familiainternacional.descCard">Sitio web institucional para estudio jurídico especializado en Derecho Internacional de Familia, con diseño premium y atención bilingüe.</p>
@@ -600,7 +606,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card 0: DragonMart -->
             <article class="project-card fade-in" data-category="b2b">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/dragonmart-mockup.png" alt="Dragonmart — captura de la plataforma de sourcing internacional" class="project-image" id="thumb-dragonmart">
+                <picture><source type="image/webp" srcset="/images/dragonmart-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/dragonmart-mockup.png" alt="Dragonmart — captura de la plataforma de sourcing internacional" class="project-image" id="thumb-dragonmart"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.dragonmart.name">Dragonmart</h3>
                     <p data-i18n="proj.dragonmart.desc">Portal B2B de importaciones que proyecta autoridad corporativa, cualifica solicitudes comerciales automáticamente y reduce drásticamente las horas de atención manual.</p>
@@ -616,7 +622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card 2 -->
             <article class="project-card fade-in" data-category="realestate">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/dahuss-mockup.png" alt="Dahuss Homes — captura de la plataforma inmobiliaria" class="project-image" id="thumb-2">
+                <picture><source type="image/webp" srcset="/images/dahuss-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/dahuss-mockup.png" alt="Dahuss Homes — captura de la plataforma inmobiliaria" class="project-image" id="thumb-2"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.dahuss.title">Dahuss Homes</h3>
                     <p data-i18n="proj.dahuss.desc">Solución PropTech integral que convierte tráfico en compradores de alto valor mediante búsquedas optimizadas y un sistema seguro para gestionar inventario sin fricciones.</p>
@@ -632,7 +638,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card 3 -->
             <article class="project-card fade-in" data-category="events">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/retorica-mockup.png" alt="Retórica — captura de la plataforma corporativa de marca" class="project-image" id="thumb-3">
+                <picture><source type="image/webp" srcset="/images/retorica-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/retorica-mockup.png" alt="Retórica — captura de la plataforma corporativa de marca" class="project-image" id="thumb-3"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.retorica.title">Retórica</h3>
                     <p data-i18n="proj.retorica.desc">Experiencia de marca inmersiva que consolida múltiples líneas de negocio en un solo canal de adquisición, transformando visitantes ocasionales en clientes corporativos calificados.</p>
@@ -648,7 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card 4 -->
             <article class="project-card fade-in" data-category="local">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/floreria-mockup.png" alt="Florería El Nuevo Pensamiento — captura del sitio de la florería" class="project-image" id="thumb-4">
+                <picture><source type="image/webp" srcset="/images/floreria-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/floreria-mockup.png" alt="Florería El Nuevo Pensamiento — captura del sitio de la florería" class="project-image" id="thumb-4"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.floreria.title">Florería El Nuevo Pensamiento</h3>
                     <p data-i18n="proj.floreria.desc">Motor de ventas locales 24/7. Dominio orgánico en Google (SEO local), catálogo de alta velocidad y un embudo directo a WhatsApp que multiplica pedidos sin pagar comisiones.</p>
@@ -664,7 +670,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- Project Card 5: Radio Chicureo -->
             <article class="project-card fade-in" data-category="media">
-                <img loading="lazy" decoding="async" width="800" height="600" src="/images/radiochicureo-mockup.png" alt="Radio Chicureo — captura de la plataforma web de radio online" class="project-image" id="thumb-radiochicureo">
+                <picture><source type="image/webp" srcset="/images/radiochicureo-mockup.webp"><img loading="lazy" decoding="async" width="800" height="600" src="/images/radiochicureo-mockup.png" alt="Radio Chicureo — captura de la plataforma web de radio online" class="project-image" id="thumb-radiochicureo"></picture>
                 <div class="project-content">
                     <h3 data-i18n="proj.radiochicureo.title">Radio Chicureo</h3>
                     <p data-i18n="proj.radiochicureo.desc">Portal de medios 100% monetizable: transmisión en vivo fluida, gestor de contenidos propio y espacios publicitarios dinámicos para maximizar el retorno de anunciantes.</p>
@@ -1017,7 +1023,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Tools Banner Section -->
     <section class="tools-banner fade-in" aria-label="Stack tecnológico">
         <div class="tools-banner__media" aria-hidden="true">
-            <video class="tools-banner__video" src="/images/video-fondo.mp4" autoplay muted loop playsinline preload="none"></video>
+            <video class="tools-banner__video" src="/images/video-fondo.mp4" muted loop playsinline preload="none"></video>
             <div class="tools-banner__scrim"></div>
         </div>
         <div class="container tools-banner__content">
@@ -1025,56 +1031,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="marquee-wrapper">
                 <div class="marquee">
                     <div class="tools-track">
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt=""> VS Code</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/cursor/000000" alt=""> Cursor AI</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/github/181717" alt=""> GitHub</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/vercel/000000" alt=""> Vercel</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt=""> AWS</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt=""> Azure</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/react/61DAFB" alt=""> React</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/nextdotjs/000000" alt=""> Next.js</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/astro/BC52EE" alt=""> Astro</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/nodedotjs/339933" alt=""> Node.js</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/supabase/3FCF8E" alt=""> Supabase</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt=""> Tailwind CSS</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/mercadopago/FFE600" alt=""> Mercado Libre</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/stripe/635BFF" alt=""> Stripe</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/wordpress/21759B" alt=""> WordPress</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/shopify/96BF48" alt=""> Shopify</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googleanalytics/E37400" alt=""> Google Analytics</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googletagmanager/246FDB" alt=""> Google Tag Manager</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt=""> Google Search Console</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googlemybusiness/4285F4" alt=""> Google Business Profile</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googleads/4285F4" alt=""> Google Ads</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/pagespeedinsights/4285F4" alt=""> PageSpeed Insights</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/hotjar/FF3C00" alt=""> Hotjar</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/meta/0081FB" alt=""> Meta Ads</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt=""> VS Code</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/cursor/000000" alt=""> Cursor AI</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/github/181717" alt=""> GitHub</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/vercel/000000" alt=""> Vercel</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt=""> AWS</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt=""> Azure</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/react/61DAFB" alt=""> React</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/nextdotjs/000000" alt=""> Next.js</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/astro/BC52EE" alt=""> Astro</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/nodedotjs/339933" alt=""> Node.js</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/supabase/3FCF8E" alt=""> Supabase</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt=""> Tailwind CSS</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/mercadopago/FFE600" alt=""> Mercado Libre</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/stripe/635BFF" alt=""> Stripe</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/wordpress/21759B" alt=""> WordPress</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/shopify/96BF48" alt=""> Shopify</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googleanalytics/E37400" alt=""> Google Analytics</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googletagmanager/246FDB" alt=""> Google Tag Manager</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt=""> Google Search Console</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googlemybusiness/4285F4" alt=""> Google Business Profile</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googleads/4285F4" alt=""> Google Ads</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/pagespeedinsights/4285F4" alt=""> PageSpeed Insights</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/hotjar/FF3C00" alt=""> Hotjar</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/meta/0081FB" alt=""> Meta Ads</span>
                     </div>
                     <div class="tools-track" aria-hidden="true">
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt=""> VS Code</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/cursor/000000" alt=""> Cursor AI</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/github/181717" alt=""> GitHub</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/vercel/000000" alt=""> Vercel</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt=""> AWS</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt=""> Azure</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/react/61DAFB" alt=""> React</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/nextdotjs/000000" alt=""> Next.js</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/astro/BC52EE" alt=""> Astro</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/nodedotjs/339933" alt=""> Node.js</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/supabase/3FCF8E" alt=""> Supabase</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt=""> Tailwind CSS</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/mercadopago/FFE600" alt=""> Mercado Libre</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/stripe/635BFF" alt=""> Stripe</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/wordpress/21759B" alt=""> WordPress</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/shopify/96BF48" alt=""> Shopify</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googleanalytics/E37400" alt=""> Google Analytics</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googletagmanager/246FDB" alt=""> Google Tag Manager</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt=""> Google Search Console</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googlemybusiness/4285F4" alt=""> Google Business Profile</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/googleads/4285F4" alt=""> Google Ads</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/pagespeedinsights/4285F4" alt=""> PageSpeed Insights</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/hotjar/FF3C00" alt=""> Hotjar</span>
-                        <span class="tool-badge"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/meta/0081FB" alt=""> Meta Ads</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt=""> VS Code</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/cursor/000000" alt=""> Cursor AI</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/github/181717" alt=""> GitHub</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/vercel/000000" alt=""> Vercel</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt=""> AWS</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt=""> Azure</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/react/61DAFB" alt=""> React</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/nextdotjs/000000" alt=""> Next.js</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/astro/BC52EE" alt=""> Astro</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/nodedotjs/339933" alt=""> Node.js</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/supabase/3FCF8E" alt=""> Supabase</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt=""> Tailwind CSS</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/mercadopago/FFE600" alt=""> Mercado Libre</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/stripe/635BFF" alt=""> Stripe</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/wordpress/21759B" alt=""> WordPress</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/shopify/96BF48" alt=""> Shopify</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googleanalytics/E37400" alt=""> Google Analytics</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googletagmanager/246FDB" alt=""> Google Tag Manager</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt=""> Google Search Console</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googlemybusiness/4285F4" alt=""> Google Business Profile</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/googleads/4285F4" alt=""> Google Ads</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/pagespeedinsights/4285F4" alt=""> PageSpeed Insights</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/hotjar/FF3C00" alt=""> Hotjar</span>
+                        <span class="tool-badge"><img loading="lazy" decoding="async" width="18" height="18" src="https://cdn.simpleicons.org/meta/0081FB" alt=""> Meta Ads</span>
                     </div>
                 </div>
             </div>
@@ -1094,7 +1100,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="pc-behind"></div>
                     <div class="pc-card-shell">
                         <section class="pc-card">
-                            <video class="pc-bg-avatar" src="/images/programando.mp4" autoplay loop muted playsinline preload="none" aria-label="Presentación de Andrés Irigoyen en español" data-i18n-aria="about.card.videoAria"></video>
+                            <video class="pc-bg-avatar" src="/images/programando.mp4" muted loop playsinline preload="none" aria-label="Presentación de Andrés Irigoyen en español" data-i18n-aria="about.card.videoAria"></video>
                             <div class="pc-play-overlay" role="button" tabindex="0" aria-label="Reproducir presentación en español" data-i18n-aria="about.card.playAria">
                                  <div class="pc-play-icon" aria-hidden="true">
                                      <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
@@ -1425,12 +1431,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous"></script>
-    <script src="/js/pricing-card.js"></script>
-    <script src="/js/script.js"></script>
-    <script type="module" src="/js/split-text.js"></script>
-    <script type="module" src="/js/orb-hero.js"></script>
-    <script src="/js/profile-card.js"></script>
+    <script defer src="/js/pricing-card.js"></script>
+    <script defer src="/js/profile-card.js"></script>
+    <script defer src="/js/script.js"></script>
     <!-- WhatsApp Floating Widget -->
     <a href="https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto." target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chatear por WhatsApp" data-i18n-aria="a11y.whatsapp">
         <svg viewBox="0 0 24 24" fill="currentColor">

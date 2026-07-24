@@ -708,6 +708,13 @@ html.dark-theme .hero p {
   opacity: 1;
 }
 
+html.hero-orb-static #hero-orb {
+  background:
+    radial-gradient(ellipse 70% 60% at 70% 40%, rgba(37, 99, 235, 0.22), transparent 60%),
+    radial-gradient(ellipse 50% 45% at 20% 70%, rgba(5, 25, 77, 0.12), transparent 55%);
+  opacity: 1;
+}
+
 /* Shared section titles — same column as hero (800px) */
 .section-header {
   max-width: 800px;
