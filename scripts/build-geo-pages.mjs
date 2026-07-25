@@ -242,7 +242,7 @@ function renderBreadcrumbNav(entry, all) {
     .join('\n            ');
 
   return `
-        <nav class="geo-breadcrumb" aria-label="${escapeAttr(ui.breadcrumbLabel)}">
+        <nav class="geo-breadcrumb" aria-label="${escapeAttr(ui.breadcrumbLabel)}" data-i18n-aria="geo.ui.breadcrumb">
           <ol>
             ${lis}
           </ol>
@@ -407,19 +407,22 @@ function renderNav(entry, siblings, all) {
 /**
  * @param {{q:string,a:string}[]|undefined} faq
  * @param {ReturnType<typeof marketUi>} ui
+ * @param {{ qKey?: (i:number) => string, aKey?: (i:number) => string }|undefined} i18n
  */
-function renderFaqSection(faq, ui) {
+function renderFaqSection(faq, ui, i18n) {
   if (!Array.isArray(faq) || !faq.length) return '';
   const items = faq
-    .map(
-      (item) => `
+    .map((item, i) => {
+      const qAttr = i18n?.qKey?.(i) ? ` data-i18n="${escapeAttr(i18n.qKey(i))}"` : '';
+      const aAttr = i18n?.aKey?.(i) ? ` data-i18n="${escapeAttr(i18n.aKey(i))}"` : '';
+      return `
             <article class="faq-item faq-item--plain">
-                <h3>${escapeHtml(item.q)}</h3>
-                <p class="money-copy">${escapeHtml(item.a)}</p>
-            </article>`
-    )
+                <h3${qAttr}>${escapeHtml(item.q)}</h3>
+                <p class="money-copy"${aAttr}>${escapeHtml(item.a)}</p>
+            </article>`;
+    })
     .join('');
-  return `<section class="project-section fade-in" id="faq"><h2>${escapeHtml(ui.faqTitle)}</h2><div class="faq-list">${items}</div></section>`;
+  return `<section class="project-section fade-in" id="faq"><h2 data-i18n="geo.ui.faqTitle">${escapeHtml(ui.faqTitle)}</h2><div class="faq-list">${items}</div></section>`;
 }
 
 /**
@@ -432,7 +435,7 @@ function renderSemanticTopics(topics, city, ui) {
   const lis = topics
     .map((t) => `<li>${escapeHtml(capitalizeSentence(t))}</li>`)
     .join('');
-  return `<section class="project-section fade-in" id="expertise"><h2>${escapeHtml(ui.expertiseTitle(city))}</h2><p class="location-intro">${escapeHtml(ui.expertiseIntro)}</p><ul class="project-results-list location-neighborhoods">${lis}</ul></section>`;
+  return `<section class="project-section fade-in" id="expertise"><h2>${escapeHtml(ui.expertiseTitle(city))}</h2><p class="location-intro" data-i18n="geo.ui.expertiseIntro">${escapeHtml(ui.expertiseIntro)}</p><ul class="project-results-list location-neighborhoods">${lis}</ul></section>`;
 }
 
 /**
@@ -449,6 +452,8 @@ function renderMain(entry, all) {
     const market = requireMarket(entry.countryCode);
     const isNationalHub =
       (entry.path || entry.slug) === market.hubPath || entry.slug === market.hubPath;
+    const isSclHub = entry.slug === 'santiago';
+    const isChileHub = isNationalHub && entry.countryCode === 'CL';
 
     const children = all.filter((e) => e.parentSlug === entry.slug);
     const regionChildren = isNationalHub
@@ -456,23 +461,30 @@ function renderMain(entry, all) {
       : children;
 
     const audiences = (c.audiences || [])
-      .map(
-        (a) => `
+      .map((a, i) => {
+        const n = i + 1;
+        const titleAttr = isSclHub
+          ? ` data-i18n="geo.scl.audience${n}Title"`
+          : '';
+        const descAttr = isSclHub
+          ? ` data-i18n="geo.scl.audience${n}Desc"`
+          : '';
+        return `
                 <article class="pricing-card">
-                    <h3 class="pricing-card__title">${escapeHtml(a.title)}</h3>
-                    <p class="pricing-card__desc">${escapeHtml(a.desc)}</p>
-                </article>`
-      )
+                    <h3 class="pricing-card__title"${titleAttr}>${escapeHtml(a.title)}</h3>
+                    <p class="pricing-card__desc"${descAttr}>${escapeHtml(a.desc)}</p>
+                </article>`;
+      })
       .join('\n');
 
     const cards = (regionChildren.length ? regionChildren : children)
       .map(
-        (child) => `
+        (child, i) => `
             <article class="location-card">
                 ${child.region && child.type === 'region' ? `<p class="location-card__eyebrow">${escapeHtml(child.region)}</p>` : ''}
                 <h3><a href="/${publicPath(child)}">${escapeHtml(child.city)}</a></h3>
-                <p>${escapeHtml(child.contentSummary)}</p>
-                <a href="/${publicPath(child)}" class="project-link">${escapeHtml(ui.viewPage)}</a>
+                <p${isChileHub ? ` data-i18n="geo.cl.region${i + 1}Desc"` : ''}>${escapeHtml(child.contentSummary)}</p>
+                <a href="/${publicPath(child)}" class="project-link" data-i18n="geo.ui.viewPage">${escapeHtml(ui.viewPage)}</a>
             </article>`
       )
       .join('\n');
@@ -481,45 +493,109 @@ function renderMain(entry, all) {
       ? all.filter((e) => e.type === 'region' && e.countryCode === entry.countryCode)
       : all.filter((e) => e.parentSlug === entry.slug);
 
+    const eyebrowAttr = isSclHub
+      ? ' data-i18n="geo.scl.eyebrow"'
+      : isChileHub
+        ? ' data-i18n="geo.cl.eyebrow"'
+        : '';
+    const h1Attr = isSclHub
+      ? ' data-i18n="geo.scl.h1"'
+      : isChileHub
+        ? ' data-i18n="geo.cl.h1"'
+        : '';
+    const leadAttr = isSclHub
+      ? ' data-i18n="geo.scl.lead"'
+      : isChileHub
+        ? ' data-i18n="geo.cl.lead"'
+        : '';
+    const ctaPrimaryAttr = isSclHub
+      ? ' data-i18n="geo.scl.ctaPrimary"'
+      : isChileHub
+        ? ' data-i18n="geo.cl.ctaPrimary"'
+      : c.ctaPrimary
+        ? ''
+        : ' data-i18n="geo.ui.ctaDefault"';
+    const ctaSecondaryAttr = isSclHub
+      ? ' data-i18n="geo.scl.ctaSecondary"'
+      : isChileHub
+        ? ' data-i18n="geo.cl.ctaSecondary"'
+      : c.ctaSecondary
+        ? ''
+        : ' data-i18n="geo.ui.ctaServices"';
+
+    const introHtml = (c.intro || [])
+      .map((p, i) => {
+        const attr =
+          (isSclHub || isChileHub) && i < 2
+            ? ` data-i18n="geo.${isSclHub ? 'scl' : 'cl'}.intro${i + 1}"`
+            : '';
+        return `<p class="location-intro"${attr}>${escapeHtml(p)}</p>`;
+      })
+      .join('\n');
+
+    const locationsLabel = isNationalHub ? ui.regions : ui.locations;
+    const locationsKey = isNationalHub ? 'geo.ui.regions' : 'geo.ui.locations';
+
+    const comunasCount =
+      children.filter((e) => e.type === 'comuna').length || children.length;
+    const comunasBlurb = isSclHub
+      ? `<p class="location-intro" data-i18n-html="geo.scl.comunasIndex"><a href="/santiago/comunas"><strong>Índice completo de comunas</strong></a> — las ${comunasCount} comunas de la RM en una sola página para rastreo e indexación.</p>`
+      : '';
+
+    const faqI18n = isSclHub
+      ? {
+          qKey: (i) => `geo.scl.faq${i + 1}q`,
+          aKey: (i) => `geo.scl.faq${i + 1}a`,
+        }
+      : isChileHub
+        ? {
+            qKey: (i) => `geo.cl.faq${i + 1}q`,
+            aKey: (i) => `geo.cl.faq${i + 1}a`,
+          }
+      : undefined;
+
     return `
     <main id="main-content">
     <header class="project-header container fade-in">
         <a href="/servicios" class="back-link"><span data-i18n="mkt.backServices">${escapeHtml(ui.servicesBack)}</span></a>
         ${renderBreadcrumbNav(entry, all)}
-        <p class="project-eyebrow">${escapeHtml(c.eyebrow || entry.region)}</p>
-        <h1>${escapeHtml(entry.h1Title)}</h1>
-        <p class="project-lead">${escapeHtml(lead)}</p>
+        <p class="project-eyebrow"${eyebrowAttr}>${escapeHtml(c.eyebrow || entry.region)}</p>
+        <h1${h1Attr}>${escapeHtml(entry.h1Title)}</h1>
+        <p class="project-lead"${leadAttr}>${escapeHtml(lead)}</p>
         <div class="project-header__actions">
-            <a href="/#contact" class="btn-cta-primary">${escapeHtml(c.ctaPrimary || ui.ctaDefault)}</a>
-            <a href="/servicios" class="project-cta-inline">${escapeHtml(c.ctaSecondary || ui.ctaServices)}</a>
+            <a href="/#contact" class="btn-cta-primary"${ctaPrimaryAttr}>${escapeHtml(c.ctaPrimary || ui.ctaDefault)}</a>
+            <a href="/servicios" class="project-cta-inline"${ctaSecondaryAttr}>${escapeHtml(c.ctaSecondary || ui.ctaServices)}</a>
         </div>
     </header>
     <div class="container">
         ${renderNav(entry, siblings, all)}
         <section class="project-section fade-in">
-            ${(c.intro || []).map((p) => `<p class="location-intro">${escapeHtml(p)}</p>`).join('\n')}
-            ${audiences ? `<h2 class="location-subheading">${escapeHtml(ui.audiences)}</h2><div class="pricing-grid">${audiences}</div>` : ''}
-            <h2 class="location-subheading" style="margin-top:2rem">${escapeHtml(isNationalHub ? ui.regions : ui.locations)}</h2>
-            ${
-              entry.slug === 'santiago'
-                ? `<p class="location-intro"><a href="/santiago/comunas"><strong>Índice completo de comunas</strong></a> — las ${children.filter((e) => e.type === 'comuna').length || children.length} comunas de la RM en una sola página para rastreo e indexación.</p>`
-                : ''
-            }
+            ${introHtml}
+            ${audiences ? `<h2 class="location-subheading" data-i18n="geo.ui.audiences">${escapeHtml(ui.audiences)}</h2><div class="pricing-grid">${audiences}</div>` : ''}
+            <h2 class="location-subheading" style="margin-top:2rem" data-i18n="${locationsKey}">${escapeHtml(locationsLabel)}</h2>
+            ${comunasBlurb}
             <div class="location-grid">${cards}</div>
         </section>
         ${renderSemanticTopics(c.semanticTopics, entry.city, ui)}
-        ${renderFaqSection(c.faq, ui)}
+        ${renderFaqSection(c.faq, ui, faqI18n)}
     </div>
     </main>`;
   }
 
-  // Detail (comuna | region)
+  // Detail (comuna | region) — CL SEO body stays Spanish; UI chrome uses data-i18n
   const siblings = all.filter(
     (e) =>
       e.parentSlug === entry.parentSlug &&
       e.type === entry.type &&
       e.countryCode === entry.countryCode
   );
+
+  const isClSeo = entry.countryCode === 'CL';
+  const seoOpen = isClSeo ? '<div class="geo-locale-body" lang="es">' : '';
+  const seoClose = isClSeo ? '</div>' : '';
+  const langNotice = isClSeo
+    ? `<p class="geo-lang-notice" role="note" data-i18n="geo.notice.localEs">Esta ficha local está en español (SEO Chile).</p>`
+    : '';
 
   const pains = (c.painPoints || [])
     .map((p) => `<li>${escapeHtml(p)}</li>`)
@@ -566,45 +642,69 @@ function renderMain(entry, all) {
     ? getGeoBySlug(entry.parentSlug)
     : hub;
 
+  const economicSection = c.economicContext
+    ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.localContext">${escapeHtml(ui.localContext)}</h2>${seoOpen}<p>${escapeHtml(c.economicContext)}</p>${seoClose}
+            ${industries ? `<h3 class="location-subheading" data-i18n="geo.ui.sectors">${escapeHtml(ui.sectors)}</h3>${seoOpen}<ul class="project-results-list location-neighborhoods">${industries}</ul>${seoClose}` : ''}
+            ${neighborhoods ? `<h3 class="location-subheading" data-i18n="${c.covers ? 'geo.ui.coverage' : 'geo.ui.refSectors'}">${escapeHtml(c.covers ? ui.coverage : ui.refSectors)}</h3>${seoOpen}<ul class="project-results-list location-neighborhoods">${neighborhoods}</ul>${seoClose}` : ''}
+            </section>`
+    : neighborhoods
+      ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.refSectors">${escapeHtml(ui.refSectors)}</h2>${seoOpen}<ul class="project-results-list location-neighborhoods">${neighborhoods}</ul>${seoClose}</section>`
+      : '';
+
+  const localSection = c.localAngle
+    ? `<section class="project-section fade-in"><h2>${escapeHtml(ui.focusOn(entry.city))}</h2>${seoOpen}<p>${escapeHtml(c.localAngle)}</p>${semanticIntro}${seoClose}</section>`
+    : semanticIntro
+      ? `<section class="project-section fade-in">${seoOpen}${semanticIntro}${seoClose}</section>`
+      : '';
+
+  // Semantic topics: keep i18n intro outside; topic list stays local SEO language
+  const topics = c.semanticTopics;
+  const topicsSection =
+    Array.isArray(topics) && topics.length
+      ? (() => {
+          const lis = topics
+            .map((t) => `<li>${escapeHtml(capitalizeSentence(t))}</li>`)
+            .join('');
+          return `<section class="project-section fade-in" id="expertise"><h2>${escapeHtml(ui.expertiseTitle(entry.city))}</h2><p class="location-intro" data-i18n="geo.ui.expertiseIntro">${escapeHtml(ui.expertiseIntro)}</p>${seoOpen}<ul class="project-results-list location-neighborhoods">${lis}</ul>${seoClose}</section>`;
+        })()
+      : '';
+
+  const faqWrapped = (() => {
+    const faqHtml = renderFaqSection(c.faq, ui);
+    if (!faqHtml || !isClSeo) return faqHtml;
+    return faqHtml.replace(
+      '<div class="faq-list">',
+      '<div class="faq-list" lang="es">'
+    );
+  })();
+
   return `
     <main id="main-content">
     <header class="project-header container fade-in">
         <a href="/${back ? publicPath(back) : publicPath(hub) || ''}" class="back-link"><span>← ${escapeHtml(back?.city || hub?.city || countryDisplayName(entry.countryCode))}</span></a>
         ${renderBreadcrumbNav(entry, all)}
+        ${langNotice}
+        ${seoOpen}
         <p class="project-eyebrow">${escapeHtml(c.eyebrow || `${entry.region} · ${entry.city}`)}</p>
         <h1>${escapeHtml(entry.h1Title)}</h1>
         <p class="project-lead">${escapeHtml(lead)}</p>
+        ${seoClose}
         <div class="project-header__actions">
-            <a href="/?service=fullstack#contact" class="btn-cta-primary">${escapeHtml(c.ctaPrimary || ui.ctaCity(entry.city))}</a>
-            <a href="${wa}" class="project-cta-inline" target="_blank" rel="noopener noreferrer">${escapeHtml(c.ctaWhatsApp || ui.waDefault)}</a>
+            <a href="/?service=fullstack#contact" class="btn-cta-primary" data-i18n="geo.ui.ctaQuote">Cotizar proyecto →</a>
+            <a href="${wa}" class="project-cta-inline" target="_blank" rel="noopener noreferrer" data-i18n="geo.ui.waDefault">${escapeHtml(ui.waDefault)}</a>
         </div>
     </header>
     <div class="container">
         ${renderNav(entry, siblings, all)}
-        ${
-          c.economicContext
-            ? `<section class="project-section fade-in"><h2>${escapeHtml(ui.localContext)}</h2><p>${escapeHtml(c.economicContext)}</p>
-            ${industries ? `<h3 class="location-subheading">${escapeHtml(ui.sectors)}</h3><ul class="project-results-list location-neighborhoods">${industries}</ul>` : ''}
-            ${neighborhoods ? `<h3 class="location-subheading">${escapeHtml(c.covers ? ui.coverage : ui.refSectors)}</h3><ul class="project-results-list location-neighborhoods">${neighborhoods}</ul>` : ''}
-            </section>`
-            : neighborhoods
-              ? `<section class="project-section fade-in"><h2>${escapeHtml(ui.refSectors)}</h2><ul class="project-results-list location-neighborhoods">${neighborhoods}</ul></section>`
-              : ''
-        }
-        ${
-          c.localAngle
-            ? `<section class="project-section fade-in"><h2>${escapeHtml(ui.focusOn(entry.city))}</h2><p>${escapeHtml(c.localAngle)}</p>${semanticIntro}</section>`
-            : semanticIntro
-              ? `<section class="project-section fade-in">${semanticIntro}</section>`
-              : ''
-        }
-        ${renderSemanticTopics(c.semanticTopics, entry.city, ui)}
-        ${pains ? `<section class="project-section fade-in"><h2>${escapeHtml(ui.painPoints)}</h2><ul class="project-results-list">${pains}</ul></section>` : ''}
-        ${services ? `<section class="project-section fade-in"><h2>${escapeHtml(ui.services)}</h2><div class="pricing-grid pricing-grid--care">${services}</div></section>` : ''}
-        ${cases ? `<section class="project-section fade-in"><h2>${escapeHtml(ui.cases)}</h2><div class="location-grid">${cases}</div></section>` : ''}
-        ${renderFaqSection(c.faq, ui)}
-        ${related ? `<section class="project-section fade-in location-related"><h2>${escapeHtml(ui.nearby)}</h2><div class="location-related__list">${related}</div></section>` : ''}
-        <section class="project-section fade-in"><p class="location-outro"><a href="/precios">Precios</a> · <a href="/blog">Blog</a> · <a href="/#contact">Contacto</a> · <a href="${ENTITY.url}" rel="me">${escapeHtml(ENTITY.legalName)}</a></p></section>
+        ${economicSection}
+        ${localSection}
+        ${topicsSection}
+        ${pains ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.painPoints">${escapeHtml(ui.painPoints)}</h2>${seoOpen}<ul class="project-results-list">${pains}</ul>${seoClose}</section>` : ''}
+        ${services ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.services">${escapeHtml(ui.services)}</h2>${seoOpen}<div class="pricing-grid pricing-grid--care">${services}</div>${seoClose}</section>` : ''}
+        ${cases ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.cases">${escapeHtml(ui.cases)}</h2>${seoOpen}<div class="location-grid">${cases}</div>${seoClose}</section>` : ''}
+        ${faqWrapped}
+        ${related ? `<section class="project-section fade-in location-related"><h2 data-i18n="geo.ui.nearby">${escapeHtml(ui.nearby)}</h2><div class="location-related__list">${related}</div></section>` : ''}
+        <section class="project-section fade-in"><p class="location-outro"><a href="/precios" data-i18n="footer.linkPricing">Precios</a> · <a href="/blog">Blog</a> · <a href="/#contact" data-i18n="footer.linkContact">Contacto</a> · <a href="${ENTITY.url}" rel="me">${escapeHtml(ENTITY.legalName)}</a></p></section>
     </div>
     </main>`;
 }
@@ -757,12 +857,29 @@ function main() {
           ? `${entry.localBusinessSchema.latitude}, ${entry.localBusinessSchema.longitude}`
           : undefined,
       jsonLd: buildJsonLd(entry, entries),
+      i18nDescKey:
+        entry.slug === 'santiago'
+          ? 'geo.scl.metaDesc'
+          : entry.slug === 'chile'
+            ? 'geo.cl.metaDesc'
+            : undefined,
     });
+
+    const isClDetail =
+      entry.countryCode === 'CL' &&
+      (entry.type === 'comuna' || entry.type === 'region');
 
     const html = renderPage({
       headHtml: head,
       mainHtml: renderMain(entry, entries),
       htmlLang: ui.htmlLang,
+      i18nTitleKey:
+        entry.slug === 'santiago'
+          ? 'geo.scl.metaTitle'
+          : entry.slug === 'chile'
+            ? 'geo.cl.metaTitle'
+            : '',
+      dataGeoSeo: isClDetail ? 'es' : '',
       skipLink: ui.skipLink,
       footerGeo: ui.footerGeo,
       footerMarketLinks,

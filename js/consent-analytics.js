@@ -40,6 +40,20 @@
       deny: 'Reject',
       settings: 'Cookies',
     },
+    da: {
+      title: 'Cookies til måling',
+      text: 'Vi bruger Google Analytics (via GTM) kun hvis du accepterer, for at forstå brugen af sitet. Ingen tredjepartsannoncer.',
+      accept: 'Accepter',
+      deny: 'Afvis',
+      settings: 'Cookies',
+    },
+    no: {
+      title: 'Informasjonskapsler for måling',
+      text: 'Vi bruker Google Analytics (via GTM) bare hvis du godtar, for å forstå bruken av nettstedet. Ingen tredjepartsannonser.',
+      accept: 'Godta',
+      deny: 'Avvis',
+      settings: 'Informasjonskapsler',
+    },
   };
 
   function lang() {

@@ -18,14 +18,18 @@ function walk(dir, out = []) {
 }
 
 const keys = new Set();
-const keyRe = /data-i18n(?:-html|-placeholder|-content|-title)?=["']([^"']+)["']/g;
+const keyRe = /data-i18n(?:-html|-placeholder|-content|-title|-aria)?=["']([^"']+)["']/g;
 const i18nTitleRe = /data-i18n-title=["']([^"']+)["']/g;
 
 for (const file of walk(root)) {
   const text = fs.readFileSync(file, 'utf8');
   let m;
-  while ((m = keyRe.exec(text))) keys.add(m[1]);
-  while ((m = i18nTitleRe.exec(text))) keys.add(m[1]);
+  while ((m = keyRe.exec(text))) {
+    if (!m[1].includes('${')) keys.add(m[1]);
+  }
+  while ((m = i18nTitleRe.exec(text))) {
+    if (!m[1].includes('${')) keys.add(m[1]);
+  }
 }
 
 // Also include known keys from es.json that are critical for home

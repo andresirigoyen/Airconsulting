@@ -106,6 +106,7 @@ export function escapeAttr(s) {
  * @property {string} [ogLocale]
  * @property {string} [ogLocaleAlternate]
  * @property {object[]} [jsonLd]
+ * @property {string} [i18nDescKey] data-i18n-content on meta description
  */
 
 /**
@@ -125,6 +126,9 @@ export function buildHead(opts) {
   const hreflang = opts.hreflang || 'es-CL';
   const ogLocale = opts.ogLocale || 'es_CL';
   const ogLocaleAlt = opts.ogLocaleAlternate || 'es_ES';
+  const descI18n = opts.i18nDescKey
+    ? ` data-i18n-content="${escapeAttr(opts.i18nDescKey)}"`
+    : '';
 
   const jsonLd =
     opts.jsonLd && opts.jsonLd.length
@@ -149,7 +153,7 @@ export function buildHead(opts) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <title>${escapeHtml(opts.title)}</title>
-    <meta name="description" content="${escapeAttr(opts.description)}">
+    <meta name="description" content="${escapeAttr(opts.description)}"${descI18n}>
     <meta name="author" content="Andrés Irigoyen">
     <meta name="robots" content="${robots}">
     <meta name="googlebot" content="${robots}">
@@ -227,7 +231,7 @@ export function buildFooter({
                     <li><a href="/#contact" data-i18n="footer.contactForm">Formulario de contacto</a></li>
                 </ul>
             </div>
-            <nav class="site-footer__col" aria-label="Servicios">
+            <nav class="site-footer__col" aria-label="Servicios" data-i18n-aria="footer.servicesHeading">
                 <h3 class="site-footer__heading" data-i18n="footer.servicesHeading">Servicios</h3>
                 <ul class="site-footer__links">
                     <li><a href="/servicios" data-i18n="footer.linkServices">Todos los servicios</a></li>
@@ -240,7 +244,7 @@ export function buildFooter({
                     <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
                 </ul>
             </nav>
-            <nav class="site-footer__col" aria-label="Sitio">
+            <nav class="site-footer__col" aria-label="Sitio" data-i18n-aria="footer.siteHeading">
                 <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
                 <ul class="site-footer__links">
                     <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
@@ -270,6 +274,8 @@ export function buildFooter({
  * @param {string} opts.mainHtml
  * @param {string} [opts.footerExtra]
  * @param {string} [opts.htmlLang]
+ * @param {string} [opts.i18nTitleKey] data-i18n-title on <html>
+ * @param {string} [opts.dataGeoSeo] e.g. "es" when body SEO stays Spanish
  * @param {string} [opts.skipLink]
  * @param {string} [opts.footerGeo]
  * @param {{href:string,label:string}[]} [opts.footerMarketLinks]
@@ -280,6 +286,8 @@ export function renderPage({
   mainHtml,
   footerExtra = '',
   htmlLang = 'es-CL',
+  i18nTitleKey = '',
+  dataGeoSeo = '',
   skipLink = 'Saltar al contenido',
   footerGeo = 'Dinamarca · Chile · España · Remoto',
   footerMarketLinks = [],
@@ -287,9 +295,15 @@ export function renderPage({
   const wa = waLink(
     '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.'
   );
+  const titleAttr = i18nTitleKey
+    ? ` data-i18n-title="${escapeAttr(i18nTitleKey)}"`
+    : '';
+  const geoSeoAttr = dataGeoSeo
+    ? ` data-geo-seo="${escapeAttr(dataGeoSeo)}"`
+    : '';
 
   return `<!DOCTYPE html>
-<html lang="${escapeAttr(htmlLang)}">
+<html lang="${escapeAttr(htmlLang)}"${titleAttr}${geoSeoAttr}>
 <head>
 ${headHtml}
 </head>
@@ -297,7 +311,7 @@ ${headHtml}
 ${GTM_NOSCRIPT}
     <a class="skip-link" href="#main-content" data-i18n="a11y.skip">${escapeHtml(skipLink)}</a>
     <header class="site-header">
-    <nav class="navbar" id="navbar" aria-label="Navegación principal">
+    <nav class="navbar" id="navbar" aria-label="Navegación principal" data-i18n-aria="a11y.navMain">
         <div class="container navbar-inner">
             <a href="/" class="logo" data-i18n-aria="a11y.home" aria-label="IrigoyenDev — Inicio"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
             <div class="nav-links" id="nav-links">

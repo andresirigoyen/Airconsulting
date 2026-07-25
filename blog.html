@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es-CL">
+<html lang="es-CL" data-i18n-title="blog.metaTitle">
 <head>
-<!-- Analytics consent (GTM loads only after accept) -->
+    <!-- Analytics consent (GTM loads only after accept) -->
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
@@ -26,7 +26,7 @@ gtag('consent','default',{
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <title>Blog IrigoyenDev | E-commerce, leads y desarrollo web en Chile</title>
-    <meta name="description" content="Artículos prácticos sobre e-commerce en Chile, captación de leads, pasarelas de pago y desarrollo web para empresas en regiones.">
+    <meta name="description" content="Artículos prácticos sobre e-commerce en Chile, captación de leads, pasarelas de pago y desarrollo web para empresas en regiones." data-i18n-content="blog.metaDesc">
     <meta name="author" content="Andrés Irigoyen">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -81,9 +81,10 @@ gtag('consent','default',{
     <link rel="stylesheet" href="/css/consent.css">
 </head>
 <body class="page-marketing page-location">
-<a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
     <header class="site-header">
-    <nav class="navbar" id="navbar" aria-label="Navegación principal">
+    <nav class="navbar" id="navbar" aria-label="Navegación principal" data-i18n-aria="a11y.navMain">
         <div class="container navbar-inner">
             <a href="/" class="logo" data-i18n-aria="a11y.home" aria-label="IrigoyenDev — Inicio"><span class="logo__name">Irigoyen</span><span class="logo__accent">Dev</span><span class="logo__dot" aria-hidden="true">.</span></a>
             <div class="nav-links" id="nav-links">
@@ -131,25 +132,26 @@ gtag('consent','default',{
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>Chile</span>
         </a>
-        <p class="project-eyebrow">Recursos · Chile</p>
-        <h1>Blog: desarrollo web, e-commerce y leads en Chile</h1>
-        <p class="project-lead">Contenido informacional para empresas que investigan cómo digitalizarse — antes de contratar. Enfoque práctico, sin relleno.</p>
+        <p class="project-eyebrow" data-i18n="blog.eyebrow">Recursos · Chile</p>
+        <h1 data-i18n="blog.h1">Blog: desarrollo web, e-commerce y leads en Chile</h1>
+        <p class="project-lead" data-i18n="blog.lead">Contenido informacional para empresas que investigan cómo digitalizarse — antes de contratar. Enfoque práctico, sin relleno.</p>
     </header>
     <div class="container">
         <section class="project-section fade-in">
-            <div class="location-grid">
+            <p class="geo-lang-notice" role="note" data-i18n="blog.noticeEs">Los artículos de este blog están disponibles en español.</p>
+            <div class="location-grid" lang="es">
             <article class="location-card">
                 <p class="location-card__eyebrow"><time datetime="2026-07-18">2026-07-18</time></p>
                 <h3><a href="/blog/automatizar-captacion-leads-norte-chile">Cómo automatizar la captación de leads en empresas de servicios en el norte de Chile</a></h3>
                 <p>En minería y servicios industriales, el lead llega tarde o se pierde en el correo. Esta guía resume un stack simple: landing + formulario + WhatsApp + seguimiento.</p>
-                <a href="/blog/automatizar-captacion-leads-norte-chile" class="project-link">Leer artículo →</a>
+                <a href="/blog/automatizar-captacion-leads-norte-chile" class="project-link" data-i18n="blog.readArticle">Leer artículo →</a>
             </article>
 
             <article class="location-card">
                 <p class="location-card__eyebrow"><time datetime="2026-07-18">2026-07-18</time></p>
                 <h3><a href="/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet">Pasarelas de pago que mejor funcionan en Chile para e-commerce (Transbank vs Mercado Pago vs Getnet)</a></h3>
                 <p>Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack.</p>
-                <a href="/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet" class="project-link">Leer artículo →</a>
+                <a href="/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet" class="project-link" data-i18n="blog.readArticle">Leer artículo →</a>
             </article></div>
         </section>
     </div>
@@ -167,7 +169,7 @@ gtag('consent','default',{
                     <li><a href="/#contact" data-i18n="footer.contactForm">Formulario de contacto</a></li>
                 </ul>
             </div>
-            <nav class="site-footer__col" aria-label="Servicios">
+            <nav class="site-footer__col" aria-label="Servicios" data-i18n-aria="footer.servicesHeading">
                 <h3 class="site-footer__heading" data-i18n="footer.servicesHeading">Servicios</h3>
                 <ul class="site-footer__links">
                     <li><a href="/servicios" data-i18n="footer.linkServices">Todos los servicios</a></li>
@@ -180,7 +182,7 @@ gtag('consent','default',{
                     <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
                 </ul>
             </nav>
-            <nav class="site-footer__col" aria-label="Sitio">
+            <nav class="site-footer__col" aria-label="Sitio" data-i18n-aria="footer.siteHeading">
                 <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
                 <ul class="site-footer__links">
                     <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>

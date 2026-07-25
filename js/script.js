@@ -17,7 +17,10 @@ function initMobileNav() {
     const servicesHref = '/servicios';
     const pricingHref = '/precios';
     const contactHref = '/#contact';
-    const whatsappHref = 'https://wa.me/+4550249855?text=%C2%A1Hola!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20posible%20proyecto.';
+    const whatsappHref = 'https://wa.me/+4550249855?text=' + encodeURIComponent(
+        (currentTranslations['wa.prefill']) ||
+        '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.'
+    );
 
     let active = 'home';
     if (inProjects) active = 'home';
@@ -38,19 +41,19 @@ function initMobileNav() {
       <div class="mobile-tab-bar__inner">
         <a href="${homeHref}" class="mobile-tab-bar__item${active === 'home' ? ' is-active' : ''}" data-nav="home">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5H15v-6h-6v6H4.5A1.5 1.5 0 0 1 3 20v-9.5z"/></svg>
-          <span data-i18n="nav.mobile.home">Home</span>
+          <span data-i18n="nav.mobile.home">Inicio</span>
         </a>
         <a href="${servicesHref}" class="mobile-tab-bar__item${active === 'services' ? ' is-active' : ''}" data-nav="services">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-          <span data-i18n="nav.mobile.services">Services</span>
+          <span data-i18n="nav.mobile.services">Servicios</span>
         </a>
         <a href="${pricingHref}" class="mobile-tab-bar__item${active === 'pricing' ? ' is-active' : ''}" data-nav="pricing">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          <span data-i18n="nav.mobile.pricing">Pricing</span>
+          <span data-i18n="nav.mobile.pricing">Precios</span>
         </a>
         <a href="${contactHref}" class="mobile-tab-bar__item${active === 'contact' ? ' is-active' : ''}" data-nav="contact">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
-          <span data-i18n="nav.mobile.quote">Get a Quote</span>
+          <span data-i18n="nav.mobile.quote">Cotizar</span>
         </a>
         <a href="${whatsappHref}" class="mobile-tab-bar__item" data-nav="whatsapp" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
@@ -83,16 +86,14 @@ function initMobileNav() {
 document.addEventListener('DOMContentLoaded', () => {
     initProjectVideos();
     initMobileNav();
-    // 1. Sticky Navbar shadow on scroll
+    // 1. Navbar: full-bleed at top → sticky capsule on scroll
     const navbar = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    const updateNavbarScrollState = () => {
+        if (!navbar) return;
+        navbar.classList.toggle('is-scrolled', window.scrollY > 16);
+    };
+    updateNavbarScrollState();
+    window.addEventListener('scroll', updateNavbarScrollState, { passive: true });
 
     // 2. Fade-in animations on scroll using IntersectionObserver
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -226,50 +227,95 @@ async function fetchLocale(lang) {
   if (!ALLOWED_LOCALES.has(lang)) {
     throw new Error(`Invalid locale: ${lang}`);
   }
-  const response = await fetch(`/locales/${lang}.json`, { cache: 'force-cache' });
+  // Revalidate locale files so newly deployed translations are not trapped in
+  // a browser's long-lived HTTP cache under the same URL.
+  const response = await fetch(`/locales/${lang}.json`, { cache: 'no-cache' });
   if (!response.ok) throw new Error(`Locale ${lang} not found`);
   return response.json();
 }
 
+const CURRENCY_I18N_KEYS = {
+  USD: 'currency.usd',
+  EUR: 'currency.eur',
+  CLP: 'currency.clp',
+  DKK: 'currency.dkk',
+  NOK: 'currency.nok',
+};
+
 function applyTranslations(translations) {
+  const has = (key) =>
+    Boolean(key) &&
+    Object.prototype.hasOwnProperty.call(translations, key) &&
+    translations[key] != null &&
+    translations[key] !== '';
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[key]) el.textContent = translations[key];
+    if (has(key)) el.textContent = translations[key];
   });
 
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
-    if (translations[key]) el.innerHTML = translations[key];
+    if (has(key)) el.innerHTML = translations[key];
   });
 
   document.querySelectorAll('.mobile-tab-bar [data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[key]) el.textContent = translations[key];
+    if (has(key)) el.textContent = translations[key];
   });
 
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (translations[key]) el.placeholder = translations[key];
+    if (has(key)) el.placeholder = translations[key];
   });
 
   document.querySelectorAll('[data-i18n-aria]').forEach(el => {
     const key = el.getAttribute('data-i18n-aria');
-    if (translations[key]) el.setAttribute('aria-label', translations[key]);
+    if (has(key)) el.setAttribute('aria-label', translations[key]);
   });
 
   document.querySelectorAll('option[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[key]) el.textContent = translations[key];
+    if (has(key)) el.textContent = translations[key];
   });
 
   const titleKey = document.documentElement.getAttribute('data-i18n-title');
-  if (titleKey && translations[titleKey]) {
+  if (has(titleKey)) {
     document.title = translations[titleKey];
   }
 
   document.querySelectorAll('[data-i18n-content]').forEach((el) => {
     const key = el.getAttribute('data-i18n-content');
-    if (key && translations[key]) el.setAttribute('content', translations[key]);
+    if (has(key)) el.setAttribute('content', translations[key]);
+  });
+
+  // WhatsApp deep-link prefill follows active language
+  const waPrefill = has('wa.prefill')
+    ? translations['wa.prefill']
+    : '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.';
+  const waHref = `https://wa.me/+4550249855?text=${encodeURIComponent(waPrefill)}`;
+  document.querySelectorAll('a[href*="wa.me/"]').forEach((a) => {
+    a.href = waHref;
+  });
+
+  // Currency chrome (injected after DOM ready)
+  const curBtn = document.getElementById('currency-menu-btn');
+  if (curBtn && has('currency.select')) {
+    curBtn.setAttribute('aria-label', translations['currency.select']);
+  }
+  const curList = document.getElementById('currency-dropdown');
+  if (curList && has('currency.listLabel')) {
+    curList.setAttribute('aria-label', translations['currency.listLabel']);
+  }
+  const curNote = document.querySelector('.currency-note');
+  if (curNote && has('currency.note')) {
+    curNote.textContent = translations['currency.note'];
+  }
+  document.querySelectorAll('#currency-dropdown .currency-radio').forEach((radio) => {
+    const code = radio.value;
+    const key = CURRENCY_I18N_KEYS[code];
+    const label = radio.closest('.lang-option')?.querySelector('.lang-name');
+    if (label && key && has(key)) label.textContent = translations[key];
   });
 }
 
@@ -425,10 +471,10 @@ function initCurrencySelector() {
   const wrap = document.createElement('div');
   wrap.className = 'currency-selector-container';
   wrap.innerHTML = `
-    <button id="currency-menu-btn" class="currency-btn" type="button" aria-label="Select currency" aria-haspopup="listbox" aria-expanded="false">
+    <button id="currency-menu-btn" class="currency-btn" type="button" aria-label="Seleccionar moneda" data-i18n-aria="currency.select" aria-haspopup="listbox" aria-expanded="false">
       <span class="currency-btn__code">${currentCurrency}</span>
     </button>
-    <div id="currency-dropdown" class="lang-dropdown currency-dropdown" role="listbox" aria-label="Currency">
+    <div id="currency-dropdown" class="lang-dropdown currency-dropdown" role="listbox" aria-label="Moneda" data-i18n-aria="currency.listLabel">
       ${['CLP', 'USD', 'EUR', 'DKK', 'NOK']
         .map(
           (code) => `
@@ -439,7 +485,7 @@ function initCurrencySelector() {
         </label>`
         )
         .join('')}
-      <p class="currency-note">EUR = list price · other ≈ mid-market</p>
+      <p class="currency-note" data-i18n="currency.note">EUR = precio de lista · otras ≈ tipo de cambio</p>
     </div>
   `;
 
@@ -482,32 +528,24 @@ async function loadLanguage(lang, { force = false } = {}) {
     lang = 'es';
   }
   try {
-    // HTML ships in Spanish — skip locale network on default first paint.
-    if (lang === 'es' && !force) {
-      currentTranslations = {};
-      document.documentElement.lang = 'es';
-      applyCurrency(localStorage.getItem('preferredCurrency') || currentCurrency || 'CLP');
-      localStorage.setItem('preferredLang', 'es');
-      const radio = document.querySelector('.lang-radio[value="es"]');
-      if (radio) radio.checked = true;
-      return;
-    }
-
+    // Always load the locale JSON so JS UI (mobile nav, form status, etc.)
+    // never falls back to English while the page chrome is in another language.
     const locale = await fetchLocale(lang);
+
     if (lang === 'en') {
       englishTranslations = locale;
     } else if (!Object.keys(englishTranslations).length) {
-      // Lazy English fallback only when needed for missing keys later.
-      fetchLocale('en')
-        .then((en) => {
-          englishTranslations = en;
-        })
-        .catch(() => {});
+      try {
+        englishTranslations = await fetchLocale('en');
+      } catch (_) {
+        englishTranslations = {};
+      }
     }
 
-    const translations = Object.keys(englishTranslations).length
-      ? { ...englishTranslations, ...locale }
-      : locale;
+    const translations =
+      lang === 'en' || !Object.keys(englishTranslations).length
+        ? locale
+        : { ...englishTranslations, ...locale };
 
     currentTranslations = translations;
     document.documentElement.lang = lang;
@@ -659,16 +697,16 @@ if(contactForm) {
         };
 
         const t = currentTranslations;
-        const submitLabel = t['form.submit'] || 'Request my project plan';
+        const submitLabel = t['form.submit'] || 'Solicitar plan de proyecto';
 
         if (!data.name || !data.email || !data.message || !data.service) {
-            statusDiv.textContent = t['form.error'] || 'Something went wrong. Please try again.';
+            statusDiv.textContent = t['form.error'] || 'Algo falló. Inténtalo de nuevo o escríbenos directamente.';
             statusDiv.className = 'form-status error';
             return;
         }
 
         if (!isValidEmail(data.email)) {
-            statusDiv.textContent = t['form.errorEmail'] || 'Please enter a valid email address.';
+            statusDiv.textContent = t['form.errorEmail'] || 'Introduce un correo electrónico válido.';
             statusDiv.className = 'form-status error';
             return;
         }
@@ -676,7 +714,7 @@ if(contactForm) {
         submitBtn.disabled = true;
         submitBtn.setAttribute('aria-busy', 'true');
         submitBtn.classList.add('is-sending');
-        submitBtn.textContent = t['form.sending'] || 'Sending...';
+        submitBtn.textContent = t['form.sending'] || 'Enviando...';
         statusDiv.textContent = '';
         statusDiv.className = 'form-status';
 
@@ -704,12 +742,12 @@ if(contactForm) {
                 throw err;
             }
 
-            statusDiv.textContent = t['form.success'] || 'Message received.';
+            statusDiv.textContent = t['form.success'] || 'Mensaje recibido. Te responderemos en menos de 48 horas.';
             statusDiv.className = 'form-status success';
             contactForm.reset();
         } catch (error) {
             console.error('Contact form error:', error);
-            statusDiv.textContent = t['form.error'] || 'Something went wrong. Please try again.';
+            statusDiv.textContent = t['form.error'] || 'Algo falló. Inténtalo de nuevo o escríbenos directamente.';
             statusDiv.className = 'form-status error';
         } finally {
             submitBtn.disabled = false;

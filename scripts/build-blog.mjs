@@ -44,7 +44,7 @@ function main() {
                 <p class="location-card__eyebrow"><time datetime="${escapeAttr(p.date)}">${escapeHtml(p.date)}</time></p>
                 <h3><a href="/blog/${escapeAttr(p.slug)}">${escapeHtml(p.content.title)}</a></h3>
                 <p>${escapeHtml(p.content.excerpt)}</p>
-                <a href="/blog/${escapeAttr(p.slug)}" class="project-link">Leer artículo →</a>
+                <a href="/blog/${escapeAttr(p.slug)}" class="project-link" data-i18n="blog.readArticle">Leer artículo →</a>
             </article>`
     )
     .join('\n');
@@ -56,13 +56,14 @@ function main() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>Chile</span>
         </a>
-        <p class="project-eyebrow">${escapeHtml(hub.content.eyebrow)}</p>
-        <h1>${escapeHtml(hub.content.h1)}</h1>
-        <p class="project-lead">${escapeHtml(hub.content.lead)}</p>
+        <p class="project-eyebrow" data-i18n="blog.eyebrow">${escapeHtml(hub.content.eyebrow)}</p>
+        <h1 data-i18n="blog.h1">${escapeHtml(hub.content.h1)}</h1>
+        <p class="project-lead" data-i18n="blog.lead">${escapeHtml(hub.content.lead)}</p>
     </header>
     <div class="container">
         <section class="project-section fade-in">
-            <div class="location-grid">${cards}</div>
+            <p class="geo-lang-notice" role="note" data-i18n="blog.noticeEs">Los artículos de este blog están disponibles en español.</p>
+            <div class="location-grid" lang="es">${cards}</div>
         </section>
     </div>
     </main>`;
@@ -75,6 +76,7 @@ function main() {
     canonicalPath: '/blog',
     hreflang: 'es-CL',
     geoRegion: 'CL',
+    i18nDescKey: 'blog.metaDesc',
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -88,7 +90,11 @@ function main() {
   });
 
   // /blog → blog.html at root works with cleanUrls; also write blog/index.html for folder URLs
-  const hubHtml = renderPage({ headHtml: hubHead, mainHtml: hubMain });
+  const hubHtml = renderPage({
+    headHtml: hubHead,
+    mainHtml: hubMain,
+    i18nTitleKey: 'blog.metaTitle',
+  });
   fs.writeFileSync(path.join(root, 'blog.html'), hubHtml, 'utf8');
   fs.writeFileSync(path.join(outDir, 'index.html'), hubHtml, 'utf8');
   console.log('Wrote blog.html + blog/index.html');
@@ -98,6 +104,8 @@ function main() {
     const main = `
     <main id="main-content">
     <article class="container">
+    <p class="geo-lang-notice" role="note" data-i18n="blog.noticeEs">Los artículos de este blog están disponibles en español.</p>
+    <div lang="es">
     <header class="project-header fade-in">
         <a href="/blog" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
@@ -113,8 +121,9 @@ function main() {
             <p class="location-outro" style="margin-top:2rem">
                 <a href="${escapeAttr(post.content.ctaHref)}">${escapeHtml(post.content.ctaLabel)}</a>
                 ·
-                <a href="/#contact">Solicitar plan de proyecto</a>
+                <a href="/#contact" data-i18n="svc.ctaPlan">Pedir plan de proyecto →</a>
             </p>
+    </div>
     </div>
     </article>
     </main>`;

@@ -68,7 +68,7 @@ function main() {
       `${entry.slug}: canonical must be ${url}`
     );
     assert(html.includes('LocalBusiness'), `${entry.slug}: missing LocalBusiness JSON-LD`);
-    assert(html.includes('<h1>'), `${entry.slug}: missing H1`);
+    assert(/<h1(?:\s[^>]*)?>/i.test(html), `${entry.slug}: missing H1`);
     assert(
       html.includes(`"addressCountry": "${entry.countryCode}"`) ||
         html.includes(`"addressCountry":"${entry.countryCode}"`),

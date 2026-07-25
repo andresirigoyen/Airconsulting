@@ -155,20 +155,69 @@ a {
 
 .navbar {
   position: fixed;
-  top: 0.75rem;
-  left: max(0.75rem, env(safe-area-inset-left));
-  right: max(0.75rem, env(safe-area-inset-right));
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  padding: 0.55rem 0;
+  padding: max(0.65rem, env(safe-area-inset-top)) 0 0.65rem;
   background: var(--nav-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-pill);
+  border: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition:
+    top 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+/* Scrolled: shell transparent; capsule width = container content box (same lateral gutters) */
+.navbar.is-scrolled {
+  top: max(0.85rem, env(safe-area-inset-top));
+  left: 0;
+  right: 0;
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar.is-scrolled .navbar-inner {
+  /* Match .container content width: max 1200px minus its horizontal padding */
+  width: calc(100% - 2 * var(--spacing-lg));
+  max-width: calc(1200px - 2 * var(--spacing-lg));
+  margin-inline: auto;
+  padding: 0.45rem 1.25rem;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 999px;
   box-shadow:
-    0 4px 24px rgba(15, 23, 42, 0.06),
-    0 1px 2px rgba(15, 23, 42, 0.04);
-  transition: var(--transition);
+    0 10px 40px rgba(15, 23, 42, 0.1),
+    0 2px 10px rgba(15, 23, 42, 0.05);
+  transition:
+    background-color 0.35s ease,
+    border-radius 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    padding 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    max-width 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.dark-theme .navbar.is-scrolled .navbar-inner {
+  background: rgba(22, 22, 24, 0.94);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.45),
+    0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-inner {
@@ -808,8 +857,11 @@ html.dark-theme .project-image {
   margin-bottom: var(--spacing-xl);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-filters-desc {
@@ -822,13 +874,15 @@ html.dark-theme .project-image {
 }
 
 .page-home .project-filters-wrapper {
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .scroll-fade-wrapper {
   position: relative;
+  width: 100%;
   max-width: 100%;
   display: flex;
+  box-sizing: border-box;
 }
 
 .scroll-fade-wrapper::before,
@@ -868,6 +922,9 @@ html.dark-theme .project-image {
   flex-wrap: nowrap;
   gap: 0.5rem;
   padding: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: var(--nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -875,7 +932,6 @@ html.dark-theme .project-image {
   border-radius: 100px;
   justify-content: flex-start;
   overflow-x: auto;
-  max-width: 100%;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
@@ -1989,7 +2045,10 @@ body.page-project main {
   text-align: left;
   min-height: 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.25rem;
   padding: clamp(2.25rem, 4.5vw, 3.5rem) 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -2052,7 +2111,7 @@ body.page-project main {
   letter-spacing: -0.02em;
   font-weight: 700;
   line-height: 1.3;
-  margin: 0 0 1.25rem;
+  margin: 0;
   max-width: 36rem;
   color: rgba(255, 255, 255, 0.94);
 }
@@ -2063,6 +2122,7 @@ body.page-project main {
   max-width: 100%;
   min-width: 0;
   position: relative;
+  z-index: 1;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   padding: 0.35rem 0;
@@ -2155,8 +2215,38 @@ html.dark-theme .tool-badge:hover {
   .tools-banner__scrim {
     background: #0b1220;
   }
+}
 
-  .marquee {
+/* Desktop: keep infinite tools carousel even when reduced-motion is on */
+@media (prefers-reduced-motion: reduce) and (min-width: 769px) {
+  .tools-banner .marquee {
+    animation: tools-marquee 55s linear infinite !important;
+    display: flex;
+    width: max-content;
+    max-width: none;
+  }
+
+  .tools-banner .tools-track {
+    flex-wrap: nowrap;
+    width: auto;
+    max-width: none;
+    padding-right: var(--spacing-md);
+  }
+
+  .tools-banner .tools-track[aria-hidden="true"] {
+    display: flex;
+  }
+
+  .tools-banner .marquee-wrapper {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    overflow: hidden;
+  }
+}
+
+/* Mobile + reduced-motion: static wrap instead of marquee */
+@media (prefers-reduced-motion: reduce) and (max-width: 768px) {
+  .tools-banner .marquee {
     animation: none !important;
     display: block;
     width: 100%;
@@ -2164,7 +2254,7 @@ html.dark-theme .tool-badge:hover {
     will-change: auto;
   }
 
-  .tools-track {
+  .tools-banner .tools-track {
     flex-wrap: wrap;
     width: 100%;
     max-width: 100%;
@@ -2172,11 +2262,11 @@ html.dark-theme .tool-badge:hover {
     row-gap: 0.65rem;
   }
 
-  .tools-track[aria-hidden="true"] {
+  .tools-banner .tools-track[aria-hidden="true"] {
     display: none;
   }
 
-  .marquee-wrapper {
+  .tools-banner .marquee-wrapper {
     mask-image: none;
     -webkit-mask-image: none;
     overflow: hidden;
@@ -2333,6 +2423,25 @@ body.page-home .site-footer {
 
   .menu-toggle {
     display: flex;
+  }
+
+  .navbar.is-scrolled {
+    top: max(0.65rem, env(safe-area-inset-top));
+  }
+
+  .navbar.is-scrolled .navbar-inner {
+    width: calc(100% - 2 * var(--spacing-md));
+    max-width: none;
+    padding: 0.4rem 0.85rem;
+  }
+
+  .navbar.is-scrolled .nav-links {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 1.25rem;
+  }
+
+  html.dark-theme .navbar.is-scrolled .nav-links {
+    background: rgba(22, 22, 24, 0.98);
   }
 
   .navbar-inner {
@@ -4182,6 +4291,25 @@ pricing-card:hover,
 }
 
 /* —— Location / comuna pages (build-time from data/locations/*.json) —— */
+.geo-lang-notice {
+  display: none;
+  margin: 0 0 0.85rem;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  background: color-mix(in srgb, var(--accent-color) 8%, transparent);
+  border-left: 3px solid color-mix(in srgb, var(--accent-color) 55%, transparent);
+}
+
+html:not([lang^="es"]) .geo-lang-notice {
+  display: block;
+}
+
+.geo-locale-body {
+  /* language boundary for Spanish SEO body; no extra chrome */
+}
+
 .geo-breadcrumb {
   margin: 0.35rem 0 0.75rem;
 }
