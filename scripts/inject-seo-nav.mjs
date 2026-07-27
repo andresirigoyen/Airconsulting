@@ -8,7 +8,10 @@ import { fileURLToPath } from 'node:url';
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const NAV_SNIPPET = `<a href="/servicios" data-i18n="nav.services">Servicios</a>
-                <a href="/precios" data-i18n="nav.pricing">Precios</a>`;
+                <a href="/precios" data-i18n="nav.pricing">Precios</a>
+                <a href="/blog" data-i18n="nav.blog">Blog</a>`;
+
+const BLOG_LINK = `<a href="/blog" data-i18n="nav.blog">Blog</a>`;
 
 function walk(dir) {
   const out = [];
@@ -35,6 +38,25 @@ for (const file of walk(root)) {
       `$1${NAV_SNIPPET}\n                `
     );
     changed = true;
+  }
+
+  // Ensure Blog appears in existing navs (before Cotizar CTA when present)
+  if (
+    html.includes('id="nav-links"') &&
+    !html.includes('href="/blog"') &&
+    html.includes('data-i18n="nav.pricing"')
+  ) {
+    html = html.replace(
+      /(<a href="\/precios"[^>]*>[\s\S]*?<\/a>)\s*(<a href="\/#contact" class="nav-cta")/,
+      `$1\n                ${BLOG_LINK}\n                $2`
+    );
+    if (!html.includes('href="/blog"')) {
+      html = html.replace(
+        /(<a href="\/precios"[^>]*>[\s\S]*?<\/a>)/,
+        `$1\n                ${BLOG_LINK}`
+      );
+    }
+    if (html.includes('href="/blog"')) changed = true;
   }
 
   if (changed) {

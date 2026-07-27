@@ -1,8 +1,9 @@
-{
+﻿{
   "nav.projects": "Résultats clients",
   "nav.contact": "Demander un devis",
   "nav.services": "Services",
   "nav.pricing": "Tarifs",
+  "nav.blog": "Blog",
   "nav.mobile.home": "Accueil",
   "nav.mobile.projects": "Projets",
   "nav.mobile.services": "Services",

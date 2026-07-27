@@ -2,6 +2,11 @@
  * Blog factory — informational SEO content from data/blog/posts.json
  * All article copy lives in JSON (no hardcoded post bodies here).
  *
+ * Canonical article outline (H2 order):
+ *   Introducción → ¿Qué es? → ¿Cuándo usarlo? → Ventajas → Desventajas
+ *   → Ejemplos → Código → Errores comunes → Buenas prácticas
+ *   → Preguntas frecuentes → Conclusión → Enlaces relacionados
+ *
  * Run: node scripts/build-blog.mjs
  */
 import fs from 'node:fs';
@@ -20,17 +25,73 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 const dataFile = path.join(root, 'data', 'blog', 'posts.json');
 
+/** Slugify heading text for stable section anchors. */
+function sectionId(text, explicit) {
+  if (explicit) return explicit;
+  return String(text || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 64);
+}
+
 /**
  * @param {object} block
  */
 function renderBlock(block) {
   if (block.type === 'h2') {
-    const id = block.stepId ? ` id="${escapeAttr(block.stepId)}"` : '';
-    return `<h2${id}>${escapeHtml(block.text)}</h2>`;
+    const id = sectionId(block.text, block.id || block.stepId);
+    return `<h2 id="${escapeAttr(id)}">${escapeHtml(block.text)}</h2>`;
   }
-  if (block.type === 'p') return `<p>${escapeHtml(block.text)}</p>`;
+  if (block.type === 'h3') {
+    const id = block.id ? ` id="${escapeAttr(block.id)}"` : '';
+    return `<h3${id}>${escapeHtml(block.text)}</h3>`;
+  }
+  if (block.type === 'p') {
+    const cls = block.className ? ` class="${escapeAttr(block.className)}"` : '';
+    return `<p${cls}>${escapeHtml(block.text)}</p>`;
+  }
   if (block.type === 'ul' && Array.isArray(block.items)) {
-    return `<ul class="project-results-list">${block.items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`;
+    return `<ul class="project-results-list">${block.items
+      .map((i) => `<li>${escapeHtml(i)}</li>`)
+      .join('')}</ul>`;
+  }
+  if (block.type === 'ol' && Array.isArray(block.items)) {
+    return `<ol class="project-results-list">${block.items
+      .map((i) => `<li>${escapeHtml(i)}</li>`)
+      .join('')}</ol>`;
+  }
+  if (block.type === 'code') {
+    const lang = block.lang ? ` class="language-${escapeAttr(block.lang)}"` : '';
+    const label = block.label
+      ? `<p class="blog-code-label"><code>${escapeHtml(block.label)}</code></p>`
+      : '';
+    return `${label}<pre class="blog-code"><code${lang}>${escapeHtml(block.text)}</code></pre>`;
+  }
+  if (block.type === 'faq' && Array.isArray(block.items)) {
+    const items = block.items
+      .map(
+        (item) => `
+            <article class="faq-item faq-item--plain">
+                <h3>${escapeHtml(item.q)}</h3>
+                <p class="faq-answer">${escapeHtml(item.a)}</p>
+            </article>`
+      )
+      .join('');
+    return `<div class="faq-list" id="faq">${items}</div>`;
+  }
+  if (block.type === 'related' && Array.isArray(block.items)) {
+    const items = block.items
+      .map(
+        (item) =>
+          `<li><a href="${escapeAttr(item.href)}">${escapeHtml(item.label)}</a>${
+            item.note ? ` — ${escapeHtml(item.note)}` : ''
+          }</li>`
+      )
+      .join('');
+    return `<ul class="project-results-list blog-related">${items}</ul>`;
   }
   return '';
 }
@@ -60,6 +121,51 @@ function buildHowToLd(post) {
       ...(s.url ? { url: s.url } : {}),
     })),
   };
+}
+
+/**
+ * Collect FAQ blocks from body for FAQPage JSON-LD.
+ * @param {object} post
+ */
+function buildFaqLd(post) {
+  const faqs = [];
+  for (const block of post.content?.body || []) {
+    if (block.type === 'faq' && Array.isArray(block.items)) {
+      for (const item of block.items) {
+        if (item?.q && item?.a) faqs.push(item);
+      }
+    }
+  }
+  if (!faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${SITE}/blog/${post.slug}#faq`,
+    mainEntity: faqs.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+}
+
+/**
+ * Optional table of contents from h2 blocks.
+ * @param {object[]} body
+ */
+function renderToc(body) {
+  const headings = (body || []).filter((b) => b.type === 'h2' && b.text);
+  if (headings.length < 4) return '';
+  const links = headings
+    .map((h) => {
+      const id = sectionId(h.text, h.id || h.stepId);
+      return `<li><a href="#${escapeAttr(id)}">${escapeHtml(h.text)}</a></li>`;
+    })
+    .join('');
+  return `<nav class="blog-toc" aria-label="Contenido del artículo">
+            <p class="blog-toc__title">En este artículo</p>
+            <ol>${links}</ol>
+          </nav>`;
 }
 
 function main() {
@@ -115,12 +221,11 @@ function main() {
         name: hub.seo.metaTitle,
         url: `${SITE}/blog`,
         description: hub.seo.metaDescription,
-        publisher: { '@id': `${SITE}/#business` },
+        publisher: { '@id': ORG_ID },
       },
     ],
   });
 
-  // /blog → blog.html at root works with cleanUrls; also write blog/index.html for folder URLs
   const hubHtml = renderPage({
     headHtml: hubHead,
     mainHtml: hubMain,
@@ -131,10 +236,12 @@ function main() {
   console.log('Wrote blog.html + blog/index.html');
 
   for (const post of data.posts) {
-    const body = (post.content.body || []).map(renderBlock).join('\n            ');
+    const bodyBlocks = post.content.body || [];
+    const body = bodyBlocks.map(renderBlock).join('\n            ');
+    const toc = renderToc(bodyBlocks);
     const main = `
     <main id="main-content">
-    <article class="container">
+    <article class="container blog-article-page">
     <p class="geo-lang-notice" role="note" data-i18n="blog.noticeEs">Los artículos de este blog están disponibles en español.</p>
     <div lang="es">
     <header class="project-header fade-in">
@@ -148,6 +255,7 @@ function main() {
         <p class="project-lead geo-summary service-value-prop">${escapeHtml(post.content.excerpt)}</p>
     </header>
     <div class="project-section content-block fade-in blog-article">
+            ${toc}
             ${body}
             <p class="location-outro" style="margin-top:2rem">
                 <a href="${escapeAttr(post.content.ctaHref)}">${escapeHtml(post.content.ctaLabel)}</a>
@@ -160,6 +268,7 @@ function main() {
     </main>`;
 
     const howTo = buildHowToLd(post);
+    const faqLd = buildFaqLd(post);
     const head = buildHead({
       title: post.seo.metaTitle,
       description: post.seo.metaDescription,
@@ -187,6 +296,7 @@ function main() {
           description: post.content.excerpt,
         }),
         ...(howTo ? [howTo] : []),
+        ...(faqLd ? [faqLd] : []),
       ],
     });
 

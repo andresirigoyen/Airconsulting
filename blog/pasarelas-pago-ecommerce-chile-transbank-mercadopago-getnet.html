@@ -26,7 +26,7 @@ gtag('consent','default',{
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <title>Pasarelas de pago en Chile: Transbank vs Mercado Pago vs Getnet | IrigoyenDev</title>
-    <meta name="description" content="Comparativa práctica de pasarelas para e-commerce en Chile: Transbank, Mercado Pago y Getnet. Qué evaluar antes de integrar tu tienda online.">
+    <meta name="description" content="Guía estructurada: qué es una pasarela, cuándo usarla, ventajas, desventajas, ejemplos, errores comunes y FAQ sobre Transbank, Mercado Pago y Getnet.">
     <meta name="author" content="Andrés Irigoyen">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -48,7 +48,7 @@ gtag('consent','default',{
     <meta property="og:locale" content="es_CL">
     <meta property="og:locale:alternate" content="es_ES">
     <meta property="og:title" content="Pasarelas de pago para e-commerce en Chile">
-    <meta property="og:description" content="Transbank, Mercado Pago y Getnet: criterios técnicos y de negocio para tu tienda.">
+    <meta property="og:description" content="Definición, criterios, ejemplos y buenas prácticas para elegir pasarela en tu tienda online chilena.">
     <meta property="og:url" content="https://www.irigoyendev.com/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet">
     <meta property="og:image" content="https://www.irigoyendev.com/images/og-image.png">
     <meta property="og:image:secure_url" content="https://www.irigoyendev.com/images/og-image.png">
@@ -59,7 +59,7 @@ gtag('consent','default',{
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pasarelas de pago para e-commerce en Chile">
-    <meta name="twitter:description" content="Transbank, Mercado Pago y Getnet: criterios técnicos y de negocio para tu tienda.">
+    <meta name="twitter:description" content="Definición, criterios, ejemplos y buenas prácticas para elegir pasarela en tu tienda online chilena.">
     <meta name="twitter:image" content="https://www.irigoyendev.com/images/og-image.png">
     <meta name="twitter:image:alt" content="Pasarelas de pago para e-commerce en Chile">
 
@@ -109,7 +109,7 @@ gtag('consent','default',{
       "@type": "BlogPosting",
       "headline": "Pasarelas de pago que mejor funcionan en Chile para e-commerce (Transbank vs Mercado Pago vs Getnet)",
       "datePublished": "2026-07-18",
-      "description": "Comparativa práctica de pasarelas para e-commerce en Chile: Transbank, Mercado Pago y Getnet. Qué evaluar antes de integrar tu tienda online.",
+      "description": "Guía estructurada: qué es una pasarela, cuándo usarla, ventajas, desventajas, ejemplos, errores comunes y FAQ sobre Transbank, Mercado Pago y Getnet.",
       "url": "https://www.irigoyendev.com/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet",
       "author": {
         "@id": "https://www.irigoyendev.com/#person"
@@ -127,7 +127,7 @@ gtag('consent','default',{
       "@id": "https://www.irigoyendev.com/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet#webpage",
       "name": "Pasarelas de pago que mejor funcionan en Chile para e-commerce (Transbank vs Mercado Pago vs Getnet)",
       "url": "https://www.irigoyendev.com/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet",
-      "description": "Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack.",
+      "description": "Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack. Esta guía ordena la decisión con definición, pros/contras, ejemplos y errores comunes.",
       "isPartOf": {
         "@id": "https://www.irigoyendev.com/#website"
       },
@@ -142,6 +142,47 @@ gtag('consent','default',{
           ".faq-answer"
         ]
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.irigoyendev.com/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la mejor pasarela en Chile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay una única. Transbank suele pesar por confianza local; Mercado Pago por agilidad en pymes; Getnet y otras por retail/omnichannel. La mejor es la que calza con tu giro, onboarding y stack."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cambiar de pasarela después?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, si no acoplaste pedidos y stock al SDK. Usa webhooks propios y un estado de orden independiente del proveedor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Shopify o tienda a medida cambia la decisión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. En Shopify prioriza apps/conectores maduros. En a medida prioriza API, sandbox y control del flujo de confirmación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Las comisiones son el criterio principal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Un 0,5% menos no compensa un onboarding eterno o un checkout que abandona en móvil."
+          }
+        }
+      ]
     }
     </script>
 
@@ -161,6 +202,7 @@ gtag('consent','default',{
                 <a href="/servicios" data-i18n="nav.services">Servicios</a>
                 <a href="/#projects" data-i18n="nav.projects">Resultados</a>
                 <a href="/precios" data-i18n="nav.pricing">Precios</a>
+                <a href="/blog" data-i18n="nav.blog">Blog</a>
                 <a href="/#contact" class="nav-cta" data-i18n="nav.contact">Cotizar</a>
             </div>
             <div class="nav-actions">
@@ -197,7 +239,7 @@ gtag('consent','default',{
 
 
     <main id="main-content">
-    <article class="container">
+    <article class="container blog-article-page">
     <p class="geo-lang-notice" role="note" data-i18n="blog.noticeEs">Los artículos de este blog están disponibles en español.</p>
     <div lang="es">
     <header class="project-header fade-in">
@@ -208,21 +250,72 @@ gtag('consent','default',{
         <p class="project-eyebrow"><time datetime="2026-07-18">2026-07-18</time>
            · Chile</p>
         <h1>Pasarelas de pago que mejor funcionan en Chile para e-commerce (Transbank vs Mercado Pago vs Getnet)</h1>
-        <p class="project-lead geo-summary service-value-prop">Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack.</p>
+        <p class="project-lead geo-summary service-value-prop">Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack. Esta guía ordena la decisión con definición, pros/contras, ejemplos y errores comunes.</p>
     </header>
     <div class="project-section content-block fade-in blog-article">
-            <p>Si vendes online en Chile, la pasarela define cuántos checkouts se completan. Aquí un marco práctico —no una tabla de comisiones que cambia cada trimestre— para decidir con criterio técnico.</p>
-            <h2>Qué evaluar (más allá de la comisión)</h2>
-            <ul class="project-results-list"><li>Tiempo y requisitos de alta (empresa, giro, historial)</li><li>Medios: débito, crédito, cuotas, prepago</li><li>UX móvil y redirecciones vs embebido</li><li>Webhooks / confirmación de pago confiable</li><li>Contracargos, soporte y liquidaciones</li><li>Encaje con tu tienda (custom, Shopify, etc.)</li></ul>
-            <h2>Transbank</h2>
-            <p>Referente histórico en Chile. Suele ser opción fuerte cuando el negocio necesita percepción de “banco tradicional” y un flujo ampliamente reconocido por el usuario local. La integración y el onboarding deben planificarse con tiempo.</p>
-            <h2>Mercado Pago</h2>
-            <p>Muy usado por pymes y e-commerce que ya viven en el ecosistema Mercado Libre. Onboarding a menudo más ágil; útil para validar ventas rápido. Revisa comisiones, liquidaciones y si tu marca quiere depender de ese ecosistema.</p>
-            <h2>Getnet (y otras adquirentes)</h2>
-            <p>Alternativas adquirentes entran fuerte en retail y omnichannel. Evalúa documentación API, ambiente sandbox y soporte cuando el checkout falle en producción — el costo real aparece en los bordes.</p>
-            <h2>Recomendación de arquitectura</h2>
-            <p>Diseña el checkout para poder cambiar de proveedor (capa de abstracción / webhooks propios). No acoples la lógica de stock y pedidos solo al SDK de una pasarela.</p>
-            <p>¿Estás armando tienda en Valparaíso, Santiago u otra región? Podemos cotizar e-commerce con la pasarela que mejor calce a tu giro.</p>
+            <nav class="blog-toc" aria-label="Contenido del artículo">
+            <p class="blog-toc__title">En este artículo</p>
+            <ol><li><a href="#introduccion">Introducción</a></li><li><a href="#que-es">¿Qué es?</a></li><li><a href="#cuando-usarlo">¿Cuándo usarlo?</a></li><li><a href="#ventajas">Ventajas</a></li><li><a href="#desventajas">Desventajas</a></li><li><a href="#ejemplos">Ejemplos</a></li><li><a href="#codigo">Código</a></li><li><a href="#errores-comunes">Errores comunes</a></li><li><a href="#buenas-practicas">Buenas prácticas</a></li><li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li><li><a href="#conclusion">Conclusión</a></li><li><a href="#enlaces-relacionados">Enlaces relacionados</a></li></ol>
+          </nav>
+            <h2 id="introduccion">Introducción</h2>
+            <p class="geo-summary">Si vendes online en Chile, la pasarela define cuántos checkouts se completan. Aquí un marco práctico —no una tabla de comisiones que cambia cada trimestre— para decidir con criterio técnico entre Transbank, Mercado Pago, Getnet y otras adquirentes.</p>
+            <h2 id="que-es">¿Qué es?</h2>
+            <p>Una pasarela de pago es el software que conecta tu tienda con redes de tarjetas y medios locales: autentica al comprador, confirma el cobro y te notifica el resultado (aprobado, rechazado, pendiente). No es lo mismo que el banco emisor, ni que tu catálogo: es la capa de checkout.</p>
+            <h2 id="cuando-usarlo">¿Cuándo usarlo?</h2>
+            <ul class="project-results-list"><li>Cuando pasas de vender solo por Instagram/WhatsApp a un canal propio</li><li>Cuando necesitas débito/crédito/cuotas de forma recurrente</li><li>Cuando Ads te trae tráfico y el checkout actual abandona en móvil</li><li>Cuando requieres webhooks confiables para stock, facturación o despacho</li><li>Cuando planeas cambiar de proveedor sin reescribir toda la tienda</li></ul>
+            <h2 id="ventajas">Ventajas</h2>
+            <ul class="project-results-list"><li>Checkout estandarizado y medible (conversión, rechazos, contracargos)</li><li>Medios locales que el comprador chileno ya reconoce</li><li>Integración con tiendas custom, Shopify u otros stacks</li><li>Base para liquidaciones y conciliación contable</li><li>Con abstracción correcta, puedes cambiar de proveedor más adelante</li></ul>
+            <h2 id="desventajas">Desventajas</h2>
+            <ul class="project-results-list"><li>Onboarding y cumplimiento pueden demorar (giro, documentación)</li><li>Comisiones y liquidaciones varían y cambian con el tiempo</li><li>Dependencia de un SDK mal abstraído atrapa tu código</li><li>Soporte desigual cuando el checkout falla en producción</li><li>UX de redirección vs embebido impacta conversión móvil</li></ul>
+            <h2 id="ejemplos">Ejemplos</h2>
+            <h3>Transbank</h3>
+            <p>Referente histórico en Chile. Opción fuerte cuando el negocio necesita percepción de “banco tradicional” y un flujo ampliamente reconocido. Planifica integración y onboarding con tiempo.</p>
+            <h3>Mercado Pago</h3>
+            <p>Muy usado por pymes y e-commerce cercanos al ecosistema Mercado Libre. Onboarding a menudo más ágil para validar ventas rápido. Revisa comisiones, liquidaciones y dependencia de marca.</p>
+            <h3>Getnet (y otras adquirentes)</h3>
+            <p>Entran fuerte en retail y omnichannel. Evalúa documentación API, sandbox y soporte cuando falle el checkout en producción: el costo real aparece en los bordes.</p>
+            <h2 id="codigo">Código</h2>
+            <p>Patrón recomendado: no acoples stock y pedidos al SDK de una sola pasarela. Recibe el webhook, valida la firma/estado y actualiza tu dominio interno:</p>
+            <p class="blog-code-label"><code>Pseudocódigo webhook</code></p><pre class="blog-code"><code class="language-js">// POST /api/payments/webhook
+export async function handleWebhook(req) {
+  const event = verifySignature(req); // proveedor A o B
+  if (event.status !== 'paid') return { ok: true };
+
+  await orders.markPaid(event.orderId, {
+    provider: event.provider,
+    transactionId: event.id,
+    paidAt: event.paidAt,
+  });
+
+  await inventory.reserve(event.orderId);
+  return { ok: true };
+}</code></pre>
+            <h2 id="errores-comunes">Errores comunes</h2>
+            <ul class="project-results-list"><li>Elegir solo por comisión sin mirar onboarding ni UX móvil</li><li>Acoplar la lógica de pedidos al SDK de un único proveedor</li><li>No probar contracargos, rechazos y webhooks duplicados</li><li>Lanzar Ads antes de que el checkout sea estable en celular</li><li>Ignorar tiempos de liquidación y flujo de caja</li></ul>
+            <h2 id="buenas-practicas">Buenas prácticas</h2>
+            <ul class="project-results-list"><li>Evalúa alta, medios, UX móvil, webhooks, contracargos y soporte</li><li>Diseña una capa propia de confirmación de pago</li><li>Prueba sandbox con casos de rechazo y timeout</li><li>Mide conversión de checkout por dispositivo</li><li>Documenta el handoff contable (liquidaciones, boletas/facturas)</li></ul>
+            <h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>
+            <div class="faq-list" id="faq">
+            <article class="faq-item faq-item--plain">
+                <h3>¿Cuál es la mejor pasarela en Chile?</h3>
+                <p class="faq-answer">No hay una única. Transbank suele pesar por confianza local; Mercado Pago por agilidad en pymes; Getnet y otras por retail/omnichannel. La mejor es la que calza con tu giro, onboarding y stack.</p>
+            </article>
+            <article class="faq-item faq-item--plain">
+                <h3>¿Puedo cambiar de pasarela después?</h3>
+                <p class="faq-answer">Sí, si no acoplaste pedidos y stock al SDK. Usa webhooks propios y un estado de orden independiente del proveedor.</p>
+            </article>
+            <article class="faq-item faq-item--plain">
+                <h3>¿Shopify o tienda a medida cambia la decisión?</h3>
+                <p class="faq-answer">Sí. En Shopify prioriza apps/conectores maduros. En a medida prioriza API, sandbox y control del flujo de confirmación.</p>
+            </article>
+            <article class="faq-item faq-item--plain">
+                <h3>¿Las comisiones son el criterio principal?</h3>
+                <p class="faq-answer">No. Un 0,5% menos no compensa un onboarding eterno o un checkout que abandona en móvil.</p>
+            </article></div>
+            <h2 id="conclusion">Conclusión</h2>
+            <p>Elige pasarela como decisión de producto: confianza del comprador, velocidad de alta, UX móvil y arquitectura para no quedar atrapado. Las comisiones importan; la conversión y la operación importan más.</p>
+            <h2 id="enlaces-relacionados">Enlaces relacionados</h2>
+            <ul class="project-results-list blog-related"><li><a href="/crear-tienda-online">Crear tienda online Chile</a> — e-commerce con checkout y SEO</li><li><a href="/precios">Precios de desarrollo web</a> — rangos orientativos en USD</li><li><a href="/blog/automatizar-captacion-leads-norte-chile">Automatizar captación de leads</a> — si aún estás en etapa de demanda B2B</li><li><a href="/casos-de-exito">Casos de éxito</a> — proyectos reales de e-commerce y conversión</li></ul>
             <p class="location-outro" style="margin-top:2rem">
                 <a href="/crear-tienda-online">Ver servicio de tienda online →</a>
                 ·

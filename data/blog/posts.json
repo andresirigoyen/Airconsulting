@@ -1,16 +1,31 @@
 {
   "version": 1,
+  "structure": [
+    "H1",
+    "Introducción",
+    "¿Qué es?",
+    "¿Cuándo usarlo?",
+    "Ventajas",
+    "Desventajas",
+    "Ejemplos",
+    "Código",
+    "Errores comunes",
+    "Buenas prácticas",
+    "Preguntas frecuentes",
+    "Conclusión",
+    "Enlaces relacionados"
+  ],
   "hub": {
     "seo": {
       "metaTitle": "Blog IrigoyenDev | E-commerce, leads y desarrollo web en Chile",
-      "metaDescription": "Artículos prácticos sobre e-commerce en Chile, captación de leads, pasarelas de pago y desarrollo web para empresas en regiones.",
+      "metaDescription": "Guías sobre GEO, SEO local, e-commerce, landings, pasarelas de pago y desarrollo web para empresas en Chile y regiones.",
       "ogTitle": "Blog IrigoyenDev",
       "ogDescription": "Guías técnicas para empresas chilenas que quieren vender y captar clientes online."
     },
     "content": {
       "eyebrow": "Recursos · Chile",
       "h1": "Blog: desarrollo web, e-commerce y leads en Chile",
-      "lead": "Contenido informacional para empresas que investigan cómo digitalizarse — antes de contratar. Enfoque práctico, sin relleno."
+      "lead": "Recursos informacionales para pymes que investigan GEO, SEO local, tiendas online y desarrollo web en Chile — antes de contratar. Enfoque práctico, citas verificables, sin relleno."
     }
   },
   "posts": [
@@ -19,87 +34,241 @@
       "date": "2026-07-18",
       "seo": {
         "metaTitle": "Cómo automatizar la captación de leads en el norte de Chile | IrigoyenDev",
-        "metaDescription": "Guía para empresas de servicios en Antofagasta y el Norte Grande: landings, WhatsApp, formularios y seguimiento sin perder oportunidades B2B.",
+        "metaDescription": "Guía estructurada: qué es la captación automatizada de leads, cuándo usarla, ventajas, errores comunes y buenas prácticas para Antofagasta y el Norte Grande.",
         "ogTitle": "Automatizar captación de leads en el norte de Chile",
-        "ogDescription": "Landings, formularios y flujos para proveedores e industria en Antofagasta y Calama."
+        "ogDescription": "Definición, cuándo aplicarla, ejemplos, código y FAQ para proveedores e industria en Antofagasta y Calama."
       },
       "schema": {
         "howTo": {
           "name": "Cómo automatizar la captación de leads en el norte de Chile",
-          "description": "Guía paso a paso para empresas de servicios en Antofagasta y el Norte Grande.",
+          "description": "Guía paso a paso: landing, formulario, WhatsApp y registro de leads para empresas de servicios en el Norte Grande.",
           "totalTime": "PT20M",
           "steps": [
             {
-              "name": "Una landing con una sola oferta",
-              "text": "Publica una landing que explique el servicio, credenciales y un CTA claro (cotizar / hablar).",
-              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step1"
+              "name": "Publicar una landing con una sola oferta",
+              "text": "Explica el servicio, credenciales y un CTA claro (cotizar o hablar).",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#ejemplos"
             },
             {
               "name": "Formulario corto + WhatsApp Business",
-              "text": "Campos mínimos (nombre, empresa, necesidad, teléfono) y botón WhatsApp con mensaje prellenado.",
-              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step2"
+              "text": "Campos mínimos y botón WhatsApp con mensaje prellenado.",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#codigo"
             },
             {
-              "name": "Notificación y registro",
-              "text": "Cada lead debe generar email interno o fila en CRM con fecha y origen UTM.",
-              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step3"
+              "name": "Notificación y registro con origen",
+              "text": "Cada lead genera email o fila en CRM con fecha y UTM.",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#buenas-practicas"
             },
             {
-              "name": "Portal o panel cuando el flujo se estabiliza",
-              "text": "Un panel de solicitudes evita que todo viva en planillas, útil para contratistas multi-faena.",
-              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step4"
+              "name": "Escalar a panel cuando el volumen crece",
+              "text": "Un panel de solicitudes evita que todo viva en planillas.",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#cuando-usarlo"
             }
           ]
         }
       },
       "content": {
         "title": "Cómo automatizar la captación de leads en empresas de servicios en el norte de Chile",
-        "excerpt": "En minería y servicios industriales, el lead llega tarde o se pierde en el correo. Esta guía resume un stack simple: landing + formulario + WhatsApp + seguimiento.",
-        "regions": ["Antofagasta", "Calama", "Norte Grande"],
+        "excerpt": "En minería y servicios industriales, el lead llega tarde o se pierde en el correo. Esta guía explica qué es la captación automatizada, cuándo usarla, ventajas, errores comunes y un stack simple: landing + formulario + WhatsApp + seguimiento.",
+        "regions": [
+          "Antofagasta",
+          "Calama",
+          "Norte Grande"
+        ],
         "body": [
           {
+            "type": "h2",
+            "id": "introduccion",
+            "text": "Introducción"
+          },
+          {
             "type": "p",
-            "text": "En Antofagasta y Calama muchas empresas de servicios aún reciben solicitudes por correo, WhatsApp personal o referidos. Funciona… hasta que el volumen sube o el comercial está en faena."
+            "className": "geo-summary",
+            "text": "En Antofagasta y Calama muchas empresas de servicios aún reciben solicitudes por correo, WhatsApp personal o referidos. Funciona… hasta que el volumen sube o el comercial está en faena. Automatizar no significa reemplazar a las personas: significa que ningún lead se pierda entre chats y bandejas."
           },
           {
             "type": "h2",
-            "stepId": "step1",
-            "text": "1. Una landing con una sola oferta"
+            "id": "que-es",
+            "text": "¿Qué es?"
           },
           {
             "type": "p",
-            "text": "No hace falta un sitio de 20 páginas para empezar. Una landing que explique el servicio, credenciales y un CTA claro (cotizar / hablar) convierte mejor que un brochure genérico. En el norte, el visitante B2B busca seriedad y velocidad de respuesta."
+            "text": "La captación automatizada de leads es un flujo digital donde el interesado deja sus datos (o inicia WhatsApp) desde una página con una oferta clara, y el sistema registra, notifica y prioriza ese contacto sin depender de que alguien revise el correo a la hora exacta."
+          },
+          {
+            "type": "p",
+            "text": "En el Norte Grande suele combinar: landing de servicio + formulario corto + WhatsApp Business + registro interno (email, hoja o CRM liviano) con fecha y origen (UTM)."
           },
           {
             "type": "h2",
-            "stepId": "step2",
-            "text": "2. Formulario corto + WhatsApp Business"
+            "id": "cuando-usarlo",
+            "text": "¿Cuándo usarlo?"
           },
           {
-            "type": "p",
-            "text": "Campos mínimos: nombre, empresa, necesidad, teléfono. Duplica el canal con un botón a WhatsApp con mensaje prellenado (“Hola, vi su web y necesito…”). Así no dependes de que abran el correo el mismo día."
-          },
-          {
-            "type": "h2",
-            "stepId": "step3",
-            "text": "3. Notificación y registro"
-          },
-          {
-            "type": "p",
-            "text": "Cada lead debe generar un email interno (o fila en un CRM liviano) con fecha y origen UTM. Sin eso, no hay automatización real: solo mensajes sueltos."
+            "type": "ul",
+            "items": [
+              "Cuando ya recibes consultas pero se pierden entre WhatsApp personal y correo",
+              "Cuando el equipo está en terreno o faena y la respuesta tarda horas o días",
+              "Cuando quieres medir de dónde vienen los leads (Ads, Google, referidos)",
+              "Cuando el volumen empieza a superar lo que una planilla informal puede ordenar",
+              "Cuando preparas un portal o panel, pero aún no justifica un ERP completo"
+            ]
           },
           {
             "type": "h2",
-            "stepId": "step4",
-            "text": "4. Siguiente paso: portal o panel"
+            "id": "ventajas",
+            "text": "Ventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Respuesta más rápida: el lead no depende de abrir un correo",
+              "Trazabilidad: sabes fecha, origen y mensaje inicial",
+              "Menos fricción B2B: CTA claro (cotizar / hablar) en móvil",
+              "Base para escalar a un panel sin rehacer el embudo",
+              "Mejor alineación con campañas (Google Ads / Meta) si usas UTM"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "desventajas",
+            "text": "Desventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Requiere disciplina: si nadie atiende las notificaciones, el sistema no sirve",
+              "Un formulario mal diseñado genera leads de baja calidad",
+              "WhatsApp sin proceso puede volver a desordenar el inbox",
+              "Sin CRM o registro, solo cambias el caos de canal, no el de operación"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ejemplos",
+            "text": "Ejemplos"
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Proveedor de mantención industrial: landing “Mantención preventiva en faena” + formulario + WhatsApp",
+              "Empresa de transporte/logística en Calama: oferta única “Traslado a faena” con CTA cotizar",
+              "Servicio de ingeniería: landing de especialidad + campos empresa/necesidad + email interno al comercial"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "codigo",
+            "text": "Código"
           },
           {
             "type": "p",
-            "text": "Cuando el flujo se estabiliza, un panel de solicitudes o portal de proveedores evita que todo viva en planillas. Eso es especialmente útil para contratistas que atienden varias faenas."
+            "text": "Ejemplo mínimo de enlace WhatsApp con mensaje prellenado (útil como CTA secundario junto al formulario):"
+          },
+          {
+            "type": "code",
+            "lang": "html",
+            "label": "CTA WhatsApp",
+            "text": "<a\n  href=\"https://wa.me/56912345678?text=Hola%2C%20vi%20su%20web%20y%20necesito%20cotizar%20un%20servicio\"\n  target=\"_blank\"\n  rel=\"noopener noreferrer\"\n>\n  Hablar por WhatsApp\n</a>"
           },
           {
             "type": "p",
-            "text": "Si quieres aterrizar esto en Antofagasta o Calama, revisa nuestra landing regional de desarrollo web en el Norte Grande o pide un plan de proyecto."
+            "text": "Campos mínimos recomendados en el formulario (nombre, empresa, necesidad, teléfono). Evita formularios de 12 campos en el primer contacto."
+          },
+          {
+            "type": "h2",
+            "id": "errores-comunes",
+            "text": "Errores comunes"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Sitio de 20 páginas genéricas en vez de una landing con una oferta",
+              "Usar solo WhatsApp personal sin registro ni responsable de turno",
+              "No guardar UTM / origen: imposible saber qué canal funciona",
+              "Prometer respuesta en 1 hora y no tener proceso de atención",
+              "Automatizar marketing sin arreglar la entrega del lead al comercial"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "buenas-practicas",
+            "text": "Buenas prácticas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Una página, una oferta, un CTA principal",
+              "Formulario corto + WhatsApp como canal paralelo",
+              "Notificación inmediata (email o CRM) con fecha y origen",
+              "SLA interno de respuesta (aunque sea “hoy antes de las 18:00”)",
+              "Cuando el volumen crece, pasa de planilla a panel de solicitudes"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "preguntas-frecuentes",
+            "text": "Preguntas frecuentes"
+          },
+          {
+            "type": "faq",
+            "items": [
+              {
+                "q": "¿Necesito un CRM caro para empezar?",
+                "a": "No. Puedes empezar con landing + formulario + email interno o una hoja ordenada. El CRM tiene sentido cuando el volumen y el seguimiento comercial lo justifican."
+              },
+              {
+                "q": "¿WhatsApp reemplaza al formulario?",
+                "a": "Mejor usar ambos. WhatsApp acelera la conversación; el formulario deja rastro estructurado (empresa, necesidad, origen)."
+              },
+              {
+                "q": "¿Cuánto tarda implementar este flujo?",
+                "a": "Una landing enfocada con formulario y WhatsApp suele salir en días si el mensaje y los activos están claros. Un panel interno se planifica por fases."
+              },
+              {
+                "q": "¿Sirve solo para minería?",
+                "a": "No. Aplica a cualquier servicio B2B en regiones donde el comercial está en terreno: logística, mantención, ingeniería, proveedores industriales."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Conclusión"
+          },
+          {
+            "type": "p",
+            "text": "Automatizar leads en el norte de Chile es menos “inteligencia artificial” y más disciplina operativa: oferta clara, canal medible y un responsable que atienda. Empieza simple; escala a panel cuando el flujo ya no cabe en el chat."
+          },
+          {
+            "type": "h2",
+            "id": "enlaces-relacionados",
+            "text": "Enlaces relacionados"
+          },
+          {
+            "type": "related",
+            "items": [
+              {
+                "href": "/desarrollo-web-antofagasta",
+                "label": "Desarrollo web en Antofagasta",
+                "note": "landing y presencia regional Norte Grande"
+              },
+              {
+                "href": "/landing-pages",
+                "label": "Landing pages de conversión",
+                "note": "servicio de páginas enfocadas en un CTA"
+              },
+              {
+                "href": "/servicios/geo-optimizacion-ia",
+                "label": "GEO / optimización para IA",
+                "note": "para que tu oferta también sea citable en ChatGPT y Perplexity"
+              },
+              {
+                "href": "/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet",
+                "label": "Pasarelas de pago en Chile",
+                "note": "si tu siguiente paso es vender online"
+              }
+            ]
           }
         ],
         "ctaHref": "/desarrollo-web-antofagasta",
@@ -111,73 +280,1293 @@
       "date": "2026-07-18",
       "seo": {
         "metaTitle": "Pasarelas de pago en Chile: Transbank vs Mercado Pago vs Getnet | IrigoyenDev",
-        "metaDescription": "Comparativa práctica de pasarelas para e-commerce en Chile: Transbank, Mercado Pago y Getnet. Qué evaluar antes de integrar tu tienda online.",
+        "metaDescription": "Guía estructurada: qué es una pasarela, cuándo usarla, ventajas, desventajas, ejemplos, errores comunes y FAQ sobre Transbank, Mercado Pago y Getnet.",
         "ogTitle": "Pasarelas de pago para e-commerce en Chile",
-        "ogDescription": "Transbank, Mercado Pago y Getnet: criterios técnicos y de negocio para tu tienda."
+        "ogDescription": "Definición, criterios, ejemplos y buenas prácticas para elegir pasarela en tu tienda online chilena."
       },
       "content": {
         "title": "Pasarelas de pago que mejor funcionan en Chile para e-commerce (Transbank vs Mercado Pago vs Getnet)",
-        "excerpt": "Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack.",
-        "regions": ["Chile"],
+        "excerpt": "Elegir pasarela no es solo “cuál es más barata”: importa onboarding, contracargos, UX móvil y cómo se integra con tu stack. Esta guía ordena la decisión con definición, pros/contras, ejemplos y errores comunes.",
+        "regions": [
+          "Chile"
+        ],
         "body": [
           {
+            "type": "h2",
+            "id": "introduccion",
+            "text": "Introducción"
+          },
+          {
             "type": "p",
-            "text": "Si vendes online en Chile, la pasarela define cuántos checkouts se completan. Aquí un marco práctico —no una tabla de comisiones que cambia cada trimestre— para decidir con criterio técnico."
+            "className": "geo-summary",
+            "text": "Si vendes online en Chile, la pasarela define cuántos checkouts se completan. Aquí un marco práctico —no una tabla de comisiones que cambia cada trimestre— para decidir con criterio técnico entre Transbank, Mercado Pago, Getnet y otras adquirentes."
           },
           {
             "type": "h2",
-            "text": "Qué evaluar (más allá de la comisión)"
+            "id": "que-es",
+            "text": "¿Qué es?"
+          },
+          {
+            "type": "p",
+            "text": "Una pasarela de pago es el software que conecta tu tienda con redes de tarjetas y medios locales: autentica al comprador, confirma el cobro y te notifica el resultado (aprobado, rechazado, pendiente). No es lo mismo que el banco emisor, ni que tu catálogo: es la capa de checkout."
+          },
+          {
+            "type": "h2",
+            "id": "cuando-usarlo",
+            "text": "¿Cuándo usarlo?"
           },
           {
             "type": "ul",
             "items": [
-              "Tiempo y requisitos de alta (empresa, giro, historial)",
-              "Medios: débito, crédito, cuotas, prepago",
-              "UX móvil y redirecciones vs embebido",
-              "Webhooks / confirmación de pago confiable",
-              "Contracargos, soporte y liquidaciones",
-              "Encaje con tu tienda (custom, Shopify, etc.)"
+              "Cuando pasas de vender solo por Instagram/WhatsApp a un canal propio",
+              "Cuando necesitas débito/crédito/cuotas de forma recurrente",
+              "Cuando Ads te trae tráfico y el checkout actual abandona en móvil",
+              "Cuando requieres webhooks confiables para stock, facturación o despacho",
+              "Cuando planeas cambiar de proveedor sin reescribir toda la tienda"
             ]
           },
           {
             "type": "h2",
+            "id": "ventajas",
+            "text": "Ventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Checkout estandarizado y medible (conversión, rechazos, contracargos)",
+              "Medios locales que el comprador chileno ya reconoce",
+              "Integración con tiendas custom, Shopify u otros stacks",
+              "Base para liquidaciones y conciliación contable",
+              "Con abstracción correcta, puedes cambiar de proveedor más adelante"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "desventajas",
+            "text": "Desventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Onboarding y cumplimiento pueden demorar (giro, documentación)",
+              "Comisiones y liquidaciones varían y cambian con el tiempo",
+              "Dependencia de un SDK mal abstraído atrapa tu código",
+              "Soporte desigual cuando el checkout falla en producción",
+              "UX de redirección vs embebido impacta conversión móvil"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ejemplos",
+            "text": "Ejemplos"
+          },
+          {
+            "type": "h3",
             "text": "Transbank"
           },
           {
             "type": "p",
-            "text": "Referente histórico en Chile. Suele ser opción fuerte cuando el negocio necesita percepción de “banco tradicional” y un flujo ampliamente reconocido por el usuario local. La integración y el onboarding deben planificarse con tiempo."
+            "text": "Referente histórico en Chile. Opción fuerte cuando el negocio necesita percepción de “banco tradicional” y un flujo ampliamente reconocido. Planifica integración y onboarding con tiempo."
           },
           {
-            "type": "h2",
+            "type": "h3",
             "text": "Mercado Pago"
           },
           {
             "type": "p",
-            "text": "Muy usado por pymes y e-commerce que ya viven en el ecosistema Mercado Libre. Onboarding a menudo más ágil; útil para validar ventas rápido. Revisa comisiones, liquidaciones y si tu marca quiere depender de ese ecosistema."
+            "text": "Muy usado por pymes y e-commerce cercanos al ecosistema Mercado Libre. Onboarding a menudo más ágil para validar ventas rápido. Revisa comisiones, liquidaciones y dependencia de marca."
           },
           {
-            "type": "h2",
+            "type": "h3",
             "text": "Getnet (y otras adquirentes)"
           },
           {
             "type": "p",
-            "text": "Alternativas adquirentes entran fuerte en retail y omnichannel. Evalúa documentación API, ambiente sandbox y soporte cuando el checkout falle en producción — el costo real aparece en los bordes."
+            "text": "Entran fuerte en retail y omnichannel. Evalúa documentación API, sandbox y soporte cuando falle el checkout en producción: el costo real aparece en los bordes."
           },
           {
             "type": "h2",
-            "text": "Recomendación de arquitectura"
+            "id": "codigo",
+            "text": "Código"
           },
           {
             "type": "p",
-            "text": "Diseña el checkout para poder cambiar de proveedor (capa de abstracción / webhooks propios). No acoples la lógica de stock y pedidos solo al SDK de una pasarela."
+            "text": "Patrón recomendado: no acoples stock y pedidos al SDK de una sola pasarela. Recibe el webhook, valida la firma/estado y actualiza tu dominio interno:"
+          },
+          {
+            "type": "code",
+            "lang": "js",
+            "label": "Pseudocódigo webhook",
+            "text": "// POST /api/payments/webhook\nexport async function handleWebhook(req) {\n  const event = verifySignature(req); // proveedor A o B\n  if (event.status !== 'paid') return { ok: true };\n\n  await orders.markPaid(event.orderId, {\n    provider: event.provider,\n    transactionId: event.id,\n    paidAt: event.paidAt,\n  });\n\n  await inventory.reserve(event.orderId);\n  return { ok: true };\n}"
+          },
+          {
+            "type": "h2",
+            "id": "errores-comunes",
+            "text": "Errores comunes"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Elegir solo por comisión sin mirar onboarding ni UX móvil",
+              "Acoplar la lógica de pedidos al SDK de un único proveedor",
+              "No probar contracargos, rechazos y webhooks duplicados",
+              "Lanzar Ads antes de que el checkout sea estable en celular",
+              "Ignorar tiempos de liquidación y flujo de caja"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "buenas-practicas",
+            "text": "Buenas prácticas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Evalúa alta, medios, UX móvil, webhooks, contracargos y soporte",
+              "Diseña una capa propia de confirmación de pago",
+              "Prueba sandbox con casos de rechazo y timeout",
+              "Mide conversión de checkout por dispositivo",
+              "Documenta el handoff contable (liquidaciones, boletas/facturas)"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "preguntas-frecuentes",
+            "text": "Preguntas frecuentes"
+          },
+          {
+            "type": "faq",
+            "items": [
+              {
+                "q": "¿Cuál es la mejor pasarela en Chile?",
+                "a": "No hay una única. Transbank suele pesar por confianza local; Mercado Pago por agilidad en pymes; Getnet y otras por retail/omnichannel. La mejor es la que calza con tu giro, onboarding y stack."
+              },
+              {
+                "q": "¿Puedo cambiar de pasarela después?",
+                "a": "Sí, si no acoplaste pedidos y stock al SDK. Usa webhooks propios y un estado de orden independiente del proveedor."
+              },
+              {
+                "q": "¿Shopify o tienda a medida cambia la decisión?",
+                "a": "Sí. En Shopify prioriza apps/conectores maduros. En a medida prioriza API, sandbox y control del flujo de confirmación."
+              },
+              {
+                "q": "¿Las comisiones son el criterio principal?",
+                "a": "No. Un 0,5% menos no compensa un onboarding eterno o un checkout que abandona en móvil."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Conclusión"
           },
           {
             "type": "p",
-            "text": "¿Estás armando tienda en Valparaíso, Santiago u otra región? Podemos cotizar e-commerce con la pasarela que mejor calce a tu giro."
+            "text": "Elige pasarela como decisión de producto: confianza del comprador, velocidad de alta, UX móvil y arquitectura para no quedar atrapado. Las comisiones importan; la conversión y la operación importan más."
+          },
+          {
+            "type": "h2",
+            "id": "enlaces-relacionados",
+            "text": "Enlaces relacionados"
+          },
+          {
+            "type": "related",
+            "items": [
+              {
+                "href": "/crear-tienda-online",
+                "label": "Crear tienda online Chile",
+                "note": "e-commerce con checkout y SEO"
+              },
+              {
+                "href": "/precios",
+                "label": "Precios de desarrollo web",
+                "note": "rangos orientativos en USD"
+              },
+              {
+                "href": "/blog/automatizar-captacion-leads-norte-chile",
+                "label": "Automatizar captación de leads",
+                "note": "si aún estás en etapa de demanda B2B"
+              },
+              {
+                "href": "/casos-de-exito",
+                "label": "Casos de éxito",
+                "note": "proyectos reales de e-commerce y conversión"
+              }
+            ]
           }
         ],
         "ctaHref": "/crear-tienda-online",
         "ctaLabel": "Ver servicio de tienda online →"
+      }
+    },
+    {
+      "slug": "geo-optimizacion-ia-que-es-chile",
+      "date": "2026-07-22",
+      "seo": {
+        "metaTitle": "GEO: qué es la optimización para IA y por qué importa en Chile | IrigoyenDev",
+        "metaDescription": "Guía GEO para empresas chilenas: qué es Generative Engine Optimization, cuándo aplicarla, ventajas frente al SEO clásico, errores comunes y FAQ para ChatGPT y Perplexity.",
+        "ogTitle": "GEO en Chile: optimización para motores generativos",
+        "ogDescription": "Definición, ventajas, ejemplos y buenas prácticas para que la IA cite tu marca en Chile."
+      },
+      "content": {
+        "title": "GEO en Chile: qué es la optimización para inteligencia artificial y por qué tu empresa la necesita",
+        "excerpt": "GEO (Generative Engine Optimization) es la disciplina que hace que ChatGPT, Gemini y Perplexity recomienden tu negocio. En Chile 2026, quien solo optimiza para Google deja fuera un canal de descubrimiento que crece cada mes.",
+        "regions": [
+          "Chile",
+          "Santiago"
+        ],
+        "body": [
+          {
+            "type": "h2",
+            "id": "introduccion",
+            "text": "Introducción"
+          },
+          {
+            "type": "p",
+            "className": "geo-summary",
+            "text": "Si un cliente pregunta a ChatGPT «¿cuál es la mejor agencia de desarrollo web en Santiago?», la respuesta no sale de tu ranking en Google: sale de fuentes con entidades claras, fragmentos citables y datos estructurados. GEO es la capa que prepara tu marca para ese escenario — sin abandonar el SEO técnico."
+          },
+          {
+            "type": "h2",
+            "id": "que-es",
+            "text": "¿Qué es?"
+          },
+          {
+            "type": "p",
+            "text": "GEO (Generative Engine Optimization) es el conjunto de prácticas que aumentan la probabilidad de que un motor generativo (ChatGPT, Gemini, Perplexity, Copilot) cite, resuma o recomiende tu empresa en respuestas conversacionales. Incluye Schema markup (Organization, FAQ, HowTo, Speakable), contenido en formato pregunta-respuesta, NAP consistente y señales multi-canal (LinkedIn, GitHub, medios)."
+          },
+          {
+            "type": "h2",
+            "id": "cuando-usarlo",
+            "text": "¿Cuándo usarlo?"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Cuando tu buyer persona ya usa IA para investigar proveedores antes de cotizar",
+              "Cuando compites en categorías locales (desarrollo web Santiago, e-commerce Chile)",
+              "Cuando lanzas o relanzas web y quieres SEO + citabilidad desde el día uno",
+              "Cuando tu competencia tiene buen SEO clásico pero contenido poco estructurado para IA",
+              "Cuando vendes servicios B2B con ciclo largo donde la confianza se construye en múltiples touchpoints"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ventajas",
+            "text": "Ventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Presencia en un canal de descubrimiento que crece más rápido que muchos medios pagados",
+              "Contenido FAQ y definiciones reutilizables en web, ads y ventas",
+              "Refuerza el SEO técnico (Schema, velocidad, canonicals) en lugar de reemplazarlo",
+              "Diferenciación frente a agencias que solo hablan de «posicionar en Google»",
+              "Mejor alineación con búsquedas conversacionales («cuánto cuesta…», «mejor opción en…»)"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "desventajas",
+            "text": "Desventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Resultados menos predecibles que Search Console en el corto plazo",
+              "Requiere contenido honesto — la IA penaliza relleno y datos inventados",
+              "Depende de menciones externas para máxima autoridad (no solo on-page)",
+              "Las respuestas de IA cambian según modelo y fecha de entrenamiento/indexación",
+              "No sustituye producto, precio ni entrega comercial"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ejemplos",
+            "text": "Ejemplos"
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Estudio boutique en Providencia: página GEO dedicada + FAQ con precios transparentes + Review schema en casos reales",
+              "Pyme e-commerce: blog con guías paso a paso (HowTo) + OfferCatalog en Schema",
+              "Servicios B2B en Antofagasta: landing regional + llms.txt + fragmentos de 40–60 palabras en geo-summary"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "codigo",
+            "text": "Código"
+          },
+          {
+            "type": "p",
+            "text": "Ejemplo mínimo de Speakable + FAQ en JSON-LD (adaptar URLs y textos reales):"
+          },
+          {
+            "type": "code",
+            "lang": "json",
+            "label": "Schema Speakable + FAQPage",
+            "text": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"GEO Chile — IrigoyenDev\",\n  \"speakable\": {\n    \"@type\": \"SpeakableSpecification\",\n    \"cssSelector\": [\".geo-summary\", \".faq-answer\"]\n  }\n}"
+          },
+          {
+            "type": "h2",
+            "id": "errores-comunes",
+            "text": "Errores comunes"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Inventar AggregateRating o reseñas que no existen",
+              "Duplicar el mismo párrafo en 50 páginas locales (thin content)",
+              "Bloquear crawlers de IA en robots.txt (GPTBot, PerplexityBot)",
+              "Publicar FAQ solo en Schema sin HTML visible",
+              "Confundir GEO con publicar más keywords sin estructura"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "buenas-practicas",
+            "text": "Buenas prácticas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Un NAP canónico (nombre, teléfono, email) en web, Schema y Google Business Profile",
+              "Secciones geo-summary con definición + datos concretos (precios, plazos)",
+              "FAQ visibles con clase faq-answer y mismo texto en FAQPage JSON-LD",
+              "llms.txt y ai.txt declarando permisos de indexación para IA",
+              "Casos de éxito con métricas verificables, no superlativos vacíos"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "preguntas-frecuentes",
+            "text": "Preguntas frecuentes"
+          },
+          {
+            "type": "faq",
+            "items": [
+              {
+                "q": "¿GEO reemplaza al SEO?",
+                "a": "No. GEO complementa el SEO: canonicals, velocidad, sitemap y contenido de calidad siguen siendo la base. GEO añade citabilidad para motores generativos."
+              },
+              {
+                "q": "¿Cuánto cuesta implementar GEO en Chile?",
+                "a": "Desde ~USD 199 en paquetes de entrada (auditoría + Schema + fragmentos). Proyectos avanzados con arquitectura de entidades y multi-canal desde ~USD 499 según alcance."
+              },
+              {
+                "q": "¿En cuánto tiempo se nota?",
+                "a": "Las señales técnicas se publican en días. La citación en IA suele madurar en semanas, según competencia y menciones externas."
+              },
+              {
+                "q": "¿Sirve para empresas fuera de Santiago?",
+                "a": "Sí. GEO local funciona con páginas de intención por comuna o región (Valparaíso, Concepción, Antofagasta) más Schema LocalBusiness coherente."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Conclusión"
+          },
+          {
+            "type": "p",
+            "text": "GEO no es moda: es cómo las empresas chilenas preparan su marca para un mundo donde parte de la investigación de compra ocurre en chatbots. Empieza con estructura honesta, Schema correcto y contenido que responda preguntas reales."
+          },
+          {
+            "type": "h2",
+            "id": "enlaces-relacionados",
+            "text": "Enlaces relacionados"
+          },
+          {
+            "type": "related",
+            "items": [
+              {
+                "href": "/servicios/geo-optimizacion-ia",
+                "label": "Servicio GEO IrigoyenDev",
+                "note": "cotizar optimización para IA"
+              },
+              {
+                "href": "/blog/como-elegir-desarrollador-web-chile",
+                "label": "Cómo elegir desarrollador web",
+                "note": "guía de contratación"
+              },
+              {
+                "href": "/blog/seo-local-pymes-santiago-guia",
+                "label": "SEO local en Santiago",
+                "note": "complemento clásico al GEO"
+              },
+              {
+                "href": "/casos-de-exito",
+                "label": "Casos de éxito",
+                "note": "prueba social verificable"
+              }
+            ]
+          }
+        ],
+        "ctaHref": "/servicios/geo-optimizacion-ia",
+        "ctaLabel": "Ver servicio GEO →"
+      }
+    },
+    {
+      "slug": "como-elegir-desarrollador-web-chile",
+      "date": "2026-07-25",
+      "seo": {
+        "metaTitle": "Cómo elegir un desarrollador web en Chile sin perder dinero | IrigoyenDev",
+        "metaDescription": "Guía paso a paso para contratar desarrollo web en Chile: qué revisar en portafolio, SEO/GEO, precios, plazos, stack y errores que encarecen el proyecto.",
+        "ogTitle": "Elegir desarrollador web en Chile — guía 2026",
+        "ogDescription": "Checklist práctico: portafolio, SEO, precios transparentes y señales de alerta."
+      },
+      "schema": {
+        "howTo": {
+          "name": "Cómo elegir un desarrollador web en Chile sin perder dinero",
+          "description": "Pasos para evaluar agencias y freelancers antes de firmar un proyecto web en Chile.",
+          "totalTime": "PT15M",
+          "steps": [
+            {
+              "name": "Verificar portafolio y casos de éxito",
+              "text": "Busca proyectos reales con métricas o resultados describibles, no solo mockups.",
+              "url": "https://www.irigoyendev.com/blog/como-elegir-desarrollador-web-chile/#ejemplos"
+            },
+            {
+              "name": "Confirmar SEO y GEO desde el inicio",
+              "text": "Exige Schema, velocidad móvil y contenido citable; una web sin SEO técnico es gasto, no inversión.",
+              "url": "https://www.irigoyendev.com/blog/como-elegir-desarrollador-web-chile/#buenas-practicas"
+            },
+            {
+              "name": "Comparar alcance vs precio",
+              "text": "Landings desde ~USD 600 y e-commerce desde ~USD 1.304 son referencias; desconfía de «todo incluido» sin alcance escrito.",
+              "url": "https://www.irigoyendev.com/blog/cuanto-cuesta-landing-page-chile/#que-es"
+            },
+            {
+              "name": "Definir plazos y soporte post-lanzamiento",
+              "text": "Pide hitos semanales y al menos 30 días de soporte; pregunta por Plan Care si necesitas mantenimiento.",
+              "url": "https://www.irigoyendev.com/blog/como-elegir-desarrollador-web-chile/#preguntas-frecuentes"
+            }
+          ]
+        }
+      },
+      "content": {
+        "title": "Cómo elegir un desarrollador web en Chile sin perder dinero",
+        "excerpt": "Contratar desarrollo web en Chile puede costarte el doble si no comparas alcance, SEO y plazos con el mismo criterio. Esta guía ordena la decisión en pasos verificables antes de firmar.",
+        "regions": [
+          "Chile",
+          "Santiago",
+          "Remoto"
+        ],
+        "body": [
+          {
+            "type": "h2",
+            "id": "introduccion",
+            "text": "Introducción"
+          },
+          {
+            "type": "p",
+            "className": "geo-summary",
+            "text": "En Chile conviven freelancers, agencias boutique y estudios offshore. El precio más bajo rara vez es el más barato: lo caro es rehacer una web lenta, sin SEO, o con un checkout que nadie usa. Esta guía te ayuda a evaluar proveedores con checklist concreto."
+          },
+          {
+            "type": "h2",
+            "id": "que-es",
+            "text": "¿Qué es?"
+          },
+          {
+            "type": "p",
+            "text": "Elegir bien un desarrollador web significa seleccionar a quien entrega no solo diseño, sino producto digital: arquitectura, velocidad, indexación, conversión y handoff documentado. En B2B chileno suele incluir landing o tienda, integración WhatsApp/formulario, y base para campañas."
+          },
+          {
+            "type": "h2",
+            "id": "cuando-usarlo",
+            "text": "¿Cuándo usarlo?"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Antes de pagar un anticipo o firmar contrato",
+              "Cuando recibes 3+ cotizaciones con alcances distintos e incomparables",
+              "Cuando migras de Instagram/WhatsApp a canal propio",
+              "Cuando tu web actual no genera leads ni ventas medibles",
+              "Cuando necesitas e-commerce con pasarela chilena"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ventajas",
+            "text": "Ventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Reduce riesgo de re-trabajo y sobrecostos ocultos",
+              "Alinea expectativas de plazo y entregables",
+              "Facilita comparar precio por alcance, no por horas vagas",
+              "Identifica proveedores con experiencia en tu vertical (retail, legal, industrial)",
+              "Mejora negociación de mantenimiento post-lanzamiento"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "desventajas",
+            "text": "Desventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Lleva tiempo (15–30 min de investigación por candidato)",
+              "Portafolios pulidos no garantizan entrega igual de calidad",
+              "El candidato más barato puede externalizar sin decirlo",
+              "Checklists largos pueden retrasar lanzamientos urgentes válidos"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ejemplos",
+            "text": "Ejemplos"
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Retail en Las Condes: pides demo de tienda similar + PageSpeed móvil + integración Webpay/Mercado Pago",
+              "Estudio jurídico en Providencia: revisas casos con captación de leads + SEO local + tiempos de carga",
+              "Proveedor industrial en Antofagasta: priorizas landing B2B + formulario + WhatsApp + registro de leads"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "codigo",
+            "text": "Código"
+          },
+          {
+            "type": "p",
+            "text": "Checklist mínimo que puedes pegar en tu brief de cotización:"
+          },
+          {
+            "type": "code",
+            "lang": "markdown",
+            "label": "Brief mínimo",
+            "text": "- Objetivo: leads / ventas / catálogo\n- Alcance: # páginas, idiomas, admin\n- SEO: title, meta, sitemap, Schema, CWV\n- GEO: FAQ visible, fragmentos citables\n- Plazo: hitos semanales\n- Post-lanzamiento: soporte 30 días\n- Presupuesto referencia: USD ___"
+          },
+          {
+            "type": "h2",
+            "id": "errores-comunes",
+            "text": "Errores comunes"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Contratar solo por precio sin alcance escrito",
+              "No pedir acceso a Search Console o analytics post-lanzamiento",
+              "Aceptar plantilla genérica sin adaptar mensaje comercial",
+              "Ignorar mobile-first (70%+ tráfico en Chile es móvil)",
+              "No preguntar quién mantiene la web después del go-live"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "buenas-practicas",
+            "text": "Buenas prácticas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Pide 2–3 casos con resultados (velocidad, leads, ventas)",
+              "Exige SEO técnico y GEO básico en la propuesta",
+              "Compara plazos realistas: landing 7–10 días hábiles, e-commerce 3–4 semanas",
+              "Define un solo responsable de producto en tu equipo",
+              "Acuerda soporte y Plan Care antes del cierre, no después"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "preguntas-frecuentes",
+            "text": "Preguntas frecuentes"
+          },
+          {
+            "type": "faq",
+            "items": [
+              {
+                "q": "¿Freelance o agencia en Chile?",
+                "a": "Freelance senior funciona para alcance acotado. Agencia o estudio boutique conviene cuando necesitas diseño, desarrollo, SEO y continuidad (Care) con un solo interlocutor."
+              },
+              {
+                "q": "¿Qué precio es sospechosamente bajo?",
+                "a": "Landings «profesionales» bajo USD 300 o e-commerce «completo» bajo USD 800 suelen omitir SEO, testing móvil o soporte. Pide desglose."
+              },
+              {
+                "q": "¿Debo exigir SEO en el contrato?",
+                "a": "Sí. Como mínimo: titles, meta, sitemap, robots, canonicals, Schema básico y Core Web Vitals aceptables en móvil."
+              },
+              {
+                "q": "¿Trabajar remoto con proveedor en otro país?",
+                "a": "Es válido si hay casos en Chile/España, comunicación clara y horarios compatibles. IrigoyenDev atiende Chile, España y Dinamarca en remoto."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Conclusión"
+          },
+          {
+            "type": "p",
+            "text": "Elegir desarrollador web en Chile es una decisión de inversión, no de gasto decorativo. Usa portafolio verificable, alcance escrito y SEO/GEO desde el día uno — y evitarás pagar dos veces por la misma web."
+          },
+          {
+            "type": "h2",
+            "id": "enlaces-relacionados",
+            "text": "Enlaces relacionados"
+          },
+          {
+            "type": "related",
+            "items": [
+              {
+                "href": "/casos-de-exito",
+                "label": "Casos de éxito IrigoyenDev",
+                "note": "portafolio con métricas"
+              },
+              {
+                "href": "/precios",
+                "label": "Precios desarrollo web",
+                "note": "rangos transparentes USD"
+              },
+              {
+                "href": "/blog/cuanto-cuesta-landing-page-chile",
+                "label": "Cuánto cuesta una landing",
+                "note": "referencia de inversión"
+              },
+              {
+                "href": "/santiago/providencia",
+                "label": "Desarrollo web Providencia",
+                "note": "ficha local Santiago"
+              }
+            ]
+          }
+        ],
+        "ctaHref": "/#contact",
+        "ctaLabel": "Pedir plan de proyecto →"
+      }
+    },
+    {
+      "slug": "seo-local-pymes-santiago-guia",
+      "date": "2026-08-01",
+      "seo": {
+        "metaTitle": "SEO local para pymes en Santiago: guía práctica 2026 | IrigoyenDev",
+        "metaDescription": "SEO local en Santiago para pymes: Google Business Profile, páginas por comuna, Schema LocalBusiness, NAP y errores comunes. Guía con ventajas, ejemplos y FAQ.",
+        "ogTitle": "SEO local pymes Santiago",
+        "ogDescription": "Cómo aparecer en búsquedas locales en Providencia, Las Condes, Ñuñoa y más."
+      },
+      "content": {
+        "title": "SEO local para pymes en Santiago: guía práctica para aparecer en tu comuna",
+        "excerpt": "El SEO local conecta tu pyme con búsquedas del tipo «servicio + comuna». En Santiago, donde la competencia por «desarrollo web» o «tienda online» es alta, las fichas locales bien hechas superan webs genéricas sin ubicación.",
+        "regions": [
+          "Santiago",
+          "Providencia",
+          "Las Condes",
+          "Ñuñoa"
+        ],
+        "body": [
+          {
+            "type": "h2",
+            "id": "introduccion",
+            "text": "Introducción"
+          },
+          {
+            "type": "p",
+            "className": "geo-summary",
+            "text": "Una pyme en Providencia o Maipú no compite en el mismo mapa que una marca nacional. SEO local alinea tu web, Google Business Profile y contenido por comuna para capturar intención «cerca de mí» o «en [comuna]» sin keyword stuffing."
+          },
+          {
+            "type": "h2",
+            "id": "que-es",
+            "text": "¿Qué es?"
+          },
+          {
+            "type": "p",
+            "text": "SEO local es el conjunto de tácticas para posicionar un negocio en búsquedas geolocalizadas: Google Maps, pack local y resultados orgánicos con modificador de ciudad/comuna. Combina NAP consistente, reseñas, páginas locales únicas y Schema LocalBusiness/ProfessionalService."
+          },
+          {
+            "type": "h2",
+            "id": "cuando-usarlo",
+            "text": "¿Cuándo usarlo?"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tienes atención presencial o híbrida en una comuna de Santiago",
+              "Tus clientes buscan «[servicio] + [comuna]»",
+              "Compites con negocios en Google Maps",
+              "Quieres complementar Ads con tráfico orgánico local",
+              "Tienes varias sucursales o zonas de cobertura"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ventajas",
+            "text": "Ventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Tráfico con intención comercial alta",
+              "Menor competencia que keywords nacionales genéricas",
+              "Sinergia con WhatsApp y llamadas desde móvil",
+              "Base sólida para GEO local (contenido citable por comuna)",
+              "Mejora percepción de proximidad y confianza"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "desventajas",
+            "text": "Desventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Requiere contenido único por zona — copiar/pegar penaliza",
+              "Google Business Profile exige mantenimiento (fotos, posts, reseñas)",
+              "Resultados en Maps dependen de reseñas y señales off-page",
+              "Varias comunas implican más páginas que mantener"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ejemplos",
+            "text": "Ejemplos"
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Florería en Valparaíso: web rápida + SEO Quinta Región + WhatsApp (caso Florería ENP)",
+              "Estudio en Las Condes: ficha /santiago/las-condes con FAQ local + coordenadas",
+              "Retail en Ñuñoa: GBP optimizado + landing de servicio + reseñas verificables"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "codigo",
+            "text": "Código"
+          },
+          {
+            "type": "p",
+            "text": "Meta geo locales (ejemplo comuna RM):"
+          },
+          {
+            "type": "code",
+            "lang": "html",
+            "label": "Meta geo Santiago",
+            "text": "<meta name=\"geo.region\" content=\"CL-RM\">\n<meta name=\"geo.placename\" content=\"Providencia, Santiago, Chile\">\n<meta name=\"geo.position\" content=\"-33.431;-70.6093\">\n<meta name=\"ICBM\" content=\"-33.431, -70.6093\">"
+          },
+          {
+            "type": "h2",
+            "id": "errores-comunes",
+            "text": "Errores comunes"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "50 páginas idénticas cambiando solo el nombre de comuna",
+              "NAP distinto en web, GBP y Schema",
+              "No enlazar fichas locales desde hub /santiago/comunas",
+              "Ignorar reseñas o responder solo negativas a la defensiva",
+              "Bloquear indexación de páginas locales por error en robots"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "buenas-practicas",
+            "text": "Buenas prácticas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Hub de comunas + fichas con ≥60% contenido único",
+              "LocalBusiness JSON-LD con coordenadas reales del centro de comuna",
+              "FAQ locales respondiendo objeciones de esa zona",
+              "Enlaces internos desde servicios y blog hacia fichas relevantes",
+              "Medir impresiones locales en Search Console"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "preguntas-frecuentes",
+            "text": "Preguntas frecuentes"
+          },
+          {
+            "type": "faq",
+            "items": [
+              {
+                "q": "¿Necesito página por comuna si soy remoto?",
+                "a": "Si atiendes Santiago en remoto, sí conviene fichas para comunas donde hay demanda (Providencia, Las Condes, Ñuñoa) con ángulo «atención remota + cobertura RM», sin fingir dirección física falsa."
+              },
+              {
+                "q": "¿GBP o web primero?",
+                "a": "En paralelo. GBP captura Maps; la web captura búsquedas informativas y conversión. Deben compartir el mismo NAP."
+              },
+              {
+                "q": "¿Cuánto tarda el SEO local?",
+                "a": "Señales técnicas en semanas; Maps y orgánico local suelen mostrar movimiento en 2–4 meses según competencia y reseñas."
+              },
+              {
+                "q": "¿SEO local y GEO son lo mismo?",
+                "a": "No. SEO local apunta a Google/Maps. GEO apunta a citas en IA. Se complementan con Schema y FAQ bien hechos."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Conclusión"
+          },
+          {
+            "type": "p",
+            "text": "Para pymes en Santiago, SEO local es la forma más directa de convertir búsquedas de barrio en contactos. Hazlo con contenido honesto por comuna, NAP único y fichas enlazadas desde un silo claro — no con duplicados."
+          },
+          {
+            "type": "h2",
+            "id": "enlaces-relacionados",
+            "text": "Enlaces relacionados"
+          },
+          {
+            "type": "related",
+            "items": [
+              {
+                "href": "/santiago/comunas",
+                "label": "Índice comunas RM",
+                "note": "52 comunas Santiago"
+              },
+              {
+                "href": "/santiago/providencia",
+                "label": "Desarrollo web Providencia",
+                "note": "ejemplo ficha local"
+              },
+              {
+                "href": "/blog/geo-optimizacion-ia-que-es-chile",
+                "label": "Qué es GEO",
+                "note": "capa para motores generativos"
+              },
+              {
+                "href": "/servicios",
+                "label": "Servicios IrigoyenDev",
+                "note": "SEO + GEO integrado"
+              }
+            ]
+          }
+        ],
+        "ctaHref": "/santiago/comunas",
+        "ctaLabel": "Ver comunas Santiago →"
+      }
+    },
+    {
+      "slug": "cuanto-cuesta-landing-page-chile",
+      "date": "2026-08-05",
+      "seo": {
+        "metaTitle": "Cuánto cuesta una landing page en Chile en 2026 | Precios y alcance | IrigoyenDev",
+        "metaDescription": "Precios landing page Chile 2026: desde USD 600, qué incluye, cuándo conviene, ventajas vs sitio completo, errores al cotizar y FAQ para pymes.",
+        "ogTitle": "Precio landing page Chile 2026",
+        "ogDescription": "Rangos USD, alcance típico y checklist antes de contratar."
+      },
+      "content": {
+        "title": "Cuánto cuesta una landing page en Chile en 2026 (y qué debe incluir)",
+        "excerpt": "Una landing profesional en Chile parte desde ~USD 600 cuando incluye diseño mobile-first, copy estructurado, SEO técnico y CTA medible. Menos que eso suele omitir velocidad, Schema o tracking.",
+        "regions": [
+          "Chile"
+        ],
+        "body": [
+          {
+            "type": "h2",
+            "id": "introduccion",
+            "text": "Introducción"
+          },
+          {
+            "type": "p",
+            "className": "geo-summary service-value-prop",
+            "text": "En IrigoyenDev, una landing page de conversión optimizada para SEO y GEO cuesta desde USD 600. Incluye diseño mobile-first, desarrollo estático o modern stack, meta tags, Schema básico, formulario o WhatsApp, y entrega en 7–10 días hábiles cuando el contenido está listo."
+          },
+          {
+            "type": "h2",
+            "id": "que-es",
+            "text": "¿Qué es?"
+          },
+          {
+            "type": "p",
+            "text": "Una landing page es una página única enfocada en una oferta y un CTA (cotizar, comprar, agendar). No es un sitio corporativo de 15 secciones: es una herramienta de campaña o validación comercial con mensaje claro above the fold."
+          },
+          {
+            "type": "h2",
+            "id": "cuando-usarlo",
+            "text": "¿Cuándo usarlo?"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Lanzas Google Ads o Meta Ads con una oferta concreta",
+              "Validas un servicio nuevo antes de invertir en web completa",
+              "Captas leads B2B con propuesta única",
+              "Promocionas evento, curso o lanzamiento",
+              "Rediriges tráfico desde Instagram a un canal medible"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ventajas",
+            "text": "Ventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Menor costo y plazo que sitio multipágina",
+              "Mensaje alineado al anuncio → mejor Quality Score / CPL",
+              "Fácil de medir (un CTA, un objetivo)",
+              "Base para escalar a sitio o tienda si convierte",
+              "Optimizable para SEO long-tail y GEO FAQ"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "desventajas",
+            "text": "Desventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "No sustituye catálogo, blog o múltiples servicios",
+              "Variantes A/B o i18n aumentan precio",
+              "Sin CRM, el lead puede quedar en email suelto",
+              "Contenido desactualizado si no hay Plan Care"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ejemplos",
+            "text": "Ejemplos"
+          },
+          {
+            "type": "ol",
+            "items": [
+              "Abogados en Santiago: landing autoridad + formulario + FAQ jurídica",
+              "Retail: landing lanzamiento temporada + WhatsApp + pixel Meta",
+              "SaaS B2B: landing demo + prueba social + CTA calendario"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "codigo",
+            "text": "Código"
+          },
+          {
+            "type": "p",
+            "text": "Evento de conversión mínimo (GTM/dataLayer) para medir envío de formulario:"
+          },
+          {
+            "type": "code",
+            "lang": "javascript",
+            "label": "Evento lead",
+            "text": "window.dataLayer = window.dataLayer || [];\nwindow.dataLayer.push({\n  event: 'generate_lead',\n  form_name: 'landing_contacto'\n});"
+          },
+          {
+            "type": "h2",
+            "id": "errores-comunes",
+            "text": "Errores comunes"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Contratar solo diseño en Figma sin desarrollo ni SEO",
+              "No definir CTA único (formulario + teléfono + chat sin prioridad)",
+              "Omitir versión móvil probada en 4G",
+              "Lanzar Ads sin pixel/conversión configurada",
+              "Pedir «como la web de X» copiando estructura sin adaptar oferta"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "buenas-practicas",
+            "text": "Buenas prácticas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Una oferta, un CTA principal, prueba social visible",
+              "Core Web Vitals en verde en móvil",
+              "Title y meta únicos; canonical correcto",
+              "FAQ con objeciones reales (precio, plazo, garantía)",
+              "Handoff: acceso hosting, analytics y copia editable"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "preguntas-frecuentes",
+            "text": "Preguntas frecuentes"
+          },
+          {
+            "type": "faq",
+            "items": [
+              {
+                "q": "¿USD 600 incluye dominio y hosting?",
+                "a": "Suele incluir desarrollo y despliegue inicial. Dominio y hosting anual se cotizan aparte o los gestiona el cliente (~USD 10–20/mes en Vercel/Netlify según tráfico)."
+              },
+              {
+                "q": "¿Landing o sitio web completo?",
+                "a": "Landing si tienes una campaña u oferta. Sitio o tienda si necesitas catálogo, blog y múltiples rutas. Puedes empezar con landing y escalar."
+              },
+              {
+                "q": "¿Incluye copywriting?",
+                "a": "Incluye estructura y ajuste de mensaje sobre borrador del cliente. Copy estratégico extenso o research se cotiza como add-on."
+              },
+              {
+                "q": "¿Cuánto tarda la entrega?",
+                "a": "7–10 días hábiles con contenido (logo, oferta, fotos) definido. Sin activos claros, el plazo se extiende."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Conclusión"
+          },
+          {
+            "type": "p",
+            "text": "El precio de una landing en Chile refleja alcance, no solo cantidad de secciones. Desde USD 600 es una referencia honesta para una página que mide conversiones, carga rápido e indexa limpio — no un PDF exportado a HTML."
+          },
+          {
+            "type": "h2",
+            "id": "enlaces-relacionados",
+            "text": "Enlaces relacionados"
+          },
+          {
+            "type": "related",
+            "items": [
+              {
+                "href": "/landing-pages",
+                "label": "Servicio landing pages",
+                "note": "IrigoyenDev"
+              },
+              {
+                "href": "/precios",
+                "label": "Precios completos",
+                "note": "landings, tiendas, plataformas"
+              },
+              {
+                "href": "/blog/como-elegir-desarrollador-web-chile",
+                "label": "Elegir desarrollador",
+                "note": "checklist de contratación"
+              },
+              {
+                "href": "/projects/retorica",
+                "label": "Caso Retórica",
+                "note": "landing + leads"
+              }
+            ]
+          }
+        ],
+        "ctaHref": "/landing-pages",
+        "ctaLabel": "Ver servicio landing pages →"
+      }
+    },
+    {
+      "slug": "shopify-woocommerce-tienda-medida-chile",
+      "date": "2026-08-08",
+      "seo": {
+        "metaTitle": "Shopify vs WooCommerce vs tienda a medida en Chile | Guía 2026 | IrigoyenDev",
+        "metaDescription": "Comparativa e-commerce Chile: Shopify, WooCommerce y desarrollo a medida. Qué es cada uno, cuándo usarlo, ventajas, desventajas, pasarelas locales y FAQ.",
+        "ogTitle": "E-commerce Chile: Shopify vs WooCommerce vs a medida",
+        "ogDescription": "Elige stack según catálogo, presupuesto y pasarela chilena."
+      },
+      "content": {
+        "title": "Shopify vs WooCommerce vs tienda a medida en Chile: cuál conviene a tu pyme",
+        "excerpt": "No existe «la mejor plataforma» universal: Shopify acelera time-to-market, WooCommerce flexibiliza en WordPress, y a medida desbloquea catálogos B2B o integraciones que las SaaS limitan. En Chile, la pasarela local suele decidir la fricción final.",
+        "regions": [
+          "Chile",
+          "Santiago"
+        ],
+        "body": [
+          {
+            "type": "h2",
+            "id": "introduccion",
+            "text": "Introducción"
+          },
+          {
+            "type": "p",
+            "className": "geo-summary",
+            "text": "Crear tienda online en Chile implica elegir plataforma y pasarela. Esta guía compara Shopify, WooCommerce y desarrollo a medida con criterios de negocio — catálogo, equipo, presupuesto desde ~USD 1.304 en producto comercial — no fanboy de stack."
+          },
+          {
+            "type": "h2",
+            "id": "que-es",
+            "text": "¿Qué es?"
+          },
+          {
+            "type": "p",
+            "text": "Shopify es SaaS de e-commerce hosted. WooCommerce es plugin sobre WordPress self-hosted. Tienda a medida es front + back + checkout desarrollados para tus reglas (B2B, multi-bodega, integraciones ERP)."
+          },
+          {
+            "type": "h2",
+            "id": "cuando-usarlo",
+            "text": "¿Cuándo usarlo?"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Shopify: catálogo estándar, pocos devs internos, lanzar en semanas",
+              "WooCommerce: ya usas WordPress, blog fuerte, presupuesto hosting propio",
+              "A medida: catálogos complejos, roles B2B, APIs propias, UX diferenciada",
+              "Revisa pasarelas chilenas antes de decidir — ver guía Transbank/Mercado Pago/Getnet"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ventajas",
+            "text": "Ventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Shopify: mantenimiento de plataforma incluido, apps de marketing",
+              "WooCommerce: control de servidor, plugins, SEO de contenido",
+              "A medida: cero límites de checkout, performance y datos propios",
+              "Todos pueden integrar SEO técnico y Schema Product si se implementa bien"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "desventajas",
+            "text": "Desventajas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Shopify: costo mensual + apps; checkout custom limitado",
+              "WooCommerce: seguridad y updates son tu responsabilidad",
+              "A medida: mayor inversión inicial y necesitas roadmap de mantenimiento",
+              "Integración pasarela chilena puede ser más lenta en SaaS que en custom"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "ejemplos",
+            "text": "Ejemplos"
+          },
+          {
+            "type": "ol",
+            "items": [
+              "DTC moda en Santiago: Shopify + Mercado Pago + Ads",
+              "Editorial que vende cursos: WooCommerce + blog WordPress",
+              "Marketplace geo (TheBeeBaby): custom + pagos + panel admin"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "codigo",
+            "text": "Código"
+          },
+          {
+            "type": "p",
+            "text": "Capa de abstracción de checkout (recomendada en a medida):"
+          },
+          {
+            "type": "code",
+            "lang": "typescript",
+            "label": "Checkout provider interface",
+            "text": "interface PaymentProvider {\n  createSession(orderId: string, amount: number): Promise<{ url: string }>;\n  verifyWebhook(req: Request): PaymentEvent;\n}\n// Implementaciones: transbank, mercadopago, getnet"
+          },
+          {
+            "type": "h2",
+            "id": "errores-comunes",
+            "text": "Errores comunes"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Elegir Shopify sin calcular apps + comisión + tema premium",
+              "WooCommerce sin plan de updates de seguridad",
+              "A medida sin MVP — querer Amazon en v1",
+              "Ignorar móvil en ficha de producto y checkout",
+              "No planificar Plan Care post-lanzamiento"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "buenas-practicas",
+            "text": "Buenas prácticas"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Define catálogo y reglas de envío antes de elegir stack",
+              "Prueba checkout en 4G con tarjetas reales en sandbox",
+              "Implementa Product + Offer Schema en fichas clave",
+              "Enlaza blog informacional (pasarelas, SEO) desde categorías",
+              "Presupuesta mantenimiento desde el mes 1"
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "preguntas-frecuentes",
+            "text": "Preguntas frecuentes"
+          },
+          {
+            "type": "faq",
+            "items": [
+              {
+                "q": "¿Cuánto cuesta una tienda en Chile?",
+                "a": "Producto comercial desde ~USD 1.304 (catálogo, checkout, admin básico, SEO). Shopify/WooCommerce pueden bajar desarrollo inicial pero suman mensualidades y plugins."
+              },
+              {
+                "q": "¿Qué pasarela recomiendan?",
+                "a": "Depende del giro y onboarding. Ver comparativa Transbank vs Mercado Pago vs Getnet en nuestro blog. Diseña abstracción para no quedar atrapado."
+              },
+              {
+                "q": "¿Puedo migrar después?",
+                "a": "Sí, pero duele si no exportaste productos, clientes y URLs con redirects 301. Planifica slugs desde el inicio."
+              },
+              {
+                "q": "¿Incluyen SEO en la tienda?",
+                "a": "Sí en proyectos IrigoyenDev: titles, meta, sitemap, Schema, velocidad móvil y base GEO en fichas y FAQs."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Conclusión"
+          },
+          {
+            "type": "p",
+            "text": "La plataforma correcta es la que equilibra plazo, costo total y reglas de negocio — incluyendo pasarela chilena. Muchas pymes empiezan en Shopify o WooCommerce; escalan a medida cuando el checkout o el catálogo se vuelven ventaja competitiva."
+          },
+          {
+            "type": "h2",
+            "id": "enlaces-relacionados",
+            "text": "Enlaces relacionados"
+          },
+          {
+            "type": "related",
+            "items": [
+              {
+                "href": "/crear-tienda-online",
+                "label": "Crear tienda online",
+                "note": "servicio e-commerce"
+              },
+              {
+                "href": "/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet",
+                "label": "Pasarelas de pago Chile",
+                "note": "Transbank, MP, Getnet"
+              },
+              {
+                "href": "/projects/thebeebaby",
+                "label": "Caso TheBeeBaby",
+                "note": "marketplace custom"
+              },
+              {
+                "href": "/precios",
+                "label": "Precios",
+                "note": "producto comercial desde ~USD 1.304"
+              }
+            ]
+          }
+        ],
+        "ctaHref": "/crear-tienda-online",
+        "ctaLabel": "Cotizar tienda online →"
       }
     }
   ]

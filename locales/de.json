@@ -1,8 +1,9 @@
-{
+﻿{
   "nav.projects": "Ergebnisse",
   "nav.contact": "Angebot",
   "nav.services": "Leistungen",
   "nav.pricing": "Preise",
+  "nav.blog": "Blog",
   "nav.mobile.home": "Start",
   "nav.mobile.projects": "Projekte",
   "nav.mobile.services": "Leistungen",
