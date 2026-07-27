@@ -7,6 +7,17 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chileMultiregionAreaServed } from './lib/chile-geo.mjs';
 import { GTM_HEAD, GTM_NOSCRIPT, stripGtm } from './lib/page-chrome.mjs';
+import { ENTITY } from './lib/entity-nap.mjs';
+import {
+  ORG_ID,
+  BUSINESS_ID,
+  PERSON_ID,
+  WEBSITE_ID,
+  organizationLd,
+  serviceOfferCatalogLd,
+  speakableWebPageLd,
+  openingHoursSpec,
+} from './lib/schema-geo.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -27,21 +38,22 @@ const pages = [
     ogType: 'website',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     jsonLd: [
+      organizationLd(),
       {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        '@id': `${SITE}/#website`,
-        name: 'IrigoyenDev',
+        '@id': WEBSITE_ID,
+        name: 'IrigoyenDev - Estudio de Producto Digital',
         url: `${SITE}/`,
         description:
           'Portfolio y servicios de Andrés Irigoyen — desarrollador full stack freelance para e-commerce, landings y plataformas.',
-        inLanguage: ['es', 'en'],
-        publisher: { '@id': `${SITE}/#person` },
+        inLanguage: ['es-CL', 'en'],
+        publisher: { '@id': ORG_ID },
       },
       {
         '@context': 'https://schema.org',
         '@type': 'Person',
-        '@id': `${SITE}/#person`,
+        '@id': PERSON_ID,
         name: 'Andrés Irigoyen',
         alternateName: ['IrigoyenDev', 'andresirigoyen'],
         url: `${SITE}/`,
@@ -56,15 +68,14 @@ const pages = [
           'Plataformas de negocio',
           'Marketplaces',
           'SEO',
+          'GEO',
         ],
-        sameAs: [
-          'https://github.com/andresirigoyen',
-          'https://www.linkedin.com/in/andresirigoyen/',
-        ],
+        sameAs: [...ENTITY.sameAs],
+        worksFor: { '@id': ORG_ID },
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
-          telephone: '+45-5024-9855',
+          telephone: ENTITY.telephone,
           url: `${SITE}/#contact`,
           availableLanguage: ['Spanish', 'English', 'Danish'],
         },
@@ -72,79 +83,44 @@ const pages = [
       {
         '@context': 'https://schema.org',
         '@type': ['ProfessionalService', 'LocalBusiness'],
-        '@id': `${SITE}/#business`,
-        name: 'IrigoyenDev',
-        alternateName: 'Irigoyen Dev',
+        '@id': BUSINESS_ID,
+        name: ENTITY.legalName,
+        alternateName: ENTITY.alternateName,
         url: `${SITE}/`,
         image: OG_DEFAULT,
         logo: `${SITE}/favicon.svg`,
         description:
-          'Desarrollo web full stack: e-commerce, landings y plataformas. Atención remota para Chile, Noruega y clientes internacionales.',
-        telephone: '+45-5024-9855',
-        email: 'andres@irigoyendev.com',
-        priceRange: '$$-$$$',
-        founder: { '@id': `${SITE}/#person` },
+          'Desarrollo web full stack: e-commerce, landings y plataformas. Atención remota para Chile, España, Dinamarca y clientes internacionales.',
+        telephone: ENTITY.telephone,
+        email: ENTITY.email,
+        priceRange: ENTITY.priceRange,
+        founder: { '@id': PERSON_ID },
+        parentOrganization: { '@id': ORG_ID },
+        openingHoursSpecification: openingHoursSpec(),
         areaServed: [
           { '@type': 'Country', name: 'Chile' },
-          { '@type': 'Country', name: 'Norway' },
-          { '@type': 'Country', name: 'Denmark' },
           { '@type': 'Country', name: 'Spain' },
+          { '@type': 'Country', name: 'Denmark' },
+          { '@type': 'Country', name: 'Norway' },
         ],
-        sameAs: [
-          'https://github.com/andresirigoyen',
-          'https://www.linkedin.com/in/andresirigoyen/',
-        ],
+        sameAs: [...ENTITY.sameAs],
       },
       {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         '@id': `${SITE}/#service`,
-        name: 'IrigoyenDev',
+        name: 'IrigoyenDev — Desarrollo de Productos Digitales',
+        serviceType: 'Desarrollo de Productos Digitales',
         url: `${SITE}/`,
         image: OG_DEFAULT,
         description:
-          'Desarrollo web full stack freelance: tiendas online, landing pages y plataformas de negocio.',
-        provider: { '@id': `${SITE}/#person` },
-        parentOrganization: { '@id': `${SITE}/#business` },
-        telephone: '+45-5024-9855',
+          'Desarrollo web full stack freelance: tiendas online, landing pages y plataformas de negocio con SEO y GEO integrados.',
+        provider: { '@id': ORG_ID },
+        parentOrganization: { '@id': ORG_ID },
+        telephone: ENTITY.telephone,
         areaServed: chileMultiregionAreaServed(),
-        serviceType: [
-          'Desarrollo web full stack',
-          'E-commerce',
-          'Landing pages',
-          'Plataformas de negocio',
-        ],
-        priceRange: '$$-$$$',
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Servicios IrigoyenDev',
-          itemListElement: [
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Crear tienda online / e-commerce',
-                url: `${SITE}/crear-tienda-online`,
-              },
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Landing pages de conversión',
-                url: `${SITE}/landing-pages`,
-              },
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Desarrollo full stack a medida',
-                url: `${SITE}/servicios`,
-              },
-            },
-          ],
-        },
+        priceRange: ENTITY.priceRange,
+        hasOfferCatalog: serviceOfferCatalogLd(),
       },
       {
         '@context': 'https://schema.org',
@@ -171,38 +147,60 @@ const pages = [
         mainEntity: [
           {
             '@type': 'Question',
-            name: '¿Qué servicios ofreces?',
+            name: '¿Cuánto cuesta desarrollar una página web en Chile?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Tiendas online, landing pages de conversión, plataformas con panel admin y SEO técnico. Detalle en https://www.irigoyendev.com/servicios',
+              text: `En IrigoyenDev, una landing page profesional optimizada para SEO y GEO cuesta desde USD ${ENTITY.indicativePricing.landingFromUsd}. Una tienda online completa con pasarela de pagos chilena desde USD ${ENTITY.indicativePricing.productFromUsd}. Los precios son transparentes y no hay costos ocultos.`,
             },
           },
           {
             '@type': 'Question',
-            name: '¿Cuánto cuesta un proyecto?',
+            name: '¿Qué es el GEO y por qué mi empresa chilena lo necesita?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~desde ~USD 1.304 y plataformas a medida desde ~USD 10.000. Ver https://www.irigoyendev.com/precios',
+              text: 'GEO (Generative Engine Optimization) es la optimización para que la inteligencia artificial (ChatGPT, Gemini, Perplexity) recomiende tu empresa. Si no estás optimizado para GEO, la IA no te encontrará cuando un cliente pregunte por la mejor agencia de desarrollo web en Santiago.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Trabajas con Chile, España y Dinamarca?',
+            name: '¿Cuánto tiempo tardan en entregar un proyecto web?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sí. Atiendo clientes en Dinamarca, Chile, España y proyectos remotos, en español o inglés.',
+              text: 'Una landing page optimizada se entrega en 7-10 días hábiles. Un e-commerce completo con catálogo, pasarela de pagos y SEO integrado toma entre 3 y 4 semanas. Trabajamos con metodología ágil, con avances cada 48-72 horas.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo empiezo?',
+            name: '¿Ofrecen mantenimiento y soporte después de la entrega?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Usa el formulario en https://www.irigoyendev.com/#contact o WhatsApp https://wa.me/+4550249855 con objetivo, plazo y presupuesto aproximado.',
+              text: `Sí. Todos los proyectos incluyen 30 días de soporte post-lanzamiento. Además, el Plan Care de mantenimiento mensual (desde ~USD ${ENTITY.indicativePricing.careFromUsd}) incluye seguridad, backups, monitoreo y ajustes de SEO/GEO continuos.`,
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Trabajan con empresas fuera de Santiago?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Absolutamente. Tenemos presencia en Santiago y comunas de la RM, y trabajamos 100% remoto con clientes en todo Chile (Valparaíso, Concepción, Antofagasta) y también en España y Dinamarca.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué tecnologías utilizan para desarrollar?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Usamos tecnologías modernas y escalables: React, Next.js, Astro, Tailwind CSS, y plataformas como Shopify o WooCommerce según el caso. Webs mobile-first, Core Web Vitals optimizados y datos estructurados para SEO y GEO.',
             },
           },
         ],
       },
+      speakableWebPageLd({
+        name: 'IrigoyenDev - Estudio de Producto Digital',
+        url: `${SITE}/`,
+        description:
+          'Desarrollo web full stack, SEO y GEO para Chile, España y Dinamarca.',
+      }),
     ],
   },
   {
@@ -241,7 +239,129 @@ const pages = [
     ogDescription:
       'Tiendas online, landings de conversión, plataformas y SEO técnico. Cotiza tu plan de proyecto.',
     serviceName: 'Desarrollo web a medida y servicios digitales',
+    faq: [
+      {
+        q: '¿Cuánto cuesta desarrollar una página web en Chile?',
+        a: `Landing desde USD ${ENTITY.indicativePricing.landingFromUsd}; e-commerce desde USD ${ENTITY.indicativePricing.productFromUsd}. Precios transparentes en /precios.`,
+      },
+      {
+        q: '¿Qué es el GEO y por qué lo necesito?',
+        a: 'GEO optimiza tu marca para que ChatGPT, Gemini y Perplexity te citen. Detalle en /servicios/geo-optimizacion-ia.',
+      },
+      {
+        q: '¿Incluyen SEO técnico en los proyectos?',
+        a: 'Sí: titles, meta, sitemap, robots, canonicals, Schema y base GEO desde el lanzamiento.',
+      },
+      {
+        q: '¿Ofrecen mantenimiento mensual?',
+        a: `Plan Care desde ~USD ${ENTITY.indicativePricing.careFromUsd}/mes y Care + Growth con SEO/ads continuo.`,
+      },
+    ],
   }),
+  leadPage({
+    file: 'servicios/geo-optimizacion-ia.html',
+    path: '/servicios/geo-optimizacion-ia',
+    title: 'GEO: Optimización para Inteligencia Artificial | IrigoyenDev',
+    description:
+      'GEO (Generative Engine Optimization) para que ChatGPT, Gemini y Perplexity recomienden tu marca. Schema avanzado, contenido citable y llms.txt — desde USD 199.',
+    ogTitle: 'GEO: Optimización para IA | IrigoyenDev',
+    ogDescription:
+      'Optimización para motores generativos: Schema Speakable/FAQ, contenido citable y presencia multi-canal. Desde USD 199.',
+    serviceName: 'GEO — Optimización para Inteligencia Artificial',
+    faq: [
+      {
+        q: '¿GEO reemplaza al SEO?',
+        a: 'No. GEO complementa el SEO técnico con Schema, fragmentos citables y señales para modelos generativos.',
+      },
+      {
+        q: '¿Cuánto cuesta el servicio GEO?',
+        a: `Entrada desde USD ${ENTITY.indicativePricing.seoFromUsd}; paquetes avanzados desde ~USD 499 según alcance.`,
+      },
+      {
+        q: '¿Cuánto tarda en notarse?',
+        a: 'Implementación técnica en días; citación en IA suele madurar en semanas según competencia.',
+      },
+      {
+        q: '¿Sirve fuera de Santiago?',
+        a: 'Sí. GEO local y nacional para Chile, España y Dinamarca con páginas de intención y LocalBusiness.',
+      },
+    ],
+  }),
+  {
+    file: 'casos-de-exito.html',
+    path: '/casos-de-exito',
+    title: 'Casos de éxito | Resultados reales IrigoyenDev',
+    description:
+      'Casos de éxito IrigoyenDev: TheBeeBaby (+30% ventas), Dragonmart (automatización B2B) y Florería Valparaíso (SEO local). Problema, solución, métricas y stack.',
+    ogTitle: 'Casos de éxito IrigoyenDev',
+    ogDescription:
+      'Resultados reales de e-commerce, B2B e inmobiliario local con desarrollo web + SEO/GEO.',
+    ogImage: OG_DEFAULT,
+    ogType: 'website',
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    jsonLd: [
+      organizationLd(),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: `${SITE}/casos-de-exito` },
+        ],
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': `${SITE}/casos-de-exito#page`,
+        name: 'Casos de éxito IrigoyenDev',
+        url: `${SITE}/casos-de-exito`,
+        about: { '@id': ORG_ID },
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, url: `${SITE}/projects/thebeebaby`, name: 'TheBeeBaby' },
+            { '@type': 'ListItem', position: 2, url: `${SITE}/projects/dragonmart`, name: 'Dragonmart' },
+            { '@type': 'ListItem', position: 3, url: `${SITE}/projects/floreria`, name: 'Florería El Nuevo Pensamiento' },
+          ],
+        },
+      },
+      speakableWebPageLd({
+        name: 'Casos de éxito IrigoyenDev',
+        url: `${SITE}/casos-de-exito`,
+        description: 'Resultados reales de proyectos web con métricas y testimonios.',
+      }),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Review',
+        '@id': `${SITE}/casos-de-exito#review-thebeebaby`,
+        itemReviewed: { '@id': ORG_ID },
+        reviewBody:
+          'Andrés armó el e-commerce rapidísimo y el nuevo checkout fluye espectacular. En el primer mes las ventas subieron un 30%.',
+        author: { '@type': 'Person', name: 'María López' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Review',
+        '@id': `${SITE}/casos-de-exito#review-dragonmart`,
+        itemReviewed: { '@id': ORG_ID },
+        reviewBody:
+          'Necesitábamos digitalizar todo el flujo con Asia y automatizar cotizaciones. El sistema nos ahorra horas de trabajo manual todos los días.',
+        author: { '@type': 'Person', name: 'Carlos Ramírez' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Review',
+        '@id': `${SITE}/casos-de-exito#review-floreria`,
+        itemReviewed: { '@id': ORG_ID },
+        reviewBody:
+          'Nos entregó la tienda lista para vender. Se preocupó de que la web volara en velocidad y apareciéramos rápido en Google.',
+        author: { '@type': 'Person', name: 'Elena Martínez' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      },
+    ],
+  },
   leadPage({
     file: 'crear-tienda-online.html',
     path: '/crear-tienda-online',
@@ -471,6 +591,7 @@ function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescrip
   const url = `${SITE}${pagePath}`;
   /** @type {object[]} */
   const jsonLd = [
+    organizationLd(),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -485,11 +606,19 @@ function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescrip
       '@type': 'Service',
       '@id': `${url}#service`,
       name: serviceName,
+      serviceType: serviceName,
       description,
       url,
-      provider: { '@id': `${SITE}/#person` },
-      areaServed: chileMultiregionAreaServed(),
+      provider: { '@id': ORG_ID },
+      areaServed: [
+        { '@type': 'Country', name: 'Chile' },
+        { '@type': 'Country', name: 'España' },
+        { '@type': 'Country', name: 'Dinamarca' },
+        ...chileMultiregionAreaServed(),
+      ],
+      hasOfferCatalog: serviceOfferCatalogLd(),
     },
+    speakableWebPageLd({ name: serviceName, url, description }),
   ];
   if (Array.isArray(faq) && faq.length) {
     jsonLd.push({
@@ -557,10 +686,11 @@ function project({ slug, title, description, ogTitle, ogDescription, ogImage, cr
         },
         publisher: {
           '@type': 'Organization',
+          '@id': ORG_ID,
           name: 'IrigoyenDev',
           url: `${SITE}/`,
         },
-        isPartOf: { '@id': `${SITE}/#website` },
+        isPartOf: { '@id': WEBSITE_ID },
       },
     ],
   };

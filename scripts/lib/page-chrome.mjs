@@ -101,6 +101,7 @@ export function escapeAttr(s) {
  * @property {string} [robots]
  * @property {string} [geoRegion]
  * @property {string} [geoPlacename]
+ * @property {string} [geoPosition] lat;lng for geo.position meta
  * @property {string} [icbm]
  * @property {string} [hreflang]
  * @property {string} [ogLocale]
@@ -166,6 +167,7 @@ export function buildHead(opts) {
     <link rel="author" href="${SITE}/">
     ${opts.geoRegion ? `<meta name="geo.region" content="${escapeAttr(opts.geoRegion)}">` : ''}
     ${opts.geoPlacename ? `<meta name="geo.placename" content="${escapeAttr(opts.geoPlacename)}">` : ''}
+    ${opts.geoPosition ? `<meta name="geo.position" content="${escapeAttr(opts.geoPosition)}">` : ''}
     ${opts.icbm ? `<meta name="ICBM" content="${escapeAttr(opts.icbm)}">` : ''}
     <meta name="ai-content-declaration" content="human-authored">
 
@@ -238,7 +240,7 @@ export function buildFooter({
                     <li><a href="/crear-tienda-online" data-i18n="footer.linkShop">Crear tienda online</a></li>
                     <li><a href="/landing-pages" data-i18n="footer.linkLandings">Landing pages</a></li>
                     <li><a href="/servicios#seo-basico" data-i18n="footer.linkSeo">SEO básico</a></li>
-                    <li><a href="/servicios#seo-geo" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
+                    <li><a href="/servicios/geo-optimizacion-ia" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
                     <li><a href="/servicios#marketing" data-i18n="footer.linkMkt">Marketing digital</a></li>
                     <li><a href="/servicios#care" data-i18n="footer.linkWm">Planes Care / mantenimiento</a></li>
                     <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
@@ -248,7 +250,7 @@ export function buildFooter({
                 <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
                 <ul class="site-footer__links">
                     <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
-                    <li><a href="/#projects" data-i18n="footer.linkProjects">Proyectos</a></li>
+                    <li><a href="/casos-de-exito" data-i18n="footer.linkProjects">Proyectos</a></li>
                     <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
                     <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
                     <li><a href="/blog">Blog</a></li>

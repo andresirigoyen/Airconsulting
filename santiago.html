@@ -37,8 +37,9 @@ gtag('consent','default',{
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" type="text/plain" title="LLM content guide" href="https://www.irigoyendev.com/llms.txt">
     <link rel="author" href="https://www.irigoyendev.com/">
-    <meta name="geo.region" content="CL">
+    <meta name="geo.region" content="CL-RM">
     <meta name="geo.placename" content="Santiago, Región Metropolitana">
+    <meta name="geo.position" content="-33.4489;-70.6693">
     <meta name="ICBM" content="-33.4489, -70.6693">
     <meta name="ai-content-declaration" content="human-authored">
 
@@ -62,6 +63,46 @@ gtag('consent','default',{
     <meta name="twitter:image" content="https://www.irigoyendev.com/images/og-image.png">
     <meta name="twitter:image:alt" content="Desarrollo web en Santiago — startups, tech y servicios | IrigoyenDev">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.irigoyendev.com/#organization",
+      "name": "IrigoyenDev",
+      "alternateName": "Irigoyen Dev",
+      "url": "https://www.irigoyendev.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.irigoyendev.com/favicon.svg",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://www.irigoyendev.com/images/og-image.png",
+      "email": "andres@irigoyendev.com",
+      "telephone": "+45-5024-9855",
+      "sameAs": [
+        "https://github.com/andresirigoyen",
+        "https://www.linkedin.com/in/andresirigoyen/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+45-5024-9855",
+        "contactType": "sales",
+        "areaServed": [
+          "CL",
+          "ES",
+          "DK",
+          "NO"
+        ],
+        "availableLanguage": [
+          "Spanish",
+          "English",
+          "Danish"
+        ],
+        "url": "https://www.irigoyendev.com/#contact"
+      }
+    }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -142,13 +183,25 @@ gtag('consent','default',{
         "https://github.com/andresirigoyen",
         "https://www.linkedin.com/in/andresirigoyen/"
       ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
       "founder": {
         "@type": "Person",
         "name": "Andrés Irigoyen",
         "url": "https://www.irigoyendev.com"
       },
       "parentOrganization": {
-        "@id": "https://www.irigoyendev.com/#business"
+        "@id": "https://www.irigoyendev.com/#organization"
       },
       "provider": {
         "@id": "https://www.irigoyendev.com/#person"
@@ -201,7 +254,31 @@ gtag('consent','default',{
         "name": "Santiago, Región Metropolitana"
       },
       "provider": {
-        "@id": "https://www.irigoyendev.com/#business"
+        "@id": "https://www.irigoyendev.com/#organization"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.irigoyendev.com/santiago#webpage",
+      "name": "Desarrollo web profesional en Santiago",
+      "url": "https://www.irigoyendev.com/santiago",
+      "description": "Desarrollo web Santiago para startups, tecnología y servicios — también e-commerce y webs para comercio, industria y pymes de la capital. Canal digital medible con SEO local.",
+      "isPartOf": {
+        "@id": "https://www.irigoyendev.com/#website"
+      },
+      "about": {
+        "@id": "https://www.irigoyendev.com/#organization"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".geo-summary",
+          ".service-value-prop",
+          ".faq-answer"
+        ]
       }
     }
     </script>
@@ -624,7 +701,7 @@ gtag('consent','default',{
         </nav>
         <p class="project-eyebrow" data-i18n="geo.scl.eyebrow">Chile · Santiago · Capital digital</p>
         <h1 data-i18n="geo.scl.h1">Desarrollo web profesional en Santiago</h1>
-        <p class="project-lead" data-i18n="geo.scl.lead">Desarrollo web Santiago para startups, tecnología y servicios — también e-commerce y webs para comercio, industria y pymes de la capital. Canal digital medible con SEO local.</p>
+        <p class="project-lead geo-summary service-value-prop" data-i18n="geo.scl.lead">Desarrollo web Santiago para startups, tecnología y servicios — también e-commerce y webs para comercio, industria y pymes de la capital. Canal digital medible con SEO local.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="geo.scl.ctaPrimary">Cotizar proyecto en Santiago →</a>
             <a href="/servicios" class="project-cta-inline" data-i18n="geo.scl.ctaSecondary">Ver todos los servicios →</a>
@@ -1081,15 +1158,15 @@ gtag('consent','default',{
         <section class="project-section fade-in" id="faq"><h2 data-i18n="geo.ui.faqTitle">Preguntas frecuentes</h2><div class="faq-list">
             <article class="faq-item faq-item--plain">
                 <h3 data-i18n="geo.scl.faq1q">¿Hacen desarrollo web para empresas en Santiago?</h3>
-                <p class="money-copy" data-i18n="geo.scl.faq1a">Sí. IrigoyenDev (Andrés Irigoyen) opera desde Santiago con alcance nacional e internacional: tiendas online, landings y plataformas a medida.</p>
+                <p class="money-copy faq-answer" data-i18n="geo.scl.faq1a">Sí. IrigoyenDev (Andrés Irigoyen) opera desde Santiago con alcance nacional e internacional: tiendas online, landings y plataformas a medida.</p>
             </article>
             <article class="faq-item faq-item--plain">
                 <h3 data-i18n="geo.scl.faq2q">¿Cuánto cuesta una tienda online en Santiago?</h3>
-                <p class="money-copy" data-i18n="geo.scl.faq2a">Producto comercial/e-commerce orientativo desde ~USD 1.304. Landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios.</p>
+                <p class="money-copy faq-answer" data-i18n="geo.scl.faq2a">Producto comercial/e-commerce orientativo desde ~USD 1.304. Landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios.</p>
             </article>
             <article class="faq-item faq-item--plain">
                 <h3 data-i18n="geo.scl.faq3q">¿Atienden todo Santiago o solo comunas específicas?</h3>
-                <p class="money-copy" data-i18n="geo.scl.faq3a">Operamos remoto para toda la RM y Chile. También tenemos presencia en España y Dinamarca.</p>
+                <p class="money-copy faq-answer" data-i18n="geo.scl.faq3a">Operamos remoto para toda la RM y Chile. También tenemos presencia en España y Dinamarca.</p>
             </article></div></section>
     </div>
     </main>
@@ -1113,7 +1190,7 @@ gtag('consent','default',{
                     <li><a href="/crear-tienda-online" data-i18n="footer.linkShop">Crear tienda online</a></li>
                     <li><a href="/landing-pages" data-i18n="footer.linkLandings">Landing pages</a></li>
                     <li><a href="/servicios#seo-basico" data-i18n="footer.linkSeo">SEO básico</a></li>
-                    <li><a href="/servicios#seo-geo" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
+                    <li><a href="/servicios/geo-optimizacion-ia" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
                     <li><a href="/servicios#marketing" data-i18n="footer.linkMkt">Marketing digital</a></li>
                     <li><a href="/servicios#care" data-i18n="footer.linkWm">Planes Care / mantenimiento</a></li>
                     <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
@@ -1123,7 +1200,7 @@ gtag('consent','default',{
                 <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
                 <ul class="site-footer__links">
                     <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
-                    <li><a href="/#projects" data-i18n="footer.linkProjects">Proyectos</a></li>
+                    <li><a href="/casos-de-exito" data-i18n="footer.linkProjects">Proyectos</a></li>
                     <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
                     <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
                     <li><a href="/blog">Blog</a></li>

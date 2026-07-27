@@ -23,6 +23,35 @@
         "ogTitle": "Automatizar captación de leads en el norte de Chile",
         "ogDescription": "Landings, formularios y flujos para proveedores e industria en Antofagasta y Calama."
       },
+      "schema": {
+        "howTo": {
+          "name": "Cómo automatizar la captación de leads en el norte de Chile",
+          "description": "Guía paso a paso para empresas de servicios en Antofagasta y el Norte Grande.",
+          "totalTime": "PT20M",
+          "steps": [
+            {
+              "name": "Una landing con una sola oferta",
+              "text": "Publica una landing que explique el servicio, credenciales y un CTA claro (cotizar / hablar).",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step1"
+            },
+            {
+              "name": "Formulario corto + WhatsApp Business",
+              "text": "Campos mínimos (nombre, empresa, necesidad, teléfono) y botón WhatsApp con mensaje prellenado.",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step2"
+            },
+            {
+              "name": "Notificación y registro",
+              "text": "Cada lead debe generar email interno o fila en CRM con fecha y origen UTM.",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step3"
+            },
+            {
+              "name": "Portal o panel cuando el flujo se estabiliza",
+              "text": "Un panel de solicitudes evita que todo viva en planillas, útil para contratistas multi-faena.",
+              "url": "https://www.irigoyendev.com/blog/automatizar-captacion-leads-norte-chile/#step4"
+            }
+          ]
+        }
+      },
       "content": {
         "title": "Cómo automatizar la captación de leads en empresas de servicios en el norte de Chile",
         "excerpt": "En minería y servicios industriales, el lead llega tarde o se pierde en el correo. Esta guía resume un stack simple: landing + formulario + WhatsApp + seguimiento.",
@@ -34,6 +63,7 @@
           },
           {
             "type": "h2",
+            "stepId": "step1",
             "text": "1. Una landing con una sola oferta"
           },
           {
@@ -42,6 +72,7 @@
           },
           {
             "type": "h2",
+            "stepId": "step2",
             "text": "2. Formulario corto + WhatsApp Business"
           },
           {
@@ -50,6 +81,7 @@
           },
           {
             "type": "h2",
+            "stepId": "step3",
             "text": "3. Notificación y registro"
           },
           {
@@ -58,6 +90,7 @@
           },
           {
             "type": "h2",
+            "stepId": "step4",
             "text": "4. Siguiente paso: portal o panel"
           },
           {

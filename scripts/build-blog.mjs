@@ -14,6 +14,7 @@ import {
   buildHead,
   renderPage,
 } from './lib/page-chrome.mjs';
+import { organizationLd, speakableWebPageLd, ORG_ID } from './lib/schema-geo.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -23,12 +24,42 @@ const dataFile = path.join(root, 'data', 'blog', 'posts.json');
  * @param {object} block
  */
 function renderBlock(block) {
-  if (block.type === 'h2') return `<h2>${escapeHtml(block.text)}</h2>`;
+  if (block.type === 'h2') {
+    const id = block.stepId ? ` id="${escapeAttr(block.stepId)}"` : '';
+    return `<h2${id}>${escapeHtml(block.text)}</h2>`;
+  }
   if (block.type === 'p') return `<p>${escapeHtml(block.text)}</p>`;
   if (block.type === 'ul' && Array.isArray(block.items)) {
     return `<ul class="project-results-list">${block.items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`;
   }
   return '';
+}
+
+/**
+ * @param {object} post
+ */
+function buildHowToLd(post) {
+  const howTo = post.schema?.howTo;
+  if (!howTo?.name || !Array.isArray(howTo.steps) || !howTo.steps.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: howTo.name,
+    description: howTo.description || post.seo.metaDescription,
+    totalTime: howTo.totalTime || 'PT15M',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'USD',
+      value: '0',
+    },
+    step: howTo.steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      ...(s.url ? { url: s.url } : {}),
+    })),
+  };
 }
 
 function main() {
@@ -114,7 +145,7 @@ function main() {
         <p class="project-eyebrow"><time datetime="${escapeAttr(post.date)}">${escapeHtml(post.date)}</time>
           ${(post.content.regions || []).map((r) => ` · ${escapeHtml(r)}`).join('')}</p>
         <h1>${escapeHtml(post.content.title)}</h1>
-        <p class="project-lead">${escapeHtml(post.content.excerpt)}</p>
+        <p class="project-lead geo-summary service-value-prop">${escapeHtml(post.content.excerpt)}</p>
     </header>
     <div class="project-section content-block fade-in blog-article">
             ${body}
@@ -128,6 +159,7 @@ function main() {
     </article>
     </main>`;
 
+    const howTo = buildHowToLd(post);
     const head = buildHead({
       title: post.seo.metaTitle,
       description: post.seo.metaDescription,
@@ -137,6 +169,7 @@ function main() {
       hreflang: 'es-CL',
       geoRegion: 'CL',
       jsonLd: [
+        organizationLd(),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
@@ -145,9 +178,15 @@ function main() {
           description: post.seo.metaDescription,
           url: `${SITE}/blog/${post.slug}`,
           author: { '@id': `${SITE}/#person` },
-          publisher: { '@id': `${SITE}/#business` },
+          publisher: { '@id': ORG_ID },
           mainEntityOfPage: `${SITE}/blog/${post.slug}`,
         },
+        speakableWebPageLd({
+          name: post.content.title,
+          url: `${SITE}/blog/${post.slug}`,
+          description: post.content.excerpt,
+        }),
+        ...(howTo ? [howTo] : []),
       ],
     });
 

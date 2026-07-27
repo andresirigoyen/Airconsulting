@@ -37,8 +37,9 @@ gtag('consent','default',{
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" type="text/plain" title="LLM content guide" href="https://www.irigoyendev.com/llms.txt">
     <link rel="author" href="https://www.irigoyendev.com/">
-    <meta name="geo.region" content="CL">
+    <meta name="geo.region" content="CL-RM">
     <meta name="geo.placename" content="Vitacura, Región Metropolitana">
+    <meta name="geo.position" content="-33.39;-70.575">
     <meta name="ICBM" content="-33.39, -70.575">
     <meta name="ai-content-declaration" content="human-authored">
 
@@ -62,6 +63,46 @@ gtag('consent','default',{
     <meta name="twitter:image" content="https://www.irigoyendev.com/images/og-image.png">
     <meta name="twitter:image:alt" content="Producto web premium en Vitacura | IrigoyenDev">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.irigoyendev.com/#organization",
+      "name": "IrigoyenDev",
+      "alternateName": "Irigoyen Dev",
+      "url": "https://www.irigoyendev.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.irigoyendev.com/favicon.svg",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://www.irigoyendev.com/images/og-image.png",
+      "email": "andres@irigoyendev.com",
+      "telephone": "+45-5024-9855",
+      "sameAs": [
+        "https://github.com/andresirigoyen",
+        "https://www.linkedin.com/in/andresirigoyen/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+45-5024-9855",
+        "contactType": "sales",
+        "areaServed": [
+          "CL",
+          "ES",
+          "DK",
+          "NO"
+        ],
+        "availableLanguage": [
+          "Spanish",
+          "English",
+          "Danish"
+        ],
+        "url": "https://www.irigoyendev.com/#contact"
+      }
+    }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -153,13 +194,25 @@ gtag('consent','default',{
         "https://github.com/andresirigoyen",
         "https://www.linkedin.com/in/andresirigoyen/"
       ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
       "founder": {
         "@type": "Person",
         "name": "Andrés Irigoyen",
         "url": "https://www.irigoyendev.com"
       },
       "parentOrganization": {
-        "@id": "https://www.irigoyendev.com/#business"
+        "@id": "https://www.irigoyendev.com/#organization"
       },
       "provider": {
         "@id": "https://www.irigoyendev.com/#person"
@@ -212,7 +265,31 @@ gtag('consent','default',{
         "name": "Vitacura, Región Metropolitana"
       },
       "provider": {
-        "@id": "https://www.irigoyendev.com/#business"
+        "@id": "https://www.irigoyendev.com/#organization"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.irigoyendev.com/santiago/vitacura#webpage",
+      "name": "Desarrollo web premium para marcas y tecnología en Vitacura",
+      "url": "https://www.irigoyendev.com/santiago/vitacura",
+      "description": "Para empresas y equipos que venden a audiencias exigentes: producto digital limpio, velocidad y confianza visual — también e-commerce selecto y servicios profesionales del sector.",
+      "isPartOf": {
+        "@id": "https://www.irigoyendev.com/#website"
+      },
+      "about": {
+        "@id": "https://www.irigoyendev.com/#organization"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".geo-summary",
+          ".service-value-prop",
+          ".faq-answer"
+        ]
       }
     }
     </script>
@@ -318,7 +395,7 @@ gtag('consent','default',{
         <div class="geo-locale-body" lang="es">
         <p class="project-eyebrow">Santiago · Vitacura · Premium &amp; producto</p>
         <h1>Desarrollo web premium para marcas y tecnología en Vitacura</h1>
-        <p class="project-lead">Para empresas y equipos que venden a audiencias exigentes: producto digital limpio, velocidad y confianza visual — también e-commerce selecto y servicios profesionales del sector.</p>
+        <p class="project-lead geo-summary service-value-prop">Para empresas y equipos que venden a audiencias exigentes: producto digital limpio, velocidad y confianza visual — también e-commerce selecto y servicios profesionales del sector.</p>
         </div>
         <div class="project-header__actions">
             <a href="/?service=fullstack#contact" class="btn-cta-primary" data-i18n="geo.ui.ctaQuote">Cotizar proyecto →</a>
@@ -401,18 +478,25 @@ gtag('consent','default',{
                     <p class="pricing-card__desc">Tienda propia con UX cuidada y SEO.</p>
                 </article></div></div></section>
         
+        <section class="project-section fade-in" id="mapa">
+            <h2 data-i18n="geo.ui.mapTitle">Ubicación de referencia — Vitacura</h2>
+            <p class="location-intro" data-i18n="geo.ui.mapIntro">Mapa centrado en Vitacura. Atención remota con presencia comercial en Chile, España y Dinamarca.</p>
+            <div class="geo-map-embed" style="position:relative;aspect-ratio:16/9;max-width:100%;border-radius:12px;overflow:hidden;background:var(--bg-muted,#0f172a)">
+              <iframe title="Mapa Vitacura" src="https://maps.google.com/maps?q=-33.39%2C-70.575&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="border:0;width:100%;height:100%;min-height:280px"></iframe>
+            </div>
+          </section>
         <section class="project-section fade-in" id="faq"><h2 data-i18n="geo.ui.faqTitle">Preguntas frecuentes</h2><div class="faq-list" lang="es">
             <article class="faq-item faq-item--plain">
                 <h3>¿Qué diferencia un sitio “premium” en Vitacura de una plantilla?</h3>
-                <p class="money-copy">Jerarquía tipográfica, performance y mensajes precisos. Evitamos plantillas genéricas: el visitante debe percibir solidez en los primeros segundos.</p>
+                <p class="money-copy faq-answer">Jerarquía tipográfica, performance y mensajes precisos. Evitamos plantillas genéricas: el visitante debe percibir solidez en los primeros segundos.</p>
             </article>
             <article class="faq-item faq-item--plain">
                 <h3>¿Incluyen medición de conversiones?</h3>
-                <p class="money-copy">Sí. Definimos eventos (demo, lead, compra) para que el equipo comercial sepa qué funciona — dato que las IA y los equipos de growth usan como señal de seriedad.</p>
+                <p class="money-copy faq-answer">Sí. Definimos eventos (demo, lead, compra) para que el equipo comercial sepa qué funciona — dato que las IA y los equipos de growth usan como señal de seriedad.</p>
             </article>
             <article class="faq-item faq-item--plain">
                 <h3>¿Cuál es el rango para una plataforma o producto web?</h3>
-                <p class="money-copy">Productos comerciales orientativos: desde ~USD 1.304; plataformas a medida desde ~USD 10000. Detalle en https://www.irigoyendev.com/precios.</p>
+                <p class="money-copy faq-answer">Productos comerciales orientativos: desde ~USD 1.304; plataformas a medida desde ~USD 10000. Detalle en https://www.irigoyendev.com/precios.</p>
             </article></div></section>
         <section class="project-section fade-in location-related"><h2 data-i18n="geo.ui.nearby">Cercanas</h2><div class="location-related__list"><a href="/santiago/las-condes" class="location-related__link">Las Condes</a>
 <a href="/santiago/lo-barnechea" class="location-related__link">Lo Barnechea</a>
@@ -440,7 +524,7 @@ gtag('consent','default',{
                     <li><a href="/crear-tienda-online" data-i18n="footer.linkShop">Crear tienda online</a></li>
                     <li><a href="/landing-pages" data-i18n="footer.linkLandings">Landing pages</a></li>
                     <li><a href="/servicios#seo-basico" data-i18n="footer.linkSeo">SEO básico</a></li>
-                    <li><a href="/servicios#seo-geo" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
+                    <li><a href="/servicios/geo-optimizacion-ia" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
                     <li><a href="/servicios#marketing" data-i18n="footer.linkMkt">Marketing digital</a></li>
                     <li><a href="/servicios#care" data-i18n="footer.linkWm">Planes Care / mantenimiento</a></li>
                     <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
@@ -450,7 +534,7 @@ gtag('consent','default',{
                 <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
                 <ul class="site-footer__links">
                     <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
-                    <li><a href="/#projects" data-i18n="footer.linkProjects">Proyectos</a></li>
+                    <li><a href="/casos-de-exito" data-i18n="footer.linkProjects">Proyectos</a></li>
                     <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
                     <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
                     <li><a href="/blog">Blog</a></li>

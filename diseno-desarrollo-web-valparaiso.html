@@ -39,6 +39,7 @@ gtag('consent','default',{
     <link rel="author" href="https://www.irigoyendev.com/">
     <meta name="geo.region" content="CL">
     <meta name="geo.placename" content="Valparaíso, Región de Valparaíso">
+    <meta name="geo.position" content="-33.0472;-71.6127">
     <meta name="ICBM" content="-33.0472, -71.6127">
     <meta name="ai-content-declaration" content="human-authored">
 
@@ -62,6 +63,46 @@ gtag('consent','default',{
     <meta name="twitter:image" content="https://www.irigoyendev.com/images/og-image.png">
     <meta name="twitter:image:alt" content="Desarrollo web en Valparaíso y Viña del Mar | IrigoyenDev">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.irigoyendev.com/#organization",
+      "name": "IrigoyenDev",
+      "alternateName": "Irigoyen Dev",
+      "url": "https://www.irigoyendev.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.irigoyendev.com/favicon.svg",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://www.irigoyendev.com/images/og-image.png",
+      "email": "andres@irigoyendev.com",
+      "telephone": "+45-5024-9855",
+      "sameAs": [
+        "https://github.com/andresirigoyen",
+        "https://www.linkedin.com/in/andresirigoyen/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+45-5024-9855",
+        "contactType": "sales",
+        "areaServed": [
+          "CL",
+          "ES",
+          "DK",
+          "NO"
+        ],
+        "availableLanguage": [
+          "Spanish",
+          "English",
+          "Danish"
+        ],
+        "url": "https://www.irigoyendev.com/#contact"
+      }
+    }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -144,13 +185,25 @@ gtag('consent','default',{
         "https://github.com/andresirigoyen",
         "https://www.linkedin.com/in/andresirigoyen/"
       ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
       "founder": {
         "@type": "Person",
         "name": "Andrés Irigoyen",
         "url": "https://www.irigoyendev.com"
       },
       "parentOrganization": {
-        "@id": "https://www.irigoyendev.com/#business"
+        "@id": "https://www.irigoyendev.com/#organization"
       },
       "provider": {
         "@id": "https://www.irigoyendev.com/#person"
@@ -203,7 +256,31 @@ gtag('consent','default',{
         "name": "Valparaíso, Región de Valparaíso"
       },
       "provider": {
-        "@id": "https://www.irigoyendev.com/#business"
+        "@id": "https://www.irigoyendev.com/#organization"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.irigoyendev.com/diseno-desarrollo-web-valparaiso#webpage",
+      "name": "Diseño y desarrollo web para Valparaíso y Viña del Mar",
+      "url": "https://www.irigoyendev.com/diseno-desarrollo-web-valparaiso",
+      "description": "Para comercios, turismo, inmobiliarias y pymes creativas de la Quinta Región que necesitan vender o captar leads online sin depender solo de Instagram.",
+      "isPartOf": {
+        "@id": "https://www.irigoyendev.com/#website"
+      },
+      "about": {
+        "@id": "https://www.irigoyendev.com/#organization"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".geo-summary",
+          ".service-value-prop",
+          ".faq-answer"
+        ]
       }
     }
     </script>
@@ -307,7 +384,7 @@ gtag('consent','default',{
         <div class="geo-locale-body" lang="es">
         <p class="project-eyebrow">Chile · Valparaíso &amp; Viña del Mar</p>
         <h1>Diseño y desarrollo web para Valparaíso y Viña del Mar</h1>
-        <p class="project-lead">Para comercios, turismo, inmobiliarias y pymes creativas de la Quinta Región que necesitan vender o captar leads online sin depender solo de Instagram.</p>
+        <p class="project-lead geo-summary service-value-prop">Para comercios, turismo, inmobiliarias y pymes creativas de la Quinta Región que necesitan vender o captar leads online sin depender solo de Instagram.</p>
         </div>
         <div class="project-header__actions">
             <a href="/?service=fullstack#contact" class="btn-cta-primary" data-i18n="geo.ui.ctaQuote">Cotizar proyecto →</a>
@@ -347,18 +424,25 @@ gtag('consent','default',{
                     <h3><a href="/projects/floreria">Florería El Nuevo Pensamiento (Valparaíso)</a></h3>
                     <p>Caso real en la Quinta Región: SEO local, catálogo visual y conversión por WhatsApp.</p>
                 </article></div></div></section>
+        <section class="project-section fade-in" id="mapa">
+            <h2 data-i18n="geo.ui.mapTitle">Ubicación de referencia — Valparaíso</h2>
+            <p class="location-intro" data-i18n="geo.ui.mapIntro">Mapa centrado en Valparaíso. Atención remota con presencia comercial en Chile, España y Dinamarca.</p>
+            <div class="geo-map-embed" style="position:relative;aspect-ratio:16/9;max-width:100%;border-radius:12px;overflow:hidden;background:var(--bg-muted,#0f172a)">
+              <iframe title="Mapa Valparaíso" src="https://maps.google.com/maps?q=-33.0472%2C-71.6127&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="border:0;width:100%;height:100%;min-height:280px"></iframe>
+            </div>
+          </section>
         <section class="project-section fade-in" id="faq"><h2 data-i18n="geo.ui.faqTitle">Preguntas frecuentes</h2><div class="faq-list" lang="es">
             <article class="faq-item faq-item--plain">
                 <h3>¿Hacen desarrollo web para negocios en Valparaíso y Viña del Mar?</h3>
-                <p class="money-copy">Sí. IrigoyenDev trabaja con comercios y servicios de la Quinta Región: catálogos, reservas y SEO local. Contacto andres@irigoyendev.com / +45 50 24 98 55.</p>
+                <p class="money-copy faq-answer">Sí. IrigoyenDev trabaja con comercios y servicios de la Quinta Región: catálogos, reservas y SEO local. Contacto andres@irigoyendev.com / +45 50 24 98 55.</p>
             </article>
             <article class="faq-item faq-item--plain">
                 <h3>¿Cuánto cuesta una landing para un local en Valparaíso?</h3>
-                <p class="money-copy">Las landings orientativas parten desde ~USD 600. Detalle en https://www.irigoyendev.com/precios.</p>
+                <p class="money-copy faq-answer">Las landings orientativas parten desde ~USD 600. Detalle en https://www.irigoyendev.com/precios.</p>
             </article>
             <article class="faq-item faq-item--plain">
                 <h3>¿Tienen caso real en la región?</h3>
-                <p class="money-copy">Sí: el caso Florería (Quinta Región) muestra catálogo, pedidos y foco en conversión móvil — útil como referencia de comercio local.</p>
+                <p class="money-copy faq-answer">Sí: el caso Florería (Quinta Región) muestra catálogo, pedidos y foco en conversión móvil — útil como referencia de comercio local.</p>
             </article></div></section>
         
         <section class="project-section fade-in"><p class="location-outro"><a href="/precios" data-i18n="footer.linkPricing">Precios</a> · <a href="/blog">Blog</a> · <a href="/#contact" data-i18n="footer.linkContact">Contacto</a> · <a href="https://www.irigoyendev.com" rel="me">IrigoyenDev</a></p></section>
@@ -384,7 +468,7 @@ gtag('consent','default',{
                     <li><a href="/crear-tienda-online" data-i18n="footer.linkShop">Crear tienda online</a></li>
                     <li><a href="/landing-pages" data-i18n="footer.linkLandings">Landing pages</a></li>
                     <li><a href="/servicios#seo-basico" data-i18n="footer.linkSeo">SEO básico</a></li>
-                    <li><a href="/servicios#seo-geo" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
+                    <li><a href="/servicios/geo-optimizacion-ia" data-i18n="footer.linkGeo">SEO &amp; GEO avanzado</a></li>
                     <li><a href="/servicios#marketing" data-i18n="footer.linkMkt">Marketing digital</a></li>
                     <li><a href="/servicios#care" data-i18n="footer.linkWm">Planes Care / mantenimiento</a></li>
                     <li><a href="/precios" data-i18n="footer.linkPricing">Precios</a></li>
@@ -394,7 +478,7 @@ gtag('consent','default',{
                 <h3 class="site-footer__heading" data-i18n="footer.siteHeading">Sitio</h3>
                 <ul class="site-footer__links">
                     <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
-                    <li><a href="/#projects" data-i18n="footer.linkProjects">Proyectos</a></li>
+                    <li><a href="/casos-de-exito" data-i18n="footer.linkProjects">Proyectos</a></li>
                     <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
                     <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
                     <li><a href="/blog">Blog</a></li>

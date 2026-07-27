@@ -27,6 +27,12 @@ import {
 import { CHILE_ADMIN_AREAS } from './lib/chile-geo.mjs';
 import { ENTITY } from './lib/entity-nap.mjs';
 import { marketUi, countryDisplayName, requireMarket } from './lib/geo-markets.mjs';
+import {
+  ORG_ID,
+  openingHoursSpec,
+  organizationLd,
+  speakableWebPageLd,
+} from './lib/schema-geo.mjs';
 import { writeSitemap } from './build-sitemap.mjs';
 import {
   keywordAliasPathsFor,
@@ -179,12 +185,13 @@ function buildLocalBusinessLd(entry) {
       []
     ).map(capitalizeSentence),
     sameAs: ENTITY.sameAs,
+    openingHoursSpecification: openingHoursSpec(),
     founder: {
       '@type': 'Person',
       name: ENTITY.founder,
       url: ENTITY.url,
     },
-    parentOrganization: { '@id': `${SITE}/#business` },
+    parentOrganization: { '@id': ORG_ID },
     provider: { '@id': `${SITE}/#person` },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -265,6 +272,7 @@ function buildJsonLd(entry, all) {
 
   /** @type {object[]} */
   const blocks = [
+    organizationLd(),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -282,8 +290,13 @@ function buildJsonLd(entry, all) {
         '@type': 'Place',
         name: `${entry.city}, ${entry.region}`,
       },
-      provider: { '@id': `${SITE}/#business` },
+      provider: { '@id': ORG_ID },
     },
+    speakableWebPageLd({
+      name: entry.h1Title,
+      url,
+      description: entry.contentSummary,
+    }),
   ];
 
   // National hub: list regions for this country
@@ -418,7 +431,7 @@ function renderFaqSection(faq, ui, i18n) {
       return `
             <article class="faq-item faq-item--plain">
                 <h3${qAttr}>${escapeHtml(item.q)}</h3>
-                <p class="money-copy"${aAttr}>${escapeHtml(item.a)}</p>
+                <p class="money-copy faq-answer"${aAttr}>${escapeHtml(item.a)}</p>
             </article>`;
     })
     .join('');
@@ -561,7 +574,7 @@ function renderMain(entry, all) {
         ${renderBreadcrumbNav(entry, all)}
         <p class="project-eyebrow"${eyebrowAttr}>${escapeHtml(c.eyebrow || entry.region)}</p>
         <h1${h1Attr}>${escapeHtml(entry.h1Title)}</h1>
-        <p class="project-lead"${leadAttr}>${escapeHtml(lead)}</p>
+        <p class="project-lead geo-summary service-value-prop"${leadAttr}>${escapeHtml(lead)}</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary"${ctaPrimaryAttr}>${escapeHtml(c.ctaPrimary || ui.ctaDefault)}</a>
             <a href="/servicios" class="project-cta-inline"${ctaSecondaryAttr}>${escapeHtml(c.ctaSecondary || ui.ctaServices)}</a>
@@ -687,7 +700,7 @@ function renderMain(entry, all) {
         ${seoOpen}
         <p class="project-eyebrow">${escapeHtml(c.eyebrow || `${entry.region} · ${entry.city}`)}</p>
         <h1>${escapeHtml(entry.h1Title)}</h1>
-        <p class="project-lead">${escapeHtml(lead)}</p>
+        <p class="project-lead geo-summary service-value-prop">${escapeHtml(lead)}</p>
         ${seoClose}
         <div class="project-header__actions">
             <a href="/?service=fullstack#contact" class="btn-cta-primary" data-i18n="geo.ui.ctaQuote">Cotizar proyecto →</a>
@@ -702,11 +715,31 @@ function renderMain(entry, all) {
         ${pains ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.painPoints">${escapeHtml(ui.painPoints)}</h2>${seoOpen}<ul class="project-results-list">${pains}</ul>${seoClose}</section>` : ''}
         ${services ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.services">${escapeHtml(ui.services)}</h2>${seoOpen}<div class="pricing-grid pricing-grid--care">${services}</div>${seoClose}</section>` : ''}
         ${cases ? `<section class="project-section fade-in"><h2 data-i18n="geo.ui.cases">${escapeHtml(ui.cases)}</h2>${seoOpen}<div class="location-grid">${cases}</div>${seoClose}</section>` : ''}
+        ${renderMapSection(entry)}
         ${faqWrapped}
         ${related ? `<section class="project-section fade-in location-related"><h2 data-i18n="geo.ui.nearby">${escapeHtml(ui.nearby)}</h2><div class="location-related__list">${related}</div></section>` : ''}
         <section class="project-section fade-in"><p class="location-outro"><a href="/precios" data-i18n="footer.linkPricing">Precios</a> · <a href="/blog">Blog</a> · <a href="/#contact" data-i18n="footer.linkContact">Contacto</a> · <a href="${ENTITY.url}" rel="me">${escapeHtml(ENTITY.legalName)}</a></p></section>
     </div>
     </main>`;
+}
+
+/**
+ * Embedded map centered on comuna/region coordinates (no API key).
+ * @param {import('./lib/geo-config.mjs').GeoEntry} entry
+ */
+function renderMapSection(entry) {
+  const lat = entry.localBusinessSchema?.latitude;
+  const lng = entry.localBusinessSchema?.longitude;
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return '';
+  const q = encodeURIComponent(`${lat},${lng}`);
+  const src = `https://maps.google.com/maps?q=${q}&z=13&output=embed`;
+  return `<section class="project-section fade-in" id="mapa">
+            <h2 data-i18n="geo.ui.mapTitle">Ubicación de referencia — ${escapeHtml(entry.city)}</h2>
+            <p class="location-intro" data-i18n="geo.ui.mapIntro">Mapa centrado en ${escapeHtml(entry.city)}. Atención remota con presencia comercial en Chile, España y Dinamarca.</p>
+            <div class="geo-map-embed" style="position:relative;aspect-ratio:16/9;max-width:100%;border-radius:12px;overflow:hidden;background:var(--bg-muted,#0f172a)">
+              <iframe title="Mapa ${escapeAttr(entry.city)}" src="${src}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="border:0;width:100%;height:100%;min-height:280px"></iframe>
+            </div>
+          </section>`;
 }
 
 /**
@@ -841,6 +874,14 @@ function main() {
     const ui = marketUi(entry.countryCode);
     const pub = publicPath(entry);
 
+    const lat = entry.localBusinessSchema?.latitude;
+    const lng = entry.localBusinessSchema?.longitude;
+    const hasCoords = Number.isFinite(lat) && Number.isFinite(lng);
+    const geoRegionMeta =
+      entry.countryCode === 'CL' && /metropolitana|santiago/i.test(entry.region || '')
+        ? 'CL-RM'
+        : entry.countryCode;
+
     const head = buildHead({
       title: entry.metaTitle,
       description: entry.metaDescription,
@@ -850,12 +891,10 @@ function main() {
       hreflang: ui.market.hreflang,
       ogLocale: ui.ogLocale,
       ogLocaleAlternate: ui.ogLocaleAlternate,
-      geoRegion: entry.countryCode,
+      geoRegion: geoRegionMeta,
       geoPlacename: `${entry.city}, ${entry.region}`,
-      icbm:
-        entry.localBusinessSchema?.latitude != null
-          ? `${entry.localBusinessSchema.latitude}, ${entry.localBusinessSchema.longitude}`
-          : undefined,
+      geoPosition: hasCoords ? `${lat};${lng}` : undefined,
+      icbm: hasCoords ? `${lat}, ${lng}` : undefined,
       jsonLd: buildJsonLd(entry, entries),
       i18nDescKey:
         entry.slug === 'santiago'

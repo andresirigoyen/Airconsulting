@@ -1,0 +1,31 @@
+---
+description: Inventario SEO/GEO de IrigoyenDev — stack, rutas, schema y gaps
+alwaysApply: true
+---
+
+# SEO / GEO — inventario del proyecto
+
+## Stack
+- HTML estático en Vercel (`cleanUrls`), no Next/Astro.
+- Build SEO: `npm run build:seo` → `apply-seo`, lead pages, blog, presence, geo, hubs, sitemap.
+- NAP canónico: `scripts/lib/entity-nap.mjs` (tel `+45-5024-9855`).
+- Chrome/head: `scripts/lib/page-chrome.mjs` (`SITE`, `OG_DEFAULT` = `/images/og-image.png`).
+
+## Rutas locales (NO duplicar bajo `/servicios/desarrollo-web-*`)
+- Silo canónico: `/santiago/{comuna}`, hubs `/chile`, `/santiago`, regionales (`/desarrollo-web-concepcion`, etc.).
+- Aliases en `vercel.json`: `/desarrollo-web-en-{slug}`, `/agencia-web-en-{slug}` → silo.
+- Comunas pedidas ya existen: Providencia, Peñalolén, La Reina, Las Condes, Ñuñoa, Vitacura, Valparaíso, Concepción, Antofagasta.
+
+## Schema ya presente
+- Home: WebSite, Person, LocalBusiness `#business`, ProfessionalService, ItemList proyectos, FAQPage.
+- Geo: LocalBusiness+ProfessionalService, Service, FAQPage, BreadcrumbList.
+- Blog: Blog / BlogPosting. Proyectos: CreativeWork.
+- robots.txt: AI crawlers Allow (GPTBot, PerplexityBot, etc.).
+
+## Gaps / reglas al extender
+- Añadir cambios en **factories** (`build-geo-pages.mjs`, `apply-seo.mjs`, `build-lead-pages.mjs`), no editar cientos de HTML a mano.
+- Clases GEO: `geo-summary`, `service-value-prop`, `faq-answer` + Speakable `cssSelector`.
+- Páginas dedicadas: `/servicios/geo-optimizacion-ia`, `/casos-de-exito`.
+- Organization `@id` `#organization`; no inventar AggregateRating sin reviews reales.
+- HowTo solo en guías blog con pasos reales.
+- Sitemap: incluir proyectos (ava7) + páginas nuevas vía `build-sitemap.mjs`.

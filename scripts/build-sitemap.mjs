@@ -16,20 +16,6 @@ const SITE = 'https://www.irigoyendev.com';
 
 /** @typedef {{ loc: string, lastmod?: string, changefreq?: string, priority?: string, image?: { loc: string, title: string } }} SitemapUrl */
 
-/** @type {SitemapUrl[]} */
-const CORE = [
-  { loc: '/', changefreq: 'weekly', priority: '1.0', image: { loc: `${SITE}/images/og-image.png`, title: 'IrigoyenDev — Desarrollo full stack' } },
-  { loc: '/servicios', changefreq: 'weekly', priority: '0.95' },
-  { loc: '/crear-tienda-online', changefreq: 'monthly', priority: '0.9' },
-  { loc: '/landing-pages', changefreq: 'monthly', priority: '0.9' },
-  { loc: '/precios', changefreq: 'monthly', priority: '0.85' },
-  { loc: '/faq', changefreq: 'monthly', priority: '0.8' },
-  { loc: '/santiago/comunas', changefreq: 'weekly', priority: '0.88' },
-  { loc: '/es', changefreq: 'weekly', priority: '0.9' },
-  { loc: '/en', changefreq: 'weekly', priority: '0.9' },
-  { loc: '/da', changefreq: 'weekly', priority: '0.9' },
-];
-
 const PROJECTS = [
   'thebeebaby',
   'dahuss',
@@ -40,11 +26,28 @@ const PROJECTS = [
   'radiochicureo',
   'retorica',
   'floreria',
+  'ava7',
 ].map((slug) => ({
   loc: `/projects/${slug}`,
   changefreq: 'monthly',
   priority: '0.75',
 }));
+
+/** @type {SitemapUrl[]} */
+const CORE = [
+  { loc: '/', changefreq: 'weekly', priority: '1.0', image: { loc: `${SITE}/images/og-image.png`, title: 'IrigoyenDev — Desarrollo full stack' } },
+  { loc: '/servicios', changefreq: 'weekly', priority: '0.95' },
+  { loc: '/servicios/geo-optimizacion-ia', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/casos-de-exito', changefreq: 'monthly', priority: '0.85' },
+  { loc: '/crear-tienda-online', changefreq: 'monthly', priority: '0.9' },
+  { loc: '/landing-pages', changefreq: 'monthly', priority: '0.9' },
+  { loc: '/precios', changefreq: 'monthly', priority: '0.85' },
+  { loc: '/faq', changefreq: 'monthly', priority: '0.8' },
+  { loc: '/santiago/comunas', changefreq: 'weekly', priority: '0.88' },
+  { loc: '/es', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/en', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/da', changefreq: 'weekly', priority: '0.9' },
+];
 
 function today() {
   return new Date().toISOString().slice(0, 10);

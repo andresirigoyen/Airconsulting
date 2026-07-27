@@ -111,7 +111,7 @@ const pages = {
         </a>
         <p class="project-eyebrow" data-i18n="svc.eyebrow">Servicios · IrigoyenDev</p>
         <h1 data-i18n="svc.h1">Desarrollo web a medida: tiendas online, landings y plataformas</h1>
-        <p class="project-lead" data-i18n="svc.lead">Desarrollo de tiendas online, landing page de conversión, plataforma inmobiliaria digital y SEO técnico para e-commerce. Chile, España, Dinamarca y remoto.</p>
+        <p class="project-lead geo-summary service-value-prop" data-i18n="svc.lead">Desarrollo de tiendas online, landing page de conversión, plataforma inmobiliaria digital y SEO técnico para e-commerce. Chile, España, Dinamarca y remoto.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="svc.ctaPlan">Pedir plan de proyecto →</a>
             <a href="${WA}" class="project-cta-inline" target="_blank" rel="noopener noreferrer" data-i18n="mkt.ctaWhatsApp">WhatsApp directo →</a>
@@ -146,8 +146,8 @@ const pages = {
                 </article>
                 <article class="service-card" id="seo-geo">
                     <h3 data-i18n="svc.geoTitle">SEO &amp; GEO avanzado</h3>
-                    <p data-i18n="svc.geoDesc">Estructura de datos Schema, llms.txt y optimización semántica avanzada para que ChatGPT, Perplexity y Gemini recomienden y enlacen a tu marca.</p>
-                    <a href="/?service=geo#contact" class="project-link"><span data-i18n="svc.geoCta">Cotizar SEO &amp; GEO</span></a>
+                    <p class="project-lead geo-summary service-value-prop" data-i18n="svc.geoDesc">Estructura de datos Schema, llms.txt y optimización semántica avanzada para que ChatGPT, Perplexity y Gemini recomienden y enlacen a tu marca.</p>
+                    <a href="/servicios/geo-optimizacion-ia" class="project-link"><span data-i18n="svc.geoCta">Cotizar SEO &amp; GEO</span></a>
                 </article>
                 <article class="service-card" id="marketing">
                     <h3 data-i18n="svc.mktTitle">Campañas de marketing digital</h3>
@@ -432,31 +432,31 @@ const pages = {
             <div class="faq-list">
                 <details class="faq-item" open>
                     <summary data-i18n="faqPage.q1">¿Qué servicios ofrece IrigoyenDev?</summary>
-                    <p data-i18n-html="faqPage.a1Html">Desarrollo full stack: tiendas online, landings, plataformas con admin, SEO/GEO, marketing digital y <a href="/servicios#care">planes Care</a> de mantenimiento mensual.</p>
+                    <p class="faq-answer" data-i18n-html="faqPage.a1Html">Desarrollo full stack: tiendas online, landings, plataformas con admin, SEO/GEO, marketing digital y <a href="/servicios#care">planes Care</a> de mantenimiento mensual.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q2">¿Cuánto cuesta una web o tienda online?</summary>
-                    <p class="money-copy" data-i18n-html="faqPage.a2Html">Rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~desde ~USD 1.304 y plataformas a medida desde ~USD 10.000. Detalle en <a href="/precios">precios</a>.</p>
+                    <p class="money-copy faq-answer" data-i18n-html="faqPage.a2Html">Rangos orientativos: landings desde ~USD 600, SEO desde ~USD 199, productos comerciales ~desde ~USD 1.304 y plataformas a medida desde ~USD 10.000. Detalle en <a href="/precios">precios</a>.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q3">¿Ofrecen suscripción o mantenimiento mensual?</summary>
-                    <p class="money-copy" data-i18n-html="faqPage.a3Html">Sí. <strong>Plan Care</strong> (webmaster/mantenimiento) desde ~USD 200–350/mes y <strong>Care + Growth</strong> (Care + SEO o ads) desde ~USD 450–800/mes, con mínimo 3 meses. Ideal después de lanzar. Ver <a href="/precios#care">precios Care</a>.</p>
+                    <p class="money-copy faq-answer" data-i18n-html="faqPage.a3Html">Sí. <strong>Plan Care</strong> (webmaster/mantenimiento) desde ~USD 200–350/mes y <strong>Care + Growth</strong> (Care + SEO o ads) desde ~USD 450–800/mes, con mínimo 3 meses. Ideal después de lanzar. Ver <a href="/precios#care">precios Care</a>.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q4">¿Trabajan con clientes en Chile, España o Dinamarca?</summary>
-                    <p data-i18n="faqPage.a4">Sí. Atendemos clientes en Dinamarca (WhatsApp +45), Chile, España y proyectos remotos internacionales. La comunicación puede ser en español o inglés.</p>
+                    <p class="faq-answer" data-i18n="faqPage.a4">Sí. Atendemos clientes en Dinamarca (WhatsApp +45), Chile, España y proyectos remotos internacionales. La comunicación puede ser en español o inglés.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q5">¿En cuánto tiempo entregan?</summary>
-                    <p data-i18n="faqPage.a5">Depende del alcance. Una landing acotada puede salir en pocas semanas; un e-commerce o plataforma con admin suele requerir un plan por fases. Tras el contacto inicial recibes plazos estimados en ~48 horas.</p>
+                    <p class="faq-answer" data-i18n="faqPage.a5">Depende del alcance. Una landing acotada puede salir en pocas semanas; un e-commerce o plataforma con admin suele requerir un plan por fases. Tras el contacto inicial recibes plazos estimados en ~48 horas.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q6">¿Qué tecnologías usan?</summary>
-                    <p data-i18n="faqPage.a6">Stack moderno según el caso: Next.js, Astro, HTML/CSS/JS de alto rendimiento, bases de datos, auth, cloud (Vercel, AWS, Azure) y buenas prácticas de SEO/GEO.</p>
+                    <p class="faq-answer" data-i18n="faqPage.a6">Stack moderno según el caso: Next.js, Astro, HTML/CSS/JS de alto rendimiento, bases de datos, auth, cloud (Vercel, AWS, Azure) y buenas prácticas de SEO/GEO.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q7">¿Cómo empezamos?</summary>
-                    <p data-i18n-html="faqPage.a7Html">Usa el <a href="/#contact">formulario de contacto</a> o escribe por WhatsApp. Cuéntanos el objetivo de negocio, plazo y presupuesto aproximado.</p>
+                    <p class="faq-answer" data-i18n-html="faqPage.a7Html">Usa el <a href="/#contact">formulario de contacto</a> o escribe por WhatsApp. Cuéntanos el objetivo de negocio, plazo y presupuesto aproximado.</p>
                 </details>
             </div>
             <p style="margin-top: var(--spacing-xl);"><a href="/servicios" data-i18n="faqPage.more">Ver todos los servicios →</a></p>
@@ -465,8 +465,138 @@ const pages = {
   },
 };
 
+/** Nested marketing landings written under subfolders (cleanUrls → /servicios/...). */
+const nestedPages = {
+  'servicios/geo-optimizacion-ia.html': {
+    title: 'GEO: Optimización para Inteligencia Artificial | IrigoyenDev',
+    main: `
+    <header class="project-header container fade-in">
+        <a href="/servicios" class="back-link">
+            ${BACK_SVG}
+            <span data-i18n="mkt.backServices">Volver a servicios</span>
+        </a>
+        <nav class="geo-breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
+            <li><a href="/servicios" data-i18n="nav.services">Servicios</a></li>
+            <li aria-current="page">GEO / Optimización para IA</li>
+          </ol>
+        </nav>
+        <p class="project-eyebrow">GEO · Generative Engine Optimization</p>
+        <h1>GEO: Optimización para Inteligencia Artificial | IrigoyenDev</h1>
+        <p class="project-lead geo-summary service-value-prop">GEO (Generative Engine Optimization) hace que ChatGPT, Gemini y Perplexity citen y recomienden tu marca cuando alguien pregunta por tu categoría. En IrigoyenDev combinamos Schema markup, contenido citable y señales multi-canal — desde USD 199.</p>
+        <div class="project-header__actions">
+            <a href="/?service=geo#contact" class="btn-cta-primary">Cotizar GEO →</a>
+            <a href="${WA}" class="project-cta-inline" target="_blank" rel="noopener noreferrer" data-i18n="mkt.ctaWhatsApp">WhatsApp directo →</a>
+        </div>
+    </header>
+    <main id="main-content" class="container">
+        <section class="project-section fade-in">
+            <div class="content-block">
+                <h2>¿Qué es GEO y en qué se diferencia del SEO?</h2>
+                <p class="geo-summary">El SEO posiciona en Google. El GEO posiciona en motores generativos: cuando un cliente pregunta a la IA “¿cuál es la mejor agencia de desarrollo web en Santiago?”, el modelo prioriza fuentes con entidades claras, FAQ citables, datos estructurados y autoridad consistente. Sin GEO, tu competencia puede ser la respuesta — aunque tengas buen ranking clásico.</p>
+                <h2>Caso de uso: ¿apareces cuando te preguntan a ChatGPT?</h2>
+                <p>Si un prospecto en Providencia o Las Condes pide recomendaciones a Perplexity o Gemini, la IA busca fragmentos de 40–60 palabras, Schema FAQ/HowTo/Speakable y menciones en LinkedIn o medios. Diseñamos esa capa para que IrigoyenDev — y tus clientes — sean citables.</p>
+                <h2>Qué incluye el servicio GEO</h2>
+                <ul class="project-results-list">
+                    <li>Optimización de contenido citable (definiciones operacionales + datos concretos)</li>
+                    <li>Schema markup avanzado: Organization, FAQ, HowTo, Speakable, Service</li>
+                    <li>Señales multi-canal (LinkedIn, GitHub, llms.txt / ai.txt)</li>
+                    <li>Arquitectura de entidades de marca alineada con NAP</li>
+                    <li>Monitoreo orientativo de presencia en respuestas de IA (“Share of AI Presence”)</li>
+                </ul>
+                <p class="price-range">Desde ~USD 199 (SEO/GEO de entrada) · paquetes avanzados desde ~USD 499</p>
+                <h2>Preguntas frecuentes sobre GEO</h2>
+                <div class="faq-list" id="faq">
+                    <article class="faq-item faq-item--plain">
+                        <h3>¿GEO reemplaza al SEO?</h3>
+                        <p class="faq-answer">No. GEO complementa el SEO técnico: velocidad, canonicals y sitemap siguen siendo la base. GEO añade la capa que usan los modelos generativos para citarte.</p>
+                    </article>
+                    <article class="faq-item faq-item--plain">
+                        <h3>¿Cuánto tarda en notarse?</h3>
+                        <p class="faq-answer">Las señales técnicas (Schema, llms.txt, FAQs) se publican en días. La citación en IA suele madurar en semanas, según competencia y menciones externas.</p>
+                    </article>
+                    <article class="faq-item faq-item--plain">
+                        <h3>¿Sirve para empresas fuera de Santiago?</h3>
+                        <p class="faq-answer">Sí. GEO local + nacional funciona para Valparaíso, Concepción, Antofagasta y mercados en España o Dinamarca, con páginas de intención y Schema LocalBusiness.</p>
+                    </article>
+                    <article class="faq-item faq-item--plain">
+                        <h3>¿Qué entregables recibo?</h3>
+                        <p class="faq-answer">Auditoría de citabilidad, implementación de Schema y fragmentos GEO, llms.txt/ai.txt, y un plan de contenido multi-canal con métricas de seguimiento.</p>
+                    </article>
+                </div>
+                <p style="margin-top:2rem"><a href="/precios">Ver precios</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/#contact">Contacto</a></p>
+            </div>
+        </section>
+    </main>`,
+  },
+  'casos-de-exito.html': {
+    title: 'Casos de éxito | Resultados reales IrigoyenDev',
+    main: `
+    <header class="project-header container fade-in">
+        <a href="/" class="back-link">
+            ${BACK_SVG}
+            <span data-i18n="mkt.backHome">Volver al inicio</span>
+        </a>
+        <nav class="geo-breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/" data-i18n="footer.linkHome">Inicio</a></li>
+            <li aria-current="page">Casos de éxito</li>
+          </ol>
+        </nav>
+        <p class="project-eyebrow">Resultados · Portfolio</p>
+        <h1>Casos de éxito IrigoyenDev</h1>
+        <p class="project-lead geo-summary service-value-prop">Proyectos reales de e-commerce, inmobiliario y marca local: problema, solución, métricas y stack. Cada caso documenta cómo el desarrollo web + SEO/GEO se traduce en leads, ventas o operación más limpia.</p>
+        <div class="project-header__actions">
+            <a href="/#contact" class="btn-cta-primary">Hablar de tu proyecto →</a>
+            <a href="/#projects" class="project-cta-inline">Ver grid de proyectos →</a>
+        </div>
+    </header>
+    <main id="main-content" class="container">
+        <section class="project-section fade-in">
+            <article class="content-block" id="thebeebaby" style="margin-bottom:3rem">
+                <h2>TheBeeBaby — marketplace e-commerce</h2>
+                <p><strong>Problema:</strong> catálogo fragmentado y checkout que frenaba la compra móvil.</p>
+                <p><strong>Solución:</strong> marketplace full stack con catálogo geolocalizado, pagos seguros y panel admin.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> +30% de ventas en el primer mes tras el nuevo checkout; experiencia móvil más rápida.</p>
+                <p><strong>Stack:</strong> e-commerce a medida, pagos, panel admin, SEO on-page.</p>
+                <blockquote class="faq-answer">“Andrés armó el e-commerce rapidísimo y el nuevo checkout fluye espectacular. En el primer mes las ventas subieron un 30%.” — María López, Operaciones · TheBeeBaby</blockquote>
+                <a href="/projects/thebeebaby" class="project-link">Ver caso completo →</a>
+            </article>
+            <article class="content-block" id="dragonmart" style="margin-bottom:3rem">
+                <h2>Dragonmart — sourcing B2B</h2>
+                <p><strong>Problema:</strong> cotizaciones manuales y flujo Asia-Chile sin sistema central.</p>
+                <p><strong>Solución:</strong> plataforma B2B de sourcing con catálogo y tooling para proveedores.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> horas de trabajo manual recuperadas cada día; cotizaciones automatizadas.</p>
+                <p><strong>Stack:</strong> web corporativa de conversión, catálogo B2B, automatización operativa.</p>
+                <blockquote class="faq-answer">“Necesitábamos digitalizar todo el flujo con Asia y automatizar cotizaciones. El sistema nos ahorra horas de trabajo manual todos los días.” — Carlos Ramírez, Director · Dragonmart</blockquote>
+                <a href="/projects/dragonmart" class="project-link">Ver caso completo →</a>
+            </article>
+            <article class="content-block" id="floreria" style="margin-bottom:3rem">
+                <h2>Florería El Nuevo Pensamiento — Valparaíso</h2>
+                <p><strong>Problema:</strong> negocio local sin canal digital serio ni SEO local.</p>
+                <p><strong>Solución:</strong> web comercial rápida con catálogo visual, SEO local y embudo a WhatsApp.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> sitio listo para vender, indexación rápida en Google y conversión local por WhatsApp.</p>
+                <p><strong>Stack:</strong> HTML de alto rendimiento, SEO local Quinta Región, WhatsApp Business.</p>
+                <blockquote class="faq-answer">“Nos entregó la tienda lista para vender. Se preocupó de que la web volara en velocidad y apareciéramos rápido en Google.” — Elena Martínez, Fundadora · Florería ENP</blockquote>
+                <a href="/projects/floreria" class="project-link">Ver caso completo →</a>
+            </article>
+            <p><a href="/servicios">Servicios</a> · <a href="/servicios/geo-optimizacion-ia">GEO</a> · <a href="/#contact">Cotizar</a></p>
+        </section>
+    </main>`,
+  },
+};
+
 for (const [file, conf] of Object.entries(pages)) {
   const html = chrome({ title: conf.title, mainHtml: conf.main });
   fs.writeFileSync(path.join(root, file), html);
+  console.log('Wrote', file);
+}
+
+for (const [file, conf] of Object.entries(nestedPages)) {
+  const out = path.join(root, file);
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  const html = chrome({ title: conf.title, mainHtml: conf.main });
+  fs.writeFileSync(out, html);
   console.log('Wrote', file);
 }
