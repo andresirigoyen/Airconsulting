@@ -143,7 +143,7 @@ const pages = {
                 <article class="service-card" id="seo-basico">
                     <h3 data-i18n="svc.seoTitle">SEO básico</h3>
                     <p data-i18n="svc.seoDesc">Títulos, meta descriptions, sitemap, robots, velocidad, canonicals y estructura on-page para indexar limpio desde el lanzamiento.</p>
-                    <a href="/?service=seo#contact" class="project-link"><span data-i18n="svc.seoCta">Cotizar SEO básico</span></a>
+                    <a href="/#contact" data-service="seo-basic" class="project-link"><span data-i18n="svc.seoCta">Cotizar SEO básico</span></a>
                 </article>
                 <article class="service-card" id="seo-geo">
                     <h3 data-i18n="svc.geoTitle">SEO &amp; GEO avanzado</h3>
@@ -153,7 +153,7 @@ const pages = {
                 <article class="service-card" id="marketing">
                     <h3 data-i18n="svc.mktTitle">Campañas de marketing digital</h3>
                     <p data-i18n="svc.mktDesc">Google Ads, Meta Ads, píxeles/tracking y landings alineadas para captar leads y ventas con presupuesto controlado.</p>
-                    <a href="/?service=marketing#contact" class="project-link"><span data-i18n="svc.mktCta">Cotizar campañas</span></a>
+                    <a href="/#contact" data-service="marketing" class="project-link"><span data-i18n="svc.mktCta">Cotizar campañas</span></a>
                 </article>
                 <article class="service-card">
                     <h3 data-i18n="svc.careCardTitle">Planes Care (suscripción mensual)</h3>
@@ -179,7 +179,7 @@ const pages = {
                         <li data-i18n="svc.careLi4">Soporte prioritario por WhatsApp/email</li>
                         <li data-i18n="svc.careLi5">Informe breve de estado mensual</li>
                     </ul>
-                    <a href="/?service=care#contact" class="project-link"><span data-i18n="svc.careCta">Activar Plan Care</span></a>
+                    <a href="/#contact" data-service="care" class="project-link"><span data-i18n="svc.careCta">Activar Plan Care</span></a>
                 </article>
                 <article class="service-card" id="care-growth">
                     <h3 data-i18n="svc.careGrowthTitle">Plan Care + Growth</h3>
@@ -191,7 +191,7 @@ const pages = {
                         <li data-i18n="svc.careGrowthLi3">Iteración de landings, tracking y medición</li>
                         <li data-i18n="svc.careGrowthLi4">Prioridad en mejoras que impactan leads/ventas</li>
                     </ul>
-                    <a href="/?service=care-growth#contact" class="project-link"><span data-i18n="svc.careGrowthCta">Activar Care + Growth</span></a>
+                    <a href="/#contact" data-service="care-growth" class="project-link"><span data-i18n="svc.careGrowthCta">Activar Care + Growth</span></a>
                 </article>
             </div>
         </section>
@@ -394,13 +394,13 @@ const pages = {
                     <h3 data-i18n="price.careTitle">Plan Care</h3>
                     <p class="price-range" data-i18n="mkt.priceCare">desde ~USD 200 – 350 / mes</p>
                     <p data-i18n="price.careDesc">Webmaster &amp; mantenimiento: updates, seguridad, backups, cambios de contenido, monitoreo y soporte.</p>
-                    <a href="/?service=care#contact" class="project-link"><span data-i18n="price.careCta">Activar mantenimiento</span></a>
+                    <a href="/#contact" data-service="care" class="project-link"><span data-i18n="price.careCta">Activar mantenimiento</span></a>
                 </article>
                 <article class="service-card" id="care-growth">
                     <h3 data-i18n="price.careGrowthTitle">Plan Care + Growth</h3>
                     <p class="price-range" data-i18n="mkt.priceCareGrowth">desde ~USD 450 – 800 / mes</p>
                     <p data-i18n="price.careGrowthDesc">Todo Care + SEO/GEO continuo o gestión de campañas (Ads). Para seguir captando clientes después de lanzar.</p>
-                    <a href="/?service=care-growth#contact" class="project-link"><span data-i18n="price.careGrowthCta">Activar Care + Growth</span></a>
+                    <a href="/#contact" data-service="care-growth" class="project-link"><span data-i18n="price.careGrowthCta">Activar Care + Growth</span></a>
                 </article>
             </div>
             <div class="content-block" style="margin-top: var(--spacing-xl);">
@@ -487,7 +487,7 @@ const nestedPages = {
         <h1>GEO: Optimización para Inteligencia Artificial | IrigoyenDev</h1>
         <p class="project-lead geo-summary service-value-prop">GEO (Generative Engine Optimization) hace que ChatGPT, Gemini y Perplexity citen y recomienden tu marca cuando alguien pregunta por tu categoría. En IrigoyenDev combinamos Schema markup, contenido citable y señales multi-canal — desde USD 199.</p>
         <div class="project-header__actions">
-            <a href="/?service=geo#contact" class="btn-cta-primary">Cotizar GEO →</a>
+            <a href="/#contact" data-service="seo-geo" class="btn-cta-primary">Cotizar GEO →</a>
             <a href="${WA}" class="project-cta-inline" target="_blank" rel="noopener noreferrer" data-i18n="mkt.ctaWhatsApp">WhatsApp directo →</a>
         </div>
     </header>

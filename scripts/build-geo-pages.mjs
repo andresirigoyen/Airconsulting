@@ -703,7 +703,7 @@ function renderMain(entry, all) {
         <p class="project-lead geo-summary service-value-prop">${escapeHtml(lead)}</p>
         ${seoClose}
         <div class="project-header__actions">
-            <a href="/?service=fullstack#contact" class="btn-cta-primary" data-i18n="geo.ui.ctaQuote">Cotizar proyecto →</a>
+            <a href="/#contact" data-service="fullstack" class="btn-cta-primary" data-i18n="geo.ui.ctaQuote">Cotizar proyecto →</a>
             <a href="${wa}" class="project-cta-inline" target="_blank" rel="noopener noreferrer" data-i18n="geo.ui.waDefault">${escapeHtml(ui.waDefault)}</a>
         </div>
     </header>
@@ -942,7 +942,7 @@ function main() {
         generatedAt: new Date().toISOString(),
         paths: nextPaths,
         keywordAliases: aliasMap,
-        note: 'Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build. Keyword aliases rewrite in vercel.json to silo paths (canonical stays /santiago/...).',
+        note: 'Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build. Keyword aliases 301-redirect in vercel.json to silo paths (canonical stays /santiago/...).',
       },
       null,
       2
@@ -950,7 +950,7 @@ function main() {
   );
 
   const aliasCount = syncVercelKeywordRewrites(entries);
-  console.log(`Synced ${aliasCount} keyword alias rewrites → vercel.json`);
+  console.log(`Synced ${aliasCount} keyword alias 301 redirects → vercel.json`);
 
   // —— Atomic sitemap (only after successful geo HTML write) ——
   const sitemapCount = writeSitemap();

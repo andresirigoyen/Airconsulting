@@ -403,7 +403,7 @@ function renderComunaMain(city, comuna, allComunas) {
         <h1>${escapeHtml(content.h1)}</h1>
         <p class="project-lead">${escapeHtml(content.lead)}</p>
         <div class="project-header__actions">
-            <a href="/?service=fullstack#contact" class="btn-cta-primary">${escapeHtml(content.ctaPrimary)}</a>
+            <a href="/#contact" data-service="fullstack" class="btn-cta-primary">${escapeHtml(content.ctaPrimary)}</a>
             <a href="${wa}" class="project-cta-inline" target="_blank" rel="noopener noreferrer">${escapeHtml(content.ctaWhatsApp)}</a>
         </div>
     </header>

@@ -134,17 +134,24 @@ function main() {
     'index.html must define @id #business (parentOrganization target)'
   );
 
-  // Keyword aliases (rewrites → silo). Must NOT appear as duplicate sitemap locs.
+  // Keyword aliases (301 redirects → silo). Must NOT appear as duplicate sitemap locs.
   assert(fs.existsSync(vercelPath), 'vercel.json missing');
   const vercel = JSON.parse(fs.readFileSync(vercelPath, 'utf8'));
+  const redirects = Array.isArray(vercel.redirects) ? vercel.redirects : [];
+  const redirectBySource = new Map(redirects.map((r) => [r.source, r]));
   const rewrites = Array.isArray(vercel.rewrites) ? vercel.rewrites : [];
-  const rewriteBySource = new Map(rewrites.map((r) => [r.source, r.destination]));
+  const rewriteSources = new Set(rewrites.map((r) => r.source));
   const expectedAliases = buildKeywordRewrites(config.entries);
   assert(expectedAliases.length > 0, 'Expected CL keyword aliases for Santiago comunas');
   for (const r of expectedAliases) {
+    const rule = redirectBySource.get(r.source);
     assert(
-      rewriteBySource.get(r.source) === r.destination,
-      `vercel rewrite missing or wrong: ${r.source} → ${r.destination}`
+      rule && rule.destination === r.destination && rule.permanent === true,
+      `vercel 301 redirect missing or wrong: ${r.source} → ${r.destination}`
+    );
+    assert(
+      !rewriteSources.has(r.source),
+      `keyword alias ${r.source} must be a redirect, not a rewrite`
     );
     // Aliases are not canonical — must not be listed as <loc>
     assert(
@@ -182,7 +189,7 @@ function main() {
   console.log(`geo-config entries: ${config.entries.length}`);
   console.log(`paths: ${listGeoPaths().length}`);
   console.log(`Sitemap URLs: ${locs.length}`);
-  console.log(`Keyword alias rewrites: ${expectedAliases.length}`);
+  console.log(`Keyword alias 301 redirects: ${expectedAliases.length}`);
 
   if (warnings.length) {
     console.log('\nWarnings:');
@@ -205,7 +212,7 @@ function printChecklist() {
   [ ] npm run build:geo  (validates + HTML + prune orphans + atomic sitemap + keyword aliases)
   [ ] npm run audit:geo
   [ ] Unknown URL e.g. /santiago/fake → 404.html (no blank page)
-  [ ] Keyword aliases e.g. /desarrollo-web-en-las-condes and /agencia-web-en-las-condes rewrite to /santiago/las-condes (canonical stays silo)
+  [ ] Keyword aliases e.g. /desarrollo-web-en-las-condes 301 → /santiago/las-condes (canonical stays silo)
   [ ] Canonical absolute; LocalBusiness + addressCountry match countryCode
   [ ] Norway: add hub norge + city entries (countryCode NO) then build:geo
   [ ] Search Console → resubmit sitemap

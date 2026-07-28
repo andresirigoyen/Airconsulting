@@ -12,7 +12,8 @@
  *   href="/landing-pages"
  *   cta="Cotizar este servicio"
  *   cta-key="services.ctaQuote"
- *   cta-href="/?service=landing#contact"
+ *   cta-href="/#contact"
+ *   cta-service="landing"
  * ></pricing-card>
  */
 class PricingCard extends HTMLElement {
@@ -22,7 +23,7 @@ class PricingCard extends HTMLElement {
       'price', 'price-key',
       'desc', 'desc-key',
       'href',
-      'cta', 'cta-key', 'cta-href',
+      'cta', 'cta-key', 'cta-href', 'cta-service',
     ];
   }
 
@@ -47,6 +48,7 @@ class PricingCard extends HTMLElement {
     const cta = this.getAttribute('cta') || '';
     const ctaKey = this.getAttribute('cta-key') || '';
     const ctaHref = this.getAttribute('cta-href') || '';
+    const ctaService = this.getAttribute('cta-service') || '';
 
     this.classList.add('pricing-card');
 
@@ -61,7 +63,8 @@ class PricingCard extends HTMLElement {
     let ctaHtml = '';
     if (ctaHref && (cta || ctaKey)) {
       const ctaAttrs = ctaKey ? ` data-i18n="${escapeAttr(ctaKey)}"` : '';
-      ctaHtml = `<a href="${escapeAttr(ctaHref)}" class="project-link"><span${ctaAttrs}>${escapeHtml(cta)}</span></a>`;
+      const serviceAttr = ctaService ? ` data-service="${escapeAttr(ctaService)}"` : '';
+      ctaHtml = `<a href="${escapeAttr(ctaHref)}" class="project-link"${serviceAttr}><span${ctaAttrs}>${escapeHtml(cta)}</span></a>`;
     }
 
     this.innerHTML = `

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T07:31:21.486Z",
+  "generatedAt": "2026-07-28T01:03:16.246Z",
   "paths": [
     "chile",
     "diseno-desarrollo-web-valparaiso",
@@ -328,5 +328,5 @@
       "desarrollo-web-padre-hurtado"
     ]
   },
-  "note": "Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build. Keyword aliases rewrite in vercel.json to silo paths (canonical stays /santiago/...)."
+  "note": "Unknown paths are NOT generated → Vercel serves /404. Orphans pruned on build. Keyword aliases 301-redirect in vercel.json to silo paths (canonical stays /santiago/...)."
 }

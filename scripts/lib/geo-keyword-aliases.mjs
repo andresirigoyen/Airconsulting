@@ -3,6 +3,9 @@
  * - /desarrollo-web-en-{slug}, /agencia-web-en-{slug} → /santiago/{slug}
  * - /desarrollo-web-{slug} (short, competitor-style) → /santiago/{slug}
  * - Hub extras + regional short aliases
+ *
+ * Synced into vercel.json as permanent (301) redirects so GSC reports
+ * "Page with redirect" instead of soft-rewrite + alternate canonical.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -20,7 +23,7 @@ export const EXTRA_HUB_ALIASES = [
   'agencia-web-santiago',
 ];
 
-/** Static rewrites not derived from geo comunas (real HTML elsewhere). */
+/** Static redirects not derived from geo comunas (real HTML elsewhere). */
 export const STATIC_REWRITES = [
   { source: '/desarrollo-web-valparaiso', destination: '/diseno-desarrollo-web-valparaiso' },
 ];
@@ -62,6 +65,7 @@ export function keywordAliasPathsFor(entry) {
 
 /**
  * @param {import('./geo-config.mjs').GeoEntry[]} entries
+ * @returns {{ source: string, destination: string }[]}
  */
 export function buildKeywordRewrites(entries) {
   /** @type {{ source: string, destination: string }[]} */
@@ -96,22 +100,36 @@ function isManagedAliasSource(src) {
 }
 
 /**
+ * Sync keyword aliases into vercel.json as permanent redirects.
+ * Also strips any leftover managed alias entries from rewrites.
  * @param {import('./geo-config.mjs').GeoEntry[]} entries
  */
 export function syncVercelKeywordRewrites(entries) {
   const raw = JSON.parse(fs.readFileSync(VERCEL_PATH, 'utf8'));
-  const keyword = buildKeywordRewrites(entries);
+  const keyword = buildKeywordRewrites(entries).map((r) => ({
+    source: r.source,
+    destination: r.destination,
+    permanent: true,
+  }));
   const keywordSources = new Set(keyword.map((r) => r.source));
 
-  const existing = Array.isArray(raw.rewrites) ? raw.rewrites : [];
-  const kept = existing.filter((r) => {
+  const existingRewrites = Array.isArray(raw.rewrites) ? raw.rewrites : [];
+  raw.rewrites = existingRewrites.filter((r) => {
     const src = String(r.source || '');
     if (isManagedAliasSource(src)) return false;
     if (keywordSources.has(src)) return false;
     return true;
   });
 
-  raw.rewrites = [...kept, ...keyword];
+  const existingRedirects = Array.isArray(raw.redirects) ? raw.redirects : [];
+  const keptRedirects = existingRedirects.filter((r) => {
+    const src = String(r.source || '');
+    if (isManagedAliasSource(src)) return false;
+    if (keywordSources.has(src)) return false;
+    return true;
+  });
+
+  raw.redirects = [...keptRedirects, ...keyword];
   fs.writeFileSync(VERCEL_PATH, JSON.stringify(raw, null, 2) + '\n');
   return keyword.length;
 }

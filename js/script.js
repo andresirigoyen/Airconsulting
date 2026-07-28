@@ -943,9 +943,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* Service CTA pref: store on data-service click so href stays /#contact (no ?service= for crawlers) */
+(function initServicePrefLinks() {
+  const PREF_KEY = 'irigoyen_pref_service';
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[data-service]');
+    if (!a) return;
+    const raw = a.getAttribute('data-service');
+    if (!raw) return;
+    try {
+      sessionStorage.setItem(PREF_KEY, String(raw).trim().toLowerCase());
+    } catch (_) {}
+  });
+})();
+
 /* Soft lead assist: service picker after engagement (not on first paint) */
 (function initLeadAssist() {
   const STORAGE_KEY = 'irigoyen_lead_assist_dismissed';
+  const PREF_KEY = 'irigoyen_pref_service';
   const SERVICE_ALIASES = {
     fullstack: 'fullstack',
     'full-stack': 'fullstack',
@@ -1026,13 +1041,22 @@ document.addEventListener('DOMContentLoaded', () => {
     return true;
   }
 
-  function syncServiceUrl(service) {
+  function rememberService(service) {
     const normalized = normalizeService(service);
-    if (!normalized || !window.history?.replaceState) return;
+    if (!normalized) return;
+    try {
+      sessionStorage.setItem(PREF_KEY, normalized);
+    } catch (_) {}
+  }
+
+  /** Keep URL clean: drop ?service=; hash #contact only. Preference lives in sessionStorage. */
+  function syncServiceUrl(service) {
+    if (service) rememberService(service);
+    if (!window.history?.replaceState) return;
     try {
       const url = new URL(window.location.href);
-      url.searchParams.set('service', normalized);
-      if (!url.hash) url.hash = 'contact';
+      url.searchParams.delete('service');
+      if (!url.hash || url.hash === '#') url.hash = 'contact';
       window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
     } catch (_) {}
   }
@@ -1047,8 +1071,8 @@ document.addEventListener('DOMContentLoaded', () => {
       contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => serviceSelect.focus(), 400);
     } else {
-      const q = service ? `?service=${encodeURIComponent(normalizeService(service))}` : '';
-      window.location.href = `/${q}#contact`;
+      if (service) rememberService(service);
+      window.location.href = '/#contact';
     }
   }
 
@@ -1095,23 +1119,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Prefill from URL ?service=seo-geo (aliases supported)
+  // Prefill: sessionStorage (from data-service CTAs) or legacy ?service= (then strip query)
   try {
     const params = new URLSearchParams(window.location.search);
     const fromQuery = params.get('service');
-    if (fromQuery && setService(fromQuery)) {
+    let fromStorage = '';
+    try {
+      fromStorage = sessionStorage.getItem(PREF_KEY) || '';
+      if (fromStorage) sessionStorage.removeItem(PREF_KEY);
+    } catch (_) {}
+    const intent = fromQuery || fromStorage;
+    if (intent && setService(intent)) {
       intentFromQuery = true;
       markDismissed();
-      syncServiceUrl(fromQuery);
-      // Wait a tick so layout/fonts settle, then scroll to contact
-      setTimeout(() => goToContact(fromQuery), 150);
+      syncServiceUrl(intent);
+      setTimeout(() => goToContact(intent), 150);
+    } else if (fromQuery && window.history?.replaceState) {
+      // Unknown/legacy query — still strip for a clean URL
+      const url = new URL(window.location.href);
+      url.searchParams.delete('service');
+      window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
     }
   } catch (_) {}
+
+  // Same-page CTAs: <a href="/#contact" data-service="landing">
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[data-service]');
+    if (!a || !document.getElementById('contact')) return;
+    const href = a.getAttribute('href') || '';
+    if (!href.includes('#contact')) return;
+    e.preventDefault();
+    closeAssist(true);
+    goToContact(a.getAttribute('data-service'));
+  });
 
   if (choices) {
     choices.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-service]');
-      if (!btn) return;
+      if (!btn || btn.tagName === 'A') return;
       closeAssist(true);
       goToContact(btn.getAttribute('data-service'));
     });
