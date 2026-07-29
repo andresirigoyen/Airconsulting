@@ -33,7 +33,7 @@ export function organizationLd() {
       '@type': 'ContactPoint',
       telephone: ENTITY.telephone,
       contactType: 'sales',
-      areaServed: ['CL', 'ES', 'DK', 'NO'],
+      areaServed: ['CL', 'DK', 'NO'],
       availableLanguage: ['Spanish', 'English', 'Danish'],
       url: `${SITE}${ENTITY.contactPath}`,
     },

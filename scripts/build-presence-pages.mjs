@@ -14,6 +14,7 @@ import {
   renderPage,
   waLink,
 } from './lib/page-chrome.mjs';
+import { withCtrTitle, withCtrDescription } from './lib/serp-ctr.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -32,9 +33,9 @@ const PAGES = [
     countryCode: 'CL',
     lat: -38.7359,
     lng: -72.5904,
-    title: 'Desarrollo web en Temuco | IrigoyenDev',
+    title: 'Desarrollo web Temuco | Landings desde USD 600 — IrigoyenDev',
     description:
-      'Desarrollo web en Temuco: tiendas online, landings y plataformas para pymes de la Araucanía. Atención remota con IrigoyenDev.',
+      'Desarrollo web en Temuco y la Araucanía: tiendas desde USD 1.304, landings desde USD 600 y SEO local para pymes. Atención remota con IrigoyenDev.',
     h1: 'Desarrollo web profesional en Temuco',
     lead: 'Construimos canales digitales para negocios en Temuco y la Araucanía: e-commerce, landings de conversión y SEO técnico — con entrega remota y plazos claros.',
     body: 'Trabajamos remoto con pymes y equipos de Temuco que necesitan una web que genere consultas o ventas, no solo presencia. Stack moderno, medición de conversiones y copy alineado al mercado local.',
@@ -65,6 +66,7 @@ const PAGES = [
     region: 'Comunidad de Madrid',
     country: 'España',
     countryCode: 'ES',
+    noindex: true,
     lat: 40.4168,
     lng: -3.7038,
     title: 'Desarrollador web Madrid | Crear tienda online España | IrigoyenDev',
@@ -104,6 +106,7 @@ const PAGES = [
     region: 'Cataluña',
     country: 'España',
     countryCode: 'ES',
+    noindex: true,
     lat: 41.3874,
     lng: 2.1686,
     title: 'Desarrollo web Barcelona | Tienda online y landings | IrigoyenDev',
@@ -139,6 +142,7 @@ const PAGES = [
     region: 'Comunidad Valenciana',
     country: 'España',
     countryCode: 'ES',
+    noindex: true,
     lat: 39.4699,
     lng: -0.3763,
     title: 'Desarrollo web Valencia | E-commerce y landings | IrigoyenDev',
@@ -393,8 +397,8 @@ function buildHtml(p) {
       : '';
 
   const headHtml = buildHead({
-    title: p.title,
-    description: p.description,
+    title: p.noindex ? p.title : withCtrTitle(p.title),
+    description: p.noindex ? p.description : withCtrDescription(p.description),
     canonicalPath: p.path,
     ogTitle: p.title,
     ogDescription: p.description,
@@ -403,6 +407,9 @@ function buildHtml(p) {
     geoRegion: p.countryCode,
     geoPlacename: `${p.city}, ${p.region}`,
     icbm: `${p.lat}, ${p.lng}`,
+    robots: p.noindex
+      ? 'noindex, follow'
+      : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     jsonLd,
   });
 
@@ -441,7 +448,6 @@ function buildHtml(p) {
 
   const footerMarketLinks = [
     { href: '/chile', label: 'Chile' },
-    { href: '/es', label: 'España' },
     { href: '/da', label: 'Danmark' },
     { href: '/en', label: 'English' },
   ].filter((l, i, arr) => arr.findIndex((x) => x.href === l.href) === i);
@@ -472,6 +478,7 @@ fs.writeFileSync(
         file: p.file,
         city: p.city,
         countryCode: p.countryCode,
+        indexable: !p.noindex,
       })),
     },
     null,

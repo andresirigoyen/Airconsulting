@@ -332,6 +332,11 @@
       "permanent": true
     },
     {
+      "source": "/agencia-web-en-vina-del-mar",
+      "destination": "/diseno-desarrollo-web-valparaiso",
+      "permanent": true
+    },
+    {
       "source": "/agencia-web-en-vitacura",
       "destination": "/santiago/vitacura",
       "permanent": true
@@ -652,6 +657,11 @@
       "permanent": true
     },
     {
+      "source": "/desarrollo-web-en-vina-del-mar",
+      "destination": "/diseno-desarrollo-web-valparaiso",
+      "permanent": true
+    },
+    {
       "source": "/desarrollo-web-en-vitacura",
       "destination": "/santiago/vitacura",
       "permanent": true
@@ -868,6 +878,16 @@
     },
     {
       "source": "/desarrollo-web-valparaiso",
+      "destination": "/diseno-desarrollo-web-valparaiso",
+      "permanent": true
+    },
+    {
+      "source": "/desarrollo-web-vina",
+      "destination": "/diseno-desarrollo-web-valparaiso",
+      "permanent": true
+    },
+    {
+      "source": "/desarrollo-web-vina-del-mar",
       "destination": "/diseno-desarrollo-web-valparaiso",
       "permanent": true
     },

@@ -14,6 +14,7 @@ import {
   renderPage,
   waLink,
 } from './lib/page-chrome.mjs';
+import { withCtrTitle, withCtrDescription } from './lib/serp-ctr.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -74,8 +75,8 @@ function writeComunasIndex() {
   };
 
   const headHtml = buildHead({
-    title,
-    description,
+    title: withCtrTitle(title),
+    description: withCtrDescription(description),
     canonicalPath: '/santiago/comunas',
     ogTitle: title,
     ogDescription: description,
@@ -169,8 +170,8 @@ function writeLocaleHub(hub) {
   };
 
   const headHtml = buildHead({
-    title: hub.title,
-    description: hub.description,
+    title: hub.noindex ? hub.title : withCtrTitle(hub.title),
+    description: hub.noindex ? hub.description : withCtrDescription(hub.description),
     canonicalPath: hub.path,
     ogTitle: hub.title,
     ogDescription: hub.description,
@@ -180,6 +181,9 @@ function writeLocaleHub(hub) {
     geoRegion: hub.geoRegion,
     geoPlacename: hub.geoPlacename,
     icbm: hub.icbm,
+    robots: hub.noindex
+      ? 'noindex, follow'
+      : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     jsonLd: [breadcrumbLd, collectionLd],
   });
 
@@ -220,7 +224,7 @@ function writeLocaleHub(hub) {
         <h1>${escapeHtml(hub.h1)}</h1>
         <p class="project-lead">${escapeHtml(hub.lead)}</p>
         <div class="project-header__actions">
-            <a href="/#contact" class="btn-cta-primary">${escapeHtml(hub.cta)}</a>
+            <a href="${escapeAttr(hub.ctaHref || '/#contact')}" class="btn-cta-primary">${escapeHtml(hub.cta)}</a>
             <a href="${waLink(hub.waMessage)}" class="project-cta-inline" target="_blank" rel="noopener noreferrer">WhatsApp →</a>
         </div>
     </header>
@@ -270,33 +274,35 @@ const LOCALE_HUBS = [
     geoRegion: 'ES',
     geoPlacename: 'España',
     icbm: '40.4168, -3.7038',
-    title: 'Desarrollo web España | Madrid, Barcelona y Valencia — IrigoyenDev',
+    noindex: true,
+    title: 'Desarrollo web España (archivo) | IrigoyenDev',
     description:
-      'Hub en español para clientes en España: desarrollo web, tienda online y landing pages en Madrid, Barcelona y Valencia. IrigoyenDev — remoto con base en Dinamarca.',
+      'Mercado secundario IrigoyenDev. El foco comercial e indexable es Chile: Santiago, regiones y comunas. Cotiza en /precios o escribe desde /#contact.',
     homeLabel: 'Inicio',
     crumbLabel: 'España',
     breadcrumbLabel: 'Miga de pan',
-    eyebrow: 'Mercado · España',
-    h1: 'Desarrollo web para empresas en España',
-    lead: 'Páginas locales indexables para Madrid, Barcelona y Valencia: e-commerce, landings de conversión y plataformas full stack, con atención en español.',
-    cta: 'Pedir plan de proyecto →',
-    waMessage: '¡Hola! Me interesa un proyecto web en España.',
-    citiesTitle: 'Ciudades en España',
+    eyebrow: 'Archivo · España',
+    h1: 'España (mercado secundario)',
+    lead: 'Estas páginas ya no se indexan. Si buscas desarrollo web con foco local, ve al hub de Chile o a Santiago y comunas.',
+    cta: 'Ir a desarrollo web Chile →',
+    ctaHref: '/chile',
+    waMessage: '¡Hola! Me interesa un proyecto web (mercado Chile / remoto).',
+    citiesTitle: 'Enlaces útiles (Chile)',
     cities: [
       {
-        href: '/desarrollo-web-madrid',
-        name: 'Madrid',
-        blurb: 'tiendas online, landings y SEO para el mercado ibérico',
+        href: '/chile',
+        name: 'Chile',
+        blurb: 'hub regional: Santiago, Valparaíso, Concepción, Antofagasta',
       },
       {
-        href: '/desarrollo-web-barcelona',
-        name: 'Barcelona',
-        blurb: 'producto digital y e-commerce para marcas catalanas',
+        href: '/santiago',
+        name: 'Santiago',
+        blurb: '52 comunas de la RM con landings locales',
       },
       {
-        href: '/desarrollo-web-valencia',
-        name: 'Valencia',
-        blurb: 'webs y landings para pymes del levante',
+        href: '/precios',
+        name: 'Precios',
+        blurb: 'landings desde USD 600 · tiendas desde USD 1.304',
       },
     ],
     servicesTitle: 'Servicios',
@@ -326,13 +332,13 @@ const LOCALE_HUBS = [
         cta: 'Ver precios →',
       },
     ],
-    moreTitle: 'También operamos en',
+    moreTitle: 'Mercado primario',
     moreHtml:
       '<a href="/chile">Chile</a> · <a href="/santiago">Santiago y comunas</a> · <a href="/da">Dinamarca</a> · <a href="/en">English hub</a>',
     skipLink: 'Saltar al contenido',
-    footerGeo: 'España · Dinamarca · Chile',
+    footerGeo: 'Chile · Dinamarca · Remoto',
     footerLinks: [
-      { href: '/es', label: 'España' },
+      { href: '/chile', label: 'Chile' },
       { href: '/en', label: 'English' },
       { href: '/da', label: 'Danmark' },
     ],
@@ -347,19 +353,29 @@ const LOCALE_HUBS = [
     geoRegion: 'EU',
     geoPlacename: 'Copenhagen, Denmark',
     icbm: '55.6761, 12.5683',
-    title: 'Web developer Chile, Spain & Denmark | IrigoyenDev',
+    title: 'Web developer Chile & Denmark | IrigoyenDev',
     description:
-      'English hub for IrigoyenDev: full-stack web development, e-commerce and conversion landings for clients in Chile, Spain and Denmark — remote delivery.',
+      'English hub for IrigoyenDev: full-stack web development, e-commerce and conversion landings for Chile (Santiago + regions) and Denmark — remote delivery.',
     homeLabel: 'Home',
     crumbLabel: 'English',
     breadcrumbLabel: 'Breadcrumb',
-    eyebrow: 'Market · International',
-    h1: 'Full-stack web development for Chile, Spain and Denmark',
-    lead: 'Crawlable English entry point to our local city pages, services and case studies. Same stack, clear timelines, remote delivery.',
+    eyebrow: 'Market · Chile primary',
+    h1: 'Full-stack web development for Chile and Denmark',
+    lead: 'Crawlable English entry point to our Chilean city pages, services and case studies. Same stack, clear timelines, remote delivery.',
     cta: 'Request a project plan →',
     waMessage: 'Hi! I am interested in a web project with IrigoyenDev.',
     citiesTitle: 'Where we work',
     cities: [
+      {
+        href: '/chile',
+        name: 'Chile',
+        blurb: 'primary market — Santiago, Valparaíso, Concepción, Antofagasta',
+      },
+      {
+        href: '/santiago',
+        name: 'Santiago',
+        blurb: 'Chile hub with 52 commune pages',
+      },
       {
         href: '/web-developer-copenhagen',
         name: 'Copenhagen',
@@ -369,16 +385,6 @@ const LOCALE_HUBS = [
         href: '/web-developer-aarhus',
         name: 'Aarhus',
         blurb: 'web developer for Jutland businesses',
-      },
-      {
-        href: '/desarrollo-web-madrid',
-        name: 'Madrid',
-        blurb: 'Spain — stores, landings and full-stack products',
-      },
-      {
-        href: '/santiago',
-        name: 'Santiago',
-        blurb: 'Chile hub with 52 commune pages',
       },
     ],
     servicesTitle: 'Services',
@@ -410,12 +416,12 @@ const LOCALE_HUBS = [
     ],
     moreTitle: 'Language / market hubs',
     moreHtml:
-      '<a href="/es">España (ES)</a> · <a href="/da">Danmark (DA)</a> · <a href="/chile">Chile regions</a> · <a href="/santiago/comunas">Santiago communes</a>',
+      '<a href="/chile">Chile regions</a> · <a href="/da">Danmark (DA)</a> · <a href="/santiago/comunas">Santiago communes</a>',
     skipLink: 'Skip to content',
-    footerGeo: 'Denmark · Chile · Spain · Remote',
+    footerGeo: 'Chile · Denmark · Remote',
     footerLinks: [
       { href: '/en', label: 'English' },
-      { href: '/es', label: 'España' },
+      { href: '/chile', label: 'Chile' },
       { href: '/da', label: 'Danmark' },
     ],
   },
@@ -482,13 +488,13 @@ const LOCALE_HUBS = [
     ],
     moreTitle: 'Også til stede i',
     moreHtml:
-      '<a href="/es">España</a> · <a href="/en">English</a> · <a href="/chile">Chile</a> · <a href="/santiago">Santiago</a>',
+      '<a href="/en">English</a> · <a href="/chile">Chile</a> · <a href="/santiago">Santiago</a>',
     skipLink: 'Spring til indhold',
-    footerGeo: 'Danmark · Chile · Spanien',
+    footerGeo: 'Danmark · Chile · Remote',
     footerLinks: [
       { href: '/da', label: 'Danmark' },
       { href: '/en', label: 'English' },
-      { href: '/es', label: 'España' },
+      { href: '/chile', label: 'Chile' },
     ],
   },
 ];

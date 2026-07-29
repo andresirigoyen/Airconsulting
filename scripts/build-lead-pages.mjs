@@ -83,11 +83,11 @@ ${GTM_NOSCRIPT}
 ${mainHtml}
 
 ${buildFooter({
-  areas: 'Dinamarca · Chile · España · Remoto',
+  areas: 'Chile · Dinamarca · Remoto',
   marketLinks: [
     { href: '/chile', label: 'Chile' },
-    { href: '/es', label: 'España' },
     { href: '/da', label: 'Danmark' },
+    { href: '/en', label: 'English' },
   ],
 })}
 
@@ -103,7 +103,7 @@ ${buildFooter({
 
 const pages = {
   'servicios.html': {
-    title: 'Desarrollo web a medida, tiendas online y landings | IrigoyenDev',
+    title: 'Desarrollo web Chile | Tiendas, landings y plataformas — IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/" class="back-link">
@@ -112,7 +112,7 @@ const pages = {
         </a>
         <p class="project-eyebrow" data-i18n="svc.eyebrow">Servicios · IrigoyenDev</p>
         <h1 data-i18n="svc.h1">Desarrollo web a medida: tiendas online, landings y plataformas</h1>
-        <p class="project-lead geo-summary service-value-prop" data-i18n="svc.lead">Desarrollo de tiendas online, landing page de conversión, plataforma inmobiliaria digital y SEO técnico para e-commerce. Chile, España, Dinamarca y remoto.</p>
+        <p class="project-lead geo-summary service-value-prop" data-i18n="svc.lead">Desarrollo de tiendas online, landing pages de conversión, plataformas y SEO técnico para empresas en Chile — Santiago, regiones y remoto.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="svc.ctaPlan">Pedir plan de proyecto →</a>
             <a href="${WA}" class="project-cta-inline" target="_blank" rel="noopener noreferrer" data-i18n="mkt.ctaWhatsApp">WhatsApp directo →</a>
@@ -278,7 +278,7 @@ const pages = {
                     <li data-i18n="shop.li5">Despliegue en producción y handoff documentado</li>
                 </ul>
                 <h2 data-i18n="shop.idealTitle">Ideal si buscas</h2>
-                <p data-i18n="shop.idealDesc">Crear tienda online desde cero, migrar de Instagram/WhatsApp a un canal propio, o digitalizar un catálogo B2B. Trabajamos con clientes en Chile, España, Dinamarca y de forma remota.</p>
+                <p data-i18n="shop.idealDesc">Crear tienda online desde cero, migrar de Instagram/WhatsApp a un canal propio, o digitalizar un catálogo B2B. Foco en clientes en Chile y proyectos remotos.</p>
                 <h2 data-i18n="shop.casesTitle">Casos relacionados</h2>
                 <ul class="project-results-list">
                     <li><a href="/projects/thebeebaby">TheBeeBaby</a> <span data-i18n="shop.case1">— marketplace con catálogo geo y pagos</span></li>
@@ -335,7 +335,7 @@ const pages = {
     </main>`,
   },
   'precios.html': {
-    title: 'Cuánto cuesta una tienda online | Precios desarrollo web Chile | IrigoyenDev',
+    title: 'Precios web Chile | Landings USD 600 · Tienda USD 1.304 — IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/servicios" class="back-link">
@@ -444,8 +444,8 @@ const pages = {
                     <p class="money-copy faq-answer" data-i18n-html="faqPage.a3Html">Sí. <strong>Plan Care</strong> (webmaster/mantenimiento) desde ~USD 200–350/mes y <strong>Care + Growth</strong> (Care + SEO o ads) desde ~USD 450–800/mes, con mínimo 3 meses. Ideal después de lanzar. Ver <a href="/precios#care">precios Care</a>.</p>
                 </details>
                 <details class="faq-item">
-                    <summary data-i18n="faqPage.q4">¿Trabajan con clientes en Chile, España o Dinamarca?</summary>
-                    <p class="faq-answer" data-i18n="faqPage.a4">Sí. Atendemos clientes en Dinamarca (WhatsApp +45), Chile, España y proyectos remotos internacionales. La comunicación puede ser en español o inglés.</p>
+                    <summary data-i18n="faqPage.q4">¿Trabajan con clientes en todo Chile?</summary>
+                    <p class="faq-answer" data-i18n="faqPage.a4">Sí. Mercado primario Chile (Santiago, regiones y remoto). Comunicación en español o inglés; WhatsApp +45 para coordinación.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="faqPage.q5">¿En cuánto tiempo entregan?</summary>
@@ -519,7 +519,7 @@ const nestedPages = {
                     </article>
                     <article class="faq-item faq-item--plain">
                         <h3>¿Sirve para empresas fuera de Santiago?</h3>
-                        <p class="faq-answer">Sí. GEO local + nacional funciona para Valparaíso, Concepción, Antofagasta y mercados en España o Dinamarca, con páginas de intención y Schema LocalBusiness.</p>
+                        <p class="faq-answer">Sí. GEO local + nacional para Valparaíso, Concepción, Antofagasta, Temuco y el resto de Chile, con páginas de intención y Schema LocalBusiness.</p>
                     </article>
                     <article class="faq-item faq-item--plain">
                         <h3>¿Qué entregables recibo?</h3>
@@ -532,7 +532,7 @@ const nestedPages = {
     </main>`,
   },
   'casos-de-exito.html': {
-    title: 'Casos de éxito | Resultados reales IrigoyenDev',
+    title: 'Casos de éxito Chile | +30% ventas y SEO local — IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/" class="back-link">

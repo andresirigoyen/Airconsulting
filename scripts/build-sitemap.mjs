@@ -44,9 +44,8 @@ const CORE = [
   { loc: '/precios', changefreq: 'monthly', priority: '0.85' },
   { loc: '/faq', changefreq: 'monthly', priority: '0.8' },
   { loc: '/santiago/comunas', changefreq: 'weekly', priority: '0.88' },
-  { loc: '/es', changefreq: 'weekly', priority: '0.9' },
-  { loc: '/en', changefreq: 'weekly', priority: '0.9' },
-  { loc: '/da', changefreq: 'weekly', priority: '0.9' },
+  { loc: '/en', changefreq: 'weekly', priority: '0.85' },
+  { loc: '/da', changefreq: 'weekly', priority: '0.85' },
 ];
 
 function today() {
@@ -128,11 +127,13 @@ function loadPresenceUrls() {
   const file = path.join(root, 'data', 'presence-pages.json');
   if (!fs.existsSync(file)) return [];
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-  return (data.pages || []).map((p) => ({
-    loc: p.path,
-    changefreq: 'monthly',
-    priority: '0.8',
-  }));
+  return (data.pages || [])
+    .filter((p) => p.indexable !== false && p.countryCode !== 'ES')
+    .map((p) => ({
+      loc: p.path,
+      changefreq: 'monthly',
+      priority: '0.8',
+    }));
 }
 
 /**

@@ -28,12 +28,12 @@ const pages = [
   {
     file: 'index.html',
     path: '/',
-    title: 'Desarrollador web freelance Chile | Full stack, tiendas y landings — IrigoyenDev',
+    title: 'Desarrollador web Chile | Tiendas desde USD 1.304 — IrigoyenDev',
     description:
-      'Desarrollador web freelance en Chile: desarrollo web full stack, crear tienda online Chile y landings de conversión. IrigoyenDev — también España, Dinamarca y remoto.',
-    ogTitle: 'Desarrollador web freelance Chile | IrigoyenDev',
+      'Desarrollador web freelance en Chile: tiendas online desde USD 1.304, landings desde USD 600 y plataformas full stack. Santiago, regiones y remoto — IrigoyenDev.',
+    ogTitle: 'Desarrollador web Chile | Tiendas y landings — IrigoyenDev',
     ogDescription:
-      'Desarrollo web full stack: e-commerce, landings y plataformas. Crea tu tienda online en Chile o cotiza tu proyecto.',
+      'E-commerce, landings y plataformas para empresas en Chile. Precios claros, plazos definidos y SEO local incluido.',
     ogImage: OG_DEFAULT,
     ogType: 'website',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
@@ -90,7 +90,7 @@ const pages = [
         image: OG_DEFAULT,
         logo: `${SITE}/favicon.svg`,
         description:
-          'Desarrollo web full stack: e-commerce, landings y plataformas. Atención remota para Chile, España, Dinamarca y clientes internacionales.',
+          'Desarrollo web full stack para Chile: e-commerce, landings y plataformas. Base en Santiago con atención remota a regiones.',
         telephone: ENTITY.telephone,
         email: ENTITY.email,
         priceRange: ENTITY.priceRange,
@@ -99,9 +99,7 @@ const pages = [
         openingHoursSpecification: openingHoursSpec(),
         areaServed: [
           { '@type': 'Country', name: 'Chile' },
-          { '@type': 'Country', name: 'Spain' },
-          { '@type': 'Country', name: 'Denmark' },
-          { '@type': 'Country', name: 'Norway' },
+          ...chileMultiregionAreaServed(),
         ],
         sameAs: [...ENTITY.sameAs],
       },
@@ -182,7 +180,7 @@ const pages = [
             name: '¿Trabajan con empresas fuera de Santiago?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Absolutamente. Tenemos presencia en Santiago y comunas de la RM, y trabajamos 100% remoto con clientes en todo Chile (Valparaíso, Concepción, Antofagasta) y también en España y Dinamarca.',
+              text: 'Sí. Cubiertos Santiago y las 52 comunas de la RM, más Valparaíso, Concepción, Antofagasta, Temuco y el resto de Chile de forma remota.',
             },
           },
           {
@@ -199,7 +197,7 @@ const pages = [
         name: 'IrigoyenDev - Estudio de Producto Digital',
         url: `${SITE}/`,
         description:
-          'Desarrollo web full stack, SEO y GEO para Chile, España y Dinamarca.',
+          'Desarrollo web full stack, SEO y GEO para empresas en Chile.',
       }),
     ],
   },
@@ -232,12 +230,12 @@ const pages = [
   leadPage({
     file: 'servicios.html',
     path: '/servicios',
-    title: 'Desarrollo web a medida, tiendas online y landings | IrigoyenDev',
+    title: 'Desarrollo web Chile | Tiendas, landings y plataformas — IrigoyenDev',
     description:
-      'Servicios: desarrollo de tiendas online, landing page de conversión, plataforma inmobiliaria digital, desarrollo web a medida y SEO técnico para e-commerce. Chile y remoto.',
-    ogTitle: 'Servicios de desarrollo web a medida | IrigoyenDev',
+      'Servicios en Chile: tiendas online desde USD 1.304, landings desde USD 600, plataformas a medida y SEO técnico. Santiago, regiones y remoto.',
+    ogTitle: 'Servicios desarrollo web Chile | IrigoyenDev',
     ogDescription:
-      'Tiendas online, landings de conversión, plataformas y SEO técnico. Cotiza tu plan de proyecto.',
+      'Tiendas, landings y plataformas con precios claros. Cotiza tu plan de proyecto en Chile.',
     serviceName: 'Desarrollo web a medida y servicios digitales',
     faq: [
       {
@@ -283,19 +281,19 @@ const pages = [
       },
       {
         q: '¿Sirve fuera de Santiago?',
-        a: 'Sí. GEO local y nacional para Chile, España y Dinamarca con páginas de intención y LocalBusiness.',
+        a: 'Sí. GEO local y nacional para Chile (Santiago, regiones y comunas) con páginas de intención y LocalBusiness.',
       },
     ],
   }),
   {
     file: 'casos-de-exito.html',
     path: '/casos-de-exito',
-    title: 'Casos de éxito | Resultados reales IrigoyenDev',
+    title: 'Casos de éxito Chile | +30% ventas y SEO local — IrigoyenDev',
     description:
-      'Casos de éxito IrigoyenDev: TheBeeBaby (+30% ventas), Dragonmart (automatización B2B) y Florería Valparaíso (SEO local). Problema, solución, métricas y stack.',
-    ogTitle: 'Casos de éxito IrigoyenDev',
+      'Casos reales en Chile y LatAm: TheBeeBaby (+30% ventas), Dragonmart (B2B) y Florería Valparaíso (SEO local). Métricas, stack y resultados medibles.',
+    ogTitle: 'Casos de éxito Chile | IrigoyenDev',
     ogDescription:
-      'Resultados reales de e-commerce, B2B e inmobiliario local con desarrollo web + SEO/GEO.',
+      'Resultados reales de e-commerce, B2B y SEO local. Mira cómo subimos ventas y leads con desarrollo web + GEO.',
     ogImage: OG_DEFAULT,
     ogType: 'website',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
@@ -409,12 +407,12 @@ const pages = [
   leadPage({
     file: 'precios.html',
     path: '/precios',
-    title: 'Cuánto cuesta una tienda online | Precios desarrollo web Chile | IrigoyenDev',
+    title: 'Precios web Chile | Landings USD 600 · Tienda USD 1.304 — IrigoyenDev',
     description:
-      'Cuánto cuesta una tienda online, precio desarrollo web Chile, presupuesto web e-commerce y tarifas de desarrollador web freelance. Rangos claros en USD.',
-    ogTitle: 'Precios y tarifas desarrollador web freelance | IrigoyenDev',
+      'Cuánto cuesta una web o tienda online en Chile: landings desde USD 600, e-commerce desde USD 1.304, SEO desde USD 199. Rangos claros, sin sorpresas.',
+    ogTitle: 'Precios desarrollo web Chile | IrigoyenDev',
     ogDescription:
-      'Presupuesto web e-commerce y precios de desarrollo web en Chile: landings desde ~USD 600, productos comerciales desde ~USD 1.304.',
+      'Landings desde USD 600, tiendas desde USD 1.304. Cotiza tu proyecto con rangos transparentes en USD.',
     serviceName: 'Precios desarrollo web y e-commerce',
   }),
   {
@@ -461,10 +459,10 @@ const pages = [
           },
           {
             '@type': 'Question',
-            name: '¿Trabajas con clientes en Chile, España o Dinamarca?',
+            name: '¿Trabajas con clientes en todo Chile?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sí. Atiende clientes en Dinamarca (WhatsApp +45), Chile, España y proyectos remotos. Comunicación en español o inglés.',
+              text: 'Sí. Mercado primario Chile (Santiago, regiones y remoto). Comunicación en español o inglés; WhatsApp +45 para coordinación.',
             },
           },
           {
@@ -612,8 +610,6 @@ function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescrip
       provider: { '@id': ORG_ID },
       areaServed: [
         { '@type': 'Country', name: 'Chile' },
-        { '@type': 'Country', name: 'España' },
-        { '@type': 'Country', name: 'Dinamarca' },
         ...chileMultiregionAreaServed(),
       ],
       hasOfferCatalog: serviceOfferCatalogLd(),
@@ -700,15 +696,10 @@ function buildHead(page) {
   const canonical = `${SITE}${page.path === '/' ? '/' : page.path}`;
   const descAttr = page.descriptionAttr || '';
   const locales = [
-    ['es_ES', true],
+    ['es_CL', true],
     ['en_US', false],
-    ['de_DE', false],
     ['da_DK', false],
-    ['nb_NO', false],
-    ['sv_SE', false],
-    ['it_IT', false],
-    ['fr_FR', false],
-    ['pt_PT', false],
+    ['es_ES', false],
   ];
 
   const localeTags = locales
@@ -732,13 +723,19 @@ function buildHead(page) {
           .join('\n')
       : '';
 
-  const isGlobalPage = ['/', '/en', '/da', '/es'].includes(page.path);
-  const hreflangTags = isGlobalPage
-    ? `\n    <link rel="alternate" hreflang="es" href="${SITE}/">` +
+  const isHome = page.path === '/';
+  const hreflangTags = isHome
+    ? `\n    <link rel="alternate" hreflang="es-CL" href="${SITE}/">` +
       `\n    <link rel="alternate" hreflang="en" href="${SITE}/en">` +
       `\n    <link rel="alternate" hreflang="da" href="${SITE}/da">` +
       `\n    <link rel="alternate" hreflang="x-default" href="${SITE}/">`
-    : '';
+    : page.path === '/precios' || page.path === '/casos-de-exito' || page.path === '/servicios' || page.path === '/faq'
+      ? `\n    <link rel="alternate" hreflang="es-CL" href="${canonical}">` +
+        `\n    <link rel="alternate" hreflang="x-default" href="${canonical}">`
+      : '';
+
+  const geoRegion = page.geoRegion || 'CL';
+  const icbm = page.icbm || '-33.4489, -70.6693';
 
   return `    <title>${page.title}</title>
     <meta name="description" content="${escapeAttr(page.description)}"${descAttr}>
@@ -752,8 +749,9 @@ function buildHead(page) {
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" type="text/plain" title="LLM content guide" href="${SITE}/llms.txt">
     <link rel="author" href="${SITE}/">
-    <meta name="geo.region" content="EU">
-    <meta name="ICBM" content="55.6761, 12.5683">
+    <meta name="geo.region" content="${escapeAttr(geoRegion)}">
+    <meta name="geo.placename" content="${escapeAttr(page.geoPlacename || 'Santiago, Chile')}">
+    <meta name="ICBM" content="${escapeAttr(icbm)}">
     <meta name="ai-content-declaration" content="human-authored">
 
     <meta property="og:type" content="${page.ogType}">

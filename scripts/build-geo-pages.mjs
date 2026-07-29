@@ -38,6 +38,7 @@ import {
   keywordAliasPathsFor,
   syncVercelKeywordRewrites,
 } from './lib/geo-keyword-aliases.mjs';
+import { withCtrTitle, withCtrDescription } from './lib/serp-ctr.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -883,8 +884,8 @@ function main() {
         : entry.countryCode;
 
     const head = buildHead({
-      title: entry.metaTitle,
-      description: entry.metaDescription,
+      title: withCtrTitle(entry.metaTitle),
+      description: withCtrDescription(entry.metaDescription),
       ogTitle: entry.content?.ogTitle || entry.metaTitle,
       ogDescription: entry.content?.ogDescription || entry.metaDescription,
       canonicalPath: `/${pub}`,

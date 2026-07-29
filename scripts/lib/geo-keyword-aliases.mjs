@@ -26,6 +26,10 @@ export const EXTRA_HUB_ALIASES = [
 /** Static redirects not derived from geo comunas (real HTML elsewhere). */
 export const STATIC_REWRITES = [
   { source: '/desarrollo-web-valparaiso', destination: '/diseno-desarrollo-web-valparaiso' },
+  { source: '/desarrollo-web-vina-del-mar', destination: '/diseno-desarrollo-web-valparaiso' },
+  { source: '/desarrollo-web-vina', destination: '/diseno-desarrollo-web-valparaiso' },
+  { source: '/desarrollo-web-en-vina-del-mar', destination: '/diseno-desarrollo-web-valparaiso' },
+  { source: '/agencia-web-en-vina-del-mar', destination: '/diseno-desarrollo-web-valparaiso' },
 ];
 
 /**
