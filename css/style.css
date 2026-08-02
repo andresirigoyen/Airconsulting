@@ -3669,6 +3669,25 @@ body.has-lead-sticky .whatsapp-widget {
   color: var(--text-secondary);
 }
 
+.presence__priority {
+  margin: -0.5rem 0 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.presence__priority a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-color: color-mix(in srgb, var(--accent-color) 45%, transparent);
+}
+
+.presence__priority a:hover,
+.presence__priority a:focus-visible {
+  color: var(--accent-color);
+}
+
 .presence__cta {
   display: inline-flex;
   margin-bottom: 1rem;

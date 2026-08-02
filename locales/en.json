@@ -847,6 +847,7 @@
   "markets.cl.santiagoCta": "See Santiago hub and communes",
   "markets.cl.chileCta": "Web development by region in Chile",
   "markets.cl.comunasCta": "See all Santiago communes",
+  "markets.cl.priorityLinks": "Highlights: <a href=\"/santiago/las-condes\">Las Condes</a> · <a href=\"/santiago/providencia\">Providencia</a> · <a href=\"/projects/floreria\">Florería case (Valparaíso)</a>",
   "proj.ava7.title": "AVA7 Propiedades",
   "proj.ava7.desc": "Real estate website for sale and rent in Viña del Mar and Concón: multi-filter search, coastal local branding, and direct WhatsApp and contact lead capture.",
   "proj.ava7.liveBtn": "Visit ava7propiedades.cl →",
