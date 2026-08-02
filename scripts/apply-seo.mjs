@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chileMultiregionAreaServed } from './lib/chile-geo.mjs';
 import { GTM_HEAD, GTM_NOSCRIPT, stripGtm } from './lib/page-chrome.mjs';
-import { ENTITY } from './lib/entity-nap.mjs';
+import { ENTITY, entityPostalAddress } from './lib/entity-nap.mjs';
 import {
   ORG_ID,
   BUSINESS_ID,
@@ -94,6 +94,12 @@ const pages = [
         telephone: ENTITY.telephone,
         email: ENTITY.email,
         priceRange: ENTITY.priceRange,
+        address: entityPostalAddress(),
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: ENTITY.geo.latitude,
+          longitude: ENTITY.geo.longitude,
+        },
         founder: { '@id': PERSON_ID },
         parentOrganization: { '@id': ORG_ID },
         openingHoursSpecification: openingHoursSpec(),
@@ -731,11 +737,12 @@ function buildHead(page) {
       `\n    <link rel="alternate" hreflang="x-default" href="${SITE}/">`
     : page.path === '/precios' || page.path === '/casos-de-exito' || page.path === '/servicios' || page.path === '/faq'
       ? `\n    <link rel="alternate" hreflang="es-CL" href="${canonical}">` +
-        `\n    <link rel="alternate" hreflang="x-default" href="${canonical}">`
+        `\n    <link rel="alternate" hreflang="x-default" href="${SITE}/">`
       : '';
 
   const geoRegion = page.geoRegion || 'CL';
-  const icbm = page.icbm || '-33.4489, -70.6693';
+  const icbm =
+    page.icbm || `${ENTITY.geo.latitude}, ${ENTITY.geo.longitude}`;
 
   return `    <title>${page.title}</title>
     <meta name="description" content="${escapeAttr(page.description)}"${descAttr}>
@@ -746,6 +753,8 @@ function buildHead(page) {
     <link rel="canonical" href="${canonical}">${hreflangTags}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="preload" href="/css/style.css" as="style">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" type="text/plain" title="LLM content guide" href="${SITE}/llms.txt">
     <link rel="author" href="${SITE}/">

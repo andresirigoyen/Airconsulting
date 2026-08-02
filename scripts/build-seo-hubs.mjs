@@ -176,6 +176,12 @@ function writeLocaleHub(hub) {
     ogTitle: hub.title,
     ogDescription: hub.description,
     hreflang: hub.hreflang,
+    xDefaultPath: '/',
+    hreflangAlternates: [
+      { hreflang: 'es-CL', href: `${SITE}/` },
+      { hreflang: 'en', href: `${SITE}/en` },
+      { hreflang: 'da', href: `${SITE}/da` },
+    ],
     ogLocale: hub.ogLocale,
     ogLocaleAlternate: hub.ogLocaleAlt,
     geoRegion: hub.geoRegion,

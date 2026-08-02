@@ -2,7 +2,7 @@
  * Shared Schema.org / GEO helpers for build scripts.
  * Keep @id targets stable: #organization, #website, #business, #person.
  */
-import { ENTITY } from './entity-nap.mjs';
+import { ENTITY, entityPostalAddress } from './entity-nap.mjs';
 import { SITE, OG_DEFAULT } from './page-chrome.mjs';
 
 export const ORG_ID = `${SITE}/#organization`;
@@ -28,6 +28,7 @@ export function organizationLd() {
     image: OG_DEFAULT,
     email: ENTITY.email,
     telephone: ENTITY.telephone,
+    address: entityPostalAddress(),
     sameAs: [...ENTITY.sameAs],
     contactPoint: {
       '@type': 'ContactPoint',

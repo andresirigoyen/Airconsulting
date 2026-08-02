@@ -62,6 +62,7 @@ function loadGeoConfigUrls() {
   /** @type {SitemapUrl[]} */
   const urls = [];
   for (const e of data.entries || []) {
+    if (e.indexable === false) continue;
     const loc = `/${e.path || e.slug}`;
     urls.push({
       loc,

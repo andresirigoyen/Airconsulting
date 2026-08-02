@@ -234,6 +234,12 @@ export function loadGeoConfig() {
 
     }
 
+    if (entry.indexable != null && typeof entry.indexable !== 'boolean') {
+      throw new Error(
+        `GEO_BAD_INDEXABLE: ${entry.slug} indexable must be boolean when set`
+      );
+    }
+
 
 
     if (!marketCodes.has(entry.countryCode)) {

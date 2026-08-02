@@ -91,6 +91,7 @@ export function escapeAttr(s) {
 }
 
 /**
+ * @typedef {{ hreflang: string, href: string }} HreflangAlternate
  * @typedef {object} HeadOptions
  * @property {string} title
  * @property {string} description
@@ -104,14 +105,24 @@ export function escapeAttr(s) {
  * @property {string} [geoPosition] lat;lng for geo.position meta
  * @property {string} [icbm]
  * @property {string} [hreflang]
+ * @property {string} [xDefaultPath] path for hreflang x-default (default: site root `/`)
+ * @property {HreflangAlternate[]} [hreflangAlternates] full alternate cluster (locale hubs)
  * @property {string} [ogLocale]
  * @property {string} [ogLocaleAlternate]
  * @property {object[]} [jsonLd]
  * @property {string} [i18nDescKey] data-i18n-content on meta description
+ * @property {boolean} [preloadFonts] inject Montserrat preload hints
  */
+
+/** Absolute URL for a site path (leading slash optional). */
+function absoluteUrl(rawPath) {
+  const path = (rawPath || '/').startsWith('/') ? rawPath || '/' : `/${rawPath}`;
+  return `${SITE}${path === '/' ? '/' : path}`;
+}
 
 /**
  * Build <head> SEO block. Canonical is always absolute SITE + path.
+ * x-default always points at the Spanish home unless overridden via xDefaultPath.
  * @param {HeadOptions} opts
  */
 export function buildHead(opts) {
@@ -125,11 +136,32 @@ export function buildHead(opts) {
     opts.robots ||
     'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
   const hreflang = opts.hreflang || 'es-CL';
+  const xDefaultHref = absoluteUrl(opts.xDefaultPath ?? '/');
   const ogLocale = opts.ogLocale || 'es_CL';
   const ogLocaleAlt = opts.ogLocaleAlternate || 'es_ES';
   const descI18n = opts.i18nDescKey
     ? ` data-i18n-content="${escapeAttr(opts.i18nDescKey)}"`
     : '';
+
+  /** @type {HreflangAlternate[]} */
+  const alternates =
+    opts.hreflangAlternates && opts.hreflangAlternates.length
+      ? opts.hreflangAlternates
+      : [{ hreflang, href: canonical }];
+
+  const alternateLinks = [
+    ...alternates.map(
+      (a) =>
+        `    <link rel="alternate" hreflang="${escapeAttr(a.hreflang)}" href="${escapeAttr(a.href)}">`
+    ),
+    `    <link rel="alternate" hreflang="x-default" href="${escapeAttr(xDefaultHref)}">`,
+  ].join('\n');
+
+  const fontPreload =
+    opts.preloadFonts !== false
+      ? `    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="preload" href="/css/style.css" as="style">`
+      : '';
 
   const jsonLd =
     opts.jsonLd && opts.jsonLd.length
@@ -152,7 +184,7 @@ export function buildHead(opts) {
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+${fontPreload ? `${fontPreload}\n` : ''}    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <title>${escapeHtml(opts.title)}</title>
     <meta name="description" content="${escapeAttr(opts.description)}"${descI18n}>
     <meta name="author" content="Andrés Irigoyen">
@@ -160,8 +192,7 @@ export function buildHead(opts) {
     <meta name="googlebot" content="${robots}">
     <meta name="theme-color" content="#2563eb">
     <link rel="canonical" href="${canonical}">
-    <link rel="alternate" hreflang="${escapeAttr(hreflang)}" href="${canonical}">
-    <link rel="alternate" hreflang="x-default" href="${canonical}">
+${alternateLinks}
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" type="text/plain" title="LLM content guide" href="${SITE}/llms.txt">
     <link rel="author" href="${SITE}/">

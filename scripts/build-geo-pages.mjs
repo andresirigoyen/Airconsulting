@@ -173,6 +173,8 @@ function buildLocalBusinessLd(entry) {
     currenciesAccepted: ui.currencies,
     address: {
       '@type': 'PostalAddress',
+      ...(lb.streetAddress ? { streetAddress: lb.streetAddress } : {}),
+      ...(lb.postalCode ? { postalCode: lb.postalCode } : {}),
       addressLocality,
       addressRegion,
       addressCountry,
@@ -890,6 +892,11 @@ function main() {
       ogDescription: entry.content?.ogDescription || entry.metaDescription,
       canonicalPath: `/${pub}`,
       hreflang: ui.market.hreflang,
+      xDefaultPath: '/',
+      robots:
+        entry.indexable === false
+          ? 'noindex, follow'
+          : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
       ogLocale: ui.ogLocale,
       ogLocaleAlternate: ui.ogLocaleAlternate,
       geoRegion: geoRegionMeta,

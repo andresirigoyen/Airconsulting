@@ -284,6 +284,7 @@ function main() {
           '@type': 'BlogPosting',
           headline: post.content.title,
           datePublished: post.date,
+          dateModified: post.dateModified || post.updated || post.date,
           description: post.seo.metaDescription,
           url: `${SITE}/blog/${post.slug}`,
           author: { '@id': `${SITE}/#person` },

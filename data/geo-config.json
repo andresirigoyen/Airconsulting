@@ -493,8 +493,10 @@
         "addressCountry": "CL",
         "name": "IrigoyenDev — Las Condes",
         "description": "Plataformas, landings y e-commerce para empresas de tecnología, scale-ups y servicios B2B en Las Condes. También retail y marcas del oriente de Santiago.",
-        "latitude": -33.4153,
-        "longitude": -70.5833,
+        "latitude": -33.3915,
+        "longitude": -70.5462,
+        "streetAddress": "Américo Vespucio Norte 767",
+        "postalCode": "7550000",
         "addressLocality": "Las Condes",
         "addressRegion": "Región Metropolitana",
         "serviceType": [
@@ -563,8 +565,8 @@
         "ogTitle": "Desarrollo web tech y B2B en Las Condes | IrigoyenDev",
         "ogDescription": "Producto digital para oficinas, software y servicios premium en Las Condes.",
         "geo": {
-          "latitude": -33.4153,
-          "longitude": -70.5833
+          "latitude": -33.3915,
+          "longitude": -70.5462
         },
         "semanticTopics": [
           "optimización de performance (Core Web Vitals)",
@@ -1473,7 +1475,8 @@
           "sitios rápidos en móvil"
         ],
         "semanticIntro": "En Cerrillos trabajamos conceptos como: catálogos B2B y cotización online; SEO local para proveedores industriales; formularios de lead con tracking."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "cerro-navia",
@@ -1573,7 +1576,8 @@
           "mantenimiento Care para pymes"
         ],
         "semanticIntro": "En Cerro Navia trabajamos conceptos como: SEO local barrio a barrio; CTAs a WhatsApp Business; horarios y mapa en el primer viewport."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "conchali",
@@ -1673,7 +1677,8 @@
           "analytics de llamadas y formularios"
         ],
         "semanticIntro": "En Conchalí trabajamos conceptos como: NAP coherente para Google; landings de oferta local; SEO on-page para servicios."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "el-bosque",
@@ -1773,7 +1778,8 @@
           "SEO local sur de Santiago"
         ],
         "semanticIntro": "En El Bosque trabajamos conceptos como: e-commerce ligero para retail sur; CTAs de compra y WhatsApp; Core Web Vitals en móvil."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "estacion-central",
@@ -1873,7 +1879,8 @@
           "SEO para retail y servicios del eje Alameda"
         ],
         "semanticIntro": "En Estación Central trabajamos conceptos como: landings de alta conversión peatonal/digital; mapas y horarios visibles; performance móvil en zonas de alto tráfico."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "huechuraba",
@@ -2073,7 +2080,8 @@
           "SEO local norte-centro"
         ],
         "semanticIntro": "En Independencia trabajamos conceptos como: UX para clínicas y centros de salud; CTA de reserva y WhatsApp; confianza visual en el primer viewport."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "la-cisterna",
@@ -2173,7 +2181,8 @@
           "analytics de conversión"
         ],
         "semanticIntro": "En La Cisterna trabajamos conceptos como: landings de oferta para retail sur; pasarelas de pago en Chile; SEO local nodo La Cisterna."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "la-florida",
@@ -2374,7 +2383,8 @@
           "mantenimiento continuo"
         ],
         "semanticIntro": "En La Granja trabajamos conceptos como: SEO servicio + comuna; schema para negocios locales; CTAs de contacto inmediato."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "la-pintana",
@@ -2474,7 +2484,8 @@
           "actualización fácil de contenido"
         ],
         "semanticIntro": "En La Pintana trabajamos conceptos como: embudos a WhatsApp; webs de servicios simples; SEO local sur de la RM."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "lo-espejo",
@@ -2574,7 +2585,8 @@
           "performance móvil operativa"
         ],
         "semanticIntro": "En Lo Espejo trabajamos conceptos como: formularios de cotización B2B; SEO para talleres y proveedores; catálogos livianos."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "lo-prado",
@@ -2674,7 +2686,8 @@
           "CTAs unificados WhatsApp/web"
         ],
         "semanticIntro": "En Lo Prado trabajamos conceptos como: SEO local poniente; landings de oferta; NAP y schema LocalBusiness."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "macul",
@@ -2775,7 +2788,8 @@
           "validación rápida con analytics"
         ],
         "semanticIntro": "En Macul trabajamos conceptos como: landings para emprendedores cerca de campus; webs de servicios profesionales; SEO oriente-sur."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "pedro-aguirre-cerda",
@@ -2875,7 +2889,8 @@
           "migración desde sitios legado"
         ],
         "semanticIntro": "En Pedro Aguirre Cerda trabajamos conceptos como: webs para proveedores y talleres; formularios de cotización; SEO B2B local."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "pudahuel",
@@ -2976,7 +2991,8 @@
           "performance móvil en terreno"
         ],
         "semanticIntro": "En Pudahuel trabajamos conceptos como: webs para logística y servicios aeroportuarios; cobertura y zonas de despacho claras; leads B2B medibles."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "quilicura",
@@ -3076,7 +3092,8 @@
           "confianza visual corporativa"
         ],
         "semanticIntro": "En Quilicura trabajamos conceptos como: sitios B2B industriales; SEO para proveedores logísticos; formularios con notificación comercial."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "quinta-normal",
@@ -3176,7 +3193,8 @@
           "mantenimiento de contenido"
         ],
         "semanticIntro": "En Quinta Normal trabajamos conceptos como: UX y tipografía legible; SEO local poniente-centro; landings de servicios y agenda."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "recoleta",
@@ -3277,7 +3295,8 @@
           "CTAs de reserva y WhatsApp"
         ],
         "semanticIntro": "En Recoleta trabajamos conceptos como: webs para gastronomía y reservas; SEO local Bellavista/Patronato; optimización de imágenes y LCP."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "renca",
@@ -3377,7 +3396,8 @@
           "confianza móvil"
         ],
         "semanticIntro": "En Renca trabajamos conceptos como: SEO local norponiente; webs para pymes en crecimiento; leads con tracking."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "san-joaquin",
@@ -3477,7 +3497,8 @@
           "performance móvil"
         ],
         "semanticIntro": "En San Joaquín trabajamos conceptos como: UX para servicios y educación; SEO sur-oriente cercano; landings de captación."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "san-miguel",
@@ -3577,7 +3598,8 @@
           "e-commerce ligero"
         ],
         "semanticIntro": "En San Miguel trabajamos conceptos como: SEO local Gran Avenida; UX clínicas y agenda; landings vs competencia de cadena."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "san-ramon",
@@ -3677,7 +3699,8 @@
           "analytics básico de contactos"
         ],
         "semanticIntro": "En San Ramón trabajamos conceptos como: webs de servicios simples; SEO local sur; CTAs WhatsApp."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "puente-alto",
@@ -3878,7 +3901,8 @@
           "CTAs de visita y WhatsApp"
         ],
         "semanticIntro": "En Pirque trabajamos conceptos como: webs para turismo y reservas; optimización de imágenes y LCP; SEO local valle del Maipo."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "san-jose-de-maipo",
@@ -3979,7 +4003,8 @@
           "performance móvil en zona de montaña"
         ],
         "semanticIntro": "En San José de Maipo trabajamos conceptos como: reservas turísticas y lodges; SEO Cajón del Maipo; horarios y cómo llegar claros."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "colina",
@@ -4080,7 +4105,8 @@
           "webs para retail de crecimiento urbano"
         ],
         "semanticIntro": "En Colina trabajamos conceptos como: SEO local norte RM / Chicureo; landings para servicios en condominios; leads medibles."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "lampa",
@@ -4180,7 +4206,8 @@
           "SEO norte RM"
         ],
         "semanticIntro": "En Lampa trabajamos conceptos como: webs B2B industriales y logísticas; formularios de cotización; cobertura y zonas claras."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "tiltil",
@@ -4280,7 +4307,8 @@
           "mantenimiento Care remoto"
         ],
         "semanticIntro": "En Tiltil trabajamos conceptos como: webs de servicios simples; SEO local Chacabuco; CTAs WhatsApp."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "san-bernardo",
@@ -4381,7 +4409,8 @@
           "webs para talleres y proveedores"
         ],
         "semanticIntro": "En San Bernardo trabajamos conceptos como: SEO local sur RM; landings de oferta retail; pasarelas de pago en Chile."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "buin",
@@ -4481,7 +4510,8 @@
           "performance móvil"
         ],
         "semanticIntro": "En Buin trabajamos conceptos como: catálogos agro y B2B livianos; SEO valle del Maipo; CTAs de cotización y WhatsApp."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "paine",
@@ -4581,7 +4611,8 @@
           "catálogos livianos"
         ],
         "semanticIntro": "En Paine trabajamos conceptos como: webs agroindustriales; formularios de cotización B2B; SEO sur RM."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "calera-de-tango",
@@ -4681,7 +4712,8 @@
           "NAP y schema LocalBusiness"
         ],
         "semanticIntro": "En Calera de Tango trabajamos conceptos como: SEO local comuna residencial; CTAs WhatsApp; landings de servicios de barrio."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "melipilla",
@@ -4781,7 +4813,8 @@
           "CTAs de contacto medibles"
         ],
         "semanticIntro": "En Melipilla trabajamos conceptos como: SEO local poniente RM; webs para comercio y agro; landings de oferta."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "curacavi",
@@ -4881,7 +4914,8 @@
           "performance móvil"
         ],
         "semanticIntro": "En Curacaví trabajamos conceptos como: landings de alta conversión en ruta; mapas y horarios visibles; SEO Curacaví / Ruta 68."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "maria-pinto",
@@ -4980,7 +5014,8 @@
           "formularios de cotización"
         ],
         "semanticIntro": "En María Pinto trabajamos conceptos como: webs agro y servicios rurales; embudos a WhatsApp; SEO local Melipilla."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "alhue",
@@ -5079,7 +5114,8 @@
           "contenido claro sin relleno"
         ],
         "semanticIntro": "En Alhué trabajamos conceptos como: webs mínimas para comunas rurales; SEO local Alhué; CTAs WhatsApp."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "san-pedro",
@@ -5177,7 +5213,8 @@
           "NAP coherente"
         ],
         "semanticIntro": "En San Pedro trabajamos conceptos como: webs agro rurales; cotización por WhatsApp; SEO local suroeste RM."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "talagante",
@@ -5277,7 +5314,8 @@
           "CTAs unificados WhatsApp/web"
         ],
         "semanticIntro": "En Talagante trabajamos conceptos como: SEO local Talagante; landings de oferta; NAP y schema."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "penaflor",
@@ -5377,7 +5415,8 @@
           "SEO local suroeste RM"
         ],
         "semanticIntro": "En Peñaflor trabajamos conceptos como: e-commerce ligero Peñaflor; CTAs compra/WhatsApp; Core Web Vitals móvil."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "el-monte",
@@ -5476,7 +5515,8 @@
           "mantenimiento continuo"
         ],
         "semanticIntro": "En El Monte trabajamos conceptos como: SEO servicio + comuna; schema negocios locales; CTAs de contacto inmediato."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "isla-de-maipo",
@@ -5575,7 +5615,8 @@
           "CTAs de reserva"
         ],
         "semanticIntro": "En Isla de Maipo trabajamos conceptos como: webs para viñas y visitas; optimización de imágenes; SEO valle del Maipo."
-      }
+      },
+      "indexable": false
     },
     {
       "slug": "padre-hurtado",
@@ -5675,7 +5716,8 @@
           "e-commerce ligero"
         ],
         "semanticIntro": "En Padre Hurtado trabajamos conceptos como: SEO local Padre Hurtado; landings vs competencia vecina; leads medibles."
-      }
+      },
+      "indexable": false
     }
   ]
 }

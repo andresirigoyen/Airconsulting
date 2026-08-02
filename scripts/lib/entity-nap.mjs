@@ -28,4 +28,29 @@ export const ENTITY = Object.freeze({
   ],
   contactPath: '/#contact',
   pricingPath: '/precios',
+  /** Studio / GBP — Américo Vespucio Norte 767, Las Condes */
+  address: Object.freeze({
+    streetAddress: 'Américo Vespucio Norte 767',
+    addressLocality: 'Las Condes',
+    addressRegion: 'Región Metropolitana',
+    postalCode: '7550000',
+    addressCountry: 'CL',
+  }),
+  geo: Object.freeze({
+    latitude: -33.3915,
+    longitude: -70.5462,
+  }),
 });
+
+/** Schema.org PostalAddress from ENTITY.address */
+export function entityPostalAddress() {
+  const a = ENTITY.address;
+  return {
+    '@type': 'PostalAddress',
+    streetAddress: a.streetAddress,
+    addressLocality: a.addressLocality,
+    addressRegion: a.addressRegion,
+    postalCode: a.postalCode,
+    addressCountry: a.addressCountry,
+  };
+}

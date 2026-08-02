@@ -15,11 +15,14 @@ alwaysApply: true
 - Silo canónico: `/santiago/{comuna}`, hubs `/chile`, `/santiago`, regionales (`/desarrollo-web-concepcion`, etc.).
 - Aliases en `vercel.json`: `/desarrollo-web-en-{slug}`, `/agencia-web-en-{slug}` → silo.
 - Comunas pedidas ya existen: Providencia, Peñalolén, La Reina, Las Condes, Ñuñoa, Vitacura, Valparaíso, Concepción, Antofagasta.
+- **Indexación geo:** hubs + regiones siempre indexables. Comunas indexables: `las-condes`, `providencia`, `vitacura`, `nunoa`, `la-reina`, `penalolen`, `lo-barnechea`, `santiago-centro`, `maipu`, `huechuraba`, `la-florida`, `puente-alto`. Resto de comunas: `"indexable": false` → `noindex, follow` + fuera del sitemap (URLs vivas).
+- NAP address: Américo Vespucio Norte 767, Las Condes (`entity-nap.mjs`). Street solo en home/org y `/santiago/las-condes`.
+- Hreflang: `x-default` siempre → `/`; hubs `/en` `/da` emiten cluster `es-CL`/`en`/`da`.
 
 ## Schema ya presente
-- Home: WebSite, Person, LocalBusiness `#business`, ProfessionalService, ItemList proyectos, FAQPage.
+- Home: WebSite, Person, LocalBusiness `#business` (con address+geo), ProfessionalService, ItemList proyectos, FAQPage.
 - Geo: LocalBusiness+ProfessionalService, Service, FAQPage, BreadcrumbList.
-- Blog: Blog / BlogPosting. Proyectos: CreativeWork.
+- Blog: Blog / BlogPosting (`dateModified` con fallback a `date`). Proyectos: CreativeWork.
 - robots.txt: AI crawlers Allow (GPTBot, PerplexityBot, etc.).
 
 ## Gaps / reglas al extender
@@ -28,4 +31,4 @@ alwaysApply: true
 - Páginas dedicadas: `/servicios/geo-optimizacion-ia`, `/casos-de-exito`.
 - Organization `@id` `#organization`; no inventar AggregateRating sin reviews reales.
 - HowTo solo en guías blog con pasos reales.
-- Sitemap: incluir proyectos (ava7) + páginas nuevas vía `build-sitemap.mjs`.
+- Sitemap: incluir proyectos (ava7) + páginas nuevas vía `build-sitemap.mjs`; respetar `indexable: false` en geo.
