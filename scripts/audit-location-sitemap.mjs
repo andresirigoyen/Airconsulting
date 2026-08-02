@@ -52,17 +52,34 @@ function main() {
 
   /** @type {string[]} */
   const expectedUrls = [];
+  /** Pages with indexable:false stay on disk but must not be in the sitemap. */
+  let noindexCount = 0;
 
   for (const entry of config.entries) {
     const pub = entry.path || entry.slug;
     const url = `${SITE}/${pub}`;
-    expectedUrls.push(url);
+    const indexable = entry.indexable !== false;
+    if (indexable) {
+      expectedUrls.push(url);
+    } else {
+      noindexCount += 1;
+      assert(
+        !locSet.has(url),
+        `sitemap must not list noindex page: ${url}`
+      );
+    }
 
     const file = htmlPathFor(pub);
     assert(fs.existsSync(file), `Missing HTML for slug "${entry.slug}" → ${pub}`);
     if (!fs.existsSync(file)) continue;
 
     const html = fs.readFileSync(file, 'utf8');
+    if (!indexable) {
+      assert(
+        /noindex/i.test(html),
+        `${entry.slug}: indexable:false pages must emit noindex robots`
+      );
+    }
     assert(
       html.includes(`rel="canonical" href="${url}"`),
       `${entry.slug}: canonical must be ${url}`
@@ -188,6 +205,8 @@ function main() {
   console.log('=== Geo / sitemap audit ===');
   console.log(`geo-config entries: ${config.entries.length}`);
   console.log(`paths: ${listGeoPaths().length}`);
+  console.log(`sitemap-required URLs (indexable geo + blog): ${expectedUrls.length}`);
+  console.log(`noindex long-tail (excluded from sitemap): ${noindexCount}`);
   console.log(`Sitemap URLs: ${locs.length}`);
   console.log(`Keyword alias 301 redirects: ${expectedAliases.length}`);
 
