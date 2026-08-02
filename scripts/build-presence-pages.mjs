@@ -1,5 +1,5 @@
 /**
- * Build presence / city landing pages (ES + DK cities not yet in geo-config).
+ * Build Chile presence pages (Temuco and other stubs not yet in geo-config).
  * Uses shared page-chrome (full nav + brand footer).
  * Run: node scripts/build-presence-pages.mjs
  */
@@ -56,198 +56,7 @@ const PAGES = [
         a: 'Landings desde ~USD 600; productos comerciales desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios.',
       },
     ],
-  },
-  {
-    file: 'desarrollo-web-madrid.html',
-    path: '/desarrollo-web-madrid',
-    lang: 'es',
-    hreflang: 'es',
-    ogLocale: 'es_ES',
-    city: 'Madrid',
-    region: 'Comunidad de Madrid',
-    country: 'España',
-    countryCode: 'ES',
-    noindex: true,
-    lat: 40.4168,
-    lng: -3.7038,
-    title: 'Desarrollador web Madrid | Crear tienda online España | IrigoyenDev',
-    description:
-      'Desarrollador web en Madrid: crear tienda online España, landings de conversión y plataformas full stack. IrigoyenDev — remoto con clientes en España.',
-    h1: 'Desarrollo web profesional en Madrid',
-    lead: 'Ayudamos a marcas y pymes en Madrid a lanzar tiendas online, landings y productos digitales medibles. Trabajamos remoto desde Dinamarca, en español.',
-    body: 'Misma calidad técnica que en Chile y Dinamarca, adaptada a pasarelas europeas (Stripe, Redsys) y a un mercado donde la velocidad y el SEO técnico marcan la diferencia.',
-    semanticTopics: [
-      'desarrollo web para empresas españolas',
-      'e-commerce internacional',
-      'landing pages en español de España',
-      'SEO técnico para mercado ibérico',
-    ],
-    faq: [
-      {
-        q: '¿Desarrollan webs para empresas en Madrid y España?',
-        a: 'Sí. IrigoyenDev tiene presencia en España: tiendas online, landings y plataformas con stack moderno y SEO técnico.',
-      },
-      {
-        q: '¿Cuál es la diferencia entre contratar en España vs. Chile?',
-        a: 'Mismo estándar técnico, adaptado a pasarelas de pago locales (Stripe, Redsys) y normativa europea. Cotización en https://www.irigoyendev.com/precios.',
-      },
-      {
-        q: '¿Hablan español nativo para proyectos en Madrid?',
-        a: 'Sí. Andrés Irigoyen es nativo en español y trabaja con equipos locales en España cuando el proyecto lo requiere.',
-      },
-    ],
-  },
-  {
-    file: 'desarrollo-web-barcelona.html',
-    path: '/desarrollo-web-barcelona',
-    lang: 'es',
-    hreflang: 'es',
-    ogLocale: 'es_ES',
-    city: 'Barcelona',
-    region: 'Cataluña',
-    country: 'España',
-    countryCode: 'ES',
-    noindex: true,
-    lat: 41.3874,
-    lng: 2.1686,
-    title: 'Desarrollo web Barcelona | Tienda online y landings | IrigoyenDev',
-    description:
-      'Desarrollo web en Barcelona: e-commerce, landing pages y plataformas a medida. Caso TheBeeBaby y atención remota en español.',
-    h1: 'Desarrollo web profesional en Barcelona',
-    lead: 'Desde landings de captación hasta marketplaces: construimos producto digital para equipos en Barcelona. Referencia: TheBeeBaby.',
-    body: 'Barcelona concentra marcas de producto y e-commerce. Diseñamos y desarrollamos sitios rápidos, medibles y listos para escalar ventas o leads.',
-    semanticTopics: [
-      'desarrollo web para marcas en Barcelona',
-      'e-commerce y marketplaces',
-      'landings de conversión',
-      'producto digital full stack',
-    ],
-    faq: [
-      {
-        q: '¿Trabajan con empresas en Barcelona?',
-        a: 'Sí. Entregamos remoto en español: tiendas online, landings y plataformas. Referencia de e-commerce: TheBeeBaby.',
-      },
-      {
-        q: '¿Incluyen SEO técnico?',
-        a: 'Sí. Canonical, schema, rendimiento y estructura indexable forman parte del entregable estándar.',
-      },
-    ],
-  },
-  {
-    file: 'desarrollo-web-valencia.html',
-    path: '/desarrollo-web-valencia',
-    lang: 'es',
-    hreflang: 'es',
-    ogLocale: 'es_ES',
-    city: 'Valencia',
-    region: 'Comunidad Valenciana',
-    country: 'España',
-    countryCode: 'ES',
-    noindex: true,
-    lat: 39.4699,
-    lng: -0.3763,
-    title: 'Desarrollo web Valencia | E-commerce y landings | IrigoyenDev',
-    description:
-      'Desarrollo web en Valencia: tienda online, landings de conversión y SEO técnico para pymes. IrigoyenDev — remoto en español.',
-    h1: 'Desarrollo web profesional en Valencia',
-    lead: 'Producto web claro y rápido para negocios en Valencia: e-commerce, landings y plataformas con medición de conversiones.',
-    body: 'Para pymes del levante que necesitan un canal digital serio: plazos claros, stack moderno y foco en conversión, no en plantillas genéricas.',
-    semanticTopics: [
-      'desarrollo web para pymes en Valencia',
-      'tienda online y pasarelas europeas',
-      'landings de captación',
-      'SEO técnico local',
-    ],
-    faq: [
-      {
-        q: '¿Hacen webs para empresas en Valencia?',
-        a: 'Sí. Trabajamos remoto en español con e-commerce, landings y plataformas a medida.',
-      },
-      {
-        q: '¿Cómo empezamos?',
-        a: 'Escríbenos por el formulario o WhatsApp con el objetivo del proyecto; respondemos con un plan y rango de inversión.',
-      },
-    ],
-  },
-  {
-    file: 'web-developer-copenhagen.html',
-    path: '/web-developer-copenhagen',
-    lang: 'en',
-    hreflang: 'en',
-    ogLocale: 'en_US',
-    city: 'Copenhagen',
-    region: 'Capital Region',
-    country: 'Denmark',
-    countryCode: 'DK',
-    lat: 55.6761,
-    lng: 12.5683,
-    title: 'Web developer Copenhagen | E-commerce Denmark | IrigoyenDev',
-    description:
-      'Full-stack web developer in Copenhagen: e-commerce Denmark, conversion landings and custom platforms. IrigoyenDev — based in Denmark.',
-    h1: 'Full-stack web development in Copenhagen',
-    lead: 'We build online stores, conversion landings and business platforms for teams in Copenhagen and across Denmark — remote-friendly, English or Spanish.',
-    body: 'Based in Denmark with international delivery experience. Clear scopes, modern stack, and technical SEO built into every launch.',
-    semanticTopics: [
-      'web development for Danish businesses',
-      'e-commerce with international shipping',
-      'technical SEO for Nordic markets',
-      'full stack development in English/Danish',
-    ],
-    faq: [
-      {
-        q: 'Do you work with businesses in Copenhagen and Denmark?',
-        a: 'Yes. IrigoyenDev operates from Copenhagen with international experience: e-commerce, landing pages and custom platforms.',
-      },
-      {
-        q: 'What is your pricing for web development in Denmark?',
-        a: 'Commercial products from ~from ~USD 1,304; landing pages from ~USD 600. Details at https://www.irigoyendev.com/precios.',
-      },
-      {
-        q: 'Do you speak Danish or English for local projects?',
-        a: 'We work in English and Spanish. For Danish-language projects we collaborate with local copywriters to ensure cultural accuracy.',
-      },
-    ],
-  },
-  {
-    file: 'web-developer-aarhus.html',
-    path: '/web-developer-aarhus',
-    lang: 'en',
-    hreflang: 'en',
-    ogLocale: 'en_US',
-    city: 'Aarhus',
-    region: 'Central Denmark',
-    country: 'Denmark',
-    countryCode: 'DK',
-    lat: 56.1629,
-    lng: 10.2039,
-    title: 'Webudvikler Aarhus | Webshops fra USD 600 — IrigoyenDev',
-    description:
-      'Webudvikler i Aarhus: skræddersyede websites, webshops og landingsider — ikke Magento-bureau. Moderne stack, remote fra Danmark. IrigoyenDev.',
-    h1: 'Webudvikler i Aarhus — custom websites & webshops',
-    lead: 'Custom web products for Aarhus and Jutland: e-commerce, conversion landings and admin platforms — modern stack, not Magento/WordPress agency templates.',
-    body: 'Copenhagen-based team with remote delivery for Jutland companies that need a measurable digital channel. We build to your product and payments stack — we are not a Magento 2 agency.',
-    semanticTopics: [
-      'webudvikler Aarhus',
-      'custom web developer Aarhus',
-      'e-commerce Denmark',
-      'conversion landing pages',
-      'custom business platforms',
-    ],
-    faq: [
-      {
-        q: 'Do you take projects in Aarhus?',
-        a: 'Yes. We deliver remotely from Denmark: custom e-commerce, landings and platforms for Aarhus and Jutland teams.',
-      },
-      {
-        q: 'Do you work with Magento 2?',
-        a: 'No. We build custom and modern stacks (e.g. headless/Next-style product sites). For Magento maintenance, hire a dedicated Magento agency.',
-      },
-      {
-        q: 'How do we start?',
-        a: 'Send a short brief via the contact form or WhatsApp. We reply with a plan and investment range.',
-      },
-    ],
-  },
+  }
 ];
 
 function buildHtml(p) {
@@ -262,10 +71,8 @@ function buildHtml(p) {
   const homeLabel = isEn ? 'Home' : 'Inicio';
   const skipLink = isEn ? 'Skip to content' : 'Saltar al contenido';
 
-  const marketHub =
-    p.countryCode === 'ES' ? '/es' : p.countryCode === 'DK' ? '/da' : '/chile';
-  const marketLabel =
-    p.countryCode === 'ES' ? 'España' : p.countryCode === 'DK' ? 'Danmark' : 'Chile';
+  const marketHub = '/chile';
+  const marketLabel = 'Chile';
 
   const services = [
     {
@@ -452,11 +259,7 @@ function buildHtml(p) {
     </div>
     </main>`;
 
-  const footerMarketLinks = [
-    { href: '/chile', label: 'Chile' },
-    { href: '/da', label: 'Danmark' },
-    { href: '/en', label: 'English' },
-  ].filter((l, i, arr) => arr.findIndex((x) => x.href === l.href) === i);
+  const footerMarketLinks = [{ href: '/chile', label: 'Chile' }];
 
   return renderPage({
     headHtml,

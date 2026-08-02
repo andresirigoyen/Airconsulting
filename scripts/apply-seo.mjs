@@ -47,7 +47,7 @@ const pages = [
         url: `${SITE}/`,
         description:
           'Portfolio y servicios de Andrés Irigoyen — desarrollador full stack freelance para e-commerce, landings y plataformas.',
-        inLanguage: ['es-CL', 'en'],
+        inLanguage: ['es-CL'],
         publisher: { '@id': ORG_ID },
       },
       {
@@ -77,7 +77,7 @@ const pages = [
           contactType: 'sales',
           telephone: ENTITY.telephone,
           url: `${SITE}/#contact`,
-          availableLanguage: ['Spanish', 'English', 'Danish'],
+          availableLanguage: ['Spanish', 'English'],
         },
       },
       {
@@ -704,8 +704,6 @@ function buildHead(page) {
   const locales = [
     ['es_CL', true],
     ['en_US', false],
-    ['da_DK', false],
-    ['es_ES', false],
   ];
 
   const localeTags = locales
@@ -732,8 +730,6 @@ function buildHead(page) {
   const isHome = page.path === '/';
   const hreflangTags = isHome
     ? `\n    <link rel="alternate" hreflang="es-CL" href="${SITE}/">` +
-      `\n    <link rel="alternate" hreflang="en" href="${SITE}/en">` +
-      `\n    <link rel="alternate" hreflang="da" href="${SITE}/da">` +
       `\n    <link rel="alternate" hreflang="x-default" href="${SITE}/">`
     : page.path === '/precios' || page.path === '/casos-de-exito' || page.path === '/servicios' || page.path === '/faq'
       ? `\n    <link rel="alternate" hreflang="es-CL" href="${canonical}">` +

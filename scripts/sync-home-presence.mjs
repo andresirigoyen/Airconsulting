@@ -62,9 +62,9 @@ function main() {
   } else {
     // First run: replace curated Chile list inside first presence__col
     const needle =
-      /(<div class="presence__col">\s*<h3 class="presence__country"[^>]*>Chile<\/h3>\s*)([\s\S]*?)(\s*<\/div>\s*<div class="presence__col">\s*<h3 class="presence__country"[^>]*>España<\/h3>)/;
+      /(<div class="presence__col[^"]*"[^>]*>\s*<h3 class="presence__country"[^>]*>Chile<\/h3>\s*)([\s\S]*?)(\s*<\/div>\s*<div class="presence__col)/;
     if (!needle.test(html)) {
-      throw new Error('Could not find Chile presence column in index.html');
+      throw new Error('Could not find Chile presence column in index.html — add AUTO markers first');
     }
     html = html.replace(needle, `$1\n                ${block}\n            $3`);
   }

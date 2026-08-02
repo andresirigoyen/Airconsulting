@@ -738,7 +738,7 @@ function renderMapSection(entry) {
   const src = `https://maps.google.com/maps?q=${q}&z=13&output=embed`;
   return `<section class="project-section fade-in" id="mapa">
             <h2 data-i18n="geo.ui.mapTitle">Ubicación de referencia — ${escapeHtml(entry.city)}</h2>
-            <p class="location-intro" data-i18n="geo.ui.mapIntro">Mapa centrado en ${escapeHtml(entry.city)}. Atención remota con presencia comercial en Chile, España y Dinamarca.</p>
+            <p class="location-intro" data-i18n="geo.ui.mapIntro">Mapa centrado en ${escapeHtml(entry.city)}. Desarrollo web con foco en Chile — Santiago, regiones y comunas.</p>
             <div class="geo-map-embed" style="position:relative;aspect-ratio:16/9;max-width:100%;border-radius:12px;overflow:hidden;background:var(--bg-muted,#0f172a)">
               <iframe title="Mapa ${escapeAttr(entry.city)}" src="${src}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="border:0;width:100%;height:100%;min-height:280px"></iframe>
             </div>

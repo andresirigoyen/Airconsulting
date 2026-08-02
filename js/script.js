@@ -214,7 +214,7 @@ function initProjectVideos() {
 }
 
 // i18n Engine
-const ALLOWED_LOCALES = new Set(['en', 'es', 'de', 'da', 'no', 'sv', 'it', 'fr', 'pt']);
+const ALLOWED_LOCALES = new Set(['es', 'en', 'pt']);
 
 const langMenuBtn = document.getElementById('lang-menu-btn');
 const langDropdown = document.getElementById('lang-dropdown');
@@ -320,7 +320,7 @@ function applyTranslations(translations) {
 }
 
 /* —— Currency selector (USD base → EUR, CLP, DKK, NOK) —— */
-const ALLOWED_CURRENCIES = new Set(['USD', 'EUR', 'CLP', 'DKK', 'NOK']);
+const ALLOWED_CURRENCIES = new Set(['USD', 'EUR', 'CLP']);
 /** List / mid-market rates vs listed USD figures.
  * EUR uses 1:1 list pricing (landing from €600, SEO from €199, etc.).
  * Other currencies are approximate mid-market conversions. */
@@ -475,7 +475,7 @@ function initCurrencySelector() {
       <span class="currency-btn__code">${currentCurrency}</span>
     </button>
     <div id="currency-dropdown" class="lang-dropdown currency-dropdown" role="listbox" aria-label="Moneda" data-i18n-aria="currency.listLabel">
-      ${['CLP', 'USD', 'EUR', 'DKK', 'NOK']
+      ${['CLP', 'USD', 'EUR']
         .map(
           (code) => `
         <label class="lang-option">

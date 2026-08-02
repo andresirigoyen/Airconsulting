@@ -17,6 +17,46 @@
       "permanent": true
     },
     {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/da",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/es",
+      "destination": "/chile",
+      "permanent": true
+    },
+    {
+      "source": "/desarrollo-web-madrid",
+      "destination": "/chile",
+      "permanent": true
+    },
+    {
+      "source": "/desarrollo-web-barcelona",
+      "destination": "/chile",
+      "permanent": true
+    },
+    {
+      "source": "/desarrollo-web-valencia",
+      "destination": "/chile",
+      "permanent": true
+    },
+    {
+      "source": "/web-developer-copenhagen",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/web-developer-aarhus",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/cotizacion",
       "destination": "/pages/cotizacion",
       "permanent": true
@@ -968,19 +1008,6 @@
     },
     {
       "source": "/(desarrollo-web-en|agencia-web-en)-(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, stale-while-revalidate=604800"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
-    },
-    {
-      "source": "/norge/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

@@ -24,73 +24,9 @@ geo-config.json  →  build-geo-pages.mjs  →  *.html en CDN
 - **Breadcrumbs:** HTML visible + `BreadcrumbList` JSON-LD (silo Home → Chile → Santiago → comuna).
 - **Slug inválido:** no se genera HTML → Vercel responde **`404.html`** (no página en blanco).
 
-## Añadir Noruega (Oslo, Moss)
+## Mercado
 
-1. Asegura `markets[]` con `code: "NO"`, `hubPath: "norge"`, `hreflang`/`htmlLang`/`ogLocale`.
-2. Añade hub + ciudades a `entries[]` (ejemplo mínimo Oslo):
-
-```json
-{
-  "slug": "norge",
-  "path": "norge",
-  "type": "hub",
-  "city": "Norge",
-  "region": "Nasjonalt",
-  "countryCode": "NO",
-  "metaTitle": "...",
-  "metaDescription": "...",
-  "h1Title": "...",
-  "contentSummary": "...",
-  "localBusinessSchema": {
-    "name": "IrigoyenDev — Norge",
-    "addressCountry": "NO",
-    "addressLocality": "Oslo",
-    "addressRegion": "Oslo",
-    "telephone": "+45-5024-9855",
-    "email": "andres@irigoyendev.com",
-    "priceRange": "$$-$$$"
-  }
-}
-```
-
-```json
-{
-  "slug": "oslo",
-  "path": "norge/oslo",
-  "type": "comuna",
-  "city": "Oslo",
-  "region": "Oslo",
-  "countryCode": "NO",
-  "parentSlug": "norge",
-  "metaTitle": "...",
-  "metaDescription": "...",
-  "h1Title": "...",
-  "contentSummary": "...",
-  "localBusinessSchema": {
-    "name": "IrigoyenDev — Oslo",
-    "addressCountry": "NO",
-    "addressLocality": "Oslo",
-    "addressRegion": "Oslo",
-    "latitude": 59.9139,
-    "longitude": 10.7522,
-    "telephone": "+45-5024-9855",
-    "email": "andres@irigoyendev.com",
-    "priceRange": "$$-$$$"
-  },
-  "content": {
-    "faq": [
-      { "q": "...", "a": "..." },
-      { "q": "...", "a": "..." },
-      { "q": "...", "a": "..." }
-    ]
-  }
-}
-```
-
-3. `npm run build:geo` → genera `/norge`, `/norge/oslo`, actualiza sitemap, **sin tocar** rutas de Chile.
-4. `npm run audit:geo`
-
-El factory usa `markets[]` + `countryCode` para `lang`, `og:locale`, nav y copy UI. No hace falta editar el template.
+**Solo Chile (`es-CL`).** No hay markets NO/ES/DK. Hubs `/en`, `/da`, `/es` y presence ES/DK redirigen a `/` o `/chile`.
 
 ## Campos obligatorios por entrada
 

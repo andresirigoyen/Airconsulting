@@ -138,7 +138,7 @@ export function buildHead(opts) {
   const hreflang = opts.hreflang || 'es-CL';
   const xDefaultHref = absoluteUrl(opts.xDefaultPath ?? '/');
   const ogLocale = opts.ogLocale || 'es_CL';
-  const ogLocaleAlt = opts.ogLocaleAlternate || 'es_ES';
+  const ogLocaleAlt = opts.ogLocaleAlternate || 'en_US';
   const descI18n = opts.i18nDescKey
     ? ` data-i18n-content="${escapeAttr(opts.i18nDescKey)}"`
     : '';
@@ -237,7 +237,7 @@ ${jsonLd ? `\n${jsonLd}\n` : ''}
  * @param {string} [opts.copyright]
  */
 export function buildFooter({
-  areas = 'Dinamarca · Chile · España · Remoto',
+  areas = 'Chile · Santiago · Regiones · Remoto',
   marketLinks = [],
   extra = '',
   copyright = '© 2026 IrigoyenDev. All rights reserved.',
@@ -322,8 +322,8 @@ export function renderPage({
   i18nTitleKey = '',
   dataGeoSeo = '',
   skipLink = 'Saltar al contenido',
-  footerGeo = 'Dinamarca · Chile · España · Remoto',
-  footerMarketLinks = [],
+  footerGeo = 'Chile · Santiago · Regiones · Remoto',
+  footerMarketLinks = [{ href: '/chile', label: 'Chile' }],
 }) {
   const wa = waLink(
     '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.'
@@ -367,14 +367,8 @@ ${GTM_NOSCRIPT}
                         </svg>
                     </button>
                     <div id="lang-dropdown" class="lang-dropdown" role="listbox" aria-label="Idiomas">
-                        <label class="lang-option"><span class="lang-name">English</span><input type="radio" name="lang" value="en" class="lang-radio"><div class="toggle-switch"></div></label>
                         <label class="lang-option"><span class="lang-name">Español</span><input type="radio" name="lang" value="es" class="lang-radio"><div class="toggle-switch"></div></label>
-                        <label class="lang-option"><span class="lang-name">Deutsch</span><input type="radio" name="lang" value="de" class="lang-radio"><div class="toggle-switch"></div></label>
-                        <label class="lang-option"><span class="lang-name">Dansk</span><input type="radio" name="lang" value="da" class="lang-radio"><div class="toggle-switch"></div></label>
-                        <label class="lang-option"><span class="lang-name">Norsk</span><input type="radio" name="lang" value="no" class="lang-radio"><div class="toggle-switch"></div></label>
-                        <label class="lang-option"><span class="lang-name">Svenska</span><input type="radio" name="lang" value="sv" class="lang-radio"><div class="toggle-switch"></div></label>
-                        <label class="lang-option"><span class="lang-name">Italiano</span><input type="radio" name="lang" value="it" class="lang-radio"><div class="toggle-switch"></div></label>
-                        <label class="lang-option"><span class="lang-name">Français</span><input type="radio" name="lang" value="fr" class="lang-radio"><div class="toggle-switch"></div></label>
+                        <label class="lang-option"><span class="lang-name">English</span><input type="radio" name="lang" value="en" class="lang-radio"><div class="toggle-switch"></div></label>
                         <label class="lang-option"><span class="lang-name">Português</span><input type="radio" name="lang" value="pt" class="lang-radio"><div class="toggle-switch"></div></label>
                     </div>
                 </div>

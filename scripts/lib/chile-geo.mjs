@@ -44,10 +44,7 @@ export const CHILE_PLACES = [
 export function chileMultiregionAreaServed() {
   return [
     { '@type': 'Country', name: 'Chile' },
-    { '@type': 'Country', name: 'Denmark' },
-    { '@type': 'Country', name: 'Spain' },
     ...CHILE_ADMIN_AREAS,
     ...CHILE_PLACES,
-    'Worldwide',
   ];
 }

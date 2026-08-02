@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "$comment": "MASTER geo config. Template reads only this file at BUILD time. To add Norway: push objects with countryCode NO and path like \"norge/oslo\". Do not hardcode city copy in JS templates.",
+  "$comment": "MASTER geo config — Chile only. Template reads this file at BUILD time.",
   "markets": [
     {
       "code": "CL",
@@ -9,15 +9,6 @@
       "htmlLang": "es-CL",
       "ogLocale": "es_CL",
       "hubPath": "chile"
-    },
-    {
-      "code": "NO",
-      "name": "Norway",
-      "hreflang": "nb-NO",
-      "htmlLang": "nb-NO",
-      "ogLocale": "nb_NO",
-      "hubPath": "norge",
-      "note": "Add entries with countryCode NO. Build uses markets[] for lang/nav."
     }
   ],
   "entries": [
@@ -448,7 +439,7 @@
         "faq": [
           {
             "q": "¿Hacen desarrollo web para empresas en Santiago?",
-            "a": "Sí. IrigoyenDev (Andrés Irigoyen) opera desde Santiago con alcance nacional e internacional: tiendas online, landings y plataformas a medida."
+            "a": "Sí. IrigoyenDev (Andrés Irigoyen) opera desde Santiago con cobertura en todo Chile: tiendas online, landings y plataformas a medida."
           },
           {
             "q": "¿Cuánto cuesta una tienda online en Santiago?",
@@ -456,7 +447,7 @@
           },
           {
             "q": "¿Atienden todo Santiago o solo comunas específicas?",
-            "a": "Operamos remoto para toda la RM y Chile. También tenemos presencia en España y Dinamarca."
+            "a": "Operamos remoto para toda la RM y Chile. Cotiza en https://www.irigoyendev.com/precios o escribe desde /#contact."
           }
         ],
         "ogTitle": "Desarrollo web en Santiago — startups, tech y servicios | IrigoyenDev",

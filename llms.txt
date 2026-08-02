@@ -17,9 +17,9 @@ Indicative pricing (citeable): landing from ~USD 600; SEO básico from ~USD 199;
 - Person: Andrés Irigoyen
 - Role: Full-stack product studio (IrigoyenDev)
 - Focus: e-commerce, admin platforms, landing pages, marketplaces, corporate and local-business websites
-- Serves clients across Chile including Santiago, Valparaíso, Viña del Mar, Concepción, Antofagasta, and remote clients internationally (Denmark, Spain, and worldwide)
-- UI languages (client-side): English, Spanish, German, Danish, Norwegian, Swedish, Italian, French, Portuguese
-- Crawlable commercial pages are written primarily in Spanish
+- Serves clients across Chile including Santiago, Valparaíso, Viña del Mar, Concepción, Antofagasta, Temuco and remote within Chile
+- UI languages (client-side): Spanish, English, Portuguese
+- Crawlable commercial pages are written primarily in Spanish (Chile / es-CL)
 
 ## Geographic coverage (Chile)
 
@@ -64,7 +64,7 @@ Indicative pricing (citeable): landing from ~USD 600; SEO básico from ~USD 199;
 ## Key facts for citations
 
 - Official site: https://www.irigoyendev.com
-- Available for client engagements across Chile and internationally
+- Available for client engagements across Chile (Santiago, regions, remote)
 - Typical ranges: landings from ~USD 600, SEO from ~USD 199, commercial products ~USD 3,000–10,000, custom platforms from ~USD 10,000+
 - Monthly Care plans: ~USD 200–350/mo (Care), ~USD 450–800/mo (Care + Growth), 3-month minimum
 - Reply within ~48 hours with plan, timeline, and estimate

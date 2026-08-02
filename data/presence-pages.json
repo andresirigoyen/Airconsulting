@@ -1,46 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:35:59.237Z",
+  "generatedAt": "2026-08-02T22:18:13.511Z",
   "pages": [
     {
       "path": "/desarrollo-web-temuco",
       "file": "desarrollo-web-temuco.html",
       "city": "Temuco",
       "countryCode": "CL",
-      "indexable": true
-    },
-    {
-      "path": "/desarrollo-web-madrid",
-      "file": "desarrollo-web-madrid.html",
-      "city": "Madrid",
-      "countryCode": "ES",
-      "indexable": false
-    },
-    {
-      "path": "/desarrollo-web-barcelona",
-      "file": "desarrollo-web-barcelona.html",
-      "city": "Barcelona",
-      "countryCode": "ES",
-      "indexable": false
-    },
-    {
-      "path": "/desarrollo-web-valencia",
-      "file": "desarrollo-web-valencia.html",
-      "city": "Valencia",
-      "countryCode": "ES",
-      "indexable": false
-    },
-    {
-      "path": "/web-developer-copenhagen",
-      "file": "web-developer-copenhagen.html",
-      "city": "Copenhagen",
-      "countryCode": "DK",
-      "indexable": true
-    },
-    {
-      "path": "/web-developer-aarhus",
-      "file": "web-developer-aarhus.html",
-      "city": "Aarhus",
-      "countryCode": "DK",
       "indexable": true
     }
   ]

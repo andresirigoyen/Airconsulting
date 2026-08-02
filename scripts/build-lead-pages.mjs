@@ -83,12 +83,8 @@ ${GTM_NOSCRIPT}
 ${mainHtml}
 
 ${buildFooter({
-  areas: 'Chile · Dinamarca · Remoto',
-  marketLinks: [
-    { href: '/chile', label: 'Chile' },
-    { href: '/da', label: 'Danmark' },
-    { href: '/en', label: 'English' },
-  ],
+  areas: 'Chile · Santiago · Regiones · Remoto',
+  marketLinks: [{ href: '/chile', label: 'Chile' }],
 })}
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous"></script>

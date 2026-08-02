@@ -17,7 +17,7 @@ alwaysApply: true
 - Comunas pedidas ya existen: Providencia, Peñalolén, La Reina, Las Condes, Ñuñoa, Vitacura, Valparaíso, Concepción, Antofagasta.
 - **Indexación geo:** hubs + regiones siempre indexables. Comunas indexables: `las-condes`, `providencia`, `vitacura`, `nunoa`, `la-reina`, `penalolen`, `lo-barnechea`, `santiago-centro`, `maipu`, `huechuraba`, `la-florida`, `puente-alto`. Resto de comunas: `"indexable": false` → `noindex, follow` + fuera del sitemap (URLs vivas).
 - NAP address: Américo Vespucio Norte 767, Las Condes (`entity-nap.mjs`). Street solo en home/org y `/santiago/las-condes`.
-- Hreflang: `x-default` siempre → `/`; hubs `/en` `/da` emiten cluster `es-CL`/`en`/`da`.
+- Mercado único: Chile (`es-CL`). Sin hubs `/en` `/da` `/es` ni presence ES/DK/NO. Hreflang: `es-CL` + `x-default` → `/`.
 
 ## Schema ya presente
 - Home: WebSite, Person, LocalBusiness `#business` (con address+geo), ProfessionalService, ItemList proyectos, FAQPage.

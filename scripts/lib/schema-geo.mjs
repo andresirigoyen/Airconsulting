@@ -34,8 +34,8 @@ export function organizationLd() {
       '@type': 'ContactPoint',
       telephone: ENTITY.telephone,
       contactType: 'sales',
-      areaServed: ['CL', 'DK', 'NO'],
-      availableLanguage: ['Spanish', 'English', 'Danish'],
+      areaServed: ['CL'],
+      availableLanguage: ['Spanish', 'English'],
       url: `${SITE}${ENTITY.contactPath}`,
     },
   };
