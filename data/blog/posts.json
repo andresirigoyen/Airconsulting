@@ -278,11 +278,12 @@
     {
       "slug": "pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet",
       "date": "2026-07-18",
+      "dateModified": "2026-08-02",
       "seo": {
-        "metaTitle": "Pasarelas de pago en Chile: Transbank vs Mercado Pago vs Getnet | IrigoyenDev",
-        "metaDescription": "Guía estructurada: qué es una pasarela, cuándo usarla, ventajas, desventajas, ejemplos, errores comunes y FAQ sobre Transbank, Mercado Pago y Getnet.",
-        "ogTitle": "Pasarelas de pago para e-commerce en Chile",
-        "ogDescription": "Definición, criterios, ejemplos y buenas prácticas para elegir pasarela en tu tienda online chilena."
+        "metaTitle": "Pasarela de pago Chile: Transbank, Mercado Pago y Getnet | Guía",
+        "metaDescription": "Pasarela de pago Chile para e-commerce: compara Transbank, Mercado Pago y Getnet. Cuándo usar cada una, errores comunes y checklist para tu tienda online.",
+        "ogTitle": "Pasarela de pago Chile: Transbank vs Mercado Pago vs Getnet",
+        "ogDescription": "Guía práctica para elegir pasarela de pago en Chile: criterios, pros/contras y errores que frenan el checkout."
       },
       "content": {
         "title": "Pasarelas de pago que mejor funcionan en Chile para e-commerce (Transbank vs Mercado Pago vs Getnet)",

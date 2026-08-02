@@ -369,12 +369,12 @@ const pages = [
   leadPage({
     file: 'crear-tienda-online.html',
     path: '/crear-tienda-online',
-    title: 'Crear tienda online Chile | Shopify, WooCommerce y a medida | IrigoyenDev',
+    title: 'Crear tienda online Chile | desde USD 1.304 — IrigoyenDev',
     description:
-      'Crear tienda online Chile: e-commerce para pymes, desarrollo tienda online Santiago, Shopify o WooCommerce, y tienda online que venda con checkout y SEO.',
-    ogTitle: 'Crear tienda online Chile que venda | IrigoyenDev',
+      'Crear tienda online Chile desde USD 1.304: e-commerce para pymes, checkout con pasarelas locales, panel admin y SEO. Shopify, WooCommerce o a medida — IrigoyenDev.',
+    ogTitle: 'Crear tienda online Chile | desde USD 1.304 — IrigoyenDev',
     ogDescription:
-      'E-commerce para pymes en Chile: catálogo, pagos, panel admin y SEO. Cotiza tu tienda online.',
+      'E-commerce para pymes en Chile: catálogo, pagos locales, panel admin y SEO. Cotiza tu tienda online desde USD 1.304.',
     serviceName: 'Crear tienda online / e-commerce Chile',
   }),
   leadPage({

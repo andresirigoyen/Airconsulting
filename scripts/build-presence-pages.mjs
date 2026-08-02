@@ -33,26 +33,27 @@ const PAGES = [
     countryCode: 'CL',
     lat: -38.7359,
     lng: -72.5904,
-    title: 'Desarrollo web Temuco | Landings desde USD 600 — IrigoyenDev',
+    title: 'Diseño web Temuco | Landings desde USD 600 — IrigoyenDev',
     description:
-      'Desarrollo web en Temuco y la Araucanía: tiendas desde USD 1.304, landings desde USD 600 y SEO local para pymes. Atención remota con IrigoyenDev.',
-    h1: 'Desarrollo web profesional en Temuco',
-    lead: 'Construimos canales digitales para negocios en Temuco y la Araucanía: e-commerce, landings de conversión y SEO técnico — con entrega remota y plazos claros.',
+      'Diseño web Temuco y desarrollo en la Araucanía: landings desde USD 600, tiendas desde USD 1.304 y SEO local para pymes. Atención remota — IrigoyenDev.',
+    h1: 'Diseño y desarrollo web profesional en Temuco',
+    lead: 'Diseño web y canales digitales para negocios en Temuco y la Araucanía: e-commerce, landings de conversión y SEO técnico — con entrega remota y plazos claros.',
     body: 'Trabajamos remoto con pymes y equipos de Temuco que necesitan una web que genere consultas o ventas, no solo presencia. Stack moderno, medición de conversiones y copy alineado al mercado local.',
     semanticTopics: [
-      'desarrollo web para pymes de la Araucanía',
+      'diseño web Temuco para pymes',
+      'desarrollo web Araucanía',
       'tiendas online con envíos a regiones',
       'landings de captación de leads',
       'SEO técnico para búsquedas locales',
     ],
     faq: [
       {
-        q: '¿Hacen desarrollo web para empresas en Temuco?',
+        q: '¿Hacen diseño y desarrollo web para empresas en Temuco?',
         a: 'Sí. Atendemos proyectos en Temuco y la Araucanía de forma remota: tiendas online, landings y plataformas con SEO técnico.',
       },
       {
         q: '¿Cuánto cuesta un proyecto web?',
-        a: 'Landings desde ~USD 600; productos comerciales desde ~desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios.',
+        a: 'Landings desde ~USD 600; productos comerciales desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios.',
       },
     ],
   },
@@ -219,14 +220,15 @@ const PAGES = [
     countryCode: 'DK',
     lat: 56.1629,
     lng: 10.2039,
-    title: 'Web developer Aarhus | E-commerce Denmark | IrigoyenDev',
+    title: 'Webudvikler Aarhus | Webshops fra USD 600 — IrigoyenDev',
     description:
-      'Web developer in Aarhus: e-commerce, landing pages and full-stack products for Danish SMEs. IrigoyenDev — Denmark-based.',
-    h1: 'Full-stack web development in Aarhus',
-    lead: 'Custom web products for Aarhus businesses: e-commerce, lead-gen landings and admin platforms with clear delivery.',
-    body: 'Same Copenhagen-based team, remote delivery for Jutland companies that need a measurable digital channel — stores, landings or internal tools.',
+      'Webudvikler i Aarhus: skræddersyede websites, webshops og landingsider — ikke Magento-bureau. Moderne stack, remote fra Danmark. IrigoyenDev.',
+    h1: 'Webudvikler i Aarhus — custom websites & webshops',
+    lead: 'Custom web products for Aarhus and Jutland: e-commerce, conversion landings and admin platforms — modern stack, not Magento/WordPress agency templates.',
+    body: 'Copenhagen-based team with remote delivery for Jutland companies that need a measurable digital channel. We build to your product and payments stack — we are not a Magento 2 agency.',
     semanticTopics: [
-      'web developer for Aarhus SMEs',
+      'webudvikler Aarhus',
+      'custom web developer Aarhus',
       'e-commerce Denmark',
       'conversion landing pages',
       'custom business platforms',
@@ -234,7 +236,11 @@ const PAGES = [
     faq: [
       {
         q: 'Do you take projects in Aarhus?',
-        a: 'Yes. We deliver remotely from Denmark: e-commerce, landings and custom platforms for Aarhus and Jutland teams.',
+        a: 'Yes. We deliver remotely from Denmark: custom e-commerce, landings and platforms for Aarhus and Jutland teams.',
+      },
+      {
+        q: 'Do you work with Magento 2?',
+        a: 'No. We build custom and modern stacks (e.g. headless/Next-style product sites). For Magento maintenance, hire a dedicated Magento agency.',
       },
       {
         q: 'How do we start?',

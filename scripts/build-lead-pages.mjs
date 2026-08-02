@@ -244,7 +244,7 @@ const pages = {
     </main>`,
   },
   'crear-tienda-online.html': {
-    title: 'Crear tienda online Chile | Shopify, WooCommerce y a medida | IrigoyenDev',
+    title: 'Crear tienda online Chile | desde USD 1.304 — IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/servicios" class="back-link">
