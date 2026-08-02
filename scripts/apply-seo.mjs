@@ -266,12 +266,12 @@ const pages = [
   {
     file: 'casos-de-exito.html',
     path: '/casos-de-exito',
-    title: 'Casos de éxito Chile | +30% ventas y SEO local — IrigoyenDev',
+    title: 'Casos de éxito Chile | Inmobiliaria, legal, e-commerce — IrigoyenDev',
     description:
-      'Casos reales en Chile y LatAm: TheBeeBaby (+30% ventas), Dragonmart (B2B) y Florería Valparaíso (SEO local). Métricas, stack y resultados medibles.',
-    ogTitle: 'Casos de éxito Chile | IrigoyenDev',
+      'Casos de éxito por industria en Chile: inmobiliaria (AVA7, Calafate, Dahuss), estudios jurídicos, marketplace TheBeeBaby (+30% ventas), B2B Dragonmart y SEO local Valparaíso.',
+    ogTitle: 'Casos de éxito Chile por industria | IrigoyenDev',
     ogDescription:
-      'Resultados reales de e-commerce, B2B y SEO local. Mira cómo subimos ventas y leads con desarrollo web + GEO.',
+      'Resultados reales agrupados por industria: inmobiliaria, legal, e-commerce, B2B y comercio local.',
     ogImage: OG_DEFAULT,
     ogType: 'website',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
@@ -294,17 +294,26 @@ const pages = [
         about: { '@id': ORG_ID },
         mainEntity: {
           '@type': 'ItemList',
+          name: 'Casos de éxito por industria',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, url: `${SITE}/projects/thebeebaby`, name: 'TheBeeBaby' },
-            { '@type': 'ListItem', position: 2, url: `${SITE}/projects/dragonmart`, name: 'Dragonmart' },
-            { '@type': 'ListItem', position: 3, url: `${SITE}/projects/floreria`, name: 'Florería El Nuevo Pensamiento' },
+            { '@type': 'ListItem', position: 1, url: `${SITE}/projects/ava7`, name: 'AVA7 Propiedades' },
+            { '@type': 'ListItem', position: 2, url: `${SITE}/projects/calafate`, name: 'Calafate Propiedades' },
+            { '@type': 'ListItem', position: 3, url: `${SITE}/projects/dahuss`, name: 'Dahuss Homes' },
+            { '@type': 'ListItem', position: 4, url: `${SITE}/projects/rluabogados`, name: 'Ruiz Leiva Abogados' },
+            { '@type': 'ListItem', position: 5, url: `${SITE}/projects/familiainternacional`, name: 'Familia Internacional' },
+            { '@type': 'ListItem', position: 6, url: `${SITE}/projects/thebeebaby`, name: 'TheBeeBaby' },
+            { '@type': 'ListItem', position: 7, url: `${SITE}/projects/dragonmart`, name: 'Dragonmart' },
+            { '@type': 'ListItem', position: 8, url: `${SITE}/projects/floreria`, name: 'Florería El Nuevo Pensamiento' },
+            { '@type': 'ListItem', position: 9, url: `${SITE}/projects/retorica`, name: 'Retórica' },
+            { '@type': 'ListItem', position: 10, url: `${SITE}/projects/radiochicureo`, name: 'Radio Chicureo' },
           ],
         },
       },
       speakableWebPageLd({
         name: 'Casos de éxito IrigoyenDev',
         url: `${SITE}/casos-de-exito`,
-        description: 'Resultados reales de proyectos web con métricas y testimonios.',
+        description:
+          'Resultados reales agrupados por industria: inmobiliaria, legal, e-commerce, B2B y comercio local.',
       }),
       {
         '@context': 'https://schema.org',

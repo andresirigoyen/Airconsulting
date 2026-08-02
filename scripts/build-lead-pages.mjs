@@ -605,7 +605,7 @@ const nestedPages = {
     </main>`,
   },
   'casos-de-exito.html': {
-    title: 'Casos de éxito Chile | +30% ventas y SEO local — IrigoyenDev',
+    title: 'Casos de éxito Chile | Inmobiliaria, legal, e-commerce — IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/" class="back-link">
@@ -618,18 +618,78 @@ const nestedPages = {
             <li aria-current="page">Casos de éxito</li>
           </ol>
         </nav>
-        <p class="project-eyebrow">Resultados · Portfolio</p>
+        <p class="project-eyebrow">Resultados · Por industria</p>
         <h1>Casos de éxito IrigoyenDev</h1>
-        <p class="project-lead geo-summary service-value-prop">Proyectos reales de e-commerce, inmobiliario y marca local: problema, solución, métricas y stack. Cada caso documenta cómo el desarrollo web + SEO/GEO se traduce en leads, ventas o operación más limpia.</p>
+        <p class="project-lead geo-summary service-value-prop">Proyectos reales agrupados por industria: inmobiliaria, estudios jurídicos, marketplaces, B2B, comercio local, eventos y medios. Cada caso documenta problema, solución y resultado de negocio.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary">Hablar de tu proyecto →</a>
             <a href="/#projects" class="project-cta-inline">Ver grid de proyectos →</a>
         </div>
     </header>
     <main id="main-content" class="container">
-        <section class="project-section fade-in">
-            <article class="content-block" id="thebeebaby" style="margin-bottom:3rem">
-                <h2>TheBeeBaby — marketplace e-commerce</h2>
+        <nav class="project-section fade-in" aria-label="Industrias">
+            <p class="project-eyebrow">Ir a industria</p>
+            <ul class="project-results-list">
+                <li><a href="#inmobiliaria">Inmobiliaria</a> · <a href="#estudios-juridicos">Estudios jurídicos</a> · <a href="#marketplaces">Marketplaces</a></li>
+                <li><a href="#b2b">B2B / logística</a> · <a href="#comercio-local">Comercio local</a> · <a href="#eventos">Eventos y marca</a> · <a href="#medios">Medios</a></li>
+            </ul>
+        </nav>
+
+        <section class="project-section fade-in" id="inmobiliaria" aria-labelledby="ind-inmobiliaria">
+            <h2 id="ind-inmobiliaria">Inmobiliaria</h2>
+            <p class="location-intro">Catálogos, buscadores y captación de leads para corredoras y PropTech en Chile.</p>
+            <article class="content-block" id="ava7" style="margin-bottom:2.5rem">
+                <h3>AVA7 Propiedades — Viña del Mar y Concón</h3>
+                <p><strong>Problema:</strong> marca inmobiliaria costera sin buscador serio ni embudo claro a WhatsApp.</p>
+                <p><strong>Solución:</strong> web de venta y arriendo con filtros, catálogo y CTAs locales.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> canal propio de captación en la costa de Valparaíso, listo para consultar por WhatsApp y contacto.</p>
+                <p><strong>Stack:</strong> front de alto rendimiento, SEO local, integración WhatsApp.</p>
+                <a href="/projects/ava7" class="project-link">Ver caso completo →</a>
+            </article>
+            <article class="content-block" id="calafate" style="margin-bottom:2.5rem">
+                <h3>Calafate Propiedades</h3>
+                <p><strong>Problema:</strong> inventario y leads dispersos; visitas que no convertían.</p>
+                <p><strong>Solución:</strong> ecosistema inmobiliario con catálogo rápido, embudos y panel admin.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> operación centralizada y retención de visitas en el catálogo.</p>
+                <p><strong>Stack:</strong> plataforma inmobiliaria, admin, automatización de prospectos.</p>
+                <a href="/projects/calafate" class="project-link">Ver caso completo →</a>
+            </article>
+            <article class="content-block" id="dahuss" style="margin-bottom:1rem">
+                <h3>Dahuss Homes</h3>
+                <p><strong>Problema:</strong> fricción entre búsqueda de propiedades y gestión de inventario.</p>
+                <p><strong>Solución:</strong> PropTech con búsquedas optimizadas y sistema seguro de inventario.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> tráfico cualificado hacia compradores de alto valor.</p>
+                <p><strong>Stack:</strong> plataforma inmobiliaria full stack.</p>
+                <a href="/projects/dahuss" class="project-link">Ver caso completo →</a>
+            </article>
+        </section>
+
+        <section class="project-section fade-in" id="estudios-juridicos" aria-labelledby="ind-legal">
+            <h2 id="ind-legal">Estudios jurídicos</h2>
+            <p class="location-intro">Sitios corporativos y de autoridad para firmas legales que necesitan leads y presencia seria.</p>
+            <article class="content-block" id="rluabogados" style="margin-bottom:2.5rem">
+                <h3>Ruiz Leiva Abogados</h3>
+                <p><strong>Problema:</strong> estudio corporativo sin plataforma moderna de captación.</p>
+                <p><strong>Solución:</strong> web legal con Next.js, embudo de leads y panel admin seguro.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> presencia digital premium alineada a la práctica corporativa.</p>
+                <p><strong>Stack:</strong> Next.js App Router, captación de leads, admin.</p>
+                <a href="/projects/rluabogados" class="project-link">Ver caso completo →</a>
+            </article>
+            <article class="content-block" id="familiainternacional" style="margin-bottom:1rem">
+                <h3>Familia Internacional</h3>
+                <p><strong>Problema:</strong> especialidad en derecho internacional de familia sin sitio que proyecte autoridad bilingüe.</p>
+                <p><strong>Solución:</strong> sitio institucional premium con diseño y mensaje claros.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> canal de contacto y autoridad digital para clientes locales e internacionales.</p>
+                <p><strong>Stack:</strong> web institucional, UX, SEO on-page.</p>
+                <a href="/projects/familiainternacional" class="project-link">Ver caso completo →</a>
+            </article>
+        </section>
+
+        <section class="project-section fade-in" id="marketplaces" aria-labelledby="ind-marketplaces">
+            <h2 id="ind-marketplaces">Marketplaces / e-commerce</h2>
+            <p class="location-intro">Plataformas de oferta y demanda con checkout, pagos y operación.</p>
+            <article class="content-block" id="thebeebaby" style="margin-bottom:1rem">
+                <h3>TheBeeBaby — marketplace e-commerce</h3>
                 <p><strong>Problema:</strong> catálogo fragmentado y checkout que frenaba la compra móvil.</p>
                 <p><strong>Solución:</strong> marketplace full stack con catálogo geolocalizado, pagos seguros y panel admin.</p>
                 <p class="service-value-prop"><strong>Resultado:</strong> +30% de ventas en el primer mes tras el nuevo checkout; experiencia móvil más rápida.</p>
@@ -637,8 +697,13 @@ const nestedPages = {
                 <blockquote class="faq-answer">“Andrés armó el e-commerce rapidísimo y el nuevo checkout fluye espectacular. En el primer mes las ventas subieron un 30%.” — María López, Operaciones · TheBeeBaby</blockquote>
                 <a href="/projects/thebeebaby" class="project-link">Ver caso completo →</a>
             </article>
-            <article class="content-block" id="dragonmart" style="margin-bottom:3rem">
-                <h2>Dragonmart — sourcing B2B</h2>
+        </section>
+
+        <section class="project-section fade-in" id="b2b" aria-labelledby="ind-b2b">
+            <h2 id="ind-b2b">B2B / logística</h2>
+            <p class="location-intro">Portales de sourcing y operación comercial que reducen trabajo manual.</p>
+            <article class="content-block" id="dragonmart" style="margin-bottom:1rem">
+                <h3>Dragonmart — sourcing B2B</h3>
                 <p><strong>Problema:</strong> cotizaciones manuales y flujo Asia-Chile sin sistema central.</p>
                 <p><strong>Solución:</strong> plataforma B2B de sourcing con catálogo y tooling para proveedores.</p>
                 <p class="service-value-prop"><strong>Resultado:</strong> horas de trabajo manual recuperadas cada día; cotizaciones automatizadas.</p>
@@ -646,8 +711,13 @@ const nestedPages = {
                 <blockquote class="faq-answer">“Necesitábamos digitalizar todo el flujo con Asia y automatizar cotizaciones. El sistema nos ahorra horas de trabajo manual todos los días.” — Carlos Ramírez, Director · Dragonmart</blockquote>
                 <a href="/projects/dragonmart" class="project-link">Ver caso completo →</a>
             </article>
-            <article class="content-block" id="floreria" style="margin-bottom:3rem">
-                <h2>Florería El Nuevo Pensamiento — Valparaíso</h2>
+        </section>
+
+        <section class="project-section fade-in" id="comercio-local" aria-labelledby="ind-local">
+            <h2 id="ind-local">Comercio local</h2>
+            <p class="location-intro">Negocios de barrio y regiones que necesitan SEO local y conversión por WhatsApp.</p>
+            <article class="content-block" id="floreria" style="margin-bottom:1rem">
+                <h3>Florería El Nuevo Pensamiento — Valparaíso</h3>
                 <p><strong>Problema:</strong> negocio local sin canal digital serio ni SEO local.</p>
                 <p><strong>Solución:</strong> web comercial rápida con catálogo visual, SEO local y embudo a WhatsApp.</p>
                 <p class="service-value-prop"><strong>Resultado:</strong> sitio listo para vender, indexación rápida en Google y conversión local por WhatsApp.</p>
@@ -655,7 +725,36 @@ const nestedPages = {
                 <blockquote class="faq-answer">“Nos entregó la tienda lista para vender. Se preocupó de que la web volara en velocidad y apareciéramos rápido en Google.” — Elena Martínez, Fundadora · Florería ENP</blockquote>
                 <a href="/projects/floreria" class="project-link">Ver caso completo →</a>
             </article>
-            <p><a href="/servicios">Servicios</a> · <a href="/servicios/geo-optimizacion-ia">GEO</a> · <a href="/#contact">Cotizar</a></p>
+        </section>
+
+        <section class="project-section fade-in" id="eventos" aria-labelledby="ind-eventos">
+            <h2 id="ind-eventos">Eventos y marca</h2>
+            <p class="location-intro">Sitios de captación para marcas con varias líneas de negocio.</p>
+            <article class="content-block" id="retorica" style="margin-bottom:1rem">
+                <h3>Retórica</h3>
+                <p><strong>Problema:</strong> múltiples líneas de negocio sin un canal digital unificado.</p>
+                <p><strong>Solución:</strong> experiencia de marca inmersiva orientada a leads corporativos.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> un solo embudo de adquisición para convertir visitas en clientes calificados.</p>
+                <p><strong>Stack:</strong> web de conversión, marca, SEO on-page.</p>
+                <a href="/projects/retorica" class="project-link">Ver caso completo →</a>
+            </article>
+        </section>
+
+        <section class="project-section fade-in" id="medios" aria-labelledby="ind-medios">
+            <h2 id="ind-medios">Medios</h2>
+            <p class="location-intro">Portales con streaming, CMS y monetización publicitaria.</p>
+            <article class="content-block" id="radiochicureo" style="margin-bottom:1rem">
+                <h3>Radio Chicureo</h3>
+                <p><strong>Problema:</strong> radio online sin plataforma propia para contenido y anunciantes.</p>
+                <p><strong>Solución:</strong> portal con transmisión en vivo, CMS y espacios publicitarios.</p>
+                <p class="service-value-prop"><strong>Resultado:</strong> medio digital operable y monetizable con gestión de contenidos propia.</p>
+                <p><strong>Stack:</strong> streaming, CMS, publicidad dinámica.</p>
+                <a href="/projects/radiochicureo" class="project-link">Ver caso completo →</a>
+            </article>
+        </section>
+
+        <section class="project-section fade-in">
+            <p><a href="/servicios">Servicios</a> · <a href="/servicios/geo-optimizacion-ia">GEO</a> · <a href="/#projects">Todos los proyectos</a> · <a href="/#contact">Cotizar</a></p>
         </section>
         ${chileSiloRelatedHtml()}
     </main>`,
