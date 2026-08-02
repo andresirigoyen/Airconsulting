@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildFooter, waLink, GTM_HEAD, GTM_NOSCRIPT } from './lib/page-chrome.mjs';
+import { chileSiloRelatedHtml } from './lib/schema-geo.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -84,7 +85,11 @@ ${mainHtml}
 
 ${buildFooter({
   areas: 'Chile · Santiago · Regiones · Remoto',
-  marketLinks: [{ href: '/chile', label: 'Chile' }],
+  marketLinks: [
+    { href: '/chile', label: 'Chile' },
+    { href: '/santiago', label: 'Santiago' },
+    { href: '/blog', label: 'Blog' },
+  ],
 })}
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" crossorigin="anonymous"></script>
@@ -237,6 +242,7 @@ const pages = {
                 <p data-i18n-html="svc.proofCtaHtml">¿Quieres un alcance y presupuesto claros? Revisa <a href="/precios">rangos de inversión</a> o escribe en el <a href="/#contact">formulario de contacto</a>.</p>
             </div>
         </section>
+        ${chileSiloRelatedHtml()}
     </main>`,
   },
   'crear-tienda-online.html': {
@@ -256,7 +262,7 @@ const pages = {
         </nav>
         <p class="project-eyebrow" data-i18n="shop.eyebrow">E-commerce · Servicio</p>
         <h1 data-i18n="shop.h1">Crear tienda online Chile que venda</h1>
-        <p class="project-lead" data-i18n="shop.lead">E-commerce para pymes Chile y desarrollo de tienda online en Santiago: a medida, Shopify o WooCommerce — catálogo, checkout, panel admin y SEO.</p>
+        <p class="project-lead geo-summary service-value-prop" data-i18n="shop.lead">E-commerce para pymes Chile y desarrollo de tienda online en Santiago: a medida, Shopify o WooCommerce — catálogo, checkout, panel admin y SEO.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="shop.cta">Cotizar tu tienda online →</a>
             <a href="/projects/thebeebaby" class="project-cta-inline" data-i18n="shop.caseCta">Ver caso TheBeeBaby →</a>
@@ -281,9 +287,31 @@ const pages = {
                     <li><a href="/projects/floreria">Florería El Nuevo Pensamiento</a> <span data-i18n="shop.case2">— catálogo local + WhatsApp</span></li>
                     <li><a href="/projects/dragonmart">Dragonmart</a> <span data-i18n="shop.case3">— sourcing corporativo B2B</span></li>
                 </ul>
-                <p data-i18n-html="shop.footerHtml"><a href="/precios">Ver rangos de inversión</a> · <a href="/landing-pages">También hacemos landing pages</a></p>
+                <p data-i18n-html="shop.footerHtml"><a href="/precios">Ver rangos de inversión</a> · <a href="/landing-pages">También hacemos landing pages</a> · <a href="/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet">Pasarelas de pago Chile</a></p>
             </div>
         </section>
+        <section class="project-section fade-in" id="faq" aria-labelledby="shop-faq-title">
+            <h2 id="shop-faq-title">Preguntas frecuentes</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Cuánto cuesta crear una tienda online en Chile?</summary>
+                    <p class="faq-answer">Desde ~USD 1.304 para un producto comercial con catálogo, checkout y SEO. Landings desde ~USD 600. Detalle en <a href="/precios">/precios</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Shopify, WooCommerce o desarrollo a medida?</summary>
+                    <p class="faq-answer">Depende del catálogo, integraciones y control. Comparamos opciones en el <a href="/blog/shopify-woocommerce-tienda-medida-chile">artículo Shopify vs WooCommerce vs a medida</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Incluyen pasarelas de pago locales?</summary>
+                    <p class="faq-answer">Sí. Integramos Transbank, Mercado Pago u otras según el stack. Guía: <a href="/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet">pasarela de pago Chile</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Atienden Santiago y regiones?</summary>
+                    <p class="faq-answer">Sí. Cobertura en Santiago, Valparaíso, Concepción, Antofagasta, Temuco y remoto en todo Chile. Ver <a href="/chile">hub Chile</a>.</p>
+                </details>
+            </div>
+        </section>
+        ${chileSiloRelatedHtml()}
     </main>`,
   },
   'landing-pages.html': {
@@ -303,7 +331,7 @@ const pages = {
         </nav>
         <p class="project-eyebrow" data-i18n="landing.eyebrow">Landings · Servicio</p>
         <h1 data-i18n="landing.h1">Landing page de conversión en Chile</h1>
-        <p class="project-lead money-copy" data-i18n="landing.lead">Diseño de landing page Chile para campañas publicitarias: una oferta, un mensaje, un CTA. Landings que convierten leads o ventas — desde ~USD 600.</p>
+        <p class="project-lead money-copy geo-summary service-value-prop" data-i18n="landing.lead">Diseño de landing page Chile para campañas publicitarias: una oferta, un mensaje, un CTA. Landings que convierten leads o ventas — desde ~USD 600.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="landing.cta">Pedir propuesta de landing →</a>
             <a href="/projects/retorica" class="project-cta-inline" data-i18n="landing.caseCta">Ver caso Retórica →</a>
@@ -325,9 +353,35 @@ const pages = {
                     <li><a href="/projects/floreria">Florería El Nuevo Pensamiento</a> <span data-i18n="landing.case2">— conversión local por WhatsApp</span></li>
                     <li><a href="/projects/familiainternacional">Familia Internacional</a> <span data-i18n="landing.case3">— autoridad + contacto</span></li>
                 </ul>
-                <p data-i18n-html="landing.footerHtml">¿Necesitas también tienda o plataforma? Mira <a href="/crear-tienda-online">crear tienda online</a> o todos los <a href="/servicios">servicios</a>.</p>
+                <p data-i18n-html="landing.footerHtml">¿Necesitas también tienda o plataforma? Mira <a href="/crear-tienda-online">crear tienda online</a> o todos los <a href="/servicios">servicios</a>. Guía de precios: <a href="/blog/cuanto-cuesta-landing-page-chile">cuánto cuesta una landing en Chile</a>.</p>
             </div>
         </section>
+        <section class="project-section fade-in" id="faq" aria-labelledby="landing-faq-title">
+            <h2 id="landing-faq-title">Preguntas frecuentes</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Cuánto cuesta una landing page de conversión en Chile?</summary>
+                    <p class="faq-answer">Desde ~USD 600 para una página enfocada en un CTA. Variantes A/B, i18n o CRM se cotizan según alcance. Detalle en <a href="/precios">/precios</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Landing page o sitio web completo?</summary>
+                    <p class="faq-answer">Si el objetivo es una campaña u oferta concreta, landing. Si necesitas catálogo, blog y múltiples servicios, un sitio o tienda. Se pueden combinar.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Incluyen SEO y velocidad?</summary>
+                    <p class="faq-answer">Sí: títulos, meta description, canonical, estructura semántica, imágenes optimizadas y Core Web Vitals.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo usarla con Google Ads y Meta Ads?</summary>
+                    <p class="faq-answer">Sí. URL limpia, eventos de conversión y mensaje alineado al anuncio, lista para medir con pixel o Google Ads.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuánto tarda?</summary>
+                    <p class="faq-answer">Una landing enfocada suele salir en días cuando el mensaje y los activos (logo, fotos, oferta) están claros.</p>
+                </details>
+            </div>
+        </section>
+        ${chileSiloRelatedHtml()}
     </main>`,
   },
   'precios.html': {
@@ -347,7 +401,7 @@ const pages = {
         </nav>
         <p class="project-eyebrow" data-i18n="price.eyebrow">Inversión · Transparencia</p>
         <h1 data-i18n="price.h1">Cuánto cuesta una tienda online y el desarrollo web en Chile</h1>
-        <p class="project-lead" data-i18n="price.lead">Tarifas de desarrollo web y presupuesto e-commerce con rangos claros. Precio de desarrollo web en Chile como referencia antes de cotizar.</p>
+        <p class="project-lead geo-summary service-value-prop" data-i18n="price.lead">Tarifas de desarrollo web y presupuesto e-commerce con rangos claros. Precio de desarrollo web en Chile como referencia antes de cotizar.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="price.cta">Solicitar cotización personalizada →</a>
         </div>
@@ -407,9 +461,31 @@ const pages = {
                     <li data-i18n="price.factor3">SEO, i18n, paneles admin y migración de datos</li>
                     <li data-i18n="price.factor4">Plazo y nivel de soporte post-lanzamiento (Care / Care + Growth)</li>
                 </ul>
-                <p data-i18n-html="price.footerHtml">Respuesta típica en 48 horas con plan, plazos y estimación. <a href="/faq">Más respuestas en el FAQ</a> · <a href="/servicios#care">Detalle de planes Care</a>.</p>
+                <p data-i18n-html="price.footerHtml">Respuesta típica en 48 horas con plan, plazos y estimación. <a href="/faq">Más respuestas en el FAQ</a> · <a href="/servicios#care">Detalle de planes Care</a> · <a href="/blog/cuanto-cuesta-landing-page-chile">Guía landing</a> · <a href="/crear-tienda-online">Crear tienda</a>.</p>
             </div>
         </section>
+        <section class="project-section fade-in" id="faq" aria-labelledby="price-faq-title">
+            <h2 id="price-faq-title">Preguntas frecuentes sobre precios</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Los precios incluyen IVA?</summary>
+                    <p class="faq-answer">Los rangos en USD son orientativos de honorarios de desarrollo. El detalle fiscal (boleta/factura e IVA en Chile) se confirma en la cotización formal.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Hay costos mensuales obligatorios?</summary>
+                    <p class="faq-answer">No. El proyecto puntual se cotiza aparte. Los planes Care (mantenimiento) y Care + Growth son opcionales tras el lanzamiento, con mínimo 3 meses.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuánto cuesta una tienda online vs una landing?</summary>
+                    <p class="faq-answer">Landing desde ~USD 600. Producto comercial / tienda desde ~USD 1.304. Plataformas a medida desde ~USD 10.000. Ver también <a href="/crear-tienda-online">crear tienda online</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo pagar en CLP?</summary>
+                    <p class="faq-answer">Sí. Cotizamos en USD como referencia internacional y podemos facturar/cobrar en CLP al tipo de cambio acordado.</p>
+                </details>
+            </div>
+        </section>
+        ${chileSiloRelatedHtml()}
     </main>`,
   },
   'faq.html': {
@@ -522,9 +598,10 @@ const nestedPages = {
                         <p class="faq-answer">Auditoría de citabilidad, implementación de Schema y fragmentos GEO, llms.txt/ai.txt, y un plan de contenido multi-canal con métricas de seguimiento.</p>
                     </article>
                 </div>
-                <p style="margin-top:2rem"><a href="/precios">Ver precios</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/#contact">Contacto</a></p>
+                <p style="margin-top:2rem"><a href="/precios">Ver precios</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/#contact">Contacto</a> · <a href="/blog/geo-optimizacion-ia-que-es-chile">Qué es GEO</a></p>
             </div>
         </section>
+        ${chileSiloRelatedHtml()}
     </main>`,
   },
   'casos-de-exito.html': {
@@ -580,6 +657,7 @@ const nestedPages = {
             </article>
             <p><a href="/servicios">Servicios</a> · <a href="/servicios/geo-optimizacion-ia">GEO</a> · <a href="/#contact">Cotizar</a></p>
         </section>
+        ${chileSiloRelatedHtml()}
     </main>`,
   },
 };

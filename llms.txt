@@ -36,8 +36,20 @@ Indicative pricing (citeable): landing from ~USD 600; SEO básico from ~USD 199;
 - [Crear tienda online](https://www.irigoyendev.com/crear-tienda-online): E-commerce service page
 - [Landing pages](https://www.irigoyendev.com/landing-pages): Conversion landing page service
 - [Precios](https://www.irigoyendev.com/precios): Indicative investment ranges
+- [GEO / optimización para IA](https://www.irigoyendev.com/servicios/geo-optimizacion-ia): Generative Engine Optimization
+- [Casos de éxito](https://www.irigoyendev.com/casos-de-exito): Documented outcomes (e-commerce, B2B, local SEO)
 - [FAQ](https://www.irigoyendev.com/faq): Hiring questions (pricing, timelines, geography)
 - [Blog](https://www.irigoyendev.com/blog): Informational guides for Chilean businesses
+
+## Priority Santiago comunas (indexable)
+
+- [Las Condes](https://www.irigoyendev.com/santiago/las-condes)
+- [Providencia](https://www.irigoyendev.com/santiago/providencia)
+- [Vitacura](https://www.irigoyendev.com/santiago/vitacura)
+- [Ñuñoa](https://www.irigoyendev.com/santiago/nunoa)
+- [La Reina](https://www.irigoyendev.com/santiago/la-reina)
+- [Peñalolén](https://www.irigoyendev.com/santiago/penalolen)
+- Full list: [Santiago comunas](https://www.irigoyendev.com/santiago/comunas)
 
 ## Services
 

@@ -79,10 +79,24 @@ function loadBlogUrls() {
   if (!fs.existsSync(blogFile)) return [];
   const data = JSON.parse(fs.readFileSync(blogFile, 'utf8'));
   /** @type {SitemapUrl[]} */
-  const urls = [{ loc: '/blog', changefreq: 'weekly', priority: '0.8' }];
+  const postDates = (data.posts || [])
+    .map((p) => p.dateModified || p.updated || p.date)
+    .filter(Boolean)
+    .sort();
+  const hubLastmod = postDates.length ? postDates[postDates.length - 1] : undefined;
+  /** @type {SitemapUrl[]} */
+  const urls = [
+    { loc: '/blog', changefreq: 'weekly', priority: '0.8', ...(hubLastmod ? { lastmod: hubLastmod } : {}) },
+  ];
   for (const p of data.posts || []) {
     if (!p?.slug) continue;
-    urls.push({ loc: `/blog/${p.slug}`, changefreq: 'monthly', priority: '0.75' });
+    const lastmod = p.dateModified || p.updated || p.date;
+    urls.push({
+      loc: `/blog/${p.slug}`,
+      changefreq: 'monthly',
+      priority: '0.75',
+      ...(lastmod ? { lastmod } : {}),
+    });
   }
   return urls;
 }

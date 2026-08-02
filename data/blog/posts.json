@@ -273,7 +273,8 @@
         ],
         "ctaHref": "/desarrollo-web-antofagasta",
         "ctaLabel": "Ver servicios en Antofagasta →"
-      }
+      },
+      "dateModified": "2026-07-18"
     },
     {
       "slug": "pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet",
@@ -707,7 +708,8 @@
         ],
         "ctaHref": "/servicios/geo-optimizacion-ia",
         "ctaLabel": "Ver servicio GEO →"
-      }
+      },
+      "dateModified": "2026-07-22"
     },
     {
       "slug": "como-elegir-desarrollador-web-chile",
@@ -945,7 +947,8 @@
         ],
         "ctaHref": "/#contact",
         "ctaLabel": "Pedir plan de proyecto →"
-      }
+      },
+      "dateModified": "2026-07-25"
     },
     {
       "slug": "seo-local-pymes-santiago-guia",
@@ -1155,7 +1158,8 @@
         ],
         "ctaHref": "/santiago/comunas",
         "ctaLabel": "Ver comunas Santiago →"
-      }
+      },
+      "dateModified": "2026-08-01"
     },
     {
       "slug": "cuanto-cuesta-landing-page-chile",
@@ -1362,7 +1366,8 @@
         ],
         "ctaHref": "/landing-pages",
         "ctaLabel": "Ver servicio landing pages →"
-      }
+      },
+      "dateModified": "2026-08-05"
     },
     {
       "slug": "shopify-woocommerce-tienda-medida-chile",
@@ -1568,7 +1573,8 @@
         ],
         "ctaHref": "/crear-tienda-online",
         "ctaLabel": "Cotizar tienda online →"
-      }
+      },
+      "dateModified": "2026-08-08"
     }
   ]
 }

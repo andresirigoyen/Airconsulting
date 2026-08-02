@@ -14,6 +14,7 @@ import {
   PERSON_ID,
   WEBSITE_ID,
   organizationLd,
+  personLd,
   serviceOfferCatalogLd,
   speakableWebPageLd,
   openingHoursSpec,
@@ -50,36 +51,7 @@ const pages = [
         inLanguage: ['es-CL'],
         publisher: { '@id': ORG_ID },
       },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        '@id': PERSON_ID,
-        name: 'Andrés Irigoyen',
-        alternateName: ['IrigoyenDev', 'andresirigoyen'],
-        url: `${SITE}/`,
-        image: OG_DEFAULT,
-        jobTitle: 'Full-Stack Developer',
-        description:
-          'Desarrollador full stack freelance especializado en e-commerce, paneles admin y landing pages de conversión.',
-        knowsAbout: [
-          'Desarrollo full stack',
-          'E-commerce',
-          'Landing pages',
-          'Plataformas de negocio',
-          'Marketplaces',
-          'SEO',
-          'GEO',
-        ],
-        sameAs: [...ENTITY.sameAs],
-        worksFor: { '@id': ORG_ID },
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'sales',
-          telephone: ENTITY.telephone,
-          url: `${SITE}/#contact`,
-          availableLanguage: ['Spanish', 'English'],
-        },
-      },
+      personLd(),
       {
         '@context': 'https://schema.org',
         '@type': ['ProfessionalService', 'LocalBusiness'],
@@ -376,6 +348,24 @@ const pages = [
     ogDescription:
       'E-commerce para pymes en Chile: catálogo, pagos locales, panel admin y SEO. Cotiza tu tienda online desde USD 1.304.',
     serviceName: 'Crear tienda online / e-commerce Chile',
+    faq: [
+      {
+        q: '¿Cuánto cuesta crear una tienda online en Chile?',
+        a: 'Desde ~USD 1.304 para un producto comercial con catálogo, checkout y SEO. Landings desde ~USD 600. Detalle en https://www.irigoyendev.com/precios',
+      },
+      {
+        q: '¿Shopify, WooCommerce o desarrollo a medida?',
+        a: 'Depende del catálogo, integraciones y control. Comparamos opciones en https://www.irigoyendev.com/blog/shopify-woocommerce-tienda-medida-chile',
+      },
+      {
+        q: '¿Incluyen pasarelas de pago locales?',
+        a: 'Sí. Integramos Transbank, Mercado Pago u otras según el stack. Guía: https://www.irigoyendev.com/blog/pasarelas-pago-ecommerce-chile-transbank-mercadopago-getnet',
+      },
+      {
+        q: '¿Atienden Santiago y regiones?',
+        a: 'Sí. Cobertura en Santiago, Valparaíso, Concepción, Antofagasta, Temuco y remoto en todo Chile. Ver https://www.irigoyendev.com/chile',
+      },
+    ],
   }),
   leadPage({
     file: 'landing-pages.html',
@@ -420,6 +410,24 @@ const pages = [
     ogDescription:
       'Landings desde USD 600, tiendas desde USD 1.304. Cotiza tu proyecto con rangos transparentes en USD.',
     serviceName: 'Precios desarrollo web y e-commerce',
+    faq: [
+      {
+        q: '¿Los precios incluyen IVA?',
+        a: 'Los rangos en USD son orientativos de honorarios de desarrollo. El detalle fiscal (boleta/factura e IVA en Chile) se confirma en la cotización formal.',
+      },
+      {
+        q: '¿Hay costos mensuales obligatorios?',
+        a: 'No. El proyecto puntual se cotiza aparte. Los planes Care (mantenimiento) y Care + Growth son opcionales tras el lanzamiento, con mínimo 3 meses.',
+      },
+      {
+        q: '¿Cuánto cuesta una tienda online vs una landing?',
+        a: 'Landing desde ~USD 600. Producto comercial / tienda desde ~USD 1.304. Plataformas a medida desde ~USD 10.000.',
+      },
+      {
+        q: '¿Puedo pagar en CLP?',
+        a: 'Sí. Cotizamos en USD como referencia internacional y podemos facturar/cobrar en CLP al tipo de cambio acordado.',
+      },
+    ],
   }),
   {
     file: 'faq.html',
@@ -596,6 +604,7 @@ function leadPage({ file, path: pagePath, title, description, ogTitle, ogDescrip
   /** @type {object[]} */
   const jsonLd = [
     organizationLd(),
+    personLd(),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',

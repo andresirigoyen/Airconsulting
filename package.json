@@ -19,7 +19,7 @@
     "build:regions": "npm run build:geo",
     "build:blog": "node scripts/build-blog.mjs",
     "build:sitemap": "node scripts/build-sitemap.mjs",
-    "build:seo": "npm run seo:pages && npm run build:blog && npm run build:presence && npm run sync:presence && npm run build:geo && npm run build:hubs",
+    "build:seo": "npm run seo:pages && npm run build:blog && npm run build:presence && npm run sync:presence && npm run build:geo && npm run build:hubs && node scripts/ping-indexnow.mjs --soft",
     "build:hubs": "node scripts/build-seo-hubs.mjs && npm run build:sitemap",
     "build:geo:from-legacy": "npm run sync:geo && npm run build:geo",
     "audit:locations": "node scripts/audit-location-sitemap.mjs",

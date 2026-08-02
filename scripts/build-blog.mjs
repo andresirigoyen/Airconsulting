@@ -19,7 +19,14 @@ import {
   buildHead,
   renderPage,
 } from './lib/page-chrome.mjs';
-import { organizationLd, speakableWebPageLd, ORG_ID } from './lib/schema-geo.mjs';
+import {
+  organizationLd,
+  personLd,
+  speakableWebPageLd,
+  chileSiloRelatedHtml,
+  ORG_ID,
+  PERSON_ID,
+} from './lib/schema-geo.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -193,15 +200,22 @@ function main() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>Chile</span>
         </a>
+        <nav class="geo-breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li aria-current="page">Blog</li>
+          </ol>
+        </nav>
         <p class="project-eyebrow" data-i18n="blog.eyebrow">${escapeHtml(hub.content.eyebrow)}</p>
         <h1 data-i18n="blog.h1">${escapeHtml(hub.content.h1)}</h1>
-        <p class="project-lead" data-i18n="blog.lead">${escapeHtml(hub.content.lead)}</p>
+        <p class="project-lead geo-summary service-value-prop" data-i18n="blog.lead">${escapeHtml(hub.content.lead)}</p>
     </header>
     <div class="container">
         <section class="project-section fade-in">
             <p class="geo-lang-notice" role="note" data-i18n="blog.noticeEs">Los artículos de este blog están disponibles en español.</p>
             <div class="location-grid" lang="es">${cards}</div>
         </section>
+        ${chileSiloRelatedHtml()}
     </div>
     </main>`;
 
@@ -215,14 +229,50 @@ function main() {
     geoRegion: 'CL',
     i18nDescKey: 'blog.metaDesc',
     jsonLd: [
+      organizationLd(),
+      personLd(),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog` },
+        ],
+      },
       {
         '@context': 'https://schema.org',
         '@type': 'Blog',
+        '@id': `${SITE}/blog#blog`,
         name: hub.seo.metaTitle,
         url: `${SITE}/blog`,
         description: hub.seo.metaDescription,
+        inLanguage: 'es-CL',
         publisher: { '@id': ORG_ID },
+        author: { '@id': PERSON_ID },
+        blogPost: data.posts.map((p) => ({
+          '@type': 'BlogPosting',
+          headline: p.content.title,
+          url: `${SITE}/blog/${p.slug}`,
+          datePublished: p.date,
+          dateModified: p.dateModified || p.updated || p.date,
+        })),
       },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Artículos del blog IrigoyenDev',
+        itemListElement: data.posts.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: p.content.title,
+          url: `${SITE}/blog/${p.slug}`,
+        })),
+      },
+      speakableWebPageLd({
+        name: hub.seo.metaTitle,
+        url: `${SITE}/blog`,
+        description: hub.seo.metaDescription,
+      }),
     ],
   });
 
@@ -279,17 +329,21 @@ function main() {
       geoRegion: 'CL',
       jsonLd: [
         organizationLd(),
+        personLd(),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
+          '@id': `${SITE}/blog/${post.slug}#article`,
           headline: post.content.title,
           datePublished: post.date,
           dateModified: post.dateModified || post.updated || post.date,
           description: post.seo.metaDescription,
           url: `${SITE}/blog/${post.slug}`,
-          author: { '@id': `${SITE}/#person` },
+          inLanguage: 'es-CL',
+          author: { '@id': PERSON_ID },
           publisher: { '@id': ORG_ID },
           mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+          isPartOf: { '@id': `${SITE}/blog#blog` },
         },
         speakableWebPageLd({
           name: post.content.title,
@@ -308,6 +362,55 @@ function main() {
     );
     console.log('Wrote', `blog/${post.slug}.html`);
   }
+
+  syncHomeFeaturedBlog(data.posts);
+}
+
+/**
+ * Inject top blog posts into homepage between markets and about.
+ * @param {object[]} posts
+ */
+function syncHomeFeaturedBlog(posts) {
+  const indexPath = path.join(root, 'index.html');
+  if (!fs.existsSync(indexPath)) return;
+  const start = '<!-- AUTO:featured-blog:start -->';
+  const end = '<!-- AUTO:featured-blog:end -->';
+  let html = fs.readFileSync(indexPath, 'utf8');
+  if (!html.includes(start) || !html.includes(end)) {
+    console.warn('index.html missing AUTO:featured-blog markers; skip home blog sync');
+    return;
+  }
+  const featured = [...posts]
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+    .slice(0, 3);
+  const cards = featured
+    .map(
+      (p) => `
+                <article class="location-card">
+                    <p class="location-card__eyebrow"><time datetime="${escapeAttr(p.date)}">${escapeHtml(p.date)}</time></p>
+                    <h3><a href="/blog/${escapeAttr(p.slug)}">${escapeHtml(p.content.title)}</a></h3>
+                    <p>${escapeHtml(p.content.excerpt)}</p>
+                    <a href="/blog/${escapeAttr(p.slug)}" class="project-link" data-i18n="blog.readArticle">Leer artículo →</a>
+                </article>`
+    )
+    .join('\n');
+  const block = `${start}
+    <section id="recursos" class="section container fade-in" aria-labelledby="recursos-title">
+        <div class="section-header">
+            <h2 id="recursos-title" data-i18n="home.blogTitle">Recursos para tu negocio en Chile</h2>
+            <p class="section-subtitle" data-i18n="home.blogSub">Guías prácticas de e-commerce, SEO local y GEO — sin relleno.</p>
+        </div>
+        <div class="location-grid">${cards}
+        </div>
+        <p style="margin-top:1.5rem"><a href="/blog" class="project-link" data-i18n="home.blogAll">Ver todo el blog →</a></p>
+    </section>
+${end}`;
+  html = html.replace(
+    new RegExp(`${start}[\\s\\S]*?${end}`),
+    () => block
+  );
+  fs.writeFileSync(indexPath, html, 'utf8');
+  console.log('Synced featured blog on index.html');
 }
 
 main();

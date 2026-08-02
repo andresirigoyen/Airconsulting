@@ -323,7 +323,11 @@ export function renderPage({
   dataGeoSeo = '',
   skipLink = 'Saltar al contenido',
   footerGeo = 'Chile · Santiago · Regiones · Remoto',
-  footerMarketLinks = [{ href: '/chile', label: 'Chile' }],
+  footerMarketLinks = [
+    { href: '/chile', label: 'Chile' },
+    { href: '/santiago', label: 'Santiago' },
+    { href: '/blog', label: 'Blog' },
+  ],
 }) {
   const wa = waLink(
     '¡Hola! Vi tu portafolio y me gustaría platicar sobre un posible proyecto.'

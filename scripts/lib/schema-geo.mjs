@@ -30,6 +30,7 @@ export function organizationLd() {
     telephone: ENTITY.telephone,
     address: entityPostalAddress(),
     sameAs: [...ENTITY.sameAs],
+    founder: { '@id': PERSON_ID },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: ENTITY.telephone,
@@ -39,6 +40,60 @@ export function organizationLd() {
       url: `${SITE}${ENTITY.contactPath}`,
     },
   };
+}
+
+/** Person node — Andrés Irigoyen; cite as BlogPosting author / LocalBusiness provider. */
+export function personLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': PERSON_ID,
+    name: ENTITY.founder,
+    alternateName: [ENTITY.legalName, 'andresirigoyen'],
+    url: ENTITY.url,
+    image: OG_DEFAULT,
+    jobTitle: 'Full-Stack Developer',
+    description:
+      'Desarrollador full stack freelance especializado en e-commerce, paneles admin y landing pages de conversión para Chile.',
+    knowsAbout: [
+      'Desarrollo full stack',
+      'E-commerce',
+      'Landing pages',
+      'Plataformas de negocio',
+      'Marketplaces',
+      'SEO',
+      'GEO',
+      'SEO local Chile',
+    ],
+    sameAs: [...ENTITY.sameAs],
+    worksFor: { '@id': ORG_ID },
+    homeLocation: {
+      '@type': 'Place',
+      address: entityPostalAddress(),
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      telephone: ENTITY.telephone,
+      url: `${SITE}${ENTITY.contactPath}`,
+      availableLanguage: ['Spanish', 'English'],
+      areaServed: 'CL',
+    },
+  };
+}
+
+/** Shared Chile silo links for lead/geo outros (internal linking). */
+export function chileSiloRelatedHtml() {
+  return `<section class="project-section fade-in" aria-labelledby="silo-related-title">
+            <h2 id="silo-related-title">Enlaces relacionados</h2>
+            <ul class="project-results-list">
+                <li><a href="/chile">Desarrollo web Chile</a> — hub nacional por regiones</li>
+                <li><a href="/santiago">Santiago</a> · <a href="/santiago/comunas">52 comunas</a> · <a href="/santiago/las-condes">Las Condes</a> · <a href="/santiago/providencia">Providencia</a></li>
+                <li><a href="/crear-tienda-online">Crear tienda online</a> · <a href="/landing-pages">Landing pages</a> · <a href="/precios">Precios</a></li>
+                <li><a href="/servicios/geo-optimizacion-ia">GEO para IA</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/blog">Blog</a></li>
+                <li><a href="/diseno-desarrollo-web-valparaiso">Valparaíso</a> · <a href="/desarrollo-web-concepcion">Concepción</a> · <a href="/desarrollo-web-antofagasta">Antofagasta</a> · <a href="/desarrollo-web-temuco">Temuco</a></li>
+            </ul>
+        </section>`;
 }
 
 /**

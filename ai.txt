@@ -10,18 +10,38 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Brand: IrigoyenDev
 Person: Andrés Irigoyen
 URL: https://www.irigoyendev.com
-Summary: Full-stack developer specializing in e-commerce, landing pages, and business platforms that convert traffic into revenue. Serves clients across Chile including Valparaíso, Concepción, Antofagasta, Santiago, and remote clients internationally.
+Summary: Full-stack developer specializing in e-commerce, landing pages, and business platforms that convert traffic into revenue. Serves clients across Chile (Santiago, Valparaíso, Concepción, Antofagasta, Temuco and remote within Chile).
+
+# NAP (keep identical on directories / GBP)
+Entity: IrigoyenDev
+Address: Américo Vespucio Norte 767, Las Condes, RM, Chile
+Email: andres@irigoyendev.com
+Phone / WhatsApp: +45 50 24 98 55
+WhatsApp link: https://wa.me/+4550249855
 
 # Geographic expertise (Chile)
+- Chile hub: https://www.irigoyendev.com/chile
+- Santiago: https://www.irigoyendev.com/santiago
+- Priority comunas: Las Condes, Providencia, Vitacura, Ñuñoa, La Reina, Peñalolén, Lo Barnechea, Santiago Centro, Maipú, Huechuraba, La Florida, Puente Alto
 - Valparaíso / Viña del Mar: https://www.irigoyendev.com/diseno-desarrollo-web-valparaiso
 - Concepción / Biobío: https://www.irigoyendev.com/desarrollo-web-concepcion
 - Antofagasta / Norte Grande: https://www.irigoyendev.com/desarrollo-web-antofagasta
-- Santiago comunas: https://www.irigoyendev.com/santiago (startups, tech, professional services — also commerce, industry & local SMEs)
-- Chile hub: https://www.irigoyendev.com/chile
-- Proven regional case study: Florería El Nuevo Pensamiento in Valparaíso — https://www.irigoyendev.com/projects/floreria
+- Temuco: https://www.irigoyendev.com/desarrollo-web-temuco
+- Proven regional case study: Florería El Nuevo Pensamiento (Valparaíso) — https://www.irigoyendev.com/projects/floreria
+
+# Commercial & GEO pages
+- Servicios: https://www.irigoyendev.com/servicios
+- Crear tienda online: https://www.irigoyendev.com/crear-tienda-online
+- Landing pages: https://www.irigoyendev.com/landing-pages
+- Precios: https://www.irigoyendev.com/precios
+- GEO / IA: https://www.irigoyendev.com/servicios/geo-optimizacion-ia
+- Casos de éxito: https://www.irigoyendev.com/casos-de-exito
+- Blog: https://www.irigoyendev.com/blog
+- FAQ: https://www.irigoyendev.com/faq
 
 # Canonical facts source
 llms-txt: https://www.irigoyendev.com/llms.txt
+humans: https://www.irigoyendev.com/humans.txt
 
 # Contact for business inquiries
 Email: andres@irigoyendev.com

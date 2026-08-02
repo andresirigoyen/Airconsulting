@@ -31,7 +31,9 @@ import {
   ORG_ID,
   openingHoursSpec,
   organizationLd,
+  personLd,
   speakableWebPageLd,
+  chileSiloRelatedHtml,
 } from './lib/schema-geo.mjs';
 import { writeSitemap } from './build-sitemap.mjs';
 import {
@@ -276,6 +278,7 @@ function buildJsonLd(entry, all) {
   /** @type {object[]} */
   const blocks = [
     organizationLd(),
+    personLd(),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -721,7 +724,8 @@ function renderMain(entry, all) {
         ${renderMapSection(entry)}
         ${faqWrapped}
         ${related ? `<section class="project-section fade-in location-related"><h2 data-i18n="geo.ui.nearby">${escapeHtml(ui.nearby)}</h2><div class="location-related__list">${related}</div></section>` : ''}
-        <section class="project-section fade-in"><p class="location-outro"><a href="/precios" data-i18n="footer.linkPricing">Precios</a> · <a href="/blog">Blog</a> · <a href="/#contact" data-i18n="footer.linkContact">Contacto</a> · <a href="${ENTITY.url}" rel="me">${escapeHtml(ENTITY.legalName)}</a></p></section>
+        ${entry.countryCode === 'CL' ? chileSiloRelatedHtml() : ''}
+        <section class="project-section fade-in"><p class="location-outro"><a href="/precios" data-i18n="footer.linkPricing">Precios</a> · <a href="/blog">Blog</a> · <a href="/crear-tienda-online">Crear tienda</a> · <a href="/#contact" data-i18n="footer.linkContact">Contacto</a> · <a href="${ENTITY.url}" rel="me">${escapeHtml(ENTITY.legalName)}</a></p></section>
     </div>
     </main>`;
 }

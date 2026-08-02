@@ -90,6 +90,9 @@ gtag('consent','default',{
         "https://github.com/andresirigoyen",
         "https://www.linkedin.com/in/andresirigoyen/"
       ],
+      "founder": {
+        "@id": "https://www.irigoyendev.com/#person"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+45-5024-9855",
@@ -102,6 +105,61 @@ gtag('consent','default',{
           "English"
         ],
         "url": "https://www.irigoyendev.com/#contact"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.irigoyendev.com/#person",
+      "name": "Andrés Irigoyen",
+      "alternateName": [
+        "IrigoyenDev",
+        "andresirigoyen"
+      ],
+      "url": "https://www.irigoyendev.com",
+      "image": "https://www.irigoyendev.com/images/og-image.png",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Desarrollador full stack freelance especializado en e-commerce, paneles admin y landing pages de conversión para Chile.",
+      "knowsAbout": [
+        "Desarrollo full stack",
+        "E-commerce",
+        "Landing pages",
+        "Plataformas de negocio",
+        "Marketplaces",
+        "SEO",
+        "GEO",
+        "SEO local Chile"
+      ],
+      "sameAs": [
+        "https://github.com/andresirigoyen",
+        "https://www.linkedin.com/in/andresirigoyen/"
+      ],
+      "worksFor": {
+        "@id": "https://www.irigoyendev.com/#organization"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Américo Vespucio Norte 767",
+          "addressLocality": "Las Condes",
+          "addressRegion": "Región Metropolitana",
+          "postalCode": "7550000",
+          "addressCountry": "CL"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "+45-5024-9855",
+        "url": "https://www.irigoyendev.com/#contact",
+        "availableLanguage": [
+          "Spanish",
+          "English"
+        ],
+        "areaServed": "CL"
       }
     }
     </script>
@@ -376,7 +434,7 @@ gtag('consent','default',{
         </nav>
         <p class="project-eyebrow" data-i18n="landing.eyebrow">Landings · Servicio</p>
         <h1 data-i18n="landing.h1">Landing page de conversión en Chile</h1>
-        <p class="project-lead money-copy" data-i18n="landing.lead">Diseño de landing page Chile para campañas publicitarias: una oferta, un mensaje, un CTA. Landings que convierten leads o ventas — desde ~USD 600.</p>
+        <p class="project-lead money-copy geo-summary service-value-prop" data-i18n="landing.lead">Diseño de landing page Chile para campañas publicitarias: una oferta, un mensaje, un CTA. Landings que convierten leads o ventas — desde ~USD 600.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="landing.cta">Pedir propuesta de landing →</a>
             <a href="/projects/retorica" class="project-cta-inline" data-i18n="landing.caseCta">Ver caso Retórica →</a>
@@ -398,8 +456,43 @@ gtag('consent','default',{
                     <li><a href="/projects/floreria">Florería El Nuevo Pensamiento</a> <span data-i18n="landing.case2">— conversión local por WhatsApp</span></li>
                     <li><a href="/projects/familiainternacional">Familia Internacional</a> <span data-i18n="landing.case3">— autoridad + contacto</span></li>
                 </ul>
-                <p data-i18n-html="landing.footerHtml">¿Necesitas también tienda o plataforma? Mira <a href="/crear-tienda-online">crear tienda online</a> o todos los <a href="/servicios">servicios</a>.</p>
+                <p data-i18n-html="landing.footerHtml">¿Necesitas también tienda o plataforma? Mira <a href="/crear-tienda-online">crear tienda online</a> o todos los <a href="/servicios">servicios</a>. Guía de precios: <a href="/blog/cuanto-cuesta-landing-page-chile">cuánto cuesta una landing en Chile</a>.</p>
             </div>
+        </section>
+        <section class="project-section fade-in" id="faq" aria-labelledby="landing-faq-title">
+            <h2 id="landing-faq-title">Preguntas frecuentes</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Cuánto cuesta una landing page de conversión en Chile?</summary>
+                    <p class="faq-answer">Desde ~USD 600 para una página enfocada en un CTA. Variantes A/B, i18n o CRM se cotizan según alcance. Detalle en <a href="/precios">/precios</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Landing page o sitio web completo?</summary>
+                    <p class="faq-answer">Si el objetivo es una campaña u oferta concreta, landing. Si necesitas catálogo, blog y múltiples servicios, un sitio o tienda. Se pueden combinar.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Incluyen SEO y velocidad?</summary>
+                    <p class="faq-answer">Sí: títulos, meta description, canonical, estructura semántica, imágenes optimizadas y Core Web Vitals.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo usarla con Google Ads y Meta Ads?</summary>
+                    <p class="faq-answer">Sí. URL limpia, eventos de conversión y mensaje alineado al anuncio, lista para medir con pixel o Google Ads.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuánto tarda?</summary>
+                    <p class="faq-answer">Una landing enfocada suele salir en días cuando el mensaje y los activos (logo, fotos, oferta) están claros.</p>
+                </details>
+            </div>
+        </section>
+        <section class="project-section fade-in" aria-labelledby="silo-related-title">
+            <h2 id="silo-related-title">Enlaces relacionados</h2>
+            <ul class="project-results-list">
+                <li><a href="/chile">Desarrollo web Chile</a> — hub nacional por regiones</li>
+                <li><a href="/santiago">Santiago</a> · <a href="/santiago/comunas">52 comunas</a> · <a href="/santiago/las-condes">Las Condes</a> · <a href="/santiago/providencia">Providencia</a></li>
+                <li><a href="/crear-tienda-online">Crear tienda online</a> · <a href="/landing-pages">Landing pages</a> · <a href="/precios">Precios</a></li>
+                <li><a href="/servicios/geo-optimizacion-ia">GEO para IA</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/blog">Blog</a></li>
+                <li><a href="/diseno-desarrollo-web-valparaiso">Valparaíso</a> · <a href="/desarrollo-web-concepcion">Concepción</a> · <a href="/desarrollo-web-antofagasta">Antofagasta</a> · <a href="/desarrollo-web-temuco">Temuco</a></li>
+            </ul>
         </section>
     </main>
 
@@ -438,6 +531,8 @@ gtag('consent','default',{
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
                     <li><a href="/chile">Chile</a></li>
+                    <li><a href="/santiago">Santiago</a></li>
+                    <li><a href="/blog">Blog</a></li>
                     <li><a href="#" data-consent-open data-i18n="consent.settings">Cookies</a></li>
                     <li><a href="/llms.txt">llms.txt</a></li>
                     <li><a href="/sitemap.xml">Sitemap</a></li>

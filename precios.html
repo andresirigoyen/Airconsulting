@@ -92,6 +92,9 @@ gtag('consent','default',{
         "https://github.com/andresirigoyen",
         "https://www.linkedin.com/in/andresirigoyen/"
       ],
+      "founder": {
+        "@id": "https://www.irigoyendev.com/#person"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+45-5024-9855",
@@ -104,6 +107,61 @@ gtag('consent','default',{
           "English"
         ],
         "url": "https://www.irigoyendev.com/#contact"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.irigoyendev.com/#person",
+      "name": "Andrés Irigoyen",
+      "alternateName": [
+        "IrigoyenDev",
+        "andresirigoyen"
+      ],
+      "url": "https://www.irigoyendev.com",
+      "image": "https://www.irigoyendev.com/images/og-image.png",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Desarrollador full stack freelance especializado en e-commerce, paneles admin y landing pages de conversión para Chile.",
+      "knowsAbout": [
+        "Desarrollo full stack",
+        "E-commerce",
+        "Landing pages",
+        "Plataformas de negocio",
+        "Marketplaces",
+        "SEO",
+        "GEO",
+        "SEO local Chile"
+      ],
+      "sameAs": [
+        "https://github.com/andresirigoyen",
+        "https://www.linkedin.com/in/andresirigoyen/"
+      ],
+      "worksFor": {
+        "@id": "https://www.irigoyendev.com/#organization"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Américo Vespucio Norte 767",
+          "addressLocality": "Las Condes",
+          "addressRegion": "Región Metropolitana",
+          "postalCode": "7550000",
+          "addressCountry": "CL"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "+45-5024-9855",
+        "url": "https://www.irigoyendev.com/#contact",
+        "availableLanguage": [
+          "Spanish",
+          "English"
+        ],
+        "areaServed": "CL"
       }
     }
     </script>
@@ -260,6 +318,47 @@ gtag('consent','default',{
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.irigoyendev.com/precios#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Los precios incluyen IVA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los rangos en USD son orientativos de honorarios de desarrollo. El detalle fiscal (boleta/factura e IVA en Chile) se confirma en la cotización formal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay costos mensuales obligatorios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El proyecto puntual se cotiza aparte. Los planes Care (mantenimiento) y Care + Growth son opcionales tras el lanzamiento, con mínimo 3 meses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta una tienda online vs una landing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Landing desde ~USD 600. Producto comercial / tienda desde ~USD 1.304. Plataformas a medida desde ~USD 10.000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo pagar en CLP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Cotizamos en USD como referencia internacional y podemos facturar/cobrar en CLP al tipo de cambio acordado."
+          }
+        }
+      ]
+    }
+    </script>
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/favicon.svg">
@@ -329,7 +428,7 @@ gtag('consent','default',{
         </nav>
         <p class="project-eyebrow" data-i18n="price.eyebrow">Inversión · Transparencia</p>
         <h1 data-i18n="price.h1">Cuánto cuesta una tienda online y el desarrollo web en Chile</h1>
-        <p class="project-lead" data-i18n="price.lead">Tarifas de desarrollo web y presupuesto e-commerce con rangos claros. Precio de desarrollo web en Chile como referencia antes de cotizar.</p>
+        <p class="project-lead geo-summary service-value-prop" data-i18n="price.lead">Tarifas de desarrollo web y presupuesto e-commerce con rangos claros. Precio de desarrollo web en Chile como referencia antes de cotizar.</p>
         <div class="project-header__actions">
             <a href="/#contact" class="btn-cta-primary" data-i18n="price.cta">Solicitar cotización personalizada →</a>
         </div>
@@ -389,8 +488,39 @@ gtag('consent','default',{
                     <li data-i18n="price.factor3">SEO, i18n, paneles admin y migración de datos</li>
                     <li data-i18n="price.factor4">Plazo y nivel de soporte post-lanzamiento (Care / Care + Growth)</li>
                 </ul>
-                <p data-i18n-html="price.footerHtml">Respuesta típica en 48 horas con plan, plazos y estimación. <a href="/faq">Más respuestas en el FAQ</a> · <a href="/servicios#care">Detalle de planes Care</a>.</p>
+                <p data-i18n-html="price.footerHtml">Respuesta típica en 48 horas con plan, plazos y estimación. <a href="/faq">Más respuestas en el FAQ</a> · <a href="/servicios#care">Detalle de planes Care</a> · <a href="/blog/cuanto-cuesta-landing-page-chile">Guía landing</a> · <a href="/crear-tienda-online">Crear tienda</a>.</p>
             </div>
+        </section>
+        <section class="project-section fade-in" id="faq" aria-labelledby="price-faq-title">
+            <h2 id="price-faq-title">Preguntas frecuentes sobre precios</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Los precios incluyen IVA?</summary>
+                    <p class="faq-answer">Los rangos en USD son orientativos de honorarios de desarrollo. El detalle fiscal (boleta/factura e IVA en Chile) se confirma en la cotización formal.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Hay costos mensuales obligatorios?</summary>
+                    <p class="faq-answer">No. El proyecto puntual se cotiza aparte. Los planes Care (mantenimiento) y Care + Growth son opcionales tras el lanzamiento, con mínimo 3 meses.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuánto cuesta una tienda online vs una landing?</summary>
+                    <p class="faq-answer">Landing desde ~USD 600. Producto comercial / tienda desde ~USD 1.304. Plataformas a medida desde ~USD 10.000. Ver también <a href="/crear-tienda-online">crear tienda online</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo pagar en CLP?</summary>
+                    <p class="faq-answer">Sí. Cotizamos en USD como referencia internacional y podemos facturar/cobrar en CLP al tipo de cambio acordado.</p>
+                </details>
+            </div>
+        </section>
+        <section class="project-section fade-in" aria-labelledby="silo-related-title">
+            <h2 id="silo-related-title">Enlaces relacionados</h2>
+            <ul class="project-results-list">
+                <li><a href="/chile">Desarrollo web Chile</a> — hub nacional por regiones</li>
+                <li><a href="/santiago">Santiago</a> · <a href="/santiago/comunas">52 comunas</a> · <a href="/santiago/las-condes">Las Condes</a> · <a href="/santiago/providencia">Providencia</a></li>
+                <li><a href="/crear-tienda-online">Crear tienda online</a> · <a href="/landing-pages">Landing pages</a> · <a href="/precios">Precios</a></li>
+                <li><a href="/servicios/geo-optimizacion-ia">GEO para IA</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/blog">Blog</a></li>
+                <li><a href="/diseno-desarrollo-web-valparaiso">Valparaíso</a> · <a href="/desarrollo-web-concepcion">Concepción</a> · <a href="/desarrollo-web-antofagasta">Antofagasta</a> · <a href="/desarrollo-web-temuco">Temuco</a></li>
+            </ul>
         </section>
     </main>
 
@@ -429,6 +559,8 @@ gtag('consent','default',{
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
                     <li><a href="/chile">Chile</a></li>
+                    <li><a href="/santiago">Santiago</a></li>
+                    <li><a href="/blog">Blog</a></li>
                     <li><a href="#" data-consent-open data-i18n="consent.settings">Cookies</a></li>
                     <li><a href="/llms.txt">llms.txt</a></li>
                     <li><a href="/sitemap.xml">Sitemap</a></li>
