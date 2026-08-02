@@ -739,7 +739,8 @@ function renderMapSection(entry) {
   const lng = entry.localBusinessSchema?.longitude;
   if (!Number.isFinite(lat) || !Number.isFinite(lng)) return '';
   const q = encodeURIComponent(`${lat},${lng}`);
-  const src = `https://maps.google.com/maps?q=${q}&z=13&output=embed`;
+  // www.google.com/maps embed (allowed by site CSP frame-src)
+  const src = `https://www.google.com/maps?q=${q}&z=13&output=embed&hl=es`;
   return `<section class="project-section fade-in" id="mapa">
             <h2 data-i18n="geo.ui.mapTitle">Ubicación de referencia — ${escapeHtml(entry.city)}</h2>
             <p class="location-intro" data-i18n="geo.ui.mapIntro">Mapa centrado en ${escapeHtml(entry.city)}. Desarrollo web con foco en Chile — Santiago, regiones y comunas.</p>
