@@ -3295,6 +3295,23 @@ body.has-lead-sticky .whatsapp-widget {
     opacity: 0.92;
 }
 
+/* Visible NAP for GEO / local entity corroboration (not a card) */
+.hero-estudio {
+    margin: var(--spacing-lg) 0 0;
+    max-width: 40rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+}
+
+.contact-panel__address {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
 .btn-submit.is-sending {
     opacity: 0.75;
     cursor: wait;
