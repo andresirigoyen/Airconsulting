@@ -42,7 +42,10 @@ const CORE = [
   { loc: '/crear-tienda-online', changefreq: 'monthly', priority: '0.9' },
   { loc: '/landing-pages', changefreq: 'monthly', priority: '0.9' },
   { loc: '/precios', changefreq: 'monthly', priority: '0.85' },
-  { loc: '/faq', changefreq: 'monthly', priority: '0.8' },
+  { loc: '/faq', changefreq: 'weekly', priority: '0.9' },
+  /** AI discovery surfaces (OAI-SearchBot / Perplexity / GEO) — keep at site root */
+  { loc: '/llms.txt', changefreq: 'monthly', priority: '0.7' },
+  { loc: '/ai.txt', changefreq: 'monthly', priority: '0.65' },
   { loc: '/santiago/comunas', changefreq: 'weekly', priority: '0.88' },
 ];
 

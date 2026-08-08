@@ -42,4 +42,7 @@ User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://www.irigoyendev.com/sitemap.xml
+# AI entity surfaces (also listed in sitemap.xml)
+# https://www.irigoyendev.com/llms.txt
+# https://www.irigoyendev.com/ai.txt
 Host: https://www.irigoyendev.com
