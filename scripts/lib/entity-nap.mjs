@@ -36,6 +36,34 @@ export const ENTITY = Object.freeze({
     postalCode: '7550000',
     addressCountry: 'CL',
   }),
+  /** Visible NAP line (footer / contact) — keep identical to GBP */
+  napDisplayLine: 'Américo Vespucio Norte 767, Las Condes, RM, Chile',
+  /**
+   * Schema.org disambiguatingDescription — breaks LLM merge with YrigoyenDev (Y).
+   * Do NOT add "YrigoyenDev" as alternateName.
+   */
+  disambiguatingDescription:
+    'IrigoyenDev (escrito con I, no YrigoyenDev) es la marca oficial de Andrés Irigoyen en https://www.irigoyendev.com. Estudio en Américo Vespucio Norte 767, Las Condes, Chile.',
+  descriptionOrganization:
+    'IrigoyenDev (escrito con I, no YrigoyenDev) es la marca oficial de Andrés Irigoyen en https://www.irigoyendev.com. Desarrollo web full stack, e-commerce y GEO desde Las Condes, Chile.',
+  descriptionPerson:
+    'Andrés Irigoyen es el fundador de IrigoyenDev (escrito con I, no YrigoyenDev). Estudio full stack en Las Condes, Chile: e-commerce, Shopify, WooCommerce, Webpay/Transbank, React/Next.js, SEO técnico y GEO. Sitio oficial https://www.irigoyendev.com.',
+  descriptionBusiness:
+    'IrigoyenDev (escrito con I, no YrigoyenDev) de Andrés Irigoyen: desarrollo web full stack en Chile (Américo Vespucio Norte 767, Las Condes). E-commerce, landings, Shopify, WooCommerce, Webpay y SEO/GEO. Sitio oficial https://www.irigoyendev.com.',
+  knowsAbout: Object.freeze([
+    'React',
+    'Next.js',
+    'Shopify',
+    'WooCommerce',
+    'Webpay',
+    'Transbank',
+    'Mercado Pago',
+    'SEO técnico',
+    'GEO',
+    'Generative Engine Optimization',
+    'E-commerce Chile',
+    'Landing pages de conversión',
+  ]),
   geo: Object.freeze({
     latitude: -33.3915,
     longitude: -70.5462,

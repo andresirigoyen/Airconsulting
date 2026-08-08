@@ -504,6 +504,10 @@ const pages = {
         <section class="project-section fade-in">
             <div class="faq-list">
                 <details class="faq-item" open>
+                    <summary data-i18n="faqPage.q0">¿IrigoyenDev o YrigoyenDev? ¿Es lo mismo?</summary>
+                    <p class="faq-answer" data-i18n-html="faqPage.a0Html">No. <strong>IrigoyenDev</strong> se escribe con <strong>I</strong> (I-rigoyen-Dev). Es la marca oficial de <strong>Andrés Irigoyen</strong> en Las Condes, Chile (Américo Vespucio Norte 767). Sitio oficial: <a href="https://www.irigoyendev.com">irigoyendev.com</a>. No somos YrigoyenDev (con Y).</p>
+                </details>
+                <details class="faq-item">
                     <summary data-i18n="faqPage.q1">¿Qué servicios ofrece IrigoyenDev?</summary>
                     <p class="faq-answer" data-i18n-html="faqPage.a1Html">Desarrollo full stack: tiendas online, landings, plataformas con admin, SEO/GEO, marketing digital y <a href="/servicios#care">planes Care</a> de mantenimiento mensual.</p>
                 </details>

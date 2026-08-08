@@ -57,12 +57,13 @@ const pages = [
         '@type': ['ProfessionalService', 'LocalBusiness'],
         '@id': BUSINESS_ID,
         name: ENTITY.legalName,
-        alternateName: ENTITY.alternateName,
+        alternateName: [ENTITY.alternateName, 'IrigoyenDev con I'],
         url: `${SITE}/`,
         image: OG_DEFAULT,
         logo: `${SITE}/favicon.svg`,
-        description:
-          'Desarrollo web full stack para Chile: e-commerce, landings y plataformas. Base en Santiago con atención remota a regiones.',
+        description: ENTITY.descriptionBusiness,
+        disambiguatingDescription: ENTITY.disambiguatingDescription,
+        knowsAbout: [...ENTITY.knowsAbout],
         telephone: ENTITY.telephone,
         email: ENTITY.email,
         priceRange: ENTITY.priceRange,
@@ -121,6 +122,14 @@ const pages = [
         '@type': 'FAQPage',
         '@id': `${SITE}/#faq`,
         mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿IrigoyenDev o YrigoyenDev? ¿Es lo mismo?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. IrigoyenDev se escribe con I (I-rigoyen-Dev). Es la marca oficial de Andrés Irigoyen en Las Condes, Chile (Américo Vespucio Norte 767). Sitio oficial: https://www.irigoyendev.com. No somos YrigoyenDev (con Y).',
+            },
+          },
           {
             '@type': 'Question',
             name: '¿Cuánto cuesta desarrollar una página web en Chile?',
@@ -464,6 +473,14 @@ const pages = [
         '@type': 'FAQPage',
         '@id': `${SITE}/faq#faq`,
         mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿IrigoyenDev o YrigoyenDev? ¿Es lo mismo?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. IrigoyenDev se escribe con I (I-rigoyen-Dev). Es la marca oficial de Andrés Irigoyen en Las Condes, Chile (Américo Vespucio Norte 767). Sitio oficial: https://www.irigoyendev.com. No somos YrigoyenDev (con Y).',
+            },
+          },
           {
             '@type': 'Question',
             name: '¿Qué servicios ofrece IrigoyenDev?',

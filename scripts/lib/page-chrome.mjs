@@ -2,6 +2,8 @@
  * Shared HTML chrome for generated marketing / location pages.
  * Locale / market labels come from the caller (geo-markets) — no Chile hardcoding.
  */
+import { ENTITY } from './entity-nap.mjs';
+
 export const SITE = 'https://www.irigoyendev.com';
 export const OG_DEFAULT = `${SITE}/images/og-image.png`;
 
@@ -260,7 +262,10 @@ export function buildFooter({
                 <p class="site-footer__areas" data-i18n="footer.areas">${escapeHtml(areas)}</p>
                 <h3 class="site-footer__heading" data-i18n="footer.contactHeading">Contacto general</h3>
                 <ul class="site-footer__contact">
-                    <li><a href="${wa}" target="_blank" rel="noopener noreferrer">WhatsApp +45 50 24 98 55</a></li>
+                    <li>${escapeHtml(ENTITY.legalName)} · ${escapeHtml(ENTITY.founder)}</li>
+                    <li>${escapeHtml(ENTITY.napDisplayLine)}</li>
+                    <li><a href="mailto:${escapeAttr(ENTITY.email)}">${escapeHtml(ENTITY.email)}</a></li>
+                    <li><a href="${wa}" target="_blank" rel="noopener noreferrer">WhatsApp ${escapeHtml(ENTITY.telephoneDisplay)}</a></li>
                     <li><a href="/#contact" data-i18n="footer.contactForm">Formulario de contacto</a></li>
                 </ul>
             </div>
