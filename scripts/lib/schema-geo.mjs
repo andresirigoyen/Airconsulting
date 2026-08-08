@@ -55,6 +55,7 @@ export function personLd() {
     alternateName: [
       ENTITY.legalName,
       'andresirigoyen',
+      'airigoyenrubio',
       'IrigoyenDev con I',
       'Andrés Irigoyen IrigoyenDev Chile',
     ],

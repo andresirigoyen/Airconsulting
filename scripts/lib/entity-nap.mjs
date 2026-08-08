@@ -24,7 +24,7 @@ export const ENTITY = Object.freeze({
   },
   sameAs: [
     'https://github.com/andresirigoyen',
-    'https://www.linkedin.com/in/andresirigoyen/',
+    'https://www.linkedin.com/in/airigoyenrubio/',
   ],
   contactPath: '/#contact',
   pricingPath: '/precios',
