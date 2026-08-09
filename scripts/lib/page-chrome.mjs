@@ -12,8 +12,8 @@ export const WA_BASE = 'https://wa.me/+4550249855?text=';
 /** Google Tag Manager container ID */
 export const GTM_ID = 'GTM-KD3BBZ78';
 
-/** Consent Mode defaults + deferred consent UI (GTM loads only after accept). */
-export const GTM_HEAD = `<!-- Analytics consent (GTM loads only after accept) -->
+/** Consent Mode v2 defaults + banner; GTM loads with analytics_storage denied until accept. */
+export const GTM_HEAD = `<!-- Analytics consent (Consent Mode v2; GTM loads with storage denied until accept) -->
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
