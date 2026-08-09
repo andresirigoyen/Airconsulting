@@ -17,6 +17,17 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "airconsulting.vercel.app"
+        }
+      ],
+      "destination": "https://www.irigoyendev.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
@@ -25,6 +36,17 @@
         }
       ],
       "destination": "https://www.irigoyendev.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "airconsulting-ten.vercel.app"
+        }
+      ],
+      "destination": "https://www.irigoyendev.com/",
       "permanent": true
     },
     {
