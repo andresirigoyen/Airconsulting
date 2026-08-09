@@ -1,6 +1,7 @@
 /**
- * Consent-gated Google Tag Manager + Consent Mode v2.
- * GTM loads only after the visitor accepts analytics cookies.
+ * Consent Mode v2 + Google Tag Manager.
+ * GTM loads on every visit; analytics_storage stays denied until the visitor accepts.
+ * Denied → cookieless GA4 pings (diagnostics stay green). Granted → full measurement.
  */
 (function () {
   var STORAGE_KEY = 'irigoyen_analytics_consent';
@@ -40,19 +41,12 @@
       deny: 'Reject',
       settings: 'Cookies',
     },
-    da: {
-      title: 'Cookies til måling',
-      text: 'Vi bruger Google Analytics (via GTM) kun hvis du accepterer, for at forstå brugen af sitet. Ingen tredjepartsannoncer.',
-      accept: 'Accepter',
-      deny: 'Afvis',
+    pt: {
+      title: 'Cookies de medição',
+      text: 'Usamos Google Analytics (via GTM) só se aceitares, para entender o uso do site. Sem publicidade de terceiros.',
+      accept: 'Aceitar',
+      deny: 'Recusar',
       settings: 'Cookies',
-    },
-    no: {
-      title: 'Informasjonskapsler for måling',
-      text: 'Vi bruker Google Analytics (via GTM) bare hvis du godtar, for å forstå bruken av nettstedet. Ingen tredjepartsannonser.',
-      accept: 'Godta',
-      deny: 'Avvis',
-      settings: 'Informasjonskapsler',
     },
   };
 
@@ -106,6 +100,7 @@
       ad_personalization: 'denied',
     });
     setConsent('denied');
+    loadGTM();
     hideBanner();
   }
 
@@ -178,13 +173,23 @@
 
   function init() {
     bindSettingsLinks();
+    // Load GTM immediately so Consent Mode / diagnostics always see the container.
+    loadGTM();
+
     var choice = getConsent();
     if (choice === 'granted') {
       gtag('consent', 'update', { analytics_storage: 'granted' });
-      loadGTM();
       return;
     }
-    if (choice === 'denied') return;
+    if (choice === 'denied') {
+      gtag('consent', 'update', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
+      return;
+    }
     showBanner();
   }
 
