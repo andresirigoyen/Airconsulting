@@ -289,18 +289,17 @@ export function buildFooter({
                     <li><a href="/casos-de-exito" data-i18n="footer.linkProjects">Proyectos</a></li>
                     <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
                     <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/blog" data-i18n="footer.linkBlog">Blog</a></li>
                     <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
                     ${marketItems}
                     <li><a href="#" data-consent-open data-i18n="consent.settings">Cookies</a></li>
-                    <li><a href="/llms.txt">llms.txt</a></li>
-                    <li><a href="/sitemap.xml">Sitemap</a></li>
                 </ul>
             </nav>
         </div>
         ${extra}
         <div class="container site-footer__bottom">
             <p data-i18n="footer">${escapeHtml(copyright)}</p>
+            <p class="site-footer__meta"><a href="/llms.txt">llms.txt</a><span aria-hidden="true"> · </span><a href="/sitemap.xml">Sitemap</a></p>
         </div>
     </footer>`;
 }
@@ -331,7 +330,6 @@ export function renderPage({
   footerMarketLinks = [
     { href: '/chile', label: 'Chile' },
     { href: '/santiago', label: 'Santiago' },
-    { href: '/blog', label: 'Blog' },
   ],
 }) {
   const wa = waLink(

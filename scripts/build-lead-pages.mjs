@@ -88,7 +88,6 @@ ${buildFooter({
   marketLinks: [
     { href: '/chile', label: 'Chile' },
     { href: '/santiago', label: 'Santiago' },
-    { href: '/blog', label: 'Blog' },
   ],
 })}
 
