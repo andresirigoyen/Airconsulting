@@ -103,7 +103,7 @@ ${buildFooter({
 
 const pages = {
   'servicios.html': {
-    title: 'Desarrollo web Chile | Tiendas, landings y plataformas — IrigoyenDev',
+    title: 'Desarrollador full stack Chile | Tiendas, landings y plataformas — IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/" class="back-link">
@@ -384,7 +384,7 @@ const pages = {
     </main>`,
   },
   'precios.html': {
-    title: 'Precios web Chile | Landings USD 600 · Tienda USD 1.304 — IrigoyenDev',
+    title: 'Cuánto cuesta una web en Chile | Landings USD 600 · Tienda USD 1.304 — IrigoyenDev',
     main: `
     <header class="project-header container fade-in">
         <a href="/servicios" class="back-link">

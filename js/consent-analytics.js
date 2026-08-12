@@ -2,14 +2,24 @@
  * Consent Mode v2 + Google Tag Manager.
  * GTM loads on every visit; analytics_storage stays denied until the visitor accepts.
  * Denied → cookieless GA4 pings (diagnostics stay green). Granted → full measurement.
+ *
+ * GA stream scope (ops): the GA4 property behind GTM-KD3BBZ78 must measure only
+ * https://www.irigoyendev.com (and preview hosts). Rename the property away from
+ * legacy "TheBeeBaby …" labels and exclude unrelated streams/domains.
  */
 (function () {
   var STORAGE_KEY = 'irigoyen_analytics_consent';
   var GTM_ID = 'GTM-KD3BBZ78';
   var BANNER_ID = 'cookie-consent';
+  var SITE_HOST = 'www.irigoyendev.com';
   var loaded = false;
 
   window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    site_id: 'irigoyendev',
+    site_host: SITE_HOST,
+    market: 'CL',
+  });
   function gtag() {
     window.dataLayer.push(arguments);
   }

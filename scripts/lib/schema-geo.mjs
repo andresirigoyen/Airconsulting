@@ -90,7 +90,7 @@ export function chileSiloRelatedHtml() {
                 <li><a href="/chile">Desarrollo web Chile</a> — hub nacional por regiones</li>
                 <li><a href="/santiago">Santiago</a> · <a href="/santiago/comunas">52 comunas</a> · <a href="/santiago/las-condes">Las Condes</a> · <a href="/santiago/providencia">Providencia</a></li>
                 <li><a href="/crear-tienda-online">Crear tienda online</a> · <a href="/landing-pages">Landing pages</a> · <a href="/precios">Precios</a></li>
-                <li><a href="/servicios/geo-optimizacion-ia">GEO para IA</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/blog">Blog</a></li>
+                <li><a href="/projects/ava7">Caso AVA7</a> · <a href="/casos-de-exito">Casos de éxito</a> · <a href="/servicios/geo-optimizacion-ia">GEO para IA</a> · <a href="/blog">Blog</a></li>
                 <li><a href="/diseno-desarrollo-web-valparaiso">Valparaíso</a> · <a href="/desarrollo-web-concepcion">Concepción</a> · <a href="/desarrollo-web-antofagasta">Antofagasta</a> · <a href="/desarrollo-web-temuco">Temuco</a></li>
             </ul>
         </section>`;

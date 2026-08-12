@@ -11,4 +11,10 @@ Standards: HTML5, CSS3, JavaScript
 Languages: es-CL (primary crawlable copy), en, pt (UI)
 Doctype: HTML5
 Software: VS Code, Cursor, Git, Vercel
-Last update: 2026-08-02
+Last update: 2026-08-13
+
+/* ANALYTICS */
+GTM: GTM-KD3BBZ78
+Scope: measure only irigoyendev.com (Chile market). Rename GA4 property if it still
+says "TheBeeBaby …"; do not mix other products/domains in the same stream.
+Events: form_start, form_submit, generate_lead, form_error (contact form).

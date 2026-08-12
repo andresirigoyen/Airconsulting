@@ -680,13 +680,38 @@ function isValidEmail(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
 }
 
+function trackAnalyticsEvent(name, params = {}) {
+    const payload = { event: name, ...params };
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+    if (typeof window.gtag === 'function') {
+        window.gtag('event', name, params);
+    }
+}
+
 const contactForm = document.getElementById('contact-form');
-if(contactForm) {
+if (contactForm) {
+    let formStarted = false;
+    const markFormStart = () => {
+        if (formStarted) return;
+        formStarted = true;
+        trackAnalyticsEvent('form_start', {
+            form_id: 'contact-form',
+            form_name: 'contact',
+            page_location: window.location.href,
+        });
+    };
+    contactForm.addEventListener('focusin', markFormStart);
+    contactForm.addEventListener('change', markFormStart);
+
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const statusDiv = document.getElementById('form-status');
-        
+        const waLink =
+            document.querySelector('.contact-panel__whatsapp')?.getAttribute('href') ||
+            'https://wa.me/+4550249855';
+
         const formData = new FormData(contactForm);
         const data = {
             name: sanitizeText(formData.get('name'), 120),
@@ -697,20 +722,31 @@ if(contactForm) {
         };
 
         const t = currentTranslations;
-        const submitLabel = t['form.submit'] || 'Solicitar plan de proyecto';
+        const submitLabel = t['form.submit'] || 'Enviar y recibir plan en 48h';
 
         if (!data.name || !data.email || !data.message || !data.service) {
             statusDiv.textContent = t['form.error'] || 'Algo falló. Inténtalo de nuevo o escríbenos directamente.';
             statusDiv.className = 'form-status error';
+            trackAnalyticsEvent('form_error', {
+                form_id: 'contact-form',
+                form_name: 'contact',
+                error_type: 'validation_required',
+            });
             return;
         }
 
         if (!isValidEmail(data.email)) {
             statusDiv.textContent = t['form.errorEmail'] || 'Introduce un correo electrónico válido.';
             statusDiv.className = 'form-status error';
+            trackAnalyticsEvent('form_error', {
+                form_id: 'contact-form',
+                form_name: 'contact',
+                error_type: 'validation_email',
+            });
             return;
         }
 
+        markFormStart();
         submitBtn.disabled = true;
         submitBtn.setAttribute('aria-busy', 'true');
         submitBtn.classList.add('is-sending');
@@ -742,13 +778,43 @@ if(contactForm) {
                 throw err;
             }
 
-            statusDiv.textContent = t['form.success'] || 'Mensaje recibido. Te responderemos en menos de 48 horas.';
+            const successText =
+                t['form.success'] || 'Mensaje recibido. Te responderemos en menos de 48 horas.';
+            const waText = t['form.successWhatsApp'] || 'Si es urgente, escríbenos por WhatsApp →';
             statusDiv.className = 'form-status success';
+            statusDiv.replaceChildren();
+            statusDiv.append(document.createTextNode(successText + ' '));
+            const waAnchor = document.createElement('a');
+            waAnchor.href = waLink;
+            waAnchor.target = '_blank';
+            waAnchor.rel = 'noopener noreferrer';
+            waAnchor.textContent = waText;
+            statusDiv.append(waAnchor);
             contactForm.reset();
+            formStarted = false;
+
+            trackAnalyticsEvent('generate_lead', {
+                form_id: 'contact-form',
+                form_name: 'contact',
+                service: data.service,
+                currency: 'USD',
+                value: 1,
+            });
+            trackAnalyticsEvent('form_submit', {
+                form_id: 'contact-form',
+                form_name: 'contact',
+                service: data.service,
+            });
         } catch (error) {
             console.error('Contact form error:', error);
             statusDiv.textContent = t['form.error'] || 'Algo falló. Inténtalo de nuevo o escríbenos directamente.';
             statusDiv.className = 'form-status error';
+            trackAnalyticsEvent('form_error', {
+                form_id: 'contact-form',
+                form_name: 'contact',
+                error_type: 'submit_failed',
+                status: error?.status || 0,
+            });
         } finally {
             submitBtn.disabled = false;
             submitBtn.removeAttribute('aria-busy');

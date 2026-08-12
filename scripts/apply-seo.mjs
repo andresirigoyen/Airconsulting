@@ -217,10 +217,10 @@ const pages = [
   leadPage({
     file: 'servicios.html',
     path: '/servicios',
-    title: 'Desarrollo web Chile | Tiendas, landings y plataformas — IrigoyenDev',
+    title: 'Desarrollador full stack Chile | Tiendas, landings y plataformas — IrigoyenDev',
     description:
-      'Servicios en Chile: tiendas online desde USD 1.304, landings desde USD 600, plataformas a medida y SEO técnico. Santiago, regiones y remoto.',
-    ogTitle: 'Servicios desarrollo web Chile | IrigoyenDev',
+      'Desarrollador full stack en Chile: tiendas online desde USD 1.304, landings desde USD 600, plataformas a medida y SEO técnico. Santiago, regiones y remoto.',
+    ogTitle: 'Desarrollador full stack Chile | IrigoyenDev',
     ogDescription:
       'Tiendas, landings y plataformas con precios claros. Cotiza tu plan de proyecto en Chile.',
     serviceName: 'Desarrollo web a medida y servicios digitales',
@@ -421,10 +421,10 @@ const pages = [
   leadPage({
     file: 'precios.html',
     path: '/precios',
-    title: 'Precios web Chile | Landings USD 600 · Tienda USD 1.304 — IrigoyenDev',
+    title: 'Cuánto cuesta una web en Chile | Landings USD 600 · Tienda USD 1.304 — IrigoyenDev',
     description:
-      'Cuánto cuesta una web o tienda online en Chile: landings desde USD 600, e-commerce desde USD 1.304, SEO desde USD 199. Rangos claros, sin sorpresas.',
-    ogTitle: 'Precios desarrollo web Chile | IrigoyenDev',
+      'Cuánto cuesta una web o tienda online en Chile: landings desde USD 600, e-commerce desde USD 1.304, SEO desde USD 199. Rangos claros, sin sorpresas — IrigoyenDev.',
+    ogTitle: 'Cuánto cuesta una web en Chile | IrigoyenDev',
     ogDescription:
       'Landings desde USD 600, tiendas desde USD 1.304. Cotiza tu proyecto con rangos transparentes en USD.',
     serviceName: 'Precios desarrollo web y e-commerce',
