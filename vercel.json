@@ -106,6 +106,31 @@
       "permanent": true
     },
     {
+      "source": "/tiendas",
+      "destination": "/crear-tienda-online",
+      "permanent": true
+    },
+    {
+      "source": "/tienda-online",
+      "destination": "/crear-tienda-online",
+      "permanent": true
+    },
+    {
+      "source": "/contacto",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
       "source": "/ava7",
       "destination": "/projects/ava7",
       "permanent": true
@@ -1020,6 +1045,10 @@
     {
       "source": "/(.*)",
       "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        },
         {
           "key": "Strict-Transport-Security",
           "value": "max-age=63072000; includeSubDomains; preload"

@@ -26,7 +26,7 @@ export const ENTITY = Object.freeze({
     'https://github.com/andresirigoyen',
     'https://www.linkedin.com/in/airigoyenrubio/',
   ],
-  contactPath: '/#contact',
+  contactPath: '/contact',
   pricingPath: '/precios',
   /** Studio / GBP — Américo Vespucio Norte 767, Las Condes */
   address: Object.freeze({

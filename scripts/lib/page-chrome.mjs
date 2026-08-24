@@ -266,7 +266,7 @@ export function buildFooter({
                     <li>${escapeHtml(ENTITY.napDisplayLine)}</li>
                     <li><a href="mailto:${escapeAttr(ENTITY.email)}">${escapeHtml(ENTITY.email)}</a></li>
                     <li><a href="${wa}" target="_blank" rel="noopener noreferrer">WhatsApp ${escapeHtml(ENTITY.telephoneDisplay)}</a></li>
-                    <li><a href="/#contact" data-i18n="footer.contactForm">Formulario de contacto</a></li>
+                    <li><a href="/contact" data-i18n="footer.contactForm">Formulario de contacto</a></li>
                 </ul>
             </div>
             <nav class="site-footer__col" aria-label="Servicios" data-i18n-aria="footer.servicesHeading">
@@ -289,8 +289,10 @@ export function buildFooter({
                     <li><a href="/casos-de-exito" data-i18n="footer.linkProjects">Proyectos</a></li>
                     <li><a href="/#testimonials" data-i18n="footer.linkReviews">Reseñas</a></li>
                     <li><a href="/faq" data-i18n="footer.linkFaq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><a href="/blog" data-i18n="footer.linkBlog">Blog</a></li>
-                    <li><a href="/#contact" data-i18n="footer.linkContact">Contacto</a></li>
+                    <li><a href="/contact" data-i18n="footer.linkContact">Contacto</a></li>
+                    <li><a href="/privacy">Privacidad</a></li>
                     ${marketItems}
                     <li><a href="#" data-consent-open data-i18n="consent.settings">Cookies</a></li>
                 </ul>
