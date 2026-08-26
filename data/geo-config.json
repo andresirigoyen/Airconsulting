@@ -473,17 +473,17 @@
       "region": "Región Metropolitana",
       "countryCode": "CL",
       "parentSlug": "santiago",
-      "metaTitle": "Desarrollo web en Las Condes: tech, scale-ups y B2B | IrigoyenDev",
-      "metaDescription": "Plataformas, landings y e-commerce para empresas de tecnología, scale-ups y servicios B2B en Las Condes. También retail y marcas del oriente de Santiago.",
-      "h1Title": "Desarrollo web para tecnología, scale-ups y servicios en Las Condes",
-      "contentSummary": "Para equipos con sede en el oriente de Santiago que necesitan un canal digital a la altura: sitio de producto, landing de demos o plataforma con panel — también e-commerce y marcas comerciales del sector.",
+      "metaTitle": "Desarrollador web freelance Las Condes | React y e-commerce — IrigoyenDev",
+      "metaDescription": "Desarrollador web independiente en Las Condes (estudio en Américo Vespucio Norte 767): React, Next.js, landings y tiendas online. Cotiza con IrigoyenDev.",
+      "h1Title": "Desarrollador web freelance e independiente en Las Condes",
+      "contentSummary": "Estudio full stack con sede en Las Condes para empresas y equipos del oriente de Santiago que buscan un desarrollador web independiente (no agencia genérica): producto, landings, e-commerce y SEO — React/Next.js, Shopify o WooCommerce según el caso.",
       "localBusinessSchema": {
         "telephone": "+45-5024-9855",
         "email": "andres@irigoyendev.com",
         "priceRange": "$$-$$$",
         "addressCountry": "CL",
         "name": "IrigoyenDev — Las Condes",
-        "description": "Plataformas, landings y e-commerce para empresas de tecnología, scale-ups y servicios B2B en Las Condes. También retail y marcas del oriente de Santiago.",
+        "description": "Desarrollador web freelance e independiente en Las Condes: React, Next.js, landings, e-commerce y plataformas para tech, scale-ups y B2B del oriente de Santiago.",
         "latitude": -33.3915,
         "longitude": -70.5462,
         "streetAddress": "Américo Vespucio Norte 767",
@@ -491,16 +491,20 @@
         "addressLocality": "Las Condes",
         "addressRegion": "Región Metropolitana",
         "serviceType": [
-          "Desarrollo web",
-          "SEO",
-          "E-commerce"
+          "Desarrollo web freelance",
+          "Desarrollador web independiente",
+          "React",
+          "Next.js",
+          "E-commerce",
+          "SEO"
         ]
       },
       "content": {
-        "eyebrow": "Santiago · Las Condes · Tech & B2B",
-        "h1": "Desarrollo web para tecnología, scale-ups y servicios en Las Condes",
-        "localAngle": "Las Condes concentra oficinas corporativas, software, consultoras y retail premium. Priorizamos Core Web Vitals, mensaje B2B claro y captura de leads (demo, reunión, WhatsApp) sin sacrificar la presencia de marcas comerciales que también operan aquí.",
+        "eyebrow": "Santiago · Las Condes · Freelance full stack",
+        "h1": "Desarrollador web freelance e independiente en Las Condes",
+        "localAngle": "IrigoyenDev opera desde Américo Vespucio Norte 767, Las Condes: un estudio independiente (Andrés Irigoyen) para oficinas, software, consultoras y retail del oriente. Si buscas un desarrollador web freelance en Las Condes o Santiago — no una fábrica de plantillas — construimos producto con React/Next.js, landings de conversión y e-commerce (Shopify, WooCommerce o a medida) con plazos y precios claros.",
         "painPoints": [
+          "Necesitas un desarrollador independiente en Las Condes, no una agencia opaca",
           "Sitio corporativo lento que no genera demos ni reuniones",
           "Producto tech sin landing alineada a la propuesta de valor",
           "Campañas Ads/Meta sin página de destino medible",
@@ -510,7 +514,7 @@
           {
             "titleKey": "fullstack",
             "title": "Plataforma / producto web",
-            "desc": "Admin, roles y flujos para operar el negocio o el SaaS.",
+            "desc": "Admin, roles y flujos para operar el negocio o el SaaS (React / Next.js).",
             "href": "/servicios"
           },
           {
@@ -526,8 +530,8 @@
             "href": "/crear-tienda-online"
           }
         ],
-        "ctaPrimary": "Cotizar proyecto en Las Condes →",
-        "ctaWhatsApp": "WhatsApp: proyecto tech/servicios en Las Condes",
+        "ctaPrimary": "Cotizar con el estudio en Las Condes →",
+        "ctaWhatsApp": "WhatsApp: desarrollador freelance Las Condes",
         "neighborhoods": [
           "El Golf",
           "Alto Las Condes",
@@ -541,31 +545,37 @@
         ],
         "faq": [
           {
+            "q": "¿Buscan un desarrollador web freelance o independiente en Las Condes?",
+            "a": "Sí. IrigoyenDev es el estudio independiente de Andrés Irigoyen, con sede en Américo Vespucio Norte 767, Las Condes. Atendemos proyectos full stack (React, Next.js, e-commerce, landings) para empresas del oriente de Santiago y remoto en Chile. Contacto: https://www.irigoyendev.com/contact"
+          },
+          {
+            "q": "¿Trabajan con React, Next.js u otras tecnologías modernas?",
+            "a": "Sí. El stack habitual incluye React, Next.js, Astro, Tailwind y, para tiendas, Shopify o WooCommerce con pasarelas chilenas (Webpay, Transbank, Mercado Pago). No somos un estudio de plantillas: el alcance se cotiza por objetivo de negocio."
+          },
+          {
             "q": "¿Cuánto cuesta una landing de captación para un equipo en Las Condes?",
-            "a": "Las landings orientativas parten desde ~USD 600. Un producto comercial suele situarse en desde ~USD 1.304. Cotizamos alcance exacto en https://www.irigoyendev.com/precios y el formulario de contacto."
+            "a": "Las landings orientativas parten desde ~USD 600. Un producto comercial suele situarse desde ~USD 1.304. Detalle en https://www.irigoyendev.com/precios y el formulario de contacto."
           },
           {
             "q": "¿Pueden mejorar la velocidad de un sitio corporativo lento en el oriente de Santiago?",
             "a": "Sí. Auditamos LCP/CLS, imágenes, fuentes y JS; priorizamos Core Web Vitals porque afectan ranking y la percepción de marca en oficinas y scale-ups de Las Condes."
-          },
-          {
-            "q": "¿Trabajan con SaaS que necesitan una página de demos?",
-            "a": "Es un caso habitual: mensaje claro, prueba social, CTA a demo o calendario, y tracking. El mismo stack sirve para servicios B2B premium del sector."
           }
         ],
-        "ogTitle": "Desarrollo web tech y B2B en Las Condes | IrigoyenDev",
-        "ogDescription": "Producto digital para oficinas, software y servicios premium en Las Condes.",
+        "ogTitle": "Desarrollador web freelance Las Condes | IrigoyenDev",
+        "ogDescription": "Estudio independiente en Las Condes: React, Next.js, landings y e-commerce para tech y B2B.",
         "geo": {
           "latitude": -33.3915,
           "longitude": -70.5462
         },
         "semanticTopics": [
-          "optimización de performance (Core Web Vitals)",
+          "desarrollador web freelance Las Condes",
+          "desarrollador independiente Santiago oriente",
+          "React y Next.js para empresas en Las Condes",
           "landings de demo para SaaS y B2B",
-          "paneles admin y flujos de onboarding",
-          "medición de conversiones (analytics / eventos)"
+          "e-commerce Shopify / WooCommerce Chile",
+          "optimización de performance (Core Web Vitals)"
         ],
-        "semanticIntro": "En Las Condes trabajamos conceptos como: optimización de performance (Core Web Vitals); landings de demo para SaaS y B2B; paneles admin y flujos de onboarding."
+        "semanticIntro": "En Las Condes nos encuentran como desarrollador web freelance e independiente: React/Next.js, landings de demo B2B, e-commerce y Core Web Vitals para oficinas del oriente de Santiago."
       }
     },
     {
@@ -576,17 +586,17 @@
       "region": "Región Metropolitana",
       "countryCode": "CL",
       "parentSlug": "santiago",
-      "metaTitle": "Desarrollo web en Providencia: startups y servicios | IrigoyenDev",
-      "metaDescription": "Landings, webs de producto y SEO para startups, agencias y servicios profesionales en Providencia. También clínicas, retail y pymes del barrio.",
-      "h1Title": "Desarrollo web para startups y servicios en Providencia",
-      "contentSummary": "Ideal para startups early/growth, SaaS, agencias y profesionales que necesitan lanzar o rediseñar rápido — sin dejar fuera clínicas, retail y pymes con demanda local fuerte.",
+      "metaTitle": "Desarrollador web freelance Providencia | Startups — IrigoyenDev",
+      "metaDescription": "Desarrollador web independiente en Providencia: landings, React/Next.js y SEO para startups, agencias y servicios. También clínicas y pymes del barrio.",
+      "h1Title": "Desarrollador web freelance para startups y servicios en Providencia",
+      "contentSummary": "Ideal si buscas un desarrollador web freelance o independiente en Providencia: startups early/growth, SaaS, agencias y profesionales que necesitan lanzar rápido — sin dejar fuera clínicas, retail y pymes locales.",
       "localBusinessSchema": {
         "telephone": "+45-5024-9855",
         "email": "andres@irigoyendev.com",
         "priceRange": "$$-$$$",
         "addressCountry": "CL",
         "name": "IrigoyenDev — Providencia",
-        "description": "Landings, webs de producto y SEO para startups, agencias y servicios profesionales en Providencia. También clínicas, retail y pymes del barrio.",
+        "description": "Desarrollador web freelance e independiente en Providencia: landings, producto y SEO para startups, agencias y servicios — también clínicas y pymes del barrio.",
         "latitude": -33.431,
         "longitude": -70.6093,
         "addressLocality": "Providencia",
@@ -598,9 +608,9 @@
         ]
       },
       "content": {
-        "eyebrow": "Santiago · Providencia · Startups & servicios",
-        "h1": "Desarrollo web para startups y servicios en Providencia",
-        "localAngle": "Providencia mezcla coworks, oficinas creativas y comercio de calle. Diseñamos páginas escaneables, CTAs de demo o agenda, y base SEO; para negocios de barrio priorizamos WhatsApp, móvil y claridad de oferta.",
+        "eyebrow": "Santiago · Providencia · Freelance & startups",
+        "h1": "Desarrollador web freelance para startups y servicios en Providencia",
+        "localAngle": "Providencia mezcla coworks, oficinas creativas y comercio de calle. Si buscas un desarrollador web independiente (no una fábrica de plantillas), diseñamos páginas escaneables con React/Next.js o stack liviano, CTAs de demo o agenda, y base SEO; para negocios de barrio priorizamos WhatsApp, móvil y claridad de oferta.",
         "painPoints": [
           "MVP o marca sin web indexable ni tracking",
           "Landing genérica que no explica el producto",
@@ -642,6 +652,10 @@
         ],
         "faq": [
           {
+            "q": "¿Hay un desarrollador web freelance o independiente en Providencia?",
+            "a": "IrigoyenDev (Andrés Irigoyen) atiende Providencia y el resto de Santiago como estudio independiente full stack: landings, producto web y e-commerce. Sede en Las Condes; entrega remota en toda la RM. Contacto: https://www.irigoyendev.com/contact"
+          },
+          {
             "q": "¿Sirve una web para una clínica o centro médico en Providencia?",
             "a": "Sí. Diseñamos UX clara (servicios, equipo, ubicación), CTA de reserva o WhatsApp, y base SEO local — sin relleno genérico de “desarrollo web”."
           },
@@ -661,12 +675,14 @@
           "longitude": -70.6093
         },
         "semanticTopics": [
+          "desarrollador web freelance Providencia",
+          "desarrollador independiente Santiago",
           "UX para clínicas y agenda de citas",
           "waitlists y validación de startups",
           "SEO on-page para servicios profesionales",
           "integración WhatsApp Business + formularios"
         ],
-        "semanticIntro": "En Providencia trabajamos conceptos como: UX para clínicas y agenda de citas; waitlists y validación de startups; SEO on-page para servicios profesionales."
+        "semanticIntro": "En Providencia nos buscan como desarrollador web freelance e independiente: startups, clínicas, servicios y SEO local con stack moderno."
       }
     },
     {
@@ -677,17 +693,17 @@
       "region": "Región Metropolitana",
       "countryCode": "CL",
       "parentSlug": "santiago",
-      "metaTitle": "Desarrollo web en Vitacura: producto premium y tech | IrigoyenDev",
-      "metaDescription": "Sitios y plataformas de alto rendimiento para marcas, fintech-adjacent y servicios premium en Vitacura. Performance, marca y conversión.",
-      "h1Title": "Desarrollo web premium para marcas y tecnología en Vitacura",
-      "contentSummary": "Para empresas y equipos que venden a audiencias exigentes: producto digital limpio, velocidad y confianza visual — también e-commerce selecto y servicios profesionales del sector.",
+      "metaTitle": "Desarrollador web freelance Vitacura | Producto premium — IrigoyenDev",
+      "metaDescription": "Desarrollador web independiente en Vitacura: sitios y plataformas de alto rendimiento para marcas y tech. React/Next.js, performance y conversión.",
+      "h1Title": "Desarrollador web freelance premium en Vitacura",
+      "contentSummary": "Para empresas en Vitacura que buscan un desarrollador web independiente con criterio de producto: sitios limpios, velocidad y confianza visual — también e-commerce selecto y servicios profesionales.",
       "localBusinessSchema": {
         "telephone": "+45-5024-9855",
         "email": "andres@irigoyendev.com",
         "priceRange": "$$-$$$",
         "addressCountry": "CL",
         "name": "IrigoyenDev — Vitacura",
-        "description": "Sitios y plataformas de alto rendimiento para marcas, fintech-adjacent y servicios premium en Vitacura. Performance, marca y conversión.",
+        "description": "Desarrollador web freelance e independiente en Vitacura: sitios y plataformas premium con React/Next.js, performance y conversión.",
         "latitude": -33.39,
         "longitude": -70.575,
         "addressLocality": "Vitacura",
@@ -699,9 +715,9 @@
         ]
       },
       "content": {
-        "eyebrow": "Santiago · Vitacura · Premium & producto",
-        "h1": "Desarrollo web premium para marcas y tecnología en Vitacura",
-        "localAngle": "En Vitacura la percepción importa tanto como la métrica. Trabajamos tipografía, jerarquía y Core Web Vitals; el tono sirve igual a un SaaS B2B que a una marca de servicios o retail premium.",
+        "eyebrow": "Santiago · Vitacura · Freelance premium",
+        "h1": "Desarrollador web freelance premium en Vitacura",
+        "localAngle": "En Vitacura la percepción importa tanto como la métrica. Como estudio independiente (sede Las Condes, entrega en Vitacura y oriente), trabajamos tipografía, jerarquía y Core Web Vitals con React/Next.js; el tono sirve igual a un SaaS B2B que a una marca de servicios o retail premium.",
         "painPoints": [
           "Diseño genérico que resta credibilidad",
           "Flujos de contacto o demo poco confiables",
@@ -742,6 +758,10 @@
         ],
         "faq": [
           {
+            "q": "¿Contratan un desarrollador web freelance o independiente en Vitacura?",
+            "a": "Sí. IrigoyenDev es un estudio independiente full stack que atiende Vitacura y el oriente de Santiago: producto web, landings y e-commerce con foco en performance y marca. Contacto: https://www.irigoyendev.com/contact"
+          },
+          {
             "q": "¿Qué diferencia un sitio “premium” en Vitacura de una plantilla?",
             "a": "Jerarquía tipográfica, performance y mensajes precisos. Evitamos plantillas genéricas: el visitante debe percibir solidez en los primeros segundos."
           },
@@ -761,12 +781,14 @@
           "longitude": -70.575
         },
         "semanticTopics": [
+          "desarrollador web freelance Vitacura",
+          "desarrollador independiente oriente Santiago",
           "experiencia de marca y tipografía",
           "confianza visual en el primer viewport",
           "analytics de conversión",
           "e-commerce selecto con checkout confiable"
         ],
-        "semanticIntro": "En Vitacura trabajamos conceptos como: experiencia de marca y tipografía; confianza visual en el primer viewport; analytics de conversión."
+        "semanticIntro": "En Vitacura nos buscan como desarrollador web freelance e independiente: producto premium, performance y conversión."
       }
     },
     {
@@ -777,10 +799,10 @@
       "region": "Región Metropolitana",
       "countryCode": "CL",
       "parentSlug": "santiago",
-      "metaTitle": "Desarrollo web en Ñuñoa: startups early y pymes | IrigoyenDev",
-      "metaDescription": "Landings y webs ágiles para emprendedores tech, servicios y comercio en Ñuñoa. Validar oferta, vender online y aparecer en Google.",
-      "h1Title": "Desarrollo web para emprendedores tech y pymes en Ñuñoa",
-      "contentSummary": "Para founders early-stage y freelancers de producto que necesitan validar — y para comercio y servicios de barrio que quieren canal propio sin complejidad.",
+      "metaTitle": "Desarrollador web freelance Ñuñoa | MVP y pymes — IrigoyenDev",
+      "metaDescription": "Desarrollador web independiente en Ñuñoa: landings ágiles para emprendedores tech y pymes. Validar oferta, vender online y aparecer en Google.",
+      "h1Title": "Desarrollador web freelance para tech y pymes en Ñuñoa",
+      "contentSummary": "Para founders y equipos en Ñuñoa que buscan un desarrollador web freelance o independiente: validar con landing, y para comercio/servicios de barrio un canal propio sin complejidad.",
       "localBusinessSchema": {
         "telephone": "+45-5024-9855",
         "email": "andres@irigoyendev.com",
@@ -799,9 +821,9 @@
         ]
       },
       "content": {
-        "eyebrow": "Santiago · Ñuñoa · Early-stage & barrio",
-        "h1": "Desarrollo web para emprendedores tech y pymes en Ñuñoa",
-        "localAngle": "Ñuñoa une universidad, emprendimiento y comercio local. Priorizamos sitios livianos: landing de validación para tech; WhatsApp + catálogo + SEO local para pymes.",
+        "eyebrow": "Santiago · Ñuñoa · Freelance early-stage",
+        "h1": "Desarrollador web freelance para tech y pymes en Ñuñoa",
+        "localAngle": "Ñuñoa une universidad, emprendimiento y comercio local. Si buscas un desarrollador web independiente para un MVP o un negocio de barrio, priorizamos sitios livianos: landing de validación para tech; WhatsApp + catálogo + SEO local para pymes.",
         "painPoints": [
           "Idea o servicio sin página que explique el valor",
           "Plantillas lentas difíciles de iterar",
@@ -842,6 +864,10 @@
         ],
         "faq": [
           {
+            "q": "¿Hay desarrollador web freelance o independiente para proyectos en Ñuñoa?",
+            "a": "Sí. IrigoyenDev atiende Ñuñoa como estudio independiente: landings de validación, webs de servicios y e-commerce liviano. Contacto: https://www.irigoyendev.com/contact"
+          },
+          {
             "q": "¿Puedo validar un producto digital en Ñuñoa sin construir una app completa?",
             "a": "Sí. Una landing con CTA y medición suele ser el primer paso correcto: menos deuda técnica, más aprendizaje real."
           },
@@ -854,19 +880,21 @@
             "a": "El paquete de SEO básico orientativo parte desde ~USD 199 (títulos, meta, sitemap, velocidad, estructura). Ver https://www.irigoyendev.com/precios."
           }
         ],
-        "ogTitle": "Webs ágiles para Ñuñoa | IrigoyenDev",
-        "ogDescription": "Del MVP al negocio local: producto digital práctico en Ñuñoa.",
+        "ogTitle": "Desarrollador web freelance Ñuñoa | IrigoyenDev",
+        "ogDescription": "Estudio independiente: MVP, landings y pymes en Ñuñoa.",
         "geo": {
           "latitude": -33.4569,
           "longitude": -70.5975
         },
         "semanticTopics": [
+          "desarrollador web freelance Ñuñoa",
+          "desarrollador independiente Santiago",
           "validación de MVP con landing",
           "catálogos móviles para comercio local",
           "embudos a WhatsApp",
           "indexación limpia desde el día uno"
         ],
-        "semanticIntro": "En Ñuñoa trabajamos conceptos como: validación de MVP con landing; catálogos móviles para comercio local; embudos a WhatsApp."
+        "semanticIntro": "En Ñuñoa nos encuentran como desarrollador web freelance e independiente: MVP, landings y canal digital para pymes de barrio."
       }
     },
     {

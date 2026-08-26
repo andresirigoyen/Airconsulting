@@ -13,6 +13,7 @@ const MD_MAP = {
   '/landing-pages': 'landing-pages.md',
   '/tiendas': 'crear-tienda-online.md',
   '/about': 'about.md',
+  '/santiago/las-condes': 'las-condes.md',
   '/contacto': 'contact.md',
   '/contact': 'contact.md',
   '/privacy': 'privacy.md',
