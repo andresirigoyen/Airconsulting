@@ -10,7 +10,7 @@ const alts = [
   ['Floreria El Nuevo Pensamiento E-commerce thumbnail', 'Florería El Nuevo Pensamiento — vista previa'],
   ['Radio Chicureo Platform thumbnail', 'Radio Chicureo — vista previa'],
   ['Dragonmart Platform thumbnail', 'Dragonmart — vista previa'],
-  ['RLU Abogados Platform thumbnail', 'Ruiz Leiva Abogados — vista previa'],
+  ['RL Abogados Platform thumbnail', 'Ruiz Leiva Abogados — vista previa'],
   ['Familia Internacional Platform thumbnail', 'Familia Internacional — vista previa'],
 ];
 

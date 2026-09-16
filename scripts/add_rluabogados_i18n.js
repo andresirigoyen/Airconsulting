@@ -123,4 +123,4 @@ fs.writeFileSync(esPath, JSON.stringify(esData, null, 2), 'utf8');
 // but since the site might handle missing keys gracefully or they translate them later, 
 // I'll just write to EN and ES for now.
 
-console.log('RLU Abogados translations added.');
+console.log('RL Abogados translations added.');

@@ -2,7 +2,7 @@ import fs from 'fs';
 
 let html = fs.readFileSync('index.html', 'utf8');
 const map = {
-  'RLU Abogados Corporate Platform': 'Ruiz Leiva Abogados — vista previa',
+  'RL Abogados Corporate Platform': 'Ruiz Leiva Abogados — vista previa',
   'Familia Internacional Law Firm Platform': 'Familia Internacional — vista previa',
   'DragonMart Corporate Platform': 'Dragonmart — vista previa',
   'Retorica Platform thumbnail': 'Retórica — vista previa',

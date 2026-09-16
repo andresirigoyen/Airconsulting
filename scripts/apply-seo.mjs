@@ -110,7 +110,7 @@ const pages = [
           { '@type': 'ListItem', position: 3, url: `${SITE}/projects/dahuss`, name: 'Dahuss Homes' },
           { '@type': 'ListItem', position: 4, url: `${SITE}/projects/calafate`, name: 'Calafate Propiedades' },
           { '@type': 'ListItem', position: 5, url: `${SITE}/projects/dragonmart`, name: 'Dragonmart' },
-          { '@type': 'ListItem', position: 6, url: `${SITE}/projects/rluabogados`, name: 'RLU Abogados' },
+          { '@type': 'ListItem', position: 6, url: `${SITE}/projects/rluabogados`, name: 'RL Abogados' },
           { '@type': 'ListItem', position: 7, url: `${SITE}/projects/familiainternacional`, name: 'Familia Internacional' },
           { '@type': 'ListItem', position: 8, url: `${SITE}/projects/radiochicureo`, name: 'Radio Chicureo' },
           { '@type': 'ListItem', position: 9, url: `${SITE}/projects/retorica`, name: 'Retórica Company' },
@@ -577,10 +577,10 @@ const pages = [
   }),
   project({
     slug: 'rluabogados',
-    title: 'RLU Abogados — Plataforma legal corporativa | Caso IrigoyenDev',
+    title: 'RL Abogados — Plataforma legal corporativa | Caso IrigoyenDev',
     description:
-      'Caso RLU Abogados: sitio legal corporativo con captación de prospectos, blog jurídico y paneles admin — plataforma full stack IrigoyenDev.',
-    ogTitle: 'RLU Abogados — Plataforma legal | IrigoyenDev',
+      'Caso RL Abogados: sitio legal corporativo con captación de prospectos, blog jurídico y paneles admin — plataforma full stack IrigoyenDev.',
+    ogTitle: 'RL Abogados — Plataforma legal | IrigoyenDev',
     ogDescription: 'Plataforma legal corporativa full stack para Ruiz Leiva Abogados.',
     ogImage: `${SITE}/images/rluabogados-mockup.png`,
   }),
